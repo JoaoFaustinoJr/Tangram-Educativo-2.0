@@ -10,3 +10,6 @@ header{display:flex;justify-content:space-between;align-items:center;padding:8px
 /* v2.0.13 — redistribuição inteligente do espaço */
 @media(max-width:650px){.game.challenge-complete .board{aspect-ratio:1.12/1;max-height:430px}.game.challenge-complete .classic-board{transform:translateY(-18px);transform-origin:center top}.game.challenge-complete .tools{margin-top:8px}.game.challenge-complete .status{margin-top:5px}.board.complete:after{bottom:10px}.accordions{margin-top:10px}}
 @media(min-width:651px){.game.challenge-complete .board{max-height:560px;margin-inline:auto}.game.challenge-complete .classic-board{transform:translateY(-12px)}}
+
+/* v2.0.14 — padrão-mestre ergonômico */
+.board{aspect-ratio:900/820!important}@media(max-width:650px){.board{aspect-ratio:900/820!important}.game.challenge-complete .board{aspect-ratio:1.16/1!important;max-height:410px}.tools{margin-top:8px}}
