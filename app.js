@@ -7,7 +7,7 @@
  return aa
 }function snap(id){
  const p=pieces[id],poly=transformed(id),aa=anchors(id);let best=null;
- poly.forEach(v=>aa.forEach(q=>{const dist=Math.hypot(v[0]-q[0],v[1]-q[1]);if(dist<18&&(!best||dist<best.d))best={d:dist,dx:q[0]-v[0],dy:q[1]-v[1]}}));
+ poly.forEach(v=>aa.forEach(q=>{const dist=Math.hypot(v[0]-q[0],v[1]-q[1]);if(dist<14&&(!best||dist<best.d))best={d:dist,dx:q[0]-v[0],dy:q[1]-v[1]}}));
  if(best){p.x+=best.dx;p.y+=best.dy;apply(id);status.textContent='🧲 '+defs[id].name+' atraído ao encaixe.';return true}
  return false
 }function signedArea(poly){let a=0;for(let i=0;i<poly.length;i++){const j=(i+1)%poly.length;a+=poly[i][0]*poly[j][1]-poly[j][0]*poly[i][1]}return a/2}
