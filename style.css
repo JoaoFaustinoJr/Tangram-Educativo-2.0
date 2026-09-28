@@ -13,3 +13,6 @@ header{display:flex;justify-content:space-between;align-items:center;padding:8px
 
 /* v2.0.14 — padrão-mestre ergonômico */
 .board{aspect-ratio:900/820!important}@media(max-width:650px){.board{aspect-ratio:900/820!important}.game.challenge-complete .board{aspect-ratio:1.16/1!important;max-height:410px}.tools{margin-top:8px}}
+
+/* v2.0.15 — cabeçalho compacto mobile */
+@media(max-width:650px){.app{padding-top:12px}header{padding:2px 2px 8px;align-items:center}header h1{font-size:28px;line-height:.9}header h1>small{font-size:12px;letter-spacing:6px;margin-top:8px}header p{font-size:14px;margin:8px 0 0}.menu{width:54px;height:54px;border-radius:18px;font-size:27px}.modes{margin:12px 0 14px;gap:7px}.modes button{min-height:74px;padding:7px 2px;border-radius:18px}.modes button b{font-size:14px;margin:1px 0}.modes button small{font-size:11px;line-height:1.15}.progress{padding:9px 11px;margin-bottom:14px;border-radius:18px}.game{padding-top:10px}.gamehead h2{font-size:24px}}
