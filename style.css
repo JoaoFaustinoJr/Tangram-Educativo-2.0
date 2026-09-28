@@ -34,3 +34,6 @@ header{display:flex;justify-content:space-between;align-items:center;padding:8px
 
 /* v2.0.43 — menu e estados interativos */
 header{position:relative}.app-menu{display:none;position:absolute;right:0;top:82px;z-index:30;width:min(250px,78vw);padding:8px;border:1px solid #1685ad;border-radius:16px;background:#05283a;box-shadow:0 14px 35px #0008}.app-menu.open{display:grid;gap:6px}.app-menu button{border:0;border-radius:10px;background:#073a50;color:#e8f8ff;padding:12px;text-align:left;font:inherit;font-weight:700}.modes button:active,.tools button:active,.catalog button:active,.app-menu button:active{transform:scale(.97)}
+
+/* v2.0.44 — Amostra visual e ampliar */
+.sample-layer{filter:drop-shadow(0 0 5px #42dfff55)}.focus-game{position:relative;z-index:20}.focus-game .gamehead,.focus-game .tools,.focus-game .status{position:relative;z-index:2}.focus-game .board{max-height:none}.focus-game .workspace{margin-left:-10px;margin-right:-10px}@media(max-width:650px){.focus-game .board{min-height:72vh}.focus-game .classic-board{min-height:72vh}}
