@@ -13,3 +13,6 @@
 
 /* v2.0.5 — feedback de zona magnetica */
 .piece.onboard:not(.snapped){transition:filter .12s}.piece.snapped{pointer-events:none}.board:has(.piece.snapped) .target{opacity:.42}
+
+/* v2.0.6 — motor geométrico recuperado do Tangram estável */
+.playzone{display:block}.tray{min-height:0!important;border:0!important;background:none!important;padding:0!important}.legacy-note{font-size:11px;color:#789caf;text-align:center;padding:6px}.board{min-height:0!important;aspect-ratio:1000/760}.classic-board{display:block;width:100%;height:100%;touch-action:none;user-select:none;background-color:#03121d;background-image:linear-gradient(#0b2b3d 1px,transparent 1px),linear-gradient(90deg,#0b2b3d 1px,transparent 1px);background-size:76px 76px;border-radius:18px}.classic-target{fill:#90a3ad55;stroke:#b7cad455;stroke-width:3}.classic-piece{cursor:grab;filter:drop-shadow(0 5px 5px #0008);touch-action:none}.classic-piece.selected{filter:drop-shadow(0 0 10px #fff)}.classic-piece.snapped{filter:drop-shadow(0 0 9px #53ffc0)}.classic-piece.snapped polygon:first-child{stroke:#73ffc9;stroke-width:5}.board.complete .classic-target{opacity:.16}@media(max-width:650px){.board{aspect-ratio:1/1.02}.classic-board{height:auto;min-height:0}.gamehead p{font-size:14px}}
