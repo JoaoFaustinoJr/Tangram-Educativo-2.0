@@ -28,3 +28,6 @@ header{display:flex;justify-content:space-between;align-items:center;padding:8px
 
 /* v2.0.39 — estudo da peça selecionada */
 .piece-study{margin-top:14px;border-top:1px solid #126d8e;padding-top:12px;display:grid;gap:5px}.piece-study>b{color:#55e7b7}.piece-study #piece-name{font-weight:800;color:#fff}.piece-study #piece-fraction,.piece-study #piece-formula{font-size:13px;color:#bcd8e5}
+
+/* v2.0.40 — conquistas */
+.achievement-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:12px}.achievement-grid span{border:1px solid #155f7d;border-radius:11px;padding:8px 6px;text-align:center;font-size:11px;color:#7396a7;background:#042234}.achievement-grid span.on{border-color:#d8bc48;color:#fff4bd;background:#493d16}@media(max-width:650px){.achievement-grid{grid-template-columns:1fr}.achievement-grid span{text-align:left;font-size:12px}}
