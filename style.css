@@ -31,3 +31,6 @@ header{display:flex;justify-content:space-between;align-items:center;padding:8px
 
 /* v2.0.40 — conquistas */
 .achievement-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:12px}.achievement-grid span{border:1px solid #155f7d;border-radius:11px;padding:8px 6px;text-align:center;font-size:11px;color:#7396a7;background:#042234}.achievement-grid span.on{border-color:#d8bc48;color:#fff4bd;background:#493d16}@media(max-width:650px){.achievement-grid{grid-template-columns:1fr}.achievement-grid span{text-align:left;font-size:12px}}
+
+/* v2.0.43 — menu e estados interativos */
+header{position:relative}.app-menu{display:none;position:absolute;right:0;top:82px;z-index:30;width:min(250px,78vw);padding:8px;border:1px solid #1685ad;border-radius:16px;background:#05283a;box-shadow:0 14px 35px #0008}.app-menu.open{display:grid;gap:6px}.app-menu button{border:0;border-radius:10px;background:#073a50;color:#e8f8ff;padding:12px;text-align:left;font:inherit;font-weight:700}.modes button:active,.tools button:active,.catalog button:active,.app-menu button:active{transform:scale(.97)}
