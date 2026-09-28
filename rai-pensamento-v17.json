@@ -1,0 +1,362 @@
+[
+  {
+    "year": 5,
+    "section": "pc",
+    "id": "pc5-listas-grafos",
+    "topic": "Listas e grafos: organizar e relacionar",
+    "icon": "🧺",
+    "axis": "Pensamento Computacional",
+    "objective": "Reconhecer situações que podem ser representadas por listas ou grafos e manipular essas representações de forma simples.",
+    "keyTerm": "lista e grafo",
+    "keyDefinition": "Lista organiza itens em sequência; grafo representa objetos e as relações entre eles por vértices e arestas.",
+    "concept": "Pensamento computacional também envolve escolher boas representações. Uma fila, uma sequência de cartas ou uma lista de tarefas podem ser modeladas como listas. Mapas, amizades e rotas podem ser representados como grafos. A representação correta ajuda a enxergar melhor o problema.",
+    "example": "Uma fila de alunos pode ser lista. Um mapa entre salas da escola pode ser grafo: cada sala é um vértice e cada corredor é uma aresta.",
+    "formula": "Lista = itens em sequência • Grafo = vértices + arestas",
+    "representation": "[A, B, C] • A—B—C com conexões",
+    "use": "Filas, playlists, listas de compras, mapas, redes sociais, internet e árvores genealógicas.",
+    "observe": "Uma lista organiza uma sequência; um grafo destaca relações. O mesmo conjunto de objetos pode precisar de representações diferentes conforme a pergunta.",
+    "guided": "Represente cinco lugares da escola como vértices e desenhe as conexões possíveis entre eles.",
+    "challenge": "Qual representação é mais adequada para mostrar caminhos possíveis entre três cidades: lista ou grafo? Explique.",
+    "answer": "Grafo, porque o objetivo é representar conexões e caminhos entre objetos. Uma lista simples não mostra tão bem as relações entre pares.",
+    "reference": "EF05CO01 e EF05CO02; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Atividade desplugada com cartões, barbante e mapas favorece a compreensão antes de usar recursos digitais.",
+    "fixation": [
+      {
+        "q": "O que significa “lista e grafo” nesta aula?",
+        "a": "Lista organiza itens em sequência; grafo representa objetos e as relações entre eles por vértices e arestas."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Filas, playlists, listas de compras, mapas, redes sociais, internet e árvores genealógicas."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Uma lista organiza uma sequência; um grafo destaca relações. O mesmo conjunto de objetos pode precisar de representações diferentes conforme a pergunta."
+      }
+    ]
+  },
+  {
+    "year": 5,
+    "section": "pc",
+    "id": "pc5-logica-decisoes",
+    "topic": "Lógica e decisões",
+    "icon": "🚦",
+    "axis": "Pensamento Computacional",
+    "objective": "Realizar operações lógicas simples e criar decisões com condições em algoritmos.",
+    "keyTerm": "condição lógica",
+    "keyDefinition": "Sentença que pode ser avaliada como verdadeira ou falsa e orientar uma decisão.",
+    "concept": "Decisões computacionais dependem de condições. Podemos negar uma condição com NÃO, exigir duas condições com E ou aceitar pelo menos uma com OU. Essas operações ajudam a construir regras mais precisas.",
+    "example": "SE semáforo vermelho OU amarelo → aguardar. SE verde E faixa livre → atravessar.",
+    "formula": "NÃO inverte • E exige as duas • OU aceita pelo menos uma",
+    "representation": "SE condição → ação • SENÃO → alternativa",
+    "use": "Jogos, sensores, controle de acesso, formulários, robôs e decisões cotidianas.",
+    "observe": "No uso comum, 'ou' pode parecer exclusivo; na lógica computacional, normalmente OU é verdadeiro se pelo menos uma condição for verdadeira.",
+    "guided": "Crie três sentenças usando NÃO, E e OU e classifique cada resultado como verdadeiro ou falso.",
+    "challenge": "Monte uma regra para liberar uma fase apenas se o jogador tiver concluído a anterior E não estiver no modo demonstração.",
+    "answer": "Exemplo: SE faseAnteriorConcluida E NÃO modoDemonstracao ENTÃO liberarFase.",
+    "reference": "EF05CO03 e EF05CO04; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Use cartões VERDADEIRO/FALSO para simular expressões lógicas antes da atividade plugada.",
+    "fixation": [
+      {
+        "q": "O que significa “condição lógica” nesta aula?",
+        "a": "Sentença que pode ser avaliada como verdadeira ou falsa e orientar uma decisão."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Jogos, sensores, controle de acesso, formulários, robôs e decisões cotidianas."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "No uso comum, 'ou' pode parecer exclusivo; na lógica computacional, normalmente OU é verdadeiro se pelo menos uma condição for verdadeira."
+      }
+    ]
+  },
+  {
+    "year": 6,
+    "section": "pc",
+    "id": "pc6-decomposicao",
+    "topic": "Decomposição: dividir para resolver",
+    "icon": "🧩",
+    "axis": "Pensamento Computacional",
+    "objective": "Aplicar decomposição para dividir problemas complexos em subproblemas tratáveis.",
+    "keyTerm": "decomposição",
+    "keyDefinition": "Técnica de dividir um problema maior em partes menores que podem ser resolvidas separadamente e depois combinadas.",
+    "concept": "Problemas grandes ficam mais compreensíveis quando são separados em partes. Cada subproblema pode ser analisado, testado e até distribuído entre pessoas diferentes. Depois, as soluções são combinadas.",
+    "example": "Para desenhar uma casa por programação, podemos separar em parede, telhado, porta e janelas. No Tangram, podemos dividir mentalmente a silhueta em regiões.",
+    "formula": "Problema grande → subproblemas → soluções parciais → solução final",
+    "representation": "P → P1 + P2 + P3",
+    "use": "Projetos de software, robótica, construção, organização de eventos, desenho e resolução de problemas matemáticos.",
+    "observe": "Decompor não é apenas 'cortar em partes'; é escolher partes que possam ser entendidas e combinadas de forma útil.",
+    "guided": "Escolha uma tarefa escolar complexa e divida-a em quatro subtarefas com entradas e resultados claros.",
+    "challenge": "Decomponha o problema 'criar um jogo de perguntas' em pelo menos quatro subproblemas.",
+    "answer": "Exemplo: preparar banco de perguntas, mostrar pergunta, receber resposta, verificar acerto, atualizar pontuação e finalizar jogo.",
+    "reference": "EF06CO04; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Relacione com trabalho cooperativo: grupos podem resolver subproblemas diferentes e depois integrar resultados.",
+    "fixation": [
+      {
+        "q": "O que significa “decomposição” nesta aula?",
+        "a": "Técnica de dividir um problema maior em partes menores que podem ser resolvidas separadamente e depois combinadas."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Projetos de software, robótica, construção, organização de eventos, desenho e resolução de problemas matemáticos."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Decompor não é apenas 'cortar em partes'; é escolher partes que possam ser entendidas e combinadas de forma útil."
+      }
+    ]
+  },
+  {
+    "year": 6,
+    "section": "pc",
+    "id": "pc6-generalizacao",
+    "topic": "Entrada, saída e generalização",
+    "icon": "🔁",
+    "axis": "Pensamento Computacional",
+    "objective": "Identificar entradas e saídas e construir soluções que funcionem para diferentes casos do mesmo problema.",
+    "keyTerm": "generalização",
+    "keyDefinition": "Construção de uma solução que funciona para diferentes instâncias de um mesmo tipo de problema.",
+    "concept": "Uma solução computacional útil não deve funcionar apenas para um único exemplo. Ao identificar o que varia e nomear essas entradas, podemos criar algoritmos genéricos. Variáveis e parâmetros permitem tratar muitos casos com a mesma regra.",
+    "example": "Área de retângulo: base e altura mudam, mas o algoritmo base × altura continua o mesmo.",
+    "formula": "entradas variáveis + mesma regra → solução genérica",
+    "representation": "função área(base,altura) → base×altura",
+    "use": "Cálculos, cadastros, jogos, sensores, planilhas, simuladores e automação.",
+    "observe": "Generalizar não significa ignorar diferenças importantes; significa identificar o que pode variar sem mudar a estrutura da solução.",
+    "guided": "Compare três problemas de calcular média. Descubra quais dados mudam e qual regra permanece.",
+    "challenge": "Explique como criar um algoritmo que calcule o perímetro de qualquer quadrado, não apenas de um quadrado de lado 5.",
+    "answer": "Usar uma variável para o lado e calcular 4 × lado. Assim, qualquer valor de entrada pode ser tratado pela mesma regra.",
+    "reference": "EF06CO05 e EF06CO06; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Peça ao aluno para separar 'o que muda' e 'o que permanece' antes de escrever o algoritmo.",
+    "fixation": [
+      {
+        "q": "O que significa “generalização” nesta aula?",
+        "a": "Construção de uma solução que funciona para diferentes instâncias de um mesmo tipo de problema."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Cálculos, cadastros, jogos, sensores, planilhas, simuladores e automação."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Generalizar não significa ignorar diferenças importantes; significa identificar o que pode variar sem mudar a estrutura da solução."
+      }
+    ]
+  },
+  {
+    "year": 7,
+    "section": "pc",
+    "id": "pc7-reuso",
+    "topic": "Reúso e colaboração",
+    "icon": "♻️",
+    "axis": "Pensamento Computacional",
+    "objective": "Identificar soluções reutilizáveis e combinar subsoluções em trabalho colaborativo.",
+    "keyTerm": "reúso",
+    "keyDefinition": "Uso de uma solução ou parte de solução já construída em outro contexto compatível.",
+    "concept": "Se um mesmo subproblema aparece várias vezes, não precisamos resolvê-lo do zero em cada ocorrência. Podemos reaproveitar uma estratégia ou módulo. Em equipes, decomposição e reúso ajudam a distribuir tarefas e integrar resultados.",
+    "example": "Ordenar cartas de cada naipe é o mesmo tipo de subproblema repetido quatro vezes. A mesma lógica pode ser reutilizada.",
+    "formula": "decompor → identificar repetição → reutilizar → combinar",
+    "representation": "solução(A) + solução(B) com módulo comum",
+    "use": "Funções, bibliotecas, componentes de interface, projetos maker, procedimentos laboratoriais e trabalho em equipe.",
+    "observe": "Reutilizar não é copiar sem compreender; é reconhecer que uma solução já validada serve a um novo caso.",
+    "guided": "Liste três partes de um aplicativo que poderiam ser reutilizadas em telas diferentes.",
+    "challenge": "Em um robô que repete o mesmo procedimento para quatro sensores, o que poderia virar uma rotina reutilizável?",
+    "answer": "A rotina de leitura, validação ou tratamento de cada sensor pode ser escrita uma vez e chamada para diferentes entradas.",
+    "reference": "EF07CO05; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Valorize documentação e nomes claros de módulos para tornar o reúso realmente possível.",
+    "fixation": [
+      {
+        "q": "O que significa “reúso” nesta aula?",
+        "a": "Uso de uma solução ou parte de solução já construída em outro contexto compatível."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Funções, bibliotecas, componentes de interface, projetos maker, procedimentos laboratoriais e trabalho em equipe."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Reutilizar não é copiar sem compreender; é reconhecer que uma solução já validada serve a um novo caso."
+      }
+    ]
+  },
+  {
+    "year": 7,
+    "section": "pc",
+    "id": "pc7-grafos",
+    "topic": "Grafos e relações",
+    "icon": "🕸️",
+    "axis": "Pensamento Computacional",
+    "objective": "Explorar propriedades básicas de grafos e usar conexões para raciocinar sobre caminhos e relações.",
+    "keyTerm": "grafo",
+    "keyDefinition": "Estrutura formada por vértices e arestas usada para representar objetos e relações.",
+    "concept": "Grafos ajudam a representar relações que listas lineares não mostram bem. Podemos estudar caminhos, vizinhança, conexão e distância entre vértices. Esse tipo de raciocínio aparece em mapas e redes.",
+    "example": "Em uma rede social, pessoas podem ser vértices e relações de amizade, arestas. Em um mapa, cidades são vértices e estradas, arestas.",
+    "formula": "grafo = V (vértices) + A (arestas)",
+    "representation": "A—B, A—C, C—D",
+    "use": "Mapas, logística, redes sociais, internet, circuitos e organização de dependências.",
+    "observe": "A posição visual de um vértice no desenho não é o principal; o que importa é quem está conectado a quem.",
+    "guided": "Desenhe um grafo com cinco alunos fictícios e relações de amizade. Identifique quem tem mais conexões.",
+    "challenge": "Em um mapa com vários caminhos, como um grafo pode ajudar a procurar uma rota entre dois pontos?",
+    "answer": "Representando cada local como vértice e cada caminho como aresta, permitindo comparar sequências de conexões possíveis.",
+    "reference": "EF07CO04; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Mapas do bairro são bons contextos para aproximar o conceito da realidade do estudante.",
+    "fixation": [
+      {
+        "q": "O que significa “grafo” nesta aula?",
+        "a": "Estrutura formada por vértices e arestas usada para representar objetos e relações."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Mapas, logística, redes sociais, internet, circuitos e organização de dependências."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "A posição visual de um vértice no desenho não é o principal; o que importa é quem está conectado a quem."
+      }
+    ]
+  },
+  {
+    "year": 8,
+    "section": "pc",
+    "id": "pc8-recursao",
+    "topic": "Recursão e subproblemas",
+    "icon": "🪆",
+    "axis": "Pensamento Computacional",
+    "objective": "Compreender a ideia de resolver um problema usando versões menores do próprio problema.",
+    "keyTerm": "recursão",
+    "keyDefinition": "Técnica em que uma solução se define a partir de uma versão menor do mesmo problema, com uma condição de parada.",
+    "concept": "A recursão aparece quando o problema possui uma estrutura que se repete em escalas menores. Para que a solução termine, é necessário um caso-base e cada nova chamada deve se aproximar desse caso.",
+    "example": "Tamanho de uma lista: se estiver vazia, tamanho 0; caso contrário, 1 + tamanho do restante da lista.",
+    "formula": "caso-base + chamada em problema menor",
+    "representation": "f(n) → f(n-1) → ... → caso-base",
+    "use": "Árvores, listas, fractais, busca, divisão de problemas e alguns algoritmos clássicos.",
+    "observe": "Sem caso-base ou sem redução do problema, uma solução recursiva pode não terminar.",
+    "guided": "Explique recursivamente como contar quantos cartões existem em uma pilha retirando um cartão por vez.",
+    "challenge": "Qual seria o caso-base para calcular recursivamente o tamanho de uma lista?",
+    "answer": "Quando a lista estiver vazia, o tamanho é 0. A partir daí, cada item acrescenta 1 ao tamanho do restante.",
+    "reference": "EF08CO01; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Comece com objetos físicos ou desenhos antes de mostrar código recursivo.",
+    "fixation": [
+      {
+        "q": "O que significa “recursão” nesta aula?",
+        "a": "Técnica em que uma solução se define a partir de uma versão menor do mesmo problema, com uma condição de parada."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Árvores, listas, fractais, busca, divisão de problemas e alguns algoritmos clássicos."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Sem caso-base ou sem redução do problema, uma solução recursiva pode não terminar."
+      }
+    ]
+  },
+  {
+    "year": 8,
+    "section": "pc",
+    "id": "pc8-estrategias",
+    "topic": "Escolher estratégias e estruturas",
+    "icon": "🧰",
+    "axis": "Pensamento Computacional",
+    "objective": "Comparar estratégias e reconhecer que a representação dos dados influencia a solução.",
+    "keyTerm": "estratégia algorítmica",
+    "keyDefinition": "Forma organizada de abordar um problema escolhendo representações, operações e passos adequados.",
+    "concept": "Problemas diferentes pedem estruturas diferentes. Uma lista pode servir para pontuações; uma matriz, para imagem; um grafo, para rotas. Depois de escolher a representação, também precisamos escolher uma estratégia de busca, ordenação ou manipulação.",
+    "example": "Para localizar um nome em uma lista pequena, busca linear pode bastar; em lista ordenada grande, outra estratégia pode ser mais eficiente.",
+    "formula": "problema → estrutura de dados → algoritmo → avaliação",
+    "representation": "dados adequados + estratégia adequada = solução mais clara",
+    "use": "Bancos de dados, jogos, imagens, sistemas de busca, planilhas e programação.",
+    "observe": "Não existe um algoritmo 'melhor' para tudo; contexto, tamanho dos dados e objetivo influenciam a escolha.",
+    "guided": "Compare duas formas de procurar uma carta em um baralho: olhar uma por uma ou usar um baralho previamente ordenado.",
+    "challenge": "Por que uma matriz costuma ser adequada para representar uma imagem digital?",
+    "answer": "Porque uma imagem pode ser vista como linhas e colunas de pixels, e uma matriz representa naturalmente essa organização bidimensional.",
+    "reference": "EF08CO02, EF08CO03 e EF08CO04; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Peça sempre que o aluno justifique a estrutura escolhida, não apenas implemente.",
+    "fixation": [
+      {
+        "q": "O que significa “estratégia algorítmica” nesta aula?",
+        "a": "Forma organizada de abordar um problema escolhendo representações, operações e passos adequados."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Bancos de dados, jogos, imagens, sistemas de busca, planilhas e programação."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Não existe um algoritmo 'melhor' para tudo; contexto, tamanho dos dados e objetivo influenciam a escolha."
+      }
+    ]
+  },
+  {
+    "year": 9,
+    "section": "pc",
+    "id": "pc9-arvores-grafos",
+    "topic": "Árvores, grafos e caminhos",
+    "icon": "🌳",
+    "axis": "Pensamento Computacional",
+    "objective": "Usar árvores e grafos para representar informações hierárquicas e relações complexas.",
+    "keyTerm": "árvore",
+    "keyDefinition": "Tipo de grafo organizado hierarquicamente, com relações entre elementos como raiz, ramos e descendentes.",
+    "concept": "Grafos representam relações gerais; árvores representam um caso organizado hierarquicamente. Escolher entre essas estruturas depende da natureza do problema. Em ambos os casos, algoritmos podem percorrer conexões e buscar informações.",
+    "example": "Árvore genealógica é hierárquica; mapa de cidades é grafo geral.",
+    "formula": "árvore ⊂ grafos • hierarquia vs. relações gerais",
+    "representation": "raiz → filhos → descendentes",
+    "use": "Pastas de arquivos, organogramas, mapas mentais, árvores genealógicas, rotas e estruturas de sites.",
+    "observe": "Nem todo grafo é árvore. Árvores possuem organização hierárquica específica.",
+    "guided": "Compare a estrutura de pastas de um computador com um mapa rodoviário e indique qual se parece mais com árvore ou grafo.",
+    "challenge": "Qual estrutura é mais adequada para representar categorias e subcategorias de um catálogo? Por quê?",
+    "answer": "Uma árvore, pois categorias e subcategorias formam uma hierarquia com níveis.",
+    "reference": "EF09CO01; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Relacione árvores com sistemas de arquivos e grafos com mapas para diferenciar visualmente.",
+    "fixation": [
+      {
+        "q": "O que significa “árvore” nesta aula?",
+        "a": "Tipo de grafo organizado hierarquicamente, com relações entre elementos como raiz, ramos e descendentes."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Pastas de arquivos, organogramas, mapas mentais, árvores genealógicas, rotas e estruturas de sites."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Nem todo grafo é árvore. Árvores possuem organização hierárquica específica."
+      }
+    ]
+  },
+  {
+    "year": 9,
+    "section": "pc",
+    "id": "pc9-estados",
+    "topic": "Estados, eventos e autômatos",
+    "icon": "🎛️",
+    "axis": "Pensamento Computacional",
+    "objective": "Modelar comportamentos por estados e transições disparadas por eventos.",
+    "keyTerm": "autômato",
+    "keyDefinition": "Modelo abstrato que representa estados de um sistema e as transições possíveis quando eventos ocorrem.",
+    "concept": "Sistemas interativos mudam de comportamento conforme o estado atual e o evento recebido. Modelar estados antes de programar ajuda a prever comportamentos e evitar combinações incoerentes.",
+    "example": "Robô: PARADO → evento 'iniciar' → AVANÇANDO → sensor detecta obstáculo → DESVIANDO → caminho livre → AVANÇANDO.",
+    "formula": "estado atual + evento → novo estado + ação",
+    "representation": "PARADO --iniciar--> AVANÇANDO --obstáculo--> DESVIANDO",
+    "use": "Robótica, interfaces, jogos, semáforos, máquinas automáticas e sistemas embarcados.",
+    "observe": "Um mesmo evento pode produzir resultados diferentes dependendo do estado atual.",
+    "guided": "Modele um semáforo com estados verde, amarelo e vermelho e eventos de tempo.",
+    "challenge": "Crie quatro estados para um robô que recebe missão, executa, encontra falha e conclui.",
+    "answer": "Exemplo: AGUARDANDO → EXECUTANDO → ERRO/RECUPERAÇÃO → CONCLUÍDO, com eventos que determinam as transições.",
+    "reference": "EF09CO03; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Use diagramas de estado antes de programação orientada a eventos em Scratch, Python ou robótica.",
+    "fixation": [
+      {
+        "q": "O que significa “autômato” nesta aula?",
+        "a": "Modelo abstrato que representa estados de um sistema e as transições possíveis quando eventos ocorrem."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Robótica, interfaces, jogos, semáforos, máquinas automáticas e sistemas embarcados."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Um mesmo evento pode produzir resultados diferentes dependendo do estado atual."
+      }
+    ]
+  }
+]
