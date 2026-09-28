@@ -40,3 +40,6 @@ header{position:relative}.app-menu{display:none;position:absolute;right:0;top:82
 
 /* v2.0.45 — sequência de aulas */
 .lesson-nav{display:grid;grid-template-columns:42px 1fr 42px;align-items:center;gap:8px;margin:0 0 12px}.lesson-nav b{text-align:center;color:#eafff8}.lesson-nav button{height:38px;padding:0;border:1px solid #1685ad;border-radius:10px;background:#07344a;color:#fff;font-size:24px;line-height:1}
+
+/* v2.0.46 — Gamer */
+.gamer-strip{display:none;grid-template-columns:1fr auto auto;align-items:center;gap:10px;margin:0 0 12px;padding:9px 12px;border:1px solid #31dcb0;border-radius:13px;background:#063c43;color:#eafff7}.gamer-strip.show,.gamer-strip.active{display:grid}.gamer-strip b{font-size:20px;font-variant-numeric:tabular-nums}.gamer-strip button{border:1px solid #4ce8bd;border-radius:9px;background:#0a5c55;color:#fff;padding:8px 11px;font-weight:800}@media(max-width:650px){.gamer-strip{grid-template-columns:1fr auto}.gamer-strip button{grid-column:1/-1}}
