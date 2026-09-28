@@ -49,3 +49,6 @@ header{position:relative}.app-menu{display:none;position:absolute;right:0;top:82
 
 /* v2.0.48 — refinamento Speed Run */
 .game.gamer-focus{position:relative}.game.gamer-focus .gamer-strip{position:sticky;top:max(4px,env(safe-area-inset-top));z-index:35}.game.gamer-focus .tools button[data-action="hint"],.game.gamer-focus .tools button[data-action="sample"]{opacity:.45}.game.gamer-focus #verify{border-color:#ff735f}.game.gamer-focus #verify::after{content:" · use PARAR";font-size:.72em;opacity:.75}.gamer-result p{color:#bde6ef;font-weight:650}.gamer-strip.show #gamer-stop:active{transform:scale(.96)}
+
+/* v2.0.49 — integridade pedagógica */
+.game.gamer-focus .tools button[data-action="hint"],.game.gamer-focus .tools button[data-action="sample"]{opacity:.28;filter:saturate(.4)}.game.gamer-focus .tools button[data-action="hint"]:active,.game.gamer-focus .tools button[data-action="sample"]:active{transform:none}
