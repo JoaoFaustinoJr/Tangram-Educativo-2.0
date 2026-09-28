@@ -1,0 +1,290 @@
+[
+  {
+    "year": 0,
+    "section": "fund",
+    "id": "f17-logica",
+    "topic": "O que é lógica?",
+    "icon": "🧠",
+    "axis": "Pensamento Computacional",
+    "objective": "Compreender lógica como organização coerente do raciocínio e base para decisões e algoritmos.",
+    "keyTerm": "lógica",
+    "keyDefinition": "Organização do raciocínio por regras e relações que permitem analisar situações, concluir e decidir.",
+    "concept": "Na Computação, lógica não significa decorar comandos. Significa analisar uma situação, identificar condições e construir uma sequência coerente de decisões. Antes de existir um programa, existe uma forma de pensar o problema. Sentenças podem ser verdadeiras ou falsas e podem ser combinadas para orientar ações.",
+    "example": "No Tangram: SE a peça ultrapassa a silhueta, ENTÃO ela precisa ser reposicionada. Em um robô: SE o sensor detectar obstáculo, ENTÃO pare ou desvie.",
+    "formula": "Situação → condição/regra → decisão → ação",
+    "representation": "SE condição → ação • SENÃO → outra ação",
+    "use": "Semáforos, jogos, formulários, robôs, sistemas de segurança, diagnósticos e decisões do cotidiano.",
+    "observe": "Lógica é mais ampla do que programação: podemos raciocinar logicamente sem usar computador.",
+    "guided": "Escolha uma regra da sala de aula ou de casa e reescreva-a na forma SE... ENTÃO.... Depois identifique qual condição precisa ser verdadeira.",
+    "challenge": "Crie uma regra para a R.A.I. decidir quando deve oferecer uma dica ao jogador.",
+    "answer": "Exemplo: SE o jogador fizer várias tentativas sem progresso, ENTÃO oferecer uma dica; SENÃO, permitir que continue explorando. O importante é deixar condição e ação claramente separadas.",
+    "reference": "BNCC Computação — eixo Pensamento Computacional; Referencial Curricular do Paraná, Volume 2 — eixos estruturantes.",
+    "teacherTip": "Pode ser realizada de forma desplugada antes do uso do app, com cartões de condições e ações.",
+    "fixation": [
+      {
+        "q": "O que significa “lógica” nesta aula?",
+        "a": "Organização do raciocínio por regras e relações que permitem analisar situações, concluir e decidir."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Semáforos, jogos, formulários, robôs, sistemas de segurança, diagnósticos e decisões do cotidiano."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Lógica é mais ampla do que programação: podemos raciocinar logicamente sem usar computador."
+      }
+    ]
+  },
+  {
+    "year": 0,
+    "section": "fund",
+    "id": "f17-problema",
+    "topic": "O que é um problema computacional?",
+    "icon": "🎯",
+    "axis": "Pensamento Computacional",
+    "objective": "Distinguir problema, entrada, objetivo e restrições antes de propor uma solução.",
+    "keyTerm": "problema computacional",
+    "keyDefinition": "Problema que pode ser descrito com precisão suficiente para que uma solução seja construída, analisada e eventualmente automatizada.",
+    "concept": "Resolver bem começa por definir bem. É necessário saber quais informações recebemos, o que desejamos obter e quais regras precisam ser respeitadas. Em Computação, essa clareza evita que o aluno pule diretamente para o código sem compreender a tarefa.",
+    "example": "Tangram: entrada = sete peças e uma silhueta; objetivo = preencher a silhueta; restrições = não sobrepor, não deixar partes fora e utilizar as peças corretamente.",
+    "formula": "Entradas + objetivo + restrições → problema bem definido",
+    "representation": "ENTRADA → PROCESSAMENTO/SOLUÇÃO → SAÍDA",
+    "use": "Planejamento de rotas, cálculo de médias, organização de dados, jogos, automação e projetos de robótica.",
+    "observe": "Programar antes de entender o problema costuma produzir soluções corretas para a pergunta errada.",
+    "guided": "Pegue um problema simples, como calcular a média de duas notas. Identifique entradas, resultado esperado e uma regra para o cálculo.",
+    "challenge": "Defina o problema 'fazer um robô chegar até a porta sem bater em obstáculos' usando entrada, objetivo e restrições.",
+    "answer": "Entradas podem ser posição e leituras dos sensores; objetivo é chegar à porta; restrições incluem evitar colisões e respeitar os limites do percurso.",
+    "reference": "BNCC Computação — estratégias de solução de problemas; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Antes de pedir código, peça sempre uma definição verbal do problema e uma lista de entradas e saídas.",
+    "fixation": [
+      {
+        "q": "O que significa “problema computacional” nesta aula?",
+        "a": "Problema que pode ser descrito com precisão suficiente para que uma solução seja construída, analisada e eventualmente automatizada."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Planejamento de rotas, cálculo de médias, organização de dados, jogos, automação e projetos de robótica."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Programar antes de entender o problema costuma produzir soluções corretas para a pergunta errada."
+      }
+    ]
+  },
+  {
+    "year": 0,
+    "section": "fund",
+    "id": "f17-algoritmo",
+    "topic": "Algoritmo: passos para uma solução",
+    "icon": "🧾",
+    "axis": "Pensamento Computacional",
+    "objective": "Definir algoritmo e reconhecer que uma mesma solução pode ser representada de diferentes formas.",
+    "keyTerm": "algoritmo",
+    "keyDefinition": "Sequência finita, ordenada e não ambígua de passos para atingir um objetivo ou resolver um problema.",
+    "concept": "Algoritmos existem antes da linguagem de programação. Uma receita, uma estratégia para encontrar uma peça e um procedimento de laboratório podem ser descritos como algoritmos quando seus passos são claros e ordenados. Na Computação, o algoritmo organiza a solução antes de sua automatização.",
+    "example": "Observar a silhueta → escolher uma região → selecionar uma peça → mover/girar → verificar → corrigir se necessário.",
+    "formula": "Problema → algoritmo → representação/código → execução",
+    "representation": "1. observar • 2. decidir • 3. executar • 4. verificar • 5. corrigir",
+    "use": "Receitas, instruções de montagem, cálculo, navegação, protocolos de laboratório, jogos e programas.",
+    "observe": "Código e algoritmo não são sinônimos: o código é uma forma de expressar um algoritmo em uma linguagem.",
+    "guided": "Escreva cinco passos para abrir o Tangram, escolher uma missão e iniciar o desafio. Troque o roteiro com um colega e verifique se há ambiguidade.",
+    "challenge": "Crie um algoritmo curto para posicionar uma peça do Tangram e verificar se a tentativa deve ser mantida.",
+    "answer": "Exemplo: selecionar peça → comparar com região → girar se necessário → mover → verificar limites e sobreposição → manter ou reposicionar.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2 — Pensamento Computacional.",
+    "teacherTip": "Explore algoritmos em linguagem natural antes de pseudocódigo ou linguagem de programação.",
+    "fixation": [
+      {
+        "q": "O que significa “algoritmo” nesta aula?",
+        "a": "Sequência finita, ordenada e não ambígua de passos para atingir um objetivo ou resolver um problema."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Receitas, instruções de montagem, cálculo, navegação, protocolos de laboratório, jogos e programas."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Código e algoritmo não são sinônimos: o código é uma forma de expressar um algoritmo em uma linguagem."
+      }
+    ]
+  },
+  {
+    "year": 0,
+    "section": "fund",
+    "id": "f17-representacao",
+    "topic": "Linguagem natural, pseudocódigo e fluxograma",
+    "icon": "🔀",
+    "axis": "Pensamento Computacional",
+    "objective": "Comparar formas de representar algoritmos e escolher uma representação adequada à situação.",
+    "keyTerm": "representação de algoritmo",
+    "keyDefinition": "Forma utilizada para comunicar os passos de uma solução, como texto, desenho, fluxograma, blocos ou pseudocódigo.",
+    "concept": "O mesmo algoritmo pode ser comunicado de várias maneiras. A linguagem natural é acessível, mas pode ser ambígua; o fluxograma destaca o fluxo e as decisões; o pseudocódigo aproxima a lógica do código sem depender de uma linguagem específica.",
+    "example": "Texto: 'se encaixar, verifique'. Fluxograma: decisão com caminhos SIM/NÃO. Pseudocódigo: SE encaixou ENTÃO verificar SENÃO reposicionar.",
+    "formula": "Mesma solução ≠ mesma representação",
+    "representation": "[início] → ação → ◇ condição? → SIM/NÃO → próxima ação",
+    "use": "Planejamento de programas, processos industriais, protocolos, documentação, robótica e resolução de problemas.",
+    "observe": "Uma representação é boa quando ajuda a compreender e comunicar a solução; não existe uma única notação adequada para todos os contextos.",
+    "guided": "Escolha um algoritmo cotidiano de quatro passos e represente-o primeiro em texto e depois como fluxograma simples.",
+    "challenge": "Represente a decisão 'a peça está dentro da silhueta?' usando uma condição e dois caminhos.",
+    "answer": "Condição: 'peça dentro da silhueta?'. SIM → continuar/verificar. NÃO → mover novamente.",
+    "reference": "BNCC Computação — representação e construção de algoritmos; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Combine formas desplugadas e plugadas; alunos podem desenhar fluxogramas antes de usar blocos.",
+    "fixation": [
+      {
+        "q": "O que significa “representação de algoritmo” nesta aula?",
+        "a": "Forma utilizada para comunicar os passos de uma solução, como texto, desenho, fluxograma, blocos ou pseudocódigo."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Planejamento de programas, processos industriais, protocolos, documentação, robótica e resolução de problemas."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Uma representação é boa quando ajuda a compreender e comunicar a solução; não existe uma única notação adequada para todos os contextos."
+      }
+    ]
+  },
+  {
+    "year": 0,
+    "section": "fund",
+    "id": "f17-linguagens",
+    "topic": "Linguagens computacionais e de programação",
+    "icon": "💬",
+    "axis": "Pensamento Computacional",
+    "objective": "Distinguir algoritmo, linguagem de programação e linguagem de máquina em nível introdutório.",
+    "keyTerm": "linguagem de programação",
+    "keyDefinition": "Sistema formal de símbolos e regras usado para descrever instruções que podem ser traduzidas ou executadas por um sistema computacional.",
+    "concept": "Computadores precisam de representações precisas. Linguagens de programação permitem expressar algoritmos de forma estruturada. Algumas são visuais, como Scratch; outras são textuais, como Python, JavaScript e C/C++. Em níveis mais próximos do hardware, instruções são representadas de maneira apropriada ao processador.",
+    "example": "Um mesmo movimento pode aparecer como bloco 'repita 4 vezes', pseudocódigo REPITA 4 VEZES ou código Python com for.",
+    "formula": "Algoritmo = solução • linguagem = forma de expressá-la",
+    "representation": "Scratch/blocos ↔ pseudocódigo ↔ Python/JavaScript/C++ → execução no sistema",
+    "use": "Aplicativos, páginas web, jogos, automação, ciência de dados, sistemas embarcados e robótica.",
+    "observe": "Nenhuma linguagem torna um algoritmo automaticamente bom; primeiro precisamos de uma solução coerente.",
+    "guided": "Compare um comando de repetição em blocos e em pseudocódigo. Identifique o que permaneceu igual na ideia.",
+    "challenge": "Explique por que um algoritmo de média pode ser implementado em Scratch e em Python sem deixar de ser o mesmo algoritmo.",
+    "answer": "Porque a sequência lógica para receber valores, somar e dividir é a mesma; muda apenas a linguagem usada para expressar a solução.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2 — programação e fluência em linguagem computacional.",
+    "teacherTip": "No 5º e 6º anos, priorize blocos e pseudocódigo; avance gradualmente para exemplos textuais.",
+    "fixation": [
+      {
+        "q": "O que significa “linguagem de programação” nesta aula?",
+        "a": "Sistema formal de símbolos e regras usado para descrever instruções que podem ser traduzidas ou executadas por um sistema computacional."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Aplicativos, páginas web, jogos, automação, ciência de dados, sistemas embarcados e robótica."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Nenhuma linguagem torna um algoritmo automaticamente bom; primeiro precisamos de uma solução coerente."
+      }
+    ]
+  },
+  {
+    "year": 0,
+    "section": "fund",
+    "id": "f17-dados",
+    "topic": "Dados, informação e instruções",
+    "icon": "🗂️",
+    "axis": "Mundo Digital",
+    "objective": "Compreender que sistemas computacionais recebem, representam, armazenam e processam dados segundo instruções.",
+    "keyTerm": "dado",
+    "keyDefinition": "Representação de um valor, símbolo, medida, texto, imagem ou outro elemento que pode ser armazenado e processado.",
+    "concept": "Dados são representações que podem ser manipuladas por sistemas computacionais. Quando são organizados e interpretados em um contexto, podem produzir informação. Programas utilizam instruções para transformar entradas em resultados.",
+    "example": "Um sensor mede 28 °C: o valor 28 é um dado. Um programa pode compará-lo com um limite e informar que a temperatura está alta.",
+    "formula": "Dados + contexto/processamento → informação útil",
+    "representation": "entrada de dados → instruções/processamento → saída",
+    "use": "Sensores, planilhas, aplicativos, prontuários, mapas, pesquisas, jogos e sistemas agrícolas.",
+    "observe": "Dado não é automaticamente conhecimento; contexto, qualidade e interpretação importam.",
+    "guided": "Liste três dados que um robô agrícola poderia coletar e diga qual decisão cada dado poderia apoiar.",
+    "challenge": "No Tangram, quais dados o programa pode observar para verificar uma tentativa?",
+    "answer": "Exemplos: posição das peças, rotação, sobreposição, cobertura da silhueta e partes fora do limite.",
+    "reference": "BNCC Computação — Mundo Digital e Pensamento Computacional; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Use exemplos de sensores, planilhas e situações escolares para tornar dados concretos.",
+    "fixation": [
+      {
+        "q": "O que significa “dado” nesta aula?",
+        "a": "Representação de um valor, símbolo, medida, texto, imagem ou outro elemento que pode ser armazenado e processado."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Sensores, planilhas, aplicativos, prontuários, mapas, pesquisas, jogos e sistemas agrícolas."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Dado não é automaticamente conhecimento; contexto, qualidade e interpretação importam."
+      }
+    ]
+  },
+  {
+    "year": 0,
+    "section": "fund",
+    "id": "f17-eixos",
+    "topic": "Computação não é só programar: os três eixos",
+    "icon": "🧭",
+    "axis": "Pensamento Computacional • Mundo Digital • Cultura Digital",
+    "objective": "Reconhecer os três eixos estruturantes da Computação na Educação Básica.",
+    "keyTerm": "eixos da Computação",
+    "keyDefinition": "Organização curricular em Pensamento Computacional, Mundo Digital e Cultura Digital.",
+    "concept": "O Complemento à BNCC e o Referencial Curricular do Paraná organizam a Computação em três eixos. Pensamento Computacional trata de representar e resolver problemas; Mundo Digital aborda como dados, dispositivos, redes e sistemas funcionam; Cultura Digital discute uso crítico, ético, responsável e criativo das tecnologias.",
+    "example": "Programar um robô envolve pensamento computacional; compreender sensores e transmissão envolve mundo digital; discutir privacidade e impacto social envolve cultura digital.",
+    "formula": "Computação = pensar soluções + compreender sistemas + agir criticamente no digital",
+    "representation": "PC 🧠 • MD 🌐 • CD 🛡️",
+    "use": "Educação Digital, programação, robótica, cidadania digital e projetos interdisciplinares.",
+    "observe": "Reduzir Computação a 'aprender a mexer no computador' ou apenas a 'aprender código' deixa de fora partes essenciais do currículo.",
+    "guided": "Classifique três situações: criar algoritmo, entender armazenamento em nuvem e avaliar uma fonte na internet.",
+    "challenge": "Em um projeto com sensor de umidade, identifique um exemplo para cada um dos três eixos.",
+    "answer": "PC: algoritmo de irrigação; MD: leitura/transmissão dos dados do sensor; CD: uso responsável, documentação e análise do impacto da solução.",
+    "reference": "Resolução CNE/CEB nº 1/2022; BNCC Computação; Referencial Curricular do Paraná, Volume 2 (2025).",
+    "teacherTip": "Use esta aula como mapa para mostrar aos estudantes por que as trilhas do app estão separadas.",
+    "fixation": [
+      {
+        "q": "O que significa “eixos da Computação” nesta aula?",
+        "a": "Organização curricular em Pensamento Computacional, Mundo Digital e Cultura Digital."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Educação Digital, programação, robótica, cidadania digital e projetos interdisciplinares."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Reduzir Computação a 'aprender a mexer no computador' ou apenas a 'aprender código' deixa de fora partes essenciais do currículo."
+      }
+    ]
+  },
+  {
+    "year": 0,
+    "section": "fund",
+    "id": "f17-debug",
+    "topic": "Bug, teste e depuração",
+    "icon": "🐞",
+    "axis": "Pensamento Computacional",
+    "objective": "Compreender teste e depuração como partes normais da construção e melhoria de soluções.",
+    "keyTerm": "depuração",
+    "keyDefinition": "Processo de localizar, compreender e corrigir a causa de um erro ou comportamento inesperado em uma solução.",
+    "concept": "Um bug é um erro ou comportamento inesperado. Testar significa executar a solução em situações planejadas e comparar o resultado obtido com o esperado. Depurar não é 'chutar' mudanças: é observar evidências, localizar a causa, corrigir e testar novamente.",
+    "example": "Um robô deveria repetir três movimentos, mas executa quatro. A depuração começa verificando a condição ou a contagem do laço.",
+    "formula": "Executar → observar → comparar → localizar → corrigir → testar novamente",
+    "representation": "esperado ≠ obtido → investigar",
+    "use": "Programação, robótica, planilhas, experimentos, projetos maker e até estratégias de resolução do Tangram.",
+    "observe": "Encontrar um erro não significa fracasso; significa que o teste revelou informação útil para melhorar a solução.",
+    "guided": "Analise um algoritmo com um passo propositalmente trocado. Descubra em qual momento o resultado deixa de seguir o esperado.",
+    "challenge": "O jogador toca em 'verificar' e o sistema aceita uma peça fora do limite. Que perguntas você faria antes de alterar o código?",
+    "answer": "Confirmar o resultado esperado, reproduzir o erro, verificar quais dados entram na validação, identificar se o limite está sendo medido corretamente e só então corrigir e retestar.",
+    "reference": "BNCC Computação — análise de programas, com aprofundamento explícito no EF07CO02; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Valorize o registro de hipótese, teste e correção. Isso aproxima programação do método investigativo.",
+    "fixation": [
+      {
+        "q": "O que significa “depuração” nesta aula?",
+        "a": "Processo de localizar, compreender e corrigir a causa de um erro ou comportamento inesperado em uma solução."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Programação, robótica, planilhas, experimentos, projetos maker e até estratégias de resolução do Tangram."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Encontrar um erro não significa fracasso; significa que o teste revelou informação útil para melhorar a solução."
+      }
+    ]
+  }
+]
