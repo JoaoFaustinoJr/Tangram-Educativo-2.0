@@ -37,3 +37,6 @@ header{position:relative}.app-menu{display:none;position:absolute;right:0;top:82
 
 /* v2.0.44 — Amostra visual e ampliar */
 .sample-layer{filter:drop-shadow(0 0 5px #42dfff55)}.focus-game{position:relative;z-index:20}.focus-game .gamehead,.focus-game .tools,.focus-game .status{position:relative;z-index:2}.focus-game .board{max-height:none}.focus-game .workspace{margin-left:-10px;margin-right:-10px}@media(max-width:650px){.focus-game .board{min-height:72vh}.focus-game .classic-board{min-height:72vh}}
+
+/* v2.0.45 — sequência de aulas */
+.lesson-nav{display:grid;grid-template-columns:42px 1fr 42px;align-items:center;gap:8px;margin:0 0 12px}.lesson-nav b{text-align:center;color:#eafff8}.lesson-nav button{height:38px;padding:0;border:1px solid #1685ad;border-radius:10px;background:#07344a;color:#fff;font-size:24px;line-height:1}
