@@ -1,0 +1,562 @@
+[
+  {
+    "id": "rob6t3-1",
+    "section": "robotics",
+    "year": 6,
+    "icon": "🧩",
+    "topic": "Decomposição: do problema às etapas",
+    "objective": "Decompor um problema complexo em partes menores e organizar entradas, processamento e saídas.",
+    "concept": "Na computação e na robótica, problemas grandes ficam mais fáceis quando são separados em tarefas pequenas. Um robô pode perceber o ambiente, decidir o que fazer e então agir.",
+    "keyTerm": "Decomposição",
+    "keyDefinition": "Divisão de um problema em partes menores, compreensíveis e testáveis.",
+    "example": "Para simular o movimento da Terra: definir posição, criar repetição, atualizar coordenadas e exibir o movimento.",
+    "representation": "Entrada → processamento → saída",
+    "use": "Programação de robôs, jogos, simulações científicas e organização de projetos.",
+    "observe": "Se uma etapa falha, podemos testá-la separadamente sem refazer todo o projeto.",
+    "guided": "Escolha uma tarefa cotidiana e escreva quatro etapas necessárias para concluí-la.",
+    "challenge": "Monte uma sequência lógica para um robô sair do ponto A, contornar um obstáculo e chegar ao ponto B.",
+    "answer": "Uma solução possível é: iniciar → avançar → detectar obstáculo → desviar → retomar direção → parar no destino.",
+    "axis": "Pensamento Computacional",
+    "reference": "EF06CO04, EF06CO05 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Use situações concretas e peça que os grupos comparem decomposições diferentes.",
+    "fixation": [
+      {
+        "q": "O que é decompor?",
+        "a": "Dividir um problema em partes menores."
+      },
+      {
+        "q": "O que é entrada?",
+        "a": "Dado ou informação recebida pelo sistema."
+      },
+      {
+        "q": "Por que testar etapas separadamente?",
+        "a": "Para localizar erros e melhorar a solução com mais facilidade."
+      }
+    ]
+  },
+  {
+    "id": "rob6t3-2",
+    "section": "robotics",
+    "year": 6,
+    "icon": "📡",
+    "topic": "Como os dados viajam",
+    "objective": "Compreender transmissão em pacotes e reconstrução da informação no destino.",
+    "concept": "Dados digitais podem ser divididos em partes menores, transmitidos por diferentes equipamentos e reconstruídos quando chegam ao destino.",
+    "keyTerm": "Pacote de dados",
+    "keyDefinition": "Pequena parte de uma informação preparada para transmissão em uma rede.",
+    "example": "Uma mensagem enviada entre dois dispositivos pode ser fragmentada, transmitida e reorganizada.",
+    "representation": "mensagem → pacotes → rede → reconstrução",
+    "use": "Internet, comunicação entre robôs, sensores conectados e sistemas IoT.",
+    "observe": "A ordem e a integridade dos dados são importantes para reconstruir corretamente a mensagem.",
+    "guided": "Divida uma frase em quatro cartões, embaralhe-os e crie uma regra para reconstruí-la.",
+    "challenge": "Explique como um robô pode enviar ao computador uma leitura de sensor sem enviar toda a informação de uma só vez.",
+    "answer": "Ele pode codificar a leitura em dados, dividi-los conforme o protocolo, transmitir e permitir a reconstrução no receptor.",
+    "axis": "Mundo Digital",
+    "reference": "EF06CO07, EF06CO08 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Faça uma simulação humana de rede com estudantes representando roteadores.",
+    "fixation": [
+      {
+        "q": "O que acontece com a informação antes da transmissão?",
+        "a": "Pode ser dividida em pacotes."
+      },
+      {
+        "q": "Onde os pacotes são reunidos?",
+        "a": "No destino."
+      },
+      {
+        "q": "Robôs podem trocar dados?",
+        "a": "Sim, por diferentes meios e protocolos de comunicação."
+      }
+    ]
+  },
+  {
+    "id": "rob6t3-3",
+    "section": "robotics",
+    "year": 6,
+    "icon": "🌍",
+    "topic": "Coordenadas e simulação",
+    "objective": "Usar coordenadas, repetição e eventos para representar fenômenos e movimentos.",
+    "concept": "Coordenadas x e y permitem indicar posições. Alterando-as de forma repetida, podemos criar movimento e simulações.",
+    "keyTerm": "Coordenadas",
+    "keyDefinition": "Valores que indicam uma posição em um plano.",
+    "example": "Um objeto pode mover-se 10 unidades em x a cada repetição.",
+    "representation": "repita → altere x/y → atualize tela",
+    "use": "Jogos, mapas, robôs móveis e simulações astronômicas.",
+    "observe": "Movimento digital é uma sequência de mudanças de posição.",
+    "guided": "Desenhe um plano cartesiano e marque uma rota com cinco pontos.",
+    "challenge": "Crie mentalmente um algoritmo que faça um objeto percorrer quatro posições e retornar ao início.",
+    "answer": "Defina posição inicial, percorra os pontos em sequência e ao final atribua novamente as coordenadas iniciais.",
+    "axis": "Programação",
+    "reference": "EF06CO03, EF06CO04 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Associe o plano cartesiano ao deslocamento físico de um robô.",
+    "fixation": [
+      {
+        "q": "Qual eixo representa normalmente a horizontal?",
+        "a": "x."
+      },
+      {
+        "q": "E a vertical?",
+        "a": "y."
+      },
+      {
+        "q": "O que cria movimento numa animação?",
+        "a": "Mudanças sucessivas de posição."
+      }
+    ]
+  },
+  {
+    "id": "rob6t3-4",
+    "section": "robotics",
+    "year": 6,
+    "icon": "📊",
+    "topic": "Dados, tabelas e gráficos",
+    "objective": "Organizar dados coletados e interpretá-los com tabelas, fórmulas e gráficos.",
+    "concept": "Sensores e pesquisas geram dados. Tabelas organizam valores; fórmulas calculam resultados; gráficos ajudam a perceber padrões.",
+    "keyTerm": "Dado",
+    "keyDefinition": "Registro de uma observação, medição ou informação que pode ser processada.",
+    "example": "Registrar temperatura a cada minuto e criar um gráfico de variação.",
+    "representation": "coletar → organizar → calcular → visualizar → interpretar",
+    "use": "Sensores, experimentos, agricultura, clima e monitoramento.",
+    "observe": "Um gráfico não substitui os dados: ele é uma forma de representá-los.",
+    "guided": "Crie cinco valores de temperatura e calcule a média.",
+    "challenge": "Qual representação ajudaria mais a comparar a variação de uma medida ao longo do tempo?",
+    "answer": "Em geral, um gráfico de linhas evidencia bem a mudança ao longo do tempo.",
+    "axis": "Mundo Digital",
+    "reference": "EF06MA33, EF06CO08 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Use dados reais de sensores quando disponíveis.",
+    "fixation": [
+      {
+        "q": "Para que serve uma tabela?",
+        "a": "Organizar dados em linhas e colunas."
+      },
+      {
+        "q": "Para que serve um gráfico?",
+        "a": "Facilitar a visualização e comparação dos dados."
+      },
+      {
+        "q": "Dados de sensores podem ser analisados?",
+        "a": "Sim, inclusive com fórmulas e gráficos."
+      }
+    ]
+  },
+  {
+    "id": "rob7t3-1",
+    "section": "robotics",
+    "year": 7,
+    "icon": "🔁",
+    "topic": "Repetição e contagem regressiva",
+    "objective": "Construir algoritmos com laços de repetição e condições de parada.",
+    "concept": "Laços repetem instruções. Uma condição de parada determina quando a repetição deve terminar.",
+    "keyTerm": "Laço de repetição",
+    "keyDefinition": "Estrutura que executa um conjunto de instruções várias vezes.",
+    "example": "Começar em 10, mostrar o número, diminuir 1 e repetir até chegar a zero.",
+    "representation": "repita até condição → ação → atualização",
+    "use": "Temporizadores, robôs, jogos e automação.",
+    "observe": "Sem atualização ou condição adequada, um laço pode nunca terminar.",
+    "guided": "Escreva uma contagem regressiva de 5 a 0 usando uma variável.",
+    "challenge": "Como programar um robô para avançar exatamente quatro etapas sem repetir quatro blocos iguais?",
+    "answer": "Use um laço que repita o comando avançar quatro vezes.",
+    "axis": "Pensamento Computacional",
+    "reference": "EF07CO03, EF07CO05 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Compare código repetido com código usando laço.",
+    "fixation": [
+      {
+        "q": "O que um laço faz?",
+        "a": "Repete instruções."
+      },
+      {
+        "q": "O que encerra um repita até?",
+        "a": "Uma condição de parada."
+      },
+      {
+        "q": "Qual vantagem do laço?",
+        "a": "Reduz repetição e torna o algoritmo mais organizado."
+      }
+    ]
+  },
+  {
+    "id": "rob7t3-2",
+    "section": "robotics",
+    "year": 7,
+    "icon": "🌀",
+    "topic": "Padrões, Fibonacci e arte recursiva",
+    "objective": "Reconhecer padrões e construir formas a partir de regras reutilizáveis.",
+    "concept": "Sequências e desenhos podem nascer de uma regra aplicada repetidamente. Reconhecer o padrão permite transformar a regra em algoritmo.",
+    "keyTerm": "Padrão",
+    "keyDefinition": "Regularidade que permite prever ou gerar novos elementos.",
+    "example": "Na sequência de Fibonacci, cada termo é obtido a partir dos anteriores.",
+    "representation": "regra → repetição → padrão",
+    "use": "Arte generativa, natureza, programação visual e modelagem.",
+    "observe": "O algoritmo descreve a regra; o desenho é um dos resultados possíveis.",
+    "guided": "Continue a sequência 1, 1, 2, 3, 5 e explique a regra.",
+    "challenge": "Crie uma regra simples de giro e avanço que possa gerar um padrão geométrico.",
+    "answer": "Exemplo: avançar 20, girar 90°, repetir quatro vezes produz um quadrado.",
+    "axis": "Estratégias de solução de problemas",
+    "reference": "EF07MA14, EF07CO05 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Associe funções e padrões a desenhos com caneta no Scratch.",
+    "fixation": [
+      {
+        "q": "O que é um padrão?",
+        "a": "Uma regularidade observável."
+      },
+      {
+        "q": "Uma regra pode gerar desenhos?",
+        "a": "Sim."
+      },
+      {
+        "q": "Reúso ajuda por quê?",
+        "a": "Evita duplicação e facilita alterações."
+      }
+    ]
+  },
+  {
+    "id": "rob7t3-3",
+    "section": "robotics",
+    "year": 7,
+    "icon": "🧱",
+    "topic": "Funções e reúso de código",
+    "objective": "Criar funções para decompor e reutilizar soluções.",
+    "concept": "Uma função agrupa instruções que realizam uma tarefa. Ela pode ser chamada várias vezes, evitando duplicação.",
+    "keyTerm": "Função",
+    "keyDefinition": "Bloco nomeado de instruções criado para executar uma tarefa específica.",
+    "example": "Uma função desenharQuadrado pode ser chamada sempre que o programa precisar de um quadrado.",
+    "representation": "função(parâmetros) → instruções → resultado",
+    "use": "Jogos, robótica, aplicativos e projetos colaborativos.",
+    "observe": "Uma boa função costuma ter uma responsabilidade clara.",
+    "guided": "Transforme três comandos repetidos em uma função com um nome significativo.",
+    "challenge": "Que função você criaria para um robô que precisa desviar de obstáculos várias vezes?",
+    "answer": "Uma função como desviar(), reunindo parar, girar, avançar e retomar a rota.",
+    "axis": "Pensamento Computacional",
+    "reference": "EF07CO05 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Peça aos grupos que nomeiem funções pelo que fazem, não pela posição no código.",
+    "fixation": [
+      {
+        "q": "Funções favorecem qual prática?",
+        "a": "Reúso de código."
+      },
+      {
+        "q": "Uma função pode ser chamada várias vezes?",
+        "a": "Sim."
+      },
+      {
+        "q": "Funções ajudam na decomposição?",
+        "a": "Sim, cada uma pode representar uma subtarefa."
+      }
+    ]
+  },
+  {
+    "id": "rob7t3-4",
+    "section": "robotics",
+    "year": 7,
+    "icon": "🛡️",
+    "topic": "Cyberbullying e cidadania digital",
+    "objective": "Diferenciar bullying e cyberbullying e propor atitudes responsáveis no ambiente digital.",
+    "concept": "No ambiente digital, mensagens e conteúdos podem alcançar muitas pessoas e permanecer disponíveis. Ética, respeito e responsabilidade também valem online.",
+    "keyTerm": "Cyberbullying",
+    "keyDefinition": "Prática de intimidação, humilhação ou agressão realizada por meios digitais.",
+    "example": "Compartilhar repetidamente conteúdo ofensivo sobre um colega em um grupo digital.",
+    "representation": "pensar → verificar impacto → comunicar com respeito",
+    "use": "Redes sociais, jogos online, grupos de mensagens e comunidades digitais.",
+    "observe": "Não encaminhar conteúdo ofensivo também é uma forma de interromper sua propagação.",
+    "guided": "Liste três atitudes para tornar um grupo de turma mais respeitoso.",
+    "challenge": "O que fazer ao presenciar uma agressão digital contra um colega?",
+    "answer": "Não ampliar a agressão, guardar evidências quando necessário e procurar um adulto ou canal responsável de apoio.",
+    "axis": "Cultura Digital",
+    "reference": "EF07CO09 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Conduza sem exposição de casos pessoais; trabalhe cenários fictícios.",
+    "fixation": [
+      {
+        "q": "Cyberbullying acontece apenas em redes sociais?",
+        "a": "Não, pode ocorrer em diversos ambientes digitais."
+      },
+      {
+        "q": "Compartilhar ofensa pode ampliar o dano?",
+        "a": "Sim."
+      },
+      {
+        "q": "Respeito digital faz parte da cidadania?",
+        "a": "Sim."
+      }
+    ]
+  },
+  {
+    "id": "rob8t3-1",
+    "section": "robotics",
+    "year": 8,
+    "icon": "📚",
+    "topic": "Listas e algoritmos de ordenação",
+    "objective": "Manipular listas e compreender por que algoritmos de ordenação são úteis.",
+    "concept": "Listas guardam vários valores. Ordenar significa reorganizá-los segundo um critério, permitindo buscas, comparações e análises mais eficientes.",
+    "keyTerm": "Ordenação",
+    "keyDefinition": "Processo de reorganizar elementos segundo uma regra, como ordem crescente.",
+    "example": "Insertion sort insere cada elemento na posição adequada da parte já ordenada.",
+    "representation": "lista → comparar → deslocar/inserir → lista ordenada",
+    "use": "Notas, medições de sensores, rankings e catálogos.",
+    "observe": "Há diferentes algoritmos para resolver o mesmo problema de ordenação.",
+    "guided": "Ordene manualmente 8, 3, 6, 1 mostrando cada inserção.",
+    "challenge": "Por que ordenar leituras de um sensor pode ajudar a encontrar a mediana?",
+    "answer": "Porque a mediana depende da posição central dos dados quando estão ordenados.",
+    "axis": "Pensamento Computacional",
+    "reference": "EF08CO03 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Faça o insertion sort com cartões antes de codificar.",
+    "fixation": [
+      {
+        "q": "O que uma lista armazena?",
+        "a": "Vários elementos."
+      },
+      {
+        "q": "Ordenar altera necessariamente os valores?",
+        "a": "Não, altera a posição deles."
+      },
+      {
+        "q": "Qual algoritmo aparece na proposta curricular?",
+        "a": "Entre os métodos trabalhados, insertion sort."
+      }
+    ]
+  },
+  {
+    "id": "rob8t3-2",
+    "section": "robotics",
+    "year": 8,
+    "icon": "📈",
+    "topic": "Média, mediana e dados",
+    "objective": "Calcular e interpretar medidas de tendência central em listas.",
+    "concept": "Média resume valores pela soma dividida pela quantidade. Mediana identifica a posição central após ordenar os dados.",
+    "keyTerm": "Mediana",
+    "keyDefinition": "Valor central de um conjunto ordenado; com quantidade par, usa-se a média dos dois centrais.",
+    "example": "2, 4, 9 tem mediana 4; 2, 4, 8, 10 tem mediana 6.",
+    "formula": "média = soma dos valores ÷ quantidade",
+    "use": "Análise de sensores, desempenho, pesquisas e experimentos.",
+    "observe": "Uma média pode ser muito afetada por valores extremos.",
+    "guided": "Calcule média e mediana de 2, 3, 3, 4, 13.",
+    "challenge": "Qual medida representa melhor um conjunto quando há um valor extremamente alto?",
+    "answer": "Frequentemente a mediana é mais resistente a valores extremos, mas a escolha depende do que se deseja analisar.",
+    "axis": "Dados e Programação",
+    "reference": "EF08MA25, EF08CO03 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Use conjuntos pequenos e compare como um valor extremo altera média e mediana.",
+    "fixation": [
+      {
+        "q": "É preciso ordenar para achar a mediana?",
+        "a": "Sim."
+      },
+      {
+        "q": "Como calcular a média?",
+        "a": "Somar os valores e dividir pela quantidade."
+      },
+      {
+        "q": "Valor extremo afeta mais qual medida?",
+        "a": "Em geral, a média."
+      }
+    ]
+  },
+  {
+    "id": "rob8t3-3",
+    "section": "robotics",
+    "year": 8,
+    "icon": "♻️",
+    "topic": "Recursão: uma solução chama a si mesma",
+    "objective": "Compreender recursão, caso base e aplicação em problemas e formas.",
+    "concept": "Na recursão, uma solução utiliza uma versão menor do próprio problema. É indispensável definir um caso base para encerrar as chamadas.",
+    "keyTerm": "Recursão",
+    "keyDefinition": "Técnica em que uma função ou regra se aplica novamente a uma versão menor do problema.",
+    "example": "Um desenho fractal pode repetir a mesma regra em segmentos cada vez menores.",
+    "representation": "caso base OU passo recursivo(problema menor)",
+    "use": "Fractais, árvores, estruturas hierárquicas e alguns algoritmos.",
+    "observe": "Sem caso base, a recursão não sabe quando parar.",
+    "guided": "Explique como desenhar uma árvore repetindo galhos menores três vezes.",
+    "challenge": "Qual é a primeira pergunta ao criar uma solução recursiva?",
+    "answer": "Definir quando o problema já é simples o suficiente para parar: o caso base.",
+    "axis": "Pensamento Computacional",
+    "reference": "EF08CO01 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Comece com exemplos visuais antes da implementação.",
+    "fixation": [
+      {
+        "q": "O que encerra a recursão?",
+        "a": "O caso base."
+      },
+      {
+        "q": "Recursão trabalha com versões menores do problema?",
+        "a": "Sim."
+      },
+      {
+        "q": "Fractais podem usar recursão?",
+        "a": "Sim."
+      }
+    ]
+  },
+  {
+    "id": "rob8t3-4",
+    "section": "robotics",
+    "year": 8,
+    "icon": "🎨",
+    "topic": "Geometria e arte generativa",
+    "objective": "Aplicar coordenadas, ângulos, funções e recursão na criação de formas.",
+    "concept": "Arte generativa combina regras matemáticas e algoritmos para produzir desenhos. Pequenas mudanças em ângulo, tamanho ou repetição podem gerar formas complexas.",
+    "keyTerm": "Arte generativa",
+    "keyDefinition": "Produção visual criada total ou parcialmente por regras e algoritmos.",
+    "example": "Repetir uma função de desenho diminuindo o tamanho e alterando o ângulo.",
+    "representation": "regra geométrica + repetição/recursão → composição visual",
+    "use": "Design, simulações, jogos, visualização e criatividade computacional.",
+    "observe": "O computador executa regras; a intenção e os parâmetros são definidos pelo autor.",
+    "guided": "Escolha um polígono, um ângulo de giro e uma repetição para prever o padrão.",
+    "challenge": "Como alterar um algoritmo de desenho para produzir uma figura mais complexa sem copiar muitos blocos?",
+    "answer": "Encapsule o desenho em função e reutilize-a com parâmetros ou recursão.",
+    "axis": "Programação e Geometria",
+    "reference": "EF08CO01, EF08CO02 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Relacione diretamente rotação, reflexão e composição às peças do Tangram.",
+    "fixation": [
+      {
+        "q": "O que são parâmetros?",
+        "a": "Valores fornecidos a uma função para variar seu comportamento."
+      },
+      {
+        "q": "Ângulos influenciam o desenho?",
+        "a": "Sim."
+      },
+      {
+        "q": "Reúso reduz blocos duplicados?",
+        "a": "Sim."
+      }
+    ]
+  },
+  {
+    "id": "rob9t3-1",
+    "section": "robotics",
+    "year": 9,
+    "icon": "🟨",
+    "topic": "JavaScript: lógica em linguagem textual",
+    "objective": "Compreender variáveis, condicionais, funções e repetição em JavaScript.",
+    "concept": "JavaScript é uma linguagem textual. A lógica estudada em blocos permanece: dados são guardados, condições tomam decisões e laços repetem ações.",
+    "keyTerm": "JavaScript",
+    "keyDefinition": "Linguagem de programação amplamente utilizada em aplicações web e interativas.",
+    "example": "for (let i=0; i<4; i++) representa uma repetição controlada por contador.",
+    "representation": "entrada → variáveis → regras → saída",
+    "use": "Sites, jogos, aplicativos web e experiências interativas.",
+    "observe": "A sintaxe muda, mas os princípios de algoritmo continuam.",
+    "guided": "Traduza um bloco 'repita 4 vezes: avançar' para uma descrição com for.",
+    "challenge": "Qual estrutura você usaria para executar uma ação apenas quando houver colisão?",
+    "answer": "Uma condicional, por exemplo if (colidiu) { ... }.",
+    "axis": "Programação",
+    "reference": "EF69CO02, EF09CO02 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Compare cada estrutura textual com seu equivalente em blocos.",
+    "fixation": [
+      {
+        "q": "Qual estrutura toma decisões?",
+        "a": "Condicional."
+      },
+      {
+        "q": "Qual estrutura repete ações?",
+        "a": "Laço."
+      },
+      {
+        "q": "Funções organizam tarefas reutilizáveis?",
+        "a": "Sim."
+      }
+    ]
+  },
+  {
+    "id": "rob9t3-2",
+    "section": "robotics",
+    "year": 9,
+    "icon": "🚀",
+    "topic": "Jogo espacial: movimento, colisão e dificuldade",
+    "objective": "Construir uma solução computacional integrando movimento, colisões e progressão.",
+    "concept": "Um jogo é um sistema de regras. Movimento atualiza posições, colisões comparam objetos e a dificuldade pode crescer pela criação de novos obstáculos.",
+    "keyTerm": "Colisão",
+    "keyDefinition": "Detecção de encontro ou interseção entre objetos no espaço do jogo.",
+    "example": "Se a nave tocar um obstáculo, reduzir energia; se alcançar o objetivo, somar pontos.",
+    "representation": "atualizar → detectar → decidir → responder",
+    "use": "Jogos, simuladores, robôs móveis e interfaces.",
+    "observe": "Separar movimento, colisão e pontuação em funções facilita testes.",
+    "guided": "Defina três regras para um jogo de nave que desvia de obstáculos.",
+    "challenge": "Como aumentar a dificuldade sem reescrever o jogo inteiro?",
+    "answer": "Use parâmetros, arrays e funções para aumentar quantidade, velocidade ou comportamento dos obstáculos.",
+    "axis": "Pensamento Computacional",
+    "reference": "EF09CO02 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Trabalhe primeiro o modelo lógico e depois a implementação.",
+    "fixation": [
+      {
+        "q": "O que a colisão detecta?",
+        "a": "Encontro/interseção entre objetos."
+      },
+      {
+        "q": "Dificuldade pode ser parametrizada?",
+        "a": "Sim."
+      },
+      {
+        "q": "Separar responsabilidades ajuda a depurar?",
+        "a": "Sim."
+      }
+    ]
+  },
+  {
+    "id": "rob9t3-3",
+    "section": "robotics",
+    "year": 9,
+    "icon": "🗂️",
+    "topic": "Arrays e múltiplos objetos",
+    "objective": "Usar arrays para organizar e manipular conjuntos de objetos.",
+    "concept": "Arrays armazenam vários elementos numa única estrutura. Um laço pode percorrer o conjunto e aplicar regras a cada elemento.",
+    "keyTerm": "Array",
+    "keyDefinition": "Estrutura ordenada que armazena uma coleção de valores ou objetos.",
+    "example": "Uma lista de inimigos pode ser percorrida para atualizar a posição de todos.",
+    "representation": "array → for → elemento → ação",
+    "use": "Jogos, sensores, cadastros, medições e aplicações web.",
+    "observe": "Arrays evitam criar uma variável separada para cada elemento semelhante.",
+    "guided": "Imagine cinco sensores e descreva como uma lista poderia guardar suas leituras.",
+    "challenge": "Como verificar colisão da nave com dez obstáculos sem escrever dez testes manualmente?",
+    "answer": "Armazene os obstáculos em um array e percorra-os com um laço, aplicando a mesma função de colisão.",
+    "axis": "Programação",
+    "reference": "EF09CO02, EF69CO02 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Associe arrays às listas já estudadas em programação visual.",
+    "fixation": [
+      {
+        "q": "Array guarda apenas um valor?",
+        "a": "Não, guarda uma coleção."
+      },
+      {
+        "q": "Como percorrer um array?",
+        "a": "Com um laço, como for."
+      },
+      {
+        "q": "Arrays ajudam a escalar projetos?",
+        "a": "Sim."
+      }
+    ]
+  },
+  {
+    "id": "rob9t3-4",
+    "section": "robotics",
+    "year": 9,
+    "icon": "🔐",
+    "topic": "Criptografia e segurança digital",
+    "objective": "Analisar técnicas simples de criptografia e compreender sua função na proteção de dados.",
+    "concept": "Criptografia transforma uma mensagem segundo uma regra e uma chave para dificultar sua leitura por quem não está autorizado. Cifras históricas ajudam a compreender o princípio, embora não sejam adequadas para proteger sistemas modernos.",
+    "keyTerm": "Criptografia",
+    "keyDefinition": "Conjunto de técnicas para transformar dados de modo a proteger sua confidencialidade ou integridade.",
+    "example": "Na cifra de César, cada letra é deslocada por um número fixo de posições.",
+    "representation": "texto original + chave → transformação → texto cifrado",
+    "use": "Mensagens, conexões seguras, armazenamento e autenticação.",
+    "observe": "Uma cifra simples é didática, mas segurança real exige técnicas modernas e bem analisadas.",
+    "guided": "Aplique deslocamento +1 à palavra ROBO e depois reverta o processo.",
+    "challenge": "Por que guardar uma senha apenas invertendo suas letras não é uma proteção adequada?",
+    "answer": "Porque a regra é previsível e facilmente reversível; sistemas reais usam técnicas criptográficas apropriadas e outras proteções.",
+    "axis": "Mundo Digital",
+    "reference": "EF09CO05 • Ementa SEED-PR, 3º trimestre",
+    "teacherTip": "Use cifras simples apenas como modelo conceitual e destaque seus limites.",
+    "fixation": [
+      {
+        "q": "Para que serve a criptografia?",
+        "a": "Para proteger dados e comunicações."
+      },
+      {
+        "q": "Cifra de César é segura para sistemas atuais?",
+        "a": "Não."
+      },
+      {
+        "q": "O que permite reverter uma cifra?",
+        "a": "Conhecer o método e, conforme o sistema, a chave adequada."
+      }
+    ]
+  }
+]
