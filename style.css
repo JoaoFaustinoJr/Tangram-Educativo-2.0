@@ -226,3 +226,5 @@ header>div:first-child,header>.menu{position:relative;z-index:2}
 .rai-x1-img{z-index:3;animation:raiX1Header84 10s ease-in-out infinite!important}
 @keyframes raiX1Header84{0%,55%{opacity:0;transform:translateY(5px) scale(.84)}64%,88%{opacity:.95;transform:translateY(-3px) scale(1)}76%{transform:translateY(-8px) scale(1.02)}100%{opacity:0;transform:translateY(-4px) scale(.94)}}
 @media(prefers-reduced-motion:reduce){.header-tangram{display:none!important}.rai-x1-img{animation:none!important;opacity:.75!important}}
+
+/* build 285 — forced mobile cache refresh */
