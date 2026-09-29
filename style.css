@@ -512,3 +512,7 @@ body.comfort-motion .magnified-text{transition:none}
 #lessons-panel[data-access="hearing"] .access-explain{border-color:#8bd3ff;background:linear-gradient(135deg,#12394d,#172f45)}
 #lessons-panel[data-access="hearing"] .lesson-audio{display:none!important}
 #lessons-panel[data-access="hearing"] .lesson-block,#lessons-panel[data-access="hearing"] .lesson-key,#lessons-panel[data-access="hearing"] .lesson-challenge{border-left:4px solid #8bd3ff}
+
+/* v2.0.128 — Sala de Aula comunica modalidade padrão e adaptações */
+.classroom .adapted-badge{display:inline-block!important;margin:5px auto 2px!important;padding:3px 9px!important;border-radius:999px!important;background:#dffff5!important;color:#07534e!important;font-size:9px!important;font-style:normal!important;font-weight:1000!important;line-height:1.25!important;letter-spacing:.01em!important}
+.classroom>b{display:block}
