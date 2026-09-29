@@ -125,4 +125,23 @@ const lp=document.querySelector('#lesson-prev'),ln=document.querySelector('#less
 function showAbout(){const sec=document.querySelector('#about-section'),game=document.querySelector('.game');if(!sec)return;document.querySelectorAll('main>section').forEach(x=>{if(x!==sec)x.dataset.aboutHidden=x.hidden?'1':'0';if(x!==sec)x.hidden=true});sec.hidden=false;sec.scrollIntoView({behavior:'smooth',block:'start'});document.querySelector('#app-menu')?.classList.remove('open');}
 function hideAbout(){const sec=document.querySelector('#about-section');if(sec)sec.hidden=true;document.querySelectorAll('main>section[data-about-hidden]').forEach(x=>{x.hidden=x.dataset.aboutHidden==='1';delete x.dataset.aboutHidden});document.querySelector('.game')?.scrollIntoView({behavior:'smooth',block:'start'});}
 document.querySelector('[data-menu="about"]')?.addEventListener('click',showAbout);document.querySelector('#about-back')?.addEventListener('click',hideAbout);
+
+// v2.0.88 - instalar, compartilhar e service worker
+let installPrompt2=null;
+window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();installPrompt2=e;});
+window.addEventListener('appinstalled',function(){installPrompt2=null;});
+async function installApp2(){
+ if(installPrompt2){installPrompt2.prompt();await installPrompt2.userChoice;installPrompt2=null;return;}
+ status.textContent='Use Adicionar à tela inicial ou Instalar aplicativo no menu do navegador.';
+}
+async function shareApp2(){
+ const url='https://joaofaustinojr.github.io/Tangram-Educativo-2.0/';
+ try{
+  if(navigator.share)await navigator.share({title:'Tangram Educativo',text:'Tangram Educativo - Prof. João Faustino Júnior',url:url});
+  else {await navigator.clipboard.writeText(url);status.textContent='Link do Tangram copiado.';}
+ }catch(e){}
+}
+document.querySelector('[data-menu="install"]')?.addEventListener('click',installApp2);
+document.querySelector('[data-menu="share"]')?.addEventListener('click',shareApp2);
+if('serviceWorker' in navigator)window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js?v=288').catch(function(){});});
 })();
