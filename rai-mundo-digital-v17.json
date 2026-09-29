@@ -21,9 +21,18 @@
     "reference": "EF05CO05, EF05CO06 e EF05CO07; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Mostre componentes reais ou imagens; uma atividade desplugada pode simular o fluxo de dados entre estudantes.",
     "fixation": [
-      {"q": "O que significa “arquitetura básica” nesta aula?", "a": "Organização dos principais componentes de um sistema computacional: entrada, processamento, memória/armazenamento e saída."},
-      {"q": "Onde esse conceito pode aparecer fora desta tela?", "a": "Computadores, celulares, tablets, consoles, robôs e sistemas embarcados."},
-      {"q": "Qual ponto merece atenção para não confundir o conceito?", "a": "Hardware são componentes físicos; sistema operacional é software que gerencia recursos e programas."}
+      {
+        "q": "O que significa “arquitetura básica” nesta aula?",
+        "a": "Organização dos principais componentes de um sistema computacional: entrada, processamento, memória/armazenamento e saída."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Computadores, celulares, tablets, consoles, robôs e sistemas embarcados."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Hardware são componentes físicos; sistema operacional é software que gerencia recursos e programas."
+      }
     ]
   },
   {
@@ -48,9 +57,18 @@
     "reference": "EF05CO08, EF05CO09, EF05CO10 e EF05CO11; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Use exemplos reais sem expor dados pessoais dos estudantes.",
     "fixation": [
-      {"q": "O que significa “confiabilidade da informação” nesta aula?", "a": "Grau em que uma informação pode ser considerada consistente, verificável e sustentada por fonte adequada."},
-      {"q": "Onde esse conceito pode aparecer fora desta tela?", "a": "Pesquisas, trabalhos escolares, redes sociais, vídeos, imagens e produção de conteúdo."},
-      {"q": "Qual ponto merece atenção para não confundir o conceito?", "a": "Popularidade, número de compartilhamentos ou aparência profissional não garantem veracidade."}
+      {
+        "q": "O que significa “confiabilidade da informação” nesta aula?",
+        "a": "Grau em que uma informação pode ser considerada consistente, verificável e sustentada por fonte adequada."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Pesquisas, trabalhos escolares, redes sociais, vídeos, imagens e produção de conteúdo."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Popularidade, número de compartilhamentos ou aparência profissional não garantem veracidade."
+      }
     ]
   },
   {
@@ -60,24 +78,33 @@
     "topic": "Como dados viajam e são armazenados",
     "icon": "📦",
     "axis": "Mundo Digital",
-    "objective": "Compreender transmissão em pacotes e formas de armazenar, manipular, compactar e recuperar arquivos e metadados.",
+    "objective": "Compreender, com modelos concretos, que dados são representados, organizados para transmissão e armazenados em arquivos com formatos e metadados.",
     "keyTerm": "pacote de dados",
     "keyDefinition": "Parte de uma informação maior preparada para ser transmitida por uma rede e reconstruída no destino.",
-    "concept": "Na comunicação digital, uma mensagem pode ser dividida em partes, enviada por diferentes equipamentos e remontada no destino. Arquivos também possuem organização, formatos e metadados, e podem ser compactados para ocupar menos espaço.",
-    "example": "Uma imagem enviada pela internet não 'viaja inteira' como uma folha: dados são organizados e transmitidos em unidades que o sistema consegue encaminhar.",
+    "concept": "Na comunicação digital, dados podem ser organizados em pacotes para circular por redes. Protocolos definem como essas unidades são tratadas. Arquivos, por sua vez, organizam dados para armazenamento e podem possuir formato e metadados, como nome, data ou dimensões. Compactação é outro processo: procura representar dados usando menos espaço, quando possível.",
+    "example": "Primeiro, use cartões numerados para representar unidades de uma mensagem e reconstruí-la. Depois compare dois arquivos de imagem e observe nome, formato, tamanho e dimensões. São dois fenômenos relacionados a dados, mas diferentes: transmitir e armazenar.",
     "formula": "informação → pacotes → rede → remontagem",
     "representation": "arquivo + metadados → armazenamento | transmissão",
     "use": "Internet, nuvem, mensagens, streaming, envio de arquivos e sistemas escolares.",
     "observe": "Armazenar localmente e armazenar na nuvem são situações diferentes; ambas exigem organização e cuidados.",
     "guided": "Simule uma frase dividida em cartões numerados e reconstrua-a após os cartões chegarem fora de ordem.",
-    "challenge": "Por que numerar ou identificar partes de uma mensagem pode ajudar na transmissão?",
-    "answer": "Porque permite reconstruir a ordem correta e perceber partes ausentes ou repetidas.",
+    "challenge": "Explique a diferença entre dividir dados para transmiti-los em uma rede e compactar um arquivo.",
+    "answer": "Organizar dados em pacotes atende à comunicação pela rede; compactar procura reduzir a quantidade de dados necessária para representar o arquivo. São processos com objetivos diferentes.",
     "reference": "EF06CO07 e EF06CO08; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "A atividade com cartões é uma boa abordagem desplugada antes de falar em redes.",
     "fixation": [
-      {"q": "O que significa “pacote de dados” nesta aula?", "a": "Parte de uma informação maior preparada para ser transmitida por uma rede e reconstruída no destino."},
-      {"q": "Onde esse conceito pode aparecer fora desta tela?", "a": "Internet, nuvem, mensagens, streaming, envio de arquivos e sistemas escolares."},
-      {"q": "Qual ponto merece atenção para não confundir o conceito?", "a": "Armazenar localmente e armazenar na nuvem são situações diferentes; ambas exigem organização e cuidados."}
+      {
+        "q": "O que significa “pacote de dados” nesta aula?",
+        "a": "Parte de uma informação maior preparada para ser transmitida por uma rede e reconstruída no destino."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Internet, nuvem, mensagens, streaming, envio de arquivos e sistemas escolares."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Armazenar localmente e armazenar na nuvem são situações diferentes; ambas exigem organização e cuidados."
+      }
     ]
   },
   {
@@ -102,9 +129,18 @@
     "reference": "EF06CO09 e EF06CO10; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Relacionar com logística reversa e realidade local torna a aula mais concreta.",
     "fixation": [
-      {"q": "O que significa “responsabilidade digital” nesta aula?", "a": "Uso ético, respeitoso, seguro e consciente das tecnologias e de seus impactos sociais e ambientais."},
-      {"q": "Onde esse conceito pode aparecer fora desta tela?", "a": "Mensagens, fóruns, redes, jogos on-line, compras, descarte de eletrônicos e projetos escolares."},
-      {"q": "Qual ponto merece atenção para não confundir o conceito?", "a": "Responsabilidade digital não é só 'não fazer algo errado'; inclui escolhas de consumo e impacto ambiental."}
+      {
+        "q": "O que significa “responsabilidade digital” nesta aula?",
+        "a": "Uso ético, respeitoso, seguro e consciente das tecnologias e de seus impactos sociais e ambientais."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Mensagens, fóruns, redes, jogos on-line, compras, descarte de eletrônicos e projetos escolares."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Responsabilidade digital não é só 'não fazer algo errado'; inclui escolhas de consumo e impacto ambiental."
+      }
     ]
   },
   {
@@ -129,9 +165,18 @@
     "reference": "EF07CO06 e EF07CO07; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Evite transformar a aula em instrução ofensiva; foque em princípios de proteção e comportamento seguro.",
     "fixation": [
-      {"q": "O que significa “protocolo” nesta aula?", "a": "Conjunto de regras compartilhadas que permite que dispositivos ou sistemas se comuniquem de forma consistente."},
-      {"q": "Onde esse conceito pode aparecer fora desta tela?", "a": "Internet, Wi‑Fi, aplicativos de mensagens, redes escolares e sistemas conectados."},
-      {"q": "Qual ponto merece atenção para não confundir o conceito?", "a": "Segurança não depende de uma única senha; envolve pessoas, procedimentos e tecnologia."}
+      {
+        "q": "O que significa “protocolo” nesta aula?",
+        "a": "Conjunto de regras compartilhadas que permite que dispositivos ou sistemas se comuniquem de forma consistente."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Internet, Wi‑Fi, aplicativos de mensagens, redes escolares e sistemas conectados."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Segurança não depende de uma única senha; envolve pessoas, procedimentos e tecnologia."
+      }
     ]
   },
   {
@@ -156,9 +201,18 @@
     "reference": "EF07CO08, EF07CO09 e EF07CO11; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Use casos fictícios e protocolos de proteção da escola; não exponha situações pessoais em público.",
     "fixation": [
-      {"q": "O que significa “cyberbullying” nesta aula?", "a": "Prática de intimidação, humilhação, exposição ou agressão repetida por meios digitais."},
-      {"q": "Onde esse conceito pode aparecer fora desta tela?", "a": "Redes sociais, grupos, vídeos, podcasts, sites e trabalhos colaborativos."},
-      {"q": "Qual ponto merece atenção para não confundir o conceito?", "a": "'Foi só brincadeira' não elimina impacto, exposição ou responsabilidade."}
+      {
+        "q": "O que significa “cyberbullying” nesta aula?",
+        "a": "Prática de intimidação, humilhação, exposição ou agressão repetida por meios digitais."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Redes sociais, grupos, vídeos, podcasts, sites e trabalhos colaborativos."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "'Foi só brincadeira' não elimina impacto, exposição ou responsabilidade."
+      }
     ]
   },
   {
@@ -168,24 +222,33 @@
     "topic": "Internet e sistemas distribuídos",
     "icon": "🌐",
     "axis": "Mundo Digital",
-    "objective": "Entender fundamentos da internet, paralelismo, concorrência e processamento/armazenamento distribuídos.",
+    "objective": "Compreender que a internet conecta redes e que serviços podem distribuir processamento e armazenamento entre diferentes computadores.",
     "keyTerm": "sistema distribuído",
     "keyDefinition": "Sistema cujas partes ou recursos estão em mais de um dispositivo e cooperam por meio de uma rede.",
-    "concept": "A internet é formada por muitas redes conectadas. Serviços modernos podem dividir trabalho e armazenamento entre diferentes máquinas. Paralelismo e concorrência ajudam a compreender como várias tarefas podem ocorrer de forma simultânea ou intercalada.",
-    "example": "Um serviço em nuvem pode armazenar dados em diferentes servidores e atender muitos usuários ao mesmo tempo.",
+    "concept": "A internet conecta muitas redes por meio de protocolos. Um serviço não precisa executar tudo em um único computador: tarefas e dados podem ser distribuídos entre diferentes máquinas. Concorrência significa lidar com várias tarefas em períodos sobrepostos; paralelismo significa executar trabalho simultaneamente quando há recursos para isso. Sistemas distribuídos coordenam componentes que se comunicam por rede.",
+    "example": "Imagine a biblioteca da escola atendendo várias turmas: pedidos podem ser organizados concorrentemente. Se houver dois atendentes trabalhando ao mesmo tempo, parte do trabalho ocorre em paralelo. Em serviços digitais, diferentes computadores também podem dividir tarefas, embora a coordenação seja muito mais complexa.",
     "formula": "vários recursos + comunicação → serviço distribuído",
     "representation": "cliente ↔ rede ↔ múltiplos servidores",
     "use": "Internet, nuvem, streaming, jogos on-line, serviços web e colaboração.",
     "observe": "Internet não é um único computador central; é uma rede de redes com múltiplas camadas e sistemas.",
     "guided": "Desenhe um esquema com celular, roteador, internet e dois servidores e explique o caminho provável de uma requisição.",
-    "challenge": "Por que um serviço pode continuar funcionando mesmo se parte da infraestrutura estiver indisponível?",
-    "answer": "Sistemas distribuídos podem usar redundância e múltiplos recursos, permitindo que outras partes assumam trabalho quando uma falha ocorre.",
+    "challenge": "Um serviço usa dois servidores. Explique por que simplesmente ter dois computadores não garante que o serviço continuará funcionando quando um falhar.",
+    "answer": "É necessário que o sistema tenha sido projetado para tolerar a falha, por exemplo com redundância dos dados, detecção da indisponibilidade e mecanismo para encaminhar o trabalho a outro componente. Distribuição, sozinha, não garante tolerância a falhas.",
     "reference": "EF08CO05 e EF08CO06; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Use analogias de equipes trabalhando em paralelo, mas deixe claro que analogia não substitui o modelo técnico.",
     "fixation": [
-      {"q": "O que significa “sistema distribuído” nesta aula?", "a": "Sistema cujas partes ou recursos estão em mais de um dispositivo e cooperam por meio de uma rede."},
-      {"q": "Onde esse conceito pode aparecer fora desta tela?", "a": "Internet, nuvem, streaming, jogos on-line, serviços web e colaboração."},
-      {"q": "Qual ponto merece atenção para não confundir o conceito?", "a": "Internet não é um único computador central; é uma rede de redes com múltiplas camadas e sistemas."}
+      {
+        "q": "O que significa “sistema distribuído” nesta aula?",
+        "a": "Sistema cujas partes ou recursos estão em mais de um dispositivo e cooperam por meio de uma rede."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Internet, nuvem, streaming, jogos on-line, serviços web e colaboração."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Internet não é um único computador central; é uma rede de redes com múltiplas camadas e sistemas."
+      }
     ]
   },
   {
@@ -198,21 +261,30 @@
     "objective": "Analisar compartilhamento de dados pessoais, políticas de uso, segurança e qualidade das fontes digitais.",
     "keyTerm": "dado pessoal",
     "keyDefinition": "Informação relacionada a uma pessoa identificada ou identificável, cujo uso pode envolver riscos e responsabilidades.",
-    "concept": "Plataformas pedem diferentes dados e estabelecem regras em termos de uso. O estudante precisa reconhecer riscos de exposição, analisar políticas, cuidar da privacidade e avaliar qualidade, relevância e possíveis vieses nas fontes.",
+    "concept": "Plataformas podem solicitar dados pessoais e estabelecer regras em termos de uso. Antes de fornecer um dado, é útil perguntar se ele é necessário para aquela finalidade. Ao avaliar informação, também precisamos distinguir erro, opinião e viés: uma fonte pode selecionar ou enquadrar fatos de determinada perspectiva sem que todo o conteúdo seja falso.",
     "example": "Um jogo pode pedir nome, idade, localização e contatos; cada solicitação deve ser analisada quanto à necessidade e ao risco.",
     "formula": "compartilhar dado → perguntar finalidade, necessidade, proteção e consequência",
     "representation": "dado → plataforma → uso/armazenamento → risco",
     "use": "Redes sociais, jogos, compras, aplicativos, serviços educacionais e pesquisas.",
     "observe": "Aceitar termos sem ler não elimina consequências; fonte digital também pode conter vieses mesmo quando os dados são verdadeiros.",
     "guided": "Compare os dados solicitados por dois serviços fictícios e marque quais parecem necessários para a função oferecida.",
-    "challenge": "Por que uma fonte pode ser verdadeira em alguns dados e ainda assim apresentar viés?",
-    "answer": "Porque seleção, enquadramento, omissões ou interpretação podem favorecer uma perspectiva mesmo sem inventar os dados apresentados.",
+    "challenge": "Um aplicativo de lanterna pede acesso aos contatos e à localização. Que pergunta você faria antes de conceder essas permissões? Depois, explique por que uma fonte pode apresentar dados corretos e ainda ter viés.",
+    "answer": "Perguntaria se contatos e localização são necessários para a função de lanterna e evitaria permissões sem justificativa. Uma fonte pode usar dados corretos, mas selecionar, omitir ou enquadrar informações de modo a favorecer determinada perspectiva.",
     "reference": "EF08CO07, EF08CO08, EF08CO09, EF08CO10 e EF08CO11; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Trabalhe com exemplos simulados e jamais peça aos alunos que exponham credenciais ou dados pessoais reais.",
     "fixation": [
-      {"q": "O que significa “dado pessoal” nesta aula?", "a": "Informação relacionada a uma pessoa identificada ou identificável, cujo uso pode envolver riscos e responsabilidades."},
-      {"q": "Onde esse conceito pode aparecer fora desta tela?", "a": "Redes sociais, jogos, compras, aplicativos, serviços educacionais e pesquisas."},
-      {"q": "Qual ponto merece atenção para não confundir o conceito?", "a": "Aceitar termos sem ler não elimina consequências; fonte digital também pode conter vieses mesmo quando os dados são verdadeiros."}
+      {
+        "q": "O que significa “dado pessoal” nesta aula?",
+        "a": "Informação relacionada a uma pessoa identificada ou identificável, cujo uso pode envolver riscos e responsabilidades."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Redes sociais, jogos, compras, aplicativos, serviços educacionais e pesquisas."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Aceitar termos sem ler não elimina consequências; fonte digital também pode conter vieses mesmo quando os dados são verdadeiros."
+      }
     ]
   },
   {
@@ -237,9 +309,18 @@
     "reference": "EF09CO04 e EF09CO05; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Mantenha a abordagem defensiva e conceitual, adequada ao contexto educacional.",
     "fixation": [
-      {"q": "O que significa “criptografia” nesta aula?", "a": "Conjunto de técnicas que transforma dados com algoritmos e, em muitos sistemas, chaves, para impedir ou dificultar a leitura por pessoas não autorizadas."},
-      {"q": "Onde esse conceito pode aparecer fora desta tela?", "a": "Mensagens, bancos, compras on-line, backups, redes e autenticação."},
-      {"q": "Qual ponto merece atenção para não confundir o conceito?", "a": "Criptografia não substitui boas práticas de segurança; ela é uma camada dentro de uma estratégia maior."}
+      {
+        "q": "O que significa “criptografia” nesta aula?",
+        "a": "Conjunto de técnicas que transforma dados com algoritmos e, em muitos sistemas, chaves, para impedir ou dificultar a leitura por pessoas não autorizadas."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Mensagens, bancos, compras on-line, backups, redes e autenticação."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Criptografia não substitui boas práticas de segurança; ela é uma camada dentro de uma estratégia maior."
+      }
     ]
   },
   {
@@ -264,9 +345,18 @@
     "reference": "EF09CO06, EF09CO07, EF09CO08, EF09CO09 e EF09CO10; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Relacionar com problemas da comunidade fortalece protagonismo e aplicação crítica.",
     "fixation": [
-      {"q": "O que significa “cidadania digital” nesta aula?", "a": "Participação crítica, ética, responsável e consciente em ambientes e decisões mediados por tecnologias digitais."},
-      {"q": "Onde esse conceito pode aparecer fora desta tela?", "a": "Políticas públicas, escola, trabalho, redes, inteligência artificial, serviços digitais e produção de conteúdo."},
-      {"q": "Qual ponto merece atenção para não confundir o conceito?", "a": "Tecnologia não é neutra em seus efeitos sociais: decisões de projeto, acesso e uso influenciam quem se beneficia e quem fica de fora."}
+      {
+        "q": "O que significa “cidadania digital” nesta aula?",
+        "a": "Participação crítica, ética, responsável e consciente em ambientes e decisões mediados por tecnologias digitais."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Políticas públicas, escola, trabalho, redes, inteligência artificial, serviços digitais e produção de conteúdo."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Tecnologia não é neutra em seus efeitos sociais: decisões de projeto, acesso e uso influenciam quem se beneficia e quem fica de fora."
+      }
     ]
   }
 ]
