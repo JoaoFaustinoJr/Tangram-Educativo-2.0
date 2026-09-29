@@ -758,3 +758,8 @@ header .rai-x1-img,header .rai-heritage,header .rai-css,header .rai-inline{displ
   }
   header .menu{right:-58px!important}
 }
+
+/* v2.0.165 — microajuste: Tangram ligeiramente à direita */
+@media(max-width:520px){
+  header .header-tangram-exact{left:47%!important}
+}
