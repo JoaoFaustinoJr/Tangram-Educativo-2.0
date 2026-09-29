@@ -324,3 +324,13 @@ header>div:first-child,header>.menu{position:relative;z-index:2}
 #next:active{transform:scale(.97)!important}
 #next.ready{background:linear-gradient(135deg,#10a86e,#087a71)!important;border-color:#83ffc1!important;box-shadow:0 0 0 2px #61ffb020,0 0 24px #38f2a54a,0 7px 18px #00151f66!important}
 @media(max-width:600px){#next{min-width:132px!important;min-height:54px!important;font-size:15px!important;padding:9px 13px!important}#next::before{width:22px;height:22px;margin-right:5px}}
+
+/* v2.0.106 — feedback de toque */
+button{position:relative;overflow:hidden}
+button.ui-press::after{content:"";position:absolute;inset:50% auto auto 50%;width:18px;height:18px;border-radius:50%;background:#dfffff55;pointer-events:none;transform:translate(-50%,-50%) scale(.2);animation:uiRipple .24s ease-out forwards}
+button.ui-press{animation:uiPress .20s ease-out}
+#next.ui-press::after,.modes button.ui-press::after{background:#baffec66}
+@keyframes uiRipple{to{opacity:0;transform:translate(-50%,-50%) scale(8)}}
+@keyframes uiPress{45%{transform:scale(.965);filter:brightness(1.18)}100%{transform:scale(1);filter:none}}
+body.comfort-motion button.ui-press,body.comfort-calm button.ui-press{animation:none!important}
+body.comfort-motion button.ui-press::after,body.comfort-calm button.ui-press::after{display:none!important}
