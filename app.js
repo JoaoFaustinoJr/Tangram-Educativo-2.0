@@ -172,6 +172,8 @@ function refreshLessonTrackSummary(){const m=document.querySelector('#lessons-pa
 function lessonPractice(item){
  const y=Number(item?.year||lessonYear);
  if(y<6||y>9)return '';
+ if(lessonSection==='robotics'&&!/rob6t3-1|rob6t3-3|rob6t3-4|rob7t3-1|rob7t3-2|rob7t3-3|rob8t3-1|rob8t3-2|rob8t3-3|rob8t3-4|rob9t3-1|rob9t3-2|rob9t3-3/.test(String(item?.id||'')))return '';
+ if(!['robotics','prog'].includes(lessonSection))return '';
  const examples={
   6:{title:'Do comando ao algoritmo',code:"let passos = ['ficar em pé', 'caminhar à frente', 'virar à direita', 'abrir a porta'];\nfor (const passo of passos) {\n  console.log(passo);\n}",hint:'Escreva os passos em ordem. O computador executa exatamente o que foi programado.'},
   7:{title:'Repetir sem copiar comandos',code:"for (let passo = 1; passo <= 4; passo++) {\n  console.log('Avançar', passo);\n}",hint:'Use repetição para evitar escrever o mesmo comando várias vezes.'},
