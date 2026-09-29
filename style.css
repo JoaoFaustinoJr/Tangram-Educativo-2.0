@@ -712,3 +712,13 @@ header .rai-official.rai-css{position:absolute!important;left:50%!important;top:
 header .rai-css{display:none!important}
 header .rai-x1-img.rai-heritage{display:block!important;visibility:visible!important;position:absolute!important;left:50%!important;top:50%!important;width:82px!important;height:82px!important;object-fit:contain!important;opacity:0;z-index:5!important;transform:translate(-50%,-42%) scale(.72)!important;animation:raiHeritage160 9s cubic-bezier(.2,.75,.2,1) infinite!important;filter:drop-shadow(0 7px 11px #0008)!important}
 @keyframes raiHeritage160{0%,60%{opacity:0;transform:translate(-50%,-36%) scale(.7)}67%{opacity:1;transform:translate(-50%,-52%) scale(1.04)}74%{opacity:1;transform:translate(-50%,-56%) scale(1)}82%{opacity:1;transform:translate(-50%,-53%) scale(1.02)}91%{opacity:1;transform:translate(-50%,-55%) scale(1)}100%{opacity:0;transform:translate(-50%,-66%) scale(.8)}}
+
+/* v2.0.161 — Tangram animado com volume, sem competir com o menu */
+header .rai-float.rai-x1{justify-self:start!important;width:118px!important;max-width:118px!important;margin-left:-4px!important}
+header .header-tangram-exact{width:116px!important;height:92px!important;left:43%!important;filter:drop-shadow(0 9px 9px #001019aa) drop-shadow(0 0 5px #d8b66a44)!important;perspective:220px!important}
+header .header-tangram-exact .hp{stroke:#d8b66a!important;stroke-width:.8!important;filter:drop-shadow(1.6px 2.4px 1px #00111bbb) drop-shadow(-.5px -.5px .5px #fff3)!important}
+header .header-tangram-exact:after{content:"";position:absolute;left:18%;right:18%;bottom:-5px;height:7px;border-radius:50%;background:#00101899;filter:blur(4px);animation:tangramShadow161 9s ease-in-out infinite}
+@keyframes tangramShadow161{0%,18%{opacity:.25;transform:scaleX(.75)}40%,55%{opacity:.7;transform:scaleX(1)}64%,100%{opacity:0;transform:scaleX(.55)}}
+header .header-tangram-exact .p1,header .header-tangram-exact .p2{transform-origin:center;filter:brightness(1.04)}
+header .header-tangram-exact .p3,header .header-tangram-exact .p5{filter:brightness(.94)}
+@media(max-width:520px){header .rai-float.rai-x1{width:105px!important;max-width:105px!important;margin-left:-8px!important}header .header-tangram-exact{width:104px!important;height:84px!important;left:40%!important}}
