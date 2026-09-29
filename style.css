@@ -505,3 +505,10 @@ body.comfort-motion .magnified-text{transition:none}
 #lessons-panel[data-access="visual"] .lesson8-visual{border-width:2px;background:#061f2b}#lessons-panel[data-access="visual"] .lesson8-visual b{font-size:1.25em}#lessons-panel[data-access="visual"] .lesson8-visual code{font-size:1.15em;line-height:1.7}#lessons-panel[data-access="visual"] .lesson8-visual small{font-size:1.05em;line-height:1.7}
 .tea8-badge{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 9px;border-radius:9px;background:#ffe08a;color:#25333a}.tea8-badge b{font-size:10px;letter-spacing:.08em}.tea8-badge small{font-size:10px;font-weight:800}
 #lessons-panel[data-access="tea"] .lesson8-visual{border:2px solid #ffd166;background:#102f3b}#lessons-panel[data-access="tea"] .lesson8-visual code{background:#09232d;border-left:4px solid #ffd166}
+
+/* v2.0.127 — explicação contextual das adaptações */
+.access-explain{margin:10px 0 14px;padding:12px 14px;border:1px solid #6be0cc;border-radius:14px;background:linear-gradient(135deg,#0c4650,#103342);box-shadow:0 7px 20px #0004}.access-explain b{display:block;margin-bottom:5px;font-size:14px;color:#f5ffff}.access-explain p{margin:0;color:#e2f8f6;font-size:12px;line-height:1.55}
+#lessons-panel[data-access="tea"] .access-explain{border-color:#ffd166;background:linear-gradient(135deg,#40391e,#123c43)}
+#lessons-panel[data-access="hearing"] .access-explain{border-color:#8bd3ff;background:linear-gradient(135deg,#12394d,#172f45)}
+#lessons-panel[data-access="hearing"] .lesson-audio{display:none!important}
+#lessons-panel[data-access="hearing"] .lesson-block,#lessons-panel[data-access="hearing"] .lesson-key,#lessons-panel[data-access="hearing"] .lesson-challenge{border-left:4px solid #8bd3ff}
