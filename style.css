@@ -204,3 +204,18 @@ header>div:first-child,header>.menu{position:relative;z-index:2}
 @media(max-width:600px){.rai-x1{right:72px!important;width:154px!important;height:108px!important}.rai-x1 .tangram-assemble{transform:scale(.88)}.rai-x1-img{width:78px;height:78px;border-radius:18px}}
 @media(max-width:390px){.rai-x1{right:60px!important;width:138px!important}.rai-x1-img{width:70px;height:70px}}
 @media(prefers-reduced-motion:reduce){.rai-x1 .tangram-assemble{display:none!important}.rai-x1-img{animation:none!important;opacity:.72!important}}
+
+/* v2.0.83 — corrige animação das sete peças no cabeçalho
+   As peças agora têm keyframes próprios do componente, sem depender dos transforms da v2.0.81. */
+.rai-x1 .tangram-assemble{position:absolute;inset:0;display:block!important;opacity:1!important;animation:none!important}
+.rai-x1 .tp{position:absolute!important;display:block!important;opacity:1;transform-origin:center;animation-duration:10s!important;animation-timing-function:ease-in-out!important;animation-iteration-count:infinite!important}
+.rai-x1 .t1{animation-name:hT1!important}.rai-x1 .t2{animation-name:hT2!important}.rai-x1 .t3{animation-name:hT3!important}.rai-x1 .t4{animation-name:hT4!important}.rai-x1 .t5{animation-name:hT5!important}.rai-x1 .tq{animation-name:hTQ!important}.rai-x1 .tpz{animation-name:hTP!important}
+@keyframes hT1{0%,5%{opacity:0;transform:translate(0,0) rotate(-30deg)}10%{opacity:1}30%,48%{opacity:1;transform:translate(53px,31px) rotate(0)}57%,100%{opacity:0;transform:translate(53px,31px) rotate(0)}}
+@keyframes hT2{0%,5%{opacity:0;transform:translate(0,0) rotate(130deg)}12%{opacity:1}32%,48%{opacity:1;transform:translate(-48px,31px) rotate(90deg)}57%,100%{opacity:0;transform:translate(-48px,31px) rotate(90deg)}}
+@keyframes hT3{0%,7%{opacity:0;transform:translate(0,0) rotate(210deg)}14%{opacity:1}34%,48%{opacity:1;transform:translate(-57px,-18px) rotate(180deg)}57%,100%{opacity:0;transform:translate(-57px,-18px) rotate(180deg)}}
+@keyframes hT4{0%,9%{opacity:0;transform:translate(0,0) rotate(35deg)}16%{opacity:1}36%,48%{opacity:1;transform:translate(60px,-22px) rotate(270deg)}57%,100%{opacity:0;transform:translate(60px,-22px) rotate(270deg)}}
+@keyframes hT5{0%,11%{opacity:0;transform:translate(0,0) rotate(-75deg)}18%{opacity:1}38%,48%{opacity:1;transform:translate(-45px,7px) rotate(90deg)}57%,100%{opacity:0;transform:translate(-45px,7px) rotate(90deg)}}
+@keyframes hTQ{0%,13%{opacity:0;transform:translate(0,0) rotate(45deg)}20%{opacity:1}40%,48%{opacity:1;transform:translate(52px,38px) rotate(45deg)}57%,100%{opacity:0;transform:translate(52px,38px) rotate(45deg)}}
+@keyframes hTP{0%,15%{opacity:0;transform:translate(0,0) rotate(-15deg)}22%{opacity:1}42%,48%{opacity:1;transform:translate(-42px,-25px) rotate(0)}57%,100%{opacity:0;transform:translate(-42px,-25px) rotate(0)}}
+.rai-x1-img{animation-name:raiX1Header83!important}
+@keyframes raiX1Header83{0%,53%{opacity:0;transform:translateY(6px) scale(.84) rotate(-2deg)}62%,87%{opacity:.94;transform:translateY(-2px) scale(1) rotate(1deg)}74%{opacity:.94;transform:translateY(-8px) scale(1.02) rotate(-1deg)}100%{opacity:0;transform:translateY(-4px) scale(.94)}}
