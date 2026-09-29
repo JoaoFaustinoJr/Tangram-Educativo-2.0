@@ -240,3 +240,6 @@ header>div:first-child,header>.menu{position:relative;z-index:2}
 
 /* v2.0.92 — R.A.I. pode ser deslizada pela tela */
 .rai-tutor-fab{touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab}.rai-tutor-fab.dragging{cursor:grabbing;transform:scale(1.06);transition:none!important;z-index:99}
+
+/* v2.0.93 — relatório pedagógico */
+.teacher-learning{margin:12px 0;border:1px solid #ffffff12;border-radius:14px;padding:10px;background:#ffffff05}.teacher-learning h4{margin:2px 4px 8px;font-size:12px;color:#5be7ff}.teacher-learning>div{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:9px 4px;border-top:1px solid #ffffff0c}.teacher-learning>div span{display:grid;gap:2px}.teacher-learning>div b{font-size:11px}.teacher-learning>div small,.teacher-learning>div em{font-size:9px;color:#8da4b1;font-style:normal}.teacher-learning>p{font-size:11px;color:#8da4b1}.teacher-summary{grid-template-columns:repeat(4,1fr)!important}@media(max-width:520px){.teacher-summary{grid-template-columns:repeat(2,1fr)!important}}
