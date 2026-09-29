@@ -763,3 +763,8 @@ header .rai-x1-img,header .rai-heritage,header .rai-css,header .rai-inline{displ
 @media(max-width:520px){
   header .header-tangram-exact{left:47%!important}
 }
+
+/* v2.0.166 — segundo microajuste horizontal do Tangram */
+@media(max-width:520px){
+  header .header-tangram-exact{left:52%!important}
+}
