@@ -246,3 +246,5 @@ header>div:first-child,header>.menu{position:relative;z-index:2}
 
 /* v2.0.94 — respostas pedagógicas e assinatura */
 .lesson-response{width:100%;box-sizing:border-box;margin:9px 0 7px;padding:10px 11px;border:1px solid #42dfff33;border-radius:11px;background:#061722;color:#eefbff;font:inherit;resize:vertical}.lesson-response:focus{outline:1px solid #4de7ff}.lesson-response-actions{display:flex;gap:7px;flex-wrap:wrap}.teacher-lesson-log{margin-bottom:12px}.teacher-lesson-log>div{padding:9px 4px;border-top:1px solid #ffffff0c}.teacher-lesson-log p{margin:4px 0;color:#d8e8ef;font-size:11px}.teacher-lesson-log small{color:#7f98a6;font-size:9px}footer{display:grid!important;gap:3px;text-align:center}footer small{font-size:9px;letter-spacing:.06em;opacity:.55}
+
+/* v2.0.95 — assinatura padronizada */
