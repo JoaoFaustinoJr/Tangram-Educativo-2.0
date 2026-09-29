@@ -575,3 +575,9 @@ body.rai-brand-preview .rai-identity-reference img{width:100%;height:100%;object
 body.rai-brand-preview .rai-identity-reference button{position:absolute;right:18px;top:18px;width:42px;height:42px;border:1px solid #fff5;border-radius:50%;background:#061827e8;color:#fff;font-size:24px}
 .rai-brand-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border:1px solid #1ba7d0;border-radius:999px;background:#05283a;color:#dffaff;font-size:9px;font-weight:900;letter-spacing:.04em}
 @media(max-width:700px){.rai-brand-chip{font-size:8px;padding:3px 6px}}
+
+/* v2.0.150 — assinatura final e hierarquia do produto */
+footer{display:flex!important;flex-direction:column!important;align-items:center!important;gap:5px!important;padding-top:22px!important}
+footer .product-signature{order:1;display:block;color:#dffaff;font-size:12px;line-height:1.25;font-weight:1000;letter-spacing:.16em;text-transform:uppercase;text-shadow:0 0 14px #16bfff55}
+footer small{order:2;color:#7ea0ad!important;font-size:10px!important;letter-spacing:.04em}
+footer .author-signature{order:3;color:#5f7f8b!important;font-size:9px!important;opacity:.85}
