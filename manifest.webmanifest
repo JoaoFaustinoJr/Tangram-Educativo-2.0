@@ -9,5 +9,16 @@
   "background_color": "#050f18",
   "theme_color": "#061827",
   "lang": "pt-BR",
-  "categories": ["education", "games"]
+  "categories": [
+    "education",
+    "games"
+  ],
+  "icons": [
+    {
+      "src": "app-icon.svg?v=296",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }
