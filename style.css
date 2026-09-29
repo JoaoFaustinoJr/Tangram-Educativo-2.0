@@ -439,3 +439,11 @@ body.comfort-motion .magnified-text{transition:none}
    transform:none!important;
  }
 }
+
+/* v2.0.117-lab — lupa com zoom regulável e fixação para leitura */
+#lesson-magnifier{width:76px!important;height:92px!important;border-radius:24px!important;padding:7px 5px!important}
+#lesson-magnifier>span{font-size:23px!important}.mag-controls{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;width:100%;margin-top:-5px}
+.mag-controls i{display:grid;place-items:center;min-width:20px;height:23px;border-radius:7px;background:#061f2c;border:1px solid #4fb9c8;color:#fff;font-size:13px;font-style:normal;font-weight:1000;touch-action:manipulation}
+#lessons-panel[data-access="visual"] .magnified-text{font-size:var(--lesson-zoom,1.9em)!important}
+#lessons-panel[data-access="visual"] .magnified-pinned{position:relative!important;z-index:10021!important;border-color:#a7ffe9!important;box-shadow:0 12px 38px #000c,0 0 0 4px #7ff4dc30!important}
+@media(max-width:650px){#lessons-panel[data-access="visual"] .magnified-text{font-size:var(--lesson-zoom,1.9em)!important}}
