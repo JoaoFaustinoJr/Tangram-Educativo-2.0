@@ -529,3 +529,6 @@ body.comfort-motion .magnified-text{transition:none}
 /* v2.0.132 — sequência didática antes da codificação */
 .code-teach{margin:8px 0 10px;padding:10px;border-radius:11px;background:#0b3340;border:1px solid #326d79}.code-teach b{display:block;margin-top:7px;color:#9ff5e7;font-size:11px}.code-teach b:first-child{margin-top:0}.code-teach p{margin:3px 0 7px;font-size:11px;line-height:1.5;color:#e8fbf8}
 #lessons-panel[data-access="tea"] .code-teach b{color:#ffe08a}
+
+/* v2.0.134 — títulos e descrições sempre visíveis na lista de aulas */
+.lesson-summary-text{display:block;min-width:0;flex:1}.lesson-library summary .lesson-summary-text b{display:block!important;color:#f4fbff!important;font-size:13px!important;line-height:1.3!important}.lesson-summary-desc{display:block!important;margin-top:4px!important;color:#9fcbd5!important;font-size:10px!important;line-height:1.35!important;white-space:normal!important}.lesson-library summary>span:first-child{flex:0 0 25px;font-size:20px}
