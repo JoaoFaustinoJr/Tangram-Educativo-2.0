@@ -581,3 +581,22 @@ footer{display:flex!important;flex-direction:column!important;align-items:center
 footer .product-signature{order:1;display:block;color:#dffaff;font-size:12px;line-height:1.25;font-weight:1000;letter-spacing:.16em;text-transform:uppercase;text-shadow:0 0 14px #16bfff55}
 footer small{order:2;color:#7ea0ad!important;font-size:10px!important;letter-spacing:.04em}
 footer .author-signature{order:3;color:#5f7f8b!important;font-size:9px!important;opacity:.85}
+
+/* v2.0.151 — cabeçalho funcional e rodapé no padrão editorial São José */
+header{grid-template-columns:52px minmax(0,1fr) auto 52px!important;gap:10px!important;align-items:center!important}
+header .brand-title{min-width:0}
+.header-home,.header-menu{width:48px!important;height:48px!important;min-width:48px!important;padding:0!important;border:1px solid #1ab8e8!important;border-radius:50%!important;background:#05283a!important;color:#eaffff!important;display:grid!important;place-items:center!important;box-shadow:none!important}
+.header-home{font:400 38px/1 system-ui!important}
+.header-menu span{font:400 27px/1 system-ui!important;transform:translateY(-1px)}
+.header-home:active,.header-menu:active{transform:scale(.96);background:#07384d!important}
+header .rai-float{justify-self:end!important;max-width:88px!important}
+@media(max-width:620px){header{grid-template-columns:44px minmax(0,1fr) 58px 44px!important;gap:6px!important}.header-home,.header-menu{width:42px!important;height:42px!important;min-width:42px!important}header .rai-float{max-width:58px!important}header h1{font-size:clamp(23px,7vw,34px)!important}header p{font-size:12px!important}}
+
+footer{position:relative!important;display:grid!important;grid-template-columns:1fr auto!important;align-items:end!important;gap:8px 18px!important;margin-top:26px!important;padding:18px 18px 16px!important;border-top:1px solid #d6ad5c55!important;text-align:left!important}
+footer .footer-product{grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:3px}
+footer .footer-product b{color:#d8b66a!important;font-family:Georgia,"Times New Roman",serif!important;font-size:12px!important;font-weight:700!important;letter-spacing:.025em!important;text-transform:none!important;text-shadow:none!important}
+footer .footer-product small{color:#78939d!important;font-size:9px!important;letter-spacing:.06em!important}
+footer .footer-signature{grid-column:2;grid-row:1;color:#d8b66a!important;font:italic 11px/1.2 Georgia,"Times New Roman",serif!important;white-space:nowrap;opacity:.9}
+footer .footer-signature span{font-style:italic;font-weight:700}
+footer .footer-version{grid-column:1/-1;grid-row:2;color:#4f6b76!important;font-size:8px!important;font-style:normal!important;text-align:center!important;letter-spacing:.08em!important}
+@media(max-width:520px){footer{grid-template-columns:1fr!important;text-align:center!important}footer .footer-product,footer .footer-signature{grid-column:1!important;justify-self:center!important}.footer-signature{grid-row:2!important}.footer-version{grid-row:3!important}}
