@@ -334,3 +334,11 @@ button.ui-press{animation:uiPress .20s ease-out}
 @keyframes uiPress{45%{transform:scale(.965);filter:brightness(1.18)}100%{transform:scale(1);filter:none}}
 body.comfort-motion button.ui-press,body.comfort-calm button.ui-press{animation:none!important}
 body.comfort-motion button.ui-press::after,body.comfort-calm button.ui-press::after{display:none!important}
+
+/* v2.0.107-lab — portal pedagógico */
+.learning-home{margin:14px 0 16px;padding:18px;border:1px solid #1ccfe06b;border-radius:22px;background:linear-gradient(135deg,#07364ae8,#062635e8);box-shadow:0 12px 30px #00131f42}
+.learning-kicker{font-size:10px;font-weight:900;letter-spacing:.14em;color:#64e8ef;margin-bottom:8px}
+.learning-title{display:flex;align-items:center;justify-content:space-between;gap:14px}.learning-title h2{margin:0;font-size:24px}.learning-title p{margin:4px 0 0;color:#b8d4de}.learning-open{min-height:44px;padding:9px 15px;border-radius:14px;border:1px solid #62eed0;background:#0a6d69;color:#fff;font-weight:900}
+.learning-paths{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}.learning-paths button{text-align:left;min-height:74px;padding:13px;border-radius:15px;border:1px solid #1ba7c075;background:#062d3f;color:#effcff}.learning-paths b,.learning-paths small{display:block}.learning-paths b{font-size:15px}.learning-paths small{margin-top:5px;color:#9fc6d3}
+.learning-access{display:flex;gap:10px;align-items:center;margin-top:12px;padding:10px 12px;border-radius:13px;background:#071e2b99}.learning-access span{font-weight:900;color:#d8fff5}.learning-access small{color:#abc8d1}
+@media(max-width:650px){.learning-home{margin:10px 0 13px;padding:14px}.learning-title{align-items:flex-start}.learning-title h2{font-size:20px}.learning-title p{font-size:12px}.learning-open{font-size:12px;white-space:nowrap}.learning-paths{grid-template-columns:1fr;gap:7px}.learning-paths button{min-height:58px}.learning-access{display:block}.learning-access small{display:block;margin-top:4px;line-height:1.35}}
