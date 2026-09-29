@@ -468,3 +468,7 @@ body.comfort-motion .magnified-text{transition:none}
 
 /* v2.0.121 — zoom da lupa herdado pelo painel de aula */
 #lessons-panel[data-access="visual"] .magnified-text{font-size:var(--lesson-zoom,1.9em)!important}
+
+/* v2.0.121 — zoom da lupa controlado pelo painel, não pelo próprio widget */
+#lessons-panel[data-access="visual"] .magnified-text{font-size:var(--lesson-zoom,1.9em)!important}
+#lesson-magnifier::after{content:attr(data-zoom) "%";position:absolute;top:-9px;right:-8px;padding:2px 5px;border-radius:8px;background:#dffff6;color:#064c49;font-size:9px;font-weight:1000}
