@@ -180,3 +180,11 @@ header{position:relative}.app-menu{display:none;position:absolute;right:0;top:82
  #board,.board{max-height:575px!important}
 }
 #next.ready{border-color:#61ffb0!important;box-shadow:0 0 0 2px #61ffb018,0 0 22px #38f2a535,inset 0 0 18px #38f2a51b!important;background:#0b4050!important}
+
+/* v2.0.79 — R.A.I. flutuante editorial */
+header{position:relative;overflow:visible}.rai-float{position:absolute;z-index:0;right:82px;top:4px;width:185px;height:118px;pointer-events:none;opacity:.54;filter:drop-shadow(0 0 10px #2ad9ff24)}.rai-float svg{width:100%;height:100%;overflow:visible}.rai-orbit path,.rai-orbit circle{fill:none;stroke:#37d9ff;stroke-width:1.15;opacity:.28}.rai-orbit circle{stroke-dasharray:3 8}.rai-face polygon{fill:#0b4960;stroke:#5ce6ff;stroke-width:1.2}.rai-face circle{fill:#ffe05c;filter:drop-shadow(0 0 3px #ffe05c)}.rai-face path{fill:none;stroke:#65eaff;stroke-width:1.4;stroke-linecap:round}.rai-sparks{fill:#7eeeff;stroke:#7eeeff;stroke-width:1;opacity:.6}
+@keyframes raiHover{0%,100%{transform:translate3d(0,1px,0) rotate(-1deg)}50%{transform:translate3d(0,-7px,0) rotate(1.3deg)}}@keyframes raiOrbit{to{transform:rotate(360deg)}}@keyframes raiSpark{0%,100%{opacity:.25}50%{opacity:.9}}.rai-face{transform-origin:90px 60px;animation:raiHover 5.8s ease-in-out infinite}.rai-orbit{transform-origin:90px 60px;animation:raiOrbit 28s linear infinite}.rai-sparks{animation:raiSpark 3.2s ease-in-out infinite}
+header>div:first-child,header>.menu{position:relative;z-index:2}
+@media(max-width:600px){.rai-float{right:72px;top:2px;width:150px;height:105px;opacity:.46}.rai-face{transform:scale(.9);transform-origin:90px 60px}}
+@media(max-width:390px){.rai-float{right:61px;width:132px;opacity:.4}}
+@media(prefers-reduced-motion:reduce){.rai-face,.rai-orbit,.rai-sparks{animation:none!important}}
