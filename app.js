@@ -277,4 +277,4 @@ function studentOpen(){
  const p=studentRead();m.querySelector('#student-name').value=p?.name||'';m.querySelector('#student-class').value=p?.turma||'';m.querySelector('#student-email').value=p?.email||'';m.querySelector('.student-msg').textContent='';m.classList.add('show')
 }
 })();
-document.querySelector('.learning-open')?.addEventListener('click',showLessons);document.querySelectorAll('[data-learning]').forEach(b=>b.addEventListener('click',async()=>{lessonSection=b.dataset.learning;await showLessons()}));
+document.querySelector('.classroom')?.addEventListener('click',()=>{lessonSection='digital';showLessons()});
