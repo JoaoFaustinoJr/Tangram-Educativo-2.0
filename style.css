@@ -461,3 +461,7 @@ body.comfort-motion .magnified-text{transition:none}
 #lesson-magnifier .mag-controls button{pointer-events:auto!important;touch-action:manipulation!important;cursor:pointer!important}
 #lesson-magnifier .mag-handle{touch-action:none!important}
 #lessons-panel[data-access="visual"] .lesson-block,#lessons-panel[data-access="visual"] .lesson-key,#lessons-panel[data-access="visual"] .lesson-challenge,#lessons-panel[data-access="visual"] .access-instruction{cursor:zoom-in}
+
+/* v2.0.120 — toque confiável nos controles da lupa */
+#lesson-magnifier .mag-controls button{pointer-events:auto!important;touch-action:manipulation!important;cursor:pointer!important}
+#lesson-magnifier .mag-handle{touch-action:none!important}
