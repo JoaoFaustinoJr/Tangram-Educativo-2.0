@@ -722,3 +722,13 @@ header .header-tangram-exact:after{content:"";position:absolute;left:18%;right:1
 header .header-tangram-exact .p1,header .header-tangram-exact .p2{transform-origin:center;filter:brightness(1.04)}
 header .header-tangram-exact .p3,header .header-tangram-exact .p5{filter:brightness(.94)}
 @media(max-width:520px){header .rai-float.rai-x1{width:105px!important;max-width:105px!important;margin-left:-8px!important}header .header-tangram-exact{width:104px!important;height:84px!important;left:40%!important}}
+
+/* v2.0.162 — Tangram protagonista: mais corpo, distância do menu e brilho de montagem */
+header .rai-x1-img,header .rai-heritage{display:none!important}
+header .rai-float.rai-x1{width:145px!important;max-width:145px!important;margin-left:-28px!important;transform:translateX(-18px)!important}
+header .header-tangram-exact{width:132px!important;height:106px!important;left:32%!important;transform:translateX(-50%)!important;filter:drop-shadow(0 12px 11px #001019cc) drop-shadow(0 0 8px #d8b66a55)!important}
+header .header-tangram-exact .hp{stroke:#d8b66a!important;stroke-width:.7!important;filter:drop-shadow(2px 3px 1.5px #00111bcc) drop-shadow(-1px -1px .7px #ffffff33)!important}
+header .header-tangram-exact:before{content:"";position:absolute;inset:10% 8%;border-radius:28%;opacity:0;pointer-events:none;background:radial-gradient(circle,#fff9 0,#ffe28a66 20%,#d8b66a22 45%,transparent 70%);filter:blur(5px);animation:tangramAssemblyGlow162 9s ease-in-out infinite}
+header .header-tangram-exact:after{left:12%!important;right:12%!important;bottom:-8px!important;height:10px!important;background:#001018aa!important;filter:blur(5px)!important}
+@keyframes tangramAssemblyGlow162{0%,27%{opacity:0;transform:scale(.7)}34%{opacity:.35;transform:scale(.9)}41%{opacity:1;transform:scale(1.12)}48%{opacity:.55;transform:scale(1.02)}57%{opacity:.18;transform:scale(1)}64%,100%{opacity:0;transform:scale(.92)}}
+@media(max-width:520px){header .rai-float.rai-x1{width:132px!important;max-width:132px!important;margin-left:-22px!important;transform:translateX(-15px)!important}header .header-tangram-exact{width:122px!important;height:98px!important;left:31%!important}}
