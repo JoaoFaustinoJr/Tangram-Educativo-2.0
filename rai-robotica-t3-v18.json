@@ -1,5 +1,41 @@
 [
   {
+    "year": 5,
+    "section": "robotics",
+    "id": "rb5-sesi-engrenagens",
+    "topic": "Oficina SESI: engrenagens, força e velocidade",
+    "icon": "⚙️",
+    "axis": "Robótica e Cultura Maker",
+    "objective": "Investigar como engrenagens transmitem movimento e como a relação entre seus tamanhos altera força, velocidade e sentido de rotação.",
+    "keyTerm": "engrenagem",
+    "keyDefinition": "Roda dentada que transmite movimento ao encaixar seus dentes nos dentes de outra engrenagem.",
+    "concept": "Em um mecanismo simples, o motor movimenta um eixo e uma engrenagem transmite esse movimento para outra. Duas engrenagens em contato giram em sentidos opostos. Uma engrenagem pequena acionando uma maior tende a favorecer força; uma maior acionando uma pequena tende a favorecer velocidade.",
+    "example": "Em uma montagem LEGO EV3, compare o comportamento do mecanismo ao trocar a engrenagem motora pequena por uma maior.",
+    "formula": "motor → eixo → engrenagem motora → engrenagem movida → movimento",
+    "representation": "pequena → grande: mais força e menos velocidade • grande → pequena: mais velocidade e menos força",
+    "use": "Robôs, esteiras, veículos, máquinas, relógios e mecanismos industriais.",
+    "observe": "A estrutura precisa estar firme e os dentes devem se encaixar corretamente. Se houver desalinhamento, o mecanismo pode travar mesmo que a programação esteja correta.",
+    "guided": "Monte duas engrenagens em contato. Observe o sentido de giro. Depois troque os tamanhos e compare velocidade e força.",
+    "challenge": "Se um robô precisa mover uma carga maior e pode andar mais devagar, qual combinação de engrenagens você testaria primeiro?",
+    "answer": "Uma engrenagem motora menor acionando uma engrenagem maior, pois essa relação tende a aumentar o torque disponível na saída, reduzindo a velocidade.",
+    "reference": "Oficina de Robótica SESI — 5º ano; atividade prática com transmissão por engrenagens.",
+    "teacherTip": "Peça que cada grupo registre hipótese, montagem, teste, resultado e correção. Relacione falhas mecânicas ao processo de teste e depuração.",
+    "fixation": [
+      {
+        "q": "O que acontece com o sentido de duas engrenagens diretamente encaixadas?",
+        "a": "Elas giram em sentidos opostos."
+      },
+      {
+        "q": "Qual relação tende a favorecer força?",
+        "a": "Engrenagem menor acionando uma maior."
+      },
+      {
+        "q": "O que deve ser verificado se o mecanismo trava?",
+        "a": "Encaixe dos dentes, alinhamento dos eixos, firmeza da estrutura e depois a programação."
+      }
+    ]
+  },
+  {
     "id": "rob6t3-1",
     "section": "robotics",
     "year": 6,
