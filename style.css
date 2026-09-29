@@ -374,3 +374,15 @@ body.comfort-motion button.ui-press::after,body.comfort-calm button.ui-press::af
 #lessons-panel[data-access="tea"] .lesson-reference{opacity:.7}
 #lessons-panel[data-access="visual"] .lesson-audio button:first-child{border-color:#6cf0d3!important;background:#0b665f!important;font-weight:900!important}
 @media(max-width:650px){.lesson-access-modes{grid-template-columns:1fr!important}.lesson-access-modes button{min-height:40px;text-align:left;padding-left:12px}.lessons-card>h3{padding-right:94px}.lessons-subtitle{padding-right:0;font-size:12px!important;line-height:1.3}}
+
+/* v2.0.113-lab — acessibilidade vira condução da aula */
+.access-active{display:none;width:100%;min-height:43px;margin-top:8px;border:1px solid #65efd3;border-radius:11px;background:#0a5b58;color:#fff;font-weight:900}
+#lessons-panel.access-collapsed .lesson-access-modes,#lessons-panel.access-collapsed .adapted-callout>span,#lessons-panel.access-collapsed .access-note{display:none!important}
+#lessons-panel.access-collapsed .adapted-callout{padding:9px 11px!important;margin-bottom:10px!important}
+#lessons-panel.access-collapsed .adapted-callout>b{font-size:11px;opacity:.8}
+#lessons-panel.access-collapsed .access-active{display:block}
+.tea-step{position:relative}.tea-next{display:block;min-height:40px;margin:12px 0 2px auto;padding:8px 13px;border:1px solid #62e9cd;border-radius:10px;background:#0b665f;color:#fff;font-weight:900}
+#lessons-panel[data-access="tea"] .lesson-content>.lesson-audio{display:none}
+#lessons-panel[data-access="tea"] .access-instruction{border-color:#65efd3;background:#073a3e}
+#lessons-panel[data-access="visual"] .access-instruction{border-color:#55bfe8}
+@media(max-width:650px){#lessons-panel.access-collapsed .adapted-callout{margin-top:7px}.access-active{font-size:12px}.tea-next{width:100%}}
