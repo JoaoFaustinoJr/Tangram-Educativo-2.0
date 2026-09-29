@@ -1,0 +1,13 @@
+{
+  "name": "Tangram Educativo",
+  "short_name": "Tangram",
+  "description": "Tangram Educativo com R.A.I., desafios, X1 Arena, Gamer, mosaicos e aulas.",
+  "id": "/Tangram-Educativo-2.0/",
+  "start_url": "/Tangram-Educativo-2.0/?source=pwa",
+  "scope": "/Tangram-Educativo-2.0/",
+  "display": "standalone",
+  "background_color": "#050f18",
+  "theme_color": "#061827",
+  "lang": "pt-BR",
+  "categories": ["education", "games"]
+}
