@@ -348,3 +348,8 @@ body.comfort-motion button.ui-press::after,body.comfort-calm button.ui-press::af
 .modes .classroom{border-color:#65e8dc!important;background:linear-gradient(145deg,#083f50,#075d61)!important;box-shadow:0 0 18px #38ead22a!important}
 .classroom-art{display:grid!important;place-items:center!important}.classroom-art span{font-size:22px}
 @media(max-width:650px){.modes{grid-template-columns:repeat(2,minmax(0,1fr))!important}.modes .classroom{grid-column:1/-1!important;min-height:68px!important}.modes .classroom small{display:block!important}.learning-home{display:none!important}}
+
+/* v2.0.110-lab — Sala de Aula substitui Aulas; três modos sem redundância */
+.modes{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.modes .classroom{grid-column:auto!important;min-height:unset!important}
+@media(max-width:650px){.modes{grid-template-columns:repeat(3,minmax(0,1fr))!important}.modes .classroom{grid-column:auto!important;min-height:unset!important}.modes .classroom small{display:block!important;font-size:10px!important;line-height:1.2}.modes .classroom b{font-size:16px!important}}
