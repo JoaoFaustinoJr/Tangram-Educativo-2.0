@@ -660,3 +660,11 @@ header .menu:active{transform:scale(.96)!important;background:#0a3549!important}
 @keyframes raiGentleNod{0%,42%,100%{transform:rotate(0deg)}48%{transform:rotate(-2deg)}55%{transform:rotate(1.5deg)}62%{transform:rotate(0deg)}}
 @media(prefers-reduced-motion:reduce){header .rai-float,header .rai-float img{animation:none!important}}
 @media(max-width:620px){header{grid-template-columns:minmax(0,1fr) 74px 46px!important;gap:8px!important;min-height:130px!important;padding:17px 14px 15px!important}header .rai-float{width:68px!important;max-width:68px!important;height:92px!important}header .rai-float img{max-width:68px!important;max-height:88px!important}header .menu{width:44px!important;height:44px!important;min-width:44px!important;border-radius:14px!important}header h1 span{font-size:clamp(30px,8.4vw,43px)!important}header h1 small{font-size:clamp(13px,3.7vw,18px)!important;letter-spacing:.25em!important}header p{font-size:12px!important}}
+
+/* v2.0.155 — evolução pedagógica no painel do professor */
+.teacher-course-progress,.teacher-x1-link{margin:14px 0;padding:14px;border:1px solid #d8b66a55;border-radius:16px;background:#071e2a}
+.teacher-course-progress h4,.teacher-x1-link b{margin:0 0 10px;color:#f0d486;font-size:13px}
+.teacher-course-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.teacher-course-head b{font-size:11px}.teacher-course-head strong{color:#f0d486;font-size:14px}
+.teacher-course-bar{height:7px;margin:8px 0 10px;border-radius:99px;background:#ffffff12;overflow:hidden}.teacher-course-bar i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#24c8ed,#d8b66a)}
+.teacher-course-list{display:grid;gap:6px;max-height:260px;overflow:auto}.teacher-course-list>div{display:flex;justify-content:space-between;gap:8px;padding:8px;border-top:1px solid #ffffff0d}.teacher-course-list span{display:grid;gap:3px}.teacher-course-list b{font-size:10px;text-transform:capitalize}.teacher-course-list small{color:#8eabb4;font-size:8px}.teacher-course-list em{color:#f0d486;font-size:10px;font-style:normal;font-weight:900}
+.teacher-x1-link p{margin:4px 0 10px;color:#9bb4bd;font-size:10px;line-height:1.4}.teacher-x1-link button{width:100%;min-height:42px;border:1px solid #d8b66a77;border-radius:11px;background:#0b3544;color:#fff;font-weight:900}
