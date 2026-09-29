@@ -456,3 +456,8 @@ body.comfort-motion .magnified-text{transition:none}
 #lesson-magnifier [data-mag="pin"]{font-size:9px;background:#0a625d;border-color:#6df1d5}
 #lesson-magnifier [data-mag="pin"]:disabled{opacity:.45;background:#17333c}
 #lessons-panel[data-access="visual"] .magnified-pinned{outline:3px solid #a7ffe9!important;outline-offset:2px}
+
+/* v2.0.120-lab — lupa: controles confiáveis e um único trecho fixado */
+#lesson-magnifier .mag-controls button{pointer-events:auto!important;touch-action:manipulation!important;cursor:pointer!important}
+#lesson-magnifier .mag-handle{touch-action:none!important}
+#lessons-panel[data-access="visual"] .lesson-block,#lessons-panel[data-access="visual"] .lesson-key,#lessons-panel[data-access="visual"] .lesson-challenge,#lessons-panel[data-access="visual"] .access-instruction{cursor:zoom-in}
