@@ -621,3 +621,21 @@ footer .footer-version{grid-column:1/-1;grid-row:2;color:#4f6b76!important;font-
 .editorial-footer .footer-signature{grid-column:2!important;grid-row:1!important;align-self:end!important;color:#d8b66a!important;font:italic 10px/1.2 Georgia,"Times New Roman",serif!important;white-space:nowrap!important;opacity:.82!important}
 .editorial-footer .footer-version{grid-column:1/-1!important;grid-row:2!important;text-align:center!important;color:#456672!important;font-size:7px!important;letter-spacing:.12em!important}
 @media(max-width:520px){.editorial-footer{grid-template-columns:1fr!important;text-align:center!important}.editorial-footer .footer-product,.editorial-footer .footer-signature,.editorial-footer .footer-version{grid-column:1!important;justify-self:center!important}.editorial-footer .footer-signature{grid-row:2!important;margin-top:3px!important}.editorial-footer .footer-version{grid-row:3!important;margin-top:2px!important}}
+
+
+/* v2.0.153 — inclusão restaurada + dourado editorial */
+:root{--editorial-gold:#d8b66a;--editorial-gold-soft:#d8b66a38}
+header{border-bottom:1px solid var(--editorial-gold-soft)!important}
+header h1 small{color:#f0f7fa!important}
+.game{border-color:#20bde8!important;box-shadow:inset 0 1px 0 #d8b66a18!important}
+.gamehead h2 em{border:1px solid #d8b66a55!important;box-shadow:0 0 0 1px #d8b66a12 inset!important}
+.progress{border-color:#22b8df!important;box-shadow:inset 0 1px 0 #d8b66a1c!important}
+.progress>span:last-child{color:#f0d486!important}
+.tools button[data-action="hint"]{border-color:#d8b66a88!important;background:#183d45!important;box-shadow:inset 0 0 16px #d8b66a12!important}
+.tools button[data-action="hint"] span{color:#f1ddb0!important}
+.accordions details{box-shadow:inset 0 1px 0 #d8b66a12!important}
+.accordions details:nth-child(2){border-color:#d8b66a55!important}
+.classroom-art span:first-child{display:grid!important;place-items:center!important;width:31px!important;height:31px!important;border:1px solid #d8b66a!important;border-radius:8px!important;background:#162a3a!important;color:#fff!important;font-size:17px!important;box-shadow:0 0 0 2px #193d4a!important}
+.classroom-art span:last-child{color:#f4d46f!important;text-shadow:0 0 8px #d8b66a66!important}
+.classroom .adapted-badge{border:1px solid #d8b66a66!important;background:#eafff7!important}
+.editorial-footer{border-top-color:#d8b66a77!important}
