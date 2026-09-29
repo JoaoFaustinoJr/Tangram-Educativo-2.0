@@ -465,3 +465,6 @@ body.comfort-motion .magnified-text{transition:none}
 /* v2.0.120 — toque confiável nos controles da lupa */
 #lesson-magnifier .mag-controls button{pointer-events:auto!important;touch-action:manipulation!important;cursor:pointer!important}
 #lesson-magnifier .mag-handle{touch-action:none!important}
+
+/* v2.0.121 — zoom da lupa herdado pelo painel de aula */
+#lessons-panel[data-access="visual"] .magnified-text{font-size:var(--lesson-zoom,1.9em)!important}
