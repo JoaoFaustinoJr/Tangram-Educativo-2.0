@@ -394,3 +394,30 @@ body.comfort-motion button.ui-press::after,body.comfort-calm button.ui-press::af
 .magnified-text{position:relative;z-index:10020!important;transform:scale(1.13);transform-origin:center;box-shadow:0 10px 35px #000b,0 0 0 2px #78f4df!important;background:#092f3d!important;font-size:1.13em!important;line-height:1.6!important;transition:transform .12s ease}
 body.comfort-motion .magnified-text{transition:none}
 @media(max-width:650px){#lesson-magnifier{width:62px;height:62px;right:9px}.magnified-text{transform:scale(1.08);font-size:1.12em!important}}
+
+/* v2.0.115-lab — lupa de baixa visão com ampliação forte e legível */
+#lessons-panel[data-access="visual"] .magnified-text{
+  transform:scale(1.04)!important;
+  transform-origin:center!important;
+  font-size:1.42em!important;
+  line-height:1.72!important;
+  letter-spacing:.012em!important;
+  padding:20px 18px!important;
+  min-height:120px!important;
+  background:#062f3e!important;
+  border:2px solid #82f8e5!important;
+  box-shadow:0 14px 42px #000d,0 0 0 4px #6af2dc22!important;
+}
+#lessons-panel[data-access="visual"] .magnified-text p,
+#lessons-panel[data-access="visual"] .magnified-text span,
+#lessons-panel[data-access="visual"] .magnified-text div:not(.tea-next){
+  font-size:1em!important;line-height:1.72!important
+}
+#lessons-panel[data-access="visual"] .magnified-text b,
+#lessons-panel[data-access="visual"] .magnified-text strong{
+  font-size:1.08em!important;line-height:1.5!important
+}
+@media(max-width:650px){
+ #lessons-panel[data-access="visual"] .magnified-text{font-size:1.55em!important;line-height:1.68!important;padding:18px 15px!important;transform:scale(1.02)!important}
+ #lesson-magnifier{width:66px;height:66px}
+}
