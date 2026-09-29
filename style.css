@@ -353,3 +353,11 @@ body.comfort-motion button.ui-press::after,body.comfort-calm button.ui-press::af
 .modes{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 .modes .classroom{grid-column:auto!important;min-height:unset!important}
 @media(max-width:650px){.modes{grid-template-columns:repeat(3,minmax(0,1fr))!important}.modes .classroom{grid-column:auto!important;min-height:unset!important}.modes .classroom small{display:block!important;font-size:10px!important;line-height:1.2}.modes .classroom b{font-size:16px!important}}
+
+/* v2.0.111-lab — destaque pedagógico e acessibilidade */
+.adapted-badge{display:inline-flex;vertical-align:2px;margin-left:5px;padding:3px 6px;border-radius:999px;background:#d9fff2;color:#075e57;font-style:normal;font-size:8px;font-weight:1000;letter-spacing:.02em;box-shadow:0 0 12px #6dffd755}
+.modes .classroom{position:relative}.modes .classroom::after{content:"♿";position:absolute;right:8px;top:7px;font-size:12px;opacity:.9}
+.lessons-subtitle{margin-top:-4px!important}
+.adapted-callout{margin:12px 0 14px;padding:12px 13px;border:1px solid #57dfca70;border-radius:15px;background:linear-gradient(135deg,#073d43,#082d3b);color:#eafff9}
+.adapted-callout>b,.adapted-callout>span{display:block}.adapted-callout>b{font-size:14px}.adapted-callout>span{margin-top:3px;color:#b9d9d8;font-size:12px}.adapted-callout>div{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.adapted-callout small{padding:6px 8px;border-radius:9px;background:#061f2c;color:#cfe9e9;font-weight:700}
+@media(max-width:650px){.adapted-badge{display:block;width:max-content;margin:4px auto 0;font-size:7px}.modes .classroom small{margin-top:2px}.adapted-callout>div{display:grid;grid-template-columns:1fr;width:100%}.adapted-callout small{font-size:11px}}
