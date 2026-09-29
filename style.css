@@ -553,3 +553,25 @@ body.comfort-motion .magnified-text{transition:none}
 
 /* v2.0.146 — exportação consciente do diário pedagógico */
 .teacher-export-note{margin:12px 0 8px;padding:9px 11px;border:1px solid #ffffff16;border-radius:10px;background:#071821;color:#9db8bf;font-size:9px;line-height:1.45}.teacher-export-actions{display:flex;flex-wrap:wrap;gap:7px}.teacher-export-actions button{flex:1 1 120px;min-height:38px;border-radius:10px}
+
+
+/* v2.0.149 — identidade visual oficial R.A.I. 2026
+   A prancha aprovada é usada como assinatura visual sem alterar a mecânica do Tangram. */
+:root{--rai-blue:#16bfff;--rai-orange:#ff9f18;--rai-green:#25d878;--rai-deep:#031b31;--rai-panel:#06283d}
+header{border-bottom-color:#159fe0}
+.modes>button{position:relative;overflow:hidden;isolation:isolate}
+.modes>button:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;background:linear-gradient(135deg,transparent 25%,#fff 50%,transparent 75%);transform:translateX(-120%);transition:transform .5s}
+.modes>button:hover:after,.modes>button:focus-visible:after{transform:translateX(120%)}
+.modes .x1{border-color:var(--rai-blue)!important;box-shadow:inset 0 0 22px #16bfff18}
+.modes .gamer{border-color:var(--rai-orange)!important;box-shadow:inset 0 0 22px #ff9f1818}
+.modes .aulas{border-color:var(--rai-green)!important;box-shadow:inset 0 0 22px #25d87818}
+.rai-tutor-card{border-color:var(--rai-blue)!important;box-shadow:0 20px 70px #0009,0 0 28px #16bfff22}
+.rai-tutor-head small{color:#8fe8ff!important}
+.rai-tutor-actions button{border-color:#2d91b5!important}
+.rai-tutor-note{color:#b9dce8!important}
+.rai-identity-reference{display:none}
+body.rai-brand-preview .rai-identity-reference{display:block;position:fixed;inset:12px;z-index:9999;background:#031421ee;border:1px solid #19bfff;border-radius:18px;padding:10px;box-shadow:0 25px 80px #000}
+body.rai-brand-preview .rai-identity-reference img{width:100%;height:100%;object-fit:contain;border-radius:12px}
+body.rai-brand-preview .rai-identity-reference button{position:absolute;right:18px;top:18px;width:42px;height:42px;border:1px solid #fff5;border-radius:50%;background:#061827e8;color:#fff;font-size:24px}
+.rai-brand-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border:1px solid #1ba7d0;border-radius:999px;background:#05283a;color:#dffaff;font-size:9px;font-weight:900;letter-spacing:.04em}
+@media(max-width:700px){.rai-brand-chip{font-size:8px;padding:3px 6px}}
