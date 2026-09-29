@@ -342,3 +342,9 @@ body.comfort-motion button.ui-press::after,body.comfort-calm button.ui-press::af
 .learning-paths{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}.learning-paths button{text-align:left;min-height:74px;padding:13px;border-radius:15px;border:1px solid #1ba7c075;background:#062d3f;color:#effcff}.learning-paths b,.learning-paths small{display:block}.learning-paths b{font-size:15px}.learning-paths small{margin-top:5px;color:#9fc6d3}
 .learning-access{display:flex;gap:10px;align-items:center;margin-top:12px;padding:10px 12px;border-radius:13px;background:#071e2b99}.learning-access span{font-weight:900;color:#d8fff5}.learning-access small{color:#abc8d1}
 @media(max-width:650px){.learning-home{margin:10px 0 13px;padding:14px}.learning-title{align-items:flex-start}.learning-title h2{font-size:20px}.learning-title p{font-size:12px}.learning-open{font-size:12px;white-space:nowrap}.learning-paths{grid-template-columns:1fr;gap:7px}.learning-paths button{min-height:58px}.learning-access{display:block}.learning-access small{display:block;margin-top:4px;line-height:1.35}}
+
+/* v2.0.108-lab — Sala de Aula vira modo principal compacto */
+.modes{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.modes .classroom{border-color:#65e8dc!important;background:linear-gradient(145deg,#083f50,#075d61)!important;box-shadow:0 0 18px #38ead22a!important}
+.classroom-art{display:grid!important;place-items:center!important}.classroom-art span{font-size:22px}
+@media(max-width:650px){.modes{grid-template-columns:repeat(2,minmax(0,1fr))!important}.modes .classroom{grid-column:1/-1!important;min-height:68px!important}.modes .classroom small{display:block!important}.learning-home{display:none!important}}
