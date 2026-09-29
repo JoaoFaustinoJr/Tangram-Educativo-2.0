@@ -16,14 +16,23 @@
     "use": "Arquitetura, desenho, sinalização, mosaicos, plantas e construção.",
     "observe": "Ter o mesmo número de lados não significa ser o mesmo polígono; medidas e relações entre lados e ângulos também importam.",
     "guided": "Escolha duas peças e compare quantidade de lados, vértices e tipos de ângulo. Registre sem mover as peças e depois confirme visualmente.",
-    "challenge": "Encontre um ângulo reto em um triângulo do Tangram e explique por que os outros dois ângulos têm a mesma medida.",
-    "answer": "Os triângulos são retângulos isósceles: um ângulo mede 90° e os outros dois, por serem iguais e completarem 180°, medem 45° cada.",
+    "challenge": "Escolha um triângulo do Tangram. Antes de girá-lo, localize o ângulo reto e os dois ângulos agudos. Depois gire a peça: as medidas dos ângulos mudaram ou apenas a orientação? Explique.",
+    "answer": "Apenas a orientação mudou. Uma rotação preserva as medidas: o triângulo continua tendo 90°, 45° e 45°.",
     "reference": "PR.EF05MA17.s.5.68; BNCC Matemática; Referencial Curricular do Paraná.",
     "teacherTip": "Use as próprias peças como material manipulável antes de formalizar nomenclaturas.",
     "fixation": [
-      {"q":"O que significa “polígono” nesta aula?","a":"Figura plana fechada formada por segmentos de reta."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Arquitetura, desenho, sinalização, mosaicos, plantas e construção."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Ter o mesmo número de lados não significa ser o mesmo polígono; medidas e relações entre lados e ângulos também importam."}
+      {
+        "q": "O que significa “polígono” nesta aula?",
+        "a": "Figura plana fechada formada por segmentos de reta."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Arquitetura, desenho, sinalização, mosaicos, plantas e construção."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Ter o mesmo número de lados não significa ser o mesmo polígono; medidas e relações entre lados e ângulos também importam."
+      }
     ]
   },
   {
@@ -48,9 +57,18 @@
     "reference": "PR.EF05MA18.s.5.78 • PR.EF05MA18.d.5.79–81; BNCC Matemática; Referencial Curricular do Paraná.",
     "teacherTip": "Priorize os termos proporcionalidade, ângulos correspondentes e fator de escala. O conceito formal de semelhança pode aparecer como aprofundamento, sem substituir o objetivo curricular do 5º ano.",
     "fixation": [
-      {"q":"O que significa “ampliação e redução proporcional” nesta aula?","a":"Mudar todas as medidas lineares pelo mesmo fator, preservando as medidas dos ângulos correspondentes e a forma da figura."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Mapas, maquetes, desenhos técnicos, impressão, fotografia e modelagem."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Ampliar proporcionalmente significa multiplicar todos os comprimentos correspondentes pelo mesmo fator, e não acrescentar a mesma medida a cada lado."}
+      {
+        "q": "O que significa “ampliação e redução proporcional” nesta aula?",
+        "a": "Mudar todas as medidas lineares pelo mesmo fator, preservando as medidas dos ângulos correspondentes e a forma da figura."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Mapas, maquetes, desenhos técnicos, impressão, fotografia e modelagem."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Ampliar proporcionalmente significa multiplicar todos os comprimentos correspondentes pelo mesmo fator, e não acrescentar a mesma medida a cada lado."
+      }
     ]
   },
   {
@@ -70,14 +88,23 @@
     "use": "Pisos, cercas, terrenos, embalagens, jardinagem e projetos.",
     "observe": "Área e perímetro são grandezas diferentes; aumentar o perímetro não implica necessariamente aumentar a área.",
     "guided": "Monte duas formas diferentes com as mesmas peças e compare visualmente os contornos. Depois, se possível, meça-os.",
-    "challenge": "Duas figuras feitas com todas as sete peças, sem sobreposição, podem ter a mesma área e perímetros diferentes?",
-    "answer": "Sim. A soma das áreas das mesmas peças é preservada; o perímetro depende de quais bordas ficam no contorno externo.",
+    "challenge": "Monte ou compare duas silhuetas diferentes usando as mesmas sete peças, sem sobreposição. Antes de responder, preveja: a área total muda? E o perímetro pode mudar? Justifique observando as bordas externas.",
+    "answer": "A área total não muda porque são usadas as mesmas sete peças sem sobreposição. O perímetro pode mudar porque a disposição altera quais bordas ficam expostas no contorno externo.",
     "reference": "PR.EF05MA20.s.5.84 • PR.EF05MA20.d.5.85; BNCC Matemática; Referencial Curricular do Paraná.",
     "teacherTip": "Se possível, complemente com barbante para contorno e malha quadriculada para área.",
     "fixation": [
-      {"q":"O que significa “área e perímetro” nesta aula?","a":"Área mede a superfície ocupada; perímetro mede o comprimento do contorno."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Pisos, cercas, terrenos, embalagens, jardinagem e projetos."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Área e perímetro são grandezas diferentes; aumentar o perímetro não implica necessariamente aumentar a área."}
+      {
+        "q": "O que significa “área e perímetro” nesta aula?",
+        "a": "Área mede a superfície ocupada; perímetro mede o comprimento do contorno."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Pisos, cercas, terrenos, embalagens, jardinagem e projetos."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Área e perímetro são grandezas diferentes; aumentar o perímetro não implica necessariamente aumentar a área."
+      }
     ]
   },
   {
@@ -97,14 +124,23 @@
     "use": "Robótica, navegação, engrenagens, jogos, mapas e desenho técnico.",
     "observe": "Rotacionar muda posição/orientação relativa ao plano, mas preserva forma e tamanho da figura.",
     "guided": "Faça uma sequência de 1, 2, 3 e 4 giros de 45° e registre o ângulo acumulado em cada caso.",
-    "challenge": "Quantos giros de 45° correspondem a meia-volta?",
-    "answer": "Quatro giros, porque 4 × 45° = 180°.",
+    "challenge": "Escolha uma peça e faça mentalmente ou no Tangram quatro giros sucessivos de 45°. Registre as orientações 0°, 45°, 90°, 135° e 180°. Em qual passo ocorre meia-volta?",
+    "answer": "No quarto giro de 45°: 4 × 45° = 180°, que corresponde a meia-volta.",
     "reference": "PR.EF06MA25.s.6.76 • PR.EF06MA26.s.6.78 • PR.EF06MA27.s.6.79; BNCC Matemática; Referencial Curricular do Paraná.",
     "teacherTip": "Conecte com comandos de rotação usados em robôs ou Scratch.",
     "fixation": [
-      {"q":"O que significa “rotação” nesta aula?","a":"Transformação que gira uma figura em torno de um ponto sem alterar sua forma ou tamanho."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Robótica, navegação, engrenagens, jogos, mapas e desenho técnico."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Rotacionar muda posição ou orientação, mas preserva forma e tamanho."}
+      {
+        "q": "O que significa “rotação” nesta aula?",
+        "a": "Transformação que gira uma figura em torno de um ponto sem alterar sua forma ou tamanho."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Robótica, navegação, engrenagens, jogos, mapas e desenho técnico."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Rotacionar muda posição ou orientação, mas preserva forma e tamanho."
+      }
     ]
   },
   {
@@ -124,14 +160,23 @@
     "use": "Construções geométricas, CAD, robótica, programação gráfica e montagem.",
     "observe": "Uma sequência útil deve indicar ações e critérios de verificação, não apenas dizer 'faça dar certo'.",
     "guided": "Escreva cinco passos que outro colega poderia seguir para posicionar uma peça sem ver sua tentativa.",
-    "challenge": "Crie um algoritmo para testar sistematicamente rotações de 45° até encontrar uma orientação adequada.",
-    "answer": "Exemplo: comparar → se não encaixar, girar 45° → repetir a comparação até encontrar uma orientação adequada ou completar uma volta; então reavaliar a escolha da peça.",
+    "challenge": "Antes de mover uma peça, escreva um procedimento para testar suas orientações sem tentar ao acaso. Execute o procedimento no Tangram e anote em qual passo precisou corrigir sua estratégia.",
+    "answer": "Exemplo: observar região → escolher peça → comparar orientação → girar 45° → verificar novamente → repetir até completar uma volta; se nenhuma orientação servir, reconsiderar a peça ou a posição. A correção faz parte do algoritmo de resolução.",
     "reference": "PR.EF06MA23.s.6.95; EF06CO02 como integração interdisciplinar; Referencial Curricular do Paraná.",
     "teacherTip": "Use esta aula como ponte interdisciplinar entre Matemática e Programação, deixando claro qual habilidade pertence a cada componente.",
     "fixation": [
-      {"q":"O que significa “algoritmo geométrico” nesta aula?","a":"Sequência de instruções usada para executar uma construção, transformação ou estratégia em geometria."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Construções geométricas, CAD, robótica, programação gráfica e montagem."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Uma sequência útil deve indicar ações e critérios de verificação, não apenas dizer 'faça dar certo'."}
+      {
+        "q": "O que significa “algoritmo geométrico” nesta aula?",
+        "a": "Sequência de instruções usada para executar uma construção, transformação ou estratégia em geometria."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Construções geométricas, CAD, robótica, programação gráfica e montagem."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Uma sequência útil deve indicar ações e critérios de verificação, não apenas dizer 'faça dar certo'."
+      }
     ]
   },
   {
@@ -156,9 +201,18 @@
     "reference": "PR.EF06MA21.s.6.90 • PR.EF06MA29.s.6.96–103; BNCC Matemática; Referencial Curricular do Paraná.",
     "teacherTip": "Use tabelas de fator linear, perímetro e área para evidenciar o padrão.",
     "fixation": [
-      {"q":"O que significa “fator de escala” nesta aula?","a":"Número pelo qual as medidas lineares são multiplicadas em uma ampliação ou redução proporcional."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Mapas, plantas, maquetes, impressão 3D e projetos."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Grandezas lineares e de superfície não variam pelo mesmo fator em uma ampliação proporcional."}
+      {
+        "q": "O que significa “fator de escala” nesta aula?",
+        "a": "Número pelo qual as medidas lineares são multiplicadas em uma ampliação ou redução proporcional."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Mapas, plantas, maquetes, impressão 3D e projetos."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Grandezas lineares e de superfície não variam pelo mesmo fator em uma ampliação proporcional."
+      }
     ]
   },
   {
@@ -178,14 +232,23 @@
     "use": "Mosaicos, arte, design, mapas, programação gráfica e robótica.",
     "observe": "Uma rotação preserva a orientação da figura no sentido geométrico; a reflexão inverte essa orientação.",
     "guided": "Escolha uma peça e produza três versões: transladada, rotacionada e refletida. Compare o que muda e o que permanece.",
-    "challenge": "Quando girar e deslocar o paralelogramo não basta para obter a orientação desejada?",
-    "answer": "Quando a orientação necessária é a imagem refletida da peça; nesse caso é necessária uma reflexão.",
+    "challenge": "Use o paralelogramo. Primeiro tente obter uma orientação espelhada apenas girando e deslocando a peça. Depois use a reflexão. O que a experiência mostra sobre rotação e reflexão?",
+    "answer": "Mostra que rotação e translação preservam a orientação relativa da peça e não produzem sua imagem espelhada. Para obter a orientação refletida do paralelogramo é necessária uma reflexão.",
     "reference": "PR.EF07MA20.s.7.22–25 • PR.EF07MA21.a.7.26; BNCC Matemática; Referencial Curricular do Paraná.",
     "teacherTip": "Explore espelho físico ou papel transparente para tornar a reflexão concreta.",
     "fixation": [
-      {"q":"O que significa “transformação geométrica” nesta aula?","a":"Operação que altera a posição ou a orientação de uma figura segundo uma regra."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Mosaicos, arte, design, mapas, programação gráfica e robótica."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Rotação e reflexão são transformações diferentes: a reflexão inverte a orientação da figura."}
+      {
+        "q": "O que significa “transformação geométrica” nesta aula?",
+        "a": "Operação que altera a posição ou a orientação de uma figura segundo uma regra."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Mosaicos, arte, design, mapas, programação gráfica e robótica."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Rotação e reflexão são transformações diferentes: a reflexão inverte a orientação da figura."
+      }
     ]
   },
   {
@@ -205,14 +268,23 @@
     "use": "Processos, programação, planejamento, matemática e engenharia.",
     "observe": "Fluxograma não é desenho decorativo: símbolos, setas e decisões devem representar uma sequência lógica.",
     "guided": "Crie um fluxograma para decidir se deve manter ou desfazer uma tentativa no Tangram.",
-    "challenge": "Qual pergunta de decisão pode ajudar a evitar que uma peça correta localmente bloqueie a solução global?",
-    "answer": "Exemplo: 'A peça encaixa sem impedir o preenchimento das regiões restantes?'. Se não, testar outra posição.",
+    "challenge": "Durante um desafio, escolha uma decisão real que você tomou e escreva-a no formato: PERGUNTA → SIM: ação / NÃO: ação. A decisão deve ajudar a evitar uma solução apenas local que bloqueie o restante da figura.",
+    "answer": "Exemplo: 'A peça preenche a região sem bloquear as regiões restantes?' → SIM: manter e continuar / NÃO: reposicionar ou testar outra peça.",
     "reference": "PR.EF07MA07.s.7.39 • PR.EF07MA26.s.7.67; integração com Pensamento Computacional; Referencial Curricular do Paraná.",
     "teacherTip": "Compare fluxogramas de estratégias diferentes para valorizar múltiplas soluções.",
     "fixation": [
-      {"q":"O que significa “fluxograma” nesta aula?","a":"Representação gráfica de um processo com ações, decisões e caminhos possíveis."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Processos, programação, planejamento, matemática e engenharia."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Fluxograma deve representar uma sequência lógica com ações, decisões e caminhos, e não apenas organizar desenhos."}
+      {
+        "q": "O que significa “fluxograma” nesta aula?",
+        "a": "Representação gráfica de um processo com ações, decisões e caminhos possíveis."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Processos, programação, planejamento, matemática e engenharia."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Fluxograma deve representar uma sequência lógica com ações, decisões e caminhos, e não apenas organizar desenhos."
+      }
     ]
   },
   {
@@ -237,9 +309,18 @@
     "reference": "PR.EF07MA24.s.7.60 • PR.EF07MA25.s.7.61; BNCC Matemática; Referencial Curricular do Paraná.",
     "teacherTip": "Relacione propriedades com construções físicas e discuta a rigidez estrutural dos triângulos como aplicação.",
     "fixation": [
-      {"q":"O que significa “triângulo retângulo isósceles” nesta aula?","a":"Triângulo com um ângulo reto e dois lados de mesma medida; por isso, os dois ângulos agudos são iguais."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Estruturas, telhados, treliças, desenho técnico e geometria."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"A soma dos ângulos internos é 180°, mas as medidas individuais dependem das propriedades do triângulo."}
+      {
+        "q": "O que significa “triângulo retângulo isósceles” nesta aula?",
+        "a": "Triângulo com um ângulo reto e dois lados de mesma medida; por isso, os dois ângulos agudos são iguais."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Estruturas, telhados, treliças, desenho técnico e geometria."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "A soma dos ângulos internos é 180°, mas as medidas individuais dependem das propriedades do triângulo."
+      }
     ]
   },
   {
@@ -259,14 +340,23 @@
     "use": "Animação, computação gráfica, CAD, jogos e robótica.",
     "observe": "Em composições, é preciso indicar também o centro de rotação e o eixo de reflexão quando esses elementos forem relevantes.",
     "guided": "Escolha uma peça e aplique duas transformações em ordens diferentes, mantendo explícito o centro de rotação. Compare as posições finais.",
-    "challenge": "Dê um exemplo de duas transformações que possam mudar posição ou orientação sem alterar tamanho e forma.",
-    "answer": "Translação e rotação são exemplos de isometrias: podem mudar a posição ou a orientação e preservam distâncias e ângulos.",
+    "challenge": "Escolha uma peça e imagine um ponto fixo fora dela. Compare: A) girar 90° em torno desse ponto e depois transladar; B) transladar primeiro e depois girar 90° em torno do mesmo ponto. A posição final precisa ser igual? Explique.",
+    "answer": "Não. Em geral, a composição depende da ordem. Como a rotação é feita em torno de um ponto fixo, transladar antes altera a posição que será girada e pode produzir outro resultado final.",
     "reference": "PR.EF08MA18.s.8.55; BNCC Matemática; Referencial Curricular do Paraná.",
     "teacherTip": "Use comandos de transformação como sequência para integração com Computação, explicitando centros e eixos quando necessário.",
     "fixation": [
-      {"q":"O que significa “composição de transformações” nesta aula?","a":"Aplicação sucessiva de duas ou mais transformações geométricas a uma figura."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Animação, computação gráfica, CAD, jogos e robótica."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"A ordem pode alterar o resultado; em rotações e reflexões, centro e eixo também precisam estar definidos."}
+      {
+        "q": "O que significa “composição de transformações” nesta aula?",
+        "a": "Aplicação sucessiva de duas ou mais transformações geométricas a uma figura."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Animação, computação gráfica, CAD, jogos e robótica."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "A ordem pode alterar o resultado; em rotações e reflexões, centro e eixo também precisam estar definidos."
+      }
     ]
   },
   {
@@ -291,9 +381,18 @@
     "reference": "PR.EF08MA10.s.8.25 • PR.EF08MA11.s.8.28; EF08CO01 como ponte interdisciplinar entre conceitos distintos; Referencial Curricular do Paraná.",
     "teacherTip": "Diferencie explicitamente recorrência matemática, iteração e recursão de funções para evitar equivalências indevidas.",
     "fixation": [
-      {"q":"O que significa “sequência recursiva” nesta aula?","a":"Sequência em que um termo é definido a partir de um ou mais termos anteriores, juntamente com valores iniciais."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Sequências, padrões, crescimento, algoritmos, fractais, música e programação."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Recorrência matemática e recursão de funções em programação se relacionam, mas não são o mesmo conceito."}
+      {
+        "q": "O que significa “sequência recursiva” nesta aula?",
+        "a": "Sequência em que um termo é definido a partir de um ou mais termos anteriores, juntamente com valores iniciais."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Sequências, padrões, crescimento, algoritmos, fractais, música e programação."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Recorrência matemática e recursão de funções em programação se relacionam, mas não são o mesmo conceito."
+      }
     ]
   },
   {
@@ -313,14 +412,23 @@
     "use": "Desenho técnico, fabricação, padrões, engenharia e computação gráfica.",
     "observe": "Figuras semelhantes podem ter tamanhos diferentes; figuras congruentes têm as mesmas medidas correspondentes.",
     "guided": "Faça uma cópia de uma peça por contorno, gire ou reflita a cópia e compare medidas correspondentes.",
-    "challenge": "Uma reflexão faz a figura deixar de ser congruente à original?",
-    "answer": "Não. A reflexão é uma isometria: preserva comprimentos e ângulos, portanto a figura refletida permanece congruente à original.",
+    "challenge": "Gire, desloque e, quando possível, reflita uma peça. Compare antes e depois: quais medidas permanecem iguais? O que pode mudar?",
+    "answer": "Comprimentos, distâncias internas e ângulos permanecem iguais, portanto as figuras são congruentes. Posição e orientação podem mudar; na reflexão, muda também a orientação no sentido de espelhamento.",
     "reference": "PR.EF08MA14.s.8.52 • PR.EF08MA18.s.8.55; BNCC Matemática; Referencial Curricular do Paraná.",
     "teacherTip": "Conecte congruência com propriedades e isometrias. Não use PR.EF08MA16.s.8.51 como referência para congruência, pois esse objetivo trata da construção de hexágono regular.",
     "fixation": [
-      {"q":"O que significa “congruência” nesta aula?","a":"Relação entre figuras com as mesmas medidas correspondentes, que podem coincidir por movimentos rígidos, admitindo reflexão quando necessário."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Desenho técnico, fabricação, padrões, engenharia e computação gráfica."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Semelhança pode envolver tamanhos diferentes; congruência exige igualdade das medidas correspondentes."}
+      {
+        "q": "O que significa “congruência” nesta aula?",
+        "a": "Relação entre figuras com as mesmas medidas correspondentes, que podem coincidir por movimentos rígidos, admitindo reflexão quando necessário."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Desenho técnico, fabricação, padrões, engenharia e computação gráfica."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Semelhança pode envolver tamanhos diferentes; congruência exige igualdade das medidas correspondentes."
+      }
     ]
   },
   {
@@ -345,9 +453,18 @@
     "reference": "PR.EF09MA12.s.9.37 • PR.EF09MA12.d.9.38; BNCC Matemática; Referencial Curricular do Paraná.",
     "teacherTip": "Use razão de semelhança explicitamente para evitar compreensão apenas visual.",
     "fixation": [
-      {"q":"O que significa “semelhança” nesta aula?","a":"Relação entre figuras com ângulos correspondentes congruentes e lados correspondentes proporcionais."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Fotografia, mapas, escalas, modelos, arquitetura e visão computacional."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Dizer que duas figuras 'parecem iguais' não basta: é preciso analisar medidas e correspondências geométricas."}
+      {
+        "q": "O que significa “semelhança” nesta aula?",
+        "a": "Relação entre figuras com ângulos correspondentes congruentes e lados correspondentes proporcionais."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Fotografia, mapas, escalas, modelos, arquitetura e visão computacional."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Dizer que duas figuras 'parecem iguais' não basta: é preciso analisar medidas e correspondências geométricas."
+      }
     ]
   },
   {
@@ -367,14 +484,23 @@
     "use": "Construção, diagonais, navegação, engenharia, computação gráfica e cálculo de distâncias.",
     "observe": "O Teorema de Pitágoras, nessa forma, aplica-se a triângulos retângulos; é preciso identificar corretamente a hipotenusa, lado oposto ao ângulo reto.",
     "guided": "Calcule a hipotenusa de um triângulo retângulo com catetos 3 e 4 e compare com o caso 1 e 1 do Tangram.",
-    "challenge": "Se os catetos medem 1 e 1, quanto mede a hipotenusa?",
-    "answer": "1² + 1² = c² → 2 = c² → c = √2 ≈ 1,41.",
+    "challenge": "Considere um triângulo pequeno do Tangram com catetos de 1 unidade. Antes de calcular, estime se a hipotenusa é menor ou maior que 2. Depois use Pitágoras e compare a estimativa.",
+    "answer": "A hipotenusa é √2 ≈ 1,41, portanto é maior que 1 e menor que 2. Pelo Teorema de Pitágoras: 1² + 1² = c², então c = √2.",
     "reference": "PR.EF09MA13.s.9.48 • PR.EF09MA13.d.9.49–51; BNCC Matemática; Referencial Curricular do Paraná.",
     "teacherTip": "Use representação geométrica e cálculo, não apenas memorização da fórmula.",
     "fixation": [
-      {"q":"O que significa “Teorema de Pitágoras” nesta aula?","a":"Em um triângulo retângulo, o quadrado da medida da hipotenusa é igual à soma dos quadrados das medidas dos catetos."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Construção, diagonais, navegação, engenharia, computação gráfica e cálculo de distâncias."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"A hipotenusa é o lado oposto ao ângulo reto, e o teorema nessa forma aplica-se a triângulos retângulos."}
+      {
+        "q": "O que significa “Teorema de Pitágoras” nesta aula?",
+        "a": "Em um triângulo retângulo, o quadrado da medida da hipotenusa é igual à soma dos quadrados das medidas dos catetos."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Construção, diagonais, navegação, engenharia, computação gráfica e cálculo de distâncias."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "A hipotenusa é o lado oposto ao ângulo reto, e o teorema nessa forma aplica-se a triângulos retângulos."
+      }
     ]
   },
   {
@@ -399,9 +525,18 @@
     "reference": "PR.EF09MA08.s.9.42; EF09CO02 como integração interdisciplinar; Referencial Curricular do Paraná.",
     "teacherTip": "A habilidade matemática central aqui é proporcionalidade/escala. A descrição em passos é uma integração com Computação, não substitui a habilidade de Matemática.",
     "fixation": [
-      {"q":"O que significa “procedimento algorítmico” nesta aula?","a":"Sequência ordenada de passos e verificações usada para executar de modo reprodutível uma construção ou transformação."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"CAD, arquitetura, mapas, modelagem, fabricação digital e impressão."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Em uma mudança de escala proporcional, todas as medidas lineares correspondentes precisam ser multiplicadas pelo mesmo fator."}
+      {
+        "q": "O que significa “procedimento algorítmico” nesta aula?",
+        "a": "Sequência ordenada de passos e verificações usada para executar de modo reprodutível uma construção ou transformação."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "CAD, arquitetura, mapas, modelagem, fabricação digital e impressão."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Em uma mudança de escala proporcional, todas as medidas lineares correspondentes precisam ser multiplicadas pelo mesmo fator."
+      }
     ]
   }
 ]
