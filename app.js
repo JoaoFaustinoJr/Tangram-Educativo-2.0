@@ -164,4 +164,17 @@ document.addEventListener('click',function(e){
  else if(id==='next'||txt.toLowerCase().includes('verificar'))t2event('check_answer');
  else if(act)t2event('ui_action',{action:String(act)});
 });
+
+// v2.0.90 - Conforto e acessibilidade
+const comfortKey='tangram2Comfort';
+function comfortRead(){try{return JSON.parse(localStorage.getItem(comfortKey)||'{}')}catch(e){return {}}}
+function comfortApply(v){['large','contrast','motion','calm'].forEach(k=>document.body.classList.toggle('comfort-'+k,!!v[k]));document.querySelectorAll('[data-comfort]').forEach(x=>x.checked=!!v[x.dataset.comfort]);}
+function comfortOpen(){comfortApply(comfortRead());const s=document.querySelector('#comfort-sheet');if(s)s.hidden=false;document.querySelector('#app-menu')?.classList.remove('open');t2event('comfort_open');}
+function comfortClose(){const s=document.querySelector('#comfort-sheet');if(s)s.hidden=true;}
+comfortApply(comfortRead());
+document.querySelector('[data-menu="comfort"]')?.addEventListener('click',comfortOpen);
+document.querySelector('#comfort-close')?.addEventListener('click',comfortClose);
+document.querySelector('#comfort-sheet')?.addEventListener('click',e=>{if(e.target.id==='comfort-sheet')comfortClose()});
+document.querySelectorAll('[data-comfort]').forEach(x=>x.addEventListener('change',()=>{const v=comfortRead();v[x.dataset.comfort]=x.checked;localStorage.setItem(comfortKey,JSON.stringify(v));comfortApply(v);t2event('comfort_change',{setting:x.dataset.comfort,enabled:x.checked})}));
+document.querySelector('#comfort-reset')?.addEventListener('click',()=>{localStorage.removeItem(comfortKey);comfortApply({});t2event('comfort_reset')});
 })();
