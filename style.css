@@ -295,3 +295,13 @@ header>div:first-child,header>.menu{position:relative;z-index:2}
 
 /* v2.0.102 — áudio pedagógico */
 .audio-card small{font-weight:500}.lesson-audio button:first-child{box-shadow:inset 0 0 0 1px #37dfff12}
+
+/* v2.0.103 — menu por intenção: ação, pessoa, preferências e aplicativo */
+.app-menu{gap:8px!important;padding:12px!important;max-height:min(82vh,720px)!important;overflow:auto!important}
+.menu-group{display:grid;gap:5px;padding:3px 0 8px;border-bottom:1px solid #55ddff18}
+.menu-group:last-child{border-bottom:0;padding-bottom:0}
+.menu-group>small{padding:3px 9px 1px;color:#66dff3;font-size:8px;font-weight:900;letter-spacing:.14em;opacity:.78}
+.app-menu .menu-group button{min-height:44px!important;padding:10px 12px!important;border-radius:11px!important;text-align:left!important;font-size:13px!important}
+.menu-group:first-child button:first-of-type{border-color:#55e5c54a!important;background:#0c4b4b!important}
+.menu-group-utility button{min-height:39px!important;font-size:11px!important;color:#b9d1db!important;background:#082d40!important}
+@media(max-width:520px){.app-menu{top:78px!important;bottom:12px!important;max-height:none!important;width:min(62vw,310px)!important}.menu-group{gap:4px;padding-bottom:7px}.app-menu .menu-group button{min-height:41px!important;padding:8px 11px!important;font-size:12px!important}}
