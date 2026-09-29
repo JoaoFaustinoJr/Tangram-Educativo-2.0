@@ -21,9 +21,18 @@
     "reference": "EF05CO04; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Priorize blocos, setas e simulações corporais antes de código textual.",
     "fixation": [
-      {"q":"O que significa “repetição” nesta aula?","a":"Estrutura que executa uma ou mais instruções várias vezes segundo uma quantidade ou condição."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Jogos, animações, robôs, música, rotinas e desenhos geométricos."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Repetir não significa repetir para sempre: é preciso saber quantas vezes ou quando parar."}
+      {
+        "q": "O que significa “repetição” nesta aula?",
+        "a": "Estrutura que executa uma ou mais instruções várias vezes segundo uma quantidade ou condição."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Jogos, animações, robôs, música, rotinas e desenhos geométricos."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Repetir não significa repetir para sempre: é preciso saber quantas vezes ou quando parar."
+      }
     ]
   },
   {
@@ -48,9 +57,18 @@
     "reference": "EF05CO03 e EF05CO04; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Use situações cotidianas antes de formalizar a lógica em blocos.",
     "fixation": [
-      {"q":"O que significa “seleção condicional” nesta aula?","a":"Estrutura que escolhe qual ação executar conforme o resultado de uma condição."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Controle de acesso, sensores, jogos, formulários, robôs e automação."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Uma condição deve poder ser avaliada como verdadeira ou falsa no momento da decisão."}
+      {
+        "q": "O que significa “seleção condicional” nesta aula?",
+        "a": "Estrutura que escolhe qual ação executar conforme o resultado de uma condição."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Controle de acesso, sensores, jogos, formulários, robôs e automação."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Uma condição deve poder ser avaliada como verdadeira ou falsa no momento da decisão."
+      }
     ]
   },
   {
@@ -75,9 +93,18 @@
     "reference": "EF05CO01; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Trabalhe primeiro com cartões físicos em fila para tornar inserção e remoção visíveis.",
     "fixation": [
-      {"q":"O que significa “lista” nesta aula?","a":"Estrutura que organiza vários itens em uma sequência e permite operações como inserir, remover, localizar ou alterar."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Playlists, filas, carrinhos de compras, tarefas, pontuações e jogos."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"A ordem pode ser importante. Alterar a posição dos itens pode mudar o significado ou o resultado."}
+      {
+        "q": "O que significa “lista” nesta aula?",
+        "a": "Estrutura que organiza vários itens em uma sequência e permite operações como inserir, remover, localizar ou alterar."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Playlists, filas, carrinhos de compras, tarefas, pontuações e jogos."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "A ordem pode ser importante. Alterar a posição dos itens pode mudar o significado ou o resultado."
+      }
     ]
   },
   {
@@ -102,9 +129,18 @@
     "reference": "EF06CO01; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Use exemplos próximos do app antes de introduzir sintaxe específica de Python.",
     "fixation": [
-      {"q":"O que significa “variável” nesta aula?","a":"Nome associado a um valor que pode ser lido e, em muitos programas, alterado durante a execução."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Cadastros, sensores, jogos, planilhas, cálculos e sistemas de controle."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"O tipo de uma variável ou dado depende das regras da linguagem; não é correto afirmar que ele depende apenas do valor atual."}
+      {
+        "q": "O que significa “variável” nesta aula?",
+        "a": "Nome associado a um valor que pode ser lido e, em muitos programas, alterado durante a execução."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Cadastros, sensores, jogos, planilhas, cálculos e sistemas de controle."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "O tipo de uma variável ou dado depende das regras da linguagem; não é correto afirmar que ele depende apenas do valor atual."
+      }
     ]
   },
   {
@@ -129,9 +165,18 @@
     "reference": "EF06CO02; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Use blocos e pseudocódigo lado a lado para facilitar a transição para código.",
     "fixation": [
-      {"q":"O que significa “estrutura de controle” nesta aula?","a":"Construção que determina a ordem em que instruções são executadas."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Animações, jogos, cálculo, robótica e automação."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"A mesma lógica pode ser representada em Scratch ou Python; a sintaxe muda, a estrutura do algoritmo permanece."}
+      {
+        "q": "O que significa “estrutura de controle” nesta aula?",
+        "a": "Construção que determina a ordem em que instruções são executadas."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Animações, jogos, cálculo, robótica e automação."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "A mesma lógica pode ser representada em Scratch ou Python; a sintaxe muda, a estrutura do algoritmo permanece."
+      }
     ]
   },
   {
@@ -156,9 +201,18 @@
     "reference": "EF06CO03; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Peça sempre o algoritmo antes do código para separar solução de sintaxe. A decomposição (EF06CO04) pode ser trabalhada em projetos mais amplos, mas não é o foco central desta aula.",
     "fixation": [
-      {"q":"O que significa “implementação” nesta aula?","a":"Transformação de uma solução planejada em um programa executável numa linguagem de programação."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Aplicativos, jogos, scripts, robótica, análise de dados e automação."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Traduzir linha por linha o código para português não é explicar a solução; precisamos descrever o raciocínio em nível mais alto."}
+      {
+        "q": "O que significa “implementação” nesta aula?",
+        "a": "Transformação de uma solução planejada em um programa executável numa linguagem de programação."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Aplicativos, jogos, scripts, robótica, análise de dados e automação."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Traduzir linha por linha o código para português não é explicar a solução; precisamos descrever o raciocínio em nível mais alto."
+      }
     ]
   },
   {
@@ -183,9 +237,18 @@
     "reference": "EF07CO01; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Use tabelas e fichas físicas antes de migrar para estruturas em código.",
     "fixation": [
-      {"q":"O que significa “registro e vetor” nesta aula?","a":"Registro agrupa atributos diferentes de um objeto; vetor organiza vários valores em posições de uma sequência."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Cadastros, jogos, sensores, tabelas, pesquisas e sistemas escolares."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Registro e vetor resolvem problemas diferentes: um agrupa características; o outro agrupa elementos de uma coleção ordenada."}
+      {
+        "q": "O que significa “registro e vetor” nesta aula?",
+        "a": "Registro agrupa atributos diferentes de um objeto; vetor organiza vários valores em posições de uma sequência."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Cadastros, jogos, sensores, tabelas, pesquisas e sistemas escolares."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Registro e vetor resolvem problemas diferentes: um agrupa características; o outro agrupa elementos de uma coleção ordenada."
+      }
     ]
   },
   {
@@ -210,9 +273,18 @@
     "reference": "EF07CO02; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Introduza casos de borda e incentive os alunos a explicar por que escolheram cada teste.",
     "fixation": [
-      {"q":"O que significa “teste de programa” nesta aula?","a":"Execução planejada com entradas conhecidas para comparar o resultado obtido com o resultado esperado."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Software, robótica, planilhas, formulários e qualquer sistema que precise ser confiável."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Um programa funcionar uma vez não prova que funciona para todos os casos."}
+      {
+        "q": "O que significa “teste de programa” nesta aula?",
+        "a": "Execução planejada com entradas conhecidas para comparar o resultado obtido com o resultado esperado."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Software, robótica, planilhas, formulários e qualquer sistema que precise ser confiável."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Um programa funcionar uma vez não prova que funciona para todos os casos."
+      }
     ]
   },
   {
@@ -237,9 +309,18 @@
     "reference": "EF07CO03 e EF07CO05; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Use projetos curtos em dupla ou trio e peça documentação das interfaces entre módulos.",
     "fixation": [
-      {"q":"O que significa “módulo” nesta aula?","a":"Parte de um programa com responsabilidade definida que pode ser desenvolvida, testada e reutilizada."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Apps, jogos, sistemas web, robótica e projetos maker."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Módulos precisam ter entradas e saídas claras; dividir o código sem definir responsabilidades pode aumentar a confusão."}
+      {
+        "q": "O que significa “módulo” nesta aula?",
+        "a": "Parte de um programa com responsabilidade definida que pode ser desenvolvida, testada e reutilizada."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Apps, jogos, sistemas web, robótica e projetos maker."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Módulos precisam ter entradas e saídas claras; dividir o código sem definir responsabilidades pode aumentar a confusão."
+      }
     ]
   },
   {
@@ -264,9 +345,18 @@
     "reference": "EF08CO02; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Use dados reais ou simulados da turma para tornar as operações significativas.",
     "fixation": [
-      {"q":"O que significa “lista em programação” nesta aula?","a":"Estrutura de dados que organiza uma coleção de elementos em sequência e permite operações sobre essa coleção."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Pontuações, sensores, registros de temperatura, catálogo, dados de pesquisa e jogos."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Uma lista é adequada quando o problema envolve uma coleção de elementos; nem todo dado precisa virar lista."}
+      {
+        "q": "O que significa “lista em programação” nesta aula?",
+        "a": "Estrutura de dados que organiza uma coleção de elementos em sequência e permite operações sobre essa coleção."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Pontuações, sensores, registros de temperatura, catálogo, dados de pesquisa e jogos."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Uma lista é adequada quando o problema envolve uma coleção de elementos; nem todo dado precisa virar lista."
+      }
     ]
   },
   {
@@ -291,9 +381,18 @@
     "reference": "EF08CO03; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Simulações com cartas permitem comparar estratégias antes de implementar.",
     "fixation": [
-      {"q":"O que significa “algoritmo de busca/ordenação” nesta aula?","a":"Procedimento sistemático para localizar elementos ou reorganizar uma coleção segundo uma regra."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Pesquisa, catálogos, bancos de dados, rankings, planilhas e sistemas de arquivos."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Busca binária só funciona corretamente quando os dados estão ordenados."}
+      {
+        "q": "O que significa “algoritmo de busca/ordenação” nesta aula?",
+        "a": "Procedimento sistemático para localizar elementos ou reorganizar uma coleção segundo uma regra."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Pesquisa, catálogos, bancos de dados, rankings, planilhas e sistemas de arquivos."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Busca binária só funciona corretamente quando os dados estão ordenados."
+      }
     ]
   },
   {
@@ -318,9 +417,54 @@
     "reference": "EF08CO01; EF08CO04 como integração em projetos; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Use rastreamento manual das chamadas antes de executar o programa.",
     "fixation": [
-      {"q":"O que significa “programa recursivo” nesta aula?","a":"Programa em que uma função chama a si mesma para resolver uma versão menor do problema."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Árvores, fractais, exploração de estruturas, divisão de problemas e algoritmos."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Sem caso-base ou aproximação do caso-base, a recursão pode não terminar e consumir recursos até provocar erro de execução."}
+      {
+        "q": "O que significa “programa recursivo” nesta aula?",
+        "a": "Programa em que uma função chama a si mesma para resolver uma versão menor do problema."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Árvores, fractais, exploração de estruturas, divisão de problemas e algoritmos."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Sem caso-base ou aproximação do caso-base, a recursão pode não terminar e consumir recursos até provocar erro de execução."
+      }
+    ]
+  },
+  {
+    "year": 8,
+    "section": "prog",
+    "id": "pr8-python-colab-fundamentos",
+    "topic": "Python no Colab: dados, operações e problemas",
+    "icon": "🐍",
+    "axis": "Programação",
+    "objective": "Usar comandos básicos de Python para representar dados, realizar cálculos e decompor pequenos problemas em etapas.",
+    "keyTerm": "tipo de dado",
+    "keyDefinition": "Forma como o Python interpreta um valor, por exemplo inteiro (int), decimal (float) ou texto (str).",
+    "concept": "Em Python, valores têm tipos. int representa números inteiros, float representa números com parte decimal e str representa textos. type() ajuda a identificar o tipo e print() mostra resultados. Operadores como +, -, *, /, // e % permitem construir cálculos e resolver problemas passo a passo.",
+    "example": "balas = 13; pessoas = 4; print(balas // pessoas) mostra quantas balas inteiras cada pessoa recebe; print(balas % pessoas) mostra quantas sobram.",
+    "formula": "problema → dados → operação → resultado → teste",
+    "representation": "type(10) → int • type(2.5) → float • type('R.A.I.') → str • 13 // 4 → 3 • 13 % 4 → 1",
+    "use": "Google Colab, cálculos, jogos, automação, análise de dados e projetos de robótica.",
+    "observe": "Antes de programar, interprete o problema e identifique quais dados entram, qual operação é necessária e qual resultado deve sair. A IA pode ajudar a explicar, mas o estudante precisa compreender e testar o código.",
+    "guided": "No Colab, crie três variáveis: idade = 13, altura = 1.62 e nome = 'Ana'. Use type() em cada uma e depois print() para exibir uma frase com os valores.",
+    "challenge": "Há 13 balas para dividir igualmente entre 4 estudantes. Escreva duas expressões em Python: uma para descobrir quantas balas cada estudante recebe e outra para descobrir quantas sobram.",
+    "answer": "13 // 4 resulta em 3 balas para cada estudante; 13 % 4 resulta em 1 bala restante.",
+    "reference": "Aula de Programação — 8º ano; fundamentos de Python e resolução de problemas.",
+    "teacherTip": "Priorize interpretação e decomposição antes da sintaxe. Peça aos estudantes que prevejam o resultado antes de executar cada célula.",
+    "fixation": [
+      {
+        "q": "Qual comando mostra o tipo de um valor?",
+        "a": "type()."
+      },
+      {
+        "q": "Qual a diferença entre // e %?",
+        "a": "// retorna o quociente inteiro da divisão; % retorna o resto."
+      },
+      {
+        "q": "Por que decompor o problema antes de codificar?",
+        "a": "Para identificar dados, operações e etapas, reduzindo erros e tornando o algoritmo compreensível."
+      }
     ]
   },
   {
@@ -345,9 +489,18 @@
     "reference": "EF09CO01; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Comece com modelos desenhados e só depois represente a estrutura em código.",
     "fixation": [
-      {"q":"O que significa “programação com grafos/árvores” nesta aula?","a":"Uso de estruturas de vértices, arestas ou hierarquias para representar dados e aplicar algoritmos de percurso e busca."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"GPS, redes sociais, internet, sistemas de arquivos, organogramas e jogos."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"A escolha da estrutura deve refletir a natureza das relações; hierarquia e rede geral não são a mesma coisa."}
+      {
+        "q": "O que significa “programação com grafos/árvores” nesta aula?",
+        "a": "Uso de estruturas de vértices, arestas ou hierarquias para representar dados e aplicar algoritmos de percurso e busca."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "GPS, redes sociais, internet, sistemas de arquivos, organogramas e jogos."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "A escolha da estrutura deve refletir a natureza das relações; hierarquia e rede geral não são a mesma coisa."
+      }
     ]
   },
   {
@@ -372,9 +525,18 @@
     "reference": "EF09CO02; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Avalie processo e justificativas, não apenas o funcionamento final.",
     "fixation": [
-      {"q":"O que significa “projeto computacional” nesta aula?","a":"Processo de definir problema, planejar, implementar, testar, documentar e revisar uma solução computacional."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Robótica, automação, aplicativos, jogos, ciência de dados e projetos escolares."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Um projeto não é apenas o código final; decisões, testes e documentação também fazem parte do produto."}
+      {
+        "q": "O que significa “projeto computacional” nesta aula?",
+        "a": "Processo de definir problema, planejar, implementar, testar, documentar e revisar uma solução computacional."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Robótica, automação, aplicativos, jogos, ciência de dados e projetos escolares."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Um projeto não é apenas o código final; decisões, testes e documentação também fazem parte do produto."
+      }
     ]
   },
   {
@@ -399,9 +561,18 @@
     "reference": "EF09CO03; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Excelente ponto de integração com Arduino, Scratch, Micro:bit ou simulação.",
     "fixation": [
-      {"q":"O que significa “programação orientada a eventos” nesta aula?","a":"Modelo em que trechos do programa são executados em resposta a acontecimentos como cliques, teclas, mensagens ou sinais de sensores."},
-      {"q":"Onde esse conceito pode aparecer fora desta tela?","a":"Interfaces, jogos, IoT, aplicativos móveis, automação e robótica."},
-      {"q":"Qual ponto merece atenção para não confundir o conceito?","a":"Programação orientada a eventos exige pensar em possíveis estados e transições, não apenas na ordem fixa de comandos."}
+      {
+        "q": "O que significa “programação orientada a eventos” nesta aula?",
+        "a": "Modelo em que trechos do programa são executados em resposta a acontecimentos como cliques, teclas, mensagens ou sinais de sensores."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Interfaces, jogos, IoT, aplicativos móveis, automação e robótica."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Programação orientada a eventos exige pensar em possíveis estados e transições, não apenas na ordem fixa de comandos."
+      }
     ]
   }
 ]
