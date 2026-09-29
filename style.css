@@ -248,3 +248,16 @@ header>div:first-child,header>.menu{position:relative;z-index:2}
 .lesson-response{width:100%;box-sizing:border-box;margin:9px 0 7px;padding:10px 11px;border:1px solid #42dfff33;border-radius:11px;background:#061722;color:#eefbff;font:inherit;resize:vertical}.lesson-response:focus{outline:1px solid #4de7ff}.lesson-response-actions{display:flex;gap:7px;flex-wrap:wrap}.teacher-lesson-log{margin-bottom:12px}.teacher-lesson-log>div{padding:9px 4px;border-top:1px solid #ffffff0c}.teacher-lesson-log p{margin:4px 0;color:#d8e8ef;font-size:11px}.teacher-lesson-log small{color:#7f98a6;font-size:9px}footer{display:grid!important;gap:3px;text-align:center}footer small{font-size:9px;letter-spacing:.06em;opacity:.55}
 
 /* v2.0.95 — assinatura padronizada */
+
+/* v2.0.96 — montagem correta: quadrado Tangram completo */
+.header-tangram .hp{animation-duration:11s!important;animation-timing-function:cubic-bezier(.4,0,.2,1)!important}
+@keyframes sv1{0%,4%{opacity:0;transform:translate(-32px,-20px) rotate(-35deg)}9%{opacity:1}32%,56%{opacity:1;transform:translate(58px,30px) rotate(0)}63%,100%{opacity:0;transform:translate(58px,30px)}} 
+@keyframes sv2{0%,6%{opacity:0;transform:translate(150px,-16px) rotate(125deg)}11%{opacity:1}34%,56%{opacity:1;transform:translate(100px,30px) rotate(180deg)}63%,100%{opacity:0;transform:translate(100px,30px) rotate(180deg)}}
+@keyframes sv3{0%,8%{opacity:0;transform:translate(154px,92px) rotate(205deg)}13%{opacity:1}36%,56%{opacity:1;transform:translate(100px,72px) rotate(180deg)}63%,100%{opacity:0;transform:translate(100px,72px) rotate(180deg)}}
+@keyframes sv4{0%,10%{opacity:0;transform:translate(-18px,102px) rotate(40deg)}15%{opacity:1}38%,56%{opacity:1;transform:translate(79px,72px) rotate(90deg)}63%,100%{opacity:0;transform:translate(79px,72px) rotate(90deg)}}
+@keyframes sv5{0%,12%{opacity:0;transform:translate(158px,48px) rotate(-80deg)}17%{opacity:1}40%,56%{opacity:1;transform:translate(100px,51px) rotate(270deg)}63%,100%{opacity:0;transform:translate(100px,51px) rotate(270deg)}}
+@keyframes svq{0%,14%{opacity:0;transform:translate(-8px,10px) rotate(45deg)}19%{opacity:1}42%,56%{opacity:1;transform:translate(79px,51px) rotate(45deg)}63%,100%{opacity:0;transform:translate(79px,51px) rotate(45deg)}}
+@keyframes svp{0%,16%{opacity:0;transform:translate(132px,104px) rotate(-18deg)}21%{opacity:1}44%,56%{opacity:1;transform:translate(58px,72px) rotate(0)}63%,100%{opacity:0;transform:translate(58px,72px)}}
+.rai-x1-img{animation:raiX1Header96 11s ease-in-out infinite!important}
+@keyframes raiX1Header96{0%,61%{opacity:0;transform:translateY(7px) scale(.82)}68%,91%{opacity:.96;transform:translateY(-2px) scale(1)}80%{transform:translateY(-8px) scale(1.025)}100%{opacity:0;transform:translateY(-4px) scale(.94)}}
+@media(prefers-reduced-motion:reduce){.header-tangram{display:block!important}.header-tangram .hp{animation:none!important;opacity:.9!important}.hp1{transform:translate(58px,30px)}.hp2{transform:translate(100px,30px) rotate(180deg)}.hp3{transform:translate(100px,72px) rotate(180deg)}.hp4{transform:translate(79px,72px) rotate(90deg)}.hp5{transform:translate(100px,51px) rotate(270deg)}.hpq{transform:translate(79px,51px) rotate(45deg)}.hpp{transform:translate(58px,72px)}.rai-x1-img{opacity:0!important}}
