@@ -177,4 +177,37 @@ document.querySelector('#comfort-close')?.addEventListener('click',comfortClose)
 document.querySelector('#comfort-sheet')?.addEventListener('click',e=>{if(e.target.id==='comfort-sheet')comfortClose()});
 document.querySelectorAll('[data-comfort]').forEach(x=>x.addEventListener('change',()=>{const v=comfortRead();v[x.dataset.comfort]=x.checked;localStorage.setItem(comfortKey,JSON.stringify(v));comfortApply(v);t2event('comfort_change',{setting:x.dataset.comfort,enabled:x.checked})}));
 document.querySelector('#comfort-reset')?.addEventListener('click',()=>{localStorage.removeItem(comfortKey);comfortApply({});t2event('comfort_reset')});
+
+// v2.0.91 - R.A.I. Tutora contextual
+const raiTips={
+ observe:[
+  'Observe primeiro a silhueta inteira. Onde você reconhece ângulos de 45°, 90° ou uma linha de simetria?',
+  'Compare os espaços maiores com os dois triângulos grandes antes de posicionar as peças menores.',
+  'Procure bordas longas e cantos marcantes. Eles costumam reduzir as possibilidades de encaixe.'
+ ],
+ concept:[
+  'Aqui você trabalha composição e decomposição de figuras, congruência, rotação, reflexão, área e percepção espacial.',
+  'Girar muda a orientação, mas não a forma nem a área da peça. Espelhar muda sua orientação lateral.',
+  'As sete peças conservam suas áreas: o desafio é reorganizá-las sem sobreposição e sem deixar espaços.'
+ ],
+ strategy:[
+  'Comece pelas peças grandes e pelos extremos da figura. Depois use as menores para completar os intervalos.',
+  'Se uma peça parece quase correta, experimente girá-la antes de mover várias peças ao mesmo tempo.',
+  'Divida o problema: escolha uma região da silhueta, resolva essa parte e só então avance para a próxima.'
+ ],
+ question:[
+  'Qual parte da figura você consegue decompor em formas que já conhece?',
+  'Se você retirar mentalmente um triângulo grande, que espaço sobra para as outras peças?',
+  'Há alguma peça que só pode ocupar um dos cantos? Por quê?'
+ ]
+};
+let raiTipStep=0;
+function raiOpen(){const p=document.querySelector('#rai-tutor-panel');if(p)p.hidden=false;document.querySelector('#app-menu')?.classList.remove('open');t2event('rai_tutor_open',{level:String((typeof levelIndex==='number'?levelIndex:0)+1)});}
+function raiClose(){const p=document.querySelector('#rai-tutor-panel');if(p)p.hidden=true;}
+function raiGuide(kind){const arr=raiTips[kind]||raiTips.strategy;const msg=document.querySelector('#rai-tutor-message');const level=(typeof levelIndex==='number'?levelIndex:0)+1;let text=arr[raiTipStep++%arr.length];if(kind==='observe'&&level>5)text='Desafio '+level+': '+text+' Nos níveis avançados, compare também orientação e possíveis reflexões.';if(msg)msg.textContent=text;t2event('rai_tutor_help',{kind:kind,level:String(level)});}
+document.querySelector('#rai-tutor-fab')?.addEventListener('click',raiOpen);
+document.querySelector('[data-menu="rai"]')?.addEventListener('click',raiOpen);
+document.querySelector('#rai-tutor-close')?.addEventListener('click',raiClose);
+document.querySelector('#rai-tutor-panel')?.addEventListener('click',e=>{if(e.target.id==='rai-tutor-panel')raiClose()});
+document.querySelectorAll('[data-rai-help]').forEach(b=>b.addEventListener('click',()=>raiGuide(b.dataset.raiHelp)));
 })();
