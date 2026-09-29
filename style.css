@@ -170,3 +170,13 @@ header{position:relative}.app-menu{display:none;position:absolute;right:0;top:82
  .tools button{min-height:50px!important}
 }
 @media(prefers-reduced-motion:reduce){.tools button,.accordions details>summary,.challenge-families .family,.mosaic-list button,.other-list button,.classic-list button,#next{transition:none!important}}
+
+/* v2.0.78 — acabamento mobile: ferramentas, tabuleiro e verificar */
+@media(max-width:600px){
+ .tools{display:grid!important;grid-template-columns:1.08fr 1.22fr .88fr 1.08fr .94fr!important;gap:5px!important}
+ .tools button{width:auto!important;min-width:0!important;min-height:49px!important;padding:5px 2px!important;font-size:10px!important;border-radius:14px!important}
+ .tools button span{display:block!important;font-size:10px!important;letter-spacing:-.02em!important;white-space:nowrap!important;overflow:visible!important}
+ .workspace,.playzone{min-height:0!important}
+ #board,.board{max-height:575px!important}
+}
+#next.ready{border-color:#61ffb0!important;box-shadow:0 0 0 2px #61ffb018,0 0 22px #38f2a535,inset 0 0 18px #38f2a51b!important;background:#0b4050!important}
