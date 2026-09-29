@@ -361,3 +361,16 @@ body.comfort-motion button.ui-press::after,body.comfort-calm button.ui-press::af
 .adapted-callout{margin:12px 0 14px;padding:12px 13px;border:1px solid #57dfca70;border-radius:15px;background:linear-gradient(135deg,#073d43,#082d3b);color:#eafff9}
 .adapted-callout>b,.adapted-callout>span{display:block}.adapted-callout>b{font-size:14px}.adapted-callout>span{margin-top:3px;color:#b9d9d8;font-size:12px}.adapted-callout>div{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.adapted-callout small{padding:6px 8px;border-radius:9px;background:#061f2c;color:#cfe9e9;font-weight:700}
 @media(max-width:650px){.adapted-badge{display:block;width:max-content;margin:4px auto 0;font-size:7px}.modes .classroom small{margin-top:2px}.adapted-callout>div{display:grid;grid-template-columns:1fr;width:100%}.adapted-callout small{font-size:11px}}
+
+/* v2.0.112-lab — modos reais de acesso às aulas */
+.lesson-access-modes{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:7px!important;width:100%}
+.lesson-access-modes button{min-height:38px;padding:7px 8px;border:1px solid #2d8290;border-radius:10px;background:#061f2c;color:#d8eef0;font-size:11px;font-weight:850}
+.lesson-access-modes button.on{border-color:#69f2d3;background:#0b665f;color:#fff;box-shadow:0 0 0 1px #69f2d32b inset}
+.access-note{display:block!important;margin-top:8px;color:#9fc7cb!important;font-size:10px!important}
+.access-instruction{margin:0 0 11px;padding:11px 12px;border-radius:12px;border:1px solid #4edcc76b;background:#07333c}
+.access-instruction b{display:block;color:#e7fff9}.access-instruction p{margin:5px 0 0;color:#c4dfe1;line-height:1.45}
+#lessons-panel[data-access="tea"] .lesson-content{font-size:1.02em}
+#lessons-panel[data-access="tea"] .lesson-block,#lessons-panel[data-access="tea"] .lesson-key,#lessons-panel[data-access="tea"] .lesson-challenge{margin-block:10px!important}
+#lessons-panel[data-access="tea"] .lesson-reference{opacity:.7}
+#lessons-panel[data-access="visual"] .lesson-audio button:first-child{border-color:#6cf0d3!important;background:#0b665f!important;font-weight:900!important}
+@media(max-width:650px){.lesson-access-modes{grid-template-columns:1fr!important}.lesson-access-modes button{min-height:40px;text-align:left;padding-left:12px}.lessons-card>h3{padding-right:94px}.lessons-subtitle{padding-right:0;font-size:12px!important;line-height:1.3}}
