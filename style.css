@@ -744,3 +744,17 @@ header .header-tangram-exact:after{content:"";position:absolute;left:18%;right:1
 @keyframes tangramShadow163{0%,25%{opacity:.2;transform:scaleX(.7)}45%,68%{opacity:.7;transform:scaleX(1)}100%{opacity:.2;transform:scaleX(.7)}}
 header .rai-x1-img,header .rai-heritage,header .rai-css,header .rai-inline{display:none!important}
 @media(max-width:520px){header .rai-float.rai-x1{width:156px!important;max-width:156px!important;height:108px!important;margin-right:62px!important}header .header-tangram-exact{width:124px!important;height:92px!important;left:50%!important;top:50%!important}}
+
+/* v2.0.164 — refinamento visual mobile: respiro real entre Tangram e menu */
+@media(max-width:520px){
+  header .rai-float.rai-x1{
+    width:176px!important;max-width:176px!important;height:108px!important;
+    margin-right:78px!important;transform:none!important;
+  }
+  header .header-tangram-exact{
+    width:126px!important;height:94px!important;
+    left:42%!important;top:47%!important;
+    transform:translate(-50%,-50%)!important;
+  }
+  header .menu{right:-58px!important}
+}
