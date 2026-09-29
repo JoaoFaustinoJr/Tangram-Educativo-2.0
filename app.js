@@ -144,4 +144,24 @@ async function shareApp2(){
 document.querySelector('[data-menu="install"]')?.addEventListener('click',installApp2);
 document.querySelector('[data-menu="share"]')?.addEventListener('click',shareApp2);
 if('serviceWorker' in navigator)window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js?v=288').catch(function(){});});
+
+// v2.0.89 - telemetria pedagogica anonima
+function t2event(name,params){if(typeof window.gtag==='function')window.gtag('event',name,Object.assign({app_name:'tangram_educativo_2',app_version:'2.0.89'},params||{}));}
+t2event('app_open');
+window.addEventListener('appinstalled',function(){t2event('app_installed')});
+document.addEventListener('click',function(e){
+ const el=e.target&&e.target.closest?e.target.closest('button,a,[role="button"]'):null;if(!el)return;
+ const id=(el.id||'').toLowerCase(),act=(el.dataset&&(el.dataset.action||el.dataset.menu||el.dataset.mosaic||el.dataset.other||el.dataset.level))||'',txt=(el.textContent||'').trim().replace(/\s+/g,' ').slice(0,80);
+ if(el.closest('.x1'))t2event('x1_open');
+ else if(el.closest('.gamer')||id.includes('gamer'))t2event('gamer_action',{action:id||txt});
+ else if(el.closest('.aulas'))t2event('lessons_open');
+ else if(el.dataset&&el.dataset.level!==undefined)t2event('challenge_select',{level:String(Number(el.dataset.level)+1)});
+ else if(el.dataset&&el.dataset.mosaic)t2event('mosaic_open',{mode:el.dataset.mosaic});
+ else if(act==='install')t2event('install_prompt');
+ else if(act==='share')t2event('share');
+ else if(act==='sample')t2event('solution_sample');
+ else if(act==='hint')t2event('hint');
+ else if(id==='next'||txt.toLowerCase().includes('verificar'))t2event('check_answer');
+ else if(act)t2event('ui_action',{action:String(act)});
+});
 })();
