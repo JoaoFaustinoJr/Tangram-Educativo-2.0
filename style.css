@@ -421,3 +421,21 @@ body.comfort-motion .magnified-text{transition:none}
  #lessons-panel[data-access="visual"] .magnified-text{font-size:1.55em!important;line-height:1.68!important;padding:18px 15px!important;transform:scale(1.02)!important}
  #lesson-magnifier{width:66px;height:66px}
 }
+
+/* v2.0.116-lab — ampliação extra para baixa visão */
+#lessons-panel[data-access="visual"] .magnified-text{
+ font-size:1.75em!important;
+ line-height:1.72!important;
+ padding:22px 18px!important;
+ transform:scale(1.02)!important;
+}
+#lessons-panel[data-access="visual"] .magnified-text b,
+#lessons-panel[data-access="visual"] .magnified-text strong{font-size:1.12em!important}
+@media(max-width:650px){
+ #lessons-panel[data-access="visual"] .magnified-text{
+   font-size:1.9em!important;
+   line-height:1.65!important;
+   padding:20px 16px!important;
+   transform:none!important;
+ }
+}
