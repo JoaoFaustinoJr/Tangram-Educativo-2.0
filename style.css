@@ -819,3 +819,16 @@ header .app-menu{z-index:10060!important}
  header>.rai-float.rai-x1>.header-tangram-exact{width:102px!important;left:50%!important}
  header>.menu{width:46px!important;height:46px!important;min-width:46px!important}
 }
+
+/* v2.0.172 — Tangram animado em ângulo, preservando exatamente o centro do palco */
+header>.rai-float.rai-x1>.header-tangram-exact{
+ transform:translate(-50%,-50%) rotate(-10deg)!important;
+ transform-origin:50% 50%!important;
+}
+@media(max-width:520px){
+ header>.rai-float.rai-x1>.header-tangram-exact{
+  left:50%!important;top:50%!important;
+  transform:translate(-50%,-50%) rotate(-10deg)!important;
+  transform-origin:50% 50%!important;
+ }
+}
