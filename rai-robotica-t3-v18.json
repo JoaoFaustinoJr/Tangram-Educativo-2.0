@@ -96,6 +96,43 @@
   {
     "year": 5,
     "section": "robotics",
+    "id": "rb5-tecnologia-campo-jaboti",
+    "topic": "🌱 Tecnologia no campo: de Jaboti para o futuro",
+    "title": "Tecnologia no campo: estufas, morango, leite e agricultura",
+    "icon": "🌱",
+    "axis": "Robótica, agricultura e comunidade",
+    "objective": "Reconhecer tecnologias presentes no campo e perceber como automação, sensores, máquinas e dados também transformam pequenas cidades e propriedades rurais.",
+    "keyTerm": "agricultura de precisão",
+    "keyDefinition": "Uso de tecnologias e dados para observar o campo e tomar decisões com maior precisão.",
+    "concept": "Tecnologia no campo não significa apenas grandes máquinas. Em uma região agrícola como Jaboti, ela pode aparecer em estufas de morango, irrigação, controle de temperatura e umidade, ordenhadeiras, resfriamento do leite, tratores com GPS, monitoramento do gado e acompanhamento de culturas como soja e trigo.",
+    "example": "🍓 Estufa: sensor observa temperatura e umidade → 💧 irrigação pode ser controlada. 🐄 Leite: ordenhadeira auxilia a coleta → ❄️ resfriamento ajuda a conservar. 🚜 GPS orienta operações no campo. 📡 Sensores e comunicação podem acompanhar animais e áreas distantes.",
+    "formula": "🌱 necessidade → 📡 medir → 🧠 decidir → ⚙️ agir → 📊 acompanhar",
+    "representation": "🍓🌡️💧 estufa • 🐄🥛⚙️ ordenha • 🚜🛰️ GPS • 🐂📡 monitoramento • 🌾📊 lavoura",
+    "use": "Produção de morango e leite, criação de gado, soja, trigo, irrigação, máquinas agrícolas e monitoramento ambiental.",
+    "observe": "A tecnologia deve apoiar o produtor e responder a uma necessidade real. Nem toda tarefa precisa ser automatizada; custo, manutenção, segurança e benefício também precisam ser avaliados.",
+    "guided": "Escolha uma situação do campo próxima da realidade dos estudantes. Identifique: o que precisamos observar? qual sensor poderia medir? quem toma a decisão? que equipamento poderia agir?",
+    "challenge": "Uma estufa de morangos fica muito quente e o solo começa a secar. Como poderíamos representar um sistema tecnológico para ajudar o produtor sem retirar dele a decisão sobre o cultivo?",
+    "answer": "Por exemplo: sensores medem temperatura e umidade do solo; o sistema mostra os dados ou emite um alerta; o produtor avalia a situação e pode acionar ventilação ou irrigação. Uma automação controlada também pode ser planejada com limites definidos pelo produtor.",
+    "reference": "Contextualização didática de tecnologia agrícola para a realidade local de Jaboti/PR; integração de sensores, automação, mecanização e produção agropecuária.",
+    "teacherTip": "Comece perguntando quais tecnologias os alunos já viram em propriedades da família ou da comunidade. Valorize conhecimento local. Evite apresentar tecnologia como substituição do agricultor: destaque observação, decisão humana e resolução de problemas.",
+    "fixation": [
+      {
+        "q": "Onde a tecnologia pode aparecer numa estufa de morangos?",
+        "a": "Em sensores de temperatura e umidade, irrigação, ventilação e registro de dados."
+      },
+      {
+        "q": "Como a tecnologia participa da produção de leite?",
+        "a": "Pode auxiliar na ordenha, no resfriamento e armazenamento do leite, no monitoramento dos animais e na organização de dados."
+      },
+      {
+        "q": "Para que GPS e sensores podem ser usados no campo?",
+        "a": "Para orientar operações, localizar, medir condições, acompanhar animais ou áreas e apoiar decisões do produtor."
+      }
+    ]
+  },
+  {
+    "year": 5,
+    "section": "robotics",
     "id": "rb5-historia",
     "topic": "História da robótica: dos autômatos aos robôs",
     "title": "História da robótica: dos autômatos aos robôs",
