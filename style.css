@@ -870,3 +870,19 @@ header>.rai-float.rai-x1>.header-tangram-exact{
 #lessons-panel .tea-compact-guide>div>b{font-size:1rem!important}
 #lessons-panel .tea-compact-guide>div>small{font-size:.78rem!important}
 @media(max-width:600px){#lessons-panel .adapt-one-block>.adapt-step,#lessons-panel .tea8-focus>.tea-step{min-height:62vh;padding:18px!important}.adapt-step-head{align-items:flex-start;flex-direction:column}.adapt-step-nav{position:sticky;bottom:0;background:#073142;padding:12px 0 4px}.adapt-step-nav button{flex:1}}
+
+/* v2.0.175 — correção do fluxo adaptado TEA/visual */
+#lessons-panel .adapt-one-block>.lesson8-visual[hidden],
+#lessons-panel .adapt-one-block>.lesson-block[hidden],
+#lessons-panel .adapt-one-block>.lesson-key[hidden],
+#lessons-panel .adapt-one-block>.lesson-challenge[hidden],
+#lessons-panel .adapt-one-block>.lesson-practice[hidden],
+#lessons-panel .adapt-one-block>.code-lab[hidden],
+#lessons-panel .adapt-one-block>.maker-path[hidden],
+#lessons-panel .adapt-one-block>.lesson-maker-path[hidden],
+#lessons-panel .adapt-one-block>[data-maker-path][hidden]{display:none!important}
+#lessons-panel .adapt-one-block>.adapt-step:not([hidden]){display:block!important}
+.adapt-compact-guide{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:8px 0 14px;padding:10px 14px;border:1px solid rgba(69,235,214,.32);border-radius:14px;background:rgba(8,64,73,.72)}
+.adapt-compact-guide b{font-size:.92rem}.adapt-compact-guide span{font-size:.9rem;color:#d7f8f1}
+.tea-one-block>.adapt-step{min-height:58vh;margin:10px 0!important;padding:22px!important;scroll-margin-top:18px}
+.tea-one-block .adapt-step-nav{position:sticky;bottom:0;z-index:4;background:#073142}
