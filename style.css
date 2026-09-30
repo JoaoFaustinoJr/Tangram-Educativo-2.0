@@ -927,3 +927,6 @@ header>.rai-float.rai-x1>.header-tangram-exact{
 
 /* v2.0.188 — tecnologia no campo */
 .field-tech-grid{display:grid;grid-template-columns:repeat(5,minmax(82px,1fr));gap:8px;margin:10px 0}.field-tech-grid>span{display:grid;place-items:center;gap:3px;padding:10px 6px;border-radius:14px;background:rgba(255,255,255,.07);font-size:1.55rem;text-align:center}.field-tech-grid small{font-size:.72rem}.field-tech-grid em{font-size:.78rem;font-style:normal;opacity:.86}@media(max-width:650px){.field-tech-grid{grid-template-columns:repeat(2,1fr)}.field-tech-grid>span:last-child{grid-column:1/-1}}
+
+/* v2.0.189 — fluxo visual de automação agrícola do 6º ano */
+.field-algo-flow{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;margin:10px 0}.field-algo-flow>span{display:grid;place-items:center;min-width:72px;padding:9px 7px;border-radius:13px;background:rgba(255,255,255,.07);font-size:1.35rem}.field-algo-flow small{font-size:.7rem;margin-top:3px}.field-algo-flow em{font-style:normal;font-weight:850;opacity:.82}@media(max-width:650px){.field-algo-flow>span{min-width:61px}.field-algo-flow{gap:5px}}
