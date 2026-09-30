@@ -2,42 +2,6 @@
   {
     "year": 5,
     "section": "prog",
-    "id": "pr5-seq-rep",
-    "topic": "Sequências e repetições",
-    "icon": "🔁",
-    "axis": "Pensamento Computacional",
-    "objective": "Criar e simular algoritmos simples com sequências e repetições em linguagem oral, escrita, pictográfica ou em blocos.",
-    "keyTerm": "repetição",
-    "keyDefinition": "Estrutura que executa uma ou mais instruções várias vezes segundo uma quantidade ou condição.",
-    "concept": "Algoritmos podem ter passos executados uma única vez ou repetidos. Identificar padrões de repetição reduz a quantidade de instruções e torna a solução mais clara.",
-    "example": "Em vez de escrever 'avance' quatro vezes, podemos usar REPITA 4 VEZES → avance.",
-    "formula": "sequência + repetição = algoritmo mais compacto",
-    "representation": "REPITA 4 VEZES { avance }",
-    "use": "Jogos, animações, robôs, música, rotinas e desenhos geométricos.",
-    "observe": "Repetir não significa repetir para sempre: é preciso saber quantas vezes ou quando parar.",
-    "guided": "Monte com blocos um algoritmo que desenhe um quadrado: avance e gire 90°, repetindo quatro vezes.",
-    "challenge": "Como você programaria um robô para dar três passos, girar e depois dar mais três passos usando repetição?",
-    "answer": "Exemplo: REPITA 3 VEZES → avance; gire; REPITA 3 VEZES → avance.",
-    "reference": "EF05CO04; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
-    "teacherTip": "Priorize blocos, setas e simulações corporais antes de código textual.",
-    "fixation": [
-      {
-        "q": "O que significa “repetição” nesta aula?",
-        "a": "Estrutura que executa uma ou mais instruções várias vezes segundo uma quantidade ou condição."
-      },
-      {
-        "q": "Onde esse conceito pode aparecer fora desta tela?",
-        "a": "Jogos, animações, robôs, música, rotinas e desenhos geométricos."
-      },
-      {
-        "q": "Qual ponto merece atenção para não confundir o conceito?",
-        "a": "Repetir não significa repetir para sempre: é preciso saber quantas vezes ou quando parar."
-      }
-    ]
-  },
-  {
-    "year": 5,
-    "section": "prog",
     "id": "pr5-cond-logica",
     "topic": "Condições, E, OU e NÃO",
     "icon": "🚦",
@@ -108,38 +72,38 @@
     ]
   },
   {
-    "year": 6,
+    "year": 5,
     "section": "prog",
-    "id": "pr6-tipos",
-    "topic": "Tipos de dados e variáveis",
-    "icon": "📦",
+    "id": "pr5-seq-rep",
+    "topic": "Sequências e repetições",
+    "icon": "🔁",
     "axis": "Pensamento Computacional",
-    "objective": "Classificar informações por tipos de dados e usar variáveis para representá-las.",
-    "keyTerm": "variável",
-    "keyDefinition": "Nome associado a um valor que pode ser lido e, em muitos programas, alterado durante a execução.",
-    "concept": "Programas trabalham com diferentes tipos de informação. Números inteiros, números reais, textos e valores lógicos têm usos diferentes. Variáveis permitem dar nomes aos dados para que o algoritmo possa manipulá-los.",
-    "example": "tentativas = 3; temperatura = 27.5; nome = 'R.A.I.'; concluido = verdadeiro.",
-    "formula": "nomeDaVariavel ← valor",
-    "representation": "idade: inteiro • nota: real • nome: texto • ativo: lógico",
-    "use": "Cadastros, sensores, jogos, planilhas, cálculos e sistemas de controle.",
-    "observe": "O nome identifica a variável; o tipo é determinado pelas regras da linguagem e pode estar associado à declaração da variável, ao valor armazenado ou a ambos.",
-    "guided": "Classifique cinco dados de um jogo em inteiro, real, texto ou lógico.",
-    "challenge": "Quais tipos de dados você usaria para guardar tempo de uma fase, nome do jogador e se a missão foi concluída?",
-    "answer": "Tempo pode ser real ou inteiro; nome é texto; conclusão pode ser valor lógico verdadeiro/falso.",
-    "reference": "EF06CO01; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
-    "teacherTip": "Use exemplos próximos do app antes de introduzir sintaxe específica de Python.",
+    "objective": "Criar e simular algoritmos simples com sequências e repetições em linguagem oral, escrita, pictográfica ou em blocos.",
+    "keyTerm": "repetição",
+    "keyDefinition": "Estrutura que executa uma ou mais instruções várias vezes segundo uma quantidade ou condição.",
+    "concept": "Algoritmos podem ter passos executados uma única vez ou repetidos. Identificar padrões de repetição reduz a quantidade de instruções e torna a solução mais clara.",
+    "example": "Em vez de escrever 'avance' quatro vezes, podemos usar REPITA 4 VEZES → avance.",
+    "formula": "sequência + repetição = algoritmo mais compacto",
+    "representation": "REPITA 4 VEZES { avance }",
+    "use": "Jogos, animações, robôs, música, rotinas e desenhos geométricos.",
+    "observe": "Repetir não significa repetir para sempre: é preciso saber quantas vezes ou quando parar.",
+    "guided": "Monte com blocos um algoritmo que desenhe um quadrado: avance e gire 90°, repetindo quatro vezes.",
+    "challenge": "Como você programaria um robô para dar três passos, girar e depois dar mais três passos usando repetição?",
+    "answer": "Exemplo: REPITA 3 VEZES → avance; gire; REPITA 3 VEZES → avance.",
+    "reference": "EF05CO04; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Priorize blocos, setas e simulações corporais antes de código textual.",
     "fixation": [
       {
-        "q": "O que significa “variável” nesta aula?",
-        "a": "Nome associado a um valor que pode ser lido e, em muitos programas, alterado durante a execução."
+        "q": "O que significa “repetição” nesta aula?",
+        "a": "Estrutura que executa uma ou mais instruções várias vezes segundo uma quantidade ou condição."
       },
       {
         "q": "Onde esse conceito pode aparecer fora desta tela?",
-        "a": "Cadastros, sensores, jogos, planilhas, cálculos e sistemas de controle."
+        "a": "Jogos, animações, robôs, música, rotinas e desenhos geométricos."
       },
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
-        "a": "O tipo de uma variável ou dado depende das regras da linguagem; não é correto afirmar que ele depende apenas do valor atual."
+        "a": "Repetir não significa repetir para sempre: é preciso saber quantas vezes ou quando parar."
       }
     ]
   },
@@ -216,38 +180,38 @@
     ]
   },
   {
-    "year": 7,
+    "year": 6,
     "section": "prog",
-    "id": "pr7-registros-vetores",
-    "topic": "Registros e vetores",
-    "icon": "🧱",
+    "id": "pr6-tipos",
+    "topic": "Tipos de dados e variáveis",
+    "icon": "📦",
     "axis": "Pensamento Computacional",
-    "objective": "Representar informações estruturadas usando registros e vetores unidimensionais.",
-    "keyTerm": "registro e vetor",
-    "keyDefinition": "Registro agrupa atributos diferentes de um objeto; vetor organiza vários valores em posições de uma sequência.",
-    "concept": "À medida que os programas crescem, precisamos representar dados de forma organizada. Um aluno pode ser um registro com nome, turma e idade. As notas de vários alunos podem formar um vetor.",
-    "example": "aluno = {nome:'Ana', turma:'7A'}; notas = [8, 7, 9, 10].",
-    "formula": "registro = atributos • vetor = posições em sequência",
-    "representation": "objeto {campo:valor} • vetor [v0,v1,v2]",
-    "use": "Cadastros, jogos, sensores, tabelas, pesquisas e sistemas escolares.",
-    "observe": "Registro e vetor resolvem problemas diferentes: um agrupa características; o outro agrupa elementos de uma coleção ordenada.",
-    "guided": "Modele um robô como registro com nome, bateria, estado e distância; depois crie um vetor com cinco leituras de sensor.",
-    "challenge": "Qual estrutura é melhor para guardar nome, idade e turma de um único aluno? E para guardar as idades de 30 alunos?",
-    "answer": "Registro para os dados de um aluno; vetor/lista para a coleção de idades.",
-    "reference": "EF07CO01; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
-    "teacherTip": "Use tabelas e fichas físicas antes de migrar para estruturas em código.",
+    "objective": "Classificar informações por tipos de dados e usar variáveis para representá-las.",
+    "keyTerm": "variável",
+    "keyDefinition": "Nome associado a um valor que pode ser lido e, em muitos programas, alterado durante a execução.",
+    "concept": "Programas trabalham com diferentes tipos de informação. Números inteiros, números reais, textos e valores lógicos têm usos diferentes. Variáveis permitem dar nomes aos dados para que o algoritmo possa manipulá-los.",
+    "example": "tentativas = 3; temperatura = 27.5; nome = 'R.A.I.'; concluido = verdadeiro.",
+    "formula": "nomeDaVariavel ← valor",
+    "representation": "idade: inteiro • nota: real • nome: texto • ativo: lógico",
+    "use": "Cadastros, sensores, jogos, planilhas, cálculos e sistemas de controle.",
+    "observe": "O nome identifica a variável; o tipo é determinado pelas regras da linguagem e pode estar associado à declaração da variável, ao valor armazenado ou a ambos.",
+    "guided": "Classifique cinco dados de um jogo em inteiro, real, texto ou lógico.",
+    "challenge": "Quais tipos de dados você usaria para guardar tempo de uma fase, nome do jogador e se a missão foi concluída?",
+    "answer": "Tempo pode ser real ou inteiro; nome é texto; conclusão pode ser valor lógico verdadeiro/falso.",
+    "reference": "EF06CO01; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Use exemplos próximos do app antes de introduzir sintaxe específica de Python.",
     "fixation": [
       {
-        "q": "O que significa “registro e vetor” nesta aula?",
-        "a": "Registro agrupa atributos diferentes de um objeto; vetor organiza vários valores em posições de uma sequência."
+        "q": "O que significa “variável” nesta aula?",
+        "a": "Nome associado a um valor que pode ser lido e, em muitos programas, alterado durante a execução."
       },
       {
         "q": "Onde esse conceito pode aparecer fora desta tela?",
-        "a": "Cadastros, jogos, sensores, tabelas, pesquisas e sistemas escolares."
+        "a": "Cadastros, sensores, jogos, planilhas, cálculos e sistemas de controle."
       },
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
-        "a": "Registro e vetor resolvem problemas diferentes: um agrupa características; o outro agrupa elementos de uma coleção ordenada."
+        "a": "O tipo de uma variável ou dado depende das regras da linguagem; não é correto afirmar que ele depende apenas do valor atual."
       }
     ]
   },
@@ -324,38 +288,38 @@
     ]
   },
   {
-    "year": 8,
+    "year": 7,
     "section": "prog",
-    "id": "pr8-listas",
-    "topic": "Programação com listas",
-    "icon": "📚",
+    "id": "pr7-registros-vetores",
+    "topic": "Registros e vetores",
+    "icon": "🧱",
     "axis": "Pensamento Computacional",
-    "objective": "Criar soluções em que listas sejam adequadas para representar e manipular informações.",
-    "keyTerm": "lista em programação",
-    "keyDefinition": "Estrutura de dados que organiza uma coleção de elementos em sequência e permite operações sobre essa coleção.",
-    "concept": "Listas permitem percorrer, buscar, inserir, remover, contar e transformar dados. No 8º ano, o foco avança para decidir quando uma lista é apropriada e automatizar operações por programação.",
-    "example": "pontuacoes = [120, 95, 160]; o programa pode calcular maior valor, média ou ordenar.",
-    "formula": "coleção → percorrer → comparar/manipular",
-    "representation": "para cada item em lista → executar ação",
-    "use": "Pontuações, sensores, registros de temperatura, catálogo, dados de pesquisa e jogos.",
-    "observe": "Uma lista é adequada quando o problema envolve uma coleção de elementos; nem todo dado precisa virar lista.",
-    "guided": "Crie uma lista de cinco tempos de jogo e descreva como encontrar o menor tempo.",
-    "challenge": "Como você calcularia a média de uma lista de notas sem escrever uma soma fixa para cada posição?",
-    "answer": "Percorrer a lista, acumular a soma e dividir pelo número de elementos.",
-    "reference": "EF08CO02; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
-    "teacherTip": "Use dados reais ou simulados da turma para tornar as operações significativas.",
+    "objective": "Representar informações estruturadas usando registros e vetores unidimensionais.",
+    "keyTerm": "registro e vetor",
+    "keyDefinition": "Registro agrupa atributos diferentes de um objeto; vetor organiza vários valores em posições de uma sequência.",
+    "concept": "À medida que os programas crescem, precisamos representar dados de forma organizada. Um aluno pode ser um registro com nome, turma e idade. As notas de vários alunos podem formar um vetor.",
+    "example": "aluno = {nome:'Ana', turma:'7A'}; notas = [8, 7, 9, 10].",
+    "formula": "registro = atributos • vetor = posições em sequência",
+    "representation": "objeto {campo:valor} • vetor [v0,v1,v2]",
+    "use": "Cadastros, jogos, sensores, tabelas, pesquisas e sistemas escolares.",
+    "observe": "Registro e vetor resolvem problemas diferentes: um agrupa características; o outro agrupa elementos de uma coleção ordenada.",
+    "guided": "Modele um robô como registro com nome, bateria, estado e distância; depois crie um vetor com cinco leituras de sensor.",
+    "challenge": "Qual estrutura é melhor para guardar nome, idade e turma de um único aluno? E para guardar as idades de 30 alunos?",
+    "answer": "Registro para os dados de um aluno; vetor/lista para a coleção de idades.",
+    "reference": "EF07CO01; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Use tabelas e fichas físicas antes de migrar para estruturas em código.",
     "fixation": [
       {
-        "q": "O que significa “lista em programação” nesta aula?",
-        "a": "Estrutura de dados que organiza uma coleção de elementos em sequência e permite operações sobre essa coleção."
+        "q": "O que significa “registro e vetor” nesta aula?",
+        "a": "Registro agrupa atributos diferentes de um objeto; vetor organiza vários valores em posições de uma sequência."
       },
       {
         "q": "Onde esse conceito pode aparecer fora desta tela?",
-        "a": "Pontuações, sensores, registros de temperatura, catálogo, dados de pesquisa e jogos."
+        "a": "Cadastros, jogos, sensores, tabelas, pesquisas e sistemas escolares."
       },
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
-        "a": "Uma lista é adequada quando o problema envolve uma coleção de elementos; nem todo dado precisa virar lista."
+        "a": "Registro e vetor resolvem problemas diferentes: um agrupa características; o outro agrupa elementos de uma coleção ordenada."
       }
     ]
   },
@@ -398,36 +362,36 @@
   {
     "year": 8,
     "section": "prog",
-    "id": "pr8-recursao-projeto",
-    "topic": "Recursão em programas e projetos",
-    "icon": "🪆",
+    "id": "pr8-listas",
+    "topic": "Programação com listas",
+    "icon": "📚",
     "axis": "Pensamento Computacional",
-    "objective": "Construir e analisar soluções recursivas com caso-base e aproximação do término.",
-    "keyTerm": "programa recursivo",
-    "keyDefinition": "Programa em que uma função chama a si mesma para resolver uma versão menor do problema.",
-    "concept": "Recursão pode simplificar problemas com estrutura repetitiva, mas precisa de um caso-base. Em projetos, ela deve ser escolhida quando faz sentido e testada para garantir que a execução converge para o fim.",
-    "example": "fatorial(n): se n=0, retornar 1; senão retornar n×fatorial(n-1).",
-    "formula": "caso-base + passo recursivo",
-    "representation": "f(n) = n × f(n-1)",
-    "use": "Árvores, fractais, exploração de estruturas, divisão de problemas e algoritmos.",
-    "observe": "Recursão sem caso-base ou sem redução em direção ao caso-base pode não terminar e consumir recursos até provocar erro de execução.",
-    "guided": "Trace no papel as chamadas de fatorial(4) até chegar ao caso-base.",
-    "challenge": "Que duas perguntas você deve fazer ao analisar uma função recursiva?",
-    "answer": "Qual é o caso-base? E cada chamada se aproxima desse caso-base?",
-    "reference": "EF08CO01; EF08CO04 como integração em projetos; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
-    "teacherTip": "Use rastreamento manual das chamadas antes de executar o programa.",
+    "objective": "Criar soluções em que listas sejam adequadas para representar e manipular informações.",
+    "keyTerm": "lista em programação",
+    "keyDefinition": "Estrutura de dados que organiza uma coleção de elementos em sequência e permite operações sobre essa coleção.",
+    "concept": "Listas permitem percorrer, buscar, inserir, remover, contar e transformar dados. No 8º ano, o foco avança para decidir quando uma lista é apropriada e automatizar operações por programação.",
+    "example": "pontuacoes = [120, 95, 160]; o programa pode calcular maior valor, média ou ordenar.",
+    "formula": "coleção → percorrer → comparar/manipular",
+    "representation": "para cada item em lista → executar ação",
+    "use": "Pontuações, sensores, registros de temperatura, catálogo, dados de pesquisa e jogos.",
+    "observe": "Uma lista é adequada quando o problema envolve uma coleção de elementos; nem todo dado precisa virar lista.",
+    "guided": "Crie uma lista de cinco tempos de jogo e descreva como encontrar o menor tempo.",
+    "challenge": "Como você calcularia a média de uma lista de notas sem escrever uma soma fixa para cada posição?",
+    "answer": "Percorrer a lista, acumular a soma e dividir pelo número de elementos.",
+    "reference": "EF08CO02; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Use dados reais ou simulados da turma para tornar as operações significativas.",
     "fixation": [
       {
-        "q": "O que significa “programa recursivo” nesta aula?",
-        "a": "Programa em que uma função chama a si mesma para resolver uma versão menor do problema."
+        "q": "O que significa “lista em programação” nesta aula?",
+        "a": "Estrutura de dados que organiza uma coleção de elementos em sequência e permite operações sobre essa coleção."
       },
       {
         "q": "Onde esse conceito pode aparecer fora desta tela?",
-        "a": "Árvores, fractais, exploração de estruturas, divisão de problemas e algoritmos."
+        "a": "Pontuações, sensores, registros de temperatura, catálogo, dados de pesquisa e jogos."
       },
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
-        "a": "Sem caso-base ou aproximação do caso-base, a recursão pode não terminar e consumir recursos até provocar erro de execução."
+        "a": "Uma lista é adequada quando o problema envolve uma coleção de elementos; nem todo dado precisa virar lista."
       }
     ]
   },
@@ -464,6 +428,42 @@
       {
         "q": "Por que decompor o problema antes de codificar?",
         "a": "Para identificar dados, operações e etapas, reduzindo erros e tornando o algoritmo compreensível."
+      }
+    ]
+  },
+  {
+    "year": 8,
+    "section": "prog",
+    "id": "pr8-recursao-projeto",
+    "topic": "Recursão em programas e projetos",
+    "icon": "🪆",
+    "axis": "Pensamento Computacional",
+    "objective": "Construir e analisar soluções recursivas com caso-base e aproximação do término.",
+    "keyTerm": "programa recursivo",
+    "keyDefinition": "Programa em que uma função chama a si mesma para resolver uma versão menor do problema.",
+    "concept": "Recursão pode simplificar problemas com estrutura repetitiva, mas precisa de um caso-base. Em projetos, ela deve ser escolhida quando faz sentido e testada para garantir que a execução converge para o fim.",
+    "example": "fatorial(n): se n=0, retornar 1; senão retornar n×fatorial(n-1).",
+    "formula": "caso-base + passo recursivo",
+    "representation": "f(n) = n × f(n-1)",
+    "use": "Árvores, fractais, exploração de estruturas, divisão de problemas e algoritmos.",
+    "observe": "Recursão sem caso-base ou sem redução em direção ao caso-base pode não terminar e consumir recursos até provocar erro de execução.",
+    "guided": "Trace no papel as chamadas de fatorial(4) até chegar ao caso-base.",
+    "challenge": "Que duas perguntas você deve fazer ao analisar uma função recursiva?",
+    "answer": "Qual é o caso-base? E cada chamada se aproxima desse caso-base?",
+    "reference": "EF08CO01; EF08CO04 como integração em projetos; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Use rastreamento manual das chamadas antes de executar o programa.",
+    "fixation": [
+      {
+        "q": "O que significa “programa recursivo” nesta aula?",
+        "a": "Programa em que uma função chama a si mesma para resolver uma versão menor do problema."
+      },
+      {
+        "q": "Onde esse conceito pode aparecer fora desta tela?",
+        "a": "Árvores, fractais, exploração de estruturas, divisão de problemas e algoritmos."
+      },
+      {
+        "q": "Qual ponto merece atenção para não confundir o conceito?",
+        "a": "Sem caso-base ou aproximação do caso-base, a recursão pode não terminar e consumir recursos até provocar erro de execução."
       }
     ]
   },
@@ -752,6 +752,78 @@
       {
         "q": "Qual cuidado é importante na interpretação?",
         "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
+      }
+    ]
+  },
+  {
+    "year": 9,
+    "section": "prog",
+    "id": "pr9-53",
+    "topic": "Aula 53 · Criptografia e Cifra de César",
+    "icon": "🔐",
+    "axis": "Segurança Digital",
+    "objective": "Compreender cifragem e decifragem por deslocamento e reconhecer seus limites.",
+    "keyTerm": "Cifra de César",
+    "keyDefinition": "Cifra de substituição em que cada letra é deslocada um número fixo de posições no alfabeto.",
+    "concept": "A criptografia transforma uma mensagem segundo uma regra e uma chave. A Cifra de César é um modelo histórico útil para compreender o princípio, mas não oferece segurança moderna.",
+    "example": "Com deslocamento 3: A→D, B→E, C→F.",
+    "formula": "conceito → aplicação → decisão segura",
+    "representation": "mensagem → chave → deslocamento → mensagem cifrada",
+    "use": "Introdução histórica à confidencialidade e à criptografia.",
+    "observe": "Não use a Cifra de César para proteger dados reais; ela é simples e facilmente quebrada.",
+    "guided": "Cifre uma palavra curta com deslocamento 3 e depois faça o caminho inverso.",
+    "challenge": "Se D veio de A com chave 3, como recuperar A?",
+    "answer": "Aplicando o deslocamento inverso de três posições.",
+    "reference": "RCO 9º ano · Aula 53 · EF09CO05.",
+    "teacherTip": "Trabalhe com exemplos fictícios e seguros; priorize compreensão, prevenção e responsabilidade.",
+    "fixation": [
+      {
+        "q": "Qual é o conceito central?",
+        "a": "Cifra de substituição em que cada letra é deslocada um número fixo de posições no alfabeto."
+      },
+      {
+        "q": "Qual cuidado é essencial?",
+        "a": "Não use a Cifra de César para proteger dados reais; ela é simples e facilmente quebrada."
+      },
+      {
+        "q": "Como aplicar o que foi aprendido?",
+        "a": "Aplicando o deslocamento inverso de três posições."
+      }
+    ]
+  },
+  {
+    "year": 9,
+    "section": "prog",
+    "id": "pr9-54",
+    "topic": "Aula 54 · Segurança digital: reconhecer ameaças",
+    "icon": "🛡️",
+    "axis": "Segurança Digital",
+    "objective": "Reconhecer ameaças digitais e escolher atitudes preventivas em cenários simulados.",
+    "keyTerm": "vulnerabilidade",
+    "keyDefinition": "Fraqueza que pode ser explorada e comprometer um sistema ou informação.",
+    "concept": "Segurança digital envolve reconhecer riscos e reduzir vulnerabilidades. Phishing, ransomware e tentativas repetidas de adivinhar credenciais são exemplos que podem ser estudados pelo ponto de vista da prevenção.",
+    "example": "Uma mensagem urgente que pede senha por um link desconhecido apresenta sinais típicos de risco.",
+    "formula": "conceito → aplicação → decisão segura",
+    "representation": "observar → reconhecer sinais → verificar → proteger",
+    "use": "Contas, e-mail, dispositivos e serviços digitais.",
+    "observe": "A aula trata de reconhecimento e prevenção, não da execução de ataques.",
+    "guided": "Classifique cenários fictícios e justifique a decisão mais segura.",
+    "challenge": "Uma mensagem pede sua senha com urgência por link desconhecido. O que fazer?",
+    "answer": "Não fornecer a senha nem usar o link; confirmar a solicitação por canal oficial e comunicar um responsável/professor quando apropriado.",
+    "reference": "RCO 9º ano · Aula 54 · EF09CO04.",
+    "teacherTip": "Trabalhe com exemplos fictícios e seguros; priorize compreensão, prevenção e responsabilidade.",
+    "fixation": [
+      {
+        "q": "Qual é o conceito central?",
+        "a": "Fraqueza que pode ser explorada e comprometer um sistema ou informação."
+      },
+      {
+        "q": "Qual cuidado é essencial?",
+        "a": "A aula trata de reconhecimento e prevenção, não da execução de ataques."
+      },
+      {
+        "q": "Como aplicar o que foi aprendido?",
+        "a": "Não fornecer a senha nem usar o link; confirmar a solicitação por canal oficial e comunicar um responsável/professor quando apropriado."
       }
     ]
   }
