@@ -886,3 +886,19 @@ header>.rai-float.rai-x1>.header-tangram-exact{
 .adapt-compact-guide b{font-size:.92rem}.adapt-compact-guide span{font-size:.9rem;color:#d7f8f1}
 .tea-one-block>.adapt-step{min-height:58vh;margin:10px 0!important;padding:22px!important;scroll-margin-top:18px}
 .tea-one-block .adapt-step-nav{position:sticky;bottom:0;z-index:4;background:#073142}
+
+/* v2.0.176 — TEA: remove definitivamente o guia legado e preserva largura total */
+#lessons-panel .tea-one-block>.tea-visual-guide,
+#lessons-panel .tea-one-block .tea8-badge,
+#lessons-panel .tea-one-block .tea-mini-schema{display:none!important}
+#lessons-panel .tea-one-block{display:block!important;width:100%!important;min-width:0!important}
+#lessons-panel .tea-one-block>.adapt-compact-guide{display:flex!important;width:100%!important;box-sizing:border-box!important;min-height:48px!important;margin:8px 0 16px!important;padding:11px 14px!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important}
+#lessons-panel .tea-one-block>.adapt-compact-guide b,
+#lessons-panel .tea-one-block>.adapt-compact-guide span{display:block!important;width:auto!important;max-width:none!important;writing-mode:horizontal-tb!important;word-break:normal!important;overflow-wrap:normal!important;white-space:normal!important}
+#lessons-panel .tea-one-block>.adapt-step{display:block!important;width:100%!important;max-width:100%!important;box-sizing:border-box!important;min-width:0!important}
+#lessons-panel .tea-one-block>.adapt-step[hidden]{display:none!important}
+#lessons-panel .tea-one-block>.adapt-step>.adapt-step-head{width:100%!important;box-sizing:border-box!important}
+@media(max-width:600px){
+ #lessons-panel .tea-one-block>.adapt-compact-guide{position:sticky;top:0;z-index:8}
+ #lessons-panel .tea-one-block>.adapt-step{min-height:64vh!important;margin:0!important;padding:18px!important}
+}
