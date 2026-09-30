@@ -849,3 +849,24 @@ header>.rai-float.rai-x1>.header-tangram-exact{
 @keyframes teaCelebrate{0%,100%{transform:scale(1)}45%{transform:scale(1.025)}}
 @media(max-width:600px){#lessons-panel .tea8-focus>.tea-step{min-height:58vh}.tea-visual-guide div>small{display:flex;flex-wrap:wrap;gap:4px 6px}.tea-visual-guide div>small i{display:none}}
 @media(prefers-reduced-motion:reduce){#lessons-panel .tea8-focus>.tea-step,.tea-celebrate{animation:none!important}}
+
+/* v2.0.174 — aulas adaptadas: uma tela = um bloco = uma ação */
+#lessons-panel .adapt-one-block>.adapt-step[hidden],
+#lessons-panel .tea8-focus>.tea-step[hidden]{display:none!important}
+#lessons-panel .adapt-one-block>.adapt-step,
+#lessons-panel .tea8-focus>.tea-step{min-height:58vh;margin:12px 0!important;padding:24px!important;scroll-margin-top:18px}
+.adapt-step-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:-6px 0 22px;padding:10px 12px;border-radius:12px;background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.22)}
+.adapt-step-head b{font-size:1rem;color:#eafcff}.adapt-step-head span{font-size:.82rem;color:#b7d9e5}
+.adapt-step-nav{display:flex;gap:12px;justify-content:flex-end;margin-top:28px;padding-top:18px;border-top:1px solid rgba(130,215,240,.18)}
+.adapt-step-nav button{min-height:54px;min-width:132px;border-radius:14px;font-weight:900;font-size:1rem}
+.visual-one-block .adapt-step{font-size:var(--lesson-zoom,1.4em);line-height:1.65}
+.visual-one-block .adapt-step-nav button{font-size:1rem}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+#lessons-panel .tea8-focus>.lesson-block:not(.tea-step),
+#lessons-panel .tea8-focus>.lesson-key:not(.tea-step),
+#lessons-panel .tea8-focus>.lesson-challenge:not(.tea-step){display:none}
+#lessons-panel .tea-compact-guide{min-height:auto!important;padding:12px 14px!important;margin:8px 0 14px!important}
+#lessons-panel .tea-compact-guide>.tea-butterfly,#lessons-panel .tea-compact-guide>.tea-egg{display:none!important}
+#lessons-panel .tea-compact-guide>div>b{font-size:1rem!important}
+#lessons-panel .tea-compact-guide>div>small{font-size:.78rem!important}
+@media(max-width:600px){#lessons-panel .adapt-one-block>.adapt-step,#lessons-panel .tea8-focus>.tea-step{min-height:62vh;padding:18px!important}.adapt-step-head{align-items:flex-start;flex-direction:column}.adapt-step-nav{position:sticky;bottom:0;background:#073142;padding:12px 0 4px}.adapt-step-nav button{flex:1}}
