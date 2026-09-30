@@ -326,144 +326,360 @@
   {
     "year": 8,
     "section": "prog",
-    "id": "pr8-busca-ord",
-    "topic": "Busca, inserção e ordenação",
-    "icon": "🔎",
-    "axis": "Pensamento Computacional",
-    "objective": "Compreender e simular algoritmos clássicos de manipulação de listas.",
-    "keyTerm": "algoritmo de busca/ordenação",
-    "keyDefinition": "Procedimento sistemático para localizar elementos ou reorganizar uma coleção segundo uma regra.",
-    "concept": "Busca e ordenação resolvem problemas diferentes. Busca linear verifica itens em sequência e funciona mesmo sem ordenação. Busca binária reduz repetidamente a região de procura, mas exige dados ordenados segundo o mesmo critério usado na busca. Algoritmos de ordenação reorganizam os itens e também possuem custos diferentes.",
-    "example": "Organizar cartas em ordem crescente ou procurar um nome numa lista.",
-    "formula": "buscar = localizar • ordenar = reorganizar",
-    "representation": "linear: comparar um a um • ordenação: comparar/trocar",
-    "use": "Pesquisa, catálogos, bancos de dados, rankings, planilhas e sistemas de arquivos.",
-    "observe": "Busca binária só funciona corretamente quando os dados estão ordenados.",
-    "guided": "Simule busca linear por um número em uma lista de cartões. Conte quantas comparações foram feitas.",
-    "challenge": "Você tem uma lista não ordenada de 20 nomes e fará apenas uma busca. Vale necessariamente a pena ordenar a lista antes? Justifique.",
-    "answer": "Não necessariamente. Ordenar também tem custo; para uma única busca em uma lista pequena, uma busca linear pode ser suficiente. Se houver muitas buscas e a lista puder permanecer ordenada, ordenar pode trazer vantagem.",
-    "reference": "EF08CO03; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
-    "teacherTip": "Simulações com cartas permitem comparar estratégias antes de implementar.",
-    "fixation": [
-      {
-        "q": "O que significa “algoritmo de busca/ordenação” nesta aula?",
-        "a": "Procedimento sistemático para localizar elementos ou reorganizar uma coleção segundo uma regra."
-      },
-      {
-        "q": "Onde esse conceito pode aparecer fora desta tela?",
-        "a": "Pesquisa, catálogos, bancos de dados, rankings, planilhas e sistemas de arquivos."
-      },
-      {
-        "q": "Qual ponto merece atenção para não confundir o conceito?",
-        "a": "Busca binária só funciona corretamente quando os dados estão ordenados."
-      }
-    ]
-  },
-  {
-    "year": 8,
-    "section": "prog",
-    "id": "pr8-listas",
-    "topic": "Programação com listas",
-    "icon": "📚",
-    "axis": "Pensamento Computacional",
-    "objective": "Criar soluções em que listas sejam adequadas para representar e manipular informações.",
-    "keyTerm": "lista em programação",
-    "keyDefinition": "Estrutura de dados que organiza uma coleção de elementos em sequência e permite operações sobre essa coleção.",
-    "concept": "Listas permitem percorrer, buscar, inserir, remover, contar e transformar dados. No 8º ano, o foco avança para decidir quando uma lista é apropriada e automatizar operações por programação.",
-    "example": "pontuacoes = [120, 95, 160]; o programa pode calcular maior valor, média ou ordenar.",
-    "formula": "coleção → percorrer → comparar/manipular",
-    "representation": "para cada item em lista → executar ação",
-    "use": "Pontuações, sensores, registros de temperatura, catálogo, dados de pesquisa e jogos.",
-    "observe": "Uma lista é adequada quando o problema envolve uma coleção de elementos; nem todo dado precisa virar lista.",
-    "guided": "Crie uma lista de cinco tempos de jogo e descreva como encontrar o menor tempo.",
-    "challenge": "Como você calcularia a média de uma lista de notas sem escrever uma soma fixa para cada posição?",
-    "answer": "Percorrer a lista, acumular a soma e dividir pelo número de elementos.",
-    "reference": "EF08CO02; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
-    "teacherTip": "Use dados reais ou simulados da turma para tornar as operações significativas.",
-    "fixation": [
-      {
-        "q": "O que significa “lista em programação” nesta aula?",
-        "a": "Estrutura de dados que organiza uma coleção de elementos em sequência e permite operações sobre essa coleção."
-      },
-      {
-        "q": "Onde esse conceito pode aparecer fora desta tela?",
-        "a": "Pontuações, sensores, registros de temperatura, catálogo, dados de pesquisa e jogos."
-      },
-      {
-        "q": "Qual ponto merece atenção para não confundir o conceito?",
-        "a": "Uma lista é adequada quando o problema envolve uma coleção de elementos; nem todo dado precisa virar lista."
-      }
-    ]
-  },
-  {
-    "year": 8,
-    "section": "prog",
-    "id": "pr8-python-colab-fundamentos",
-    "topic": "Python no Colab: dados, operações e problemas",
+    "id": "pr8-45",
+    "topic": "Aula 45 · Python: dados e operações",
     "icon": "🐍",
     "axis": "Programação",
-    "objective": "Usar comandos básicos de Python para representar dados, realizar cálculos e decompor pequenos problemas em etapas.",
+    "objective": "Reconhecer tipos básicos e usar operadores aritméticos no Colab.",
     "keyTerm": "tipo de dado",
-    "keyDefinition": "Forma como o Python interpreta um valor, por exemplo inteiro (int), decimal (float) ou texto (str).",
-    "concept": "Em Python, valores têm tipos. int representa números inteiros, float representa números com parte decimal e str representa textos. type() ajuda a identificar o tipo e print() mostra resultados. Operadores como +, -, *, /, // e % permitem construir cálculos e resolver problemas passo a passo.",
-    "example": "balas = 13; pessoas = 4; print(balas // pessoas) mostra quantas balas inteiras cada pessoa recebe; print(balas % pessoas) mostra quantas sobram.",
-    "formula": "problema → dados → operação → resultado → teste",
-    "representation": "type(10) → int • type(2.5) → float • type('R.A.I.') → str • 13 // 4 → 3 • 13 % 4 → 1",
-    "use": "Google Colab, cálculos, jogos, automação, análise de dados e projetos de robótica.",
-    "observe": "Antes de programar, interprete o problema e identifique quais dados entram, qual operação é necessária e qual resultado deve sair. A IA pode ajudar a explicar, mas o estudante precisa compreender e testar o código.",
-    "guided": "No Colab, crie três variáveis: idade = 13, altura = 1.62 e nome = 'Ana'. Use type() em cada uma e depois print() para exibir uma frase com os valores.",
-    "challenge": "Há 13 balas para dividir igualmente entre 4 estudantes. Escreva duas expressões em Python: uma para descobrir quantas balas cada estudante recebe e outra para descobrir quantas sobram.",
-    "answer": "13 // 4 resulta em 3 balas para cada estudante; 13 % 4 resulta em 1 bala restante.",
-    "reference": "Aula de Programação — 8º ano; fundamentos de Python e resolução de problemas.",
-    "teacherTip": "Priorize interpretação e decomposição antes da sintaxe. Peça aos estudantes que prevejam o resultado antes de executar cada célula.",
+    "keyDefinition": "Forma como o Python interpreta um valor, como int, float ou str.",
+    "concept": "Tipos e operadores permitem representar informações e resolver cálculos passo a passo.",
+    "example": "13 // 4 → 3; 13 % 4 → 1.",
+    "formula": "entender → prever → escrever → executar → explicar",
+    "representation": "int • float • str • + - * / // %",
+    "use": "Cálculos, jogos e problemas cotidianos.",
+    "observe": "// produz quociente inteiro e % produz resto.",
+    "guided": "No Colab, crie valores int, float e str; use type() e teste operações.",
+    "challenge": "Divida 13 peças igualmente entre 4 grupos e descubra a sobra.",
+    "answer": "13 // 4 resulta 3 por grupo e 13 % 4 resulta 1 de sobra.",
+    "reference": "RCO 8º ano · Aula 45 · EF08CO04/EF69CO01.",
+    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
     "fixation": [
       {
-        "q": "Qual comando mostra o tipo de um valor?",
-        "a": "type()."
+        "q": "Qual é o conceito central?",
+        "a": "Forma como o Python interpreta um valor, como int, float ou str."
       },
       {
-        "q": "Qual a diferença entre // e %?",
-        "a": "// retorna o quociente inteiro da divisão; % retorna o resto."
+        "q": "O que você deve fazer antes de executar?",
+        "a": "Prever o resultado e explicar o raciocínio."
       },
       {
-        "q": "Por que decompor o problema antes de codificar?",
-        "a": "Para identificar dados, operações e etapas, reduzindo erros e tornando o algoritmo compreensível."
+        "q": "Como verificar a solução?",
+        "a": "13 // 4 resulta 3 por grupo e 13 % 4 resulta 1 de sobra."
       }
     ]
   },
   {
     "year": 8,
     "section": "prog",
-    "id": "pr8-recursao-projeto",
-    "topic": "Recursão em programas e projetos",
-    "icon": "🪆",
-    "axis": "Pensamento Computacional",
-    "objective": "Construir e analisar soluções recursivas com caso-base e aproximação do término.",
-    "keyTerm": "programa recursivo",
-    "keyDefinition": "Programa em que uma função chama a si mesma para resolver uma versão menor do problema.",
-    "concept": "Recursão pode simplificar problemas com estrutura repetitiva, mas precisa de um caso-base. Em projetos, ela deve ser escolhida quando faz sentido e testada para garantir que a execução converge para o fim.",
-    "example": "fatorial(n): se n=0, retornar 1; senão retornar n×fatorial(n-1).",
-    "formula": "caso-base + passo recursivo",
-    "representation": "f(n) = n × f(n-1)",
-    "use": "Árvores, fractais, exploração de estruturas, divisão de problemas e algoritmos.",
-    "observe": "Recursão sem caso-base ou sem redução em direção ao caso-base pode não terminar e consumir recursos até provocar erro de execução.",
-    "guided": "Trace no papel as chamadas de fatorial(4) até chegar ao caso-base.",
-    "challenge": "Que duas perguntas você deve fazer ao analisar uma função recursiva?",
-    "answer": "Qual é o caso-base? E cada chamada se aproxima desse caso-base?",
-    "reference": "EF08CO01; EF08CO04 como integração em projetos; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
-    "teacherTip": "Use rastreamento manual das chamadas antes de executar o programa.",
+    "id": "pr8-46",
+    "topic": "Aula 46 · Variáveis e entrada de dados",
+    "icon": "📦",
+    "axis": "Programação",
+    "objective": "Usar variáveis e input() numa solução com entrada, processamento e saída.",
+    "keyTerm": "variável",
+    "keyDefinition": "Nome associado a um valor que pode ser reutilizado pelo programa.",
+    "concept": "Um programa pode receber dados, processá-los e produzir uma saída.",
+    "example": "nome=input('Nome: '); print(nome)",
+    "formula": "entender → prever → escrever → executar → explicar",
+    "representation": "input() → variável → processamento → print()",
+    "use": "Placares, cadastros e jogos.",
+    "observe": "input() retorna texto; cálculos podem exigir conversão.",
+    "guided": "Leia nome e pontuação e mostre uma mensagem final.",
+    "challenge": "Por que int(input()) pode ser necessário ao somar pontos?",
+    "answer": "Porque input() retorna texto e int() converte uma representação inteira válida em número.",
+    "reference": "RCO 8º ano · Aula 46 · EF08CO04/EF69CO02.",
+    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
     "fixation": [
       {
-        "q": "O que significa “programa recursivo” nesta aula?",
-        "a": "Programa em que uma função chama a si mesma para resolver uma versão menor do problema."
+        "q": "Qual é o conceito central?",
+        "a": "Nome associado a um valor que pode ser reutilizado pelo programa."
       },
       {
-        "q": "Onde esse conceito pode aparecer fora desta tela?",
-        "a": "Árvores, fractais, exploração de estruturas, divisão de problemas e algoritmos."
+        "q": "O que você deve fazer antes de executar?",
+        "a": "Prever o resultado e explicar o raciocínio."
       },
       {
-        "q": "Qual ponto merece atenção para não confundir o conceito?",
-        "a": "Sem caso-base ou aproximação do caso-base, a recursão pode não terminar e consumir recursos até provocar erro de execução."
+        "q": "Como verificar a solução?",
+        "a": "Porque input() retorna texto e int() converte uma representação inteira válida em número."
+      }
+    ]
+  },
+  {
+    "year": 8,
+    "section": "prog",
+    "id": "pr8-47",
+    "topic": "Aula 47 · Tipos, booleanos e condicionais",
+    "icon": "◆",
+    "axis": "Programação",
+    "objective": "Usar bool, type(), comparações e a estrutura básica de if.",
+    "keyTerm": "condição booleana",
+    "keyDefinition": "Expressão avaliada como True ou False.",
+    "concept": "Comparações produzem valores lógicos que podem controlar decisões.",
+    "example": "if tempo < 60: print('Missão rápida')",
+    "formula": "entender → prever → escrever → executar → explicar",
+    "representation": "> < >= <= == !=",
+    "use": "Validação, jogos, sensores e automação.",
+    "observe": "= atribui valor; == testa igualdade.",
+    "guided": "Teste comparações com tempos e pontuações antes de escrever um if.",
+    "challenge": "Como testar se pontuacao é exatamente 100?",
+    "answer": "pontuacao == 100",
+    "reference": "RCO 8º ano · Aula 47 · EF08CO04/EF69CO02.",
+    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
+    "fixation": [
+      {
+        "q": "Qual é o conceito central?",
+        "a": "Expressão avaliada como True ou False."
+      },
+      {
+        "q": "O que você deve fazer antes de executar?",
+        "a": "Prever o resultado e explicar o raciocínio."
+      },
+      {
+        "q": "Como verificar a solução?",
+        "a": "pontuacao == 100"
+      }
+    ]
+  },
+  {
+    "year": 8,
+    "section": "prog",
+    "id": "pr8-48",
+    "topic": "Aula 48 · Decisões com if/else",
+    "icon": "🚦",
+    "axis": "Programação",
+    "objective": "Construir decisões com if/else e explicar os dois caminhos possíveis.",
+    "keyTerm": "if/else",
+    "keyDefinition": "Estrutura que escolhe entre caminhos conforme uma condição.",
+    "concept": "Decisões computacionais associam uma condição a ações diferentes.",
+    "example": "if caminho_livre: avance() else: vire()",
+    "formula": "entender → prever → escrever → executar → explicar",
+    "representation": "if condição: ação • else: alternativa",
+    "use": "Robótica, jogos e classificações.",
+    "observe": "A indentação define os blocos do Python.",
+    "guided": "Transforme uma decisão do robô Marquinhos em código Python.",
+    "challenge": "Se tentativas < 3, continuar; caso contrário, encerrar.",
+    "answer": "if tentativas < 3: continuar; else: encerrar.",
+    "reference": "RCO 8º ano · Aula 48 · EF08CO04/EF69CO02.",
+    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
+    "fixation": [
+      {
+        "q": "Qual é o conceito central?",
+        "a": "Estrutura que escolhe entre caminhos conforme uma condição."
+      },
+      {
+        "q": "O que você deve fazer antes de executar?",
+        "a": "Prever o resultado e explicar o raciocínio."
+      },
+      {
+        "q": "Como verificar a solução?",
+        "a": "if tentativas < 3: continuar; else: encerrar."
+      }
+    ]
+  },
+  {
+    "year": 8,
+    "section": "prog",
+    "id": "pr8-49",
+    "topic": "Aula 49 · Listas, índices e slicing",
+    "icon": "📚",
+    "axis": "Programação",
+    "objective": "Criar listas e acessar elementos por índices e fatiamento.",
+    "keyTerm": "índice",
+    "keyDefinition": "Posição usada para acessar um elemento de uma sequência.",
+    "concept": "Listas organizam coleções; índices localizam itens e slicing seleciona intervalos.",
+    "example": "pecas=['triângulo','quadrado','paralelogramo']; pecas[0]",
+    "formula": "entender → prever → escrever → executar → explicar",
+    "representation": "lista[0] • lista[-1] • lista[início:fim:passo]",
+    "use": "Inventários, rankings e registros.",
+    "observe": "O primeiro índice de uma lista Python é 0.",
+    "guided": "Crie uma lista das peças e acesse primeira, última e um intervalo.",
+    "challenge": "Como obter os três primeiros itens de lista?",
+    "answer": "lista[:3]",
+    "reference": "RCO 8º ano · Aula 49 · EF08CO02.",
+    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
+    "fixation": [
+      {
+        "q": "Qual é o conceito central?",
+        "a": "Posição usada para acessar um elemento de uma sequência."
+      },
+      {
+        "q": "O que você deve fazer antes de executar?",
+        "a": "Prever o resultado e explicar o raciocínio."
+      },
+      {
+        "q": "Como verificar a solução?",
+        "a": "lista[:3]"
+      }
+    ]
+  },
+  {
+    "year": 8,
+    "section": "prog",
+    "id": "pr8-50",
+    "topic": "Aula 50 · Manipulando listas",
+    "icon": "🧰",
+    "axis": "Programação",
+    "objective": "Usar append, insert, remove, pop e o operador in.",
+    "keyTerm": "método de lista",
+    "keyDefinition": "Operação associada a uma lista para alterar ou consultar sua coleção.",
+    "concept": "Listas podem crescer, mudar e ser consultadas durante a execução.",
+    "example": "pecas.append('quadrado'); 'quadrado' in pecas",
+    "formula": "entender → prever → escrever → executar → explicar",
+    "representation": "append • insert • remove • pop • in",
+    "use": "Inventários, jogadores e tarefas.",
+    "observe": "remove procura valor; pop retira por índice ou, sem argumento, o último item.",
+    "guided": "Faça uma sequência de operações no inventário e preveja a lista após cada linha.",
+    "challenge": "Como remover quadrado somente se ele existir?",
+    "answer": "if 'quadrado' in pecas: pecas.remove('quadrado')",
+    "reference": "RCO 8º ano · Aula 50 · EF08CO02.",
+    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
+    "fixation": [
+      {
+        "q": "Qual é o conceito central?",
+        "a": "Operação associada a uma lista para alterar ou consultar sua coleção."
+      },
+      {
+        "q": "O que você deve fazer antes de executar?",
+        "a": "Prever o resultado e explicar o raciocínio."
+      },
+      {
+        "q": "Como verificar a solução?",
+        "a": "if 'quadrado' in pecas: pecas.remove('quadrado')"
+      }
+    ]
+  },
+  {
+    "year": 8,
+    "section": "prog",
+    "id": "pr8-51",
+    "topic": "Aula 51 · Repetição com for e range",
+    "icon": "🔁",
+    "axis": "Programação",
+    "objective": "Automatizar repetições com for/range e comunicar resultados com f-strings.",
+    "keyTerm": "iteração",
+    "keyDefinition": "Execução repetida de um bloco para elementos ou valores de uma sequência.",
+    "concept": "for percorre sequências e evita repetir manualmente o mesmo comando.",
+    "example": "for i in range(3): print(f'Rodada {i+1}')",
+    "formula": "entender → prever → escrever → executar → explicar",
+    "representation": "for item in sequência → ação",
+    "use": "Listas, relatórios, jogos e automação.",
+    "observe": "O limite final de range não é incluído.",
+    "guided": "Compare três prints manuais com a versão usando for.",
+    "challenge": "Como mostrar Rodada 1, 2 e 3?",
+    "answer": "for i in range(3): print(f'Rodada {i+1}')",
+    "reference": "RCO 8º ano · Aula 51 · EF08CO02/EF69CO02.",
+    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
+    "fixation": [
+      {
+        "q": "Qual é o conceito central?",
+        "a": "Execução repetida de um bloco para elementos ou valores de uma sequência."
+      },
+      {
+        "q": "O que você deve fazer antes de executar?",
+        "a": "Prever o resultado e explicar o raciocínio."
+      },
+      {
+        "q": "Como verificar a solução?",
+        "a": "for i in range(3): print(f'Rodada {i+1}')"
+      }
+    ]
+  },
+  {
+    "year": 8,
+    "section": "prog",
+    "id": "pr8-52",
+    "topic": "Aula 52 · Repetição com while",
+    "icon": "🔄",
+    "axis": "Programação",
+    "objective": "Construir repetições condicionais com while e controlar sua interrupção.",
+    "keyTerm": "while",
+    "keyDefinition": "Laço que repete enquanto sua condição for verdadeira.",
+    "concept": "while é útil quando a quantidade de repetições depende de uma condição.",
+    "example": "while not concluido: tentar()",
+    "formula": "entender → prever → escrever → executar → explicar",
+    "representation": "while condição → repetir • break → interromper",
+    "use": "Tentativas, sensores, menus e jogos.",
+    "observe": "A condição precisa poder mudar para que o laço possa terminar.",
+    "guided": "Simule tentativas até acertar e identifique a condição de parada.",
+    "challenge": "Quando while é mais adequado que for?",
+    "answer": "Quando a repetição depende de uma condição, e não de uma quantidade previamente definida.",
+    "reference": "RCO 8º ano · Aula 52 · EF08CO04/EF69CO02.",
+    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
+    "fixation": [
+      {
+        "q": "Qual é o conceito central?",
+        "a": "Laço que repete enquanto sua condição for verdadeira."
+      },
+      {
+        "q": "O que você deve fazer antes de executar?",
+        "a": "Prever o resultado e explicar o raciocínio."
+      },
+      {
+        "q": "Como verificar a solução?",
+        "a": "Quando a repetição depende de uma condição, e não de uma quantidade previamente definida."
+      }
+    ]
+  },
+  {
+    "year": 8,
+    "section": "prog",
+    "id": "pr8-53",
+    "topic": "Aula 53 · Listas, for e enumerate",
+    "icon": "🏁",
+    "axis": "Programação",
+    "objective": "Percorrer listas relacionando posição e valor com enumerate().",
+    "keyTerm": "enumerate",
+    "keyDefinition": "Função que permite percorrer uma sequência obtendo contador e valor.",
+    "concept": "Combinar listas e laços permite processar conjuntos de dados e construir rankings.",
+    "example": "for pos,tempo in enumerate(tempos,start=1): print(pos,tempo)",
+    "formula": "entender → prever → escrever → executar → explicar",
+    "representation": "lista → enumerate → posição + valor",
+    "use": "Rankings, inventários e relatórios.",
+    "observe": "enumerate não ordena a lista.",
+    "guided": "Percorra tempos do Tangram e mostre posição e valor.",
+    "challenge": "Como iniciar a numeração em 1?",
+    "answer": "enumerate(lista, start=1)",
+    "reference": "RCO 8º ano · Aula 53 · EF08CO02/EF08CO04.",
+    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
+    "fixation": [
+      {
+        "q": "Qual é o conceito central?",
+        "a": "Função que permite percorrer uma sequência obtendo contador e valor."
+      },
+      {
+        "q": "O que você deve fazer antes de executar?",
+        "a": "Prever o resultado e explicar o raciocínio."
+      },
+      {
+        "q": "Como verificar a solução?",
+        "a": "enumerate(lista, start=1)"
+      }
+    ]
+  },
+  {
+    "year": 8,
+    "section": "prog",
+    "id": "pr8-54",
+    "topic": "Aula 54 · Aleatoriedade e valores únicos",
+    "icon": "🎲",
+    "axis": "Programação",
+    "objective": "Usar random.randint, while e pertencimento para gerar valores sem repetição.",
+    "keyTerm": "random.randint",
+    "keyDefinition": "Função que gera um inteiro pseudoaleatório dentro de um intervalo informado.",
+    "concept": "Aleatoriedade cria desafios; in/not in ajuda a controlar duplicatas.",
+    "example": "n=random.randint(1,10); if n not in sorteados: sorteados.append(n)",
+    "formula": "entender → prever → escrever → executar → explicar",
+    "representation": "sortear → verificar → aceitar ou repetir",
+    "use": "Jogos, sorteios e simulações.",
+    "observe": "Não peça mais valores únicos do que o conjunto possível oferece.",
+    "guided": "Gere cinco desafios numerados sem repetição.",
+    "challenge": "Por que 11 números únicos entre 1 e 10 não podem ser gerados?",
+    "answer": "Porque há apenas 10 valores possíveis; a condição jamais poderá ser satisfeita para o 11º.",
+    "reference": "RCO 8º ano · Aula 54 · EF08CO02/EF08CO04.",
+    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
+    "fixation": [
+      {
+        "q": "Qual é o conceito central?",
+        "a": "Função que gera um inteiro pseudoaleatório dentro de um intervalo informado."
+      },
+      {
+        "q": "O que você deve fazer antes de executar?",
+        "a": "Prever o resultado e explicar o raciocínio."
+      },
+      {
+        "q": "Como verificar a solução?",
+        "a": "Porque há apenas 10 valores possíveis; a condição jamais poderá ser satisfeita para o 11º."
       }
     ]
   },
