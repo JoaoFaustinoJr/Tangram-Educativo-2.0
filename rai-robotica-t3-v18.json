@@ -395,6 +395,43 @@
   {
     "year": 6,
     "section": "robotics",
+    "id": "rb6-tecnologia-campo-jaboti",
+    "topic": "🌱 Tecnologia no campo: sensores, automação e Jaboti",
+    "title": "Tecnologia no campo: observar, programar e automatizar",
+    "icon": "🌱",
+    "axis": "Robótica, programação e agricultura",
+    "objective": "Relacionar sensores, dados, decisões e atuadores a situações reais da agricultura e pecuária próximas da realidade de Jaboti.",
+    "keyTerm": "automação agrícola",
+    "keyDefinition": "Uso de sensores, programas e equipamentos para acompanhar condições e executar ou apoiar tarefas no campo.",
+    "concept": "No 6º ano, a tecnologia no campo pode ser entendida como um sistema: sensores coletam dados; o programa compara os valores com condições; uma pessoa ou um equipamento toma uma ação. Estufas de morango, produção de leite, tratores com GPS, monitoramento do gado e lavouras de soja e trigo permitem visualizar essa lógica.",
+    "example": "🍓 Sensor de umidade → dado → SE o solo estiver abaixo do limite → 💧 avisar ou irrigar. 🐄 Na produção de leite, equipamentos auxiliam a ordenha e o resfriamento; sensores e registros ajudam a acompanhar o processo.",
+    "formula": "🌡️📡 sensor → 📊 dado → ❓ condição → 🧠 decisão → ⚙️ atuador → 🔁 monitorar",
+    "representation": "ENTRADA 📡 → PROCESSAMENTO 🧠 → SAÍDA ⚙️",
+    "use": "Estufas, irrigação, ordenha, resfriamento do leite, tratores com GPS, monitoramento de animais, soja, trigo e controle ambiental.",
+    "observe": "Automatizar não significa agir sem critérios. O sistema precisa de limites, testes, manutenção e supervisão humana.",
+    "guided": "Escolha um problema do campo e decomponha-o: 1) o que medir? 2) qual dado será obtido? 3) qual condição será testada? 4) qual ação poderá ocorrer? 5) como verificar se funcionou?",
+    "challenge": "Em uma estufa de morangos, queremos evitar irrigação desnecessária. Construa um algoritmo em linguagem natural usando uma condição.",
+    "answer": "Exemplo: medir a umidade do solo → SE estiver abaixo do limite definido, avisar ou acionar a irrigação → SENÃO, manter a irrigação desligada → medir novamente depois.",
+    "reference": "Contextualização didática de automação agrícola para Jaboti/PR; integração com fundamentos de algoritmo, sensores e robótica do 6º ano.",
+    "teacherTip": "Diferencie do 5º ano: aqui o aluno deve transformar a situação agrícola em entrada, processamento, condição e saída. Pode ser encenado antes do LEGO: aluno-sensor → aluno-programa → aluno-atuador.",
+    "fixation": [
+      {
+        "q": "Qual é o papel de um sensor?",
+        "a": "Observar uma grandeza do ambiente e fornecer um dado ao sistema."
+      },
+      {
+        "q": "O que acontece entre o sensor e o atuador?",
+        "a": "O dado é processado segundo regras ou condições para apoiar uma decisão."
+      },
+      {
+        "q": "Como representar uma irrigação simples?",
+        "a": "Sensor mede → programa verifica a condição → sistema avisa ou aciona a irrigação → volta a monitorar."
+      }
+    ]
+  },
+  {
+    "year": 6,
+    "section": "robotics",
     "id": "rb6-primeiros-robos",
     "topic": "Dos primeiros robôs aos robôs programáveis",
     "title": "Dos primeiros robôs aos robôs programáveis",
