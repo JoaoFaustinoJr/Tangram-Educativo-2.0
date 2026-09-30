@@ -902,3 +902,19 @@ header>.rai-float.rai-x1>.header-tangram-exact{
  #lessons-panel .tea-one-block>.adapt-compact-guide{position:sticky;top:0;z-index:8}
  #lessons-panel .tea-one-block>.adapt-step{min-height:64vh!important;margin:0!important;padding:18px!important}
 }
+
+/* v2.0.177 — TEA: ludicidade funcional, sequência visual natureza */
+.tea-play-guide{flex-wrap:wrap!important}
+.tea-play-guide>span{font-weight:900!important}
+.tea-nature-seq{flex:1 0 100%;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:5px;padding:7px 10px;border-radius:12px;background:rgba(3,31,43,.36);font-size:1.05rem}
+.tea-nature-seq i{display:grid!important;place-items:center;width:34px!important;height:34px!important;border-radius:50%;font-style:normal;opacity:.34;filter:saturate(.65);transition:transform .25s ease,opacity .25s ease,background .25s ease}
+.tea-nature-seq i.active{opacity:1;filter:none;transform:scale(1.12);background:rgba(255,217,104,.14);outline:1px solid rgba(255,217,104,.45)}
+.tea-nature-seq i.done{opacity:.7;filter:none}
+.tea-nature-seq em{font-style:normal;opacity:.3}
+.tea-one-block>.adapt-step{border-color:rgba(69,235,214,.32)!important}
+.tea-one-block>.adapt-step:nth-of-type(4n+1){--tea-accent:#62e6d1}
+.tea-one-block>.adapt-step:nth-of-type(4n+2){--tea-accent:#ffd968}
+.tea-one-block>.adapt-step:nth-of-type(4n+3){--tea-accent:#b99cff}
+.tea-one-block>.adapt-step:nth-of-type(4n){--tea-accent:#8ee59b}
+.tea-one-block>.adapt-step>.adapt-step-head{border-left:4px solid var(--tea-accent,#62e6d1)!important}
+@media(prefers-reduced-motion:reduce){.tea-nature-seq i{transition:none!important}.tea-nature-seq i.active{transform:none!important}}
