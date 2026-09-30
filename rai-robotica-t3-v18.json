@@ -15,7 +15,8 @@
     "challenge": "Antes de iniciar uma montagem, defina quatro responsabilidades para sua equipe.",
     "answer": "Exemplo: separar peças, montar, programar e conferir/organizar.",
     "reference": "Oficina de Robótica SESI — prática pedagógica do Prof. João Faustino Júnior.",
-    "teacherTip": "Reforce esperar a vez, não derrubar peças, manter a mesa organizada e conferir o kit ao final."
+    "teacherTip": "Reforce esperar a vez, não derrubar peças, manter a mesa organizada e conferir o kit ao final.",
+    "topic": "Oficina: equipe, organização e responsabilidade"
   },
   {
     "id": "rb5-sesi-algoritmo-robo",
@@ -33,7 +34,8 @@
     "challenge": "Escreva um algoritmo para o Robô Marquinhos sair de sua mesa e chegar até a porta sem usar o comando genérico 'saia da sala'.",
     "answer": "A resposta varia conforme a sala, mas deve conter passos pequenos, claros, ordenados e suficientes para completar o percurso.",
     "reference": "Oficina de Robótica SESI — prática pedagógica do Prof. João Faustino Júnior.",
-    "teacherTip": "Faça primeiro a dramatização. Execute literalmente instruções ambíguas para mostrar por que o computador não pode adivinhar a intenção."
+    "teacherTip": "Faça primeiro a dramatização. Execute literalmente instruções ambíguas para mostrar por que o computador não pode adivinhar a intenção.",
+    "topic": "Oficina: o robô precisa de todas as etapas"
   },
   {
     "id": "rb5-sesi-maquinas-lego",
@@ -88,6 +90,79 @@
         "q": "O que deve ser verificado se o mecanismo trava?",
         "a": "Encaixe dos dentes, alinhamento dos eixos, firmeza da estrutura e depois a programação."
       }
+    ],
+    "title": "Oficina SESI: engrenagens, força e velocidade"
+  },
+  {
+    "year": 5,
+    "section": "robotics",
+    "id": "rb5-historia",
+    "topic": "História da robótica: dos autômatos aos robôs",
+    "title": "História da robótica: dos autômatos aos robôs",
+    "icon": "🤖",
+    "axis": "Cultura, história e ética da robótica",
+    "objective": "Compreender história da robótica e relacioná-lo ao desenvolvimento da robótica e às decisões humanas sobre tecnologia.",
+    "keyTerm": "história da robótica",
+    "keyDefinition": "A robótica não surgiu de uma única invenção.",
+    "concept": "A robótica não surgiu de uma única invenção. Autômatos mecânicos antigos e modernos antecederam máquinas programáveis; no século XX, eletrônica, controle e computação permitiram o desenvolvimento dos robôs modernos.",
+    "example": "Analise exemplos históricos e compare o que mudou entre mecanismos automáticos, robôs programáveis e sistemas atuais.",
+    "representation": "história → tecnologia → sociedade → responsabilidade",
+    "use": "Projetos de robótica, cultura tecnológica, indústria, pesquisa e discussão ética.",
+    "observe": "Robôs não possuem responsabilidade moral própria: projeto, programação, comando e uso envolvem decisões humanas e instituições.",
+    "guided": "Organize uma pequena linha do tempo ou mapa de ideias com os fatos principais da aula.",
+    "challenge": "Crie quatro marcos para uma linha do tempo da robótica.",
+    "answer": "Exemplo: autômatos → máquinas automáticas → robôs industriais → robôs móveis e colaborativos.",
+    "reference": "Síntese didática baseada em história da tecnologia e robótica; referências gerais: Encyclopaedia Britannica; International Federation of Robotics; textos de Isaac Asimov sobre as Três Leis.",
+    "teacherTip": "Diferencie fatos históricos, ficção científica e debate ético. Estimule perguntas e comparação de fontes.",
+    "fixation": [
+      {
+        "q": "Qual é a ideia central de “história da robótica” nesta aula?",
+        "a": "A robótica não surgiu de uma única invenção. Autômatos mecânicos antigos e modernos antecederam máquinas programáveis; no século XX, eletrônica, controle e computação permitiram o desenvolvimento dos robôs modernos."
+      },
+      {
+        "q": "Por que esse tema é importante para quem aprende robótica?",
+        "a": "Porque ajuda a compreender como a tecnologia foi construída, aplicada e regulada por decisões humanas."
+      },
+      {
+        "q": "Qual cuidado devemos ter ao estudar robótica?",
+        "a": "Separar fatos históricos, possibilidades técnicas, ficção científica e questões éticas."
+      }
+    ]
+  },
+  {
+    "year": 5,
+    "section": "robotics",
+    "id": "rb5-automatos",
+    "topic": "Autômatos: máquinas que imitam movimentos",
+    "title": "Autômatos: máquinas que imitam movimentos",
+    "icon": "🤖",
+    "axis": "Cultura, história e ética da robótica",
+    "objective": "Compreender autômato e relacioná-lo ao desenvolvimento da robótica e às decisões humanas sobre tecnologia.",
+    "keyTerm": "autômato",
+    "keyDefinition": "Autômato é um mecanismo capaz de executar movimentos ou sequências por meio de engrenagens, molas, pesos, água ou outros sistemas, sem ser necessariamente um robô eletrônico programável.",
+    "concept": "Autômato é um mecanismo capaz de executar movimentos ou sequências por meio de engrenagens, molas, pesos, água ou outros sistemas, sem ser necessariamente um robô eletrônico programável.",
+    "example": "Analise exemplos históricos e compare o que mudou entre mecanismos automáticos, robôs programáveis e sistemas atuais.",
+    "representation": "história → tecnologia → sociedade → responsabilidade",
+    "use": "Projetos de robótica, cultura tecnológica, indústria, pesquisa e discussão ética.",
+    "observe": "Robôs não possuem responsabilidade moral própria: projeto, programação, comando e uso envolvem decisões humanas e instituições.",
+    "guided": "Organize uma pequena linha do tempo ou mapa de ideias com os fatos principais da aula.",
+    "challenge": "Explique uma diferença entre um autômato mecânico e um robô programável.",
+    "answer": "O autômato pode repetir um mecanismo previamente construído; um robô programável pode executar comportamentos definidos ou alterados por programação.",
+    "reference": "Síntese didática baseada em história da tecnologia e robótica; referências gerais: Encyclopaedia Britannica; International Federation of Robotics; textos de Isaac Asimov sobre as Três Leis.",
+    "teacherTip": "Diferencie fatos históricos, ficção científica e debate ético. Estimule perguntas e comparação de fontes.",
+    "fixation": [
+      {
+        "q": "Qual é a ideia central de “autômato” nesta aula?",
+        "a": "Autômato é um mecanismo capaz de executar movimentos ou sequências por meio de engrenagens, molas, pesos, água ou outros sistemas, sem ser necessariamente um robô eletrônico programável."
+      },
+      {
+        "q": "Por que esse tema é importante para quem aprende robótica?",
+        "a": "Porque ajuda a compreender como a tecnologia foi construída, aplicada e regulada por decisões humanas."
+      },
+      {
+        "q": "Qual cuidado devemos ter ao estudar robótica?",
+        "a": "Separar fatos históricos, possibilidades técnicas, ficção científica e questões éticas."
+      }
     ]
   },
   {
@@ -123,7 +198,8 @@
         "q": "Por que testar etapas separadamente?",
         "a": "Para localizar erros e melhorar a solução com mais facilidade."
       }
-    ]
+    ],
+    "title": "Decomposição: do problema às etapas"
   },
   {
     "id": "rob6t3-2",
@@ -158,7 +234,8 @@
         "q": "Robôs podem trocar dados?",
         "a": "Sim, por diferentes meios e protocolos de comunicação."
       }
-    ]
+    ],
+    "title": "Como os dados viajam"
   },
   {
     "id": "rob6t3-3",
@@ -193,7 +270,8 @@
         "q": "O que cria movimento numa animação?",
         "a": "Mudanças sucessivas de posição."
       }
-    ]
+    ],
+    "title": "Coordenadas e simulação"
   },
   {
     "id": "rob6t3-4",
@@ -227,6 +305,79 @@
       {
         "q": "Dados de sensores podem ser analisados?",
         "a": "Sim, inclusive com fórmulas e gráficos."
+      }
+    ],
+    "title": "Dados, tabelas e gráficos"
+  },
+  {
+    "year": 6,
+    "section": "robotics",
+    "id": "rb6-primeiros-robos",
+    "topic": "Dos primeiros robôs aos robôs programáveis",
+    "title": "Dos primeiros robôs aos robôs programáveis",
+    "icon": "🤖",
+    "axis": "Cultura, história e ética da robótica",
+    "objective": "Compreender robô programável e relacioná-lo ao desenvolvimento da robótica e às decisões humanas sobre tecnologia.",
+    "keyTerm": "robô programável",
+    "keyDefinition": "A palavra robot foi popularizada na peça R.",
+    "concept": "A palavra robot foi popularizada na peça R.U.R., de Karel Čapek, publicada em 1920. Décadas depois surgiram máquinas programáveis para tarefas industriais; o Unimate tornou-se um marco da robótica industrial no início dos anos 1960.",
+    "example": "Analise exemplos históricos e compare o que mudou entre mecanismos automáticos, robôs programáveis e sistemas atuais.",
+    "representation": "história → tecnologia → sociedade → responsabilidade",
+    "use": "Projetos de robótica, cultura tecnológica, indústria, pesquisa e discussão ética.",
+    "observe": "Robôs não possuem responsabilidade moral própria: projeto, programação, comando e uso envolvem decisões humanas e instituições.",
+    "guided": "Organize uma pequena linha do tempo ou mapa de ideias com os fatos principais da aula.",
+    "challenge": "Por que o Unimate é um marco diferente dos autômatos antigos?",
+    "answer": "Porque representa a aplicação de uma máquina programável em tarefas industriais, em vez de apenas reproduzir um mecanismo de demonstração.",
+    "reference": "Síntese didática baseada em história da tecnologia e robótica; referências gerais: Encyclopaedia Britannica; International Federation of Robotics; textos de Isaac Asimov sobre as Três Leis.",
+    "teacherTip": "Diferencie fatos históricos, ficção científica e debate ético. Estimule perguntas e comparação de fontes.",
+    "fixation": [
+      {
+        "q": "Qual é a ideia central de “robô programável” nesta aula?",
+        "a": "A palavra robot foi popularizada na peça R.U.R., de Karel Čapek, publicada em 1920. Décadas depois surgiram máquinas programáveis para tarefas industriais; o Unimate tornou-se um marco da robótica industrial no início dos anos 1960."
+      },
+      {
+        "q": "Por que esse tema é importante para quem aprende robótica?",
+        "a": "Porque ajuda a compreender como a tecnologia foi construída, aplicada e regulada por decisões humanas."
+      },
+      {
+        "q": "Qual cuidado devemos ter ao estudar robótica?",
+        "a": "Separar fatos históricos, possibilidades técnicas, ficção científica e questões éticas."
+      }
+    ]
+  },
+  {
+    "year": 6,
+    "section": "robotics",
+    "id": "rb6-asimov",
+    "topic": "Isaac Asimov e as Três Leis da Robótica",
+    "title": "Isaac Asimov e as Três Leis da Robótica",
+    "icon": "🤖",
+    "axis": "Cultura, história e ética da robótica",
+    "objective": "Compreender Três Leis da Robótica e relacioná-lo ao desenvolvimento da robótica e às decisões humanas sobre tecnologia.",
+    "keyTerm": "Três Leis da Robótica",
+    "keyDefinition": "Isaac Asimov foi um escritor de ficção científica que formulou as Três Leis da Robótica como recurso literário.",
+    "concept": "Isaac Asimov foi um escritor de ficção científica que formulou as Três Leis da Robótica como recurso literário. Elas influenciaram discussões culturais sobre robôs, mas não são leis jurídicas nem regras técnicas universais usadas para programar robôs reais.",
+    "example": "Analise exemplos históricos e compare o que mudou entre mecanismos automáticos, robôs programáveis e sistemas atuais.",
+    "representation": "história → tecnologia → sociedade → responsabilidade",
+    "use": "Projetos de robótica, cultura tecnológica, indústria, pesquisa e discussão ética.",
+    "observe": "Robôs não possuem responsabilidade moral própria: projeto, programação, comando e uso envolvem decisões humanas e instituições.",
+    "guided": "Organize uma pequena linha do tempo ou mapa de ideias com os fatos principais da aula.",
+    "challenge": "As Três Leis de Asimov controlam os robôs reais? Justifique.",
+    "answer": "Não. Elas foram criadas para obras de ficção e para explorar dilemas; robôs reais seguem projetos, software, normas e comandos definidos por pessoas e organizações.",
+    "reference": "Síntese didática baseada em história da tecnologia e robótica; referências gerais: Encyclopaedia Britannica; International Federation of Robotics; textos de Isaac Asimov sobre as Três Leis.",
+    "teacherTip": "Diferencie fatos históricos, ficção científica e debate ético. Estimule perguntas e comparação de fontes.",
+    "fixation": [
+      {
+        "q": "Qual é a ideia central de “Três Leis da Robótica” nesta aula?",
+        "a": "Isaac Asimov foi um escritor de ficção científica que formulou as Três Leis da Robótica como recurso literário. Elas influenciaram discussões culturais sobre robôs, mas não são leis jurídicas nem regras técnicas universais usadas para programar robôs reais."
+      },
+      {
+        "q": "Por que esse tema é importante para quem aprende robótica?",
+        "a": "Porque ajuda a compreender como a tecnologia foi construída, aplicada e regulada por decisões humanas."
+      },
+      {
+        "q": "Qual cuidado devemos ter ao estudar robótica?",
+        "a": "Separar fatos históricos, possibilidades técnicas, ficção científica e questões éticas."
       }
     ]
   },
@@ -263,7 +414,8 @@
         "q": "Qual vantagem do laço?",
         "a": "Reduz repetição e torna o algoritmo mais organizado."
       }
-    ]
+    ],
+    "title": "Repetição e contagem regressiva"
   },
   {
     "id": "rob7t3-2",
@@ -298,7 +450,8 @@
         "q": "Reúso ajuda por quê?",
         "a": "Evita duplicação e facilita alterações."
       }
-    ]
+    ],
+    "title": "Padrões, recorrência e arte algorítmica"
   },
   {
     "id": "rob7t3-3",
@@ -333,7 +486,8 @@
         "q": "Funções ajudam na decomposição?",
         "a": "Sim, cada uma pode representar uma subtarefa."
       }
-    ]
+    ],
+    "title": "Funções e reúso de código"
   },
   {
     "id": "rob7t3-4",
@@ -367,6 +521,43 @@
       {
         "q": "Respeito digital faz parte da cidadania?",
         "a": "Sim."
+      }
+    ],
+    "title": "Cyberbullying e cidadania digital"
+  },
+  {
+    "year": 7,
+    "section": "robotics",
+    "id": "rb7-industria",
+    "topic": "Robôs na indústria: precisão, repetição e segurança",
+    "title": "Robôs na indústria: precisão, repetição e segurança",
+    "icon": "🤖",
+    "axis": "Cultura, história e ética da robótica",
+    "objective": "Compreender robótica industrial e relacioná-lo ao desenvolvimento da robótica e às decisões humanas sobre tecnologia.",
+    "keyTerm": "robótica industrial",
+    "keyDefinition": "Robôs industriais são máquinas controladas automaticamente e reprogramáveis, usadas em tarefas como soldagem, movimentação, pintura e montagem.",
+    "concept": "Robôs industriais são máquinas controladas automaticamente e reprogramáveis, usadas em tarefas como soldagem, movimentação, pintura e montagem. Eles podem aumentar repetibilidade e afastar pessoas de algumas tarefas perigosas, mas exigem projeto e segurança adequados.",
+    "example": "Analise exemplos históricos e compare o que mudou entre mecanismos automáticos, robôs programáveis e sistemas atuais.",
+    "representation": "história → tecnologia → sociedade → responsabilidade",
+    "use": "Projetos de robótica, cultura tecnológica, indústria, pesquisa e discussão ética.",
+    "observe": "Robôs não possuem responsabilidade moral própria: projeto, programação, comando e uso envolvem decisões humanas e instituições.",
+    "guided": "Organize uma pequena linha do tempo ou mapa de ideias com os fatos principais da aula.",
+    "challenge": "Escolha uma tarefa industrial e explique por que um robô pode ser adequado a ela.",
+    "answer": "Exemplo: soldagem repetitiva, porque exige trajetórias precisas e pode expor trabalhadores a calor, fumaça e riscos.",
+    "reference": "Síntese didática baseada em história da tecnologia e robótica; referências gerais: Encyclopaedia Britannica; International Federation of Robotics; textos de Isaac Asimov sobre as Três Leis.",
+    "teacherTip": "Diferencie fatos históricos, ficção científica e debate ético. Estimule perguntas e comparação de fontes.",
+    "fixation": [
+      {
+        "q": "Qual é a ideia central de “robótica industrial” nesta aula?",
+        "a": "Robôs industriais são máquinas controladas automaticamente e reprogramáveis, usadas em tarefas como soldagem, movimentação, pintura e montagem. Eles podem aumentar repetibilidade e afastar pessoas de algumas tarefas perigosas, mas exigem projeto e segurança adequados."
+      },
+      {
+        "q": "Por que esse tema é importante para quem aprende robótica?",
+        "a": "Porque ajuda a compreender como a tecnologia foi construída, aplicada e regulada por decisões humanas."
+      },
+      {
+        "q": "Qual cuidado devemos ter ao estudar robótica?",
+        "a": "Separar fatos históricos, possibilidades técnicas, ficção científica e questões éticas."
       }
     ]
   },
@@ -403,7 +594,8 @@
         "q": "Qual algoritmo aparece na proposta curricular?",
         "a": "Entre os métodos trabalhados, insertion sort."
       }
-    ]
+    ],
+    "title": "Listas e algoritmos de ordenação"
   },
   {
     "id": "rob8t3-2",
@@ -438,7 +630,8 @@
         "q": "Valor extremo afeta mais qual medida?",
         "a": "Em geral, a média."
       }
-    ]
+    ],
+    "title": "Média, mediana e dados"
   },
   {
     "id": "rob8t3-3",
@@ -473,7 +666,8 @@
         "q": "Fractais podem usar recursão?",
         "a": "Sim."
       }
-    ]
+    ],
+    "title": "Recursão: uma solução chama a si mesma"
   },
   {
     "id": "rob8t3-4",
@@ -507,6 +701,43 @@
       {
         "q": "Reúso reduz blocos duplicados?",
         "a": "Sim."
+      }
+    ],
+    "title": "Geometria e arte generativa"
+  },
+  {
+    "year": 8,
+    "section": "robotics",
+    "id": "rb8-etica-leis",
+    "topic": "As Leis da Robótica: ficção, ética e realidade",
+    "title": "As Leis da Robótica: ficção, ética e realidade",
+    "icon": "🤖",
+    "axis": "Cultura, história e ética da robótica",
+    "objective": "Compreender ética em robótica e relacioná-lo ao desenvolvimento da robótica e às decisões humanas sobre tecnologia.",
+    "keyTerm": "ética em robótica",
+    "keyDefinition": "As leis de Asimov são ficcionais e ajudam a discutir conflitos entre segurança, obediência e autonomia.",
+    "concept": "As leis de Asimov são ficcionais e ajudam a discutir conflitos entre segurança, obediência e autonomia. Na realidade, segurança robótica depende de engenharia, normas, avaliação de risco, supervisão e responsabilidade humana.",
+    "example": "Analise exemplos históricos e compare o que mudou entre mecanismos automáticos, robôs programáveis e sistemas atuais.",
+    "representation": "história → tecnologia → sociedade → responsabilidade",
+    "use": "Projetos de robótica, cultura tecnológica, indústria, pesquisa e discussão ética.",
+    "observe": "Robôs não possuem responsabilidade moral própria: projeto, programação, comando e uso envolvem decisões humanas e instituições.",
+    "guided": "Organize uma pequena linha do tempo ou mapa de ideias com os fatos principais da aula.",
+    "challenge": "Dê um exemplo de situação em que uma regra simples seria insuficiente para decidir o que um robô deve fazer.",
+    "answer": "Um robô em ambiente com pessoas pode enfrentar objetivos conflitantes; é necessário avaliar contexto, riscos, limites técnicos e responsabilidade humana.",
+    "reference": "Síntese didática baseada em história da tecnologia e robótica; referências gerais: Encyclopaedia Britannica; International Federation of Robotics; textos de Isaac Asimov sobre as Três Leis.",
+    "teacherTip": "Diferencie fatos históricos, ficção científica e debate ético. Estimule perguntas e comparação de fontes.",
+    "fixation": [
+      {
+        "q": "Qual é a ideia central de “ética em robótica” nesta aula?",
+        "a": "As leis de Asimov são ficcionais e ajudam a discutir conflitos entre segurança, obediência e autonomia. Na realidade, segurança robótica depende de engenharia, normas, avaliação de risco, supervisão e responsabilidade humana."
+      },
+      {
+        "q": "Por que esse tema é importante para quem aprende robótica?",
+        "a": "Porque ajuda a compreender como a tecnologia foi construída, aplicada e regulada por decisões humanas."
+      },
+      {
+        "q": "Qual cuidado devemos ter ao estudar robótica?",
+        "a": "Separar fatos históricos, possibilidades técnicas, ficção científica e questões éticas."
       }
     ]
   },
@@ -543,7 +774,8 @@
         "q": "Funções organizam tarefas reutilizáveis?",
         "a": "Sim."
       }
-    ]
+    ],
+    "title": "JavaScript: lógica em linguagem textual"
   },
   {
     "id": "rob9t3-2",
@@ -578,7 +810,8 @@
         "q": "Separar responsabilidades ajuda a depurar?",
         "a": "Sim."
       }
-    ]
+    ],
+    "title": "Jogo espacial: movimento, colisão e dificuldade"
   },
   {
     "id": "rob9t3-3",
@@ -613,7 +846,8 @@
         "q": "Arrays ajudam a escalar projetos?",
         "a": "Sim."
       }
-    ]
+    ],
+    "title": "Arrays e múltiplos objetos"
   },
   {
     "id": "rob9t3-4",
@@ -647,6 +881,43 @@
       {
         "q": "O que permite reverter uma cifra?",
         "a": "Conhecer o método e, conforme o sistema, a chave adequada."
+      }
+    ],
+    "title": "Criptografia e segurança digital"
+  },
+  {
+    "year": 9,
+    "section": "robotics",
+    "id": "rb9-guerra",
+    "topic": "Robôs em guerras: tecnologia, controle humano e ética",
+    "title": "Robôs em guerras: tecnologia, controle humano e ética",
+    "icon": "🤖",
+    "axis": "Cultura, história e ética da robótica",
+    "objective": "Compreender robôs militares e relacioná-lo ao desenvolvimento da robótica e às decisões humanas sobre tecnologia.",
+    "keyTerm": "robôs militares",
+    "keyDefinition": "Sistemas robóticos e não tripulados são usados em contextos militares para reconhecimento, logística, desativação de explosivos e também em sistemas armados.",
+    "concept": "Sistemas robóticos e não tripulados são usados em contextos militares para reconhecimento, logística, desativação de explosivos e também em sistemas armados. Seu emprego levanta questões sobre controle humano, distinção entre alvos, responsabilidade, direito internacional humanitário e riscos da autonomia em decisões de força.",
+    "example": "Analise exemplos históricos e compare o que mudou entre mecanismos automáticos, robôs programáveis e sistemas atuais.",
+    "representation": "história → tecnologia → sociedade → responsabilidade",
+    "use": "Projetos de robótica, cultura tecnológica, indústria, pesquisa e discussão ética.",
+    "observe": "Robôs não possuem responsabilidade moral própria: projeto, programação, comando e uso envolvem decisões humanas e instituições.",
+    "guided": "Organize uma pequena linha do tempo ou mapa de ideias com os fatos principais da aula.",
+    "challenge": "Por que o uso militar de robôs deve ser estudado também como questão ética e jurídica, e não apenas técnica?",
+    "answer": "Porque decisões envolvendo força podem afetar vidas e precisam considerar responsabilidade humana, proteção de civis, regras de conflito e limites da tecnologia.",
+    "reference": "Síntese didática baseada em história da tecnologia e robótica; referências gerais: Encyclopaedia Britannica; International Federation of Robotics; textos de Isaac Asimov sobre as Três Leis.",
+    "teacherTip": "Diferencie fatos históricos, ficção científica e debate ético. Estimule perguntas e comparação de fontes.",
+    "fixation": [
+      {
+        "q": "Qual é a ideia central de “robôs militares” nesta aula?",
+        "a": "Sistemas robóticos e não tripulados são usados em contextos militares para reconhecimento, logística, desativação de explosivos e também em sistemas armados. Seu emprego levanta questões sobre controle humano, distinção entre alvos, responsabilidade, direito internacional humanitário e riscos da autonomia em decisões de força."
+      },
+      {
+        "q": "Por que esse tema é importante para quem aprende robótica?",
+        "a": "Porque ajuda a compreender como a tecnologia foi construída, aplicada e regulada por decisões humanas."
+      },
+      {
+        "q": "Qual cuidado devemos ter ao estudar robótica?",
+        "a": "Separar fatos históricos, possibilidades técnicas, ficção científica e questões éticas."
       }
     ]
   }
