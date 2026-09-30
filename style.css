@@ -918,3 +918,6 @@ header>.rai-float.rai-x1>.header-tangram-exact{
 .tea-one-block>.adapt-step:nth-of-type(4n){--tea-accent:#8ee59b}
 .tea-one-block>.adapt-step>.adapt-step-head{border-left:4px solid var(--tea-accent,#62e6d1)!important}
 @media(prefers-reduced-motion:reduce){.tea-nature-seq i{transition:none!important}.tea-nature-seq i.active{transform:none!important}}
+
+/* v2.0.185 — linguagem visual funcional nas aulas do 5º ano */
+.lesson-symbol-legend{margin:12px 0 16px;padding:14px 16px;border:1px solid rgba(39,215,231,.42);border-radius:16px;background:linear-gradient(135deg,rgba(11,49,71,.92),rgba(14,42,57,.82));display:flex;align-items:center;gap:10px;flex-wrap:wrap}.lesson-symbol-legend>b{width:100%;font-size:1rem}.lesson-symbol-legend>span{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.07);font-size:.9rem}.lesson-symbol-legend i{font-style:normal;font-size:1.18rem}.lesson-symbol-legend small{width:100%;opacity:.82;letter-spacing:.02em}.lesson-content .lesson-block p,.lesson-content .lesson-key p,.lesson-challenge p{line-height:1.55}@media(max-width:650px){.lesson-symbol-legend{gap:7px;padding:12px}.lesson-symbol-legend>span{font-size:.84rem;padding:6px 8px}}
