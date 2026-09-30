@@ -832,3 +832,20 @@ header>.rai-float.rai-x1>.header-tangram-exact{
   transform-origin:50% 50%!important;
  }
 }
+
+/* v2.0.173 — TEA 8º ano: foco sequencial e ludicidade funcional */
+#lessons-panel .tea8-focus>.tea-step[hidden]{display:none!important}
+#lessons-panel .tea8-focus{position:relative}
+#lessons-panel .tea8-focus>.tea-step{min-height:min(54vh,520px);display:flex;flex-direction:column;justify-content:flex-start;animation:tea8In .32s ease-out}
+#lessons-panel .tea8-focus>.tea-step .tea-next{margin-top:auto}
+.tea8-step-tag{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:-2px 0 18px;padding:10px 12px;border-radius:13px;background:rgba(34,211,238,.09);border:1px solid rgba(34,211,238,.22)}
+.tea8-step-tag span{font-weight:900;color:#dffaff}.tea8-step-tag small{font-weight:900;color:#ffd968}
+.tea8-focus .tea-next{width:100%;min-height:54px;border-radius:15px;font-weight:900;font-size:16px}
+.tea8-focus+.tea-finish,.tea8-focus .tea-finish{min-height:260px;place-content:center;text-align:center}
+.tea-visual-guide div>small span{white-space:nowrap;font-weight:800}.tea-visual-guide div>small .done{opacity:.65}.tea-visual-guide div>small .now{color:#ffd968}.tea-visual-guide div>small .later{opacity:.38}.tea-visual-guide div>small i{opacity:.35;font-style:normal}
+.tea8-focus .tea-finish:not([hidden]){display:grid;gap:8px}.tea8-focus .tea-finish>span{font-size:42px}
+.tea-celebrate{animation:teaCelebrate .8s ease}
+@keyframes tea8In{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes teaCelebrate{0%,100%{transform:scale(1)}45%{transform:scale(1.025)}}
+@media(max-width:600px){#lessons-panel .tea8-focus>.tea-step{min-height:58vh}.tea-visual-guide div>small{display:flex;flex-wrap:wrap;gap:4px 6px}.tea-visual-guide div>small i{display:none}}
+@media(prefers-reduced-motion:reduce){#lessons-panel .tea8-focus>.tea-step,.tea-celebrate{animation:none!important}}
