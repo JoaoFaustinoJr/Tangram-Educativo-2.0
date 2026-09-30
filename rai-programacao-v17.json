@@ -470,108 +470,288 @@
   {
     "year": 9,
     "section": "prog",
-    "id": "pr9-grafos-arvores",
-    "topic": "Programação com grafos e árvores",
-    "icon": "🌐",
-    "axis": "Pensamento Computacional",
-    "objective": "Automatizar problemas em que grafos ou árvores representem adequadamente as informações.",
-    "keyTerm": "programação com grafos/árvores",
-    "keyDefinition": "Uso de estruturas de vértices, arestas ou hierarquias para representar dados e aplicar algoritmos de percurso e busca.",
-    "concept": "No 9º ano, grafos e árvores deixam de ser apenas representações visuais e passam a integrar soluções programadas. É possível percorrer conexões, encontrar caminhos ou consultar relações hierárquicas.",
-    "example": "Encontrar uma rota entre cidades ou procurar descendentes numa árvore genealógica.",
-    "formula": "estrutura → percurso → condição de busca → resultado",
-    "representation": "grafo G(V,A) • árvore raiz→ramos",
-    "use": "GPS, redes sociais, internet, sistemas de arquivos, organogramas e jogos.",
-    "observe": "A escolha da estrutura deve refletir a natureza das relações; hierarquia e rede geral não são a mesma coisa.",
-    "guided": "Modele quatro cidades e conexões e descreva um algoritmo simples para verificar se existe caminho de A até D.",
-    "challenge": "Por que uma árvore de pastas é mais adequada que uma lista única para representar diretórios e subdiretórios?",
-    "answer": "Porque a árvore preserva a relação hierárquica entre pastas pai e subpastas.",
-    "reference": "EF09CO01; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
-    "teacherTip": "Comece com modelos desenhados e só depois represente a estrutura em código.",
+    "id": "pr9-45",
+    "topic": "Aula 45 · Coleta de dados: o Tangram como laboratório",
+    "icon": "📊",
+    "axis": "Dados e Computação",
+    "objective": "Compreender e aplicar coleta de dados usando dados da atividade do Tangram.",
+    "keyTerm": "coleta de dados",
+    "keyDefinition": "Dados brutos são registros coletados antes de organização e análise.",
+    "concept": "Dados brutos são registros coletados antes de organização e análise. O Tangram pode gerar dados autênticos da atividade escolar.",
+    "example": "Use resultados reais da turma, como tempo, tentativas, acertos, desafio e equipe.",
+    "formula": "coletar → organizar → analisar → interpretar",
+    "representation": "dados → tabela → cálculo/visualização → conclusão",
+    "use": "Planilhas, pesquisas, relatórios e análise de desempenho.",
+    "observe": "Velocidade isolada não representa aprendizagem; interprete os dados junto com acertos, tentativas e estratégia.",
+    "guided": "Use os dados produzidos no Tangram para realizar a etapa proposta e explique o que o resultado significa.",
+    "challenge": "Escolha três variáveis úteis para investigar o desempenho sem usar nome completo.",
+    "answer": "Tempo, tentativas e acertos, associados a um apelido ou código, são exemplos adequados.",
+    "reference": "RCO 9º ano · Aula 45 · EF09CO02.",
+    "teacherTip": "Use pseudônimos e apenas os dados necessários. Priorize interpretação em vez de clicar mecanicamente na planilha.",
     "fixation": [
       {
-        "q": "O que significa “programação com grafos/árvores” nesta aula?",
-        "a": "Uso de estruturas de vértices, arestas ou hierarquias para representar dados e aplicar algoritmos de percurso e busca."
+        "q": "Qual é a ideia central desta aula?",
+        "a": "Dados brutos são registros coletados antes de organização e análise. O Tangram pode gerar dados autênticos da atividade escolar."
       },
       {
-        "q": "Onde esse conceito pode aparecer fora desta tela?",
-        "a": "GPS, redes sociais, internet, sistemas de arquivos, organogramas e jogos."
+        "q": "Por que usar dados reais do Tangram?",
+        "a": "Porque os cálculos e representações passam a responder perguntas surgidas da própria atividade."
       },
       {
-        "q": "Qual ponto merece atenção para não confundir o conceito?",
-        "a": "A escolha da estrutura deve refletir a natureza das relações; hierarquia e rede geral não são a mesma coisa."
+        "q": "Qual cuidado é importante na interpretação?",
+        "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
       }
     ]
   },
   {
     "year": 9,
     "section": "prog",
-    "id": "pr9-projeto",
-    "topic": "Projeto computacional: da ideia à solução",
-    "icon": "🛠️",
-    "axis": "Pensamento Computacional",
-    "objective": "Construir soluções computacionais de forma individual ou colaborativa selecionando estruturas e técnicas adequadas.",
-    "keyTerm": "projeto computacional",
-    "keyDefinition": "Processo de definir problema, planejar, implementar, testar, documentar e revisar uma solução computacional.",
-    "concept": "Projetos integram vários conhecimentos. O aluno precisa compreender o problema, escolher estruturas, dividir tarefas, implementar, testar e justificar decisões. Documentar o processo ajuda a tornar a solução compreensível e reutilizável.",
-    "example": "Projeto de monitoramento ambiental: sensor → coleta de dados → regras → alerta → interface.",
-    "formula": "problema → requisitos → projeto → implementação → testes → documentação",
-    "representation": "entrada | processamento | saída | critérios de sucesso",
-    "use": "Robótica, automação, aplicativos, jogos, ciência de dados e projetos escolares.",
-    "observe": "Um projeto não é apenas o código final; decisões, testes e documentação também fazem parte do produto.",
-    "guided": "Crie uma ficha de projeto com problema, público, entradas, saídas, regras e critérios de teste.",
-    "challenge": "Para um sistema escolar de alerta ambiental, defina um critério de entrada, um de processamento e um de saída que possam ser testados.",
-    "answer": "Exemplo: entrada — leitura do sensor dentro de faixa válida; processamento — aplicar corretamente o limite definido; saída — emitir alerta quando a condição for satisfeita e não emitir quando não for. Os critérios devem ser observáveis e testáveis.",
-    "reference": "EF09CO02; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
-    "teacherTip": "Avalie processo e justificativas, não apenas o funcionamento final.",
+    "id": "pr9-46",
+    "topic": "Aula 46 · Organizando dados em tabelas",
+    "icon": "📊",
+    "axis": "Dados e Computação",
+    "objective": "Compreender e aplicar tabela de dados usando dados da atividade do Tangram.",
+    "keyTerm": "tabela de dados",
+    "keyDefinition": "Uma tabela organiza observações em linhas e variáveis em colunas, permitindo comparação e processamento consistente.",
+    "concept": "Uma tabela organiza observações em linhas e variáveis em colunas, permitindo comparação e processamento consistente.",
+    "example": "Use resultados reais da turma, como tempo, tentativas, acertos, desafio e equipe.",
+    "formula": "coletar → organizar → analisar → interpretar",
+    "representation": "dados → tabela → cálculo/visualização → conclusão",
+    "use": "Planilhas, pesquisas, relatórios e análise de desempenho.",
+    "observe": "Velocidade isolada não representa aprendizagem; interprete os dados junto com acertos, tentativas e estratégia.",
+    "guided": "Use os dados produzidos no Tangram para realizar a etapa proposta e explique o que o resultado significa.",
+    "challenge": "Transforme resultados de rodadas em uma tabela e explique o significado de cada coluna.",
+    "answer": "Cada linha pode representar uma rodada e cada coluna uma variável, como equipe, tempo, tentativas e acertos.",
+    "reference": "RCO 9º ano · Aula 46 · EF09CO02.",
+    "teacherTip": "Use pseudônimos e apenas os dados necessários. Priorize interpretação em vez de clicar mecanicamente na planilha.",
     "fixation": [
       {
-        "q": "O que significa “projeto computacional” nesta aula?",
-        "a": "Processo de definir problema, planejar, implementar, testar, documentar e revisar uma solução computacional."
+        "q": "Qual é a ideia central desta aula?",
+        "a": "Uma tabela organiza observações em linhas e variáveis em colunas, permitindo comparação e processamento consistente."
       },
       {
-        "q": "Onde esse conceito pode aparecer fora desta tela?",
-        "a": "Robótica, automação, aplicativos, jogos, ciência de dados e projetos escolares."
+        "q": "Por que usar dados reais do Tangram?",
+        "a": "Porque os cálculos e representações passam a responder perguntas surgidas da própria atividade."
       },
       {
-        "q": "Qual ponto merece atenção para não confundir o conceito?",
-        "a": "Um projeto não é apenas o código final; decisões, testes e documentação também fazem parte do produto."
+        "q": "Qual cuidado é importante na interpretação?",
+        "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
       }
     ]
   },
   {
     "year": 9,
     "section": "prog",
-    "id": "pr9-eventos",
-    "topic": "Eventos, estados e robótica",
-    "icon": "🤖",
-    "axis": "Pensamento Computacional",
-    "objective": "Usar eventos e autômatos para programar comportamentos reativos, inclusive em robótica.",
-    "keyTerm": "programação orientada a eventos",
-    "keyDefinition": "Modelo em que trechos do programa são executados em resposta a acontecimentos como cliques, teclas, mensagens ou sinais de sensores.",
-    "concept": "Muitos sistemas não executam apenas uma sequência linear. Eles aguardam eventos e respondem conforme o estado atual. Autômatos ajudam a modelar esses comportamentos antes do código.",
-    "example": "Sensor detecta obstáculo → evento → robô muda de AVANÇANDO para DESVIANDO.",
-    "formula": "evento + estado atual → ação + novo estado",
-    "representation": "AO receber evento X → SE estado Y → executar Z",
-    "use": "Interfaces, jogos, IoT, aplicativos móveis, automação e robótica.",
-    "observe": "Programação orientada a eventos exige pensar em possíveis estados e transições, não apenas na ordem fixa de comandos.",
-    "guided": "Desenhe estados e transições de um robô: aguardando, avançando, desviando, concluído.",
-    "challenge": "Qual evento poderia fazer um robô sair do estado EXECUTANDO e entrar no estado EMERGÊNCIA?",
-    "answer": "Exemplos: botão de emergência pressionado, sensor crítico acionado ou mensagem de parada recebida.",
-    "reference": "EF09CO03; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
-    "teacherTip": "Excelente ponto de integração com Arduino, Scratch, Micro:bit ou simulação.",
+    "id": "pr9-47",
+    "topic": "Aula 47 · Da tabela à planilha digital",
+    "icon": "📊",
+    "axis": "Dados e Computação",
+    "objective": "Compreender e aplicar planilha digital usando dados da atividade do Tangram.",
+    "keyTerm": "planilha digital",
+    "keyDefinition": "A planilha digital organiza dados em células e permite fórmulas, atualização, filtros e representações.",
+    "concept": "A planilha digital organiza dados em células e permite fórmulas, atualização, filtros e representações.",
+    "example": "Use resultados reais da turma, como tempo, tentativas, acertos, desafio e equipe.",
+    "formula": "coletar → organizar → analisar → interpretar",
+    "representation": "dados → tabela → cálculo/visualização → conclusão",
+    "use": "Planilhas, pesquisas, relatórios e análise de desempenho.",
+    "observe": "Velocidade isolada não representa aprendizagem; interprete os dados junto com acertos, tentativas e estratégia.",
+    "guided": "Use os dados produzidos no Tangram para realizar a etapa proposta e explique o que o resultado significa.",
+    "challenge": "Por que uma planilha é mais útil que uma tabela estática quando novos resultados chegam?",
+    "answer": "Porque fórmulas e representações podem ser recalculadas e atualizadas quando os dados mudam.",
+    "reference": "RCO 9º ano · Aula 47 · EF09CO02.",
+    "teacherTip": "Use pseudônimos e apenas os dados necessários. Priorize interpretação em vez de clicar mecanicamente na planilha.",
     "fixation": [
       {
-        "q": "O que significa “programação orientada a eventos” nesta aula?",
-        "a": "Modelo em que trechos do programa são executados em resposta a acontecimentos como cliques, teclas, mensagens ou sinais de sensores."
+        "q": "Qual é a ideia central desta aula?",
+        "a": "A planilha digital organiza dados em células e permite fórmulas, atualização, filtros e representações."
       },
       {
-        "q": "Onde esse conceito pode aparecer fora desta tela?",
-        "a": "Interfaces, jogos, IoT, aplicativos móveis, automação e robótica."
+        "q": "Por que usar dados reais do Tangram?",
+        "a": "Porque os cálculos e representações passam a responder perguntas surgidas da própria atividade."
       },
       {
-        "q": "Qual ponto merece atenção para não confundir o conceito?",
-        "a": "Programação orientada a eventos exige pensar em possíveis estados e transições, não apenas na ordem fixa de comandos."
+        "q": "Qual cuidado é importante na interpretação?",
+        "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
+      }
+    ]
+  },
+  {
+    "year": 9,
+    "section": "prog",
+    "id": "pr9-48",
+    "topic": "Aula 48 · Médias e gráficos com dados reais",
+    "icon": "📊",
+    "axis": "Dados e Computação",
+    "objective": "Compreender e aplicar média e gráfico usando dados da atividade do Tangram.",
+    "keyTerm": "média e gráfico",
+    "keyDefinition": "Medidas resumem conjuntos de dados e gráficos ajudam a observar padrões, mas não explicam sozinhos suas causas.",
+    "concept": "Medidas resumem conjuntos de dados e gráficos ajudam a observar padrões, mas não explicam sozinhos suas causas.",
+    "example": "Use resultados reais da turma, como tempo, tentativas, acertos, desafio e equipe.",
+    "formula": "coletar → organizar → analisar → interpretar",
+    "representation": "dados → tabela → cálculo/visualização → conclusão",
+    "use": "Planilhas, pesquisas, relatórios e análise de desempenho.",
+    "observe": "Velocidade isolada não representa aprendizagem; interprete os dados junto com acertos, tentativas e estratégia.",
+    "guided": "Use os dados produzidos no Tangram para realizar a etapa proposta e explique o que o resultado significa.",
+    "challenge": "Uma equipe teve menor tempo médio. Podemos concluir que aprendeu mais?",
+    "answer": "Não. O tempo mede uma dimensão; aprendizagem precisa de outras evidências, como precisão, tentativas e explicação da estratégia.",
+    "reference": "RCO 9º ano · Aula 48 · EF09CO02.",
+    "teacherTip": "Use pseudônimos e apenas os dados necessários. Priorize interpretação em vez de clicar mecanicamente na planilha.",
+    "fixation": [
+      {
+        "q": "Qual é a ideia central desta aula?",
+        "a": "Medidas resumem conjuntos de dados e gráficos ajudam a observar padrões, mas não explicam sozinhos suas causas."
+      },
+      {
+        "q": "Por que usar dados reais do Tangram?",
+        "a": "Porque os cálculos e representações passam a responder perguntas surgidas da própria atividade."
+      },
+      {
+        "q": "Qual cuidado é importante na interpretação?",
+        "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
+      }
+    ]
+  },
+  {
+    "year": 9,
+    "section": "prog",
+    "id": "pr9-49",
+    "topic": "Aula 49 · Pesquisa e comparação de resultados",
+    "icon": "📊",
+    "axis": "Dados e Computação",
+    "objective": "Compreender e aplicar comparabilidade usando dados da atividade do Tangram.",
+    "keyTerm": "comparabilidade",
+    "keyDefinition": "Comparações confiáveis exigem critérios comuns, unidades compatíveis e condições suficientemente semelhantes.",
+    "concept": "Comparações confiáveis exigem critérios comuns, unidades compatíveis e condições suficientemente semelhantes.",
+    "example": "Use resultados reais da turma, como tempo, tentativas, acertos, desafio e equipe.",
+    "formula": "coletar → organizar → analisar → interpretar",
+    "representation": "dados → tabela → cálculo/visualização → conclusão",
+    "use": "Planilhas, pesquisas, relatórios e análise de desempenho.",
+    "observe": "Velocidade isolada não representa aprendizagem; interprete os dados junto com acertos, tentativas e estratégia.",
+    "guided": "Use os dados produzidos no Tangram para realizar a etapa proposta e explique o que o resultado significa.",
+    "challenge": "É adequado comparar diretamente tempos de dois desafios com dificuldades muito diferentes?",
+    "answer": "Não sem considerar a diferença de dificuldade e condições, pois isso pode tornar a comparação injusta.",
+    "reference": "RCO 9º ano · Aula 49 · EF09CO02.",
+    "teacherTip": "Use pseudônimos e apenas os dados necessários. Priorize interpretação em vez de clicar mecanicamente na planilha.",
+    "fixation": [
+      {
+        "q": "Qual é a ideia central desta aula?",
+        "a": "Comparações confiáveis exigem critérios comuns, unidades compatíveis e condições suficientemente semelhantes."
+      },
+      {
+        "q": "Por que usar dados reais do Tangram?",
+        "a": "Porque os cálculos e representações passam a responder perguntas surgidas da própria atividade."
+      },
+      {
+        "q": "Qual cuidado é importante na interpretação?",
+        "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
+      }
+    ]
+  },
+  {
+    "year": 9,
+    "section": "prog",
+    "id": "pr9-50",
+    "topic": "Aula 50 · Automatizando decisões com a função SE",
+    "icon": "📊",
+    "axis": "Dados e Computação",
+    "objective": "Compreender e aplicar função SE usando dados da atividade do Tangram.",
+    "keyTerm": "função SE",
+    "keyDefinition": "A função SE aplica uma regra lógica e devolve resultados diferentes conforme a condição seja verdadeira ou falsa.",
+    "concept": "A função SE aplica uma regra lógica e devolve resultados diferentes conforme a condição seja verdadeira ou falsa.",
+    "example": "Use resultados reais da turma, como tempo, tentativas, acertos, desafio e equipe.",
+    "formula": "coletar → organizar → analisar → interpretar",
+    "representation": "dados → tabela → cálculo/visualização → conclusão",
+    "use": "Planilhas, pesquisas, relatórios e análise de desempenho.",
+    "observe": "Velocidade isolada não representa aprendizagem; interprete os dados junto com acertos, tentativas e estratégia.",
+    "guided": "Use os dados produzidos no Tangram para realizar a etapa proposta e explique o que o resultado significa.",
+    "challenge": "Crie um indicador com SE e explique por que o critério escolhido é pedagogicamente justificável.",
+    "answer": "Exemplo: usar acertos para indicar necessidade de revisão; a regra deve ser discutida e não baseada somente em velocidade.",
+    "reference": "RCO 9º ano · Aula 50 · EF09CO02.",
+    "teacherTip": "Use pseudônimos e apenas os dados necessários. Priorize interpretação em vez de clicar mecanicamente na planilha.",
+    "fixation": [
+      {
+        "q": "Qual é a ideia central desta aula?",
+        "a": "A função SE aplica uma regra lógica e devolve resultados diferentes conforme a condição seja verdadeira ou falsa."
+      },
+      {
+        "q": "Por que usar dados reais do Tangram?",
+        "a": "Porque os cálculos e representações passam a responder perguntas surgidas da própria atividade."
+      },
+      {
+        "q": "Qual cuidado é importante na interpretação?",
+        "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
+      }
+    ]
+  },
+  {
+    "year": 9,
+    "section": "prog",
+    "id": "pr9-51",
+    "topic": "Aula 51 · Gráficos e leitura crítica",
+    "icon": "📊",
+    "axis": "Dados e Computação",
+    "objective": "Compreender e aplicar leitura crítica de gráficos usando dados da atividade do Tangram.",
+    "keyTerm": "leitura crítica de gráficos",
+    "keyDefinition": "Escala, tipo de gráfico e recorte influenciam a percepção visual; uma boa visualização deve preservar a fidelidade aos dados.",
+    "concept": "Escala, tipo de gráfico e recorte influenciam a percepção visual; uma boa visualização deve preservar a fidelidade aos dados.",
+    "example": "Use resultados reais da turma, como tempo, tentativas, acertos, desafio e equipe.",
+    "formula": "coletar → organizar → analisar → interpretar",
+    "representation": "dados → tabela → cálculo/visualização → conclusão",
+    "use": "Planilhas, pesquisas, relatórios e análise de desempenho.",
+    "observe": "Velocidade isolada não representa aprendizagem; interprete os dados junto com acertos, tentativas e estratégia.",
+    "guided": "Use os dados produzidos no Tangram para realizar a etapa proposta e explique o que o resultado significa.",
+    "challenge": "Como um eixo truncado pode alterar a impressão sobre diferenças pequenas?",
+    "answer": "Pode fazê-las parecer visualmente muito maiores do que realmente são.",
+    "reference": "RCO 9º ano · Aula 51 · EF09CO02.",
+    "teacherTip": "Use pseudônimos e apenas os dados necessários. Priorize interpretação em vez de clicar mecanicamente na planilha.",
+    "fixation": [
+      {
+        "q": "Qual é a ideia central desta aula?",
+        "a": "Escala, tipo de gráfico e recorte influenciam a percepção visual; uma boa visualização deve preservar a fidelidade aos dados."
+      },
+      {
+        "q": "Por que usar dados reais do Tangram?",
+        "a": "Porque os cálculos e representações passam a responder perguntas surgidas da própria atividade."
+      },
+      {
+        "q": "Qual cuidado é importante na interpretação?",
+        "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
+      }
+    ]
+  },
+  {
+    "year": 9,
+    "section": "prog",
+    "id": "pr9-52",
+    "topic": "Aula 52 · Formatação condicional e relatório da turma",
+    "icon": "📊",
+    "axis": "Dados e Computação",
+    "objective": "Compreender e aplicar relatório de dados usando dados da atividade do Tangram.",
+    "keyTerm": "relatório de dados",
+    "keyDefinition": "Formatação condicional destaca valores por regras e um relatório combina contexto, dados, visualização e conclusão justificada.",
+    "concept": "Formatação condicional destaca valores por regras e um relatório combina contexto, dados, visualização e conclusão justificada.",
+    "example": "Use resultados reais da turma, como tempo, tentativas, acertos, desafio e equipe.",
+    "formula": "coletar → organizar → analisar → interpretar",
+    "representation": "dados → tabela → cálculo/visualização → conclusão",
+    "use": "Planilhas, pesquisas, relatórios e análise de desempenho.",
+    "observe": "Velocidade isolada não representa aprendizagem; interprete os dados junto com acertos, tentativas e estratégia.",
+    "guided": "Use os dados produzidos no Tangram para realizar a etapa proposta e explique o que o resultado significa.",
+    "challenge": "O que precisa aparecer para outra pessoa compreender o relatório sem ter participado da aula?",
+    "answer": "Contexto, variáveis, dados ou síntese, gráfico legível e uma conclusão sustentada pelas evidências.",
+    "reference": "RCO 9º ano · Aula 52 · EF09CO02.",
+    "teacherTip": "Use pseudônimos e apenas os dados necessários. Priorize interpretação em vez de clicar mecanicamente na planilha.",
+    "fixation": [
+      {
+        "q": "Qual é a ideia central desta aula?",
+        "a": "Formatação condicional destaca valores por regras e um relatório combina contexto, dados, visualização e conclusão justificada."
+      },
+      {
+        "q": "Por que usar dados reais do Tangram?",
+        "a": "Porque os cálculos e representações passam a responder perguntas surgidas da própria atividade."
+      },
+      {
+        "q": "Qual cuidado é importante na interpretação?",
+        "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
       }
     ]
   }
