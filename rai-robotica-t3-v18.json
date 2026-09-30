@@ -403,7 +403,7 @@
     "objective": "Relacionar sensores, dados, decisões e atuadores a situações reais da agricultura e pecuária próximas da realidade de Jaboti.",
     "keyTerm": "automação agrícola",
     "keyDefinition": "Uso de sensores, programas e equipamentos para acompanhar condições e executar ou apoiar tarefas no campo.",
-    "concept": "No 6º ano, a tecnologia no campo pode ser entendida como um sistema: sensores coletam dados; o programa compara os valores com condições; uma pessoa ou um equipamento toma uma ação. Estufas de morango, produção de leite, tratores com GPS, monitoramento do gado e lavouras de soja e trigo permitem visualizar essa lógica.",
+    "concept": "A tecnologia no campo pode funcionar como um sistema: sensores coletam informações do ambiente; o programa analisa esses dados e, conforme as condições definidas, pode avisar o produtor ou acionar um equipamento. Em estufas de morango, na produção de leite, em tratores com GPS, no monitoramento do gado e nas lavouras de soja e trigo, dados ajudam a observar e tomar decisões.",
     "example": "🍓 Sensor de umidade → dado → SE o solo estiver abaixo do limite → 💧 avisar ou irrigar. 🐄 Na produção de leite, equipamentos auxiliam a ordenha e o resfriamento; sensores e registros ajudam a acompanhar o processo.",
     "formula": "🌡️📡 sensor → 📊 dado → ❓ condição → 🧠 decisão → ⚙️ atuador → 🔁 monitorar",
     "representation": "ENTRADA 📡 → PROCESSAMENTO 🧠 → SAÍDA ⚙️",
@@ -412,8 +412,8 @@
     "guided": "Escolha um problema do campo e decomponha-o: 1) o que medir? 2) qual dado será obtido? 3) qual condição será testada? 4) qual ação poderá ocorrer? 5) como verificar se funcionou?",
     "challenge": "Em uma estufa de morangos, queremos evitar irrigação desnecessária. Construa um algoritmo em linguagem natural usando uma condição.",
     "answer": "Exemplo: medir a umidade do solo → SE estiver abaixo do limite definido, avisar ou acionar a irrigação → SENÃO, manter a irrigação desligada → medir novamente depois.",
-    "reference": "Contextualização didática de automação agrícola para Jaboti/PR; integração com fundamentos de algoritmo, sensores e robótica do 6º ano.",
-    "teacherTip": "Diferencie do 5º ano: aqui o aluno deve transformar a situação agrícola em entrada, processamento, condição e saída. Pode ser encenado antes do LEGO: aluno-sensor → aluno-programa → aluno-atuador.",
+    "reference": "Tecnologia agrícola aplicada a sensores, automação, mecanização e produção agropecuária.",
+    "teacherTip": "Comece por uma situação concreta do campo. Depois represente o sistema como entrada, processamento, decisão e saída; uma encenação pode usar estudante-sensor, estudante-programa e estudante-atuador.",
     "fixation": [
       {
         "q": "Qual é o papel de um sensor?",
