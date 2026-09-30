@@ -447,3 +447,11 @@ function studentOpen(){
 
 
 if(!document.querySelector('#global-home')){const gh=document.createElement('button');gh.id='global-home';gh.type='button';gh.setAttribute('aria-label','Voltar à página principal');gh.innerHTML='⌂ <span>Início</span>';gh.onclick=goMain;document.body.appendChild(gh)}
+
+/* v2.0.169 — menu robusto por delegação, independente da inicialização principal */
+(function(){
+ function toggleMenu(e){const b=e.target&&e.target.closest?e.target.closest('header .menu'):null;if(!b)return;const m=document.getElementById('app-menu');if(!m)return;e.preventDefault();e.stopPropagation();const on=!m.classList.contains('open');m.classList.toggle('open',on);b.setAttribute('aria-expanded',String(on));}
+ document.addEventListener('pointerup',toggleMenu,true);
+ document.addEventListener('click',function(e){if(e.pointerType)return;toggleMenu(e)},true);
+ document.addEventListener('pointerup',function(e){const m=document.getElementById('app-menu');const b=document.querySelector('header .menu');if(!m||!m.classList.contains('open'))return;if(e.target.closest&&e.target.closest('#app-menu,header .menu'))return;m.classList.remove('open');if(b)b.setAttribute('aria-expanded','false')},true);
+})();
