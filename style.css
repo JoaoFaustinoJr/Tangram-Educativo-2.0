@@ -803,3 +803,19 @@ header .app-menu{z-index:10060!important}
  header .header-tangram-exact{width:104px!important;left:38%!important}
  header .menu{width:46px!important;height:46px!important;min-width:46px!important}
 }
+
+/* v2.0.171 — correção estrutural: animação e menu são irmãos, não sobrepostos */
+@media(max-width:520px){
+ header{display:grid!important;grid-template-columns:minmax(0,1fr) 128px 52px!important;align-items:center!important;column-gap:10px!important;padding-right:12px!important}
+ header>.rai-float.rai-x1{grid-column:2!important;position:relative!important;width:128px!important;max-width:128px!important;height:104px!important;margin:0!important;justify-self:center!important;pointer-events:none!important}
+ header>.rai-float.rai-x1>.header-tangram-exact{left:50%!important;top:50%!important;width:118px!important;height:90px!important;transform:translate(-50%,-50%)!important}
+ header>.menu{grid-column:3!important;position:relative!important;right:auto!important;top:auto!important;transform:none!important;justify-self:end!important;width:48px!important;height:48px!important;min-width:48px!important;pointer-events:auto!important;z-index:10050!important}
+ header>.menu:active{transform:scale(.96)!important}
+ header>.app-menu{pointer-events:auto!important}
+}
+@media(max-width:390px){
+ header{grid-template-columns:minmax(0,1fr) 108px 48px!important;column-gap:6px!important}
+ header>.rai-float.rai-x1{width:108px!important;max-width:108px!important}
+ header>.rai-float.rai-x1>.header-tangram-exact{width:102px!important;left:50%!important}
+ header>.menu{width:46px!important;height:46px!important;min-width:46px!important}
+}
