@@ -773,3 +773,11 @@ header .rai-x1-img,header .rai-heritage,header .rai-css,header .rai-inline{displ
 @media(max-width:520px){
   header .header-tangram-exact{left:57%!important}
 }
+
+/* v2.0.168 — hotfix do botão Menu: área própria acima do palco animado */
+header .menu{z-index:10020!important;pointer-events:auto!important;touch-action:manipulation!important;overflow:visible!important}
+header .header-tangram-exact,header .header-tangram-exact *,header .header-tangram-exact:before,header .header-tangram-exact:after{pointer-events:none!important}
+header .app-menu{z-index:10030!important}
+@media(max-width:520px){
+ header .menu{right:-58px!important}
+}
