@@ -147,19 +147,19 @@
     ],
     "visuals": [
       {
-        "symbol": "🤖",
-        "label": "Robô",
-        "description": "Robô"
-      },
-      {
-        "symbol": "➡️",
-        "label": "Sequência",
-        "description": "Sequência"
+        "symbol": "🧩",
+        "label": "Decompor",
+        "description": "Dividir o problema em partes menores"
       },
       {
         "symbol": "🧠",
-        "label": "Algoritmo",
-        "description": "Algoritmo"
+        "label": "Planejar",
+        "description": "Organizar uma sequência de solução"
+      },
+      {
+        "symbol": "⚙️",
+        "label": "Executar e testar",
+        "description": "Executar, observar e melhorar a solução"
       }
     ]
   },
@@ -253,19 +253,19 @@
     ],
     "visuals": [
       {
-        "symbol": "🤝",
-        "label": "Equipe",
-        "description": "Equipe"
+        "symbol": "🧩",
+        "label": "Decompor",
+        "description": "Dividir o problema em partes menores"
       },
       {
-        "symbol": "📋",
-        "label": "Organização",
-        "description": "Organização"
+        "symbol": "🧠",
+        "label": "Planejar",
+        "description": "Organizar uma sequência de solução"
       },
       {
-        "symbol": "🎯",
-        "label": "Responsabilidade",
-        "description": "Responsabilidade"
+        "symbol": "⚙️",
+        "label": "Executar e testar",
+        "description": "Executar, observar e melhorar a solução"
       }
     ]
   },
