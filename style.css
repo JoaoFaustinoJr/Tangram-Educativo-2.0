@@ -1115,3 +1115,26 @@ header>.rai-float.rai-x1>.header-tangram-exact{
  body.printing-lesson .lesson-reference span{font-size:10px!important;line-height:1.5!important}
  body.printing-lesson .lesson-reference:after{font-size:9px!important;line-height:1.4!important}
 }
+
+/* v1.0.17 — impressão didática completa, sem miniaturização */
+.lesson-full-print-only{display:none!important}
+@media print{
+ body.printing-lesson .lesson-full-print-only{display:block!important;visibility:visible!important}
+ body.printing-lesson .lesson-full-print-only *{visibility:visible!important}
+ body.printing-lesson .lesson-print-target{width:100%!important;max-width:none!important;font-size:12pt!important}
+ body.printing-lesson .lesson-content{font-size:12pt!important;line-height:1.6!important}
+ body.printing-lesson .lesson-print-target>summary{font-size:15pt!important;line-height:1.35!important;margin-bottom:16px!important}
+ body.printing-lesson .lesson-block,
+ body.printing-lesson .history-block,
+ body.printing-lesson .lesson-challenge{break-inside:auto!important;page-break-inside:auto!important;margin:0 0 12px!important;padding:12px 14px!important}
+ body.printing-lesson .lesson-block b,
+ body.printing-lesson .history-block b,
+ body.printing-lesson .lesson-challenge b{font-size:12pt!important}
+ body.printing-lesson .lesson-block p,
+ body.printing-lesson .history-block p,
+ body.printing-lesson .lesson-challenge p{font-size:11.5pt!important;line-height:1.6!important;margin:.35em 0!important}
+ body.printing-lesson .lesson-visual-strip{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+ body.printing-lesson .lesson-visual-item{font-size:10.5pt!important;padding:8px 10px!important}
+ body.printing-lesson .lesson-reference span{font-size:10pt!important;line-height:1.5!important}
+ @page{size:A4 portrait;margin:16mm 15mm 17mm}
+}
