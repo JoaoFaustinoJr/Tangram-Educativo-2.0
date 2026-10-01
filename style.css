@@ -1063,3 +1063,26 @@ header>.rai-float.rai-x1>.header-tangram-exact{
 @media print{
  body.printing-lesson .lesson-print-target>.lesson-print-brand{display:flex!important}
 }
+
+/* v1.0.14 — Sala de Aula: proporção móvel e contenção */
+@media (max-width:700px){
+ .lessons-panel{padding:10px!important;align-items:flex-start!important}
+ .lessons-card{width:100%!important;max-width:100%!important;margin:8px auto!important;padding:14px 12px 18px!important;border-radius:22px!important;overflow-x:hidden!important}
+ .lesson-years,.lesson-sections{max-width:100%!important}
+ .lesson-sections{display:flex!important;gap:7px!important;overflow-x:auto!important;padding-bottom:7px!important;scrollbar-width:thin}
+ .lesson-sections button{flex:0 0 auto!important;min-width:max-content!important}
+ .lesson-library{width:100%!important;max-width:100%!important;margin:14px 0 0!important}
+ .lesson-library>details{width:100%!important;max-width:100%!important;overflow:hidden!important}
+ .lesson-library summary{padding:15px 14px!important}
+ .lesson-content{width:100%!important;max-width:100%!important;padding:12px!important;box-sizing:border-box!important;overflow-wrap:anywhere!important}
+ .lesson-audio{display:flex!important;flex-wrap:wrap!important;gap:7px!important}
+ .lesson-audio button{flex:1 1 125px!important;min-width:0!important}
+ .lesson-visual-strip{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important}
+ .lesson-visual-item{min-width:0!important;width:100%!important;box-sizing:border-box!important}
+ .lesson-block,.history-block,.lesson-challenge{max-width:100%!important;box-sizing:border-box!important;overflow-wrap:anywhere!important}
+ .lesson-code,.lesson-content pre,.lesson-content code{max-width:100%!important;white-space:pre-wrap!important;overflow-wrap:anywhere!important}
+}
+@media (max-width:390px){
+ .lesson-visual-strip{grid-template-columns:1fr!important}
+ .lesson-audio button{flex-basis:100%!important}
+}
