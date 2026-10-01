@@ -1151,6 +1151,28 @@
         "title": "5. Pater familias",
         "text": "Na organização familiar apresentada, o pater familias exercia ampla autoridade sobre a casa, esposa, filhos, pessoas escravizadas e bens. O resumo relaciona historicamente essa estrutura ao conceito de patriarcado."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🐺",
+        "label": "Rômulo e Remo",
+        "description": "Lenda de Rômulo e Remo"
+      },
+      {
+        "symbol": "🏺",
+        "label": "Fontes históricas",
+        "description": "Evidências e fontes para estudar Roma"
+      },
+      {
+        "symbol": "🏛️",
+        "label": "Roma antiga",
+        "description": "Formação histórica da cidade"
+      },
+      {
+        "symbol": "👨‍👩‍👧‍👦",
+        "label": "Pater familias",
+        "description": "Organização familiar romana"
+      }
     ]
   },
   {
@@ -1261,6 +1283,28 @@
         "title": "5. Escravizados",
         "text": "Pessoas escravizadas não possuíam direitos e eram tratadas como propriedade. O resumo relaciona a escravização a prisioneiros de guerra e, naquele contexto, também a dívidas."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "👑",
+        "label": "Rei",
+        "description": "Autoridade na Monarquia"
+      },
+      {
+        "symbol": "🏛️",
+        "label": "Senado",
+        "description": "Conselho de anciãos"
+      },
+      {
+        "symbol": "🗳️",
+        "label": "Assembleia",
+        "description": "Participação política"
+      },
+      {
+        "symbol": "👥",
+        "label": "Grupos sociais",
+        "description": "Patrícios, clientes, plebeus e escravizados"
+      }
     ]
   },
   {
@@ -1370,6 +1414,28 @@
       {
         "title": "5. Lutas dos plebeus",
         "text": "Plebeus serviam no exército e pagavam impostos, mas inicialmente não participavam de modo equivalente das decisões. O resumo registra conquistas graduais: possibilidade de cônsul plebeu, casamento entre patrícios e plebeus, leis escritas e fim da escravidão por dívidas, observando que plebeus ricos foram os mais beneficiados."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🏛️",
+        "label": "República",
+        "description": "Res publica"
+      },
+      {
+        "symbol": "📜",
+        "label": "Leis escritas",
+        "description": "Conquistas plebeias"
+      },
+      {
+        "symbol": "⚖️",
+        "label": "Magistraturas",
+        "description": "Funções públicas"
+      },
+      {
+        "symbol": "🗳️",
+        "label": "Assembleias",
+        "description": "Organização política"
       }
     ]
   },
@@ -1485,6 +1551,28 @@
         "title": "6. Escravidão e presente",
         "text": "O material descreve juridicamente a pessoa escravizada como propriedade e propõe relacionar o tema a formas contemporâneas de trabalho análogo à escravidão e exploração trabalhista."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🗺️",
+        "label": "Expansão",
+        "description": "Território romano"
+      },
+      {
+        "symbol": "⚔️",
+        "label": "Guerras Púnicas",
+        "description": "Roma e Cartago"
+      },
+      {
+        "symbol": "🌊",
+        "label": "Mare Nostrum",
+        "description": "Mediterrâneo"
+      },
+      {
+        "symbol": "⛵",
+        "label": "Comércio",
+        "description": "Rotas e circulação"
+      }
     ]
   },
   {
@@ -1599,6 +1687,28 @@
         "title": "6. Memória dos apagados",
         "text": "A aula chama atenção para o fato de narrativas tradicionais frequentemente privilegiarem imperadores, generais e vencedores, deixando menos visíveis escravizados, trabalhadores e mulheres. Também propõe reflexão sobre capacitismo e atitudes anticapacitistas."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "⛓️",
+        "label": "Escravidão",
+        "description": "Trabalho e ausência de liberdade"
+      },
+      {
+        "symbol": "🏟️",
+        "label": "Gladiadores",
+        "description": "Combates em anfiteatros"
+      },
+      {
+        "symbol": "✊",
+        "label": "Resistência",
+        "description": "Revolta de Espártaco"
+      },
+      {
+        "symbol": "📖",
+        "label": "Memória",
+        "description": "Grupos historicamente invisibilizados"
+      }
     ]
   },
   {
@@ -1712,6 +1822,28 @@
       {
         "title": "6. Assassinato",
         "text": "Em 44 a.C., senadores que acusavam César de pretender restaurar a Monarquia organizaram seu assassinato. O material menciona Brutus e a tradição cultural da frase 'Até tu, Brutus?'"
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🛡️",
+        "label": "Legião",
+        "description": "Organização militar"
+      },
+      {
+        "symbol": "⚔️",
+        "label": "Legionário",
+        "description": "Soldado romano"
+      },
+      {
+        "symbol": "🤝",
+        "label": "Triunvirato",
+        "description": "Aliança política"
+      },
+      {
+        "symbol": "🏛️",
+        "label": "Júlio César",
+        "description": "Crise da República"
       }
     ]
   },
@@ -1830,6 +1962,28 @@
       {
         "title": "7. Pão e circo",
         "text": "O material apresenta a distribuição de alimentos e o patrocínio de espetáculos e festivais como estratégia de controle social, citando teatro, gladiadores e corridas de bigas."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Segundo Triunvirato",
+        "description": "Otávio, Marco Antônio e Lépido"
+      },
+      {
+        "symbol": "👑",
+        "label": "Augusto",
+        "description": "Início do Império"
+      },
+      {
+        "symbol": "🛣️",
+        "label": "Pax Romana",
+        "description": "Integração e infraestrutura"
+      },
+      {
+        "symbol": "🏟️",
+        "label": "Pão e circo",
+        "description": "Alimentos e espetáculos"
       }
     ]
   }
