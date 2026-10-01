@@ -16,7 +16,24 @@
     "answer": "Exemplo: separar peças, montar, programar e conferir/organizar.",
     "reference": "Oficina de Robótica SESI — prática pedagógica do Prof. João Faustino Júnior.",
     "teacherTip": "Reforce esperar a vez, não derrubar peças, manter a mesa organizada e conferir o kit ao final.",
-    "topic": "Oficina: equipe, organização e responsabilidade"
+    "topic": "Oficina: equipe, organização e responsabilidade",
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
+    ]
   },
   {
     "id": "rb5-sesi-algoritmo-robo",
@@ -35,7 +52,24 @@
     "answer": "A resposta varia conforme a sala, mas deve conter passos pequenos, claros, ordenados e suficientes para completar o percurso.",
     "reference": "Oficina de Robótica SESI — prática pedagógica do Prof. João Faustino Júnior.",
     "teacherTip": "Faça primeiro a dramatização. Execute literalmente instruções ambíguas para mostrar por que o computador não pode adivinhar a intenção.",
-    "topic": "Oficina: o robô precisa de todas as etapas"
+    "topic": "Oficina: o robô precisa de todas as etapas",
+    "visuals": [
+      {
+        "symbol": "🧱",
+        "label": "LEGO / montagem",
+        "description": "LEGO / montagem"
+      },
+      {
+        "symbol": "⚙️",
+        "label": "Mecanismo",
+        "description": "Mecanismo"
+      },
+      {
+        "symbol": "🔧",
+        "label": "Construir e testar",
+        "description": "Construir e testar"
+      }
+    ]
   },
   {
     "id": "rb5-sesi-maquinas-lego",
@@ -54,7 +88,24 @@
     "answer": "Ao trocar tamanhos e posições, compare sentido de rotação, velocidade e capacidade de mover carga. Em engrenagens externas diretamente acopladas, as duas giram em sentidos opostos.",
     "reference": "Oficina de Robótica SESI — prática pedagógica do Prof. João Faustino Júnior.",
     "teacherTip": "Parta do mecanismo físico antes da programação: montar, girar manualmente, prever o resultado e só depois motorizar.",
-    "topic": "Oficina SESI: máquinas simples e mecanismos LEGO"
+    "topic": "Oficina SESI: máquinas simples e mecanismos LEGO",
+    "visuals": [
+      {
+        "symbol": "🧱",
+        "label": "LEGO / montagem",
+        "description": "LEGO / montagem"
+      },
+      {
+        "symbol": "⚙️",
+        "label": "Mecanismo",
+        "description": "Mecanismo"
+      },
+      {
+        "symbol": "🔧",
+        "label": "Construir e testar",
+        "description": "Construir e testar"
+      }
+    ]
   },
   {
     "year": 5,
@@ -91,7 +142,24 @@
         "a": "Encaixe dos dentes, alinhamento dos eixos, firmeza da estrutura e depois a programação."
       }
     ],
-    "title": "Oficina SESI: engrenagens, força e velocidade"
+    "title": "Oficina SESI: engrenagens, força e velocidade",
+    "visuals": [
+      {
+        "symbol": "🧱",
+        "label": "LEGO / montagem",
+        "description": "LEGO / montagem"
+      },
+      {
+        "symbol": "⚙️",
+        "label": "Mecanismo",
+        "description": "Mecanismo"
+      },
+      {
+        "symbol": "🔧",
+        "label": "Construir e testar",
+        "description": "Construir e testar"
+      }
+    ]
   },
   {
     "year": 5,
@@ -127,6 +195,28 @@
       {
         "q": "Para que GPS e sensores podem ser usados no campo?",
         "a": "Para orientar operações, localizar, medir condições, acompanhar animais ou áreas e apoiar decisões do produtor."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🌱",
+        "label": "Campo",
+        "description": "Campo"
+      },
+      {
+        "symbol": "📡",
+        "label": "Sensores e dados",
+        "description": "Sensores e dados"
+      },
+      {
+        "symbol": "⚙️",
+        "label": "Automação",
+        "description": "Automação"
+      },
+      {
+        "symbol": "📊",
+        "label": "Monitoramento",
+        "description": "Monitoramento"
       }
     ]
   },
@@ -164,6 +254,23 @@
         "q": "Qual cuidado devemos ter ao estudar robótica?",
         "a": "Separar fatos históricos, possibilidades técnicas, ficção científica e questões éticas."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🧱",
+        "label": "LEGO / montagem",
+        "description": "LEGO / montagem"
+      },
+      {
+        "symbol": "⚙️",
+        "label": "Mecanismo",
+        "description": "Mecanismo"
+      },
+      {
+        "symbol": "🔧",
+        "label": "Construir e testar",
+        "description": "Construir e testar"
+      }
     ]
   },
   {
@@ -200,6 +307,23 @@
         "q": "Qual cuidado devemos ter ao estudar robótica?",
         "a": "Separar fatos históricos, possibilidades técnicas, ficção científica e questões éticas."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🧱",
+        "label": "LEGO / montagem",
+        "description": "LEGO / montagem"
+      },
+      {
+        "symbol": "⚙️",
+        "label": "Mecanismo",
+        "description": "Mecanismo"
+      },
+      {
+        "symbol": "🔧",
+        "label": "Construir e testar",
+        "description": "Construir e testar"
+      }
     ]
   },
   {
@@ -223,7 +347,24 @@
     "challenge": "Se um robô recebe uma ordem que pode colocar alguém em perigo, basta dizer que 'o robô obedeceu'?",
     "answer": "Não. Sistemas são projetados e usados por pessoas e organizações; segurança e responsabilidade precisam ser consideradas por quem cria, programa, controla e utiliza a tecnologia.",
     "reference": "Isaac Asimov, ficção científica sobre robôs e as Três Leis; abordagem didática de ética e responsabilidade em tecnologia.",
-    "teacherTip": "Apresente as leis como literatura e provocação ética, nunca como normas reais da robótica."
+    "teacherTip": "Apresente as leis como literatura e provocação ética, nunca como normas reais da robótica.",
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
+    ]
   },
   {
     "year": 5,
@@ -246,7 +387,24 @@
     "challenge": "Uma máquina consegue realizar uma tarefa. Isso significa que devemos usá-la para qualquer finalidade?",
     "answer": "Não. Além de perguntar se algo é tecnicamente possível, precisamos avaliar segurança, consequências, regras, direitos e responsabilidade humana.",
     "reference": "Abordagem introdutória de ética em robótica e cidadania digital, adequada ao 5º ano.",
-    "teacherTip": "Conduza pela proteção da vida e pelo uso responsável. Evite imagens violentas ou detalhes operacionais de armamentos."
+    "teacherTip": "Conduza pela proteção da vida e pelo uso responsável. Evite imagens violentas ou detalhes operacionais de armamentos.",
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
+    ]
   },
   {
     "id": "rob6t3-1",
@@ -282,7 +440,24 @@
         "a": "Para localizar erros e melhorar a solução com mais facilidade."
       }
     ],
-    "title": "Decomposição: do problema às etapas"
+    "title": "Decomposição: do problema às etapas",
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
+    ]
   },
   {
     "id": "rob6t3-2",
@@ -318,7 +493,24 @@
         "a": "Sim, por diferentes meios e protocolos de comunicação."
       }
     ],
-    "title": "Como os dados viajam"
+    "title": "Como os dados viajam",
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
+    ]
   },
   {
     "id": "rob6t3-3",
@@ -354,7 +546,24 @@
         "a": "Mudanças sucessivas de posição."
       }
     ],
-    "title": "Coordenadas e simulação"
+    "title": "Coordenadas e simulação",
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
+      }
+    ]
   },
   {
     "id": "rob6t3-4",
@@ -390,7 +599,24 @@
         "a": "Sim, inclusive com fórmulas e gráficos."
       }
     ],
-    "title": "Dados, tabelas e gráficos"
+    "title": "Dados, tabelas e gráficos",
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
+    ]
   },
   {
     "year": 6,
@@ -426,6 +652,28 @@
       {
         "q": "Como representar uma irrigação simples?",
         "a": "Sensor mede → programa verifica a condição → sistema avisa ou aciona a irrigação → volta a monitorar."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🌱",
+        "label": "Campo",
+        "description": "Campo"
+      },
+      {
+        "symbol": "📡",
+        "label": "Sensores e dados",
+        "description": "Sensores e dados"
+      },
+      {
+        "symbol": "⚙️",
+        "label": "Automação",
+        "description": "Automação"
+      },
+      {
+        "symbol": "📊",
+        "label": "Monitoramento",
+        "description": "Monitoramento"
       }
     ]
   },
@@ -463,6 +711,23 @@
         "q": "Qual cuidado devemos ter ao estudar robótica?",
         "a": "Separar fatos históricos, possibilidades técnicas, ficção científica e questões éticas."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🧱",
+        "label": "LEGO / montagem",
+        "description": "LEGO / montagem"
+      },
+      {
+        "symbol": "⚙️",
+        "label": "Mecanismo",
+        "description": "Mecanismo"
+      },
+      {
+        "symbol": "🔧",
+        "label": "Construir e testar",
+        "description": "Construir e testar"
+      }
     ]
   },
   {
@@ -498,6 +763,23 @@
       {
         "q": "Qual cuidado devemos ter ao estudar robótica?",
         "a": "Separar fatos históricos, possibilidades técnicas, ficção científica e questões éticas."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
       }
     ]
   },
@@ -535,7 +817,24 @@
         "a": "Reduz repetição e torna o algoritmo mais organizado."
       }
     ],
-    "title": "Repetição e contagem regressiva"
+    "title": "Repetição e contagem regressiva",
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
+      }
+    ]
   },
   {
     "id": "rob7t3-2",
@@ -571,7 +870,24 @@
         "a": "Evita duplicação e facilita alterações."
       }
     ],
-    "title": "Padrões, recorrência e arte algorítmica"
+    "title": "Padrões, recorrência e arte algorítmica",
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
+    ]
   },
   {
     "id": "rob7t3-3",
@@ -607,7 +923,24 @@
         "a": "Sim, cada uma pode representar uma subtarefa."
       }
     ],
-    "title": "Funções e reúso de código"
+    "title": "Funções e reúso de código",
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
+      }
+    ]
   },
   {
     "id": "rob7t3-4",
@@ -643,7 +976,24 @@
         "a": "Sim."
       }
     ],
-    "title": "Cyberbullying e cidadania digital"
+    "title": "Cyberbullying e cidadania digital",
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
+    ]
   },
   {
     "year": 7,
@@ -678,6 +1028,23 @@
       {
         "q": "Qual cuidado devemos ter ao estudar robótica?",
         "a": "Separar fatos históricos, possibilidades técnicas, ficção científica e questões éticas."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🧱",
+        "label": "LEGO / montagem",
+        "description": "LEGO / montagem"
+      },
+      {
+        "symbol": "⚙️",
+        "label": "Mecanismo",
+        "description": "Mecanismo"
+      },
+      {
+        "symbol": "🔧",
+        "label": "Construir e testar",
+        "description": "Construir e testar"
       }
     ]
   },
@@ -715,7 +1082,24 @@
         "a": "Entre os métodos trabalhados, insertion sort."
       }
     ],
-    "title": "Listas e algoritmos de ordenação"
+    "title": "Listas e algoritmos de ordenação",
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
+      }
+    ]
   },
   {
     "id": "rob8t3-2",
@@ -751,7 +1135,24 @@
         "a": "Em geral, a média."
       }
     ],
-    "title": "Média, mediana e dados"
+    "title": "Média, mediana e dados",
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
+    ]
   },
   {
     "id": "rob8t3-3",
@@ -787,7 +1188,24 @@
         "a": "Sim."
       }
     ],
-    "title": "Recursão: uma solução chama a si mesma"
+    "title": "Recursão: uma solução chama a si mesma",
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
+    ]
   },
   {
     "id": "rob8t3-4",
@@ -823,7 +1241,24 @@
         "a": "Sim."
       }
     ],
-    "title": "Geometria e arte generativa"
+    "title": "Geometria e arte generativa",
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
+      }
+    ]
   },
   {
     "year": 8,
@@ -858,6 +1293,23 @@
       {
         "q": "Qual cuidado devemos ter ao estudar robótica?",
         "a": "Separar fatos históricos, possibilidades técnicas, ficção científica e questões éticas."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
       }
     ]
   },
@@ -895,7 +1347,24 @@
         "a": "Sim."
       }
     ],
-    "title": "JavaScript: lógica em linguagem textual"
+    "title": "JavaScript: lógica em linguagem textual",
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
+    ]
   },
   {
     "id": "rob9t3-2",
@@ -967,7 +1436,24 @@
         "a": "Sim."
       }
     ],
-    "title": "Arrays e múltiplos objetos"
+    "title": "Arrays e múltiplos objetos",
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
+    ]
   },
   {
     "id": "rob9t3-4",
@@ -1003,7 +1489,24 @@
         "a": "Conhecer o método e, conforme o sistema, a chave adequada."
       }
     ],
-    "title": "Criptografia e segurança digital"
+    "title": "Criptografia e segurança digital",
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
+    ]
   },
   {
     "year": 9,
@@ -1039,6 +1542,23 @@
         "q": "Qual cuidado devemos ter ao estudar robótica?",
         "a": "Separar fatos históricos, possibilidades técnicas, ficção científica e questões éticas."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
     ]
   },
   {
@@ -1058,7 +1578,24 @@
     "challenge": "Separe estes exemplos entre 3D e laser: miniatura tridimensional, placa plana com nome, engrenagem protótipo e desenho gravado.",
     "answer": "Miniatura e engrenagem protótipo: impressão 3D. Placa e desenho gravado: laser.",
     "reference": "Fabricação digital introdutória aplicada à oficina de robótica.",
-    "teacherTip": "Apresente as máquinas visualmente. Operação, preparação e manutenção ficam sob responsabilidade e supervisão do professor."
+    "teacherTip": "Apresente as máquinas visualmente. Operação, preparação e manutenção ficam sob responsabilidade e supervisão do professor.",
+    "visuals": [
+      {
+        "symbol": "🧊",
+        "label": "Modelo 3D",
+        "description": "Modelo 3D"
+      },
+      {
+        "symbol": "🖨️",
+        "label": "Impressão 3D",
+        "description": "Impressão 3D"
+      },
+      {
+        "symbol": "📄",
+        "label": "STL / 3MF",
+        "description": "STL / 3MF"
+      }
+    ]
   },
   {
     "id": "rb6-impressao-3d",
@@ -1077,7 +1614,24 @@
     "challenge": "Por que um arquivo SVG normalmente não substitui um STL em uma impressão 3D?",
     "answer": "Porque SVG descreve principalmente gráficos vetoriais bidimensionais, enquanto STL representa a superfície de um modelo tridimensional.",
     "reference": "Fluxo introdutório de fabricação aditiva.",
-    "teacherTip": "Mostre um modelo e sua visualização no fatiador. Destaque que formatos e etapas podem variar conforme equipamento e software."
+    "teacherTip": "Mostre um modelo e sua visualização no fatiador. Destaque que formatos e etapas podem variar conforme equipamento e software.",
+    "visuals": [
+      {
+        "symbol": "🧊",
+        "label": "Modelo 3D",
+        "description": "Modelo 3D"
+      },
+      {
+        "symbol": "🖨️",
+        "label": "Impressão 3D",
+        "description": "Impressão 3D"
+      },
+      {
+        "symbol": "📄",
+        "label": "STL / 3MF",
+        "description": "STL / 3MF"
+      }
+    ]
   },
   {
     "id": "rb6-corte-laser",
@@ -1096,7 +1650,24 @@
     "challenge": "Qual arquivo combina melhor com um contorno vetorial para corte: SVG ou uma fotografia JPG? Explique.",
     "answer": "SVG, porque preserva linhas e curvas vetoriais que podem orientar o contorno. JPG é uma imagem formada por pixels.",
     "reference": "Fluxo introdutório de fabricação digital vetorial.",
-    "teacherTip": "Ensine o fluxo de projeto sem incentivar operação autônoma. Corte/gravação deve seguir manual, ventilação, materiais permitidos e supervisão responsável."
+    "teacherTip": "Ensine o fluxo de projeto sem incentivar operação autônoma. Corte/gravação deve seguir manual, ventilação, materiais permitidos e supervisão responsável.",
+    "visuals": [
+      {
+        "symbol": "✏️",
+        "label": "Desenho vetorial",
+        "description": "Desenho vetorial"
+      },
+      {
+        "symbol": "📄",
+        "label": "SVG / DXF",
+        "description": "SVG / DXF"
+      },
+      {
+        "symbol": "✨",
+        "label": "Corte e gravação",
+        "description": "Corte e gravação"
+      }
+    ]
   },
   {
     "id": "rb7-fabricacao-arquivos",
@@ -1115,7 +1686,24 @@
     "challenge": "Você recebeu um SVG de uma placa e um STL de uma caixa. Para qual processo cada arquivo está inicialmente mais adequado?",
     "answer": "SVG para fluxo vetorial de corte/gravação; STL para fluxo de modelagem e impressão 3D.",
     "reference": "Fabricação digital aplicada a projetos maker e robótica.",
-    "teacherTip": "Destaque que compatibilidade depende do software e da máquina; não ensine a extensão como regra absoluta."
+    "teacherTip": "Destaque que compatibilidade depende do software e da máquina; não ensine a extensão como regra absoluta.",
+    "visuals": [
+      {
+        "symbol": "🧊",
+        "label": "Modelo 3D",
+        "description": "Modelo 3D"
+      },
+      {
+        "symbol": "🖨️",
+        "label": "Impressão 3D",
+        "description": "Impressão 3D"
+      },
+      {
+        "symbol": "📄",
+        "label": "STL / 3MF",
+        "description": "STL / 3MF"
+      }
+    ]
   },
   {
     "id": "rb8-prototipagem-digital",
@@ -1134,7 +1722,24 @@
     "challenge": "Um encaixe projetado com 20 mm não funcionou como esperado. Qual deve ser a próxima atitude de engenharia?",
     "answer": "Medir a peça fabricada e o componente, comparar com o projeto, identificar a diferença e ajustar uma nova versão.",
     "reference": "Prototipagem e ciclo iterativo de engenharia.",
-    "teacherTip": "Trabalhe medidas e comparação. A fabricação física deve respeitar procedimentos de segurança e supervisão."
+    "teacherTip": "Trabalhe medidas e comparação. A fabricação física deve respeitar procedimentos de segurança e supervisão.",
+    "visuals": [
+      {
+        "symbol": "📊",
+        "label": "Dados",
+        "description": "Dados"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organizar",
+        "description": "Organizar"
+      },
+      {
+        "symbol": "🔎",
+        "label": "Analisar",
+        "description": "Analisar"
+      }
+    ]
   },
   {
     "id": "rb9-projeto-fabricacao",
@@ -1153,6 +1758,23 @@
     "challenge": "Escolha um componente para um robô. Justifique se usaria impressão 3D ou corte a laser, qual tipo de arquivo entraria no fluxo e como testaria o resultado.",
     "answer": "A resposta deve relacionar função e geometria ao processo, indicar formato coerente com o fluxo e definir um teste mensurável.",
     "reference": "Integração de fabricação digital, prototipagem e engenharia.",
-    "teacherTip": "Avalie a justificativa do processo e o ciclo de teste, não apenas a aparência do objeto."
+    "teacherTip": "Avalie a justificativa do processo e o ciclo de teste, não apenas a aparência do objeto.",
+    "visuals": [
+      {
+        "symbol": "🧊",
+        "label": "Modelo 3D",
+        "description": "Modelo 3D"
+      },
+      {
+        "symbol": "🖨️",
+        "label": "Impressão 3D",
+        "description": "Impressão 3D"
+      },
+      {
+        "symbol": "📄",
+        "label": "STL / 3MF",
+        "description": "STL / 3MF"
+      }
+    ]
   }
 ]
