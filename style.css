@@ -382,7 +382,10 @@ body.comfort-motion button.ui-press::after,body.comfort-calm button.ui-press::af
 #lessons-panel.access-collapsed .adapted-callout>b{font-size:11px;opacity:.8}
 #lessons-panel.access-collapsed .access-active{display:block}
 .tea-step{position:relative}.tea-next{display:block;min-height:40px;margin:12px 0 2px auto;padding:8px 13px;border:1px solid #62e9cd;border-radius:10px;background:#0b665f;color:#fff;font-weight:900}
-#lessons-panel[data-access="tea"] .lesson-content>.lesson-audio{display:none}
+#lessons-panel[data-access="tea"] .lesson-content>.lesson-audio{display:flex}
+#lessons-panel[data-access="tea"] .lesson-content>.lesson-audio [data-narrate],
+#lessons-panel[data-access="tea"] .lesson-content>.lesson-audio [data-narrate-stop]{display:none!important}
+#lessons-panel[data-access="tea"] .lesson-content>.lesson-audio [data-print-lesson]{display:inline-flex!important}
 #lessons-panel[data-access="tea"] .access-instruction{border-color:#65efd3;background:#073a3e}
 #lessons-panel[data-access="visual"] .access-instruction{border-color:#55bfe8}
 @media(max-width:650px){#lessons-panel.access-collapsed .adapted-callout{margin-top:7px}.access-active{font-size:12px}.tea-next{width:100%}}
@@ -984,4 +987,13 @@ header>.rai-float.rai-x1>.header-tangram-exact{
  body.printing-lesson .lesson-print-target .tea-step,
  body.printing-lesson .lesson-print-target .print-show-all{display:block!important;visibility:visible!important;opacity:1!important;max-height:none!important;overflow:visible!important;transform:none!important}
  body.printing-lesson .lesson-print-target [hidden].print-show-all{display:block!important}
+}
+
+/* Referências pedagógicas visíveis */
+.lesson-reference{display:block!important;margin:18px 0 8px!important;padding:12px 14px!important;border:1px solid #c9a84e!important;border-left:4px solid #e0bd5b!important;border-radius:12px!important;background:rgba(201,168,78,.08)!important;color:inherit!important;font-style:normal!important;opacity:1!important}
+.lesson-reference b{display:block!important;margin-bottom:5px!important;color:#efd77f!important;font-size:.92rem!important}
+.lesson-reference span{display:block!important;line-height:1.5!important}
+@media print{
+ body.printing-lesson .lesson-reference{display:block!important;border:1px solid #777!important;border-left:4px solid #333!important;background:#fff!important;color:#111!important;opacity:1!important}
+ body.printing-lesson .lesson-reference b{color:#111!important}
 }
