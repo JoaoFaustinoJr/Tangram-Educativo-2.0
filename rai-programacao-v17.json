@@ -1052,10 +1052,10 @@
     "icon": "🏛️",
     "axis": "História • Roma Antiga",
     "objective": "Distinguir narrativas mitológicas de narrativas históricas baseadas em fontes e evidências.",
-    "concept": "A fundação de Roma pode ser estudada pela lenda de Rômulo e Remo e pelas explicações históricas sobre aldeias latinas, contatos entre povos e formação da cidade.",
+    "concept": "A formação de Roma pode ser estudada comparando a tradição lendária com explicações históricas baseadas em fontes e evidências. A lenda de Rômulo e Remo tornou-se um símbolo cultural; a investigação histórica destaca aldeias latinas, contatos entre diferentes povos da Península Itálica, a formação da cidade e a influência etrusca.",
     "keyTerm": "Roma Antiga",
     "keyDefinition": "A fundação de Roma pode ser estudada pela lenda de Rômulo e Remo e pelas explicações históricas sobre aldeias latinas, contatos entre povos e formação da cidade.",
-    "example": "Analise os acontecimentos, grupos sociais e instituições apresentados nesta aula.",
+    "example": "1. Mito e História: Narrativas lendárias ou mitológicas podem combinar elementos reais e fictícios e foram transmitidas ao longo do tempo para explicar origens e valores de um povo. Narrativas históricas procuram interpretar o passado a partir de fontes e evidências reunidas e analisadas por historiadores.\n\n2. Rômulo e Remo: Segundo a lenda, Rômulo e Remo eram filhos de Réia Sílvia e do deus Marte. Abandonados no rio Tibre, teriam sido amamentados por uma loba. A tradição situa a fundação de Roma em 753 a.C.; após uma disputa, Rômulo teria matado Remo e se tornado o primeiro rei. A Loba Capitolina permanece como símbolo cultural dessa narrativa.\n\n3. A explicação histórica: O resumo situa aldeias de latinos dedicadas ao pastoreio nas margens do rio Tibre desde o século X a.C. e aponta sua unificação no século VIII a.C. Também registra contatos e influências de etruscos, gregos, italiotas e outros povos da Península Itálica.\n\n4. Monarquia e influência etrusca: No período monárquico, o material destaca o domínio etrusco por volta de 600 a.C. e associa a ele transformações urbanas: drenagem de pântanos, Cloaca Maxima, muralhas, pontes, praças, casas de pedra e arquitetura com arcos e abóbadas.\n\n5. Pater familias: Na organização familiar apresentada, o pater familias exercia ampla autoridade sobre a casa, esposa, filhos, pessoas escravizadas e bens. O resumo relaciona historicamente essa estrutura ao conceito de patriarcado.",
     "representation": "contexto → evidências → acontecimentos → consequências",
     "use": "História do 6º ano no modo pedagógico.",
     "observe": "Diferencie fatos, conceitos e interpretações apresentados no material.",
@@ -1063,7 +1063,7 @@
     "challenge": "Qual diferença central entre narrativa mitológica e narrativa histórica?",
     "answer": "A narrativa histórica procura apoiar-se em fontes e evidências",
     "reference": "Material-base de História do 6º ano • Aulas 35–41 • Prof. Neemias.",
-    "teacherTip": "Conteúdo-base do Prof. Neemias adaptado ao ambiente digital.",
+    "teacherTip": "Preservar a sequência e a densidade do resumo do Prof. Neemias. No modo TEA, apresentar um bloco por vez; no padrão, manter todos os blocos; no DV, leitura linear com títulos anunciados.",
     "fixation": [
       {
         "q": "Qual diferença central entre narrativa mitológica e narrativa histórica?",
@@ -1129,7 +1129,29 @@
     },
     "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação.",
     "accessibilityScope": "tangram-educativo",
-    "x1Mode": "pedagogical-standard"
+    "x1Mode": "pedagogical-standard",
+    "contentBlocks": [
+      {
+        "title": "1. Mito e História",
+        "text": "Narrativas lendárias ou mitológicas podem combinar elementos reais e fictícios e foram transmitidas ao longo do tempo para explicar origens e valores de um povo. Narrativas históricas procuram interpretar o passado a partir de fontes e evidências reunidas e analisadas por historiadores."
+      },
+      {
+        "title": "2. Rômulo e Remo",
+        "text": "Segundo a lenda, Rômulo e Remo eram filhos de Réia Sílvia e do deus Marte. Abandonados no rio Tibre, teriam sido amamentados por uma loba. A tradição situa a fundação de Roma em 753 a.C.; após uma disputa, Rômulo teria matado Remo e se tornado o primeiro rei. A Loba Capitolina permanece como símbolo cultural dessa narrativa."
+      },
+      {
+        "title": "3. A explicação histórica",
+        "text": "O resumo situa aldeias de latinos dedicadas ao pastoreio nas margens do rio Tibre desde o século X a.C. e aponta sua unificação no século VIII a.C. Também registra contatos e influências de etruscos, gregos, italiotas e outros povos da Península Itálica."
+      },
+      {
+        "title": "4. Monarquia e influência etrusca",
+        "text": "No período monárquico, o material destaca o domínio etrusco por volta de 600 a.C. e associa a ele transformações urbanas: drenagem de pântanos, Cloaca Maxima, muralhas, pontes, praças, casas de pedra e arquitetura com arcos e abóbadas."
+      },
+      {
+        "title": "5. Pater familias",
+        "text": "Na organização familiar apresentada, o pater familias exercia ampla autoridade sobre a casa, esposa, filhos, pessoas escravizadas e bens. O resumo relaciona historicamente essa estrutura ao conceito de patriarcado."
+      }
+    ]
   },
   {
     "year": 6,
@@ -1140,10 +1162,10 @@
     "icon": "🏛️",
     "axis": "História • Roma Antiga",
     "objective": "Identificar a organização política e a divisão social de Roma durante a Monarquia.",
-    "concept": "Na Monarquia, rei, Senado e Assembleia exerciam funções distintas, enquanto a sociedade era marcada por desigualdades entre patrícios, clientes, plebeus e escravizados.",
+    "concept": "A Monarquia Romana, situada no resumo entre 753 a.C. e 509 a.C., combinava instituições políticas e uma sociedade fortemente desigual. Rei, Senado e Assembleia exerciam papéis diferentes, enquanto patrícios, clientes, plebeus e escravizados possuíam posições e direitos distintos.",
     "keyTerm": "Roma Antiga",
     "keyDefinition": "Na Monarquia, rei, Senado e Assembleia exerciam funções distintas, enquanto a sociedade era marcada por desigualdades entre patrícios, clientes, plebeus e escravizados.",
-    "example": "Analise os acontecimentos, grupos sociais e instituições apresentados nesta aula.",
+    "example": "1. O Rei: Era apresentado como a maior autoridade da cidade: chefe do exército, juiz máximo e líder religioso. O resumo ressalta que o cargo não era hereditário.\n\n2. Senado e Assembleia: O Senado era um conselho de anciãos formado por chefes das famílias patrícias e participava da escolha do novo rei. A Assembleia reunia soldados de até 45 anos, que se manifestavam sobre a escolha feita pelo Senado.\n\n3. Patrícios: Formavam a elite política e econômica, com terras e rebanhos, e controlavam o Senado e cargos políticos.\n\n4. Clientes e plebeus: Clientes dependiam dos patrícios e prestavam serviços e fidelidade em troca de proteção e auxílio. Plebeus eram a maioria da população, incluindo artesãos, pequenos agricultores e comerciantes, mas estavam excluídos de direitos políticos no quadro apresentado.\n\n5. Escravizados: Pessoas escravizadas não possuíam direitos e eram tratadas como propriedade. O resumo relaciona a escravização a prisioneiros de guerra e, naquele contexto, também a dívidas.",
     "representation": "contexto → evidências → acontecimentos → consequências",
     "use": "História do 6º ano no modo pedagógico.",
     "observe": "Diferencie fatos, conceitos e interpretações apresentados no material.",
@@ -1151,7 +1173,7 @@
     "challenge": "Quem formava o Senado durante a Monarquia, segundo o resumo?",
     "answer": "Chefes das famílias patrícias",
     "reference": "Material-base de História do 6º ano • Aulas 35–41 • Prof. Neemias.",
-    "teacherTip": "Conteúdo-base do Prof. Neemias adaptado ao ambiente digital.",
+    "teacherTip": "Preservar a sequência e a densidade do resumo do Prof. Neemias. No modo TEA, apresentar um bloco por vez; no padrão, manter todos os blocos; no DV, leitura linear com títulos anunciados.",
     "fixation": [
       {
         "q": "Quem formava o Senado durante a Monarquia, segundo o resumo?",
@@ -1217,7 +1239,29 @@
     },
     "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação.",
     "accessibilityScope": "tangram-educativo",
-    "x1Mode": "pedagogical-standard"
+    "x1Mode": "pedagogical-standard",
+    "contentBlocks": [
+      {
+        "title": "1. O Rei",
+        "text": "Era apresentado como a maior autoridade da cidade: chefe do exército, juiz máximo e líder religioso. O resumo ressalta que o cargo não era hereditário."
+      },
+      {
+        "title": "2. Senado e Assembleia",
+        "text": "O Senado era um conselho de anciãos formado por chefes das famílias patrícias e participava da escolha do novo rei. A Assembleia reunia soldados de até 45 anos, que se manifestavam sobre a escolha feita pelo Senado."
+      },
+      {
+        "title": "3. Patrícios",
+        "text": "Formavam a elite política e econômica, com terras e rebanhos, e controlavam o Senado e cargos políticos."
+      },
+      {
+        "title": "4. Clientes e plebeus",
+        "text": "Clientes dependiam dos patrícios e prestavam serviços e fidelidade em troca de proteção e auxílio. Plebeus eram a maioria da população, incluindo artesãos, pequenos agricultores e comerciantes, mas estavam excluídos de direitos políticos no quadro apresentado."
+      },
+      {
+        "title": "5. Escravizados",
+        "text": "Pessoas escravizadas não possuíam direitos e eram tratadas como propriedade. O resumo relaciona a escravização a prisioneiros de guerra e, naquele contexto, também a dívidas."
+      }
+    ]
   },
   {
     "year": 6,
@@ -1228,10 +1272,10 @@
     "icon": "🏛️",
     "axis": "História • Roma Antiga",
     "objective": "Identificar a organização política da República Romana e compreender as lutas dos plebeus por direitos.",
-    "concept": "A República organizou o poder em Senado, Magistraturas e Assembleias. Inicialmente, o poder permaneceu concentrado entre patrícios, e os plebeus conquistaram direitos gradualmente.",
+    "concept": "A República Romana iniciou-se, segundo o resumo, em 509 a.C. O poder foi organizado por Senado, Magistraturas e Assembleias, mas permaneceu inicialmente concentrado entre patrícios. As lutas plebeias produziram conquistas políticas e sociais graduais.",
     "keyTerm": "Roma Antiga",
     "keyDefinition": "A República organizou o poder em Senado, Magistraturas e Assembleias. Inicialmente, o poder permaneceu concentrado entre patrícios, e os plebeus conquistaram direitos gradualmente.",
-    "example": "Analise os acontecimentos, grupos sociais e instituições apresentados nesta aula.",
+    "example": "1. Da Monarquia à República: O material associa o fim da Monarquia à expulsão de Tarquínio, o Soberbo. A expressão res publica significa 'coisa pública', embora a participação política não abrangesse toda a população.\n\n2. Senado: O resumo apresenta um Senado de 300 membros vitalícios, patrícios, com funções ligadas ao tesouro público, guerra e paz e aconselhamento da administração.\n\n3. Magistraturas: Cônsules comandavam o exército e presidiam Senado/administração; pretor atuava na Justiça; edil nos serviços públicos; questor nas finanças; censor no censo e conduta; ditador era um cargo excepcional para crises, limitado a seis meses no quadro apresentado.\n\n4. Assembleias: A Assembleia Centuriata era organizada por centúrias e riqueza e elegia cônsules; a Assembleia das Tribos era organizada por região/origem e elegia edis e questores.\n\n5. Lutas dos plebeus: Plebeus serviam no exército e pagavam impostos, mas inicialmente não participavam de modo equivalente das decisões. O resumo registra conquistas graduais: possibilidade de cônsul plebeu, casamento entre patrícios e plebeus, leis escritas e fim da escravidão por dívidas, observando que plebeus ricos foram os mais beneficiados.",
     "representation": "contexto → evidências → acontecimentos → consequências",
     "use": "História do 6º ano no modo pedagógico.",
     "observe": "Diferencie fatos, conceitos e interpretações apresentados no material.",
@@ -1239,7 +1283,7 @@
     "challenge": "Quais eram os três pilares políticos destacados na República?",
     "answer": "Senado, Magistraturas e Assembleias",
     "reference": "Material-base de História do 6º ano • Aulas 35–41 • Prof. Neemias.",
-    "teacherTip": "Conteúdo-base do Prof. Neemias adaptado ao ambiente digital.",
+    "teacherTip": "Preservar a sequência e a densidade do resumo do Prof. Neemias. No modo TEA, apresentar um bloco por vez; no padrão, manter todos os blocos; no DV, leitura linear com títulos anunciados.",
     "fixation": [
       {
         "q": "Quais eram os três pilares políticos destacados na República?",
@@ -1305,7 +1349,29 @@
     },
     "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação.",
     "accessibilityScope": "tangram-educativo",
-    "x1Mode": "pedagogical-standard"
+    "x1Mode": "pedagogical-standard",
+    "contentBlocks": [
+      {
+        "title": "1. Da Monarquia à República",
+        "text": "O material associa o fim da Monarquia à expulsão de Tarquínio, o Soberbo. A expressão res publica significa 'coisa pública', embora a participação política não abrangesse toda a população."
+      },
+      {
+        "title": "2. Senado",
+        "text": "O resumo apresenta um Senado de 300 membros vitalícios, patrícios, com funções ligadas ao tesouro público, guerra e paz e aconselhamento da administração."
+      },
+      {
+        "title": "3. Magistraturas",
+        "text": "Cônsules comandavam o exército e presidiam Senado/administração; pretor atuava na Justiça; edil nos serviços públicos; questor nas finanças; censor no censo e conduta; ditador era um cargo excepcional para crises, limitado a seis meses no quadro apresentado."
+      },
+      {
+        "title": "4. Assembleias",
+        "text": "A Assembleia Centuriata era organizada por centúrias e riqueza e elegia cônsules; a Assembleia das Tribos era organizada por região/origem e elegia edis e questores."
+      },
+      {
+        "title": "5. Lutas dos plebeus",
+        "text": "Plebeus serviam no exército e pagavam impostos, mas inicialmente não participavam de modo equivalente das decisões. O resumo registra conquistas graduais: possibilidade de cônsul plebeu, casamento entre patrícios e plebeus, leis escritas e fim da escravidão por dívidas, observando que plebeus ricos foram os mais beneficiados."
+      }
+    ]
   },
   {
     "year": 6,
@@ -1316,10 +1382,10 @@
     "icon": "🏛️",
     "axis": "História • Roma Antiga",
     "objective": "Compreender a expansão territorial romana, as Guerras Púnicas e impactos sociais e econômicos das conquistas.",
-    "concept": "Roma expandiu-se pela Península Itálica e pelo Mediterrâneo. As disputas com Cartago envolveram o controle comercial, e as conquistas ampliaram riquezas, terras e escravização.",
+    "concept": "A expansão de Roma transformou seu território, comércio e sociedade. O resumo acompanha as conquistas pela Península Itálica e Mediterrâneo, as três Guerras Púnicas contra Cartago, o Mare Nostrum e consequências como concentração de terras e aumento da escravização.",
     "keyTerm": "Roma Antiga",
     "keyDefinition": "Roma expandiu-se pela Península Itálica e pelo Mediterrâneo. As disputas com Cartago envolveram o controle comercial, e as conquistas ampliaram riquezas, terras e escravização.",
-    "example": "Analise os acontecimentos, grupos sociais e instituições apresentados nesta aula.",
+    "example": "1. Expansão territorial: As guerras, inicialmente apresentadas como defensivas, passaram também a envolver conquista de terras e controle de rotas comerciais. Roma expandiu-se pela Península Itálica e depois pela bacia do Mediterrâneo.\n\n2. Guerras Púnicas: Roma disputou com Cartago o controle comercial marítimo. O resumo registra três guerras: 264–241 a.C., 218–202 a.C. e 149–146 a.C. Roma venceu os conflitos e Cartago foi destruída ao final.\n\n3. Consequências econômicas e sociais: As conquistas ampliaram impostos, metais preciosos e terras sob controle romano. O material destaca concentração de terras em latifúndios, fortalecimento dos cavaleiros e aumento do número de pessoas escravizadas, sobretudo prisioneiros de guerra.\n\n4. Mare Nostrum e comércio: Mare Nostrum, 'Nosso Mar', aparece associado ao domínio romano do entorno do Mediterrâneo. As trocas difundiam elementos romanos e também permitiam que Roma absorvesse e reelaborasse tradições de outros povos.\n\n5. Infraestrutura, moeda e navegação: O resumo cita o denário, o porto de Ostia Antica, navios mercantes do tipo Corbita, barcaças fluviais, faróis e velas como componentes das redes comerciais.\n\n6. Escravidão e presente: O material descreve juridicamente a pessoa escravizada como propriedade e propõe relacionar o tema a formas contemporâneas de trabalho análogo à escravidão e exploração trabalhista.",
     "representation": "contexto → evidências → acontecimentos → consequências",
     "use": "História do 6º ano no modo pedagógico.",
     "observe": "Diferencie fatos, conceitos e interpretações apresentados no material.",
@@ -1327,7 +1393,7 @@
     "challenge": "Contra qual cidade Roma travou as Guerras Púnicas?",
     "answer": "Cartago",
     "reference": "Material-base de História do 6º ano • Aulas 35–41 • Prof. Neemias.",
-    "teacherTip": "Conteúdo-base do Prof. Neemias adaptado ao ambiente digital.",
+    "teacherTip": "Preservar a sequência e a densidade do resumo do Prof. Neemias. No modo TEA, apresentar um bloco por vez; no padrão, manter todos os blocos; no DV, leitura linear com títulos anunciados.",
     "fixation": [
       {
         "q": "Contra qual cidade Roma travou as Guerras Púnicas?",
@@ -1393,7 +1459,33 @@
     },
     "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação.",
     "accessibilityScope": "tangram-educativo",
-    "x1Mode": "pedagogical-standard"
+    "x1Mode": "pedagogical-standard",
+    "contentBlocks": [
+      {
+        "title": "1. Expansão territorial",
+        "text": "As guerras, inicialmente apresentadas como defensivas, passaram também a envolver conquista de terras e controle de rotas comerciais. Roma expandiu-se pela Península Itálica e depois pela bacia do Mediterrâneo."
+      },
+      {
+        "title": "2. Guerras Púnicas",
+        "text": "Roma disputou com Cartago o controle comercial marítimo. O resumo registra três guerras: 264–241 a.C., 218–202 a.C. e 149–146 a.C. Roma venceu os conflitos e Cartago foi destruída ao final."
+      },
+      {
+        "title": "3. Consequências econômicas e sociais",
+        "text": "As conquistas ampliaram impostos, metais preciosos e terras sob controle romano. O material destaca concentração de terras em latifúndios, fortalecimento dos cavaleiros e aumento do número de pessoas escravizadas, sobretudo prisioneiros de guerra."
+      },
+      {
+        "title": "4. Mare Nostrum e comércio",
+        "text": "Mare Nostrum, 'Nosso Mar', aparece associado ao domínio romano do entorno do Mediterrâneo. As trocas difundiam elementos romanos e também permitiam que Roma absorvesse e reelaborasse tradições de outros povos."
+      },
+      {
+        "title": "5. Infraestrutura, moeda e navegação",
+        "text": "O resumo cita o denário, o porto de Ostia Antica, navios mercantes do tipo Corbita, barcaças fluviais, faróis e velas como componentes das redes comerciais."
+      },
+      {
+        "title": "6. Escravidão e presente",
+        "text": "O material descreve juridicamente a pessoa escravizada como propriedade e propõe relacionar o tema a formas contemporâneas de trabalho análogo à escravidão e exploração trabalhista."
+      }
+    ]
   },
   {
     "year": 6,
@@ -1404,10 +1496,10 @@
     "icon": "🏛️",
     "axis": "História • Roma Antiga",
     "objective": "Compreender a escravidão romana e reconhecer formas de resistência, com destaque para a Revolta de Espártaco.",
-    "concept": "A escravidão romana estava ligada sobretudo às guerras de conquista e às dívidas. Pessoas escravizadas atuavam em diferentes trabalhos e também organizaram movimentos de resistência.",
+    "concept": "A escravidão teve grande presença na sociedade romana, mas pessoas escravizadas também resistiram. A aula aborda condições e tipos de trabalho, gladiadores, alforria e a Revolta de Espártaco, além da reflexão sobre grupos historicamente invisibilizados.",
     "keyTerm": "Roma Antiga",
     "keyDefinition": "A escravidão romana estava ligada sobretudo às guerras de conquista e às dívidas. Pessoas escravizadas atuavam em diferentes trabalhos e também organizaram movimentos de resistência.",
-    "example": "Analise os acontecimentos, grupos sociais e instituições apresentados nesta aula.",
+    "example": "1. Escravidão na Roma Antiga: O resumo define escravidão como uma prática em que uma pessoa exerce direitos de propriedade sobre outra. Em Roma, sua origem é associada principalmente às guerras de conquista e às dívidas; o material diferencia esse processo da escravidão moderna nas Américas baseada em critérios raciais.\n\n2. Trabalhos e condições: Pessoas escravizadas atuavam na agricultura, mineração, trabalho doméstico e comércio. O resumo destaca condições especialmente duras no trabalho rural.\n\n3. Alforria: Em algumas situações, uma pessoa escravizada podia acumular recursos e comprar sua liberdade. O material registra que libertos podiam adquirir cidadania, porém com restrições em relação aos nascidos livres.\n\n4. Gladiadores: Eram escravizados ou prisioneiros treinados para combates em anfiteatros. O resumo menciona diferentes categorias e também gladiatrices.\n\n5. Revolta de Espártaco: Entre 73 e 71 a.C., Espártaco liderou uma grande revolta que reuniu escravizados e pobres livres. Após vitórias iniciais, o movimento foi derrotado; o resumo registra a crucificação de cerca de seis mil rebeldes ao longo da Via Ápia.\n\n6. Memória dos apagados: A aula chama atenção para o fato de narrativas tradicionais frequentemente privilegiarem imperadores, generais e vencedores, deixando menos visíveis escravizados, trabalhadores e mulheres. Também propõe reflexão sobre capacitismo e atitudes anticapacitistas.",
     "representation": "contexto → evidências → acontecimentos → consequências",
     "use": "História do 6º ano no modo pedagógico.",
     "observe": "Diferencie fatos, conceitos e interpretações apresentados no material.",
@@ -1415,7 +1507,7 @@
     "challenge": "Segundo o material, a escravidão romana decorria principalmente de:",
     "answer": "Guerras de conquista e dívidas",
     "reference": "Material-base de História do 6º ano • Aulas 35–41 • Prof. Neemias.",
-    "teacherTip": "Conteúdo-base do Prof. Neemias adaptado ao ambiente digital.",
+    "teacherTip": "Preservar a sequência e a densidade do resumo do Prof. Neemias. No modo TEA, apresentar um bloco por vez; no padrão, manter todos os blocos; no DV, leitura linear com títulos anunciados.",
     "fixation": [
       {
         "q": "Segundo o material, a escravidão romana decorria principalmente de:",
@@ -1481,7 +1573,33 @@
     },
     "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação.",
     "accessibilityScope": "tangram-educativo",
-    "x1Mode": "pedagogical-standard"
+    "x1Mode": "pedagogical-standard",
+    "contentBlocks": [
+      {
+        "title": "1. Escravidão na Roma Antiga",
+        "text": "O resumo define escravidão como uma prática em que uma pessoa exerce direitos de propriedade sobre outra. Em Roma, sua origem é associada principalmente às guerras de conquista e às dívidas; o material diferencia esse processo da escravidão moderna nas Américas baseada em critérios raciais."
+      },
+      {
+        "title": "2. Trabalhos e condições",
+        "text": "Pessoas escravizadas atuavam na agricultura, mineração, trabalho doméstico e comércio. O resumo destaca condições especialmente duras no trabalho rural."
+      },
+      {
+        "title": "3. Alforria",
+        "text": "Em algumas situações, uma pessoa escravizada podia acumular recursos e comprar sua liberdade. O material registra que libertos podiam adquirir cidadania, porém com restrições em relação aos nascidos livres."
+      },
+      {
+        "title": "4. Gladiadores",
+        "text": "Eram escravizados ou prisioneiros treinados para combates em anfiteatros. O resumo menciona diferentes categorias e também gladiatrices."
+      },
+      {
+        "title": "5. Revolta de Espártaco",
+        "text": "Entre 73 e 71 a.C., Espártaco liderou uma grande revolta que reuniu escravizados e pobres livres. Após vitórias iniciais, o movimento foi derrotado; o resumo registra a crucificação de cerca de seis mil rebeldes ao longo da Via Ápia."
+      },
+      {
+        "title": "6. Memória dos apagados",
+        "text": "A aula chama atenção para o fato de narrativas tradicionais frequentemente privilegiarem imperadores, generais e vencedores, deixando menos visíveis escravizados, trabalhadores e mulheres. Também propõe reflexão sobre capacitismo e atitudes anticapacitistas."
+      }
+    ]
   },
   {
     "year": 6,
@@ -1492,10 +1610,10 @@
     "icon": "🏛️",
     "axis": "História • Roma Antiga",
     "objective": "Relacionar a organização do exército romano à ascensão política dos generais e compreender o Primeiro Triunvirato e Júlio César.",
-    "concept": "A profissionalização das tropas fortaleceu laços entre soldados e generais. Nesse contexto surgiram alianças políticas como o Primeiro Triunvirato, e Júlio César ampliou seu poder.",
+    "concept": "A expansão romana fortaleceu o exército e o prestígio dos generais. A aula relaciona organização militar, reformas, lealdade das tropas, Primeiro Triunvirato, ascensão de Júlio César e seu assassinato.",
     "keyTerm": "Roma Antiga",
     "keyDefinition": "A profissionalização das tropas fortaleceu laços entre soldados e generais. Nesse contexto surgiram alianças políticas como o Primeiro Triunvirato, e Júlio César ampliou seu poder.",
-    "example": "Analise os acontecimentos, grupos sociais e instituições apresentados nesta aula.",
+    "example": "1. Organização do exército: A legião é apresentada como unidade principal, com cerca de 3 mil a 5 mil homens; a centúria reunia aproximadamente 80 a 100 homens sob um centurião.\n\n2. Legionários: O resumo descreve exigências físicas e equipamentos do legionário, citando gládio, pilum, scutum e sandálias com cravos.\n\n3. Reforma de Mário: Em 107 a.C., a reforma atribuída a Mário permitiu o recrutamento de despossuídos. O material destaca que a lealdade das tropas passou a se ligar fortemente aos generais, que ofereciam pagamentos e recompensas.\n\n4. Primeiro Triunvirato: Em 60 a.C., Júlio César, Pompeu e Crasso formaram uma aliança informal para dividir e controlar o poder político.\n\n5. Júlio César: O resumo situa sua tomada do poder em 49 a.C. e menciona distribuição de terras a plebeus empobrecidos e ex-soldados.\n\n6. Assassinato: Em 44 a.C., senadores que acusavam César de pretender restaurar a Monarquia organizaram seu assassinato. O material menciona Brutus e a tradição cultural da frase 'Até tu, Brutus?'",
     "representation": "contexto → evidências → acontecimentos → consequências",
     "use": "História do 6º ano no modo pedagógico.",
     "observe": "Diferencie fatos, conceitos e interpretações apresentados no material.",
@@ -1503,7 +1621,7 @@
     "challenge": "Quem formou o Primeiro Triunvirato?",
     "answer": "Júlio César, Pompeu e Crasso",
     "reference": "Material-base de História do 6º ano • Aulas 35–41 • Prof. Neemias.",
-    "teacherTip": "Conteúdo-base do Prof. Neemias adaptado ao ambiente digital.",
+    "teacherTip": "Preservar a sequência e a densidade do resumo do Prof. Neemias. No modo TEA, apresentar um bloco por vez; no padrão, manter todos os blocos; no DV, leitura linear com títulos anunciados.",
     "fixation": [
       {
         "q": "Quem formou o Primeiro Triunvirato?",
@@ -1569,7 +1687,33 @@
     },
     "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação.",
     "accessibilityScope": "tangram-educativo",
-    "x1Mode": "pedagogical-standard"
+    "x1Mode": "pedagogical-standard",
+    "contentBlocks": [
+      {
+        "title": "1. Organização do exército",
+        "text": "A legião é apresentada como unidade principal, com cerca de 3 mil a 5 mil homens; a centúria reunia aproximadamente 80 a 100 homens sob um centurião."
+      },
+      {
+        "title": "2. Legionários",
+        "text": "O resumo descreve exigências físicas e equipamentos do legionário, citando gládio, pilum, scutum e sandálias com cravos."
+      },
+      {
+        "title": "3. Reforma de Mário",
+        "text": "Em 107 a.C., a reforma atribuída a Mário permitiu o recrutamento de despossuídos. O material destaca que a lealdade das tropas passou a se ligar fortemente aos generais, que ofereciam pagamentos e recompensas."
+      },
+      {
+        "title": "4. Primeiro Triunvirato",
+        "text": "Em 60 a.C., Júlio César, Pompeu e Crasso formaram uma aliança informal para dividir e controlar o poder político."
+      },
+      {
+        "title": "5. Júlio César",
+        "text": "O resumo situa sua tomada do poder em 49 a.C. e menciona distribuição de terras a plebeus empobrecidos e ex-soldados."
+      },
+      {
+        "title": "6. Assassinato",
+        "text": "Em 44 a.C., senadores que acusavam César de pretender restaurar a Monarquia organizaram seu assassinato. O material menciona Brutus e a tradição cultural da frase 'Até tu, Brutus?'"
+      }
+    ]
   },
   {
     "year": 6,
@@ -1580,10 +1724,10 @@
     "icon": "🏛️",
     "axis": "História • Roma Antiga",
     "objective": "Compreender a transição da República para o Império e características do governo de Otávio Augusto.",
-    "concept": "Após a crise republicana e o Segundo Triunvirato, Otávio venceu disputas internas e recebeu títulos do Senado em 27 a.C. Seu governo é associado à Pax Romana, obras públicas e integração econômica.",
+    "concept": "A crise da República levou à formação do Segundo Triunvirato e à ascensão de Otávio. O resumo situa em 27 a.C. o início do Império e aborda governo de Augusto, Pax Romana, infraestrutura, economia e política do pão e circo.",
     "keyTerm": "Roma Antiga",
     "keyDefinition": "Após a crise republicana e o Segundo Triunvirato, Otávio venceu disputas internas e recebeu títulos do Senado em 27 a.C. Seu governo é associado à Pax Romana, obras públicas e integração econômica.",
-    "example": "Analise os acontecimentos, grupos sociais e instituições apresentados nesta aula.",
+    "example": "1. Crise da República: O crescimento do poder dos generais é apresentado como parte da crise das instituições republicanas.\n\n2. Segundo Triunvirato: Após o assassinato de Júlio César, Otávio, Marco Antônio e Lépido formaram o Segundo Triunvirato em 43 a.C. e dividiram os domínios romanos.\n\n3. Otávio Augusto: Após disputas internas e vitória sobre Marco Antônio e Cleópatra, Otávio recebeu do Senado, em 27 a.C., títulos como Augusto e Imperador, marco usado pelo resumo para o início do Império.\n\n4. Governo: O material destaca fortificação de fronteiras, distribuição de terras a soldados, trigo à plebe e modernização de Roma, apresentada como cidade de cerca de um milhão de habitantes.\n\n5. Pax Romana: O resumo descreve mais de 200 anos de paz e estabilidade política, associados ao desenvolvimento urbano e a obras como estradas, teatros, aquedutos, termas e fontes.\n\n6. Economia e comércio: Agricultura permaneceu central, ao lado da produção manufatureira. Estradas e portos integravam as províncias e circulavam produtos como trigo, metais, vinho, azeite e animais para espetáculos.\n\n7. Pão e circo: O material apresenta a distribuição de alimentos e o patrocínio de espetáculos e festivais como estratégia de controle social, citando teatro, gladiadores e corridas de bigas.",
     "representation": "contexto → evidências → acontecimentos → consequências",
     "use": "História do 6º ano no modo pedagógico.",
     "observe": "Diferencie fatos, conceitos e interpretações apresentados no material.",
@@ -1591,7 +1735,7 @@
     "challenge": "Quem formava o Segundo Triunvirato?",
     "answer": "Otávio, Marco Antônio e Lépido",
     "reference": "Material-base de História do 6º ano • Aulas 35–41 • Prof. Neemias.",
-    "teacherTip": "Conteúdo-base do Prof. Neemias adaptado ao ambiente digital.",
+    "teacherTip": "Preservar a sequência e a densidade do resumo do Prof. Neemias. No modo TEA, apresentar um bloco por vez; no padrão, manter todos os blocos; no DV, leitura linear com títulos anunciados.",
     "fixation": [
       {
         "q": "Quem formava o Segundo Triunvirato?",
@@ -1657,6 +1801,36 @@
     },
     "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação.",
     "accessibilityScope": "tangram-educativo",
-    "x1Mode": "pedagogical-standard"
+    "x1Mode": "pedagogical-standard",
+    "contentBlocks": [
+      {
+        "title": "1. Crise da República",
+        "text": "O crescimento do poder dos generais é apresentado como parte da crise das instituições republicanas."
+      },
+      {
+        "title": "2. Segundo Triunvirato",
+        "text": "Após o assassinato de Júlio César, Otávio, Marco Antônio e Lépido formaram o Segundo Triunvirato em 43 a.C. e dividiram os domínios romanos."
+      },
+      {
+        "title": "3. Otávio Augusto",
+        "text": "Após disputas internas e vitória sobre Marco Antônio e Cleópatra, Otávio recebeu do Senado, em 27 a.C., títulos como Augusto e Imperador, marco usado pelo resumo para o início do Império."
+      },
+      {
+        "title": "4. Governo",
+        "text": "O material destaca fortificação de fronteiras, distribuição de terras a soldados, trigo à plebe e modernização de Roma, apresentada como cidade de cerca de um milhão de habitantes."
+      },
+      {
+        "title": "5. Pax Romana",
+        "text": "O resumo descreve mais de 200 anos de paz e estabilidade política, associados ao desenvolvimento urbano e a obras como estradas, teatros, aquedutos, termas e fontes."
+      },
+      {
+        "title": "6. Economia e comércio",
+        "text": "Agricultura permaneceu central, ao lado da produção manufatureira. Estradas e portos integravam as províncias e circulavam produtos como trigo, metais, vinho, azeite e animais para espetáculos."
+      },
+      {
+        "title": "7. Pão e circo",
+        "text": "O material apresenta a distribuição de alimentos e o patrocínio de espetáculos e festivais como estratégia de controle social, citando teatro, gladiadores e corridas de bigas."
+      }
+    ]
   }
 ]
