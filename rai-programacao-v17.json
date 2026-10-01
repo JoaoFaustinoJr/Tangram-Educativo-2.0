@@ -1127,7 +1127,9 @@
         ]
       }
     },
-    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação."
+    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação.",
+    "accessibilityScope": "tangram-educativo",
+    "x1Mode": "pedagogical-standard"
   },
   {
     "year": 6,
@@ -1213,7 +1215,9 @@
         ]
       }
     },
-    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação."
+    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação.",
+    "accessibilityScope": "tangram-educativo",
+    "x1Mode": "pedagogical-standard"
   },
   {
     "year": 6,
@@ -1299,7 +1303,9 @@
         ]
       }
     },
-    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação."
+    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação.",
+    "accessibilityScope": "tangram-educativo",
+    "x1Mode": "pedagogical-standard"
   },
   {
     "year": 6,
@@ -1385,7 +1391,9 @@
         ]
       }
     },
-    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação."
+    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação.",
+    "accessibilityScope": "tangram-educativo",
+    "x1Mode": "pedagogical-standard"
   },
   {
     "year": 6,
@@ -1471,7 +1479,9 @@
         ]
       }
     },
-    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação."
+    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação.",
+    "accessibilityScope": "tangram-educativo",
+    "x1Mode": "pedagogical-standard"
   },
   {
     "year": 6,
@@ -1557,7 +1567,9 @@
         ]
       }
     },
-    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação."
+    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação.",
+    "accessibilityScope": "tangram-educativo",
+    "x1Mode": "pedagogical-standard"
   },
   {
     "year": 6,
@@ -1643,6 +1655,8 @@
         ]
       }
     },
-    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação."
+    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação.",
+    "accessibilityScope": "tangram-educativo",
+    "x1Mode": "pedagogical-standard"
   }
 ]
