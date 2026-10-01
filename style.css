@@ -1008,3 +1008,9 @@ header>.rai-float.rai-x1>.header-tangram-exact{
  body.printing-lesson .lesson-print-brand small{display:block;font-size:9px;margin-top:3px;color:#444}
  body.printing-lesson .lesson-reference:after{content:"Adaptação e apresentação digital: Tangram Educativo • Prof. João Faustino Júnior";display:block;margin-top:8px;padding-top:7px;border-top:1px solid #aaa;font-size:9px;color:#444}
 }
+
+.lesson-print-logo{display:none}
+@media print{
+ body.printing-lesson .lesson-print-logo{display:block!important;visibility:visible!important;width:54px!important;height:54px!important;object-fit:contain!important;flex:0 0 54px!important}
+ body.printing-lesson .lesson-reference:after{content:"Adaptação e apresentação digital: Tangram Educativo • Prof. João Faustino Júnior.";display:block;margin-top:7px;padding-top:6px;border-top:1px solid #bbb;font-size:9px;color:#555}
+}
