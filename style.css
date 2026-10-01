@@ -1014,3 +1014,46 @@ header>.rai-float.rai-x1>.header-tangram-exact{
  body.printing-lesson .lesson-print-logo{display:block!important;visibility:visible!important;width:54px!important;height:54px!important;object-fit:contain!important;flex:0 0 54px!important}
  body.printing-lesson .lesson-reference:after{content:"Adaptação e apresentação digital: Tangram Educativo • Prof. João Faustino Júnior.";display:block;margin-top:7px;padding-top:6px;border-top:1px solid #bbb;font-size:9px;color:#555}
 }
+
+/* v1.0.11 — composição editorial da aula impressa */
+@media print{
+ body.printing-lesson #lessons-panel{font-family:Arial,Helvetica,sans-serif!important}
+ body.printing-lesson .lesson-print-target{max-width:185mm!important;margin:0 auto!important}
+ body.printing-lesson .lesson-print-brand{
+  display:flex!important;align-items:center!important;gap:10px!important;
+  margin:0 0 10px!important;padding:0 0 9px!important;
+  border-bottom:1.5px solid #263746!important;background:#fff!important;color:#17232d!important
+ }
+ body.printing-lesson .lesson-print-logo{
+  display:grid!important;grid-template-columns:repeat(3,13px)!important;place-items:center!important;
+  width:46px!important;height:46px!important;flex:0 0 46px!important;padding:4px!important;
+  border:1.5px solid #263746!important;border-radius:10px!important;
+  font-size:15px!important;line-height:1!important;color:#17232d!important;background:#fff!important
+ }
+ body.printing-lesson .lesson-print-logo span{display:block!important;visibility:visible!important}
+ body.printing-lesson .lesson-print-brandcopy{display:flex!important;flex-direction:column!important;gap:0!important;min-width:0!important}
+ body.printing-lesson .lesson-print-brandcopy strong{font-size:15px!important;line-height:1.15!important;letter-spacing:.1px!important;color:#17232d!important}
+ body.printing-lesson .lesson-print-brandcopy span{font-size:10.5px!important;font-weight:700!important;line-height:1.25!important;color:#344955!important}
+ body.printing-lesson .lesson-print-brandcopy small{font-size:8.5px!important;line-height:1.25!important;color:#60717a!important}
+ body.printing-lesson .lesson-print-target>summary{
+  display:flex!important;align-items:flex-start!important;padding:7px 0 10px!important;margin:0 0 11px!important;
+  border-bottom:1px solid #6c7a80!important;color:#17232d!important
+ }
+ body.printing-lesson .lesson-visual-strip{gap:5px!important;margin:7px 0 10px!important}
+ body.printing-lesson .lesson-visual-item{padding:5px 8px!important;border-radius:8px!important;font-size:9.5px!important}
+ body.printing-lesson .lesson-block,
+ body.printing-lesson .history-block,
+ body.printing-lesson .lesson-challenge{margin:0 0 7px!important;padding:9px 11px!important;border-radius:9px!important;box-shadow:none!important}
+ body.printing-lesson .lesson-block b,
+ body.printing-lesson .history-block b{font-size:10px!important}
+ body.printing-lesson .lesson-block p,
+ body.printing-lesson .history-block p,
+ body.printing-lesson .lesson-challenge p{font-size:9.6px!important;line-height:1.45!important}
+ body.printing-lesson .lesson-reference{
+  margin:11px 0 0!important;padding:9px 11px!important;border-radius:8px!important;
+  border:1px solid #87949a!important;border-left:3px solid #263746!important
+ }
+ body.printing-lesson .lesson-reference b{font-size:9.5px!important}
+ body.printing-lesson .lesson-reference span{font-size:9px!important;line-height:1.4!important}
+ body.printing-lesson .lesson-reference:after{font-size:8px!important}
+}
