@@ -207,7 +207,7 @@ function lessonTrackSummary(items){
 function refreshLessonProgress(details){
  if(!details)return;const id=details.dataset.lessonId||'',old=details.querySelector('.lesson-progress');if(!old)return;old.outerHTML=lessonProgressHTML(id,!!details.querySelector('.lesson-practice,.code-lab'),!!details.querySelector('[data-maker-path]'));refreshLessonTrackSummary();
 }
-function refreshLessonTrackSummary(){const m=document.querySelector('#lessons-panel'),box=m?.querySelector('.lesson-track-summary');if(!m||!box)return;const items=(lessonBanks?.[lessonSection]||[]).filter(x=>(lessonSection!=='history'||x.section==='history')&&(!x.year||Number(x.year)===lessonYear));box.outerHTML=lessonTrackSummary(items)}
+function refreshLessonTrackSummary(){const m=document.querySelector('#lessons-panel'),box=m?.querySelector('.lesson-track-summary');if(!m||!box)return;const items=(lessonBanks?.[lessonSection]||[]).filter(x=>{const sourceSection=String(x.section||'').toLowerCase();const sectionOk=lessonSection==='history'?sourceSection==='history':sourceSection!=='history';return sectionOk&&(!x.year||Number(x.year)===lessonYear)});box.outerHTML=lessonTrackSummary(items)}
 
 function lessonPractice(item){
  const y=Number(item?.year||lessonYear);
