@@ -1098,7 +1098,36 @@
         "correct": 0,
         "a": "Latinos"
       }
-    ]
+    ],
+    "accessibility": {
+      "standard": {
+        "presentation": "Conteúdo completo em blocos curtos, seguido de questões objetivas."
+      },
+      "tea": {
+        "presentation": "Uma ideia por etapa, sequência previsível e linguagem direta.",
+        "sequence": [
+          "🎯 Objetivo",
+          "📘 Ideia principal",
+          "💡 Exemplo",
+          "❓ Uma questão por vez"
+        ],
+        "rules": [
+          "Sem cronômetro obrigatório",
+          "Sem estímulos simultâneos desnecessários",
+          "Avanço explícito por botão"
+        ]
+      },
+      "dv": {
+        "presentation": "Conteúdo textual linear e sem dependência de elementos visuais.",
+        "rules": [
+          "Compatível com leitor de tela",
+          "Ordem de foco previsível",
+          "Alternativas identificadas por texto",
+          "Ampliação sem perda do ponto de leitura"
+        ]
+      }
+    },
+    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação."
   },
   {
     "year": 6,
@@ -1155,7 +1184,36 @@
         "correct": 1,
         "a": "Atuava como chefe do exército, juiz máximo e líder religioso"
       }
-    ]
+    ],
+    "accessibility": {
+      "standard": {
+        "presentation": "Conteúdo completo em blocos curtos, seguido de questões objetivas."
+      },
+      "tea": {
+        "presentation": "Uma ideia por etapa, sequência previsível e linguagem direta.",
+        "sequence": [
+          "🎯 Objetivo",
+          "📘 Ideia principal",
+          "💡 Exemplo",
+          "❓ Uma questão por vez"
+        ],
+        "rules": [
+          "Sem cronômetro obrigatório",
+          "Sem estímulos simultâneos desnecessários",
+          "Avanço explícito por botão"
+        ]
+      },
+      "dv": {
+        "presentation": "Conteúdo textual linear e sem dependência de elementos visuais.",
+        "rules": [
+          "Compatível com leitor de tela",
+          "Ordem de foco previsível",
+          "Alternativas identificadas por texto",
+          "Ampliação sem perda do ponto de leitura"
+        ]
+      }
+    },
+    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação."
   },
   {
     "year": 6,
@@ -1212,7 +1270,36 @@
         "correct": 1,
         "a": "Permissão de casamento entre patrícios e plebeus"
       }
-    ]
+    ],
+    "accessibility": {
+      "standard": {
+        "presentation": "Conteúdo completo em blocos curtos, seguido de questões objetivas."
+      },
+      "tea": {
+        "presentation": "Uma ideia por etapa, sequência previsível e linguagem direta.",
+        "sequence": [
+          "🎯 Objetivo",
+          "📘 Ideia principal",
+          "💡 Exemplo",
+          "❓ Uma questão por vez"
+        ],
+        "rules": [
+          "Sem cronômetro obrigatório",
+          "Sem estímulos simultâneos desnecessários",
+          "Avanço explícito por botão"
+        ]
+      },
+      "dv": {
+        "presentation": "Conteúdo textual linear e sem dependência de elementos visuais.",
+        "rules": [
+          "Compatível com leitor de tela",
+          "Ordem de foco previsível",
+          "Alternativas identificadas por texto",
+          "Ampliação sem perda do ponto de leitura"
+        ]
+      }
+    },
+    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação."
   },
   {
     "year": 6,
@@ -1269,7 +1356,36 @@
         "correct": 1,
         "a": "Aumento da escravidão com prisioneiros de guerra"
       }
-    ]
+    ],
+    "accessibility": {
+      "standard": {
+        "presentation": "Conteúdo completo em blocos curtos, seguido de questões objetivas."
+      },
+      "tea": {
+        "presentation": "Uma ideia por etapa, sequência previsível e linguagem direta.",
+        "sequence": [
+          "🎯 Objetivo",
+          "📘 Ideia principal",
+          "💡 Exemplo",
+          "❓ Uma questão por vez"
+        ],
+        "rules": [
+          "Sem cronômetro obrigatório",
+          "Sem estímulos simultâneos desnecessários",
+          "Avanço explícito por botão"
+        ]
+      },
+      "dv": {
+        "presentation": "Conteúdo textual linear e sem dependência de elementos visuais.",
+        "rules": [
+          "Compatível com leitor de tela",
+          "Ordem de foco previsível",
+          "Alternativas identificadas por texto",
+          "Ampliação sem perda do ponto de leitura"
+        ]
+      }
+    },
+    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação."
   },
   {
     "year": 6,
@@ -1326,7 +1442,36 @@
         "correct": 1,
         "a": "Escravizados ou prisioneiros treinados para combates em espetáculos"
       }
-    ]
+    ],
+    "accessibility": {
+      "standard": {
+        "presentation": "Conteúdo completo em blocos curtos, seguido de questões objetivas."
+      },
+      "tea": {
+        "presentation": "Uma ideia por etapa, sequência previsível e linguagem direta.",
+        "sequence": [
+          "🎯 Objetivo",
+          "📘 Ideia principal",
+          "💡 Exemplo",
+          "❓ Uma questão por vez"
+        ],
+        "rules": [
+          "Sem cronômetro obrigatório",
+          "Sem estímulos simultâneos desnecessários",
+          "Avanço explícito por botão"
+        ]
+      },
+      "dv": {
+        "presentation": "Conteúdo textual linear e sem dependência de elementos visuais.",
+        "rules": [
+          "Compatível com leitor de tela",
+          "Ordem de foco previsível",
+          "Alternativas identificadas por texto",
+          "Ampliação sem perda do ponto de leitura"
+        ]
+      }
+    },
+    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação."
   },
   {
     "year": 6,
@@ -1383,7 +1528,36 @@
         "correct": 2,
         "a": "44 a.C."
       }
-    ]
+    ],
+    "accessibility": {
+      "standard": {
+        "presentation": "Conteúdo completo em blocos curtos, seguido de questões objetivas."
+      },
+      "tea": {
+        "presentation": "Uma ideia por etapa, sequência previsível e linguagem direta.",
+        "sequence": [
+          "🎯 Objetivo",
+          "📘 Ideia principal",
+          "💡 Exemplo",
+          "❓ Uma questão por vez"
+        ],
+        "rules": [
+          "Sem cronômetro obrigatório",
+          "Sem estímulos simultâneos desnecessários",
+          "Avanço explícito por botão"
+        ]
+      },
+      "dv": {
+        "presentation": "Conteúdo textual linear e sem dependência de elementos visuais.",
+        "rules": [
+          "Compatível com leitor de tela",
+          "Ordem de foco previsível",
+          "Alternativas identificadas por texto",
+          "Ampliação sem perda do ponto de leitura"
+        ]
+      }
+    },
+    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação."
   },
   {
     "year": 6,
@@ -1440,6 +1614,35 @@
         "correct": 0,
         "a": "Estradas e aquedutos"
       }
-    ]
+    ],
+    "accessibility": {
+      "standard": {
+        "presentation": "Conteúdo completo em blocos curtos, seguido de questões objetivas."
+      },
+      "tea": {
+        "presentation": "Uma ideia por etapa, sequência previsível e linguagem direta.",
+        "sequence": [
+          "🎯 Objetivo",
+          "📘 Ideia principal",
+          "💡 Exemplo",
+          "❓ Uma questão por vez"
+        ],
+        "rules": [
+          "Sem cronômetro obrigatório",
+          "Sem estímulos simultâneos desnecessários",
+          "Avanço explícito por botão"
+        ]
+      },
+      "dv": {
+        "presentation": "Conteúdo textual linear e sem dependência de elementos visuais.",
+        "rules": [
+          "Compatível com leitor de tela",
+          "Ordem de foco previsível",
+          "Alternativas identificadas por texto",
+          "Ampliação sem perda do ponto de leitura"
+        ]
+      }
+    },
+    "inclusionNote": "O conhecimento histórico e o nível conceitual são preservados; adapta-se a forma de acesso e interação."
   }
 ]
