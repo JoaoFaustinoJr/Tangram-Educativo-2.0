@@ -33,6 +33,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Uma lista organiza uma sequência; um grafo destaca relações. O mesmo conjunto de objetos pode precisar de representações diferentes conforme a pergunta."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -68,6 +85,28 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "No uso comum, 'ou' pode parecer exclusivo; na lógica computacional, normalmente OU é verdadeiro se pelo menos uma condição for verdadeira."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🌱",
+        "label": "Campo",
+        "description": "Campo"
+      },
+      {
+        "symbol": "📡",
+        "label": "Sensores e dados",
+        "description": "Sensores e dados"
+      },
+      {
+        "symbol": "⚙️",
+        "label": "Automação",
+        "description": "Automação"
+      },
+      {
+        "symbol": "📊",
+        "label": "Monitoramento",
+        "description": "Monitoramento"
       }
     ]
   },
@@ -105,6 +144,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Decompor não é apenas 'cortar em partes'; é escolher partes que possam ser entendidas e combinadas de forma útil."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
+      }
     ]
   },
   {
@@ -140,6 +196,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Generalizar não significa ignorar diferenças importantes; significa identificar o que pode variar sem mudar a estrutura da solução."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
       }
     ]
   },
@@ -177,6 +250,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Reutilizar não é copiar sem compreender; é reconhecer que uma solução já validada serve a um novo caso."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
     ]
   },
   {
@@ -212,6 +302,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "A posição visual de um vértice no desenho não é o principal; o que importa é quem está conectado a quem."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
       }
     ]
   },
@@ -249,6 +356,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Sem caso-base ou sem redução do problema, uma solução recursiva pode não terminar."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -284,6 +408,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Não existe um algoritmo 'melhor' para tudo; contexto, tamanho dos dados e objetivo influenciam a escolha."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
       }
     ]
   },
@@ -321,6 +462,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Nem todo grafo é árvore. Árvores possuem organização hierárquica específica."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
     ]
   },
   {
@@ -356,6 +514,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Um mesmo evento pode produzir resultados diferentes dependendo do estado atual."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
       }
     ]
   }
