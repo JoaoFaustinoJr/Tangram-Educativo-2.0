@@ -33,6 +33,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Ter o mesmo número de lados não significa ser o mesmo polígono; medidas e relações entre lados e ângulos também importam."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "📐",
+        "label": "Geometria",
+        "description": "Geometria"
+      },
+      {
+        "symbol": "🔷",
+        "label": "Representação",
+        "description": "Representação"
+      },
+      {
+        "symbol": "🧩",
+        "label": "Resolver",
+        "description": "Resolver"
+      }
     ]
   },
   {
@@ -68,6 +85,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Ampliar proporcionalmente significa multiplicar todos os comprimentos correspondentes pelo mesmo fator, e não acrescentar a mesma medida a cada lado."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
       }
     ]
   },
@@ -105,6 +139,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Área e perímetro são grandezas diferentes; aumentar o perímetro não implica necessariamente aumentar a área."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -140,6 +191,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Rotacionar muda posição ou orientação, mas preserva forma e tamanho."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "📐",
+        "label": "Geometria",
+        "description": "Geometria"
+      },
+      {
+        "symbol": "🔷",
+        "label": "Representação",
+        "description": "Representação"
+      },
+      {
+        "symbol": "🧩",
+        "label": "Resolver",
+        "description": "Resolver"
       }
     ]
   },
@@ -177,6 +245,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Uma sequência útil deve indicar ações e critérios de verificação, não apenas dizer 'faça dar certo'."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -212,6 +297,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Grandezas lineares e de superfície não variam pelo mesmo fator em uma ampliação proporcional."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "📐",
+        "label": "Geometria",
+        "description": "Geometria"
+      },
+      {
+        "symbol": "🔷",
+        "label": "Representação",
+        "description": "Representação"
+      },
+      {
+        "symbol": "🧩",
+        "label": "Resolver",
+        "description": "Resolver"
       }
     ]
   },
@@ -249,6 +351,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Rotação e reflexão são transformações diferentes: a reflexão inverte a orientação da figura."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -284,6 +403,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Fluxograma deve representar uma sequência lógica com ações, decisões e caminhos, e não apenas organizar desenhos."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
       }
     ]
   },
@@ -321,6 +457,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "A soma dos ângulos internos é 180°, mas as medidas individuais dependem das propriedades do triângulo."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -356,6 +509,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "A ordem pode alterar o resultado; em rotações e reflexões, centro e eixo também precisam estar definidos."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
       }
     ]
   },
@@ -393,6 +563,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Recorrência matemática e recursão de funções em programação se relacionam, mas não são o mesmo conceito."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -428,6 +615,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Semelhança pode envolver tamanhos diferentes; congruência exige igualdade das medidas correspondentes."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
       }
     ]
   },
@@ -465,6 +669,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Dizer que duas figuras 'parecem iguais' não basta: é preciso analisar medidas e correspondências geométricas."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -501,6 +722,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "A hipotenusa é o lado oposto ao ângulo reto, e o teorema nessa forma aplica-se a triângulos retângulos."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "📐",
+        "label": "Geometria",
+        "description": "Geometria"
+      },
+      {
+        "symbol": "🔷",
+        "label": "Representação",
+        "description": "Representação"
+      },
+      {
+        "symbol": "🧩",
+        "label": "Resolver",
+        "description": "Resolver"
+      }
     ]
   },
   {
@@ -536,6 +774,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Em uma mudança de escala proporcional, todas as medidas lineares correspondentes precisam ser multiplicadas pelo mesmo fator."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
       }
     ]
   }
