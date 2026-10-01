@@ -997,3 +997,14 @@ header>.rai-float.rai-x1>.header-tangram-exact{
  body.printing-lesson .lesson-reference{display:block!important;border:1px solid #777!important;border-left:4px solid #333!important;background:#fff!important;color:#111!important;opacity:1!important}
  body.printing-lesson .lesson-reference b{color:#111!important}
 }
+
+.lesson-print-brand{display:none}
+@media print{
+ body.printing-lesson .lesson-print-brand{display:grid!important;visibility:visible!important;grid-template-columns:54px 1fr;gap:12px;align-items:center;margin:0 0 18px;padding:0 0 13px;border-bottom:2px solid #222;color:#111!important}
+ body.printing-lesson .lesson-print-brand *{visibility:visible!important}
+ body.printing-lesson .lesson-print-mark{display:grid!important;place-items:center;width:50px;height:50px;border:2px solid #222;border-radius:11px;font-weight:900;font-size:18px;letter-spacing:-5px}
+ body.printing-lesson .lesson-print-brand strong{display:block;font-size:17px;line-height:1.2}
+ body.printing-lesson .lesson-print-brand span{display:block;font-size:12px;font-weight:700;margin-top:2px}
+ body.printing-lesson .lesson-print-brand small{display:block;font-size:9px;margin-top:3px;color:#444}
+ body.printing-lesson .lesson-reference:after{content:"Adaptação e apresentação digital: Tangram Educativo • Prof. João Faustino Júnior";display:block;margin-top:8px;padding-top:7px;border-top:1px solid #aaa;font-size:9px;color:#444}
+}
