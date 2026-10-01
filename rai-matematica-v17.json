@@ -793,5 +793,215 @@
         "description": "Responsabilidade"
       }
     ]
+  },
+  {
+    "year": 9,
+    "section": "math",
+    "id": "m9-pit-vanildo",
+    "topic": "Teorema de Pitágoras: compreender, demonstrar e aplicar",
+    "icon": "📐",
+    "axis": "Matemática • Geometrias",
+    "objective": "Compreender, demonstrar e aplicar o Teorema de Pitágoras na resolução e elaboração de problemas envolvendo triângulos retângulos.",
+    "keyTerm": "Teorema de Pitágoras",
+    "keyDefinition": "Em um triângulo retângulo, o quadrado da hipotenusa é igual à soma dos quadrados dos catetos.",
+    "concept": "Pitágoras expressa uma relação entre medidas e áreas. Antes da fórmula, identifique o ângulo reto: os lados que o formam são os catetos e o lado oposto é a hipotenusa. A relação pode ser visualizada pelos quadrados construídos sobre os três lados e demonstrada com semelhança de triângulos.",
+    "contentBlocks": [
+      {
+        "title": "1. 📐 Primeiro: encontre o ângulo reto",
+        "text": "O teorema vale para triângulos retângulos. Marque 90°. Os dois lados que formam esse ângulo são os catetos; o lado oposto é a hipotenusa e é o maior lado."
+      },
+      {
+        "title": "2. 🟦 Pense em áreas",
+        "text": "Construa mentalmente um quadrado sobre cada lado. A área do quadrado da hipotenusa é igual à soma das áreas dos quadrados dos catetos. Assim, a² + b² = c² representa uma relação geométrica."
+      },
+      {
+        "title": "3. 🔢 Do desenho ao cálculo",
+        "text": "Identifique a hipotenusa antes de substituir números. Eleve as medidas ao quadrado, resolva a equação e confira se a resposta faz sentido no desenho."
+      },
+      {
+        "title": "4. 🔺 Por que funciona?",
+        "text": "Ao traçar a altura relativa à hipotenusa, o triângulo original é relacionado a dois triângulos menores semelhantes. As proporções decorrentes permitem demonstrar relações métricas e o Teorema de Pitágoras."
+      },
+      {
+        "title": "5. 🏗️ Onde aparece?",
+        "text": "Diagonais de salas e telas, rampas, escadas, telhados, construção civil, deslocamentos e cálculo de distâncias podem gerar triângulos retângulos."
+      }
+    ],
+    "formula": "a² + b² = c² • c = hipotenusa",
+    "representation": "📐 90° → 📏 identificar lados → 🟦 relacionar áreas → 🔢 calcular → ✅ conferir",
+    "example": "Exemplo 3–4–5: catetos 3 e 4. Então c² = 3² + 4² = 9 + 16 = 25; c = 5.",
+    "guided": "🧱 Uma sala retangular mede 6 m por 8 m. A diagonal forma a hipotenusa: d² = 6² + 8² = 100; portanto d = 10 m.",
+    "challenge": "🪜 Uma escada de 13 m está apoiada numa parede e seu pé fica a 5 m dela. A que altura a escada toca a parede?",
+    "answer": "A escada é a hipotenusa: 5² + h² = 13² → 25 + h² = 169 → h² = 144 → h = 12 m.",
+    "reference": "PR.EF09MA13.s.9.48; PR.EF09MA13.d.9.49–51; PR.EF09MA14.s.9.52 • CREP Matemática – Anos Finais, SEED-PR (9º ano, Geometrias, 2º trimestre); Referencial Curricular do Paraná; BNCC Matemática. • Conteúdo disciplinar solicitado pelo Prof. Vanildo.",
+    "teacherTip": "Crédito disciplinar: Prof. Vanildo. Trabalhar identificação, interpretação geométrica, demonstração e aplicação; evitar reduzir a aula à memorização da fórmula.",
+    "fixation": [
+      {
+        "q": "Qual lado é a hipotenusa?",
+        "options": [
+          "O lado oposto ao ângulo reto",
+          "O menor lado",
+          "Qualquer cateto",
+          "O lado horizontal"
+        ],
+        "correct": 0,
+        "a": "O lado oposto ao ângulo reto."
+      },
+      {
+        "q": "Um triângulo com catetos 3 e 4 tem hipotenusa igual a:",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "12"
+        ],
+        "correct": 0,
+        "a": "5, pois 3² + 4² = 25 = 5²."
+      },
+      {
+        "q": "Por que identificar o ângulo reto antes de calcular?",
+        "options": [
+          "Para reconhecer corretamente catetos e hipotenusa",
+          "Para medir uma circunferência",
+          "Porque todo triângulo é retângulo",
+          "Para dispensar a figura"
+        ],
+        "correct": 0,
+        "a": "Para reconhecer corretamente catetos e hipotenusa."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "📐",
+        "label": "90°",
+        "description": "Reconhecer o ângulo reto"
+      },
+      {
+        "symbol": "📏",
+        "label": "Lados",
+        "description": "Distinguir catetos e hipotenusa"
+      },
+      {
+        "symbol": "🟦",
+        "label": "Áreas",
+        "description": "Visualizar os quadrados sobre os lados"
+      },
+      {
+        "symbol": "🏗️",
+        "label": "Aplicar",
+        "description": "Resolver situações reais"
+      }
+    ],
+    "visualGuide": {
+      "title": "Triângulo 3–4–5",
+      "diagram": "       c=5\n      /|\n     / |\n    /  | b=4\n   /___|\n    a=3  ∟",
+      "description": "Triângulo retângulo com catetos 3 e 4 e hipotenusa 5. O símbolo ∟ indica o ângulo de 90 graus."
+    },
+    "attribution": "Conteúdo disciplinar: Prof. Vanildo • Adaptação pedagógica e apresentação digital: Tangram Educativo — Prof. João Faustino Júnior"
+  },
+  {
+    "year": 9,
+    "section": "math",
+    "id": "m9-tales-vanildo",
+    "topic": "Teorema de Tales: paralelas, proporções e medidas indiretas",
+    "icon": "📏",
+    "axis": "Matemática • Geometrias",
+    "objective": "Compreender o Teorema de Tales e resolver e elaborar problemas envolvendo segmentos proporcionais determinados por retas paralelas cortadas por transversais.",
+    "keyTerm": "Teorema de Tales",
+    "keyDefinition": "Um feixe de retas paralelas cortado por transversais determina segmentos correspondentes proporcionais.",
+    "concept": "Tales transforma uma configuração geométrica de paralelas e transversais em proporcionalidade. O passo decisivo não é multiplicar em cruz: é reconhecer as paralelas e parear corretamente os segmentos correspondentes. O teorema se articula com razão, proporção e semelhança de triângulos.",
+    "contentBlocks": [
+      {
+        "title": "1. ∥ Encontre as paralelas",
+        "text": "Retas paralelas mantêm a direção e não se encontram no plano. Quando são cortadas por duas ou mais transversais, determinam segmentos correspondentes."
+      },
+      {
+        "title": "2. 🔗 Faça a correspondência",
+        "text": "Compare segmentos que ocupam posições correspondentes. Mantenha a mesma ordem nas razões. Uma correspondência errada produz uma proporção errada mesmo que a conta esteja correta."
+      },
+      {
+        "title": "3. ⚖️ Monte a proporção",
+        "text": "Depois de identificar os pares, escreva as razões na mesma ordem, resolva a igualdade e verifique se a medida encontrada é coerente com a figura."
+      },
+      {
+        "title": "4. 🔺 Conecte à semelhança",
+        "text": "Em um triângulo, uma reta paralela a um dos lados determina um triângulo menor semelhante ao original. Por isso os lados correspondentes são proporcionais."
+      },
+      {
+        "title": "5. 🌳 Meça sem alcançar",
+        "text": "Sombras, alturas, mapas, plantas, divisões proporcionais e outras medidas indiretas podem ser resolvidas quando a situação pode ser representada por segmentos proporcionais."
+      }
+    ],
+    "formula": "segmentos correspondentes: a/b = c/d",
+    "representation": "∥ paralelas → ╱ transversais → 🔗 correspondência → ⚖️ proporção → 📏 medida",
+    "example": "Três paralelas formam segmentos 4 e 6 numa transversal e 10 e x na outra: 4/6 = 10/x → 4x = 60 → x = 15.",
+    "guided": "📏 Desenhe três paralelas cortadas por duas transversais. Marque dois segmentos em cada transversal e ligue visualmente os pares correspondentes antes de escrever a proporção.",
+    "challenge": "🔺 Em ABC, DE é paralela a BC, D está em AB e E em AC. Se AD=4, DB=6 e AE=8, determine EC.",
+    "answer": "Como DE ∥ BC, os segmentos correspondem proporcionalmente: AD/DB = AE/EC. Então 4/6 = 8/EC → 4·EC = 48 → EC = 12.",
+    "reference": "PR.EF09MA10.d.9.35–36; PR.EF09MA12.s.9.37; PR.EF09MA12.d.9.38; PR.EF09MA14.s.9.52 • CREP Matemática – Anos Finais, SEED-PR (9º ano, Geometrias, 2º trimestre); Referencial Curricular do Paraná; BNCC Matemática. • Conteúdo disciplinar solicitado pelo Prof. Vanildo.",
+    "teacherTip": "Crédito disciplinar: Prof. Vanildo. Faça o aluno indicar os segmentos correspondentes antes de qualquer cálculo e conecte Tales à semelhança de triângulos.",
+    "fixation": [
+      {
+        "q": "Qual condição geométrica é central no Teorema de Tales?",
+        "options": [
+          "Retas paralelas cortadas por transversais",
+          "Uma circunferência tangente",
+          "Somente triângulos equiláteros",
+          "Duas retas quaisquer"
+        ],
+        "correct": 0,
+        "a": "Retas paralelas cortadas por transversais."
+      },
+      {
+        "q": "Ao montar a proporção, o que deve ser preservado?",
+        "options": [
+          "A correspondência e a ordem dos segmentos",
+          "A cor das retas",
+          "O tamanho do desenho",
+          "Somente os ângulos retos"
+        ],
+        "correct": 0,
+        "a": "A correspondência e a ordem dos segmentos."
+      },
+      {
+        "q": "Uma reta paralela a um lado de um triângulo pode produzir:",
+        "options": [
+          "Triângulos semelhantes e lados proporcionais",
+          "Triângulos sempre congruentes",
+          "Áreas sempre iguais",
+          "Nenhuma proporcionalidade"
+        ],
+        "correct": 0,
+        "a": "Triângulos semelhantes e lados proporcionais."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "∥",
+        "label": "Paralelas",
+        "description": "Reconhecer o feixe de paralelas"
+      },
+      {
+        "symbol": "╱",
+        "label": "Transversais",
+        "description": "Identificar as retas que cortam o feixe"
+      },
+      {
+        "symbol": "🔗",
+        "label": "Correspondência",
+        "description": "Parear os segmentos corretos"
+      },
+      {
+        "symbol": "⚖️",
+        "label": "Proporção",
+        "description": "Calcular mantendo a mesma ordem"
+      }
+    ],
+    "visualGuide": {
+      "title": "Paralelas e transversais",
+      "diagram": "────────────\n  ╲      ╲\n────────────\n    ╲      ╲\n────────────",
+      "description": "Três retas paralelas são cortadas por duas transversais. Os segmentos determinados entre as mesmas paralelas são correspondentes."
+    },
+    "attribution": "Conteúdo disciplinar: Prof. Vanildo • Adaptação pedagógica e apresentação digital: Tangram Educativo — Prof. João Faustino Júnior"
   }
 ]
