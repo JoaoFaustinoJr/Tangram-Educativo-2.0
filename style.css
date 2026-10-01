@@ -937,3 +937,10 @@ header>.rai-float.rai-x1>.header-tangram-exact{
 
 /* v2.0.193 — easter eggs táteis e discretos nas aulas TEA */
 .tea-easter-garden{flex:1 0 100%;display:flex;justify-content:flex-end;align-items:center;gap:10px;min-height:34px;padding:0 6px}.tea-creature{border:0!important;background:transparent!important;box-shadow:none!important;padding:3px!important;min-width:32px!important;font-size:22px!important;line-height:1!important;cursor:pointer;transform-origin:center}.tea-creature:focus-visible{outline:2px solid #ffd968!important;outline-offset:3px}.tea-creature.metamorphosis{animation:teaMetamorphosis .75s ease}.tea-creature.fly{animation:teaLadybugFly 1.5s ease-in-out}.tea-creature.roll{animation:teaPillRoll .9s ease-in-out}@keyframes teaMetamorphosis{0%{transform:scale(1)}35%{transform:scale(.45) rotate(-12deg)}70%{transform:scale(1.35) rotate(8deg)}100%{transform:scale(1)}}@keyframes teaLadybugFly{0%{transform:translate(0,0) rotate(0)}25%{transform:translate(-45px,-18px) rotate(-15deg)}55%{transform:translate(-85px,4px) rotate(12deg)}80%{transform:translate(-35px,-14px) rotate(-8deg)}100%{transform:translate(0,0) rotate(0)}}@keyframes teaPillRoll{0%{transform:rotate(0) scale(1)}40%{transform:rotate(180deg) scale(.72)}75%{transform:rotate(420deg) scale(.72)}100%{transform:rotate(540deg) scale(1)}}@media(prefers-reduced-motion:reduce){.tea-creature.metamorphosis,.tea-creature.fly,.tea-creature.roll{animation-duration:.01ms!important}}
+
+/* Apoios visuais pedagógicos — símbolos sempre acompanhados de texto */
+.lesson-visual-strip{display:flex;flex-wrap:wrap;gap:.55rem;margin:.7rem 0 1rem}
+.lesson-visual-item{display:flex;align-items:center;gap:.45rem;padding:.48rem .68rem;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.035);font-size:.92rem;line-height:1.25}
+.lesson-visual-symbol{font-size:1.25rem;line-height:1}
+@media (max-width:640px){.lesson-visual-strip{display:grid;grid-template-columns:1fr 1fr}.lesson-visual-item{min-width:0}}
+@media (prefers-reduced-motion:reduce){.lesson-visual-item{transition:none!important}}
