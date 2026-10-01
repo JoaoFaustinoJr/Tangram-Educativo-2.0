@@ -1042,5 +1042,404 @@
         "a": "Não fornecer a senha nem usar o link; confirmar a solicitação por canal oficial e comunicar um responsável/professor quando apropriado."
       }
     ]
+  },
+  {
+    "year": 6,
+    "grade": 6,
+    "section": "history",
+    "id": "hist6-35",
+    "topic": "Aula 35 · Roma: lenda e origens históricas",
+    "icon": "🏛️",
+    "axis": "História • Roma Antiga",
+    "objective": "Distinguir narrativas mitológicas de narrativas históricas baseadas em fontes e evidências.",
+    "concept": "A fundação de Roma pode ser estudada pela lenda de Rômulo e Remo e pelas explicações históricas sobre aldeias latinas, contatos entre povos e formação da cidade.",
+    "keyTerm": "Roma Antiga",
+    "keyDefinition": "A fundação de Roma pode ser estudada pela lenda de Rômulo e Remo e pelas explicações históricas sobre aldeias latinas, contatos entre povos e formação da cidade.",
+    "example": "Analise os acontecimentos, grupos sociais e instituições apresentados nesta aula.",
+    "representation": "contexto → evidências → acontecimentos → consequências",
+    "use": "História do 6º ano no modo pedagógico.",
+    "observe": "Diferencie fatos, conceitos e interpretações apresentados no material.",
+    "guided": "Explique a ideia principal com suas palavras.",
+    "challenge": "Qual diferença central entre narrativa mitológica e narrativa histórica?",
+    "answer": "A narrativa histórica procura apoiar-se em fontes e evidências",
+    "reference": "Material-base de História do 6º ano • Aulas 35–41 • Prof. Neemias.",
+    "teacherTip": "Conteúdo-base do Prof. Neemias adaptado ao ambiente digital.",
+    "fixation": [
+      {
+        "q": "Qual diferença central entre narrativa mitológica e narrativa histórica?",
+        "options": [
+          "A narrativa histórica procura apoiar-se em fontes e evidências",
+          "A narrativa histórica precisa ter deuses e heróis",
+          "A narrativa mitológica é sempre um documento oficial",
+          "Não existe diferença entre elas"
+        ],
+        "correct": 0,
+        "a": "A narrativa histórica procura apoiar-se em fontes e evidências"
+      },
+      {
+        "q": "Segundo a lenda apresentada, quem eram Rômulo e Remo?",
+        "options": [
+          "Dois cônsules da República",
+          "Gêmeos ligados ao mito fundador de Roma",
+          "Dois comerciantes etruscos",
+          "Dois gladiadores"
+        ],
+        "correct": 1,
+        "a": "Gêmeos ligados ao mito fundador de Roma"
+      },
+      {
+        "q": "Na explicação histórica apresentada, que grupo habitava aldeias às margens do rio Tibre?",
+        "options": [
+          "Latinos",
+          "Cartagineses",
+          "Egípcios",
+          "Fenícios"
+        ],
+        "correct": 0,
+        "a": "Latinos"
+      }
+    ]
+  },
+  {
+    "year": 6,
+    "grade": 6,
+    "section": "history",
+    "id": "hist6-36",
+    "topic": "Aula 36 · Monarquia Romana",
+    "icon": "🏛️",
+    "axis": "História • Roma Antiga",
+    "objective": "Identificar a organização política e a divisão social de Roma durante a Monarquia.",
+    "concept": "Na Monarquia, rei, Senado e Assembleia exerciam funções distintas, enquanto a sociedade era marcada por desigualdades entre patrícios, clientes, plebeus e escravizados.",
+    "keyTerm": "Roma Antiga",
+    "keyDefinition": "Na Monarquia, rei, Senado e Assembleia exerciam funções distintas, enquanto a sociedade era marcada por desigualdades entre patrícios, clientes, plebeus e escravizados.",
+    "example": "Analise os acontecimentos, grupos sociais e instituições apresentados nesta aula.",
+    "representation": "contexto → evidências → acontecimentos → consequências",
+    "use": "História do 6º ano no modo pedagógico.",
+    "observe": "Diferencie fatos, conceitos e interpretações apresentados no material.",
+    "guided": "Explique a ideia principal com suas palavras.",
+    "challenge": "Quem formava o Senado durante a Monarquia, segundo o resumo?",
+    "answer": "Chefes das famílias patrícias",
+    "reference": "Material-base de História do 6º ano • Aulas 35–41 • Prof. Neemias.",
+    "teacherTip": "Conteúdo-base do Prof. Neemias adaptado ao ambiente digital.",
+    "fixation": [
+      {
+        "q": "Quem formava o Senado durante a Monarquia, segundo o resumo?",
+        "options": [
+          "Chefes das famílias patrícias",
+          "Todos os plebeus adultos",
+          "Somente os escravizados libertos",
+          "Comerciantes de Cartago"
+        ],
+        "correct": 0,
+        "a": "Chefes das famílias patrícias"
+      },
+      {
+        "q": "Qual grupo era a maioria da população, formado por artesãos, pequenos agricultores e comerciantes?",
+        "options": [
+          "Patrícios",
+          "Clientes",
+          "Plebeus",
+          "Senadores"
+        ],
+        "correct": 2,
+        "a": "Plebeus"
+      },
+      {
+        "q": "Qual afirmação corresponde ao rei na Monarquia Romana?",
+        "options": [
+          "Era apenas líder religioso",
+          "Atuava como chefe do exército, juiz máximo e líder religioso",
+          "Seu cargo era necessariamente hereditário",
+          "Era eleito apenas pelos escravizados"
+        ],
+        "correct": 1,
+        "a": "Atuava como chefe do exército, juiz máximo e líder religioso"
+      }
+    ]
+  },
+  {
+    "year": 6,
+    "grade": 6,
+    "section": "history",
+    "id": "hist6-37",
+    "topic": "Aula 37 · República em Roma",
+    "icon": "🏛️",
+    "axis": "História • Roma Antiga",
+    "objective": "Identificar a organização política da República Romana e compreender as lutas dos plebeus por direitos.",
+    "concept": "A República organizou o poder em Senado, Magistraturas e Assembleias. Inicialmente, o poder permaneceu concentrado entre patrícios, e os plebeus conquistaram direitos gradualmente.",
+    "keyTerm": "Roma Antiga",
+    "keyDefinition": "A República organizou o poder em Senado, Magistraturas e Assembleias. Inicialmente, o poder permaneceu concentrado entre patrícios, e os plebeus conquistaram direitos gradualmente.",
+    "example": "Analise os acontecimentos, grupos sociais e instituições apresentados nesta aula.",
+    "representation": "contexto → evidências → acontecimentos → consequências",
+    "use": "História do 6º ano no modo pedagógico.",
+    "observe": "Diferencie fatos, conceitos e interpretações apresentados no material.",
+    "guided": "Explique a ideia principal com suas palavras.",
+    "challenge": "Quais eram os três pilares políticos destacados na República?",
+    "answer": "Senado, Magistraturas e Assembleias",
+    "reference": "Material-base de História do 6º ano • Aulas 35–41 • Prof. Neemias.",
+    "teacherTip": "Conteúdo-base do Prof. Neemias adaptado ao ambiente digital.",
+    "fixation": [
+      {
+        "q": "Quais eram os três pilares políticos destacados na República?",
+        "options": [
+          "Rei, faraó e Assembleia",
+          "Senado, Magistraturas e Assembleias",
+          "Exército, templos e portos",
+          "Patrícios, gladiadores e clientes"
+        ],
+        "correct": 1,
+        "a": "Senado, Magistraturas e Assembleias"
+      },
+      {
+        "q": "Qual magistrado era responsável pela aplicação da Justiça?",
+        "options": [
+          "Pretor",
+          "Edil",
+          "Questor",
+          "Censor"
+        ],
+        "correct": 0,
+        "a": "Pretor"
+      },
+      {
+        "q": "Uma conquista dos plebeus mencionada no material foi:",
+        "options": [
+          "Proibição de leis escritas",
+          "Permissão de casamento entre patrícios e plebeus",
+          "Fim das Assembleias",
+          "Retorno da Monarquia"
+        ],
+        "correct": 1,
+        "a": "Permissão de casamento entre patrícios e plebeus"
+      }
+    ]
+  },
+  {
+    "year": 6,
+    "grade": 6,
+    "section": "history",
+    "id": "hist6-38",
+    "topic": "Aula 38 · Expansão, Guerras Púnicas e comércio",
+    "icon": "🏛️",
+    "axis": "História • Roma Antiga",
+    "objective": "Compreender a expansão territorial romana, as Guerras Púnicas e impactos sociais e econômicos das conquistas.",
+    "concept": "Roma expandiu-se pela Península Itálica e pelo Mediterrâneo. As disputas com Cartago envolveram o controle comercial, e as conquistas ampliaram riquezas, terras e escravização.",
+    "keyTerm": "Roma Antiga",
+    "keyDefinition": "Roma expandiu-se pela Península Itálica e pelo Mediterrâneo. As disputas com Cartago envolveram o controle comercial, e as conquistas ampliaram riquezas, terras e escravização.",
+    "example": "Analise os acontecimentos, grupos sociais e instituições apresentados nesta aula.",
+    "representation": "contexto → evidências → acontecimentos → consequências",
+    "use": "História do 6º ano no modo pedagógico.",
+    "observe": "Diferencie fatos, conceitos e interpretações apresentados no material.",
+    "guided": "Explique a ideia principal com suas palavras.",
+    "challenge": "Contra qual cidade Roma travou as Guerras Púnicas?",
+    "answer": "Cartago",
+    "reference": "Material-base de História do 6º ano • Aulas 35–41 • Prof. Neemias.",
+    "teacherTip": "Conteúdo-base do Prof. Neemias adaptado ao ambiente digital.",
+    "fixation": [
+      {
+        "q": "Contra qual cidade Roma travou as Guerras Púnicas?",
+        "options": [
+          "Atenas",
+          "Cartago",
+          "Esparta",
+          "Alexandria"
+        ],
+        "correct": 1,
+        "a": "Cartago"
+      },
+      {
+        "q": "O que significa a expressão Mare Nostrum no contexto apresentado?",
+        "options": [
+          "Nosso Mar",
+          "Mar Proibido",
+          "Terra dos Reis",
+          "Estrada Romana"
+        ],
+        "correct": 0,
+        "a": "Nosso Mar"
+      },
+      {
+        "q": "Uma consequência social das conquistas foi:",
+        "options": [
+          "Redução imediata da escravidão",
+          "Aumento da escravidão com prisioneiros de guerra",
+          "Fim dos latifúndios",
+          "Desaparecimento do comércio marítimo"
+        ],
+        "correct": 1,
+        "a": "Aumento da escravidão com prisioneiros de guerra"
+      }
+    ]
+  },
+  {
+    "year": 6,
+    "grade": 6,
+    "section": "history",
+    "id": "hist6-39",
+    "topic": "Aula 39 · Escravidão e revoltas em Roma",
+    "icon": "🏛️",
+    "axis": "História • Roma Antiga",
+    "objective": "Compreender a escravidão romana e reconhecer formas de resistência, com destaque para a Revolta de Espártaco.",
+    "concept": "A escravidão romana estava ligada sobretudo às guerras de conquista e às dívidas. Pessoas escravizadas atuavam em diferentes trabalhos e também organizaram movimentos de resistência.",
+    "keyTerm": "Roma Antiga",
+    "keyDefinition": "A escravidão romana estava ligada sobretudo às guerras de conquista e às dívidas. Pessoas escravizadas atuavam em diferentes trabalhos e também organizaram movimentos de resistência.",
+    "example": "Analise os acontecimentos, grupos sociais e instituições apresentados nesta aula.",
+    "representation": "contexto → evidências → acontecimentos → consequências",
+    "use": "História do 6º ano no modo pedagógico.",
+    "observe": "Diferencie fatos, conceitos e interpretações apresentados no material.",
+    "guided": "Explique a ideia principal com suas palavras.",
+    "challenge": "Segundo o material, a escravidão romana decorria principalmente de:",
+    "answer": "Guerras de conquista e dívidas",
+    "reference": "Material-base de História do 6º ano • Aulas 35–41 • Prof. Neemias.",
+    "teacherTip": "Conteúdo-base do Prof. Neemias adaptado ao ambiente digital.",
+    "fixation": [
+      {
+        "q": "Segundo o material, a escravidão romana decorria principalmente de:",
+        "options": [
+          "Guerras de conquista e dívidas",
+          "Cor da pele",
+          "Escolha voluntária",
+          "Somente nascimento"
+        ],
+        "correct": 0,
+        "a": "Guerras de conquista e dívidas"
+      },
+      {
+        "q": "Quem liderou a revolta de 73–71 a.C. destacada na aula?",
+        "options": [
+          "Otávio",
+          "Espártaco",
+          "Rômulo",
+          "Cincinato"
+        ],
+        "correct": 1,
+        "a": "Espártaco"
+      },
+      {
+        "q": "Quem eram os gladiadores, segundo o resumo?",
+        "options": [
+          "Somente senadores",
+          "Escravizados ou prisioneiros treinados para combates em espetáculos",
+          "Apenas comerciantes",
+          "Magistrados responsáveis pela Justiça"
+        ],
+        "correct": 1,
+        "a": "Escravizados ou prisioneiros treinados para combates em espetáculos"
+      }
+    ]
+  },
+  {
+    "year": 6,
+    "grade": 6,
+    "section": "history",
+    "id": "hist6-40",
+    "topic": "Aula 40 · Júlio César e a ascensão dos militares",
+    "icon": "🏛️",
+    "axis": "História • Roma Antiga",
+    "objective": "Relacionar a organização do exército romano à ascensão política dos generais e compreender o Primeiro Triunvirato e Júlio César.",
+    "concept": "A profissionalização das tropas fortaleceu laços entre soldados e generais. Nesse contexto surgiram alianças políticas como o Primeiro Triunvirato, e Júlio César ampliou seu poder.",
+    "keyTerm": "Roma Antiga",
+    "keyDefinition": "A profissionalização das tropas fortaleceu laços entre soldados e generais. Nesse contexto surgiram alianças políticas como o Primeiro Triunvirato, e Júlio César ampliou seu poder.",
+    "example": "Analise os acontecimentos, grupos sociais e instituições apresentados nesta aula.",
+    "representation": "contexto → evidências → acontecimentos → consequências",
+    "use": "História do 6º ano no modo pedagógico.",
+    "observe": "Diferencie fatos, conceitos e interpretações apresentados no material.",
+    "guided": "Explique a ideia principal com suas palavras.",
+    "challenge": "Quem formou o Primeiro Triunvirato?",
+    "answer": "Júlio César, Pompeu e Crasso",
+    "reference": "Material-base de História do 6º ano • Aulas 35–41 • Prof. Neemias.",
+    "teacherTip": "Conteúdo-base do Prof. Neemias adaptado ao ambiente digital.",
+    "fixation": [
+      {
+        "q": "Quem formou o Primeiro Triunvirato?",
+        "options": [
+          "Júlio César, Pompeu e Crasso",
+          "Otávio, Marco Antônio e Lépido",
+          "Rômulo, Remo e Tarquínio",
+          "Mário, Brutus e Espártaco"
+        ],
+        "correct": 0,
+        "a": "Júlio César, Pompeu e Crasso"
+      },
+      {
+        "q": "Qual era a principal unidade do exército romano mencionada?",
+        "options": [
+          "Legião",
+          "Tribo",
+          "Senado",
+          "Cúria"
+        ],
+        "correct": 0,
+        "a": "Legião"
+      },
+      {
+        "q": "Em que ano o material situa o assassinato de Júlio César?",
+        "options": [
+          "509 a.C.",
+          "264 a.C.",
+          "44 a.C.",
+          "27 d.C."
+        ],
+        "correct": 2,
+        "a": "44 a.C."
+      }
+    ]
+  },
+  {
+    "year": 6,
+    "grade": 6,
+    "section": "history",
+    "id": "hist6-41",
+    "topic": "Aula 41 · Otávio Augusto e o início do Império",
+    "icon": "🏛️",
+    "axis": "História • Roma Antiga",
+    "objective": "Compreender a transição da República para o Império e características do governo de Otávio Augusto.",
+    "concept": "Após a crise republicana e o Segundo Triunvirato, Otávio venceu disputas internas e recebeu títulos do Senado em 27 a.C. Seu governo é associado à Pax Romana, obras públicas e integração econômica.",
+    "keyTerm": "Roma Antiga",
+    "keyDefinition": "Após a crise republicana e o Segundo Triunvirato, Otávio venceu disputas internas e recebeu títulos do Senado em 27 a.C. Seu governo é associado à Pax Romana, obras públicas e integração econômica.",
+    "example": "Analise os acontecimentos, grupos sociais e instituições apresentados nesta aula.",
+    "representation": "contexto → evidências → acontecimentos → consequências",
+    "use": "História do 6º ano no modo pedagógico.",
+    "observe": "Diferencie fatos, conceitos e interpretações apresentados no material.",
+    "guided": "Explique a ideia principal com suas palavras.",
+    "challenge": "Quem formava o Segundo Triunvirato?",
+    "answer": "Otávio, Marco Antônio e Lépido",
+    "reference": "Material-base de História do 6º ano • Aulas 35–41 • Prof. Neemias.",
+    "teacherTip": "Conteúdo-base do Prof. Neemias adaptado ao ambiente digital.",
+    "fixation": [
+      {
+        "q": "Quem formava o Segundo Triunvirato?",
+        "options": [
+          "César, Pompeu e Crasso",
+          "Otávio, Marco Antônio e Lépido",
+          "Rômulo, Remo e Augusto",
+          "Espártaco, Brutus e Mário"
+        ],
+        "correct": 1,
+        "a": "Otávio, Marco Antônio e Lépido"
+      },
+      {
+        "q": "Que marco o material associa ao ano 27 a.C.?",
+        "options": [
+          "Início do Império com a ascensão de Otávio Augusto",
+          "Fundação lendária de Roma",
+          "Início das Guerras Púnicas",
+          "Revolta de Espártaco"
+        ],
+        "correct": 0,
+        "a": "Início do Império com a ascensão de Otávio Augusto"
+      },
+      {
+        "q": "Qual infraestrutura é citada no contexto da Pax Romana?",
+        "options": [
+          "Estradas e aquedutos",
+          "Pirâmides e zigurates",
+          "Somente fortalezas de madeira",
+          "Nenhuma obra pública"
+        ],
+        "correct": 0,
+        "a": "Estradas e aquedutos"
+      }
+    ]
   }
 ]
