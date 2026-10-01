@@ -33,6 +33,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Hardware são componentes físicos; sistema operacional é software que gerencia recursos e programas."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
+      }
     ]
   },
   {
@@ -68,6 +85,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Popularidade, número de compartilhamentos ou aparência profissional não garantem veracidade."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
       }
     ]
   },
@@ -105,6 +139,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Armazenar localmente e armazenar na nuvem são situações diferentes; ambas exigem organização e cuidados."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
     ]
   },
   {
@@ -140,6 +191,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Responsabilidade digital não é só 'não fazer algo errado'; inclui escolhas de consumo e impacto ambiental."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Mundo digital",
+        "description": "Mundo digital"
+      },
+      {
+        "symbol": "📁",
+        "label": "Informação",
+        "description": "Informação"
+      },
+      {
+        "symbol": "🔎",
+        "label": "Uso crítico",
+        "description": "Uso crítico"
       }
     ]
   },
@@ -177,6 +245,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Segurança não depende de uma única senha; envolve pessoas, procedimentos e tecnologia."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -212,6 +297,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "'Foi só brincadeira' não elimina impacto, exposição ou responsabilidade."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
       }
     ]
   },
@@ -249,6 +351,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Internet não é um único computador central; é uma rede de redes com múltiplas camadas e sistemas."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
     ]
   },
   {
@@ -284,6 +403,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Aceitar termos sem ler não elimina consequências; fonte digital também pode conter vieses mesmo quando os dados são verdadeiros."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
       }
     ]
   },
@@ -321,6 +457,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Criptografia não substitui boas práticas de segurança; ela é uma camada dentro de uma estratégia maior."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -356,6 +509,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Tecnologia não é neutra em seus efeitos sociais: decisões de projeto, acesso e uso influenciam quem se beneficia e quem fica de fora."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
       }
     ]
   }
