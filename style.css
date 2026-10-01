@@ -974,3 +974,14 @@ header>.rai-float.rai-x1>.header-tangram-exact{
  body.printing-lesson .lesson-reference{color:#333!important}
  @page{margin:16mm}
 }
+
+/* Impressão completa independe do modo de acesso ativo */
+@media print{
+ body.printing-lesson #lessons-panel[data-access="tea"] .lesson-print-target .lesson-audio,
+ body.printing-lesson .lesson-print-target .tea-next,
+ body.printing-lesson .lesson-print-target .tea-visual-guide,
+ body.printing-lesson .lesson-print-target .tea-finish{display:none!important}
+ body.printing-lesson .lesson-print-target .tea-step,
+ body.printing-lesson .lesson-print-target .print-show-all{display:block!important;visibility:visible!important;opacity:1!important;max-height:none!important;overflow:visible!important;transform:none!important}
+ body.printing-lesson .lesson-print-target [hidden].print-show-all{display:block!important}
+}
