@@ -33,6 +33,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Uma condição deve poder ser avaliada como verdadeira ou falsa no momento da decisão."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
+      }
     ]
   },
   {
@@ -68,6 +85,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "A ordem pode ser importante. Alterar a posição dos itens pode mudar o significado ou o resultado."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
       }
     ]
   },
@@ -105,6 +139,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Repetir não significa repetir para sempre: é preciso saber quantas vezes ou quando parar."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
+      }
     ]
   },
   {
@@ -140,6 +191,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "A mesma lógica pode ser representada em Scratch ou Python; a sintaxe muda, a estrutura do algoritmo permanece."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
       }
     ]
   },
@@ -177,6 +245,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Traduzir linha por linha o código para português não é explicar a solução; precisamos descrever o raciocínio em nível mais alto."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🧱",
+        "label": "LEGO / montagem",
+        "description": "LEGO / montagem"
+      },
+      {
+        "symbol": "⚙️",
+        "label": "Mecanismo",
+        "description": "Mecanismo"
+      },
+      {
+        "symbol": "🔧",
+        "label": "Construir e testar",
+        "description": "Construir e testar"
+      }
     ]
   },
   {
@@ -212,6 +297,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "O tipo de uma variável ou dado depende das regras da linguagem; não é correto afirmar que ele depende apenas do valor atual."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤖",
+        "label": "Robô",
+        "description": "Robô"
+      },
+      {
+        "symbol": "➡️",
+        "label": "Sequência",
+        "description": "Sequência"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Algoritmo"
       }
     ]
   },
@@ -249,6 +351,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Um programa funcionar uma vez não prova que funciona para todos os casos."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🧱",
+        "label": "LEGO / montagem",
+        "description": "LEGO / montagem"
+      },
+      {
+        "symbol": "⚙️",
+        "label": "Mecanismo",
+        "description": "Mecanismo"
+      },
+      {
+        "symbol": "🔧",
+        "label": "Construir e testar",
+        "description": "Construir e testar"
+      }
     ]
   },
   {
@@ -284,6 +403,23 @@
       {
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Módulos precisam ter entradas e saídas claras; dividir o código sem definir responsabilidades pode aumentar a confusão."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
       }
     ]
   },
@@ -321,6 +457,23 @@
         "q": "Qual ponto merece atenção para não confundir o conceito?",
         "a": "Registro e vetor resolvem problemas diferentes: um agrupa características; o outro agrupa elementos de uma coleção ordenada."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
     ]
   },
   {
@@ -356,6 +509,23 @@
       {
         "q": "Como verificar a solução?",
         "a": "13 // 4 resulta 3 por grupo e 13 % 4 resulta 1 de sobra."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
       }
     ]
   },
@@ -393,6 +563,23 @@
         "q": "Como verificar a solução?",
         "a": "Porque input() retorna texto e int() converte uma representação inteira válida em número."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -428,6 +615,23 @@
       {
         "q": "Como verificar a solução?",
         "a": "pontuacao == 100"
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
       }
     ]
   },
@@ -465,6 +669,23 @@
         "q": "Como verificar a solução?",
         "a": "if tentativas < 3: continuar; else: encerrar."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -500,6 +721,23 @@
       {
         "q": "Como verificar a solução?",
         "a": "lista[:3]"
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
       }
     ]
   },
@@ -537,6 +775,23 @@
         "q": "Como verificar a solução?",
         "a": "if 'quadrado' in pecas: pecas.remove('quadrado')"
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -572,6 +827,23 @@
       {
         "q": "Como verificar a solução?",
         "a": "for i in range(3): print(f'Rodada {i+1}')"
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
       }
     ]
   },
@@ -609,6 +881,23 @@
         "q": "Como verificar a solução?",
         "a": "Quando a repetição depende de uma condição, e não de uma quantidade previamente definida."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -644,6 +933,23 @@
       {
         "q": "Como verificar a solução?",
         "a": "enumerate(lista, start=1)"
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
       }
     ]
   },
@@ -681,6 +987,23 @@
         "q": "Como verificar a solução?",
         "a": "Porque há apenas 10 valores possíveis; a condição jamais poderá ser satisfeita para o 11º."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -716,6 +1039,23 @@
       {
         "q": "Qual cuidado é importante na interpretação?",
         "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
       }
     ]
   },
@@ -753,6 +1093,23 @@
         "q": "Qual cuidado é importante na interpretação?",
         "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
     ]
   },
   {
@@ -788,6 +1145,23 @@
       {
         "q": "Qual cuidado é importante na interpretação?",
         "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
       }
     ]
   },
@@ -825,6 +1199,23 @@
         "q": "Qual cuidado é importante na interpretação?",
         "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
     ]
   },
   {
@@ -860,6 +1251,23 @@
       {
         "q": "Qual cuidado é importante na interpretação?",
         "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
       }
     ]
   },
@@ -897,6 +1305,23 @@
         "q": "Qual cuidado é importante na interpretação?",
         "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
     ]
   },
   {
@@ -932,6 +1357,23 @@
       {
         "q": "Qual cuidado é importante na interpretação?",
         "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
       }
     ]
   },
@@ -969,6 +1411,23 @@
         "q": "Qual cuidado é importante na interpretação?",
         "a": "Não confundir rapidez com aprendizagem e não tirar conclusões além do que os dados permitem."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "🤝",
+        "label": "Equipe",
+        "description": "Equipe"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organização",
+        "description": "Organização"
+      },
+      {
+        "symbol": "🎯",
+        "label": "Responsabilidade",
+        "description": "Responsabilidade"
+      }
     ]
   },
   {
@@ -1005,6 +1464,23 @@
         "q": "Como aplicar o que foi aprendido?",
         "a": "Aplicando o deslocamento inverso de três posições."
       }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Código",
+        "description": "Código"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Lógica",
+        "description": "Lógica"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar e testar",
+        "description": "Executar e testar"
+      }
     ]
   },
   {
@@ -1040,6 +1516,23 @@
       {
         "q": "Como aplicar o que foi aprendido?",
         "a": "Não fornecer a senha nem usar o link; confirmar a solicitação por canal oficial e comunicar um responsável/professor quando apropriado."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "📊",
+        "label": "Dados",
+        "description": "Dados"
+      },
+      {
+        "symbol": "📋",
+        "label": "Organizar",
+        "description": "Organizar"
+      },
+      {
+        "symbol": "🔎",
+        "label": "Analisar",
+        "description": "Analisar"
       }
     ]
   },
