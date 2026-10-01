@@ -1057,3 +1057,9 @@ header>.rai-float.rai-x1>.header-tangram-exact{
  body.printing-lesson .lesson-reference span{font-size:9px!important;line-height:1.4!important}
  body.printing-lesson .lesson-reference:after{font-size:8px!important}
 }
+
+/* Marca editorial: invisível na interface, visível somente no documento impresso */
+.lesson-print-brand{display:none!important}
+@media print{
+ body.printing-lesson .lesson-print-target>.lesson-print-brand{display:flex!important}
+}
