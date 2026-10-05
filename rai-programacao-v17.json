@@ -106,6 +106,430 @@
     ]
   },
   {
+    "year": 6,
+    "section": "prog",
+    "id": "pr6-intro-programacao",
+    "topic": "💻 Programação: fundamentos e propósito",
+    "icon": "💻",
+    "axis": "Educação Digital • Programação",
+    "objective": "Retomar o conceito de programação no 6º ano, relacionando problema, algoritmo, linguagem, teste e melhoria a situações progressivamente mais autônomas.",
+    "keyTerm": "programação",
+    "keyDefinition": "Processo de planejar e escrever instruções que um computador ou dispositivo pode executar.",
+    "concept": "Programação é a construção de uma solução por meio de instruções que uma máquina consegue executar. Antes do código existe um problema: precisamos entendê-lo, dividi-lo em partes, decidir uma sequência e prever situações diferentes. O algoritmo organiza esse raciocínio; uma linguagem de programação — em blocos, Python ou outra — permite representar a solução de forma que o computador possa executá-la. Por isso, programar é também aprender a pensar com clareza, testar hipóteses e corrigir erros.",
+    "example": "Se dissermos ao robô Marquinhos apenas “saia da sala”, uma pessoa entende a intenção e completa mentalmente várias etapas. Uma máquina não faz isso. Precisamos detalhar: fique em pé → afaste-se da mesa → caminhe até a porta → verifique a passagem → abra a porta se necessário → atravesse. Essa brincadeira mostra por que decomposição e precisão aparecem antes mesmo de escrever código.",
+    "formula": "🎯 problema → 🧩 decompor → 🧠 planejar → 💻 programar → ▶️ testar → 🔧 melhorar",
+    "representation": "Pessoa pensa a solução → algoritmo organiza → linguagem descreve → computador executa",
+    "use": "Jogos, aplicativos, robôs, automação, ciência, agricultura e análise de dados.",
+    "observe": "Computadores executam instruções; não adivinham aquilo que o programador quis dizer. Clareza, ordem e teste são fundamentais.",
+    "guided": "Escolha uma tarefa ou problema, decomponha em etapas, escreva um algoritmo claro e teste com um colega fazendo o papel de computador.",
+    "challenge": "Um programa executou exatamente as instruções escritas, mas produziu um resultado diferente do desejado. A máquina necessariamente errou? O que o programador deve investigar primeiro?",
+    "answer": "Não necessariamente. É preciso comparar o objetivo com o algoritmo e as instruções escritas, localizar onde a lógica ou a representação não corresponde ao resultado desejado, corrigir e testar novamente.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Aula conceitual de abertura do 6º ano. Retome o Robô Marquinhos e avance da instrução concreta para algoritmo e código, sem começar pela sintaxe.",
+    "fixation": [
+      {
+        "q": "O que significa “programação” nesta aula?",
+        "a": "Processo de planejar e escrever instruções que uma máquina pode executar."
+      },
+      {
+        "q": "Onde essa ideia aparece na prática?",
+        "a": "Aplicativos, jogos, robôs, automação e análise de dados."
+      },
+      {
+        "q": "Qual cuidado é importante?",
+        "a": "Programar não é apenas digitar código: começa pelo problema e pelo algoritmo."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🎯",
+        "label": "Problema",
+        "description": "Entender o que precisa ser resolvido"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Planejar instruções em ordem"
+      },
+      {
+        "symbol": "💻",
+        "label": "Programa",
+        "description": "Representar e executar a solução"
+      }
+    ]
+  },
+  {
+    "year": 6,
+    "section": "prog",
+    "id": "pr6-intro-educacao-digital",
+    "topic": "🌐 Educação Digital: compreender, criar e escolher",
+    "icon": "🌐",
+    "axis": "Educação Digital",
+    "objective": "Retomar Educação Digital no 6º ano como uso crítico, criativo, seguro e intencional das tecnologias, distinguindo consumo, produção e investigação.",
+    "keyTerm": "Educação Digital",
+    "keyDefinition": "Aprendizagem que desenvolve conhecimentos, atitudes e habilidades para compreender, criar e usar tecnologias digitais com responsabilidade.",
+    "concept": "Educação Digital é mais do que saber ligar um computador, abrir um aplicativo ou usar um celular. Ela envolve compreender como as tecnologias funcionam, produzir com elas, avaliar informações, proteger dados, comunicar-se com respeito e decidir quando o recurso digital realmente ajuda. Na escola, isso significa aprender a usar a tecnologia com intenção: há momentos para pesquisar, programar e analisar dados no laboratório, e há momentos em que papel, conversa, montagem, movimento e experimentação são escolhas melhores.",
+    "example": "Imagine três estudantes diante de um computador. Um apenas passa vídeos sem objetivo; outro pesquisa fontes para responder a uma pergunta; o terceiro cria um pequeno programa e testa sua solução. Todos estão diante de uma tela, mas as experiências de aprendizagem são muito diferentes. Educação Digital ajuda a perceber essa diferença.",
+    "formula": "🔎 compreender → 🛠️ criar → 🛡️ proteger → 🤝 conviver → ⚖️ escolher",
+    "representation": "Tecnologia + pensamento crítico + criação + segurança + responsabilidade",
+    "use": "Estudo, comunicação, programação, pesquisa, produção de conteúdo e cidadania.",
+    "observe": "Mais tempo de tela não significa mais aprendizagem. O importante é a finalidade, a qualidade da atividade e o equilíbrio com outras experiências.",
+    "guided": "Compare situações de uso de tecnologia na escola e em casa. Para cada uma, identifique finalidade, aprendizagem envolvida, dados utilizados, riscos e uma alternativa não digital quando ela fizer mais sentido.",
+    "challenge": "Um colega diz: “Sou bom em Educação Digital porque uso celular muitas horas por dia”. Como você responderia? Explique por que saber operar um aparelho é apenas uma parte da Educação Digital.",
+    "answer": "Educação Digital envolve compreender, criar, avaliar informações, proteger-se, conviver com responsabilidade e escolher conscientemente quando e como usar a tecnologia. Tempo de uso, sozinho, não demonstra aprendizagem.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2; legislação e orientações educacionais vigentes sobre uso pedagógico de tecnologias.",
+    "teacherTip": "Aula conceitual de abertura do 6º ano. Relacione laboratório de informática, cidadania digital, criação, tempo de tela e escolha consciente do recurso.",
+    "fixation": [
+      {
+        "q": "O que significa “Educação Digital” nesta aula?",
+        "a": "Formação para compreender, criar e usar tecnologias digitais de modo crítico, seguro e responsável."
+      },
+      {
+        "q": "Onde essa ideia aparece na prática?",
+        "a": "Pesquisa, programação, comunicação, criação e cidadania."
+      },
+      {
+        "q": "Qual cuidado é importante?",
+        "a": "Saber operar um aparelho é apenas uma parte da Educação Digital."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🌐",
+        "label": "Compreender",
+        "description": "Entender o ambiente digital"
+      },
+      {
+        "symbol": "🛠️",
+        "label": "Criar",
+        "description": "Usar tecnologia para produzir e resolver problemas"
+      },
+      {
+        "symbol": "🛡️",
+        "label": "Responsabilidade",
+        "description": "Agir com segurança, ética e equilíbrio"
+      }
+    ]
+  },
+  {
+    "year": 7,
+    "section": "prog",
+    "id": "pr7-intro-programacao",
+    "topic": "💻 Programação: fundamentos e propósito",
+    "icon": "💻",
+    "axis": "Educação Digital • Programação",
+    "objective": "Retomar o conceito de programação no 7º ano, relacionando problema, algoritmo, linguagem, teste e melhoria a situações progressivamente mais autônomas.",
+    "keyTerm": "programação",
+    "keyDefinition": "Processo de planejar e escrever instruções que um computador ou dispositivo pode executar.",
+    "concept": "Programação é a construção de uma solução por meio de instruções que uma máquina consegue executar. Antes do código existe um problema: precisamos entendê-lo, dividi-lo em partes, decidir uma sequência e prever situações diferentes. O algoritmo organiza esse raciocínio; uma linguagem de programação — em blocos, Python ou outra — permite representar a solução de forma que o computador possa executá-la. Por isso, programar é também aprender a pensar com clareza, testar hipóteses e corrigir erros.",
+    "example": "Se dissermos ao robô Marquinhos apenas “saia da sala”, uma pessoa entende a intenção e completa mentalmente várias etapas. Uma máquina não faz isso. Precisamos detalhar: fique em pé → afaste-se da mesa → caminhe até a porta → verifique a passagem → abra a porta se necessário → atravesse. Essa brincadeira mostra por que decomposição e precisão aparecem antes mesmo de escrever código.",
+    "formula": "🎯 problema → 🧩 decompor → 🧠 planejar → 💻 programar → ▶️ testar → 🔧 melhorar",
+    "representation": "Pessoa pensa a solução → algoritmo organiza → linguagem descreve → computador executa",
+    "use": "Jogos, aplicativos, robôs, automação, ciência, agricultura e análise de dados.",
+    "observe": "Computadores executam instruções; não adivinham aquilo que o programador quis dizer. Clareza, ordem e teste são fundamentais.",
+    "guided": "Escolha uma tarefa ou problema, decomponha em etapas, escreva um algoritmo claro e teste com um colega fazendo o papel de computador.",
+    "challenge": "Um programa executou exatamente as instruções escritas, mas produziu um resultado diferente do desejado. A máquina necessariamente errou? O que o programador deve investigar primeiro?",
+    "answer": "Não necessariamente. É preciso comparar o objetivo com o algoritmo e as instruções escritas, localizar onde a lógica ou a representação não corresponde ao resultado desejado, corrigir e testar novamente.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Aula conceitual de abertura do 7º ano. Retome o Robô Marquinhos e avance da instrução concreta para algoritmo e código, sem começar pela sintaxe.",
+    "fixation": [
+      {
+        "q": "O que significa “programação” nesta aula?",
+        "a": "Processo de planejar e escrever instruções que uma máquina pode executar."
+      },
+      {
+        "q": "Onde essa ideia aparece na prática?",
+        "a": "Aplicativos, jogos, robôs, automação e análise de dados."
+      },
+      {
+        "q": "Qual cuidado é importante?",
+        "a": "Programar não é apenas digitar código: começa pelo problema e pelo algoritmo."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🎯",
+        "label": "Problema",
+        "description": "Entender o que precisa ser resolvido"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Planejar instruções em ordem"
+      },
+      {
+        "symbol": "💻",
+        "label": "Programa",
+        "description": "Representar e executar a solução"
+      }
+    ]
+  },
+  {
+    "year": 7,
+    "section": "prog",
+    "id": "pr7-intro-educacao-digital",
+    "topic": "🌐 Educação Digital: compreender, criar e escolher",
+    "icon": "🌐",
+    "axis": "Educação Digital",
+    "objective": "Retomar Educação Digital no 7º ano como uso crítico, criativo, seguro e intencional das tecnologias, distinguindo consumo, produção e investigação.",
+    "keyTerm": "Educação Digital",
+    "keyDefinition": "Aprendizagem que desenvolve conhecimentos, atitudes e habilidades para compreender, criar e usar tecnologias digitais com responsabilidade.",
+    "concept": "Educação Digital é mais do que saber ligar um computador, abrir um aplicativo ou usar um celular. Ela envolve compreender como as tecnologias funcionam, produzir com elas, avaliar informações, proteger dados, comunicar-se com respeito e decidir quando o recurso digital realmente ajuda. Na escola, isso significa aprender a usar a tecnologia com intenção: há momentos para pesquisar, programar e analisar dados no laboratório, e há momentos em que papel, conversa, montagem, movimento e experimentação são escolhas melhores.",
+    "example": "Imagine três estudantes diante de um computador. Um apenas passa vídeos sem objetivo; outro pesquisa fontes para responder a uma pergunta; o terceiro cria um pequeno programa e testa sua solução. Todos estão diante de uma tela, mas as experiências de aprendizagem são muito diferentes. Educação Digital ajuda a perceber essa diferença.",
+    "formula": "🔎 compreender → 🛠️ criar → 🛡️ proteger → 🤝 conviver → ⚖️ escolher",
+    "representation": "Tecnologia + pensamento crítico + criação + segurança + responsabilidade",
+    "use": "Estudo, comunicação, programação, pesquisa, produção de conteúdo e cidadania.",
+    "observe": "Mais tempo de tela não significa mais aprendizagem. O importante é a finalidade, a qualidade da atividade e o equilíbrio com outras experiências.",
+    "guided": "Compare situações de uso de tecnologia na escola e em casa. Para cada uma, identifique finalidade, aprendizagem envolvida, dados utilizados, riscos e uma alternativa não digital quando ela fizer mais sentido.",
+    "challenge": "Um colega diz: “Sou bom em Educação Digital porque uso celular muitas horas por dia”. Como você responderia? Explique por que saber operar um aparelho é apenas uma parte da Educação Digital.",
+    "answer": "Educação Digital envolve compreender, criar, avaliar informações, proteger-se, conviver com responsabilidade e escolher conscientemente quando e como usar a tecnologia. Tempo de uso, sozinho, não demonstra aprendizagem.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2; legislação e orientações educacionais vigentes sobre uso pedagógico de tecnologias.",
+    "teacherTip": "Aula conceitual de abertura do 7º ano. Relacione laboratório de informática, cidadania digital, criação, tempo de tela e escolha consciente do recurso.",
+    "fixation": [
+      {
+        "q": "O que significa “Educação Digital” nesta aula?",
+        "a": "Formação para compreender, criar e usar tecnologias digitais de modo crítico, seguro e responsável."
+      },
+      {
+        "q": "Onde essa ideia aparece na prática?",
+        "a": "Pesquisa, programação, comunicação, criação e cidadania."
+      },
+      {
+        "q": "Qual cuidado é importante?",
+        "a": "Saber operar um aparelho é apenas uma parte da Educação Digital."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🌐",
+        "label": "Compreender",
+        "description": "Entender o ambiente digital"
+      },
+      {
+        "symbol": "🛠️",
+        "label": "Criar",
+        "description": "Usar tecnologia para produzir e resolver problemas"
+      },
+      {
+        "symbol": "🛡️",
+        "label": "Responsabilidade",
+        "description": "Agir com segurança, ética e equilíbrio"
+      }
+    ]
+  },
+  {
+    "year": 8,
+    "section": "prog",
+    "id": "pr8-intro-programacao",
+    "topic": "💻 Programação: fundamentos e propósito",
+    "icon": "💻",
+    "axis": "Educação Digital • Programação",
+    "objective": "Retomar o conceito de programação no 8º ano, relacionando problema, algoritmo, linguagem, teste e melhoria a situações progressivamente mais autônomas.",
+    "keyTerm": "programação",
+    "keyDefinition": "Processo de planejar e escrever instruções que um computador ou dispositivo pode executar.",
+    "concept": "Programação é a construção de uma solução por meio de instruções que uma máquina consegue executar. Antes do código existe um problema: precisamos entendê-lo, dividi-lo em partes, decidir uma sequência e prever situações diferentes. O algoritmo organiza esse raciocínio; uma linguagem de programação — em blocos, Python ou outra — permite representar a solução de forma que o computador possa executá-la. Por isso, programar é também aprender a pensar com clareza, testar hipóteses e corrigir erros.",
+    "example": "Se dissermos ao robô Marquinhos apenas “saia da sala”, uma pessoa entende a intenção e completa mentalmente várias etapas. Uma máquina não faz isso. Precisamos detalhar: fique em pé → afaste-se da mesa → caminhe até a porta → verifique a passagem → abra a porta se necessário → atravesse. Essa brincadeira mostra por que decomposição e precisão aparecem antes mesmo de escrever código.",
+    "formula": "🎯 problema → 🧩 decompor → 🧠 planejar → 💻 programar → ▶️ testar → 🔧 melhorar",
+    "representation": "Pessoa pensa a solução → algoritmo organiza → linguagem descreve → computador executa",
+    "use": "Jogos, aplicativos, robôs, automação, ciência, agricultura e análise de dados.",
+    "observe": "Computadores executam instruções; não adivinham aquilo que o programador quis dizer. Clareza, ordem e teste são fundamentais.",
+    "guided": "Escolha um problema simples da plataforma, descreva entradas, processamento e saídas, escreva uma solução em pseudocódigo e depois represente uma parte em Python.",
+    "challenge": "Um programa executou exatamente as instruções escritas, mas produziu um resultado diferente do desejado. A máquina necessariamente errou? O que o programador deve investigar primeiro?",
+    "answer": "Não necessariamente. É preciso comparar o objetivo com o algoritmo e as instruções escritas, localizar onde a lógica ou a representação não corresponde ao resultado desejado, corrigir e testar novamente.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Aula conceitual de abertura do 8º ano. Retome o Robô Marquinhos e avance da instrução concreta para algoritmo e código, sem começar pela sintaxe.",
+    "fixation": [
+      {
+        "q": "O que significa “programação” nesta aula?",
+        "a": "Processo de planejar e escrever instruções que uma máquina pode executar."
+      },
+      {
+        "q": "Onde essa ideia aparece na prática?",
+        "a": "Aplicativos, jogos, robôs, automação e análise de dados."
+      },
+      {
+        "q": "Qual cuidado é importante?",
+        "a": "Programar não é apenas digitar código: começa pelo problema e pelo algoritmo."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🎯",
+        "label": "Problema",
+        "description": "Entender o que precisa ser resolvido"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Planejar instruções em ordem"
+      },
+      {
+        "symbol": "💻",
+        "label": "Programa",
+        "description": "Representar e executar a solução"
+      }
+    ]
+  },
+  {
+    "year": 8,
+    "section": "prog",
+    "id": "pr8-intro-educacao-digital",
+    "topic": "🌐 Educação Digital: compreender, criar e escolher",
+    "icon": "🌐",
+    "axis": "Educação Digital",
+    "objective": "Retomar Educação Digital no 8º ano como uso crítico, criativo, seguro e intencional das tecnologias, distinguindo consumo, produção e investigação.",
+    "keyTerm": "Educação Digital",
+    "keyDefinition": "Aprendizagem que desenvolve conhecimentos, atitudes e habilidades para compreender, criar e usar tecnologias digitais com responsabilidade.",
+    "concept": "Educação Digital é mais do que saber ligar um computador, abrir um aplicativo ou usar um celular. Ela envolve compreender como as tecnologias funcionam, produzir com elas, avaliar informações, proteger dados, comunicar-se com respeito e decidir quando o recurso digital realmente ajuda. Na escola, isso significa aprender a usar a tecnologia com intenção: há momentos para pesquisar, programar e analisar dados no laboratório, e há momentos em que papel, conversa, montagem, movimento e experimentação são escolhas melhores.",
+    "example": "Imagine três estudantes diante de um computador. Um apenas passa vídeos sem objetivo; outro pesquisa fontes para responder a uma pergunta; o terceiro cria um pequeno programa e testa sua solução. Todos estão diante de uma tela, mas as experiências de aprendizagem são muito diferentes. Educação Digital ajuda a perceber essa diferença.",
+    "formula": "🔎 compreender → 🛠️ criar → 🛡️ proteger → 🤝 conviver → ⚖️ escolher",
+    "representation": "Tecnologia + pensamento crítico + criação + segurança + responsabilidade",
+    "use": "Estudo, comunicação, programação, pesquisa, produção de conteúdo e cidadania.",
+    "observe": "Mais tempo de tela não significa mais aprendizagem. O importante é a finalidade, a qualidade da atividade e o equilíbrio com outras experiências.",
+    "guided": "Compare situações de uso de tecnologia na escola e em casa. Para cada uma, identifique finalidade, aprendizagem envolvida, dados utilizados, riscos e uma alternativa não digital quando ela fizer mais sentido.",
+    "challenge": "Um colega diz: “Sou bom em Educação Digital porque uso celular muitas horas por dia”. Como você responderia? Explique por que saber operar um aparelho é apenas uma parte da Educação Digital.",
+    "answer": "Educação Digital envolve compreender, criar, avaliar informações, proteger-se, conviver com responsabilidade e escolher conscientemente quando e como usar a tecnologia. Tempo de uso, sozinho, não demonstra aprendizagem.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2; legislação e orientações educacionais vigentes sobre uso pedagógico de tecnologias.",
+    "teacherTip": "Aula conceitual de abertura do 8º ano. Relacione laboratório de informática, cidadania digital, criação, tempo de tela e escolha consciente do recurso.",
+    "fixation": [
+      {
+        "q": "O que significa “Educação Digital” nesta aula?",
+        "a": "Formação para compreender, criar e usar tecnologias digitais de modo crítico, seguro e responsável."
+      },
+      {
+        "q": "Onde essa ideia aparece na prática?",
+        "a": "Pesquisa, programação, comunicação, criação e cidadania."
+      },
+      {
+        "q": "Qual cuidado é importante?",
+        "a": "Saber operar um aparelho é apenas uma parte da Educação Digital."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🌐",
+        "label": "Compreender",
+        "description": "Entender o ambiente digital"
+      },
+      {
+        "symbol": "🛠️",
+        "label": "Criar",
+        "description": "Usar tecnologia para produzir e resolver problemas"
+      },
+      {
+        "symbol": "🛡️",
+        "label": "Responsabilidade",
+        "description": "Agir com segurança, ética e equilíbrio"
+      }
+    ]
+  },
+  {
+    "year": 9,
+    "section": "prog",
+    "id": "pr9-intro-programacao",
+    "topic": "💻 Programação: fundamentos e propósito",
+    "icon": "💻",
+    "axis": "Educação Digital • Programação",
+    "objective": "Retomar o conceito de programação no 9º ano, relacionando problema, algoritmo, linguagem, teste e melhoria a situações progressivamente mais autônomas.",
+    "keyTerm": "programação",
+    "keyDefinition": "Processo de planejar e escrever instruções que um computador ou dispositivo pode executar.",
+    "concept": "Programação é a construção de uma solução por meio de instruções que uma máquina consegue executar. Antes do código existe um problema: precisamos entendê-lo, dividi-lo em partes, decidir uma sequência e prever situações diferentes. O algoritmo organiza esse raciocínio; uma linguagem de programação — em blocos, Python ou outra — permite representar a solução de forma que o computador possa executá-la. Por isso, programar é também aprender a pensar com clareza, testar hipóteses e corrigir erros.",
+    "example": "Se dissermos ao robô Marquinhos apenas “saia da sala”, uma pessoa entende a intenção e completa mentalmente várias etapas. Uma máquina não faz isso. Precisamos detalhar: fique em pé → afaste-se da mesa → caminhe até a porta → verifique a passagem → abra a porta se necessário → atravesse. Essa brincadeira mostra por que decomposição e precisão aparecem antes mesmo de escrever código.",
+    "formula": "🎯 problema → 🧩 decompor → 🧠 planejar → 💻 programar → ▶️ testar → 🔧 melhorar",
+    "representation": "Pessoa pensa a solução → algoritmo organiza → linguagem descreve → computador executa",
+    "use": "Jogos, aplicativos, robôs, automação, ciência, agricultura e análise de dados.",
+    "observe": "Computadores executam instruções; não adivinham aquilo que o programador quis dizer. Clareza, ordem e teste são fundamentais.",
+    "guided": "Escolha um problema simples da plataforma, descreva entradas, processamento e saídas, escreva uma solução em pseudocódigo e depois represente uma parte em Python.",
+    "challenge": "Um programa executou exatamente as instruções escritas, mas produziu um resultado diferente do desejado. A máquina necessariamente errou? O que o programador deve investigar primeiro?",
+    "answer": "Não necessariamente. É preciso comparar o objetivo com o algoritmo e as instruções escritas, localizar onde a lógica ou a representação não corresponde ao resultado desejado, corrigir e testar novamente.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
+    "teacherTip": "Aula conceitual de abertura do 9º ano. Retome o Robô Marquinhos e avance da instrução concreta para algoritmo e código, sem começar pela sintaxe.",
+    "fixation": [
+      {
+        "q": "O que significa “programação” nesta aula?",
+        "a": "Processo de planejar e escrever instruções que uma máquina pode executar."
+      },
+      {
+        "q": "Onde essa ideia aparece na prática?",
+        "a": "Aplicativos, jogos, robôs, automação e análise de dados."
+      },
+      {
+        "q": "Qual cuidado é importante?",
+        "a": "Programar não é apenas digitar código: começa pelo problema e pelo algoritmo."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🎯",
+        "label": "Problema",
+        "description": "Entender o que precisa ser resolvido"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Algoritmo",
+        "description": "Planejar instruções em ordem"
+      },
+      {
+        "symbol": "💻",
+        "label": "Programa",
+        "description": "Representar e executar a solução"
+      }
+    ]
+  },
+  {
+    "year": 9,
+    "section": "prog",
+    "id": "pr9-intro-educacao-digital",
+    "topic": "🌐 Educação Digital: compreender, criar e escolher",
+    "icon": "🌐",
+    "axis": "Educação Digital",
+    "objective": "Retomar Educação Digital no 9º ano como uso crítico, criativo, seguro e intencional das tecnologias, distinguindo consumo, produção e investigação.",
+    "keyTerm": "Educação Digital",
+    "keyDefinition": "Aprendizagem que desenvolve conhecimentos, atitudes e habilidades para compreender, criar e usar tecnologias digitais com responsabilidade.",
+    "concept": "Educação Digital é mais do que saber ligar um computador, abrir um aplicativo ou usar um celular. Ela envolve compreender como as tecnologias funcionam, produzir com elas, avaliar informações, proteger dados, comunicar-se com respeito e decidir quando o recurso digital realmente ajuda. Na escola, isso significa aprender a usar a tecnologia com intenção: há momentos para pesquisar, programar e analisar dados no laboratório, e há momentos em que papel, conversa, montagem, movimento e experimentação são escolhas melhores.",
+    "example": "Imagine três estudantes diante de um computador. Um apenas passa vídeos sem objetivo; outro pesquisa fontes para responder a uma pergunta; o terceiro cria um pequeno programa e testa sua solução. Todos estão diante de uma tela, mas as experiências de aprendizagem são muito diferentes. Educação Digital ajuda a perceber essa diferença.",
+    "formula": "🔎 compreender → 🛠️ criar → 🛡️ proteger → 🤝 conviver → ⚖️ escolher",
+    "representation": "Tecnologia + pensamento crítico + criação + segurança + responsabilidade",
+    "use": "Estudo, comunicação, programação, pesquisa, produção de conteúdo e cidadania.",
+    "observe": "Mais tempo de tela não significa mais aprendizagem. O importante é a finalidade, a qualidade da atividade e o equilíbrio com outras experiências.",
+    "guided": "Compare situações de uso de tecnologia na escola e em casa. Para cada uma, identifique finalidade, aprendizagem envolvida, dados utilizados, riscos e uma alternativa não digital quando ela fizer mais sentido.",
+    "challenge": "Um colega diz: “Sou bom em Educação Digital porque uso celular muitas horas por dia”. Como você responderia? Explique por que saber operar um aparelho é apenas uma parte da Educação Digital.",
+    "answer": "Educação Digital envolve compreender, criar, avaliar informações, proteger-se, conviver com responsabilidade e escolher conscientemente quando e como usar a tecnologia. Tempo de uso, sozinho, não demonstra aprendizagem.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2; legislação e orientações educacionais vigentes sobre uso pedagógico de tecnologias.",
+    "teacherTip": "Aula conceitual de abertura do 9º ano. Relacione laboratório de informática, cidadania digital, criação, tempo de tela e escolha consciente do recurso.",
+    "fixation": [
+      {
+        "q": "O que significa “Educação Digital” nesta aula?",
+        "a": "Formação para compreender, criar e usar tecnologias digitais de modo crítico, seguro e responsável."
+      },
+      {
+        "q": "Onde essa ideia aparece na prática?",
+        "a": "Pesquisa, programação, comunicação, criação e cidadania."
+      },
+      {
+        "q": "Qual cuidado é importante?",
+        "a": "Saber operar um aparelho é apenas uma parte da Educação Digital."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🌐",
+        "label": "Compreender",
+        "description": "Entender o ambiente digital"
+      },
+      {
+        "symbol": "🛠️",
+        "label": "Criar",
+        "description": "Usar tecnologia para produzir e resolver problemas"
+      },
+      {
+        "symbol": "🛡️",
+        "label": "Responsabilidade",
+        "description": "Agir com segurança, ética e equilíbrio"
+      }
+    ]
+  },
+  {
     "year": 5,
     "section": "prog",
     "id": "pr5-cond-logica",
