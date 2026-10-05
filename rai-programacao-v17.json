@@ -1537,6 +1537,131 @@
     ]
   },
   {
+    "year": 8,
+    "grade": 8,
+    "section": "prog",
+    "id": "pr8-python-dados-operadores",
+    "topic": "🐍 Python: dados, cálculos e primeiros programas",
+    "icon": "🐍",
+    "axis": "Educação Digital • Programação • Python",
+    "objective": "Compreender tipos básicos de dados em Python, aplicar operadores aritméticos, distinguir /, // e %, utilizar print() e testar pequenos programas para resolver problemas.",
+    "keyTerm": "tipo de dado",
+    "keyDefinition": "Classificação que informa ao programa como um valor pode ser representado e utilizado, como int para inteiros, float para decimais e str para textos.",
+    "concept": "Python permite representar dados e transformá-los por meio de operações. Nesta aula, o estudante trabalha com int, float e str; usa +, -, *, /, // e %; e apresenta resultados com print(). O foco não é decorar símbolos, mas prever o que o programa fará, executar, observar a saída e explicar o resultado.",
+    "example": "Para dividir 13 peças igualmente entre 4 equipes, 13 // 4 informa quantas peças inteiras cada equipe recebe e 13 % 4 informa quantas sobram. O mesmo raciocínio pode ser usado para formar equipes, distribuir componentes de robótica ou agrupar registros de uma atividade.",
+    "formula": "problema → prever → escrever código → executar → observar → explicar → melhorar",
+    "representation": "13 / 4 → 3.25 | 13 // 4 → 3 | 13 % 4 → 1",
+    "use": "Cálculos, jogos, robótica, organização de equipes, análise de dados e automação de tarefas.",
+    "observe": "/ produz divisão comum; // calcula o quociente inteiro; % calcula o resto. Rapidez para obter a saída não substitui a capacidade de explicar por que ela ocorreu.",
+    "guided": "Antes de executar, preveja os resultados de 27 // 4 e 27 % 4. Depois execute e compare. Repita com 38, 50 e 103. Registre quando sua previsão estava correta e explique o padrão observado.",
+    "challenge": "Uma turma tem 29 estudantes e será organizada em equipes de 4. Escreva expressões em Python que indiquem quantas equipes completas podem ser formadas e quantos estudantes ficarão fora dessas equipes. Explique por que // e % são adequados.",
+    "answer": "29 // 4 resulta em 7 equipes completas e 29 % 4 resulta em 1 estudante restante. // fornece o quociente inteiro e % fornece o resto da divisão.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2; fundamentos de programação, representação de dados e resolução de problemas.",
+    "teacherTip": "Use o editor de código do Tangram quando disponível. Exija uma previsão antes de executar e uma explicação depois. Faça o feedback apenas ao final do desafio. IA pode explicar conceitos, erros e revisar código, mas não deve substituir a elaboração da solução pelo estudante. Conecte a aula à sequência de aprendizagem do 8º ano: os mesmos operadores e tipos serão usados posteriormente para tratar registros das atividades.",
+    "codeExamples": [
+      {
+        "title": "Operações",
+        "code": "10 + 2\n10 - 2\n10 * 2\n11 / 2\n11 // 2\n11 % 2"
+      },
+      {
+        "title": "Tipos",
+        "code": "type(10)\ntype(5.0)\ntype(\"Tangram\")"
+      },
+      {
+        "title": "Saída",
+        "code": "print(\"Resultado:\", 10 + 2)"
+      },
+      {
+        "title": "Divisão em equipes",
+        "code": "print(\"Cada equipe recebe\", 13 // 4, \"peças\")\nprint(\"Sobram\", 13 % 4, \"peça(s)\")"
+      }
+    ],
+    "progression": [
+      {
+        "step": 1,
+        "label": "Preveja",
+        "instruction": "Sem executar, diga o resultado esperado e justifique."
+      },
+      {
+        "step": 2,
+        "label": "Execute",
+        "instruction": "Rode o código e compare a saída com sua previsão."
+      },
+      {
+        "step": 3,
+        "label": "Explique",
+        "instruction": "Descreva com suas palavras o papel de /, // e %."
+      },
+      {
+        "step": 4,
+        "label": "Modifique",
+        "instruction": "Troque os valores e observe se a regra continua funcionando."
+      },
+      {
+        "step": 5,
+        "label": "Aplique",
+        "instruction": "Resolva um novo problema sem receber o código pronto."
+      }
+    ],
+    "aiUse": {
+      "allowed": [
+        "explicar um erro",
+        "explicar um conceito",
+        "dar um exemplo semelhante",
+        "revisar um código já escrito pelo aluno"
+      ],
+      "avoid": [
+        "fornecer a solução completa antes da tentativa",
+        "copiar código sem compreender",
+        "resolver o desafio no lugar do aluno"
+      ]
+    },
+    "fixation": [
+      {
+        "q": "Qual a diferença entre int, float e str?",
+        "a": "int representa números inteiros, float números com parte decimal e str textos."
+      },
+      {
+        "q": "Qual a diferença entre /, // e %?",
+        "a": "/ faz divisão comum, // retorna o quociente inteiro e % retorna o resto."
+      },
+      {
+        "q": "Para que serve print()?",
+        "a": "Para exibir informações e resultados na saída do programa."
+      },
+      {
+        "q": "Antes de executar um código, por que vale a pena prever o resultado?",
+        "a": "Porque a previsão obriga a raciocinar sobre o programa e permite comparar a hipótese com o comportamento real do código."
+      },
+      {
+        "q": "Como a IA deve participar desta atividade?",
+        "a": "Como apoio para compreender conceitos, erros e revisar uma tentativa, não como substituta da resolução do problema."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🔢",
+        "label": "Dados",
+        "description": "int, float e str"
+      },
+      {
+        "symbol": "➗",
+        "label": "Operadores",
+        "description": "+, -, *, /, // e %"
+      },
+      {
+        "symbol": "▶️",
+        "label": "Executar",
+        "description": "Testar o código e observar a saída"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Explicar",
+        "description": "Compreender por que o resultado ocorreu"
+      }
+    ]
+  },
+  {
     "year": 9,
     "section": "prog",
     "id": "pr9-45",
@@ -2063,131 +2188,6 @@
         "symbol": "🔎",
         "label": "Analisar",
         "description": "Analisar"
-      }
-    ]
-  },
-  {
-    "year": 9,
-    "grade": 9,
-    "section": "prog",
-    "id": "pr9-python-dados-operadores",
-    "topic": "🐍 Python: dados, cálculos e primeiros programas",
-    "icon": "🐍",
-    "axis": "Educação Digital • Programação • Python",
-    "objective": "Compreender tipos básicos de dados em Python, aplicar operadores aritméticos, distinguir /, // e %, utilizar print() e testar pequenos programas para resolver problemas.",
-    "keyTerm": "tipo de dado",
-    "keyDefinition": "Classificação que informa ao programa como um valor pode ser representado e utilizado, como int para inteiros, float para decimais e str para textos.",
-    "concept": "Python permite representar dados e transformá-los por meio de operações. Nesta aula, o estudante trabalha com int, float e str; usa +, -, *, /, // e %; e apresenta resultados com print(). O foco não é decorar símbolos, mas prever o que o programa fará, executar, observar a saída e explicar o resultado.",
-    "example": "Para dividir 13 peças igualmente entre 4 equipes, 13 // 4 informa quantas peças inteiras cada equipe recebe e 13 % 4 informa quantas sobram. O mesmo raciocínio pode ser usado para formar equipes, distribuir componentes de robótica ou agrupar registros de uma atividade.",
-    "formula": "problema → prever → escrever código → executar → observar → explicar → melhorar",
-    "representation": "13 / 4 → 3.25 | 13 // 4 → 3 | 13 % 4 → 1",
-    "use": "Cálculos, jogos, robótica, organização de equipes, análise de dados e automação de tarefas.",
-    "observe": "/ produz divisão comum; // calcula o quociente inteiro; % calcula o resto. Rapidez para obter a saída não substitui a capacidade de explicar por que ela ocorreu.",
-    "guided": "Antes de executar, preveja os resultados de 27 // 4 e 27 % 4. Depois execute e compare. Repita com 38, 50 e 103. Registre quando sua previsão estava correta e explique o padrão observado.",
-    "challenge": "Uma turma tem 29 estudantes e será organizada em equipes de 4. Escreva expressões em Python que indiquem quantas equipes completas podem ser formadas e quantos estudantes ficarão fora dessas equipes. Explique por que // e % são adequados.",
-    "answer": "29 // 4 resulta em 7 equipes completas e 29 % 4 resulta em 1 estudante restante. // fornece o quociente inteiro e % fornece o resto da divisão.",
-    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2; fundamentos de programação, representação de dados e resolução de problemas.",
-    "teacherTip": "Use o editor de código do Tangram quando disponível. Exija uma previsão antes de executar e uma explicação depois. Faça o feedback apenas ao final do desafio. IA pode explicar conceitos, erros e revisar código, mas não deve substituir a elaboração da solução pelo estudante. Conecte a aula à sequência de dados do 9º ano: os mesmos operadores e tipos serão usados posteriormente para tratar registros das atividades.",
-    "codeExamples": [
-      {
-        "title": "Operações",
-        "code": "10 + 2\n10 - 2\n10 * 2\n11 / 2\n11 // 2\n11 % 2"
-      },
-      {
-        "title": "Tipos",
-        "code": "type(10)\ntype(5.0)\ntype(\"Tangram\")"
-      },
-      {
-        "title": "Saída",
-        "code": "print(\"Resultado:\", 10 + 2)"
-      },
-      {
-        "title": "Divisão em equipes",
-        "code": "print(\"Cada equipe recebe\", 13 // 4, \"peças\")\nprint(\"Sobram\", 13 % 4, \"peça(s)\")"
-      }
-    ],
-    "progression": [
-      {
-        "step": 1,
-        "label": "Preveja",
-        "instruction": "Sem executar, diga o resultado esperado e justifique."
-      },
-      {
-        "step": 2,
-        "label": "Execute",
-        "instruction": "Rode o código e compare a saída com sua previsão."
-      },
-      {
-        "step": 3,
-        "label": "Explique",
-        "instruction": "Descreva com suas palavras o papel de /, // e %."
-      },
-      {
-        "step": 4,
-        "label": "Modifique",
-        "instruction": "Troque os valores e observe se a regra continua funcionando."
-      },
-      {
-        "step": 5,
-        "label": "Aplique",
-        "instruction": "Resolva um novo problema sem receber o código pronto."
-      }
-    ],
-    "aiUse": {
-      "allowed": [
-        "explicar um erro",
-        "explicar um conceito",
-        "dar um exemplo semelhante",
-        "revisar um código já escrito pelo aluno"
-      ],
-      "avoid": [
-        "fornecer a solução completa antes da tentativa",
-        "copiar código sem compreender",
-        "resolver o desafio no lugar do aluno"
-      ]
-    },
-    "fixation": [
-      {
-        "q": "Qual a diferença entre int, float e str?",
-        "a": "int representa números inteiros, float números com parte decimal e str textos."
-      },
-      {
-        "q": "Qual a diferença entre /, // e %?",
-        "a": "/ faz divisão comum, // retorna o quociente inteiro e % retorna o resto."
-      },
-      {
-        "q": "Para que serve print()?",
-        "a": "Para exibir informações e resultados na saída do programa."
-      },
-      {
-        "q": "Antes de executar um código, por que vale a pena prever o resultado?",
-        "a": "Porque a previsão obriga a raciocinar sobre o programa e permite comparar a hipótese com o comportamento real do código."
-      },
-      {
-        "q": "Como a IA deve participar desta atividade?",
-        "a": "Como apoio para compreender conceitos, erros e revisar uma tentativa, não como substituta da resolução do problema."
-      }
-    ],
-    "visuals": [
-      {
-        "symbol": "🔢",
-        "label": "Dados",
-        "description": "int, float e str"
-      },
-      {
-        "symbol": "➗",
-        "label": "Operadores",
-        "description": "+, -, *, /, // e %"
-      },
-      {
-        "symbol": "▶️",
-        "label": "Executar",
-        "description": "Testar o código e observar a saída"
-      },
-      {
-        "symbol": "🧠",
-        "label": "Explicar",
-        "description": "Compreender por que o resultado ocorreu"
       }
     ]
   },
