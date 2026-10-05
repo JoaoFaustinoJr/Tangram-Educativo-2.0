@@ -1,5 +1,290 @@
 [
   {
+    "id": "md9-intro-educacao-digital",
+    "year": 9,
+    "grade": 9,
+    "section": "digital",
+    "icon": "🌐",
+    "axis": "Educação Digital • Fundamentos",
+    "topic": "🌐 O que é Educação Digital?",
+    "objective": "Compreender Educação Digital como formação para usar, compreender, criar e avaliar tecnologias de modo crítico, seguro, ético e responsável.",
+    "concept": "Educação Digital não é apenas aprender a mexer em aparelhos. Envolve compreender tecnologias, produzir com elas, proteger dados, avaliar informações, comunicar-se com responsabilidade e decidir quando o recurso digital realmente contribui para uma tarefa.",
+    "example": "No laboratório, o computador pode ser usado para programar, pesquisar, criar, analisar dados e resolver problemas. Fora dele, também é necessário avaliar fontes, privacidade, tempo de tela e consequências do que se publica.",
+    "formula": "acessar + compreender + criar + avaliar + proteger + participar com responsabilidade",
+    "representation": "💻 tecnologia → 🧠 compreensão → 🛠️ criação → 🔎 análise crítica → 🛡️ segurança → 🤝 cidadania",
+    "use": "Estudo, comunicação, programação, pesquisa, produção de conteúdo, serviços digitais e participação social.",
+    "observe": "Saber usar um aplicativo não significa, sozinho, ter educação digital. Importam também autoria, segurança, ética, criticidade, equilíbrio e propósito.",
+    "guided": "Compare três usos de uma tela: assistir passivamente, pesquisar uma fonte e programar uma solução. Discuta o objetivo, o nível de participação e o que se aprende em cada situação.",
+    "challenge": "Todo tempo de tela é igual? Que critérios ajudam a decidir se uma tecnologia está sendo usada com propósito?",
+    "answer": "Não. É preciso considerar finalidade, participação ativa, qualidade do conteúdo, segurança, equilíbrio com outras atividades e aprendizagem produzida.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2; educação digital, cidadania e uso crítico das tecnologias.",
+    "teacherTip": "Use esta aula como abertura conceitual. Relacione com as regras de uso de dispositivos da escola, laboratório de informática, segurança, autoria e equilíbrio entre experiências digitais e não digitais.",
+    "fixation": [
+      {
+        "q": "Educação Digital é somente aprender a usar computador?",
+        "a": "Não. Inclui compreensão, criação, criticidade, segurança, ética e cidadania."
+      },
+      {
+        "q": "Todo uso de tela tem a mesma finalidade?",
+        "a": "Não. O propósito, a participação e a qualidade da atividade fazem diferença."
+      },
+      {
+        "q": "O que caracteriza um uso responsável da tecnologia?",
+        "a": "Usar com propósito, segurança, respeito, criticidade e equilíbrio."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Usar",
+        "description": "Dominar ferramentas com propósito"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Compreender",
+        "description": "Entender tecnologias e informações"
+      },
+      {
+        "symbol": "🛠️",
+        "label": "Criar",
+        "description": "Produzir e resolver problemas"
+      },
+      {
+        "symbol": "🛡️",
+        "label": "Cuidar",
+        "description": "Segurança, ética e responsabilidade"
+      }
+    ]
+  },
+  {
+    "id": "md8-intro-educacao-digital",
+    "year": 8,
+    "grade": 8,
+    "section": "digital",
+    "icon": "🌐",
+    "axis": "Educação Digital • Fundamentos",
+    "topic": "🌐 O que é Educação Digital?",
+    "objective": "Compreender Educação Digital como formação para usar, compreender, criar e avaliar tecnologias de modo crítico, seguro, ético e responsável.",
+    "concept": "Educação Digital não é apenas aprender a mexer em aparelhos. Envolve compreender tecnologias, produzir com elas, proteger dados, avaliar informações, comunicar-se com responsabilidade e decidir quando o recurso digital realmente contribui para uma tarefa.",
+    "example": "No laboratório, o computador pode ser usado para programar, pesquisar, criar, analisar dados e resolver problemas. Fora dele, também é necessário avaliar fontes, privacidade, tempo de tela e consequências do que se publica.",
+    "formula": "acessar + compreender + criar + avaliar + proteger + participar com responsabilidade",
+    "representation": "💻 tecnologia → 🧠 compreensão → 🛠️ criação → 🔎 análise crítica → 🛡️ segurança → 🤝 cidadania",
+    "use": "Estudo, comunicação, programação, pesquisa, produção de conteúdo, serviços digitais e participação social.",
+    "observe": "Saber usar um aplicativo não significa, sozinho, ter educação digital. Importam também autoria, segurança, ética, criticidade, equilíbrio e propósito.",
+    "guided": "Compare três usos de uma tela: assistir passivamente, pesquisar uma fonte e programar uma solução. Discuta o objetivo, o nível de participação e o que se aprende em cada situação.",
+    "challenge": "Todo tempo de tela é igual? Que critérios ajudam a decidir se uma tecnologia está sendo usada com propósito?",
+    "answer": "Não. É preciso considerar finalidade, participação ativa, qualidade do conteúdo, segurança, equilíbrio com outras atividades e aprendizagem produzida.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2; educação digital, cidadania e uso crítico das tecnologias.",
+    "teacherTip": "Use esta aula como abertura conceitual. Relacione com as regras de uso de dispositivos da escola, laboratório de informática, segurança, autoria e equilíbrio entre experiências digitais e não digitais.",
+    "fixation": [
+      {
+        "q": "Educação Digital é somente aprender a usar computador?",
+        "a": "Não. Inclui compreensão, criação, criticidade, segurança, ética e cidadania."
+      },
+      {
+        "q": "Todo uso de tela tem a mesma finalidade?",
+        "a": "Não. O propósito, a participação e a qualidade da atividade fazem diferença."
+      },
+      {
+        "q": "O que caracteriza um uso responsável da tecnologia?",
+        "a": "Usar com propósito, segurança, respeito, criticidade e equilíbrio."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Usar",
+        "description": "Dominar ferramentas com propósito"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Compreender",
+        "description": "Entender tecnologias e informações"
+      },
+      {
+        "symbol": "🛠️",
+        "label": "Criar",
+        "description": "Produzir e resolver problemas"
+      },
+      {
+        "symbol": "🛡️",
+        "label": "Cuidar",
+        "description": "Segurança, ética e responsabilidade"
+      }
+    ]
+  },
+  {
+    "id": "md7-intro-educacao-digital",
+    "year": 7,
+    "grade": 7,
+    "section": "digital",
+    "icon": "🌐",
+    "axis": "Educação Digital • Fundamentos",
+    "topic": "🌐 O que é Educação Digital?",
+    "objective": "Compreender Educação Digital como formação para usar, compreender, criar e avaliar tecnologias de modo crítico, seguro, ético e responsável.",
+    "concept": "Educação Digital não é apenas aprender a mexer em aparelhos. Envolve compreender tecnologias, produzir com elas, proteger dados, avaliar informações, comunicar-se com responsabilidade e decidir quando o recurso digital realmente contribui para uma tarefa.",
+    "example": "No laboratório, o computador pode ser usado para programar, pesquisar, criar, analisar dados e resolver problemas. Fora dele, também é necessário avaliar fontes, privacidade, tempo de tela e consequências do que se publica.",
+    "formula": "acessar + compreender + criar + avaliar + proteger + participar com responsabilidade",
+    "representation": "💻 tecnologia → 🧠 compreensão → 🛠️ criação → 🔎 análise crítica → 🛡️ segurança → 🤝 cidadania",
+    "use": "Estudo, comunicação, programação, pesquisa, produção de conteúdo, serviços digitais e participação social.",
+    "observe": "Saber usar um aplicativo não significa, sozinho, ter educação digital. Importam também autoria, segurança, ética, criticidade, equilíbrio e propósito.",
+    "guided": "Compare três usos de uma tela: assistir passivamente, pesquisar uma fonte e programar uma solução. Discuta o objetivo, o nível de participação e o que se aprende em cada situação.",
+    "challenge": "Todo tempo de tela é igual? Que critérios ajudam a decidir se uma tecnologia está sendo usada com propósito?",
+    "answer": "Não. É preciso considerar finalidade, participação ativa, qualidade do conteúdo, segurança, equilíbrio com outras atividades e aprendizagem produzida.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2; educação digital, cidadania e uso crítico das tecnologias.",
+    "teacherTip": "Use esta aula como abertura conceitual. Relacione com as regras de uso de dispositivos da escola, laboratório de informática, segurança, autoria e equilíbrio entre experiências digitais e não digitais.",
+    "fixation": [
+      {
+        "q": "Educação Digital é somente aprender a usar computador?",
+        "a": "Não. Inclui compreensão, criação, criticidade, segurança, ética e cidadania."
+      },
+      {
+        "q": "Todo uso de tela tem a mesma finalidade?",
+        "a": "Não. O propósito, a participação e a qualidade da atividade fazem diferença."
+      },
+      {
+        "q": "O que caracteriza um uso responsável da tecnologia?",
+        "a": "Usar com propósito, segurança, respeito, criticidade e equilíbrio."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Usar",
+        "description": "Dominar ferramentas com propósito"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Compreender",
+        "description": "Entender tecnologias e informações"
+      },
+      {
+        "symbol": "🛠️",
+        "label": "Criar",
+        "description": "Produzir e resolver problemas"
+      },
+      {
+        "symbol": "🛡️",
+        "label": "Cuidar",
+        "description": "Segurança, ética e responsabilidade"
+      }
+    ]
+  },
+  {
+    "id": "md6-intro-educacao-digital",
+    "year": 6,
+    "grade": 6,
+    "section": "digital",
+    "icon": "🌐",
+    "axis": "Educação Digital • Fundamentos",
+    "topic": "🌐 O que é Educação Digital?",
+    "objective": "Compreender Educação Digital como formação para usar, compreender, criar e avaliar tecnologias de modo crítico, seguro, ético e responsável.",
+    "concept": "Educação Digital não é apenas aprender a mexer em aparelhos. Envolve compreender tecnologias, produzir com elas, proteger dados, avaliar informações, comunicar-se com responsabilidade e decidir quando o recurso digital realmente contribui para uma tarefa.",
+    "example": "No laboratório, o computador pode ser usado para programar, pesquisar, criar, analisar dados e resolver problemas. Fora dele, também é necessário avaliar fontes, privacidade, tempo de tela e consequências do que se publica.",
+    "formula": "acessar + compreender + criar + avaliar + proteger + participar com responsabilidade",
+    "representation": "💻 tecnologia → 🧠 compreensão → 🛠️ criação → 🔎 análise crítica → 🛡️ segurança → 🤝 cidadania",
+    "use": "Estudo, comunicação, programação, pesquisa, produção de conteúdo, serviços digitais e participação social.",
+    "observe": "Saber usar um aplicativo não significa, sozinho, ter educação digital. Importam também autoria, segurança, ética, criticidade, equilíbrio e propósito.",
+    "guided": "Compare três usos de uma tela: assistir passivamente, pesquisar uma fonte e programar uma solução. Discuta o objetivo, o nível de participação e o que se aprende em cada situação.",
+    "challenge": "Todo tempo de tela é igual? Que critérios ajudam a decidir se uma tecnologia está sendo usada com propósito?",
+    "answer": "Não. É preciso considerar finalidade, participação ativa, qualidade do conteúdo, segurança, equilíbrio com outras atividades e aprendizagem produzida.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2; educação digital, cidadania e uso crítico das tecnologias.",
+    "teacherTip": "Use esta aula como abertura conceitual. Relacione com as regras de uso de dispositivos da escola, laboratório de informática, segurança, autoria e equilíbrio entre experiências digitais e não digitais.",
+    "fixation": [
+      {
+        "q": "Educação Digital é somente aprender a usar computador?",
+        "a": "Não. Inclui compreensão, criação, criticidade, segurança, ética e cidadania."
+      },
+      {
+        "q": "Todo uso de tela tem a mesma finalidade?",
+        "a": "Não. O propósito, a participação e a qualidade da atividade fazem diferença."
+      },
+      {
+        "q": "O que caracteriza um uso responsável da tecnologia?",
+        "a": "Usar com propósito, segurança, respeito, criticidade e equilíbrio."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Usar",
+        "description": "Dominar ferramentas com propósito"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Compreender",
+        "description": "Entender tecnologias e informações"
+      },
+      {
+        "symbol": "🛠️",
+        "label": "Criar",
+        "description": "Produzir e resolver problemas"
+      },
+      {
+        "symbol": "🛡️",
+        "label": "Cuidar",
+        "description": "Segurança, ética e responsabilidade"
+      }
+    ]
+  },
+  {
+    "id": "md5-intro-educacao-digital",
+    "year": 5,
+    "grade": 5,
+    "section": "digital",
+    "icon": "🌐",
+    "axis": "Educação Digital • Fundamentos",
+    "topic": "🌐 O que é Educação Digital?",
+    "objective": "Compreender Educação Digital como formação para usar, compreender, criar e avaliar tecnologias de modo crítico, seguro, ético e responsável.",
+    "concept": "Educação Digital não é apenas aprender a mexer em aparelhos. Envolve compreender tecnologias, produzir com elas, proteger dados, avaliar informações, comunicar-se com responsabilidade e decidir quando o recurso digital realmente contribui para uma tarefa.",
+    "example": "No laboratório, o computador pode ser usado para programar, pesquisar, criar, analisar dados e resolver problemas. Fora dele, também é necessário avaliar fontes, privacidade, tempo de tela e consequências do que se publica.",
+    "formula": "acessar + compreender + criar + avaliar + proteger + participar com responsabilidade",
+    "representation": "💻 tecnologia → 🧠 compreensão → 🛠️ criação → 🔎 análise crítica → 🛡️ segurança → 🤝 cidadania",
+    "use": "Estudo, comunicação, programação, pesquisa, produção de conteúdo, serviços digitais e participação social.",
+    "observe": "Saber usar um aplicativo não significa, sozinho, ter educação digital. Importam também autoria, segurança, ética, criticidade, equilíbrio e propósito.",
+    "guided": "Compare três usos de uma tela: assistir passivamente, pesquisar uma fonte e programar uma solução. Discuta o objetivo, o nível de participação e o que se aprende em cada situação.",
+    "challenge": "Todo tempo de tela é igual? Que critérios ajudam a decidir se uma tecnologia está sendo usada com propósito?",
+    "answer": "Não. É preciso considerar finalidade, participação ativa, qualidade do conteúdo, segurança, equilíbrio com outras atividades e aprendizagem produzida.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2; educação digital, cidadania e uso crítico das tecnologias.",
+    "teacherTip": "Use esta aula como abertura conceitual. Relacione com as regras de uso de dispositivos da escola, laboratório de informática, segurança, autoria e equilíbrio entre experiências digitais e não digitais.",
+    "fixation": [
+      {
+        "q": "Educação Digital é somente aprender a usar computador?",
+        "a": "Não. Inclui compreensão, criação, criticidade, segurança, ética e cidadania."
+      },
+      {
+        "q": "Todo uso de tela tem a mesma finalidade?",
+        "a": "Não. O propósito, a participação e a qualidade da atividade fazem diferença."
+      },
+      {
+        "q": "O que caracteriza um uso responsável da tecnologia?",
+        "a": "Usar com propósito, segurança, respeito, criticidade e equilíbrio."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💻",
+        "label": "Usar",
+        "description": "Dominar ferramentas com propósito"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Compreender",
+        "description": "Entender tecnologias e informações"
+      },
+      {
+        "symbol": "🛠️",
+        "label": "Criar",
+        "description": "Produzir e resolver problemas"
+      },
+      {
+        "symbol": "🛡️",
+        "label": "Cuidar",
+        "description": "Segurança, ética e responsabilidade"
+      }
+    ]
+  },
+  {
     "year": 5,
     "section": "digital",
     "id": "md5-computador",
