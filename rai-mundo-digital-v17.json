@@ -57,6 +57,69 @@
     ]
   },
   {
+    "id": "md9-organizando-analisando-dados",
+    "year": 9,
+    "grade": 9,
+    "section": "digital",
+    "icon": "📊",
+    "axis": "Educação Digital • Dados e Planilhas",
+    "topic": "Organizando e analisando dados",
+    "objective": "Organizar dados produzidos em atividades do Tangram, reconhecer linhas, colunas, células e cabeçalhos e compreender como a análise transforma registros em informações úteis para avaliar a aprendizagem.",
+    "keyTerm": "análise de dados",
+    "keyDefinition": "Processo de organizar, comparar e interpretar registros para encontrar informações, padrões e evidências que ajudem a responder perguntas e tomar decisões.",
+    "concept": "Coletar dados não significa compreendê-los. Depois da coleta, os registros precisam ser organizados em tabelas, analisados e interpretados. Linhas podem representar alunos ou partidas; colunas podem registrar desafio, acertos, erros, tentativas e tempo; cada célula armazena um dado. Em planilhas eletrônicas, fórmulas permitem recalcular resultados quando os dados são alterados.",
+    "example": "Depois de uma rodada do Tangram Educativo, a turma organiza em uma tabela os dados de cada participante: desafio realizado, acertos, erros, tentativas e tempo. A comparação permite descobrir dificuldades comuns, evolução e conteúdos que precisam ser retomados.",
+    "formula": "coletar → organizar → analisar → interpretar → decidir",
+    "representation": "🎮 partida → 🧾 registros → 📊 tabela → 🔎 análise → 🧠 informação → 🎯 decisão",
+    "use": "Tangram Educativo, pesquisas escolares, experimentos, avaliações, planilhas, relatórios e acompanhamento da aprendizagem.",
+    "observe": "Terminar mais rápido não significa necessariamente aprender mais. Para avaliar a aprendizagem, é melhor combinar diferentes evidências, como acertos, erros, tentativas, respostas pedagógicas e evolução.",
+    "guided": "Após uma rodada do Tangram, monte uma tabela com as colunas Aluno | Desafio | Acertos | Erros | Tentativas | Tempo. Compare os registros e identifique pelo menos um padrão da turma.",
+    "challenge": "Se um aluno terminou mais rápido, mas cometeu mais erros, e outro demorou mais e acertou todas as questões, quem teve o melhor desempenho?",
+    "answer": "Não é possível decidir apenas pelo tempo. O desempenho deve considerar conjuntamente acertos, erros, tentativas, compreensão demonstrada e evolução. O tempo pode ser um indicador, mas não deve ser o único.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2; organização, representação, análise e interpretação de dados em contextos digitais.",
+    "teacherTip": "Use dados reais das partidas sempre que possível. Preserve a privacidade dos estudantes e destaque que os registros servem para compreender a aprendizagem, não apenas para produzir ranking. Esta aula prepara o uso de fórmulas, médias, porcentagens e gráficos em planilhas.",
+    "fixation": [
+      {
+        "q": "Qual é a diferença entre coletar e analisar dados?",
+        "a": "Coletar é registrar o que aconteceu; analisar é organizar, comparar e interpretar esses registros para produzir informação."
+      },
+      {
+        "q": "O que são linhas, colunas e células em uma tabela?",
+        "a": "Linhas organizam registros, colunas representam características observadas e células armazenam cada dado no encontro entre linha e coluna."
+      },
+      {
+        "q": "Por que uma planilha eletrônica é útil quando um valor muda?",
+        "a": "Porque fórmulas podem recalcular automaticamente os resultados relacionados ao dado alterado."
+      },
+      {
+        "q": "Somente o tempo permite avaliar a aprendizagem no Tangram?",
+        "a": "Não. É preciso considerar também acertos, erros, tentativas, respostas pedagógicas e evolução."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🎮",
+        "label": "Coletar",
+        "description": "Gerar registros durante a atividade"
+      },
+      {
+        "symbol": "📊",
+        "label": "Organizar",
+        "description": "Estruturar os dados em linhas, colunas e células"
+      },
+      {
+        "symbol": "🔎",
+        "label": "Analisar",
+        "description": "Comparar resultados e procurar padrões"
+      },
+      {
+        "symbol": "🧠",
+        "label": "Interpretar",
+        "description": "Transformar dados em informação útil"
+      }
+    ]
+  },
+  {
     "id": "md8-intro-educacao-digital",
     "year": 8,
     "grade": 8,
