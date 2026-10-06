@@ -1,4 +1,4 @@
-const CACHE='tangram2-offline-stable-20261006c';
+const CACHE='tangram2-offline-stable-20261006d';
 const CORE=[
   './',
   './index.html',
