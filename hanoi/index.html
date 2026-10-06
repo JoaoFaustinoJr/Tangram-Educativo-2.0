@@ -109,7 +109,7 @@ const classroom={
 ['💻 Computação','Compare a solução manual com uma função recursiva: o computador também precisa decompor o problema até chegar a um caso simples.','code'],
 ['🧩 Experiência','Jogue com 5 discos e depois abra o mapa de estados de 3 discos para procurar estruturas repetidas.','activity']
 ]}};
-function renderClassroom(){let g=+document.querySelector('#grade').value,L=classroom[g];document.querySelector('#classYear').textContent=g+'º ANO';document.querySelector('#classTitle').textContent=L.title;document.querySelector('#classSubtitle').textContent=L.sub;document.querySelector('#classSteps').innerHTML=L.blocks.map(x=>'<article class="classBlock '+x[2]+'"><b>'+x[0]+'</b><p>'+x[1]+'</p></article>').join('')
+function renderClassroom(){let g=+document.querySelector('#grade').value,L=classroom[g];document.querySelector('#classYear').textContent=g+'º ANO';document.querySelector('#classTitle').textContent=L.title;document.querySelector('#classSubtitle').textContent=L.sub;document.querySelector('#classSteps').innerHTML=L.blocks.map(x=>'<article class="classBlock '+x[2]+'"><b>'+x[0]+'</b><p>'+x[1]+'</p></article>').join('')}
 function showClassroom(){
  const panel=document.getElementById('classPanel'), game=document.getElementById('jogo');
  panel.classList.add('show'); game.classList.add('classHidden');
