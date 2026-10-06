@@ -587,6 +587,78 @@
     ]
   },
   {
+    "id": "rob6t3-painel-espacial",
+    "section": "robotics",
+    "year": 6,
+    "icon": "🚀",
+    "topic": "Aula 3 — Nosso painel de controle espacial",
+    "title": "Aula 3 — Nosso painel de controle espacial",
+    "axis": "Pensamento Computacional • Programação em blocos",
+    "objective": "Dividir uma missão em tarefas menores e organizar uma central de lançamento no StartLab.",
+    "keyTerm": "Decomposição",
+    "keyDefinition": "Dividir um problema grande em partes menores, que podemos organizar e testar.",
+    "concept": "Lançar um foguete envolve várias tarefas. Para facilitar, dividimos a missão em três verificações: comunicação, sistemas e calibração da rota. Isso é decomposição. Cada botão do painel tem uma função, isto é, uma tarefa específica. Em programação, também podemos organizar instruções em funções reutilizáveis; nesta aula, começamos pela organização do painel e pela apresentação da missão.",
+    "example": "Comunicação: verificar a troca de mensagens com a equipe. Sistemas: verificar os equipamentos do foguete. Calibração: ajustar a rota da viagem. Como no Robô Marquinhos, um comando grande precisa ser dividido em etapas claras.",
+    "representation": "Missão espacial → comunicação + sistemas + calibração da rota",
+    "formula": "Bandeira verde → boas-vindas (4 segundos) → explicar a verificação de segurança (4 segundos)",
+    "use": "Organizar programas, simulações, robôs e tarefas em equipe.",
+    "observe": "Cores ajudam a identificar os botões, mas cada um também deve ter um nome. Mostrar uma mensagem não comprova que uma verificação real foi realizada. Nesta aula, montamos a estrutura inicial; a autorização de lançamento depende das verificações programadas.",
+    "guided": "1. Escolha o cenário de uma cabine espacial no StartLab.\n2. Acrescente uma janela com vista para a Lua e reserve espaço para o foguete.\n3. Escolha Glitch ou outra personagem para dirigir o lançamento. Ajuste seu tamanho e posição.\n4. Crie três botões: Comunicação, Sistemas e Calibração. Use nomes e cores diferentes.\n5. Na personagem, programe: ao clicar na bandeira verde → dizer “Bem-vindos à central de lançamento!” por 4 segundos → dizer “Vamos verificar se é seguro lançar o foguete hoje.” por 4 segundos.\n6. Execute e confira a ordem e o tempo das mensagens. Como continuidade, associe o clique de cada botão a uma mensagem sobre sua tarefa.",
+    "challenge": "Explique como a missão foi dividida. Depois, escreva uma mensagem adequada para cada botão e diga por que todos os itens precisam ser conferidos antes da decolagem.",
+    "answer": "A missão foi dividida em comunicação, sistemas e calibração. Exemplos: “Vamos verificar a comunicação”, “Vamos verificar os sistemas” e “Vamos conferir a rota”. As três etapas ajudam a identificar falhas antes do lançamento; uma mensagem apenas apresenta a tarefa.",
+    "reference": "Material-fonte: FINAL_SLIDES_5294_AULA03_ALUNO.pdf — Aula 3: Decomposição e funções; Nosso painel de controle espacial.",
+    "teacherTip": "Explique e demonstre antes da prática. Divida o trabalho entre cenário, personagem e botões; depois reúna o grupo para testar. Diferencie a função de um botão de uma função de programação e apresente os cliques como continuidade da estrutura inicial.",
+    "fixation": [
+      {
+        "q": "O que é decomposição?",
+        "options": [
+          "Dividir um problema em tarefas menores",
+          "Excluir todas as tarefas",
+          "Fazer tudo sem planejar"
+        ],
+        "correct": 0,
+        "a": "Dividir um problema em tarefas menores."
+      },
+      {
+        "q": "Quais verificações compõem a missão?",
+        "options": [
+          "Somente a decoração",
+          "Comunicação, sistemas e calibração da rota",
+          "Apenas a cor do foguete"
+        ],
+        "correct": 1,
+        "a": "Comunicação, sistemas e calibração da rota."
+      },
+      {
+        "q": "O que inicia a apresentação da personagem?",
+        "options": [
+          "Mudar o cenário",
+          "Clicar na bandeira verde",
+          "Renomear um botão"
+        ],
+        "correct": 1,
+        "a": "Clicar na bandeira verde."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "📡",
+        "label": "Comunicação",
+        "description": "Troca de mensagens com a equipe"
+      },
+      {
+        "symbol": "⚙️",
+        "label": "Sistemas",
+        "description": "Equipamentos do foguete"
+      },
+      {
+        "symbol": "🧭",
+        "label": "Calibração",
+        "description": "Ajuste da rota"
+      }
+    ]
+  },
+  {
     "id": "rob6t3-2",
     "section": "robotics",
     "year": 6,
