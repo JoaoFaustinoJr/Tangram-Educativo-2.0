@@ -1,5 +1,60 @@
-const CACHE='tangram2-offline-aula6-20261006';
-const CORE=['./','./index.html','./rai-robotica-t3-v18.json','./style.css?v=377','./app.js?v=377','./manifest.webmanifest?v=310','./app-icon.svg?v=310','./file_000000007ad0820ebb1af4cac165a68a.png?v=149'];
-self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>Promise.allSettled(CORE.map(x=>c.add(x)))))});
-self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x.startsWith('tangram2-')&&x!==CACHE).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));
-self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;const u=new URL(e.request.url);if(u.origin!==self.location.origin)return;if(e.request.mode==='navigate'){e.respondWith(caches.match('./index.html').then(hit=>hit||fetch(e.request).then(r=>{if(r.ok)caches.open(CACHE).then(c=>c.put('./index.html','./rai-robotica-t3-v18.json',r.clone()));return r})));return}e.respondWith(caches.match(e.request,{ignoreSearch:true}).then(hit=>hit||fetch(e.request).then(r=>{if(r&&r.ok)caches.open(CACHE).then(c=>c.put(e.request,r.clone()));return r})))});
+const CACHE='tangram2-offline-stable-20261006b';
+const CORE=[
+  './',
+  './index.html',
+  './rai-robotica-t3-v18.json',
+  './style.css?v=1.0.18-android-print',
+  './app.js?v=1.0.20-foundations',
+  './manifest.webmanifest?v=310',
+  './app-icon.svg?v=310',
+  './file_000000007ad0820ebb1af4cac165a68a.png?v=149',
+  './hanoi/index.html'
+];
+
+self.addEventListener('install',event=>{
+  self.skipWaiting();
+  event.waitUntil(
+    caches.open(CACHE).then(cache=>Promise.allSettled(CORE.map(url=>cache.add(url))))
+  );
+});
+
+self.addEventListener('activate',event=>{
+  event.waitUntil(
+    caches.keys()
+      .then(keys=>Promise.all(keys.filter(key=>key.startsWith('tangram2-')&&key!==CACHE).map(key=>caches.delete(key))))
+      .then(()=>self.clients.claim())
+  );
+});
+
+self.addEventListener('fetch',event=>{
+  if(event.request.method!=='GET') return;
+  const url=new URL(event.request.url);
+  if(url.origin!==self.location.origin) return;
+
+  if(event.request.mode==='navigate'){
+    event.respondWith(
+      fetch(event.request)
+        .then(response=>{
+          if(response&&response.ok){
+            const copy=response.clone();
+            caches.open(CACHE).then(cache=>cache.put(event.request,copy));
+          }
+          return response;
+        })
+        .catch(()=>caches.match(event.request,{ignoreSearch:true})
+          .then(hit=>hit||caches.match('./index.html')))
+    );
+    return;
+  }
+
+  event.respondWith(
+    caches.match(event.request,{ignoreSearch:true})
+      .then(hit=>hit||fetch(event.request).then(response=>{
+        if(response&&response.ok){
+          const copy=response.clone();
+          caches.open(CACHE).then(cache=>cache.put(event.request,copy));
+        }
+        return response;
+      }))
+  );
+});
