@@ -30,6 +30,34 @@ main{max-width:980px;margin:auto;padding:14px 12px 34px}.hero{text-align:center;
 .action.verify.ready{animation:verifyPulse 1.25s ease-in-out infinite;box-shadow:0 0 0 3px #f3c64e,0 6px 18px #174d3199!important}
 @keyframes verifyPulse{50%{transform:translateY(-2px);filter:brightness(1.08)}}
 @media(max-width:540px){.actions{gap:7px}.actions .action{font-size:.82rem;padding:11px 6px}}
+
+/* v0.20 — sistema visual Tangram/X1 */
+.top{background:linear-gradient(180deg,#052f45,#05283d)!important;border-bottom:1px solid #b99a4b88!important}
+.topin{max-width:920px!important;padding:10px 20px!important;gap:14px!important}
+.homeLink{min-height:54px!important;max-width:650px!important;border:1.5px solid #12bdd7!important;border-radius:28px!important;background:#07344d!important;padding:7px 18px!important;box-shadow:none!important}
+.homeLink .arrow{color:#20d0e7!important;font-size:1.35rem!important;margin-right:12px}
+.homeLink b{font-size:1.08rem!important;color:#f8fbff!important}
+.homeLink small{display:block!important;color:#1fd0e5!important;font-weight:800!important;line-height:1.05}
+.hanoiMark{width:58px!important;height:58px!important;flex-basis:58px!important;border:2px solid #d5ad4d!important;border-radius:17px!important;background:#082f46!important;box-shadow:none!important}
+.hanoiMark svg{width:49px!important;height:49px!important}
+.hero{padding-top:24px!important}
+.hero:before,.hero:after{opacity:.22!important}
+.hero small{letter-spacing:.12em!important;color:#efc65a!important;font-weight:900!important}
+.hero h1{letter-spacing:-.025em!important}
+.hero p{color:#c7d7e3!important}
+.heroBtn{border-radius:28px!important;min-height:56px!important;font-weight:900!important}
+.heroBtn.play{background:#fff2cf!important;border-color:#d8af4c!important;color:#0b2d48!important}
+.heroBtn.classroom{background:#1d527c!important;border-color:#b59a4d!important;color:#fff!important}
+.game{box-shadow:0 18px 40px #00182740!important}
+@media(max-width:540px){
+ .topin{padding:7px 12px!important}
+ .homeLink{min-height:48px!important;padding:5px 12px!important}
+ .homeLink b{font-size:1rem!important}
+ .hanoiMark{width:50px!important;height:50px!important;flex-basis:50px!important;border-radius:15px!important}
+ .hanoiMark svg{width:42px!important;height:42px!important}
+ .hero{padding-top:16px!important}
+ .hero h1{margin-top:3px!important}
+}
 </style></head><body>
 <header class="top"><div class="topin"><a class="homeLink" href="../" aria-label="Voltar ao Tangram Educativo"><span class="arrow">←</span><span><b>Tangram Educativo</b><small>Projeto principal</small></span></a><div class="hanoiMark" aria-label="Símbolo da Torre de Hanói"><svg viewBox="0 0 64 64" role="img" aria-label="Torre de Hanói"><path d="M12 15v39M32 15v39M52 15v39" stroke="#f7f4ed" stroke-width="3.2" stroke-linecap="round"/><path d="M7 54h50" stroke="#f7f4ed" stroke-width="4" stroke-linecap="round"/><g fill="none" stroke="#22cbe7" stroke-width=".8" opacity=".38"><path d="M32 7 57 50H7Z"/><path d="M32 7 19.5 28.5h25Z"/><path d="M19.5 28.5 7 50h25Z"/><path d="M44.5 28.5 32 50h25Z"/></g><rect x="19" y="42" width="26" height="8" rx="4" fill="#39b873" stroke="#f6e8c2" stroke-width="1.2"/><rect x="23" y="33" width="18" height="8" rx="4" fill="#f2b719" stroke="#f6e8c2" stroke-width="1.2"/><rect x="27" y="24" width="10" height="8" rx="4" fill="#f15c54" stroke="#f6e8c2" stroke-width="1.2"/><circle cx="12" cy="15" r="1.8" fill="#22cbe7"/><circle cx="32" cy="15" r="1.8" fill="#22cbe7"/><circle cx="52" cy="15" r="1.8" fill="#22cbe7"/></svg></div></div></header>
 <main><div class="hero fractalHero"><small>DESAFIO DE RACIOCÍNIO COM A R.A.I.</small><h1>Torre de Hanói</h1><p>Observe • planeje • execute • aprenda</p><div class="heroNav"><a class="heroBtn play" href="#jogo">🎮 Jogar</a><a class="heroBtn classroom" href="../#sala-de-aula">📚 Sala de Aula</a></div></div>
@@ -46,7 +74,7 @@ main{max-width:980px;margin:auto;padding:14px 12px 34px}.hero{text-align:center;
 <details id="mapDetails"><summary>△ Mapa de estados — 3 discos</summary><svg id="stateGraph" viewBox="0 0 420 360" aria-label="Grafo completo dos 27 estados"></svg><div class="path" id="statePath"></div><p>As letras A, B e C representam as hastes. Cada ponto é um estado; cada linha, um movimento legal. O estado atual fica destacado.</p></details>
 <details><summary>🔎 Para ir além — matemática escondida</summary><div class="concepts"><div class="concept"><b>Recursão</b>Resolver n discos contém duas soluções de n−1.</div><div class="concept"><b>Exponencial</b>O mínimo cresce como 2ⁿ−1.</div><div class="concept"><b>Binário e paridade</b>A solução ótima se relaciona à contagem binária.</div><div class="concept"><b>Grafos</b>Resolver é encontrar um caminho entre estados.</div><div class="concept"><b>Auto-semelhança</b>Problemas menores reaparecem dentro do maior, aproximando a ideia de estruturas fractais.</div><div class="concept"><b>Invariantes</b>Algumas propriedades permanecem verdadeiras durante toda solução válida.</div></div></details>
 <details><summary>Você sabia? A origem da Torre</summary><p>Édouard Lucas apresentou o quebra-cabeça em 1883. A famosa narrativa dos 64 discos pertence à lenda associada ao problema; a estrutura matemática leva ao mínimo 2ⁿ−1.</p></details>
-</div></section><div class="footer">Tangram Educativo • Hanói Lab v0.19 • módulo experimental isolado</div></main>
+</div></section><div class="footer">Tangram Educativo • Hanói Lab v0.20 • módulo experimental isolado</div></main>
 <script>
 const KEY='tangram_hanoi_attempts_v2';
 let towers=[[],[],[]],moves=0,selected=null,n=3,invalid=0,hints=0,restarts=0,start=0,path=[];
