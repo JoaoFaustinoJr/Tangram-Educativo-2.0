@@ -1171,3 +1171,8 @@ header>.rai-float.rai-x1>.header-tangram-exact{
   font-size:11.5pt!important;line-height:1.55!important
  }
 }
+
+/* Hanoi integration */
+.hanoi-entry{margin:10px 0;padding:8px;border-radius:16px;background:linear-gradient(135deg,#071b31,#174a76);border:1px solid #d7b65a;box-shadow:0 8px 22px #06182722}
+.hanoi-entry button{width:100%;min-height:62px;border:0;border-radius:12px;background:linear-gradient(110deg,#fff9e8,#eef8fb);color:#102f53;text-align:left;padding:10px 14px;cursor:pointer}
+.hanoi-entry b{display:block;font-size:1rem}.hanoi-entry small{display:block;margin-top:3px;color:#596b7c;font-weight:700}
