@@ -1200,3 +1200,10 @@ header>.rai-float.rai-x1>.header-tangram-exact{
 /* 2026-10-06 — visual balance: compact modes first, Classroom featured below */
 .modes-hierarchy{margin-top:8px!important}.modes-hierarchy .mode-secondary{margin-top:0!important;margin-bottom:10px}.modes-hierarchy .mode-featured{min-height:82px!important}.mode-secondary>button,.mode-secondary>.hanoi-mode{min-height:100px!important}.hanoi-mode .hanoi-art .hanoi-peg,.hanoi-mode .hanoi-art .hanoi-disc{display:block!important}
 @media(max-width:560px){.mode-secondary>button,.mode-secondary>.hanoi-mode{min-height:94px!important}.modes-hierarchy .mode-featured{min-height:76px!important}}
+
+/* 2026-10-06 — refined Hanoi pictogram on Tangram home */
+.hanoi-mode .hanoi-art{border:0!important;border-radius:0!important;background:transparent!important;overflow:visible!important;width:44px!important;height:44px!important}
+.hanoi-mode .hanoi-art:after{content:"";position:absolute;left:2px;right:2px;bottom:2px;height:3px;border-radius:4px;background:#e6bd54}
+.hanoi-mode .hanoi-art .hanoi-peg{width:4px!important;height:29px!important;top:4px!important;background:linear-gradient(90deg,#dce4eb,#fff 55%,#cbd5dd)!important;box-shadow:0 1px 2px #0006}
+.hanoi-mode .hanoi-art .hanoi-disc{height:6px!important;border:1px solid #ffffff55;box-shadow:0 2px 3px #0005}
+.hanoi-mode .hanoi-art .hd1{width:18px!important;bottom:22px!important}.hanoi-mode .hanoi-art .hd2{width:29px!important;bottom:14px!important}.hanoi-mode .hanoi-art .hd3{width:40px!important;bottom:6px!important}
