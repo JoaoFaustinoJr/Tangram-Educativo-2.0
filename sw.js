@@ -1,4 +1,4 @@
-const CACHE='tangram2-offline-stable-20261006e';
+const CACHE='tangram2-offline-stable-20261006f';
 const CORE=[
   './',
   './index.html',
@@ -47,14 +47,16 @@ self.addEventListener('fetch',event=>{
     return;
   }
 
-  event.respondWith(
-    caches.match(event.request,{ignoreSearch:true})
-      .then(hit=>hit||fetch(event.request).then(response=>{
-        if(response&&response.ok){
-          const copy=response.clone();
-          caches.open(CACHE).then(cache=>cache.put(event.request,copy));
-        }
-        return response;
-      }))
-  );
+  const critical=/\.(?:css|js)$/.test(url.pathname)||url.pathname.endsWith('/hanoi/index.html');
+  if(critical){
+    event.respondWith(fetch(event.request).then(response=>{
+      if(response&&response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy));}
+      return response;
+    }).catch(()=>caches.match(event.request,{ignoreSearch:true})));
+    return;
+  }
+  event.respondWith(caches.match(event.request,{ignoreSearch:true}).then(hit=>hit||fetch(event.request).then(response=>{
+    if(response&&response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy));}
+    return response;
+  })));
 });
