@@ -1,10 +1,10 @@
-const CACHE='tangram2-offline-stable-20261006b';
+const CACHE='tangram2-offline-stable-20261006c';
 const CORE=[
   './',
   './index.html',
   './rai-robotica-t3-v18.json',
   './style.css?v=1.0.18-android-print',
-  './app.js?v=1.0.20-foundations',
+  './app.js?v=1.0.21-hanoi',
   './manifest.webmanifest?v=310',
   './app-icon.svg?v=310',
   './file_000000007ad0820ebb1af4cac165a68a.png?v=149',
