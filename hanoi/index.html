@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hanói Lab | Tangram Educativo</title>
+<style>
+:root{font-family:system-ui,sans-serif}body{margin:0;background:#f4efe3;color:#172033}header{padding:18px;text-align:center;background:#10233f;color:white}main{max-width:850px;margin:auto;padding:18px}.card{background:white;border-radius:18px;padding:16px;box-shadow:0 5px 18px #0002}.controls,.stats{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:12px 0}button,select{font:inherit;padding:10px 14px;border-radius:10px;border:1px solid #aaa;background:white}.board{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;height:330px;align-items:end;margin-top:18px}.peg{height:300px;position:relative;display:flex;flex-direction:column-reverse;align-items:center;justify-content:flex-start;border-bottom:10px solid #7b5738;border-radius:4px;cursor:pointer}.peg:before{content:"";position:absolute;bottom:0;width:10px;height:260px;background:#9a704b;border-radius:8px}.disk{height:34px;margin:2px;z-index:2;border:2px solid #172033;border-radius:12px;background:linear-gradient(90deg,#e7b84b,#fff1a7);display:flex;align-items:center;justify-content:center;font-weight:800}.selected{outline:4px solid #3b82f6}.msg{text-align:center;min-height:28px;font-weight:700}.note{font-size:.92rem;color:#555;text-align:center}.rai{font-weight:800;color:#805c00}@media(max-width:520px){.board{height:285px}.peg{height:260px}.peg:before{height:220px}.disk{height:30px}}
+</style></head>
+<body><header><h1>🧩 Hanói Lab</h1><div>Tangram Educativo • laboratório de lógica</div></header>
+<main><section class="card">
+<p><span class="rai">R.A.I.:</span> Leve todos os discos para a haste da direita. Mova um por vez e nunca coloque um disco maior sobre um menor.</p>
+<div class="controls"><label>Discos <select id="n"><option>3</option><option>4</option><option>5</option></select></label><button id="restart">Reiniciar</button></div>
+<div class="stats"><b>Movimentos: <span id="moves">0</span></b><b>Mínimo: <span id="minimum">7</span></b><b>Eficiência: <span id="eff">—</span></b></div>
+<div class="board" id="board"><div class="peg" data-p="0" aria-label="Haste 1"></div><div class="peg" data-p="1" aria-label="Haste 2"></div><div class="peg" data-p="2" aria-label="Haste 3"></div></div>
+<div class="msg" id="msg">Toque na haste de origem e depois na haste de destino.</div>
+<p class="note">A solução ótima usa 2ⁿ − 1 movimentos. Aqui o objetivo é aprender a estratégia, não apenas ser rápido.</p>
+</section></main>
+<script>
+let towers,moves,selected=null,n=3;
+const pegs=[...document.querySelectorAll('.peg')],msg=document.querySelector('#msg');
+function reset(){n=+document.querySelector('#n').value;towers=[[],[],[]];for(let i=n;i>=1;i--)towers[0].push(i);moves=0;selected=null;render();msg.textContent='Toque na haste de origem e depois na haste de destino.'}
+function render(){pegs.forEach((p,i)=>{p.innerHTML='';p.classList.toggle('selected',selected===i);towers[i].forEach(size=>{let d=document.createElement('div');d.className='disk';d.style.width=(38+size*22)+'px';d.textContent=size;d.setAttribute('aria-label','Disco '+size);p.appendChild(d)})});document.querySelector('#moves').textContent=moves;document.querySelector('#minimum').textContent=2**n-1;document.querySelector('#eff').textContent=moves?Math.min(100,Math.round((2**n-1)/moves*100))+'%':'—'}
+function tap(i){if(selected===null){if(!towers[i].length){msg.textContent='Essa haste está vazia.';return}selected=i;msg.textContent='Agora escolha a haste de destino.';render();return}
+if(i===selected){selected=null;msg.textContent='Seleção cancelada.';render();return}
+let disk=towers[selected][towers[selected].length-1],top=towers[i][towers[i].length-1];
+if(top&&top<disk){msg.textContent='Regra de Hanói: um disco maior não pode ficar sobre um menor.';selected=null;render();return}
+towers[selected].pop();towers[i].push(disk);moves++;selected=null;render();
+if(towers[2].length===n){let min=2**n-1;msg.textContent=moves===min?'Excelente! Você encontrou a solução ótima em '+moves+' movimentos.':'Concluído em '+moves+' movimentos. O mínimo é '+min+'. Tente melhorar sua estratégia!';}else msg.textContent='Boa. Continue observando o padrão.'}
+pegs.forEach((p,i)=>p.addEventListener('click',()=>tap(i)));document.querySelector('#restart').onclick=reset;document.querySelector('#n').onchange=reset;reset();
+</script></body></html>
