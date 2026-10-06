@@ -1207,3 +1207,19 @@ header>.rai-float.rai-x1>.header-tangram-exact{
 .hanoi-mode .hanoi-art .hanoi-peg{width:4px!important;height:29px!important;top:4px!important;background:linear-gradient(90deg,#dce4eb,#fff 55%,#cbd5dd)!important;box-shadow:0 1px 2px #0006}
 .hanoi-mode .hanoi-art .hanoi-disc{height:6px!important;border:1px solid #ffffff55;box-shadow:0 2px 3px #0005}
 .hanoi-mode .hanoi-art .hd1{width:18px!important;bottom:22px!important}.hanoi-mode .hanoi-art .hd2{width:29px!important;bottom:14px!important}.hanoi-mode .hanoi-art .hd3{width:40px!important;bottom:6px!important}
+
+
+/* 2026-10-06 — Hanoi visual identity v0.18: mockup + mathematical signature */
+.hanoi-mode .hanoi-art{width:48px!important;height:48px!important;border:1px solid #d6ad4d88!important;border-radius:13px!important;background:linear-gradient(180deg,#0b3150,#071d34)!important;overflow:hidden!important;box-shadow:inset 0 0 0 1px #ffffff0c,0 4px 12px #0003!important}
+.hanoi-mode .hanoi-art:before{content:"";position:absolute;inset:5px 6px 7px;opacity:.28;background:
+linear-gradient(60deg,transparent 47%,#43c9e9 48% 51%,transparent 52%),
+linear-gradient(-60deg,transparent 47%,#43c9e9 48% 51%,transparent 52%),
+linear-gradient(0deg,transparent 48%,#43c9e9 49% 51%,transparent 52%);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.hanoi-mode .hanoi-art:after{content:"";position:absolute;left:5px;right:5px;bottom:5px;height:3px;border-radius:4px;background:#f7f4ed;box-shadow:0 1px 4px #0006}
+.hanoi-mode .hanoi-art .hanoi-peg{width:3px!important;height:31px!important;top:5px!important;background:#f7f4ed!important;box-shadow:0 1px 3px #0007;z-index:2}
+.hanoi-mode .hanoi-art .hanoi-peg:before,.hanoi-mode .hanoi-art .hanoi-peg:after{content:"";position:absolute;top:0;width:3px;height:31px;border-radius:3px;background:#f7f4ed;box-shadow:0 1px 3px #0007}
+.hanoi-mode .hanoi-art .hanoi-peg:before{left:-14px}.hanoi-mode .hanoi-art .hanoi-peg:after{left:14px}
+.hanoi-mode .hanoi-art .hanoi-disc{height:6px!important;border:1px solid #fff9!important;box-shadow:0 2px 4px #0006;z-index:3}
+.hanoi-mode .hanoi-art .hd1{width:15px!important;bottom:23px!important;background:#ff675e!important}
+.hanoi-mode .hanoi-art .hd2{width:23px!important;bottom:15px!important;background:#ffc82f!important}
+.hanoi-mode .hanoi-art .hd3{width:31px!important;bottom:7px!important;background:#55c982!important}
