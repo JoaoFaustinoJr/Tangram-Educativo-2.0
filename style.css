@@ -1196,3 +1196,7 @@ header>.rai-float.rai-x1>.header-tangram-exact{
 .hanoi-mode .hanoi-art .hd1{width:16px;bottom:18px;background:#f26054}
 .hanoi-mode .hanoi-art .hd2{width:24px;bottom:11px;background:#f2bd35}
 .hanoi-mode .hanoi-art .hd3{width:32px;bottom:4px;background:#4fb775}
+
+/* 2026-10-06 — visual balance: compact modes first, Classroom featured below */
+.modes-hierarchy{margin-top:8px!important}.modes-hierarchy .mode-secondary{margin-top:0!important;margin-bottom:10px}.modes-hierarchy .mode-featured{min-height:82px!important}.mode-secondary>button,.mode-secondary>.hanoi-mode{min-height:100px!important}.hanoi-mode .hanoi-art .hanoi-peg,.hanoi-mode .hanoi-art .hanoi-disc{display:block!important}
+@media(max-width:560px){.mode-secondary>button,.mode-secondary>.hanoi-mode{min-height:94px!important}.modes-hierarchy .mode-featured{min-height:76px!important}}
