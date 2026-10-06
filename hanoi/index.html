@@ -14,6 +14,8 @@ main{max-width:980px;margin:auto;padding:22px 16px 40px}.hero{text-align:center;
 .disk{height:34px;margin:2px;z-index:2;border:2px solid #09182a;border-radius:12px;background:linear-gradient(180deg,#f5d879,#c69736);box-shadow:0 3px 5px #0005;display:flex;align-items:center;justify-content:center;font-weight:950;color:#12233c}
 .msg{text-align:center;min-height:30px;font-weight:800;margin:39px 5px 4px;color:#16365d}.progress{display:flex;justify-content:center;gap:7px;margin-top:14px}.dot{width:10px;height:10px;border-radius:50%;background:#d8cdb7}.dot.on{background:var(--gold);box-shadow:0 0 0 4px #d5aa4325}.lesson{margin-top:14px;padding:12px;border-top:1px solid var(--line);text-align:center}.lesson b{color:#8a671b}.footer{text-align:center;color:#fff9;font-size:.78rem;margin-top:16px}
 @media(max-width:540px){.topin{padding:9px 12px}.brand small{display:none}.badge{font-size:.68rem}.panel{padding:11px}.board{height:280px}.peg{height:250px}.peg:before{height:210px}.disk{height:30px}.stat{min-width:92px;flex:1}.raiBox{font-size:.9rem}}
+
+.history{margin-top:14px;background:#fffaf0;border:1px solid var(--line);border-radius:16px;overflow:hidden}.history summary{cursor:pointer;padding:13px 15px;font-weight:850;color:var(--navy);list-style:none}.history summary:before{content:"✦ ";color:var(--gold)}.history div{padding:0 15px 14px;line-height:1.5;color:#42516a}.history strong{color:#8a671b}.yearTag{display:inline-block;background:#0b1f3a;color:#f1d37f;padding:3px 8px;border-radius:999px;font-size:.75rem;font-weight:800;margin-right:5px}
 </style></head><body>
 <header class="top"><div class="topin"><div class="brand"><div class="mark">R.A.I.</div><div><b>Tangram Educativo</b><small>Prof. João Faustino Júnior</small></div></div><span class="badge">LAB • LÓGICA</span></div></header>
 <main><section class="hero"><div class="gold">DESAFIOS DE RACIOCÍNIO</div><h1>Torre de Hanói</h1><p>Observe • planeje • execute • aprenda</p></section>
@@ -25,7 +27,8 @@ main{max-width:980px;margin:auto;padding:22px 16px 40px}.hero{text-align:center;
 <div class="msg" id="msg" aria-live="polite">Toque na haste de origem e depois na haste de destino.</div>
 <div class="progress" aria-hidden="true"><i class="dot on"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
 <div class="lesson"><b>Descoberta matemática</b><br><span id="math">Com 3 discos, será possível resolver em apenas 7 movimentos?</span></div>
-</section><div class="footer">Tangram Educativo • Hanói Lab v0.2 • módulo experimental isolado</div></main>
+<details class="history"><summary>Você sabia? Por que “Torre de Hanói”?</summary><div><span class="yearTag">1883</span> O quebra-cabeça foi apresentado pelo matemático francês <strong>Édouard Lucas</strong>, usando o pseudônimo “N. Claus de Siam”. A apresentação vinha acompanhada de uma lenda sobre monges e uma torre de <strong>64 discos de ouro</strong>. “Hanói” dá ao jogo sua ambientação asiática, mas não significa que seja uma antiga invenção vietnamita.<br><br><strong>O segredo:</strong> a quantidade mínima de movimentos cresce como 2ⁿ − 1. Com 64 discos seriam 18.446.744.073.709.551.615 movimentos. A lenda transforma uma ideia matemática gigantesca em uma história fácil de lembrar.</div></details>
+</section><div class="footer">Tangram Educativo • Hanói Lab v0.3 • módulo experimental isolado</div></main>
 <script>
 let towers,moves,selected=null,n=3;
 const pegs=[...document.querySelectorAll('.peg')],msg=document.querySelector('#msg'),dots=[...document.querySelectorAll('.dot')];
