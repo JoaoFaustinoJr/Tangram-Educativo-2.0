@@ -1176,3 +1176,8 @@ header>.rai-float.rai-x1>.header-tangram-exact{
 .hanoi-entry{margin:10px 0;padding:8px;border-radius:16px;background:linear-gradient(135deg,#071b31,#174a76);border:1px solid #d7b65a;box-shadow:0 8px 22px #06182722}
 .hanoi-entry button{width:100%;min-height:62px;border:0;border-radius:12px;background:linear-gradient(110deg,#fff9e8,#eef8fb);color:#102f53;text-align:left;padding:10px 14px;cursor:pointer}
 .hanoi-entry b{display:block;font-size:1rem}.hanoi-entry small{display:block;margin-top:3px;color:#596b7c;font-weight:700}
+
+/* Primary Hanoi mode — same hierarchy as X1/Gamer/Classroom */
+.modes .hanoi-mode{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:74px;padding:10px 12px 10px 54px;border:1px solid #d7b65a;border-radius:16px;background:linear-gradient(135deg,#173f68,#092640);color:#fff;text-decoration:none;box-shadow:inset 0 0 0 1px #ffffff0b,0 8px 18px #00172a22;overflow:hidden}
+.modes .hanoi-mode b{font-size:.98rem;line-height:1.05}.modes .hanoi-mode small{margin-top:4px;color:#e9d89e;font-size:.72rem;font-weight:800}.hanoi-mode .hanoi-art{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:32px;height:32px;border:1px solid #d7b65a;border-radius:50%;display:grid;place-items:center;background:#061d35}.hanoi-mode .hanoi-art span{position:absolute;font-style:normal;font-weight:900;color:#f0c85d}.hanoi-mode .hanoi-art span:last-child{transform:translate(7px,-7px);font-size:.65rem;color:#55c4e6}
+@media(max-width:720px){.modes{grid-template-columns:repeat(2,minmax(0,1fr))}.modes .hanoi-mode{min-height:70px}}
