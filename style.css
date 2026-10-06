@@ -1223,3 +1223,14 @@ linear-gradient(0deg,transparent 48%,#43c9e9 49% 51%,transparent 52%);clip-path:
 .hanoi-mode .hanoi-art .hd1{width:15px!important;bottom:23px!important;background:#ff675e!important}
 .hanoi-mode .hanoi-art .hd2{width:23px!important;bottom:15px!important;background:#ffc82f!important}
 .hanoi-mode .hanoi-art .hd3{width:31px!important;bottom:7px!important;background:#55c982!important}
+
+
+/* 2026-10-06 — definitive compact Hanoi mathematical emblem */
+.hanoi-mode .hanoi-art-math{width:52px!important;height:52px!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important}
+.hanoi-mode .hanoi-art-math:before,.hanoi-mode .hanoi-art-math:after{display:none!important}
+.hanoi-mode .hanoi-art-math svg{display:block;width:100%;height:100%;overflow:visible}
+.hanoi-mode .hanoi-art-math .hm-fractal{fill:none;stroke:#28cbe7;stroke-width:1;opacity:.34}
+.hanoi-mode .hanoi-art-math .hm-tower{fill:none;stroke:#f7f8f4;stroke-width:3;stroke-linecap:round;filter:drop-shadow(0 2px 2px #001827)}
+.hanoi-mode .hanoi-art-math .hm-base{stroke:#f7f8f4;stroke-width:4}
+.hanoi-mode .hanoi-art-math .hm-disk{stroke:#fff9;stroke-width:1;filter:drop-shadow(0 2px 2px #001827)}
+.hanoi-mode .hanoi-art-math .hm1{fill:#ff655b}.hanoi-mode .hanoi-art-math .hm2{fill:#ffc52e}.hanoi-mode .hanoi-art-math .hm3{fill:#45c67a}
