@@ -481,6 +481,15 @@ function lessonRaiEmotionAnswer(q){
  if(/chato|cansei|cansado|cansada/.test(n))return 'Podemos simplificar. Que tal resolver só uma parte pequena agora e depois voltar ao restante?';
  return '';
 }
+function lessonRaiInclusionAnswer(q){
+ const n=raiStudentSpeech(q);
+ if(/nao consigo ler|le pra mim|leia pra mim|baixa visao|deficiencia visual|dv\b/.test(n))return 'Claro. Você pode usar 🔊 Ouvir para escutar minha resposta e a lupa da plataforma para ampliar o conteúdo. Se preferir, vou responder em partes menores.';
+ if(/nao consigo ouvir|nao escuto|surdo|surda|deficiencia auditiva/.test(n))return 'Tudo bem. Nossa conversa também funciona por texto, sem depender de áudio. Vou manter as orientações visíveis e objetivas.';
+ if(/tea|autis|muita coisa|uma coisa de cada vez|um passo por vez/.test(n))return 'Vamos fazer uma coisa de cada vez. Eu mostro um passo curto, você termina, e só então seguimos para o próximo.';
+ if(/dislexia|dificuldade de leitura|texto muito grande/.test(n))return 'Posso deixar a explicação mais curta, com frases simples e uma ideia por vez. Diga qual parte você quer começar.';
+ if(/nao consigo digitar|dificuldade para digitar|falar em vez de escrever/.test(n))return 'Você pode usar 🎙️ Falar para ditar sua pergunta. Confira o texto reconhecido antes de enviar.';
+ return '';
+}
 function raiSpeechRecognition(){
  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
  if(!SR)return null;
@@ -519,6 +528,7 @@ function lessonRaiSocialAnswer(q){
 function lessonRaiDoubt(item,q){
  const raw=String(q||'').trim(),t=raw.toLowerCase(),concept=item?.concept||item?.objective||'',example=item?.example||'',y=Number(item?.year||lessonYear);
  const emotion=lessonRaiEmotionAnswer(raw);
+ const inclusion=lessonRaiInclusionAnswer(raw);
  const social=lessonRaiSocialAnswer(raw);
  const utility=lessonRaiUtilityAnswer(raw);
  const everyday=lessonRaiEverydayAnswer(raw);
@@ -528,6 +538,7 @@ function lessonRaiDoubt(item,q){
  const projectIdentity=lessonRaiProjectAnswer(raw);
  const conceptAnswer=lessonRaiConceptAnswer(item,raw);
  const smartConcept=lessonRaiSmartConcept(item,raw);
+ if(inclusion)return inclusion;
  if(emotion)return emotion;
  if(utility)return utility;
  if(looseMath)return looseMath;
