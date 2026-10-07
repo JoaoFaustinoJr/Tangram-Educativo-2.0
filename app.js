@@ -771,7 +771,7 @@ const raiTips={
 };
 let raiTipStep=0;
 function raiGlobalContext(){
- const lesson=document.querySelector('[data-lesson-rai-context]');
+ const lesson=[...document.querySelectorAll('[data-lesson-rai-context]')].find(el=>el.getClientRects().length&&!!el.closest(':not([hidden])')) || null;
  if(lesson){const i=Number(lesson.dataset.lessonRaiContext),items=(lessonBanks?.[lessonSection]||[]).filter(x=>Number(x.year||lessonYear)===Number(lessonYear)||!x.year);return {mode:'aula',item:items[i]||null};}
  if(location.pathname.includes('/hanoi'))return {mode:'hanoi',item:null};
  return {mode:'tangram',item:null};
@@ -788,13 +788,13 @@ function raiRenderSuggestions(){
 }
 function raiNavigationCommand(q){
  const n=raiNorm(q);
- if(/feche|fecha|fechar rai|pode fechar/.test(n)){raiClose();return '__nav__';}
- if(/inicio|pagina inicial|home/.test(n)){goMain();return '__nav__';}
- if(/torre de hanoi|abrir hanoi|va para hanoi|ir para hanoi/.test(n)){openHanoi('rai');return '__nav__';}
+ if(/^(feche|fecha|fechar rai|pode fechar)( a rai| o painel)?[.! ]*$/.test(n)){raiClose();return '__nav__';}
+ if(/^(va para |ir para |abra |abrir )?(o )?(inicio|pagina inicial|home)[.! ]*$/.test(n)){goMain();return '__nav__';}
+ if(/^(abrir|abra|va para|ir para|mostre) (a )?(torre de )?hanoi[.! ]*$/.test(n)){openHanoi('rai');return '__nav__';}
  if(/abrir aulas|va para aulas|ir para aulas|mostre as aulas/.test(n)){
    const b=document.querySelector('[data-menu="lessons"],[data-action="lessons"],#lessons-btn');if(b){b.click();return '__nav__';}
  }
- if(/voltar|volte/.test(n)){history.back();return '__nav__';}
+ if(/^(voltar|volte)[.! ]*$/.test(n)){history.back();return '__nav__';}
  return '';
 }
 function raiGlobalAnswer(q){
@@ -803,7 +803,13 @@ function raiGlobalAnswer(q){
  if(inc)return inc;if(emotion)return emotion;if(utility)return utility;if(loose)return loose;if(every)return every;if(auth)return auth;if(proj)return proj;if(social)return social;
  const c=raiGlobalContext();
  if(c.mode==='hanoi')return 'Na Torre de Hanói, posso ajudar com estratégia, recursão, decomposição e número mínimo de movimentos sem resolver o desafio por você.';
- if(c.mode==='aula')return lessonRaiAdaptAnswer(c.item||{},raw,lessonRaiDoubt(c.item||{},raw));
+ if(c.mode==='aula'){
+ const item=c.item||{};
+ if(/explique esta aula|resuma esta aula/.test(raiNorm(raw)))return lessonRaiAdaptAnswer(item,raw,String(item.concept||item.objective||item.example||'Vamos identificar juntos o conceito central desta aula.'));
+ if(/de uma pista/.test(raiNorm(raw)))return lessonRaiPrompt(item,1);
+ if(/de um exemplo/.test(raiNorm(raw))&&item.example)return lessonRaiAdaptAnswer(item,raw,String(item.example));
+ return lessonRaiAdaptAnswer(item,raw,lessonRaiDoubt(item,raw));
+}
  return lessonRaiDoubt({topic:'Tangram',concept:'geometria, lógica, composição e decomposição de figuras'},raw);
 }
 function raiOpen(){const p=document.querySelector('#rai-tutor-panel');if(p){p.hidden=false;raiRenderSuggestions();setTimeout(()=>document.querySelector('#rai-global-input')?.focus(),40)}document.querySelector('#app-menu')?.classList.remove('open');t2event('rai_tutor_open',{level:String((typeof levelIndex==='number'?levelIndex:0)+1)});}
