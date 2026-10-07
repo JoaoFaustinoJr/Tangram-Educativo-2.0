@@ -1234,3 +1234,13 @@ linear-gradient(0deg,transparent 48%,#43c9e9 49% 51%,transparent 52%);clip-path:
 .hanoi-mode .hanoi-art-math .hm-base{stroke:#f7f8f4;stroke-width:4}
 .hanoi-mode .hanoi-art-math .hm-disk{stroke:#fff9;stroke-width:1;filter:drop-shadow(0 2px 2px #001827)}
 .hanoi-mode .hanoi-art-math .hm1{fill:#ff655b}.hanoi-mode .hanoi-art-math .hm2{fill:#ffc52e}.hanoi-mode .hanoi-art-math .hm3{fill:#45c67a}
+
+/* R.A.I. flutuante — convite contextual */
+.rai-float-wrap{position:fixed;right:14px;bottom:18px;z-index:45;display:flex;align-items:flex-end;gap:7px;filter:drop-shadow(0 8px 20px #0006)}
+.rai-float-wrap .rai-tutor-fab{position:relative!important;right:auto!important;bottom:auto!important;z-index:1!important;animation:raiFloat 3.2s ease-in-out infinite}
+.rai-click-call{position:relative;margin-bottom:28px;padding:7px 10px;border:1px solid #e1bd5c99;border-radius:13px 13px 3px 13px;background:#071b2bea;color:#fff3c2;font-size:11px;font-weight:900;white-space:nowrap;animation:raiCall 4.5s ease-in-out infinite}
+.rai-click-call i{font-style:normal;color:#49e4f4;margin-left:3px}
+@keyframes raiFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}@keyframes raiCall{0%,100%{opacity:.78;transform:translateY(2px)}45%,70%{opacity:1;transform:translateY(-2px)}}
+.rai-float-wrap:has(.rai-tutor-fab.dragging){filter:none}.rai-float-wrap .rai-tutor-fab.dragging{animation:none}
+@media(max-width:520px){.rai-float-wrap{right:10px;bottom:12px}.rai-click-call{font-size:10px;padding:6px 8px;margin-bottom:22px}.rai-float-wrap .rai-tutor-fab{padding:4px!important}}
+@media(prefers-reduced-motion:reduce){.rai-float-wrap .rai-tutor-fab,.rai-click-call{animation:none!important}}
