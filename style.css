@@ -1372,3 +1372,6 @@ body.rai-engaged .rai-float-wrap{filter:drop-shadow(0 5px 12px #0005)}
 
 /* v2.0.177 — dúvidas pedagógicas com a R.A.I. */
 .lesson-rai-doubt{display:grid;grid-template-columns:1fr auto;gap:8px;margin:10px 0}.lesson-rai-doubt label{font-size:.72rem;font-weight:800;color:#d9edf5}.lesson-rai-doubt input{display:block;width:100%;margin-top:4px;padding:10px 12px;border-radius:12px;border:1px solid #79c9dc;background:#fff;color:#17354f;font-size:.92rem}.lesson-rai-doubt button{align-self:end;min-height:42px;padding:8px 13px;border-radius:12px;border:1px solid #e0c26d;background:#f0cf79;color:#102e4c;font-weight:900}@media(max-width:560px){.lesson-rai-doubt{grid-template-columns:1fr}.lesson-rai-doubt button{width:100%}}
+
+/* v2.0.179 — confirmação visual da resposta da R.A.I. */
+.rai-answer-pop{animation:raiAnswerPop .28s ease-out;background:#ffffff12;border-left:3px solid #65d7e7;padding:9px 11px;border-radius:9px}@keyframes raiAnswerPop{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
