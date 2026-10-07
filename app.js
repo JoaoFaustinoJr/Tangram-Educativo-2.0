@@ -282,10 +282,10 @@ function lessonRaiKnowledge(item,q){
 }
 function lessonRaiLibraryAnswer(item,q){
  const refs=lessonRaiKnowledge(item,q);if(!refs.length)return '';
- const y=Number(item?.year||lessonYear),ideas=refs.map(r=>({title:r.title||r.topic||'conteúdo relacionado',idea:r.concept||r.objective||r.example||''})).filter(r=>r.idea);
- if(!ideas.length)return '';
- if(ideas.length===1)return 'Encontrei no nosso repertório a aula “'+ideas[0].title+'”. '+ideas[0].idea+' '+(y<=6?'Vamos ligar isso ao exemplo que está na tela.':'Compare essa ideia com o conteúdo da aula atual.');
- return 'Há duas conexões úteis no nosso repertório: “'+ideas[0].title+'” e “'+ideas[1].title+'”. '+ideas[0].idea+' Além disso, '+ideas[1].idea+' '+(y<=6?'O que essas duas explicações têm em comum?':'Use as duas ideias para construir uma explicação com suas próprias palavras.');
+ const r=refs[0],idea=String(r.concept||r.objective||r.example||'').trim();
+ if(!idea)return '';
+ const short=idea.split(/(?<=[.!?])\s+/).slice(0,2).join(' ').slice(0,300);
+ return short;
 }
 const raiMiniGlossary={
  'algoritmo':'Um algoritmo é uma sequência organizada de passos para alcançar um objetivo. Como numa receita, a ordem e a clareza dos passos importam.',
@@ -326,7 +326,7 @@ function lessonRaiDoubt(item,q){
  if(/entendi certo|esta certo|está certo|correto|minha ideia|eu acho/.test(raiNorm(raw)))return 'Vamos verificar seu raciocínio, não apenas marcar certo ou errado. Compare sua ideia com este ponto central: '+(concept||lessonRaiLibraryAnswer(item,raw)||'o objetivo da aula')+'. O que coincide e o que precisa ser ajustado?';
  if(/exemplo|exemplifique/.test(raiNorm(raw))){const g=gloss||concept||example;if(g)return (y<=6?'Claro. Pense numa situação bem concreta: ':'Vamos usar um caso concreto: ')+g+' Agora mude um elemento do exemplo e diga o que aconteceria.';}
  if(/erro|errado|não funciona|nao funciona/.test(t))return 'Vamos depurar sem apagar seu raciocínio. Compare o que você esperava acontecer com o que realmente aconteceu. Em qual etapa os dois caminhos se separam?';
- const lib=lessonRaiLibraryAnswer(item,raw);if(lib)return lib;return 'Entendi sua dúvida sobre “'+raw.slice(0,100)+'”. Relacione-a com esta ideia da aula: '+(concept||'observe o objetivo e o exemplo')+'. O que você consegue afirmar com certeza antes de tentar responder?';
+ const lib=lessonRaiLibraryAnswer(item,raw);if(lib)return lib;return (concept?String(concept).slice(0,320):'Vamos por partes: diga qual palavra ou etapa da aula ficou confusa.');
 }
 function restoreLessonRaiThreads(m,items){
  m.querySelectorAll('[data-lesson-rai]').forEach(box=>{const i=+box.dataset.lessonRai,item=items[i],id=item?.id||('lesson-'+i),h=lessonRaiState()[id]?.conversation||[],thread=box.querySelector('[data-lesson-rai-thread]');if(!thread||!h.length)return;thread.innerHTML=h.slice(-8).map(x=>'<div class="rai-turn"><p class="rai-user-q"><b>Você:</b> '+lessonEsc(x.q)+'</p><p class="rai-bot-a"><b>R.A.I.:</b> '+lessonEsc(x.answer||'')+'</p></div>').join('');thread.hidden=false;});
