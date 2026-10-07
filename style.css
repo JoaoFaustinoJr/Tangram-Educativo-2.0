@@ -1309,3 +1309,24 @@ body.rai-engaged .rai-float-wrap{filter:drop-shadow(0 5px 12px #0005)}
 .app-intro-sequence>*:nth-child(3){animation-delay:.58s}
 .app-intro-classroom{animation:classroomIntro 1.25s cubic-bezier(.2,.8,.2,1) .88s both}
 @media(prefers-reduced-motion:reduce){.app-intro-sequence>*,.app-intro-classroom{animation:none!important}}
+
+/* v2.0.109 — abertura mais expressiva */
+@keyframes modeIntroPulseStrong{
+ 0%{transform:translateY(28px) scale(.84);opacity:0;filter:brightness(.7)}
+ 48%{transform:translateY(-10px) scale(1.075);opacity:1;filter:brightness(1.28);box-shadow:0 0 0 2px #49e4f499,0 0 42px #21d8ff66}
+ 72%{transform:translateY(3px) scale(.985);filter:brightness(1.08)}
+ 100%{transform:none;opacity:1;filter:none}
+}
+@keyframes classroomIntroStrong{
+ 0%,10%{transform:translateY(24px) scale(.9);opacity:0}
+ 38%{transform:translateY(-9px) scale(1.055);opacity:1;box-shadow:0 0 0 3px #2fffc4cc,0 0 54px #12f0b877}
+ 58%{transform:translateY(3px) scale(.985);box-shadow:0 0 0 2px #ffd75f99,0 0 38px #2fffc455}
+ 76%{transform:translateY(-3px) scale(1.018);box-shadow:0 0 0 2px #2fffc499,0 0 30px #12f0b844}
+ 100%{transform:none;opacity:1;box-shadow:inherit}
+}
+.app-intro-sequence>*{animation-name:modeIntroPulseStrong!important;animation-duration:.9s!important}
+.app-intro-sequence>*:nth-child(1){animation-delay:.12s!important}
+.app-intro-sequence>*:nth-child(2){animation-delay:.42s!important}
+.app-intro-sequence>*:nth-child(3){animation-delay:.72s!important}
+.app-intro-classroom{animation:classroomIntroStrong 1.45s cubic-bezier(.18,.82,.2,1) 1.02s both!important}
+@media(prefers-reduced-motion:reduce){.app-intro-sequence>*,.app-intro-classroom{animation:none!important}}
