@@ -271,7 +271,7 @@ function lessonRaiPrompt(item,step=0){
  return stages[Math.min(step,stages.length-1)];
 }
 function lessonRaiHTML(item,i){
- return '<section class="lesson-rai-tutor" data-lesson-rai="'+i+'"><div class="lesson-rai-head"><img src="app-icon.svg?v=310" alt=""><div><b>R.A.I. Tutor</b><small>Posso ajudar você a pensar sem entregar a resposta.</small></div></div><p data-lesson-rai-msg>'+lessonEsc(lessonRaiPrompt(item,0))+'</p><div class="lesson-rai-thread" data-lesson-rai-thread hidden aria-live="polite"></div><div class="lesson-rai-doubt"><label>Dúvida sobre a aula<input type="text" data-lesson-rai-input="'+i+'" placeholder="Pergunte à R.A.I. sobre esta aula" autocomplete="off"></label><button type="button" data-lesson-rai-ask="'+i+'">Perguntar</button></div><div class="lesson-rai-actions"><button type="button" data-lesson-rai-next="'+i+'">💡 Quero uma pista</button><button type="button" data-lesson-rai-explain="'+i+'">🧩 Explique de outro jeito</button></div></section>';
+ return '<section class="lesson-rai-tutor" data-lesson-rai="'+i+'"><div class="lesson-rai-head"><img src="app-icon.svg?v=310" alt=""><div><b>R.A.I. Tutor</b><small>Posso ajudar você a pensar sem entregar a resposta.</small></div></div><p data-lesson-rai-msg>'+lessonEsc(lessonRaiPrompt(item,0))+'</p><div class="rai-chat-tools"><button type="button" data-lesson-rai-speak title="Ouvir última resposta">🔊 Ouvir</button><button type="button" data-lesson-rai-clear title="Apagar conversa">🗑️ Apagar conversa</button></div><div class="lesson-rai-thread" data-lesson-rai-thread hidden aria-live="polite"></div><div class="lesson-rai-doubt"><label>Dúvida sobre a aula<input type="text" data-lesson-rai-input="'+i+'" placeholder="Pergunte à R.A.I. sobre esta aula" autocomplete="off"></label><button type="button" data-lesson-rai-ask="'+i+'">Perguntar</button></div><div class="lesson-rai-actions"><button type="button" data-lesson-rai-next="'+i+'">💡 Quero uma pista</button><button type="button" data-lesson-rai-explain="'+i+'">🧩 Explique de outro jeito</button></div></section>';
 }
 function raiNorm(v){return String(v||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
 function raiWords(v){return [...new Set(raiNorm(v).split(/[^a-z0-9]+/).filter(w=>w.length>3&&!['para','como','uma','isso','esta','este','aula','voce','qual','porque','sobre'].includes(w)))]}
@@ -473,6 +473,25 @@ function lessonRaiUtilityAnswer(q){
  if(/tempo hoje|clima|vai chover|temperatura|previsao do tempo/.test(n))return navigator.onLine?'Para clima e previsão eu preciso consultar uma fonte atualizada. No modo local não vou inventar esses dados.':'Estou offline, então não consigo confirmar o clima ou a previsão agora.';
  return '';
 }
+function lessonRaiEmotionAnswer(q){
+ const n=raiStudentSpeech(q);
+ if(/nao entendi|nao estou entendendo|nao sei|muito dificil|dificil demais|confuso|travei|socorro/.test(n))return 'Tudo bem. Vamos por uma parte de cada vez. 😊 Diga qual palavra ou passo ficou mais difícil, e eu começo por ali.';
+ if(/acertei|consegui|deu certo|eu fiz|terminei/.test(n))return 'Boa! 😄 Agora me conta, com suas palavras, o que fez dar certo. Assim eu vejo se a ideia ficou clara de verdade.';
+ if(/errei|deu errado|nao consegui/.test(n))return 'Sem problema — o erro também mostra por onde aprender. Vamos olhar só o primeiro passo e descobrir juntos onde mudou o caminho.';
+ if(/chato|cansei|cansado|cansada/.test(n))return 'Podemos simplificar. Que tal resolver só uma parte pequena agora e depois voltar ao restante?';
+ return '';
+}
+function raiSpeak(text){
+ if(!('speechSynthesis' in window))return false;
+ speechSynthesis.cancel();
+ const u=new SpeechSynthesisUtterance(String(text).replace(/[😊😄🤖👋]/g,''));
+ u.lang='pt-BR';u.rate=.95;u.pitch=1;
+ speechSynthesis.speak(u);return true;
+}
+function raiClearConversation(item){
+ const st=lessonRaiState(item);
+ st.history=[];st.step=0;saveLessonRaiState(item,st);
+}
 function lessonRaiSocialAnswer(q){
  const n=raiNorm(q).trim();
  if(/^(oi|ola|opa|e ai|eae|salve|fala rai|bom dia|boa tarde|boa noite)[!?. ]*$/.test(n))return /bom dia/.test(n)?'Bom dia! 😊 Que bom ter você por aqui. Como posso ajudar na aula?':/boa tarde/.test(n)?'Boa tarde! 😊 Vamos aprender juntos. Em que posso ajudar?':/boa noite/.test(n)?'Boa noite! 😊 Estou por aqui. O que você quer entender melhor?':'Oi! 😊 Tudo certo? Pode mandar sua dúvida — vamos pensar juntos.';
@@ -485,6 +504,7 @@ function lessonRaiSocialAnswer(q){
 }
 function lessonRaiDoubt(item,q){
  const raw=String(q||'').trim(),t=raw.toLowerCase(),concept=item?.concept||item?.objective||'',example=item?.example||'',y=Number(item?.year||lessonYear);
+ const emotion=lessonRaiEmotionAnswer(raw);
  const social=lessonRaiSocialAnswer(raw);
  const utility=lessonRaiUtilityAnswer(raw);
  const everyday=lessonRaiEverydayAnswer(raw);
@@ -494,6 +514,7 @@ function lessonRaiDoubt(item,q){
  const projectIdentity=lessonRaiProjectAnswer(raw);
  const conceptAnswer=lessonRaiConceptAnswer(item,raw);
  const smartConcept=lessonRaiSmartConcept(item,raw);
+ if(emotion)return emotion;
  if(utility)return utility;
  if(looseMath)return looseMath;
  if(everyday)return everyday;
