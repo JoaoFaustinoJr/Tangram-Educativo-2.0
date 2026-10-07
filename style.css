@@ -1400,3 +1400,8 @@ body.rai-engaged .rai-float-wrap{filter:drop-shadow(0 5px 12px #0005)}
 .rai-global-suggestions button{flex:0 0 auto;border:1px solid rgba(25,55,90,.18);background:rgba(255,255,255,.88);border-radius:999px;padding:8px 11px;font:inherit;font-size:.88rem;cursor:pointer}
 .rai-global-suggestions button:hover,.rai-global-suggestions button:focus-visible{border-color:rgba(170,126,0,.65);box-shadow:0 0 0 2px rgba(212,175,55,.15)}
 #rai-global-send{width:44px;border-radius:50%;font-size:1.1rem;font-weight:800}
+
+/* v2.0.203 lesson handoff */
+.lesson-rai-context{display:flex;align-items:center;gap:10px;margin:12px 0;padding:10px 12px;border:1px solid rgba(212,175,55,.38);border-radius:14px;background:linear-gradient(135deg,rgba(8,27,51,.96),rgba(18,54,94,.94));color:#fff}
+.lesson-rai-context>span{font-size:1.5rem}.lesson-rai-context>div{min-width:0;flex:1}.lesson-rai-context b,.lesson-rai-context small{display:block}.lesson-rai-context small{opacity:.86;margin-top:2px}.lesson-rai-context button{border:1px solid rgba(212,175,55,.75);background:#fff8df;color:#102a49;border-radius:999px;padding:8px 11px;font-weight:850;cursor:pointer}
+@media(max-width:560px){.lesson-rai-context{align-items:flex-start;flex-wrap:wrap}.lesson-rai-context button{margin-left:34px}}
