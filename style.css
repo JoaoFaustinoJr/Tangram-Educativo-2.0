@@ -1279,3 +1279,23 @@ body.rai-engaged .rai-float-wrap{filter:drop-shadow(0 5px 12px #0005)}
 #rai-float-wrap .rai-click-call{position:static!important;display:block!important;visibility:visible!important;flex:0 0 auto!important;margin:0!important;transform:none}
 @media(min-width:700px){#rai-float-wrap.rai-float-wrap{right:24px!important;bottom:26px!important}}
 @media(max-width:520px){#rai-float-wrap.rai-float-wrap{right:10px!important;bottom:88px!important}#rai-float-wrap .rai-tutor-fab img{width:38px!important;height:38px!important}}
+
+/* v2.0.107 — posição final da R.A.I.: fora da área de manipulação */
+#rai-float-wrap.rai-float-wrap{
+ right:12px!important;
+ bottom:calc(env(safe-area-inset-bottom) + 84px)!important;
+ max-width:190px!important;
+ pointer-events:none!important;
+}
+#rai-float-wrap .rai-tutor-fab,#rai-float-wrap .rai-click-call{pointer-events:auto!important}
+#rai-float-wrap .rai-click-call{font-size:10px!important;padding:6px 8px!important}
+#rai-float-wrap .rai-tutor-fab{min-width:44px!important;min-height:44px!important}
+@media(max-width:699px){
+ #rai-float-wrap.rai-float-wrap{right:12px!important;bottom:calc(env(safe-area-inset-bottom) + 92px)!important}
+ #rai-float-wrap .rai-tutor-fab span{display:none!important}
+ #rai-float-wrap .rai-click-call{max-width:88px!important}
+}
+@media(min-width:700px){
+ #rai-float-wrap.rai-float-wrap{right:24px!important;bottom:28px!important;max-width:none!important}
+ #rai-float-wrap .rai-tutor-fab span{display:inline!important}
+}
