@@ -271,7 +271,7 @@ function lessonRaiPrompt(item,step=0){
  return stages[Math.min(step,stages.length-1)];
 }
 function lessonRaiHTML(item,i){
- return '<section class="lesson-rai-tutor" data-lesson-rai="'+i+'"><div class="lesson-rai-head"><img src="app-icon.svg?v=310" alt=""><div><b>R.A.I. Tutor</b><small>Posso ajudar você a pensar sem entregar a resposta.</small></div></div><p data-lesson-rai-msg>'+lessonEsc(lessonRaiPrompt(item,0))+'</p><div class="rai-chat-tools"><button type="button" data-lesson-rai-speak title="Ouvir última resposta">🔊 Ouvir</button><button type="button" data-lesson-rai-clear title="Apagar conversa">🗑️ Apagar conversa</button></div><div class="lesson-rai-thread" data-lesson-rai-thread hidden aria-live="polite"></div><div class="lesson-rai-doubt"><label>Dúvida sobre a aula<input type="text" data-lesson-rai-input="'+i+'" placeholder="Pergunte à R.A.I. sobre esta aula" autocomplete="off"></label><button type="button" data-lesson-rai-ask="'+i+'">Perguntar</button></div><div class="lesson-rai-actions"><button type="button" data-lesson-rai-next="'+i+'">💡 Quero uma pista</button><button type="button" data-lesson-rai-explain="'+i+'">🧩 Explique de outro jeito</button></div></section>';
+ return '<section class="lesson-rai-tutor" data-lesson-rai="'+i+'"><div class="lesson-rai-head"><img src="app-icon.svg?v=310" alt=""><div><b>R.A.I. Tutor</b><small>Posso ajudar você a pensar sem entregar a resposta.</small></div></div><p data-lesson-rai-msg>'+lessonEsc(lessonRaiPrompt(item,0))+'</p><div class="rai-chat-tools"><button type="button" data-lesson-rai-mic title="Falar uma pergunta">🎙️ Falar</button><button type="button" data-lesson-rai-speak title="Ouvir última resposta">🔊 Ouvir</button><button type="button" data-lesson-rai-clear title="Apagar conversa">🗑️ Apagar conversa</button></div><div class="lesson-rai-thread" data-lesson-rai-thread hidden aria-live="polite"></div><div class="lesson-rai-doubt"><label>Dúvida sobre a aula<input type="text" data-lesson-rai-input="'+i+'" placeholder="Pergunte à R.A.I. sobre esta aula" autocomplete="off"></label><button type="button" data-lesson-rai-ask="'+i+'">Perguntar</button></div><div class="lesson-rai-actions"><button type="button" data-lesson-rai-next="'+i+'">💡 Quero uma pista</button><button type="button" data-lesson-rai-explain="'+i+'">🧩 Explique de outro jeito</button></div></section>';
 }
 function raiNorm(v){return String(v||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
 function raiWords(v){return [...new Set(raiNorm(v).split(/[^a-z0-9]+/).filter(w=>w.length>3&&!['para','como','uma','isso','esta','este','aula','voce','qual','porque','sobre'].includes(w)))]}
@@ -480,6 +480,20 @@ function lessonRaiEmotionAnswer(q){
  if(/errei|deu errado|nao consegui/.test(n))return 'Sem problema — o erro também mostra por onde aprender. Vamos olhar só o primeiro passo e descobrir juntos onde mudou o caminho.';
  if(/chato|cansei|cansado|cansada/.test(n))return 'Podemos simplificar. Que tal resolver só uma parte pequena agora e depois voltar ao restante?';
  return '';
+}
+function raiSpeechRecognition(){
+ const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+ if(!SR)return null;
+ const r=new SR();r.lang='pt-BR';r.interimResults=false;r.maxAlternatives=1;return r;
+}
+function raiListen(input,button){
+ const r=raiSpeechRecognition();
+ if(!r){alert('O reconhecimento de voz não está disponível neste navegador. Você ainda pode digitar sua pergunta.');return;}
+ const old=button?.textContent;if(button){button.textContent='🎙️ Ouvindo…';button.disabled=true;}
+ r.onresult=e=>{const t=e.results?.[0]?.[0]?.transcript||'';if(input){input.value=t;input.focus();input.dispatchEvent(new Event('input',{bubbles:true}));}};
+ r.onerror=()=>{};
+ r.onend=()=>{if(button){button.textContent=old||'🎙️ Falar';button.disabled=false;}};
+ try{r.start();}catch(e){if(button){button.textContent=old||'🎙️ Falar';button.disabled=false;}}
 }
 function raiSpeak(text){
  if(!('speechSynthesis' in window))return false;
