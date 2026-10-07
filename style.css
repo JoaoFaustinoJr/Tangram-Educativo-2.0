@@ -1394,3 +1394,9 @@ body.rai-engaged .rai-float-wrap{filter:drop-shadow(0 5px 12px #0005)}
 .rai-chat-tools button{flex:1 1 auto}
 @keyframes raiPulse{0%{opacity:.85;transform:scale(.92)}70%,100%{opacity:0;transform:scale(1.22)}}
 @media(prefers-reduced-motion:reduce){#rai-tutor-fab::before{animation:none}}
+
+/* v2.0.202 assistant UI */
+.rai-global-suggestions{display:flex;gap:7px;overflow-x:auto;padding:4px 1px 9px;scrollbar-width:thin}
+.rai-global-suggestions button{flex:0 0 auto;border:1px solid rgba(25,55,90,.18);background:rgba(255,255,255,.88);border-radius:999px;padding:8px 11px;font:inherit;font-size:.88rem;cursor:pointer}
+.rai-global-suggestions button:hover,.rai-global-suggestions button:focus-visible{border-color:rgba(170,126,0,.65);box-shadow:0 0 0 2px rgba(212,175,55,.15)}
+#rai-global-send{width:44px;border-radius:50%;font-size:1.1rem;font-weight:800}
