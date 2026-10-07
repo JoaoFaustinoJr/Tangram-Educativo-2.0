@@ -285,9 +285,38 @@ function lessonRaiLibraryAnswer(item,q){
  const r=refs[0],idea=r.concept||r.objective||r.example||'';
  return idea?'Encontrei uma conexão no nosso repertório de aulas: “'+(r.title||r.topic||'conteúdo relacionado')+'”. '+idea+' Relacione isso com a aula atual: o que as duas ideias têm em comum?':'';
 }
+const raiMiniGlossary={
+ 'algoritmo':'Um algoritmo é uma sequência organizada de passos para alcançar um objetivo. Como numa receita, a ordem e a clareza dos passos importam.',
+ 'programacao':'Programação é transformar uma solução ou algoritmo em instruções que um computador consegue executar.',
+ 'robotica':'Robótica reúne programação, mecanismos, sensores e atuadores para criar sistemas capazes de perceber, decidir e agir.',
+ 'variavel':'Uma variável é um espaço identificado onde o programa guarda um valor que pode ser consultado ou alterado.',
+ 'condicao':'Uma condição é uma pergunta lógica que pode ser verdadeira ou falsa e ajuda o programa a decidir qual caminho seguir.',
+ 'repeticao':'Repetição permite executar um conjunto de instruções várias vezes sem reescrever os mesmos comandos.',
+ 'sensor':'Um sensor percebe ou mede algo do ambiente e transforma essa informação em dado para o sistema.',
+ 'atuador':'Um atuador transforma um comando do sistema em uma ação física, como girar um motor ou acender uma luz.',
+ 'svg':'SVG é um formato vetorial: descreve formas por linhas, curvas e coordenadas e pode ser ampliado sem perder definição.',
+ 'stl':'STL representa principalmente a geometria da superfície de um objeto 3D por uma malha de triângulos, muito usada em impressão 3D.',
+ 'recursao':'Recursão acontece quando uma solução usa uma versão menor do próprio problema até chegar a um caso-base.',
+ 'binario':'O sistema binário representa informações usando dois estados, normalmente 0 e 1.',
+ 'decomposicao':'Decomposição é dividir um problema grande em partes menores e mais fáceis de compreender e resolver.'
+};
+function lessonRaiGlossary(q){const n=raiNorm(q);for(const [k,v] of Object.entries(raiMiniGlossary))if(n.includes(k))return v;return ''}
+function lessonRaiConversationContext(item){
+ const st=lessonRaiState(),id=item?.id||'',h=st[id]?.conversation||[];return h.slice(-3)
+}
+function lessonRaiFollowup(item,q){
+ const h=lessonRaiConversationContext(item);if(!h.length)return '';
+ const t=raiNorm(q),last=h[h.length-1];
+ if(/ainda|nao entendi|mais simples|exemplo|outro exemplo/.test(t))return 'Vamos tentar de outro modo. '+(item?.example?('Use este exemplo da aula: '+item.example+' '):'')+'Pense em uma situação do cotidiano que tenha a mesma lógica. Qual seria o primeiro passo?';
+ if(/isso|esse|essa|ele|ela|entao/.test(t)&&last?.answer)return 'Você está continuando a ideia anterior. Em resumo: '+String(last.answer).slice(0,220)+' Agora aplique essa ideia à sua nova pergunta: “'+String(q).slice(0,100)+'”.';
+ return '';
+}
 function lessonRaiDoubt(item,q){
  const raw=String(q||'').trim(),t=raw.toLowerCase(),concept=item?.concept||item?.objective||'',example=item?.example||'',y=Number(item?.year||lessonYear);
+ const follow=lessonRaiFollowup(item,raw),gloss=lessonRaiGlossary(raw);
  if(!raw)return 'Escreva sua dúvida com suas próprias palavras. Pode ser algo como “não entendi este conceito” ou “por que isso acontece?”.';
+ if(follow)return follow;
+ if(gloss&&/o que|que e|significa|explique|explica|como funciona/.test(raiNorm(raw)))return gloss+' '+(lessonYear<=6?'Consegue pensar em um exemplo?':'Como esse conceito aparece na aula que você está estudando?');
  if(/resposta|faz pra mim|faça pra mim|qual alternativa|me diga a resposta/.test(t))return 'Posso ajudar você a chegar à resposta, mas não vou simplesmente entregá-la. Qual parte do desafio você já conseguiu entender?';
  if(/não entendi|nao entendi|explica|explique|o que é|o que e|significa/.test(t)){const lib=lessonRaiLibraryAnswer(item,raw);return lib||((y<=6?'Vamos por partes. ':'Vamos reconstruir a ideia. ')+(concept||'Primeiro identifique a ideia principal da aula.')+(example?' Pense no exemplo: '+example:'')+' Qual palavra ou etapa ainda parece confusa?')}
  if(/por que|porque/.test(t))return 'Boa pergunta. Em vez de decorar, procure a relação de causa: o que muda antes e o que acontece depois? '+(concept?'Use como pista: '+concept:'');
