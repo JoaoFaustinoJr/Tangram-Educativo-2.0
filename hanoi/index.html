@@ -203,9 +203,14 @@ body.classroom-mode #jogo{display:none!important} body:not(.classroom-mode) #mod
 .sierpinskiNote{margin:0 12px 12px;padding:9px 11px;border-left:3px solid #27cadd;background:#ffffff0b;border-radius:8px;color:#dbe8f1;font-size:.84rem;line-height:1.4}
 @media(max-width:540px){.sierpinskiStage{height:165px}.sTri{border-left-width:52px;border-right-width:52px;border-bottom-width:91px}.sTri.b{left:12%}.sTri.c{right:12%}}
 @media(prefers-reduced-motion:reduce){.sTri,.sDot{animation:none!important}}
+
+/* v0.37 — navegação Aula robusta, com fallback sem JavaScript */
+#classPanel:target{display:block!important}
+body:has(#classPanel:target) #jogo{display:none!important}
+.heroBtn{cursor:pointer}
 </style></head><body>
 <header class="top"><div class="topin"><a class="homeLink" href="../" aria-label="Voltar ao Tangram Educativo"><img class="tangramSignature" src="../app-icon.svg?v=rai3" alt=""><span class="arrow">←</span><span><b>Tangram Educativo</b><small>HANÓI • LÓGICA & ALGORITMOS</small></span></a><div class="hanoiMark" aria-label="Símbolo da Torre de Hanói"><svg viewBox="0 0 64 64" role="img" aria-label="Torre de Hanói"><path d="M12 15v39M32 15v39M52 15v39" stroke="#f7f4ed" stroke-width="3.2" stroke-linecap="round"/><path d="M7 54h50" stroke="#f7f4ed" stroke-width="4" stroke-linecap="round"/><g fill="none" stroke="#22cbe7" stroke-width=".8" opacity=".38"><path d="M32 7 57 50H7Z"/><path d="M32 7 19.5 28.5h25Z"/><path d="M19.5 28.5 7 50h25Z"/><path d="M44.5 28.5 32 50h25Z"/></g><rect x="19" y="42" width="26" height="8" rx="4" fill="#39b873" stroke="#f6e8c2" stroke-width="1.2"/><rect x="23" y="33" width="18" height="8" rx="4" fill="#f2b719" stroke="#f6e8c2" stroke-width="1.2"/><rect x="27" y="24" width="10" height="8" rx="4" fill="#f15c54" stroke="#f6e8c2" stroke-width="1.2"/><circle cx="12" cy="15" r="1.8" fill="#22cbe7"/><circle cx="32" cy="15" r="1.8" fill="#22cbe7"/><circle cx="52" cy="15" r="1.8" fill="#22cbe7"/><text x="46" y="61" text-anchor="middle" fill="#f0cf79" font-size="6.2" font-weight="900">2ⁿ−1</text></svg></div></div></header>
-<main><div class="hero fractalHero"><div class="mathAtmosphere" aria-hidden="true"><span class="mf f1">2ⁿ−1</span><span class="mf f2">1 • 3 • 7 • 15 • 31</span><span class="mf f3">M(n)=2M(n−1)+1</span><span class="mf f4">△</span><span class="mf f5">Σ</span><span class="mf f6">○—○—○</span></div><small>DESAFIO DE RACIOCÍNIO COM A R.A.I.</small><h1>Torre de Hanói</h1><p>Observe • planeje • execute • aprenda</p><div class="heroNav" role="tablist" aria-label="Modos da Torre de Hanói"><button class="heroBtn play active" type="button" id="playTab" role="tab" aria-selected="true">🎮 Jogar</button><button class="heroBtn classroom" type="button" id="classroomBtn" role="tab" aria-selected="false">📚 Sala de Aula</button></div><div class="modeContext" id="modeContext">Modo Jogar • experimente, planeje e resolva.</div></div>
+<main><div class="hero fractalHero"><div class="mathAtmosphere" aria-hidden="true"><span class="mf f1">2ⁿ−1</span><span class="mf f2">1 • 3 • 7 • 15 • 31</span><span class="mf f3">M(n)=2M(n−1)+1</span><span class="mf f4">△</span><span class="mf f5">Σ</span><span class="mf f6">○—○—○</span></div><small>DESAFIO DE RACIOCÍNIO COM A R.A.I.</small><h1>Torre de Hanói</h1><p>Observe • planeje • execute • aprenda</p><div class="heroNav" role="tablist" aria-label="Modos da Torre de Hanói"><a class="heroBtn play active" href="#jogo" id="playTab" role="tab" aria-selected="true">🎮 Jogar</a><a class="heroBtn classroom" href="#classPanel" id="classroomBtn" role="tab" aria-selected="false">📚 Sala de Aula</a></div><div class="modeContext" id="modeContext">Modo Jogar • experimente, planeje e resolva.</div></div>
 <section class="classroomPanel" id="classPanel">
  <div class="classHead"><small id="classYear">6º ANO</small><h2 id="classTitle">Lógica e decomposição</h2><p id="classSubtitle"></p></div>
  <div class="gradePick"><button data-classgrade="6">6º</button><button data-classgrade="7">7º</button><button data-classgrade="8">8º</button><button data-classgrade="9">9º</button></div>
@@ -225,7 +230,7 @@ body.classroom-mode #jogo{display:none!important} body:not(.classroom-mode) #mod
 <details id="mapDetails"><summary>△ Mapa de estados — 3 discos</summary><svg id="stateGraph" viewBox="0 0 420 360" aria-label="Grafo completo dos 27 estados"></svg><div class="path" id="statePath"></div><p>As letras A, B e C representam as hastes. Cada ponto é um estado; cada linha, um movimento legal. O estado atual fica destacado.</p></details>
 <details><summary>🔎 Para ir além — matemática escondida</summary><div class="concepts"><div class="concept"><b>Recursão</b>Resolver n discos contém duas soluções de n−1.</div><div class="concept"><b>Exponencial</b>O mínimo cresce como 2ⁿ−1.</div><div class="concept"><b>Binário e paridade</b>A solução ótima se relaciona à contagem binária.</div><div class="concept"><b>Grafos</b>Resolver é encontrar um caminho entre estados.</div><div class="concept"><b>Auto-semelhança</b>Problemas menores reaparecem dentro do maior, aproximando a ideia de estruturas fractais.</div><div class="concept"><b>Invariantes</b>Algumas propriedades permanecem verdadeiras durante toda solução válida.</div></div></details>
 <details><summary>Você sabia? A origem da Torre</summary><p>Édouard Lucas apresentou o quebra-cabeça em 1883. A famosa narrativa dos 64 discos pertence à lenda associada ao problema; a estrutura matemática leva ao mínimo 2ⁿ−1.</p></details>
-</div></section><div class="footer">Tangram Educativo • Hanói Lab v0.36 • módulo experimental isolado</div></main>
+</div></section><div class="footer">Tangram Educativo • Hanói Lab v0.37 • módulo experimental isolado</div></main>
 <script>
 
 const lessonVisuals={
@@ -280,22 +285,21 @@ function initLessonInteractions(){
  document.querySelectorAll('.patternPoint').forEach(p=>p.addEventListener('click',()=>{document.querySelectorAll('.patternPoint').forEach(q=>q.classList.remove('active'));p.classList.add('active');let n=+p.dataset.n,m=+p.dataset.m,r=document.querySelector('[data-pattern-readout]');if(r)r.innerHTML='<span class="visualPrompt">'+n+' disco'+(n>1?'s':'')+':</span> 2<sup>'+n+'</sup>−1 = <b>'+m+'</b> movimento'+(m>1?'s':'')+'. '+(n>1?'Compare com o nível anterior: dobro + 1.':'Este é o caso inicial.')}))
  let sv=document.querySelector('[data-viz="sierpinski"]');if(sv){let r=sv.querySelector('[data-sier-readout]');sv.querySelectorAll('[data-sier]').forEach(b=>b.onclick=()=>{let mode=b.dataset.sier,a=sv.querySelector('[data-layer="1"]'),s=sv.querySelector('[data-layer="2"]');a.classList.toggle('on',mode!=='compare');s.classList.toggle('on',mode!=='states');r.innerHTML=mode==='states'?'Procure <b>triângulos menores repetidos</b> dentro da estrutura de estados.':mode==='compare'?'No Triângulo de Sierpiński, cada parte repete a forma triangular em escala menor.':'Compare as duas imagens: a ideia comum é a <b>auto-semelhança</b>, não que o brinquedo físico seja um fractal.'})}
 }
-function showClassroom(){
- const panel=document.getElementById('classPanel'), game=document.getElementById('jogo');
- panel.classList.add('show'); game.classList.add('classHidden');
- renderClassroom(); initLessonInteractions();
- panel.scrollIntoView({behavior:'smooth',block:'start'});
+function setHanoiMode(mode){
+ const isClass=mode==='classroom', panel=document.getElementById('classPanel'), game=document.getElementById('jogo');
+ const play=document.getElementById('playTab'), aula=document.getElementById('classroomBtn'), ctx=document.getElementById('modeContext');
+ document.body.classList.toggle('classroom-mode',isClass);
+ panel.classList.toggle('show',isClass); game.classList.toggle('classHidden',isClass);
+ play.classList.toggle('active',!isClass); aula.classList.toggle('active',isClass);
+ play.setAttribute('aria-selected',String(!isClass)); aula.setAttribute('aria-selected',String(isClass));
+ ctx.textContent=isClass?'Sala de Aula • aprenda o conceito e depois experimente no jogo.':'Modo Jogar • experimente, planeje e resolva.';
+ if(isClass){renderClassroom();initLessonInteractions();if(typeof updateMathLive==='function')updateMathLive();}
+ requestAnimationFrame(()=> (isClass?panel:game).scrollIntoView({behavior:'smooth',block:'start'}));
 }
-function showGame(){
- document.getElementById('classPanel').classList.remove('show');
- document.getElementById('jogo').classList.remove('classHidden');
- document.getElementById('jogo').scrollIntoView({behavior:'smooth',block:'start'});
-}
-document.querySelectorAll('[data-classgrade]').forEach(b=>b.addEventListener('click',()=>{
- document.getElementById('grade').value=b.dataset.classgrade; renderClassroom(); initLessonInteractions(); updateMathLive();
-}));
-document.getElementById('classPlay')?.addEventListener('click',showGame);
-
+document.getElementById('classroomBtn').addEventListener('click',e=>{e.preventDefault();history.replaceState(null,'','#classPanel');setHanoiMode('classroom')});
+document.getElementById('playTab').addEventListener('click',e=>{e.preventDefault();history.replaceState(null,'','#jogo');setHanoiMode('play')});
+document.getElementById('classPlay')?.addEventListener('click',()=>setHanoiMode('play'));
+document.querySelectorAll('[data-classgrade]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('grade').value=b.dataset.classgrade;renderClassroom();initLessonInteractions();if(typeof updateMathLive==='function')updateMathLive()}));
 const KEY='tangram_hanoi_attempts_v2';
 let towers=[[],[],[]],moves=0,selected=null,n=3,invalid=0,hints=0,restarts=0,start=0,path=[];
 const pegs=[...document.querySelectorAll('.peg')],msg=document.querySelector('#msg'),rai=document.querySelector('#raiText');
@@ -330,24 +334,5 @@ function updateMathLive(){
  if(t)t.textContent=d.title;if(s)s.innerHTML=d.stage;if(b)b.textContent=d.bubble;
  ['mg1','mg2','mg3'].forEach((id,i)=>{const el=document.getElementById(id);if(el)el.textContent=d.glyphs[i]});
 }
-(function(){
- const play=document.getElementById('playTab'), aula=document.getElementById('classroomBtn'), ctx=document.getElementById('modeContext');
- const panel=document.getElementById('classPanel'), game=document.getElementById('jogo');
- function setMode(mode,scroll=true){
-   const isClass=mode==='classroom';
-   document.body.classList.toggle('classroom-mode',isClass);
-   if(panel){panel.classList.toggle('show',isClass);panel.hidden=!isClass;}
-   if(game){game.classList.toggle('classHidden',isClass);}
-   if(play){play.classList.toggle('active',!isClass);play.setAttribute('aria-selected',String(!isClass));}
-   if(aula){aula.classList.toggle('active',isClass);aula.setAttribute('aria-selected',String(isClass));}
-   if(ctx)ctx.textContent=isClass?'Sala de Aula • aprenda o conceito e depois experimente no jogo.':'Modo Jogar • experimente, planeje e resolva.';
-   if(isClass){ if(typeof renderClassroom==='function')renderClassroom(); if(typeof updateMathLive==='function')updateMathLive(); }
-   history.replaceState(null,'',isClass?'#modo-aula':'#jogo');
-   if(scroll){requestAnimationFrame(()=>{const target=isClass?panel:game;if(target)target.scrollIntoView({behavior:'smooth',block:'start'});});}
- }
- if(play)play.addEventListener('click',e=>{e.preventDefault();setMode('play')});
- if(aula)aula.addEventListener('click',e=>{e.preventDefault();setMode('classroom')});
- setMode(location.hash==='#modo-aula'?'classroom':'play',false);
- window.hanoiSetMode=setMode;
-})();
+
 </script></body></html>
