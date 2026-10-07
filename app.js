@@ -801,7 +801,7 @@ document.querySelector('#rai-tutor-fab')?.addEventListener('click',raiOpen);
 document.querySelector('[data-menu="rai"]')?.addEventListener('click',raiOpen);
 document.querySelector('#rai-tutor-close')?.addEventListener('click',raiClose);
 document.querySelector('#rai-tutor-panel')?.addEventListener('click',e=>{if(e.target.id==='rai-tutor-panel')raiClose()});
-document.querySelectorAll('[data-rai-help]').forEach(b=>b.addEventListener('click',()=>raiGuide(b.dataset.raiHelp)));
+
 
 // v2.0.106 - R.A.I. flutuante: wrapper unico e responsivo
 (function(){
