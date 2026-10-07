@@ -273,15 +273,27 @@ function lessonRaiPrompt(item,step=0){
 function lessonRaiHTML(item,i){
  return '<section class="lesson-rai-tutor" data-lesson-rai="'+i+'"><div class="lesson-rai-head"><img src="app-icon.svg?v=310" alt=""><div><b>R.A.I. Tutor</b><small>Posso ajudar você a pensar sem entregar a resposta.</small></div></div><p data-lesson-rai-msg>'+lessonEsc(lessonRaiPrompt(item,0))+'</p><div class="lesson-rai-thread" data-lesson-rai-thread hidden aria-live="polite"></div><div class="lesson-rai-doubt"><label>Dúvida sobre a aula<input type="text" data-lesson-rai-input="'+i+'" placeholder="Pergunte à R.A.I. sobre esta aula" autocomplete="off"></label><button type="button" data-lesson-rai-ask="'+i+'">Perguntar</button></div><div class="lesson-rai-actions"><button type="button" data-lesson-rai-next="'+i+'">💡 Quero uma pista</button><button type="button" data-lesson-rai-explain="'+i+'">🧩 Explique de outro jeito</button></div></section>';
 }
+function raiNorm(v){return String(v||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
+function raiWords(v){return [...new Set(raiNorm(v).split(/[^a-z0-9]+/).filter(w=>w.length>3&&!['para','como','uma','isso','esta','este','aula','voce','qual','porque','sobre'].includes(w)))]}
+function lessonRaiKnowledge(item,q){
+ const query=raiWords(q),currentId=item?.id,all=Object.entries(lessonBanks||{}).flatMap(([section,arr])=>(arr||[]).map(x=>({...x,_section:section})));
+ if(!query.length)return [];
+ return all.filter(x=>x.id!==currentId).map(x=>{const text=[x.title,x.topic,x.axis,x.objective,x.concept,x.example,x.challenge,x.answer,x.reference].filter(Boolean).join(' '),norm=raiNorm(text),score=query.reduce((n,w)=>n+(norm.includes(w)?1:0),0)+(Number(x.year||0)===Number(item?.year||lessonYear)?.5:0);return {x,score}}).filter(r=>r.score>0).sort((a,b)=>b.score-a.score).slice(0,2).map(r=>r.x);
+}
+function lessonRaiLibraryAnswer(item,q){
+ const refs=lessonRaiKnowledge(item,q);if(!refs.length)return '';
+ const r=refs[0],idea=r.concept||r.objective||r.example||'';
+ return idea?'Encontrei uma conexão no nosso repertório de aulas: “'+(r.title||r.topic||'conteúdo relacionado')+'”. '+idea+' Relacione isso com a aula atual: o que as duas ideias têm em comum?':'';
+}
 function lessonRaiDoubt(item,q){
  const raw=String(q||'').trim(),t=raw.toLowerCase(),concept=item?.concept||item?.objective||'',example=item?.example||'',y=Number(item?.year||lessonYear);
  if(!raw)return 'Escreva sua dúvida com suas próprias palavras. Pode ser algo como “não entendi este conceito” ou “por que isso acontece?”.';
  if(/resposta|faz pra mim|faça pra mim|qual alternativa|me diga a resposta/.test(t))return 'Posso ajudar você a chegar à resposta, mas não vou simplesmente entregá-la. Qual parte do desafio você já conseguiu entender?';
- if(/não entendi|nao entendi|explica|explique|o que é|o que e|significa/.test(t))return (y<=6?'Vamos por partes. ':'Vamos reconstruir a ideia. ')+(concept||'Primeiro identifique a ideia principal da aula.')+(example?' Pense no exemplo: '+example:'')+' Qual palavra ou etapa ainda parece confusa?';
+ if(/não entendi|nao entendi|explica|explique|o que é|o que e|significa/.test(t)){const lib=lessonRaiLibraryAnswer(item,raw);return lib||((y<=6?'Vamos por partes. ':'Vamos reconstruir a ideia. ')+(concept||'Primeiro identifique a ideia principal da aula.')+(example?' Pense no exemplo: '+example:'')+' Qual palavra ou etapa ainda parece confusa?')}
  if(/por que|porque/.test(t))return 'Boa pergunta. Em vez de decorar, procure a relação de causa: o que muda antes e o que acontece depois? '+(concept?'Use como pista: '+concept:'');
  if(/como/.test(t))return y<=6?'Transforme a dúvida em passos: primeiro, o que você tem? Depois, o que precisa descobrir?':y===7?'Liste os passos e procure o padrão entre eles.':y===8?'Descreva como algoritmo: entrada → passos/processamento → saída.':'Comece pelo caso mais simples e tente generalizar a regra.';
  if(/erro|errado|não funciona|nao funciona/.test(t))return 'Vamos depurar sem apagar seu raciocínio. Compare o que você esperava acontecer com o que realmente aconteceu. Em qual etapa os dois caminhos se separam?';
- return 'Entendi sua dúvida sobre “'+raw.slice(0,100)+'”. Relacione-a com esta ideia da aula: '+(concept||'observe o objetivo e o exemplo')+'. O que você consegue afirmar com certeza antes de tentar responder?';
+ const lib=lessonRaiLibraryAnswer(item,raw);if(lib)return lib;return 'Entendi sua dúvida sobre “'+raw.slice(0,100)+'”. Relacione-a com esta ideia da aula: '+(concept||'observe o objetivo e o exemplo')+'. O que você consegue afirmar com certeza antes de tentar responder?';
 }
 function wireLessonRai(m,items){
  m.querySelectorAll('[data-lesson-rai-ask]').forEach(b=>{const ask=()=>{const i=+b.dataset.lessonRaiAsk,item=items[i],box=b.closest('[data-lesson-rai]'),inp=box?.querySelector('[data-lesson-rai-input]'),msg=box?.querySelector('[data-lesson-rai-msg]'),q=(inp?.value||'').trim();if(msg)msg.textContent=lessonRaiDoubt(item,q);if(q){const st=lessonRaiState(),id=item?.id||('lesson-'+i),history=st[id]?.conversation||[];history.push({q,answer,at:Date.now()});st[id]={...(st[id]||{}),conversation:history.slice(-8),at:Date.now()};lessonRaiSave(st);const x=learningLog();x.push({type:'rai_lesson_question',year:lessonYear,section:lessonSection,topic:item?.topic||item?.title||'Aula',question:q.slice(0,240),at:Date.now()});learningSave(x)}};b.onclick=ask;const inp=b.closest('[data-lesson-rai]')?.querySelector('[data-lesson-rai-input]');if(inp)inp.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();ask()}}});
