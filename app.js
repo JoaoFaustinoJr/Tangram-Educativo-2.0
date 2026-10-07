@@ -495,3 +495,19 @@ if(!document.querySelector('#global-home')){const gh=document.createElement('but
 
 
 
+
+
+/* v1.0.32 — chamada promocional curta na abertura, no espírito da Prova Paraná */
+(function openingPromo(){
+ const box=document.querySelector('#opening-promo');if(!box)return;
+ const cards=[...box.querySelectorAll('.opening-promo-card')];if(!cards.length)return;
+ const close=()=>{box.hidden=true;clearTimeout(window.__openingPromoTimer)};
+ const order=['x1','hanoi','aulas'];
+ const day=Math.floor(Date.now()/86400000),choice=order[day%order.length];
+ cards.forEach(c=>c.classList.toggle('active',c.dataset.promo===choice));
+ box.hidden=false;
+ box.querySelector('.opening-promo-x')?.addEventListener('click',close);
+ box.addEventListener('click',e=>{if(e.target===box)close()});
+ box.querySelector('[data-open-lessons]')?.addEventListener('click',()=>{close();document.querySelector('.aulas')?.click()});
+ window.__openingPromoTimer=setTimeout(close,5200);
+})();
