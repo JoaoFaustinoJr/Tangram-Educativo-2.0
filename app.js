@@ -451,20 +451,15 @@ document.querySelector('#rai-tutor-close')?.addEventListener('click',raiClose);
 document.querySelector('#rai-tutor-panel')?.addEventListener('click',e=>{if(e.target.id==='rai-tutor-panel')raiClose()});
 document.querySelectorAll('[data-rai-help]').forEach(b=>b.addEventListener('click',()=>raiGuide(b.dataset.raiHelp)));
 
-// v2.0.92 - R.A.I. flutuante arrastavel
+// v2.0.106 - R.A.I. flutuante: wrapper unico e responsivo
 (function(){
- const fab=document.querySelector('#rai-tutor-fab');if(!fab)return;
- let drag=null,moved=false;
- function point(e){const p=e.touches?e.touches[0]:e;return {x:p.clientX,y:p.clientY}}
- function start(e){const p=point(e),r=fab.getBoundingClientRect();drag={dx:p.x-r.left,dy:p.y-r.top,sx:p.x,sy:p.y};moved=false;fab.classList.add('dragging');}
- function move(e){if(!drag)return;const p=point(e);if(Math.hypot(p.x-drag.sx,p.y-drag.sy)>6)moved=true;if(!moved)return;e.preventDefault();const w=fab.offsetWidth,h=fab.offsetHeight,x=Math.max(6,Math.min(innerWidth-w-6,p.x-drag.dx)),y=Math.max(6,Math.min(innerHeight-h-6,p.y-drag.dy));fab.style.left=x+'px';fab.style.top=y+'px';fab.style.right='auto';fab.style.bottom='auto';}
- function end(){if(!drag)return;fab.classList.remove('dragging');if(moved){const r=fab.getBoundingClientRect();localStorage.setItem('tangram2RaiPos',JSON.stringify({x:r.left/innerWidth,y:r.top/innerHeight}));fab.dataset.justDragged='1';setTimeout(()=>delete fab.dataset.justDragged,80)}drag=null}
- try{const p=JSON.parse(localStorage.getItem('tangram2RaiPos')||'null');if(p){fab.style.left=Math.max(6,Math.min(innerWidth-fab.offsetWidth-6,p.x*innerWidth))+'px';fab.style.top=Math.max(6,Math.min(innerHeight-fab.offsetHeight-6,p.y*innerHeight))+'px';fab.style.right='auto';fab.style.bottom='auto'}}catch(e){}
- fab.addEventListener('pointerdown',e=>{fab.setPointerCapture?.(e.pointerId);start(e)});
- fab.addEventListener('pointermove',move,{passive:false});fab.addEventListener('pointerup',end);fab.addEventListener('pointercancel',end);
- fab.addEventListener('click',e=>{if(fab.dataset.justDragged){e.preventDefault();e.stopImmediatePropagation()}},true);
+ const wrap=document.querySelector('#rai-float-wrap'),fab=document.querySelector('#rai-tutor-fab');if(!wrap||!fab)return;
+ // Remove coordenadas antigas salvas no botão: elas separavam a R.A.I. do balão em telas diferentes.
+ localStorage.removeItem('tangram2RaiPos');
+ ['left','top','right','bottom'].forEach(k=>fab.style[k]='');
+ fab.classList.remove('dragging');
+ // A R.A.I. continua clicável, mas sua posição pertence sempre ao conjunto.
 })();
-
 // v2.0.93 - diario pedagogico local e relatorio de desempenho
 const learningKey='tangram2LearningLog';
 function learningLog(){try{return JSON.parse(localStorage.getItem(learningKey)||'[]')}catch(e){return []}}
