@@ -235,7 +235,7 @@ body:has(#classPanel:target) #jogo{display:none!important}
 <details id="mapDetails"><summary>△ Mapa de estados — 3 discos</summary><svg id="stateGraph" viewBox="0 0 420 360" aria-label="Grafo completo dos 27 estados"></svg><div class="path" id="statePath"></div><p>As letras A, B e C representam as hastes. Cada ponto é um estado; cada linha, um movimento legal. O estado atual fica destacado.</p></details>
 <details><summary>🔎 Para ir além — matemática escondida</summary><div class="concepts"><div class="concept"><b>Recursão</b>Resolver n discos contém duas soluções de n−1.</div><div class="concept"><b>Exponencial</b>O mínimo cresce como 2ⁿ−1.</div><div class="concept"><b>Binário e paridade</b>A solução ótima se relaciona à contagem binária.</div><div class="concept"><b>Grafos</b>Resolver é encontrar um caminho entre estados.</div><div class="concept"><b>Auto-semelhança</b>Problemas menores reaparecem dentro do maior, aproximando a ideia de estruturas fractais.</div><div class="concept"><b>Invariantes</b>Algumas propriedades permanecem verdadeiras durante toda solução válida.</div></div></details>
 <details><summary>Você sabia? A origem da Torre</summary><p>Édouard Lucas apresentou o quebra-cabeça em 1883. A famosa narrativa dos 64 discos pertence à lenda associada ao problema; a estrutura matemática leva ao mínimo 2ⁿ−1.</p></details>
-</div></section><div class="footer">Tangram Educativo • Hanói Lab v0.44 • módulo experimental isolado</div></main>
+</div></section><div class="footer">Tangram Educativo • Hanói Lab v0.45 • módulo experimental isolado</div></main>
 <script>
 
 const lessonVisuals={
@@ -347,7 +347,29 @@ function raiCoach(best){
 }
 function verify(){if(towers[2].length!==n){msg.textContent='Ainda não. Leve todos os discos ao DESTINO antes de verificar.';rai.textContent='Observe o destaque das hastes: ao selecionar um disco, os destinos possíveis ficam realçados.';return}finish()}
 function hint(){hints++;if(selected!==null){let d=towers[selected].at(-1);rai.textContent='Você selecionou o disco '+d+'. Compare-o com o topo das outras hastes antes de escolher o destino.';return}let s=stateKey(),d0=distanceToGoal(s),next=neighbors(s).find(k=>distanceToGoal(k)===d0-1);if(next){let a=s.split(''),b=next.split(''),idx=a.findIndex((v,i)=>v!==b[i]);rai.textContent='Dica estratégica: observe o disco '+(idx+1)+'. Ele participa de uma jogada que reduz a distância até a solução. Descubra para qual haste.'}else rai.textContent='Pare e descreva o estado atual antes da próxima jogada. Planejar também faz parte do algoritmo.'}
-function finish(){let g=document.querySelector('#grade').value,ideal=moves===minimum(),eff=Math.round(minimum()/moves*100);rai.textContent=ideal&&detourMoves===0?'Você encontrou um caminho ótimo sem desvios. Agora tente explicar a estratégia com suas próprias palavras.':detourMoves?('Você concluiu e aprendeu com '+detourMoves+' desvio(s). Compare as decisões que aproximaram e afastaram a solução.'):'Desafio concluído. Compare sua estratégia com a meta e procure o padrão.';msg.textContent=ideal?'🏆 Solução ótima!':'Desafio concluído! Agora tente aproximar-se da meta.';document.querySelector('#fbMain').textContent=ideal&&invalid===0?'Você encontrou uma solução ótima e respeitou todas as regras.':ideal?'Você chegou ao número mínimo de movimentos. Na próxima tentativa, tente reduzir também os movimentos inválidos.':'Você resolveu o problema. Compare seu caminho com a meta e procure onde pode economizar movimentos.';document.querySelector('#fbLearn').textContent=gradeData[g];document.querySelector('#fbTag').textContent=moves+' movimentos • '+eff+'% final • '+bestMoves+' melhores decisões • '+detourMoves+' desvio(s) • '+hints+' dica(s)';document.querySelector('#feedback').classList.add('show');save()}
+function finish(){
+ let g=+document.querySelector('#grade').value,ideal=moves===minimum(),eff=Math.round(minimum()/moves*100),perfect=ideal&&invalid===0&&detourMoves===0;
+ if(perfect){
+  const probes={
+   6:'Você resolveu em '+moves+' movimentos, sem desvios. Agora explique: por que precisamos liberar o disco maior antes de movê-lo?',
+   7:'Você resolveu em '+moves+' movimentos, sem desvios. Que relação percebe entre '+n+' discos e a meta '+minimum()+'?',
+   8:'Você resolveu em '+moves+' movimentos, sem desvios. Como transformaria sua estratégia em uma sequência de instruções?',
+   9:'Você resolveu em '+moves+' movimentos, sem desvios. Onde aparece o subproblema de '+(n-1)+' discos dentro da sua solução?'
+  };
+  rai.textContent=probes[g]||'Você encontrou um caminho ótimo. Agora explique a estratégia com suas próprias palavras.';
+ }else if(ideal){
+  rai.textContent='Você chegou ao número mínimo de movimentos. Agora observe os movimentos inválidos e descubra como evitá-los.';
+ }else if(detourMoves){
+  rai.textContent='Você concluiu e aprendeu com '+detourMoves+' desvio(s). Compare as decisões que aproximaram e afastaram a solução.';
+ }else{
+  rai.textContent='Desafio concluído. Compare sua estratégia com a meta e procure o padrão.';
+ }
+ msg.textContent=ideal?'🏆 Solução ótima!':'Desafio concluído! Agora tente aproximar-se da meta.';
+ document.querySelector('#fbMain').textContent=perfect?'Você encontrou a solução ótima, sem movimentos inválidos e sem desvios. Excelente controle da estratégia.':ideal?'Você chegou ao número mínimo de movimentos. Houve '+invalid+' movimento(s) inválido(s); tente eliminá-los na próxima tentativa.':'Você resolveu o problema. Compare seu caminho com a meta e procure onde pode economizar movimentos.';
+ document.querySelector('#fbLearn').textContent=perfect?rai.textContent:gradeData[g];
+ document.querySelector('#fbTag').textContent=moves+' movimentos • '+eff+'% final • '+bestMoves+' melhores decisões • '+detourMoves+' desvio(s) • '+invalid+' inválido(s) • '+hints+' dica(s)';
+ document.querySelector('#feedback').classList.add('show');save()
+}
 function save(){let a=JSON.parse(localStorage.getItem(KEY)||'[]');a.unshift({n,grade:+document.querySelector('#grade').value,moves,invalid,hints,bestMoves,detourMoves,time:Math.round((Date.now()-start)/1000),date:Date.now(),student:hanoiStudent()});localStorage.setItem(KEY,JSON.stringify(a.slice(0,20)));drawEvolution()}
 function drawEvolution(){let all=JSON.parse(localStorage.getItem(KEY)||'[]'),a=all.filter(x=>x.n===n).slice(0,3),el=document.querySelector('#evolution');el.innerHTML=a.length?a.map((x,i)=>'<p><b>Tentativa '+(a.length-i)+':</b> '+x.moves+' movimentos • '+(x.bestMoves??'—')+' melhores decisões • '+(x.detourMoves??'—')+' desvios • '+x.hints+' dica(s) • '+x.time+'s</p>').join(''):'Conclua uma partida para iniciar o histórico neste aparelho.';drawTeacherReport(all)}
 function escapeReport(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
