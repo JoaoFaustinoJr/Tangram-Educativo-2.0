@@ -290,13 +290,13 @@ function lessonRaiLibraryAnswer(item,q){
 const raiAuthorship={
  name:'Prof. João Faustino Júnior',
  short:'O Tangram Educativo é uma plataforma educacional idealizada e desenvolvida pelo Prof. João Faustino Júnior.',
- profile:'João Faustino Júnior é professor de Programação e Robótica e também farmacêutico e bioquímico clínico. Seu trabalho educacional reúne tecnologia, pensamento computacional, robótica, inclusão e aprendizagem por desafios.',
+ profile:'João Faustino Júnior, também chamado de Júnior ou Juninho, é professor de Programação e Robótica e também farmacêutico e bioquímico clínico. Atua em Jaboti, Paraná, e desenvolve trabalho educacional no Colégio Estadual Júlia Wanderley (CEJW), reunindo tecnologia, pensamento computacional, robótica, inclusão e aprendizagem por desafios.',
  rai:'A R.A.I. é a tutora digital do Tangram Educativo. Ela foi concebida dentro do projeto do Prof. João Faustino Júnior para apoiar os alunos sem substituir o raciocínio deles.',
  principles:'A plataforma foi construída com foco pedagógico, acessibilidade, inclusão, aprendizagem ativa e uso responsável da tecnologia.'
 };
 function lessonRaiAuthorshipAnswer(q){
  const n=raiNorm(q);
- if(/quem (e|é) joao|quem (e|é) o professor|professor joao|joao faustino/.test(n))return raiAuthorship.profile;
+ if(/quem (e|é) joao|quem (e|é) o professor|professor joao|joao faustino|junior|juninho|jaboti|julia wanderley|cejw/.test(n))return raiAuthorship.profile;
  if(/quem criou|quem fez|quem desenvolveu|autor|autoria|idealizou|de quem (e|é)|criador/.test(n)&&/tangram|plataforma|aplicativo|app|projeto/.test(n))return raiAuthorship.short+' '+raiAuthorship.principles;
  if(/quem criou|quem fez|quem (e|é) voce|quem (e|é) a rai|sua criacao|seu criador/.test(n)&&/rai|voce|você/.test(n))return raiAuthorship.rai;
  if(/objetivo|proposta|por que foi criado|para que foi criado/.test(n)&&/tangram|plataforma|projeto/.test(n))return 'O Tangram Educativo foi criado para apoiar a aprendizagem de forma ativa e inclusiva, integrando programação, robótica, lógica e educação digital. '+raiAuthorship.principles;
