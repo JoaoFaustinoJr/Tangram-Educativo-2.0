@@ -420,6 +420,24 @@ async function lessonRaiGenerative(item,q){
   if(!r.ok)return null;const d=await r.json();return d?.mode==='generative'&&d?.answer?String(d.answer).trim():null;
  }catch(_){return null}
 }
+function lessonRaiEverydayAnswer(q){
+ const n=raiNorm(q);
+ const nums=(String(q).match(/-?\d+(?:[.,]\d+)?/g)||[]).map(x=>Number(x.replace(',','.')));
+ if(/quanto (e|é)|calcule|calcula|conta/.test(n)&&nums.length>=2){
+   if(/\+|mais/.test(n))return 'Dá '+(nums[0]+nums[1])+'.';
+   if(/\-|menos/.test(n))return 'Dá '+(nums[0]-nums[1])+'.';
+   if(/\*|x|vezes/.test(n))return 'Dá '+(nums[0]*nums[1])+'.';
+   if(/\/|divid/.test(n)&&nums[1]!==0)return 'Dá '+(nums[0]/nums[1])+'.';
+ }
+ if(/quantos minutos/.test(n)&&nums.length)return nums[0]+' hora'+(nums[0]===1?'':'s')+' corresponde'+(nums[0]===1?'':'m')+' a '+(nums[0]*60)+' minutos.';
+ if(/quantas horas/.test(n)&&nums.length)return nums[0]+' minutos correspondem a '+(nums[0]/60).toLocaleString('pt-BR',{maximumFractionDigits:2})+' hora(s).';
+ if(/centimetros.*metros|cm.* m\b/.test(n)&&nums.length)return nums[0]+' cm = '+(nums[0]/100).toLocaleString('pt-BR')+' m.';
+ if(/metros.*centimetros|\bm .*cm/.test(n)&&nums.length)return nums[0]+' m = '+(nums[0]*100).toLocaleString('pt-BR')+' cm.';
+ if(/quilometros.*metros|km.* m\b/.test(n)&&nums.length)return nums[0]+' km = '+(nums[0]*1000).toLocaleString('pt-BR')+' m.';
+ if(/metros.*quilometros|\bm .*km/.test(n)&&nums.length)return nums[0]+' m = '+(nums[0]/1000).toLocaleString('pt-BR')+' km.';
+ if(/curiosidade|sabia que/.test(n))return 'Curiosidade: um algoritmo é uma sequência organizada de passos para resolver um problema — e você usa ideias parecidas até fora da programação. 🤖';
+ return '';
+}
 function lessonRaiUtilityAnswer(q){
  const n=raiNorm(q),now=new Date();
  const time=()=>now.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
@@ -445,12 +463,14 @@ function lessonRaiDoubt(item,q){
  const raw=String(q||'').trim(),t=raw.toLowerCase(),concept=item?.concept||item?.objective||'',example=item?.example||'',y=Number(item?.year||lessonYear);
  const social=lessonRaiSocialAnswer(raw);
  const utility=lessonRaiUtilityAnswer(raw);
+ const everyday=lessonRaiEverydayAnswer(raw);
  const follow=lessonRaiFollowup(item,raw),gloss=lessonRaiGlossary(raw);
  const authorship=lessonRaiAuthorshipAnswer(raw);
  const projectIdentity=lessonRaiProjectAnswer(raw);
  const conceptAnswer=lessonRaiConceptAnswer(item,raw);
  const smartConcept=lessonRaiSmartConcept(item,raw);
  if(utility)return utility;
+ if(everyday)return everyday;
  if(social)return social;
  if(!raw)return 'Escreva sua dúvida com suas próprias palavras. Pode ser algo como “não entendi este conceito” ou “por que isso acontece?”.';
  if(authorship)return authorship;
