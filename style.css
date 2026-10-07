@@ -1378,3 +1378,19 @@ body.rai-engaged .rai-float-wrap{filter:drop-shadow(0 5px 12px #0005)}
 
 /* v2.0.180 — conversa contínua com a R.A.I. */
 .lesson-rai-thread{max-height:260px;overflow:auto;margin:10px 0;padding:8px;border-radius:14px;background:#071f36aa;border:1px solid #6bc7dc55}.rai-turn{padding:7px 5px;border-bottom:1px solid #ffffff18}.rai-turn:last-child{border-bottom:0}.rai-turn p{margin:4px 0;line-height:1.4}.rai-user-q{color:#f6e7b4}.rai-bot-a{color:#e7f8fb}.rai-user-q b{color:#f0cf79}.rai-bot-a b{color:#65d7e7}
+
+/* v2.0.200 RAI focus */
+#rai-float-wrap{z-index:1200}
+#rai-tutor-fab{position:relative;isolation:isolate;transform-origin:center;box-shadow:0 8px 28px rgba(0,0,0,.28),0 0 0 3px rgba(212,175,55,.42);transition:transform .2s ease,box-shadow .2s ease}
+#rai-tutor-fab::before{content:"";position:absolute;inset:-9px;border:2px solid rgba(212,175,55,.7);border-radius:999px;animation:raiPulse 2.2s ease-out infinite;pointer-events:none;z-index:-1}
+#rai-tutor-fab:hover,#rai-tutor-fab:focus-visible{transform:scale(1.07);box-shadow:0 10px 34px rgba(0,0,0,.34),0 0 0 5px rgba(212,175,55,.5)}
+.rai-click-call{font-weight:800;background:#fff8df;border:1px solid rgba(170,126,0,.35);box-shadow:0 5px 16px rgba(0,0,0,.16)}
+#rai-tutor-panel:not([hidden]){z-index:1300}
+.rai-tutor-card{max-height:min(78vh,620px);overflow:auto}
+.rai-global-chat{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin:12px 0 8px}
+.rai-global-chat input{min-width:0;padding:12px 13px;border-radius:12px;border:1px solid rgba(20,45,80,.25);font:inherit}
+.rai-global-chat button,.rai-chat-tools button{min-height:42px}
+.rai-chat-tools{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
+.rai-chat-tools button{flex:1 1 auto}
+@keyframes raiPulse{0%{opacity:.85;transform:scale(.92)}70%,100%{opacity:0;transform:scale(1.22)}}
+@media(prefers-reduced-motion:reduce){#rai-tutor-fab::before{animation:none}}
