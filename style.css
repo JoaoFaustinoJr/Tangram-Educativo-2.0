@@ -1244,3 +1244,18 @@ linear-gradient(0deg,transparent 48%,#43c9e9 49% 51%,transparent 52%);clip-path:
 .rai-float-wrap:has(.rai-tutor-fab.dragging){filter:none}.rai-float-wrap .rai-tutor-fab.dragging{animation:none}
 @media(max-width:520px){.rai-float-wrap{right:10px;bottom:12px}.rai-click-call{font-size:10px;padding:6px 8px;margin-bottom:22px}.rai-float-wrap .rai-tutor-fab{padding:4px!important}}
 @media(prefers-reduced-motion:reduce){.rai-float-wrap .rai-tutor-fab,.rai-click-call{animation:none!important}}
+
+/* Aula em foco — catálogo some durante a leitura */
+#lessons-panel.lesson-focus .lessons-card>.lessons-subtitle,
+#lessons-panel.lesson-focus .adapted-callout,
+#lessons-panel.lesson-focus .lesson-years,
+#lessons-panel.lesson-focus .lesson-sections,
+#lessons-panel.lesson-focus .lesson-track-summary,
+#lessons-panel.lesson-focus .lesson-visual-legend{display:none!important}
+#lessons-panel.lesson-focus .lesson-library>details:not(.lesson-current){display:none!important}
+#lessons-panel.lesson-focus .lesson-library{display:block!important;margin-top:4px!important}
+#lessons-panel.lesson-focus .lesson-library>details.lesson-current{display:block!important;border-radius:18px!important}
+#lessons-panel.lesson-focus .lesson-library>details.lesson-current>summary{display:none!important}
+#lessons-panel.lesson-focus .lesson-content{padding-top:8px!important}
+#lessons-panel.lesson-focus .lessons-card{width:min(980px,100%)!important}
+@media(max-width:620px){#lessons-panel.lesson-focus .lessons-card{padding-left:10px!important;padding-right:10px!important}#lessons-panel.lesson-focus .lesson-content{padding:6px!important}}
