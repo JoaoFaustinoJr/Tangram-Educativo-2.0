@@ -225,7 +225,7 @@ body.classroom-mode #jogo{display:none!important} body:not(.classroom-mode) #mod
 <details id="mapDetails"><summary>△ Mapa de estados — 3 discos</summary><svg id="stateGraph" viewBox="0 0 420 360" aria-label="Grafo completo dos 27 estados"></svg><div class="path" id="statePath"></div><p>As letras A, B e C representam as hastes. Cada ponto é um estado; cada linha, um movimento legal. O estado atual fica destacado.</p></details>
 <details><summary>🔎 Para ir além — matemática escondida</summary><div class="concepts"><div class="concept"><b>Recursão</b>Resolver n discos contém duas soluções de n−1.</div><div class="concept"><b>Exponencial</b>O mínimo cresce como 2ⁿ−1.</div><div class="concept"><b>Binário e paridade</b>A solução ótima se relaciona à contagem binária.</div><div class="concept"><b>Grafos</b>Resolver é encontrar um caminho entre estados.</div><div class="concept"><b>Auto-semelhança</b>Problemas menores reaparecem dentro do maior, aproximando a ideia de estruturas fractais.</div><div class="concept"><b>Invariantes</b>Algumas propriedades permanecem verdadeiras durante toda solução válida.</div></div></details>
 <details><summary>Você sabia? A origem da Torre</summary><p>Édouard Lucas apresentou o quebra-cabeça em 1883. A famosa narrativa dos 64 discos pertence à lenda associada ao problema; a estrutura matemática leva ao mínimo 2ⁿ−1.</p></details>
-</div></section><div class="footer">Tangram Educativo • Hanói Lab v0.35 • módulo experimental isolado</div></main>
+</div></section><div class="footer">Tangram Educativo • Hanói Lab v0.36 • módulo experimental isolado</div></main>
 <script>
 
 const lessonVisuals={
@@ -330,22 +330,24 @@ function updateMathLive(){
  if(t)t.textContent=d.title;if(s)s.innerHTML=d.stage;if(b)b.textContent=d.bubble;
  ['mg1','mg2','mg3'].forEach((id,i)=>{const el=document.getElementById(id);if(el)el.textContent=d.glyphs[i]});
 }
-const classroomBtn=document.getElementById('classroomBtn');
-if(classroomBtn) classroomBtn.addEventListener('click',e=>{e.preventDefault();showClassroom()});
-
 (function(){
  const play=document.getElementById('playTab'), aula=document.getElementById('classroomBtn'), ctx=document.getElementById('modeContext');
- function setMode(mode){
+ const panel=document.getElementById('classPanel'), game=document.getElementById('jogo');
+ function setMode(mode,scroll=true){
    const isClass=mode==='classroom';
    document.body.classList.toggle('classroom-mode',isClass);
-   play.classList.toggle('active',!isClass); aula.classList.toggle('active',isClass);
-   play.setAttribute('aria-selected',String(!isClass)); aula.setAttribute('aria-selected',String(isClass));
-   ctx.textContent=isClass?'Sala de Aula • aprenda o conceito e depois experimente no jogo.':'Modo Jogar • experimente, planeje e resolva.';
+   if(panel){panel.classList.toggle('show',isClass);panel.hidden=!isClass;}
+   if(game){game.classList.toggle('classHidden',isClass);}
+   if(play){play.classList.toggle('active',!isClass);play.setAttribute('aria-selected',String(!isClass));}
+   if(aula){aula.classList.toggle('active',isClass);aula.setAttribute('aria-selected',String(isClass));}
+   if(ctx)ctx.textContent=isClass?'Sala de Aula • aprenda o conceito e depois experimente no jogo.':'Modo Jogar • experimente, planeje e resolva.';
+   if(isClass){ if(typeof renderClassroom==='function')renderClassroom(); if(typeof updateMathLive==='function')updateMathLive(); }
    history.replaceState(null,'',isClass?'#modo-aula':'#jogo');
-   window.scrollTo({top:document.querySelector('.hero').offsetTop-10,behavior:'smooth'});
+   if(scroll){requestAnimationFrame(()=>{const target=isClass?panel:game;if(target)target.scrollIntoView({behavior:'smooth',block:'start'});});}
  }
- play.addEventListener('click',()=>setMode('play'));
- aula.addEventListener('click',()=>setMode('classroom'));
- if(location.hash==='#modo-aula') setMode('classroom');
+ if(play)play.addEventListener('click',e=>{e.preventDefault();setMode('play')});
+ if(aula)aula.addEventListener('click',e=>{e.preventDefault();setMode('classroom')});
+ setMode(location.hash==='#modo-aula'?'classroom':'play',false);
+ window.hanoiSetMode=setMode;
 })();
 </script></body></html>
