@@ -769,9 +769,34 @@ const raiTips={
  ]
 };
 let raiTipStep=0;
-function raiOpen(){const p=document.querySelector('#rai-tutor-panel');if(p)p.hidden=false;document.querySelector('#app-menu')?.classList.remove('open');t2event('rai_tutor_open',{level:String((typeof levelIndex==='number'?levelIndex:0)+1)});}
+function raiGlobalContext(){
+ const lesson=document.querySelector('[data-lesson-rai]:not([hidden])');
+ if(lesson)return {mode:'aula',item:null};
+ if(location.pathname.includes('/hanoi'))return {mode:'hanoi',item:null};
+ return {mode:'tangram',item:null};
+}
+function raiGlobalAnswer(q){
+ const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.';
+ const social=lessonRaiSocialAnswer(raw),utility=lessonRaiUtilityAnswer(raw),every=lessonRaiEverydayAnswer(raw),loose=lessonRaiLooseMath(raw),emotion=lessonRaiEmotionAnswer(raw),inc=lessonRaiInclusionAnswer(raw),auth=lessonRaiAuthorshipAnswer(raw),proj=lessonRaiProjectAnswer(raw);
+ if(inc)return inc;if(emotion)return emotion;if(utility)return utility;if(loose)return loose;if(every)return every;if(auth)return auth;if(proj)return proj;if(social)return social;
+ const c=raiGlobalContext();
+ if(c.mode==='hanoi')return 'Na Torre de Hanói, posso ajudar com estratégia, recursão, decomposição e número mínimo de movimentos sem resolver o desafio por você.';
+ if(c.mode==='aula')return 'Estou com você nesta aula. Pergunte sobre o conceito, peça um exemplo ou diga qual parte ficou difícil.';
+ return lessonRaiDoubt({topic:'Tangram',concept:'geometria, lógica, composição e decomposição de figuras'},raw);
+}
+function raiOpen(){const p=document.querySelector('#rai-tutor-panel');if(p){p.hidden=false;setTimeout(()=>document.querySelector('#rai-global-input')?.focus(),40)}document.querySelector('#app-menu')?.classList.remove('open');t2event('rai_tutor_open',{level:String((typeof levelIndex==='number'?levelIndex:0)+1)});}
 function raiClose(){const p=document.querySelector('#rai-tutor-panel');if(p)p.hidden=true;}
 function raiGuide(kind){const arr=raiTips[kind]||raiTips.strategy;const msg=document.querySelector('#rai-tutor-message');const level=(typeof levelIndex==='number'?levelIndex:0)+1;let text=arr[raiTipStep++%arr.length];if(kind==='observe'&&level>5)text='Desafio '+level+': '+text+' Nos níveis avançados, compare também orientação e possíveis reflexões.';if(msg)msg.textContent=text;t2event('rai_tutor_help',{kind:kind,level:String(level)});}
+function raiWireGlobalChat(){
+ const panel=document.querySelector('#rai-tutor-panel'),input=document.querySelector('#rai-global-input'),send=document.querySelector('#rai-global-send'),msg=document.querySelector('#rai-tutor-message');
+ if(!panel||!input||!send)return;
+ const ask=()=>{const q=input.value.trim();if(!q)return;const ans=raiGlobalAnswer(q);if(msg)msg.textContent=ans;input.value='';try{localStorage.setItem('tangram2RaiGlobal',JSON.stringify({q,answer:ans,at:Date.now()}))}catch(_){}};
+ send.onclick=ask;input.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();ask()}};
+ panel.querySelector('#rai-global-mic')?.addEventListener('click',e=>raiListen(input,e.currentTarget));
+ panel.querySelector('#rai-global-speak')?.addEventListener('click',()=>{if(msg?.textContent)raiSpeak(msg.textContent)});
+ panel.querySelector('#rai-global-clear')?.addEventListener('click',()=>{if(confirm('Apagar a conversa atual com a R.A.I.?')){localStorage.removeItem('tangram2RaiGlobal');if(msg)msg.textContent='Conversa apagada. Pode começar de novo quando quiser.'}});
+}
+setTimeout(raiWireGlobalChat,0);
 document.querySelector('#rai-tutor-fab')?.addEventListener('click',raiOpen);
 document.querySelector('[data-menu="rai"]')?.addEventListener('click',raiOpen);
 document.querySelector('#rai-tutor-close')?.addEventListener('click',raiClose);
