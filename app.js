@@ -315,6 +315,28 @@ const raiConceptGraph={
  recursao:{links:['caso base','decomposicao','hanoi'],prompt:'Na recursão, o problema é reduzido a versões menores até chegar ao caso-base.'},
  decomposicao:{links:['algoritmo','problema'],prompt:'Decompor é separar um problema em partes menores que possam ser resolvidas e depois combinadas.'}
 };
+function lessonRaiIntent(q){
+ const n=raiNorm(q);
+ if(/diferenca|diferente|compar/.test(n))return 'compare';
+ if(/exemplo|exempl/.test(n))return 'example';
+ if(/serve|utilidade|pra que|para que/.test(n))return 'purpose';
+ if(/relacion|tem a ver|ligacao/.test(n))return 'relation';
+ if(/resum|bem curto|rapido/.test(n))return 'summary';
+ return 'explain';
+}
+function lessonRaiConceptPair(q){
+ const n=raiNorm(q),keys=Object.keys(raiConceptGraph).filter(k=>n.includes(k));return keys.slice(0,2)
+}
+function lessonRaiSmartConcept(item,q){
+ const keys=lessonRaiConceptPair(q),intent=lessonRaiIntent(q),y=Number(item?.year||lessonYear);
+ if(keys.length>1&&intent==='compare'){const a=keys[0],b=keys[1];return (raiMiniGlossary[a]||raiConceptGraph[a].prompt)+' Já '+b+': '+String(raiMiniGlossary[b]||raiConceptGraph[b].prompt).replace(/^./,c=>c.toLowerCase());}
+ const k=keys[0];if(!k)return '';const base=raiMiniGlossary[k]||raiConceptGraph[k].prompt,node=raiConceptGraph[k];
+ if(intent==='summary')return base.split(/(?<=[.!?])\s+/)[0];
+ if(intent==='purpose')return node.prompt;
+ if(intent==='relation'&&node.links.length)return base+' Ele se relaciona diretamente com '+node.links.slice(0,2).join(' e ')+'.';
+ if(intent==='example')return base+' '+(y<=6?'Exemplo: pense em um robô percebendo o ambiente, tomando uma decisão e realizando uma ação.':'Procure no desafio da aula onde esse conceito aparece e identifique entrada, processamento e resultado.');
+ return base;
+}
 function lessonRaiConcept(q){
  const n=raiNorm(q);for(const k of Object.keys(raiConceptGraph))if(n.includes(k))return k;return ''
 }
@@ -347,8 +369,10 @@ function lessonRaiDoubt(item,q){
  const raw=String(q||'').trim(),t=raw.toLowerCase(),concept=item?.concept||item?.objective||'',example=item?.example||'',y=Number(item?.year||lessonYear);
  const follow=lessonRaiFollowup(item,raw),gloss=lessonRaiGlossary(raw);
  const conceptAnswer=lessonRaiConceptAnswer(item,raw);
+ const smartConcept=lessonRaiSmartConcept(item,raw);
  if(!raw)return 'Escreva sua dúvida com suas próprias palavras. Pode ser algo como “não entendi este conceito” ou “por que isso acontece?”.';
  if(follow)return follow;
+ if(smartConcept)return smartConcept;
  if(conceptAnswer&&/o que|que e|significa|explique|explica|como funciona|serve|funciona/.test(raiNorm(raw)))return conceptAnswer;
  if(gloss&&/o que|que e|significa|explique|explica|como funciona/.test(raiNorm(raw)))return gloss+' '+(lessonYear<=6?'Consegue pensar em um exemplo?':'Como esse conceito aparece na aula que você está estudando?');
  if(/resposta|faz pra mim|faça pra mim|qual alternativa|me diga a resposta/.test(t))return 'Posso ajudar você a chegar à resposta, mas não vou simplesmente entregá-la. Qual parte do desafio você já conseguiu entender?';
