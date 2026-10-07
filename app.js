@@ -420,6 +420,30 @@ async function lessonRaiGenerative(item,q){
   if(!r.ok)return null;const d=await r.json();return d?.mode==='generative'&&d?.answer?String(d.answer).trim():null;
  }catch(_){return null}
 }
+function raiStudentSpeech(q){
+ let n=raiNorm(q).toLowerCase();
+ const map=[
+  [/\bvc\b|\bvoce\b/g,'voce'],[/\bq\b|\bqueh\b/g,'que'],[/\bqto\b|\bqt\b/g,'quanto'],
+  [/\bqnts\b|\bqntos\b/g,'quantos'],[/\bme ajuda ai\b|\bajuda ai\b/g,'ajuda'],
+  [/\bpfv\b|\bpfvr\b|\bpor favor\b/g,''],[/\bnum\b/g,'nao'],[/\bta\b/g,'esta'],
+  [/\bto\b/g,'estou'],[/\bpq\b|\bporq\b|\bporque\b/g,'por que'],
+  [/\bvlw\b/g,'valeu'],[/\bblz\b/g,'beleza'],[/\beae\b/g,'e ai']
+ ];
+ for(const [r,v] of map)n=n.replace(r,v);
+ return n.replace(/\s+/g,' ').trim();
+}
+function lessonRaiLooseMath(q){
+ const n=raiStudentSpeech(q);
+ const m=n.match(/(-?\d+(?:[.,]\d+)?)\s*(x|\*|vezes|mais|\+|menos|-|dividido por|\/|:)\s*(-?\d+(?:[.,]\d+)?)/);
+ if(!m)return '';
+ const a=Number(m[1].replace(',','.')),b=Number(m[3].replace(',','.')),op=m[2];
+ let r;
+ if(op==='x'||op==='*'||op==='vezes')r=a*b;
+ else if(op==='mais'||op==='+')r=a+b;
+ else if(op==='menos'||op==='-')r=a-b;
+ else {if(b===0)return 'Não dá para dividir por zero. Quer que eu explique por quê?';r=a/b;}
+ return 'Dá '+r.toLocaleString('pt-BR',{maximumFractionDigits:6})+'.';
+}
 function lessonRaiEverydayAnswer(q){
  const n=raiNorm(q);
  const nums=(String(q).match(/-?\d+(?:[.,]\d+)?/g)||[]).map(x=>Number(x.replace(',','.')));
@@ -464,12 +488,14 @@ function lessonRaiDoubt(item,q){
  const social=lessonRaiSocialAnswer(raw);
  const utility=lessonRaiUtilityAnswer(raw);
  const everyday=lessonRaiEverydayAnswer(raw);
+ const looseMath=lessonRaiLooseMath(raw);
  const follow=lessonRaiFollowup(item,raw),gloss=lessonRaiGlossary(raw);
  const authorship=lessonRaiAuthorshipAnswer(raw);
  const projectIdentity=lessonRaiProjectAnswer(raw);
  const conceptAnswer=lessonRaiConceptAnswer(item,raw);
  const smartConcept=lessonRaiSmartConcept(item,raw);
  if(utility)return utility;
+ if(looseMath)return looseMath;
  if(everyday)return everyday;
  if(social)return social;
  if(!raw)return 'Escreva sua dúvida com suas próprias palavras. Pode ser algo como “não entendi este conceito” ou “por que isso acontece?”.';
