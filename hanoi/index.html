@@ -177,6 +177,18 @@ body.classroom-mode #jogo{display:none!important} body:not(.classroom-mode) #mod
 .raiMathBubble{max-width:180px;padding:7px 10px;border:1px solid #d6ad4d88;border-radius:13px 13px 3px 13px;background:#071f3de8;color:#f6e6a7;font-size:.68rem;font-weight:800;line-height:1.25;opacity:.94}
 .classroom-mode .raiMathGuide{display:flex}.raiMathGuide{display:none}
 @media(max-width:540px){.tangramSignature{width:30px;height:30px;flex-basis:30px}.raiMathGuide{right:8px;bottom:4px}.raiMathGuide img{width:46px;height:46px}.raiMathBubble{max-width:145px;font-size:.62rem}}
+
+/* v0.34 — matemática viva por série */
+.mathLive{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.mathGlyph{position:absolute;color:#67e6f0;opacity:.11;font-weight:900;letter-spacing:.03em;animation:mathDrift 9s ease-in-out infinite alternate}
+.mathGlyph.g1{left:5%;top:18%;font-size:1rem}.mathGlyph.g2{right:5%;top:32%;font-size:.9rem;animation-delay:-3s}.mathGlyph.g3{left:9%;bottom:8%;font-size:.82rem;animation-delay:-6s}.mathGlyph.g4{right:12%;bottom:4%;font-size:2.4rem;color:#e4bd59;opacity:.08}
+@keyframes mathDrift{0%{transform:translate3d(0,7px,0) rotate(-1deg)}100%{transform:translate3d(7px,-7px,0) rotate(1deg)}}
+.mathLessonVisual{margin:10px 0 12px;padding:11px;border:1px solid #e1c77f;border-radius:15px;background:linear-gradient(135deg,#0c3156,#10284a);color:#fff;overflow:hidden}
+.mathLessonVisual small{display:block;color:#f2d273;font-weight:900;letter-spacing:.08em;margin-bottom:7px}
+.mathStage{display:flex;align-items:center;justify-content:center;gap:7px;min-height:62px;flex-wrap:wrap;font-weight:900}
+.mathNode{min-width:42px;padding:8px 9px;border:1px solid #5ddbe4aa;border-radius:10px;background:#ffffff0d;text-align:center;box-shadow:0 0 14px #28d4e51a}
+.mathArrow{color:#efc85c;font-size:1.15rem}.mathFormula{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#f6df92;font-size:clamp(.9rem,3.2vw,1.18rem)}
+@media(prefers-reduced-motion:reduce){.mathGlyph{animation:none!important}}
 </style></head><body>
 <header class="top"><div class="topin"><a class="homeLink" href="../" aria-label="Voltar ao Tangram Educativo"><img class="tangramSignature" src="../app-icon.svg?v=rai3" alt=""><span class="arrow">←</span><span><b>Tangram Educativo</b><small>HANÓI • LÓGICA & ALGORITMOS</small></span></a><div class="hanoiMark" aria-label="Símbolo da Torre de Hanói"><svg viewBox="0 0 64 64" role="img" aria-label="Torre de Hanói"><path d="M12 15v39M32 15v39M52 15v39" stroke="#f7f4ed" stroke-width="3.2" stroke-linecap="round"/><path d="M7 54h50" stroke="#f7f4ed" stroke-width="4" stroke-linecap="round"/><g fill="none" stroke="#22cbe7" stroke-width=".8" opacity=".38"><path d="M32 7 57 50H7Z"/><path d="M32 7 19.5 28.5h25Z"/><path d="M19.5 28.5 7 50h25Z"/><path d="M44.5 28.5 32 50h25Z"/></g><rect x="19" y="42" width="26" height="8" rx="4" fill="#39b873" stroke="#f6e8c2" stroke-width="1.2"/><rect x="23" y="33" width="18" height="8" rx="4" fill="#f2b719" stroke="#f6e8c2" stroke-width="1.2"/><rect x="27" y="24" width="10" height="8" rx="4" fill="#f15c54" stroke="#f6e8c2" stroke-width="1.2"/><circle cx="12" cy="15" r="1.8" fill="#22cbe7"/><circle cx="32" cy="15" r="1.8" fill="#22cbe7"/><circle cx="52" cy="15" r="1.8" fill="#22cbe7"/><text x="46" y="61" text-anchor="middle" fill="#f0cf79" font-size="6.2" font-weight="900">2ⁿ−1</text></svg></div></div></header>
 <main><div class="hero fractalHero"><div class="mathAtmosphere" aria-hidden="true"><span class="mf f1">2ⁿ−1</span><span class="mf f2">1 • 3 • 7 • 15 • 31</span><span class="mf f3">M(n)=2M(n−1)+1</span><span class="mf f4">△</span><span class="mf f5">Σ</span><span class="mf f6">○—○—○</span></div><small>DESAFIO DE RACIOCÍNIO COM A R.A.I.</small><h1>Torre de Hanói</h1><p>Observe • planeje • execute • aprenda</p><div class="heroNav" role="tablist" aria-label="Modos da Torre de Hanói"><button class="heroBtn play active" type="button" id="playTab" role="tab" aria-selected="true">🎮 Jogar</button><button class="heroBtn classroom" type="button" id="classroomBtn" role="tab" aria-selected="false">📚 Sala de Aula</button></div><div class="modeContext" id="modeContext">Modo Jogar • experimente, planeje e resolva.</div></div>
@@ -199,7 +211,7 @@ body.classroom-mode #jogo{display:none!important} body:not(.classroom-mode) #mod
 <details id="mapDetails"><summary>△ Mapa de estados — 3 discos</summary><svg id="stateGraph" viewBox="0 0 420 360" aria-label="Grafo completo dos 27 estados"></svg><div class="path" id="statePath"></div><p>As letras A, B e C representam as hastes. Cada ponto é um estado; cada linha, um movimento legal. O estado atual fica destacado.</p></details>
 <details><summary>🔎 Para ir além — matemática escondida</summary><div class="concepts"><div class="concept"><b>Recursão</b>Resolver n discos contém duas soluções de n−1.</div><div class="concept"><b>Exponencial</b>O mínimo cresce como 2ⁿ−1.</div><div class="concept"><b>Binário e paridade</b>A solução ótima se relaciona à contagem binária.</div><div class="concept"><b>Grafos</b>Resolver é encontrar um caminho entre estados.</div><div class="concept"><b>Auto-semelhança</b>Problemas menores reaparecem dentro do maior, aproximando a ideia de estruturas fractais.</div><div class="concept"><b>Invariantes</b>Algumas propriedades permanecem verdadeiras durante toda solução válida.</div></div></details>
 <details><summary>Você sabia? A origem da Torre</summary><p>Édouard Lucas apresentou o quebra-cabeça em 1883. A famosa narrativa dos 64 discos pertence à lenda associada ao problema; a estrutura matemática leva ao mínimo 2ⁿ−1.</p></details>
-</div></section><div class="footer">Tangram Educativo • Hanói Lab v0.33 • módulo experimental isolado</div></main>
+</div></section><div class="footer">Tangram Educativo • Hanói Lab v0.34 • módulo experimental isolado</div></main>
 <script>
 
 const lessonVisuals={
@@ -266,7 +278,7 @@ function showGame(){
  document.getElementById('jogo').scrollIntoView({behavior:'smooth',block:'start'});
 }
 document.querySelectorAll('[data-classgrade]').forEach(b=>b.addEventListener('click',()=>{
- document.getElementById('grade').value=b.dataset.classgrade; renderClassroom(); initLessonInteractions();
+ document.getElementById('grade').value=b.dataset.classgrade; renderClassroom(); initLessonInteractions(); updateMathLive();
 }));
 document.getElementById('classPlay')?.addEventListener('click',showGame);
 
@@ -289,8 +301,21 @@ function legal(s,t){let d=[];for(let i=0;i<3;i++)if(s[i]!==t[i])d.push(i);if(d.l
 function pos(s){let A=[[210,22],[35,335],[385,335]],p=A['ABC'.indexOf(s[2])],q=A['ABC'.indexOf(s[1])],r=A['ABC'.indexOf(s[0])];return{x:(p[0]*4+q[0]*2+r[0])/7,y:(p[1]*4+q[1]*2+r[1])/7}}
 function buildGraph(){let S=states(),svg=document.querySelector('#stateGraph'),e='';for(let i=0;i<S.length;i++)for(let j=i+1;j<S.length;j++)if(legal(S[i],S[j])){let p=pos(S[i]),q=pos(S[j]);e+='<line class="edge" x1="'+p.x+'" y1="'+p.y+'" x2="'+q.x+'" y2="'+q.y+'"/>'}svg.innerHTML='<path class="tri" d="M210 12 L20 348 L400 348 Z"/>'+e+S.map(s=>{let p=pos(s);return '<circle class="node" data-state="'+s+'" cx="'+p.x+'" cy="'+p.y+'" r="7"><title>'+s+'</title></circle>'}).join('')}
 function updateMap(){document.querySelectorAll('.node').forEach(x=>x.classList.remove('currentNode'));let out=document.querySelector('#statePath');if(n!==3){out.textContent='O acompanhamento dinâmico é mostrado no nível de 3 discos.';return}let s=code();if(path.at(-1)!==s)path.push(s);document.querySelector('.node[data-state="'+s+'"]')?.classList.add('currentNode');out.textContent='Seu caminho: '+path.join(' → ')}
-pegs.forEach((p,i)=>{p.onclick=()=>tap(i);p.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();tap(i)}}});document.querySelector('#restart').onclick=reset;document.querySelector('#hint').onclick=hint;document.querySelector('#verify').onclick=verify;document.querySelector('#n').onchange=()=>{reset();drawEvolution()};document.querySelector('#grade').onchange=()=>{rai.textContent='Modo Aula ajustado ao '+document.querySelector('#grade').value+'º ano. O desafio continua o mesmo; muda a reflexão final.'};buildGraph();reset();drawEvolution();
+pegs.forEach((p,i)=>{p.onclick=()=>tap(i);p.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();tap(i)}}});document.querySelector('#restart').onclick=reset;document.querySelector('#hint').onclick=hint;document.querySelector('#verify').onclick=verify;document.querySelector('#n').onchange=()=>{reset();drawEvolution()};document.querySelector('#grade').onchange=()=>{rai.textContent='Modo Aula ajustado ao '+document.querySelector('#grade').value+'º ano. O desafio continua o mesmo; muda a reflexão final.';updateMathLive();};buildGraph();reset();drawEvolution();updateMathLive();
 
+
+const mathLiveData={
+  '6':{title:'MATEMÁTICA VIVA • DECOMPOSIÇÃO',stage:'<span class="mathNode">problema</span><span class="mathArrow">→</span><span class="mathNode">parte</span><span class="mathArrow">→</span><span class="mathNode">parte</span>',bubble:'Um problema grande pode ser resolvido dividindo-o em problemas menores.',glyphs:['dividir → resolver','passo 1 · passo 2 · passo 3','n → n−1','△']},
+  '7':{title:'MATEMÁTICA VIVA • PADRÕES',stage:'<span class="mathNode">1</span><span class="mathArrow">→</span><span class="mathNode">3</span><span class="mathArrow">→</span><span class="mathNode">7</span><span class="mathArrow">→</span><span class="mathNode">15</span>',bubble:'Compare 1, 3, 7 e 15. Cada novo nível dobra o anterior e acrescenta 1.',glyphs:['1 · 3 · 7 · 15 · 31','2ⁿ−1','dobrar + 1','△']},
+  '8':{title:'MATEMÁTICA VIVA • ALGORITMO',stage:'<span class="mathNode">mover n−1</span><span class="mathArrow">→</span><span class="mathNode">mover n</span><span class="mathArrow">→</span><span class="mathNode">mover n−1</span>',bubble:'A estratégia pode virar algoritmo: decomponha, execute e repita uma regra precisa.',glyphs:['ALGORITMO','n−1 → n → n−1','entrada → passos → saída','{ }']},
+  '9':{title:'MATEMÁTICA VIVA • RECURSÃO',stage:'<span class="mathFormula">M(n)=2M(n−1)+1</span><span class="mathArrow">⇒</span><span class="mathFormula">M(n)=2ⁿ−1</span>',bubble:'Aqui aparece a recursão: resolver n discos usa duas vezes a solução de n−1, mais um movimento.',glyphs:['M(n)=2M(n−1)+1','2ⁿ−1','f(n) → f(n−1)','△']}
+};
+function updateMathLive(){
+ const g=String(document.querySelector('#grade')?.value||6),d=mathLiveData[g];
+ const t=document.getElementById('mathLiveTitle'),s=document.getElementById('mathLiveStage'),b=document.getElementById('raiMathBubble');
+ if(t)t.textContent=d.title;if(s)s.innerHTML=d.stage;if(b)b.textContent=d.bubble;
+ ['mg1','mg2','mg3'].forEach((id,i)=>{const el=document.getElementById(id);if(el)el.textContent=d.glyphs[i]});
+}
 const classroomBtn=document.getElementById('classroomBtn');
 if(classroomBtn) classroomBtn.addEventListener('click',e=>{e.preventDefault();showClassroom()});
 
