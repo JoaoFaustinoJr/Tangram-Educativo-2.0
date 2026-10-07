@@ -302,6 +302,27 @@ const raiMiniGlossary={
  'binario':'O sistema binário representa informações usando dois estados, normalmente 0 e 1.',
  'decomposicao':'Decomposição é dividir um problema grande em partes menores e mais fáceis de compreender e resolver.'
 };
+const raiConceptGraph={
+ sensor:{links:['entrada','dado','condicao','atuador'],prompt:'O sensor percebe o ambiente e fornece uma entrada para o sistema decidir o que fazer.'},
+ algoritmo:{links:['decomposicao','programacao','repeticao','condicao'],prompt:'O algoritmo organiza a solução em passos antes ou durante a programação.'},
+ programacao:{links:['algoritmo','variavel','condicao','repeticao'],prompt:'Programar é representar uma solução com instruções executáveis.'},
+ variavel:{links:['dado','entrada','condicao'],prompt:'A variável guarda um dado que o programa pode consultar ou alterar.'},
+ condicao:{links:['dado','decisao','sensor','atuador'],prompt:'A condição usa uma comparação lógica para escolher um caminho.'},
+ repeticao:{links:['algoritmo','programacao'],prompt:'A repetição reaproveita um conjunto de instruções enquanto ou até que uma regra seja atendida.'},
+ atuador:{links:['saida','acao','sensor','condicao'],prompt:'O atuador realiza uma ação física a partir de uma decisão do sistema.'},
+ svg:{links:['vetor','corte laser'],prompt:'SVG descreve formas vetoriais e é especialmente útil em projetos de corte e desenho.'},
+ stl:{links:['malha','impressao 3d'],prompt:'STL descreve a superfície de um modelo tridimensional por uma malha de triângulos.'},
+ recursao:{links:['caso base','decomposicao','hanoi'],prompt:'Na recursão, o problema é reduzido a versões menores até chegar ao caso-base.'},
+ decomposicao:{links:['algoritmo','problema'],prompt:'Decompor é separar um problema em partes menores que possam ser resolvidas e depois combinadas.'}
+};
+function lessonRaiConcept(q){
+ const n=raiNorm(q);for(const k of Object.keys(raiConceptGraph))if(n.includes(k))return k;return ''
+}
+function lessonRaiConceptAnswer(item,q){
+ const k=lessonRaiConcept(q);if(!k)return '';const node=raiConceptGraph[k],g=raiMiniGlossary[k]||node.prompt,y=Number(item?.year||lessonYear);
+ const follow=y<=6?'Quer um exemplo bem simples?':('Posso relacionar isso com '+node.links.slice(0,2).join(' ou ')+'.');
+ return g+' '+follow;
+}
 function lessonRaiGlossary(q){const n=raiNorm(q);for(const [k,v] of Object.entries(raiMiniGlossary))if(n.includes(k))return v;return ''}
 function lessonRaiConversationContext(item){
  const st=lessonRaiState(),id=item?.id||'',h=st[id]?.conversation||[];return h.slice(-3)
@@ -325,8 +346,10 @@ async function lessonRaiGenerative(item,q){
 function lessonRaiDoubt(item,q){
  const raw=String(q||'').trim(),t=raw.toLowerCase(),concept=item?.concept||item?.objective||'',example=item?.example||'',y=Number(item?.year||lessonYear);
  const follow=lessonRaiFollowup(item,raw),gloss=lessonRaiGlossary(raw);
+ const conceptAnswer=lessonRaiConceptAnswer(item,raw);
  if(!raw)return 'Escreva sua dúvida com suas próprias palavras. Pode ser algo como “não entendi este conceito” ou “por que isso acontece?”.';
  if(follow)return follow;
+ if(conceptAnswer&&/o que|que e|significa|explique|explica|como funciona|serve|funciona/.test(raiNorm(raw)))return conceptAnswer;
  if(gloss&&/o que|que e|significa|explique|explica|como funciona/.test(raiNorm(raw)))return gloss+' '+(lessonYear<=6?'Consegue pensar em um exemplo?':'Como esse conceito aparece na aula que você está estudando?');
  if(/resposta|faz pra mim|faça pra mim|qual alternativa|me diga a resposta/.test(t))return 'Posso ajudar você a chegar à resposta, mas não vou simplesmente entregá-la. Qual parte do desafio você já conseguiu entender?';
  if(/não entendi|nao entendi|explica|explique|o que é|o que e|significa/.test(t)){const lib=lessonRaiLibraryAnswer(item,raw);return lib||((y<=6?'Vamos por partes. ':'Vamos reconstruir a ideia. ')+(concept||'Primeiro identifique a ideia principal da aula.')+(example?' Pense no exemplo: '+example:'')+' Qual palavra ou etapa ainda parece confusa?')}
