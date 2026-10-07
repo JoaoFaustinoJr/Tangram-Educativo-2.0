@@ -294,6 +294,25 @@ const raiAuthorship={
  rai:'A R.A.I. é a tutora digital do Tangram Educativo. Ela foi concebida dentro do projeto do Prof. João Faustino Júnior para apoiar os alunos sem substituir o raciocínio deles.',
  principles:'A plataforma foi construída com foco pedagógico, acessibilidade, inclusão, aprendizagem ativa e uso responsável da tecnologia.'
 };
+const raiProjectIdentity={
+ 'nre ibaiti':'O trabalho educacional está inserido no contexto do Núcleo Regional de Educação de Ibaiti, no Paraná.',
+ 'oficina sesi':'A Oficina SESI integra experiências educacionais práticas, com atividades de tecnologia, programação, robótica e trabalho em equipe.',
+ 'geniuscon':'A GeniusCon faz parte das experiências de aprendizagem por projetos e competições associadas ao trabalho educacional do professor.',
+ 'agrinho':'O Agrinho integra experiências de projetos educacionais e tecnológicos desenvolvidos com estudantes.',
+ 'runnbot':'RunnBot é um projeto educacional STEM em formato de tabuleiro, criado para integrar desafios e diferentes áreas do conhecimento.',
+ 'lora agroalerta':'LoRa AgroAlerta é um projeto de tecnologia aplicado ao campo, envolvendo comunicação LoRa, sensores e localização.',
+ 'rose':'RO.SE é um projeto de robótica sensorial e inclusiva, voltado à interação por estímulos e respostas do robô.',
+ 'lumina agrolab':'Lumina AgroLab é uma proposta de horta automatizada que aproxima tecnologia, sensores e aprendizagem aplicada.',
+ 'conecta jaboti':'Conecta Jaboti é uma iniciativa de inclusão digital ligada à comunidade.',
+ 'arroba 2.0':'Arroba 2.0 é um projeto de pesagem bovina que aproxima eletrônica, sensores e aplicação no contexto rural.'
+};
+function lessonRaiProjectAnswer(q){
+ const n=raiNorm(q);
+ for(const [k,v] of Object.entries(raiProjectIdentity))if(n.includes(k))return v;
+ if(/ibaiti/.test(n))return raiProjectIdentity['nre ibaiti'];
+ if(/sesi/.test(n))return raiProjectIdentity['oficina sesi'];
+ return '';
+}
 function lessonRaiAuthorshipAnswer(q){
  const n=raiNorm(q);
  if(/quem (e|é) joao|quem (e|é) o professor|professor joao|joao faustino|junior|juninho|jaboti|julia wanderley|cejw/.test(n))return raiAuthorship.profile;
@@ -405,10 +424,12 @@ function lessonRaiDoubt(item,q){
  const raw=String(q||'').trim(),t=raw.toLowerCase(),concept=item?.concept||item?.objective||'',example=item?.example||'',y=Number(item?.year||lessonYear);
  const follow=lessonRaiFollowup(item,raw),gloss=lessonRaiGlossary(raw);
  const authorship=lessonRaiAuthorshipAnswer(raw);
+ const projectIdentity=lessonRaiProjectAnswer(raw);
  const conceptAnswer=lessonRaiConceptAnswer(item,raw);
  const smartConcept=lessonRaiSmartConcept(item,raw);
  if(!raw)return 'Escreva sua dúvida com suas próprias palavras. Pode ser algo como “não entendi este conceito” ou “por que isso acontece?”.';
  if(authorship)return authorship;
+ if(projectIdentity)return projectIdentity;
  if(follow)return follow;
  if(smartConcept)return smartConcept;
  if(conceptAnswer&&/o que|que e|significa|explique|explica|como funciona|serve|funciona/.test(raiNorm(raw)))return conceptAnswer;
