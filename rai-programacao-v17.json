@@ -3134,5 +3134,109 @@
         "description": "Alimentos e espetáculos"
       }
     ]
+  },
+  {
+    "year": 6,
+    "section": "prog",
+    "id": "hanoi-p6-decomp",
+    "topic": "🗼 Torre de Hanói — decomposição e sequência",
+    "icon": "🗼",
+    "axis": "Programação & Pensamento Computacional",
+    "objective": "Transformar um problema em passos menores e ordenar instruções para resolver a Torre de Hanói.",
+    "keyTerm": "Decomposição",
+    "keyDefinition": "Dividir um problema maior em partes menores e mais simples.",
+    "concept": "Na programação, uma tarefa complexa costuma ser resolvida por pequenas etapas. Na Torre de Hanói, mover a torre inteira parece difícil, mas podemos pensar em subtarefas: liberar o disco maior, movê-lo e reconstruir a torre.",
+    "example": "Com 3 discos, primeiro precisamos liberar o maior. Para isso, os dois menores formam um subproblema.",
+    "formula": "problema → partes menores → sequência → solução",
+    "representation": "Mover n discos = mover n−1, mover o maior, mover n−1.",
+    "use": "Planejamento de algoritmos, robótica e resolução de problemas.",
+    "observe": "Um comando correto fora de ordem pode fazer o algoritmo falhar.",
+    "guided": "Resolva a torre de 3 discos e escreva, em linguagem simples, a sequência que você seguiu.",
+    "challenge": "Explique como você dividiria a tarefa de mover uma torre de 4 discos sem listar todos os movimentos.",
+    "answer": "Separar em três etapas: mover os 3 menores para a haste auxiliar, mover o maior para o destino e mover os 3 menores sobre ele.",
+    "reference": "Édouard Lucas; pensamento computacional e decomposição.",
+    "teacherTip": "Compare com o Robô Marquinhos: o computador precisa de etapas explícitas.",
+    "hanoi": {
+      "grade": 6,
+      "disks": 3
+    }
+  },
+  {
+    "year": 7,
+    "section": "prog",
+    "id": "hanoi-p7-padroes",
+    "topic": "🗼 Torre de Hanói — padrões e algoritmo",
+    "icon": "🗼",
+    "axis": "Programação & Algoritmos",
+    "objective": "Reconhecer padrões de execução e relacioná-los à construção de algoritmos.",
+    "keyTerm": "Algoritmo",
+    "keyDefinition": "Sequência finita e ordenada de passos para resolver um problema.",
+    "concept": "Ao repetir a Torre de Hanói com mais discos, surge uma estrutura que se repete. Reconhecer essa regularidade ajuda a construir um algoritmo geral.",
+    "example": "Os mínimos 1, 3, 7 e 15 movimentos revelam que cada novo caso usa o anterior duas vezes e acrescenta o movimento do maior disco.",
+    "formula": "M(n)=2M(n−1)+1",
+    "representation": "resolver menor → mover maior → resolver menor",
+    "use": "Laços, procedimentos, funções e planejamento de programas.",
+    "observe": "O padrão não é apenas numérico: a própria sequência de ações reaparece.",
+    "guided": "Compare as soluções de 2, 3 e 4 discos e marque quais blocos de ações se repetem.",
+    "challenge": "Descreva um algoritmo geral para resolver a torre sem escrever código.",
+    "answer": "Mover n−1 discos para a auxiliar, mover o maior para o destino e mover n−1 da auxiliar para o destino.",
+    "reference": "Torre de Hanói e algoritmos recursivos.",
+    "teacherTip": "Valorize a identificação da estrutura antes da fórmula.",
+    "hanoi": {
+      "grade": 7,
+      "disks": 4
+    }
+  },
+  {
+    "year": 8,
+    "section": "prog",
+    "id": "hanoi-p8-algoritmo",
+    "topic": "🗼 Torre de Hanói — pseudocódigo e depuração",
+    "icon": "🗼",
+    "axis": "Programação",
+    "objective": "Representar a solução da Torre de Hanói em pseudocódigo e analisar erros de lógica.",
+    "keyTerm": "Pseudocódigo",
+    "keyDefinition": "Descrição estruturada de um algoritmo sem depender da sintaxe de uma linguagem.",
+    "concept": "A Torre de Hanói permite transformar estratégia em algoritmo. O caso de um disco funciona como condição de parada; os demais casos reutilizam a mesma ideia com um problema menor.",
+    "example": "hanoi(n, origem, destino, auxiliar): se n=1, mover; senão resolver n−1, mover n, resolver n−1.",
+    "formula": "n=1 → caso-base; n>1 → decompor",
+    "representation": "função → condição → chamada menor → ação → chamada menor",
+    "use": "Funções, testes, depuração e abstração.",
+    "observe": "Trocar destino e auxiliar em uma chamada altera completamente a solução.",
+    "guided": "Escreva o pseudocódigo e teste manualmente com 3 discos, registrando cada chamada.",
+    "challenge": "Encontre o erro em um algoritmo que tenta mover o disco maior antes de liberar os menores.",
+    "answer": "O disco maior só pode ser movido depois que os n−1 discos menores forem transferidos para a haste auxiliar.",
+    "reference": "Algoritmos recursivos; Édouard Lucas.",
+    "teacherTip": "Faça o aluno simular o código antes de executá-lo.",
+    "hanoi": {
+      "grade": 8,
+      "disks": 4
+    }
+  },
+  {
+    "year": 9,
+    "section": "prog",
+    "id": "hanoi-p9-recursao",
+    "topic": "🗼 Torre de Hanói — funções e recursão",
+    "icon": "🗼",
+    "axis": "Programação & Recursão",
+    "objective": "Compreender recursão por meio de caso-base, chamadas menores e recorrência.",
+    "keyTerm": "Recursão",
+    "keyDefinition": "Estratégia em que uma função resolve um problema usando uma versão menor do mesmo problema.",
+    "concept": "A Torre de Hanói é um exemplo clássico de recursão: para resolver n discos, o algoritmo chama a si mesmo para n−1 discos, realiza um movimento e volta a chamar n−1.",
+    "example": "hanoi(4) depende de hanoi(3); hanoi(3) depende de hanoi(2); o processo termina no caso-base hanoi(1).",
+    "formula": "M(n)=2M(n−1)+1 = 2ⁿ−1",
+    "representation": "n → n−1 → ... → 1 → retorno das chamadas",
+    "use": "Árvores, busca, estruturas hierárquicas e divisão de problemas.",
+    "observe": "Sem caso-base, uma função recursiva não tem condição de parada.",
+    "guided": "Desenhe a árvore de chamadas de hanoi(3) e associe cada chamada aos movimentos realizados.",
+    "challenge": "Explique por que o número mínimo de movimentos cresce exponencialmente.",
+    "answer": "Cada nível exige duas soluções completas do problema anterior mais um movimento; por isso a recorrência gera 2ⁿ−1.",
+    "reference": "Torre de Hanói; recursão e recorrências.",
+    "teacherTip": "Relacione árvore de chamadas, estados do problema e custo computacional.",
+    "hanoi": {
+      "grade": 9,
+      "disks": 5
+    }
   }
 ]
