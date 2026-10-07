@@ -271,7 +271,8 @@ function lessonRaiPrompt(item,step=0){
  return stages[Math.min(step,stages.length-1)];
 }
 function lessonRaiHTML(item,i){
- return '<section class="lesson-rai-tutor" data-lesson-rai="'+i+'"><div class="lesson-rai-head"><img src="app-icon.svg?v=310" alt=""><div><b>R.A.I. Tutor</b><small>Posso ajudar você a pensar sem entregar a resposta.</small></div></div><p data-lesson-rai-msg>'+lessonEsc(lessonRaiPrompt(item,0))+'</p><div class="rai-chat-tools"><button type="button" data-lesson-rai-mic title="Falar uma pergunta">🎙️ Falar</button><button type="button" data-lesson-rai-speak title="Ouvir última resposta">🔊 Ouvir</button><button type="button" data-lesson-rai-clear title="Apagar conversa">🗑️ Apagar conversa</button></div><div class="lesson-rai-thread" data-lesson-rai-thread hidden aria-live="polite"></div><div class="lesson-rai-doubt"><label>Dúvida sobre a aula<input type="text" data-lesson-rai-input="'+i+'" placeholder="Pergunte à R.A.I. sobre esta aula" autocomplete="off"></label><button type="button" data-lesson-rai-ask="'+i+'">Perguntar</button></div><div class="lesson-rai-actions"><button type="button" data-lesson-rai-next="'+i+'">💡 Quero uma pista</button><button type="button" data-lesson-rai-explain="'+i+'">🧩 Explique de outro jeito</button></div></section>';
+ const title=lessonEsc(item?.title||item?.topic||'esta aula');
+ return '<aside class="lesson-rai-context" data-lesson-rai-context="'+i+'"><span>🤖</span><div><b>R.A.I. acompanha esta aula</b><small>Posso explicar '+title+', dar exemplos ou ajudar se algo ficou difícil.</small></div><button type="button" data-open-global-rai="'+i+'">Falar com a R.A.I.</button></aside>';
 }
 function raiNorm(v){return String(v||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
 function raiWords(v){return [...new Set(raiNorm(v).split(/[^a-z0-9]+/).filter(w=>w.length>3&&!['para','como','uma','isso','esta','este','aula','voce','qual','porque','sobre'].includes(w)))]}
@@ -563,12 +564,12 @@ function lessonRaiDoubt(item,q){
 function restoreLessonRaiThreads(m,items){
  m.querySelectorAll('[data-lesson-rai]').forEach(box=>{const i=+box.dataset.lessonRai,item=items[i],id=item?.id||('lesson-'+i),h=lessonRaiState()[id]?.conversation||[],thread=box.querySelector('[data-lesson-rai-thread]');if(!thread||!h.length)return;thread.innerHTML=h.slice(-8).map(x=>'<div class="rai-turn"><p class="rai-user-q"><b>Você:</b> '+lessonEsc(x.q)+'</p><p class="rai-bot-a"><b>R.A.I.:</b> '+lessonEsc(x.answer||'')+'</p></div>').join('');thread.hidden=false;});
 }
-function wireLessonRai(m,items){
+function wireLessonRai(m,items){return;/* legado: substituído pela R.A.I. global */
  m.querySelectorAll('[data-lesson-rai-ask]').forEach(b=>{const ask=()=>{const i=+b.dataset.lessonRaiAsk,item=items[i],box=b.closest('[data-lesson-rai]'),inp=box?.querySelector('[data-lesson-rai-input]'),msg=box?.querySelector('[data-lesson-rai-msg]'),q=(inp?.value||'').trim();if(msg)msg.textContent=lessonRaiDoubt(item,q);if(q){const st=lessonRaiState(),id=item?.id||('lesson-'+i),history=st[id]?.conversation||[];history.push({q,answer,at:Date.now()});st[id]={...(st[id]||{}),conversation:history.slice(-8),at:Date.now()};lessonRaiSave(st);const x=learningLog();x.push({type:'rai_lesson_question',year:lessonYear,section:lessonSection,topic:item?.topic||item?.title||'Aula',question:q.slice(0,240),at:Date.now()});learningSave(x)}};b.onclick=ask;const inp=b.closest('[data-lesson-rai]')?.querySelector('[data-lesson-rai-input]');if(inp)inp.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();ask()}}});
  m.querySelectorAll('[data-lesson-rai-next]').forEach(b=>b.onclick=()=>{const i=+b.dataset.lessonRaiNext,item=items[i],id=item?.id||('lesson-'+i),st=lessonRaiState(),step=(st[id]?.step||0)+1;st[id]={...(st[id]||{}),step,helps:(st[id]?.helps||0)+1,at:Date.now()};lessonRaiSave(st);const box=b.closest('[data-lesson-rai]'),msg=box?.querySelector('[data-lesson-rai-msg]');if(msg)msg.textContent=lessonRaiPrompt(item,step);const x=learningLog();x.push({type:'rai_lesson_help',year:lessonYear,section:lessonSection,topic:item?.topic||item?.title||'Aula',step,at:Date.now()});learningSave(x)});
  m.querySelectorAll('[data-lesson-rai-explain]').forEach(b=>b.onclick=()=>{const i=+b.dataset.lessonRaiExplain,item=items[i],msg=b.closest('[data-lesson-rai]')?.querySelector('[data-lesson-rai-msg]'),c=item?.concept||item?.objective||'',ex=item?.example||'';if(msg)msg.textContent=(lessonYear<=6?'Vamos usar palavras mais simples. ':'Vamos reorganizar a ideia. ')+(c?c+' ':'')+(ex?'Veja o exemplo da aula e identifique apenas o primeiro passo.':'Procure primeiro o que entra no problema, depois o que precisa acontecer.');});
 }
-function ensureLessonRaiDelegation(m,items){
+function ensureLessonRaiDelegation(m,items){return;/* legado: substituído pela R.A.I. global */
  if(m.dataset.raiDelegated==='1'){m._raiItems=items;return}
  m.dataset.raiDelegated='1';m._raiItems=items;
  m.addEventListener('click',e=>{
@@ -770,15 +771,15 @@ const raiTips={
 };
 let raiTipStep=0;
 function raiGlobalContext(){
- const lesson=document.querySelector('[data-lesson-rai]:not([hidden])');
- if(lesson)return {mode:'aula',item:null};
+ const lesson=document.querySelector('[data-lesson-rai-context]');
+ if(lesson){const i=Number(lesson.dataset.lessonRaiContext),items=(lessonBanks?.[lessonSection]||[]).filter(x=>Number(x.year||lessonYear)===Number(lessonYear)||!x.year);return {mode:'aula',item:items[i]||null};}
  if(location.pathname.includes('/hanoi'))return {mode:'hanoi',item:null};
  return {mode:'tangram',item:null};
 }
 function raiGlobalSuggestions(){
  const c=raiGlobalContext();
  if(c.mode==='hanoi')return ['Como começo?','Dê uma pista','Por que 2ⁿ − 1?','Voltar ao Tangram'];
- if(c.mode==='aula')return ['Explique esta aula','Dê um exemplo','Não entendi','Voltar às aulas'];
+ if(c.mode==='aula')return ['Explique esta aula','Dê um exemplo','Dê uma pista','Não entendi'];
  return ['Como resolvo sem resposta?','Explique o conceito','Abrir aulas','Abrir Torre de Hanói'];
 }
 function raiRenderSuggestions(){
@@ -802,7 +803,7 @@ function raiGlobalAnswer(q){
  if(inc)return inc;if(emotion)return emotion;if(utility)return utility;if(loose)return loose;if(every)return every;if(auth)return auth;if(proj)return proj;if(social)return social;
  const c=raiGlobalContext();
  if(c.mode==='hanoi')return 'Na Torre de Hanói, posso ajudar com estratégia, recursão, decomposição e número mínimo de movimentos sem resolver o desafio por você.';
- if(c.mode==='aula')return 'Estou com você nesta aula. Pergunte sobre o conceito, peça um exemplo ou diga qual parte ficou difícil.';
+ if(c.mode==='aula')return lessonRaiAdaptAnswer(c.item||{},raw,lessonRaiDoubt(c.item||{},raw));
  return lessonRaiDoubt({topic:'Tangram',concept:'geometria, lógica, composição e decomposição de figuras'},raw);
 }
 function raiOpen(){const p=document.querySelector('#rai-tutor-panel');if(p){p.hidden=false;raiRenderSuggestions();setTimeout(()=>document.querySelector('#rai-global-input')?.focus(),40)}document.querySelector('#app-menu')?.classList.remove('open');t2event('rai_tutor_open',{level:String((typeof levelIndex==='number'?levelIndex:0)+1)});}
