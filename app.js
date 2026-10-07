@@ -420,6 +420,17 @@ async function lessonRaiGenerative(item,q){
   if(!r.ok)return null;const d=await r.json();return d?.mode==='generative'&&d?.answer?String(d.answer).trim():null;
  }catch(_){return null}
 }
+function lessonRaiUtilityAnswer(q){
+ const n=raiNorm(q),now=new Date();
+ const time=()=>now.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+ const date=()=>now.toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'long',year:'numeric'});
+ if(/que horas|qual (e|é) a hora|horario agora|hora agora/.test(n))return 'Agora são '+time()+'.';
+ if(/que dia (e|é) hoje|qual a data|data de hoje|dia de hoje/.test(n))return 'Hoje é '+date()+'.';
+ if(/dia da semana|que dia da semana/.test(n))return 'Hoje é '+now.toLocaleDateString('pt-BR',{weekday:'long'})+'.';
+ if(/quanto tempo falta|cronometro|timer/.test(n))return 'Posso ajudar com tempo de atividade, mas preciso saber a duração ou o horário de término.';
+ if(/tempo hoje|clima|vai chover|temperatura|previsao do tempo/.test(n))return navigator.onLine?'Para clima e previsão eu preciso consultar uma fonte atualizada. No modo local não vou inventar esses dados.':'Estou offline, então não consigo confirmar o clima ou a previsão agora.';
+ return '';
+}
 function lessonRaiSocialAnswer(q){
  const n=raiNorm(q).trim();
  if(/^(oi|ola|opa|e ai|eae|salve|fala rai|bom dia|boa tarde|boa noite)[!?. ]*$/.test(n))return /bom dia/.test(n)?'Bom dia! 😊 Que bom ter você por aqui. Como posso ajudar na aula?':/boa tarde/.test(n)?'Boa tarde! 😊 Vamos aprender juntos. Em que posso ajudar?':/boa noite/.test(n)?'Boa noite! 😊 Estou por aqui. O que você quer entender melhor?':'Oi! 😊 Tudo certo? Pode mandar sua dúvida — vamos pensar juntos.';
@@ -433,11 +444,13 @@ function lessonRaiSocialAnswer(q){
 function lessonRaiDoubt(item,q){
  const raw=String(q||'').trim(),t=raw.toLowerCase(),concept=item?.concept||item?.objective||'',example=item?.example||'',y=Number(item?.year||lessonYear);
  const social=lessonRaiSocialAnswer(raw);
+ const utility=lessonRaiUtilityAnswer(raw);
  const follow=lessonRaiFollowup(item,raw),gloss=lessonRaiGlossary(raw);
  const authorship=lessonRaiAuthorshipAnswer(raw);
  const projectIdentity=lessonRaiProjectAnswer(raw);
  const conceptAnswer=lessonRaiConceptAnswer(item,raw);
  const smartConcept=lessonRaiSmartConcept(item,raw);
+ if(utility)return utility;
  if(social)return social;
  if(!raw)return 'Escreva sua dúvida com suas próprias palavras. Pode ser algo como “não entendi este conceito” ou “por que isso acontece?”.';
  if(authorship)return authorship;
