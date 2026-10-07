@@ -420,13 +420,25 @@ async function lessonRaiGenerative(item,q){
   if(!r.ok)return null;const d=await r.json();return d?.mode==='generative'&&d?.answer?String(d.answer).trim():null;
  }catch(_){return null}
 }
+function lessonRaiSocialAnswer(q){
+ const n=raiNorm(q).trim();
+ if(/^(oi|ola|opa|e ai|eae|salve|fala rai|bom dia|boa tarde|boa noite)[!?. ]*$/.test(n))return /bom dia/.test(n)?'Bom dia! 😊 Que bom ter você por aqui. Como posso ajudar na aula?':/boa tarde/.test(n)?'Boa tarde! 😊 Vamos aprender juntos. Em que posso ajudar?':/boa noite/.test(n)?'Boa noite! 😊 Estou por aqui. O que você quer entender melhor?':'Oi! 😊 Tudo certo? Pode mandar sua dúvida — vamos pensar juntos.';
+ if(/^(valeu|vlw|obrigado|obrigada|brigado|brigada|thanks|tmj)[!?. ]*$/.test(n))return /tmj|valeu|vlw/.test(n)?'Tamo junto! 😄 Quando precisar, chama a R.A.I.':'Por nada! 😊 Fico feliz em ajudar. Quando quiser, continuamos.';
+ if(/^(tudo bem|td bem|beleza|blz|suave|de boa|como vai|como voce esta|como vc ta)[!?. ]*$/.test(n))return 'Tudo certo por aqui! 😄 E com você? Se quiser, podemos continuar a aula ou conversar sobre alguma dúvida.';
+ if(/^(tchau|ate mais|ate logo|falou|flw)[!?. ]*$/.test(n))return 'Até mais! 👋 Bom estudo — quando voltar, continuamos daqui.';
+ if(/^(legal|massa|top|show|da hora|maneiro|bacana)[!?. ]*$/.test(n))return 'Que bom que curtiu! 😄 Quer continuar ou explorar um pouco mais esse assunto?';
+ if(/quem e voce|quem e a rai|se apresente/.test(n))return 'Eu sou a R.A.I., tutora digital do Tangram Educativo. Estou aqui para conversar, explicar, dar pistas e ajudar você a aprender sem fazer o trabalho no seu lugar. 🤖';
+ return '';
+}
 function lessonRaiDoubt(item,q){
  const raw=String(q||'').trim(),t=raw.toLowerCase(),concept=item?.concept||item?.objective||'',example=item?.example||'',y=Number(item?.year||lessonYear);
+ const social=lessonRaiSocialAnswer(raw);
  const follow=lessonRaiFollowup(item,raw),gloss=lessonRaiGlossary(raw);
  const authorship=lessonRaiAuthorshipAnswer(raw);
  const projectIdentity=lessonRaiProjectAnswer(raw);
  const conceptAnswer=lessonRaiConceptAnswer(item,raw);
  const smartConcept=lessonRaiSmartConcept(item,raw);
+ if(social)return social;
  if(!raw)return 'Escreva sua dúvida com suas próprias palavras. Pode ser algo como “não entendi este conceito” ou “por que isso acontece?”.';
  if(authorship)return authorship;
  if(projectIdentity)return projectIdentity;
