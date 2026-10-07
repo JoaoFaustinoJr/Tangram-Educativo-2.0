@@ -828,6 +828,19 @@ function raiWireGlobalChat(){
 }
 setTimeout(raiWireGlobalChat,0);
 document.querySelector('#rai-tutor-fab')?.addEventListener('click',raiOpen);
+// Aulas dinamicas: a mesma R.A.I. flutuante atende o clique por delegacao.
+document.addEventListener('click',e=>{
+ const b=e.target.closest('[data-open-global-rai]');
+ if(!b)return;
+ e.preventDefault();
+ const float=document.querySelector('#rai-float-wrap');
+ if(float)float.hidden=false;
+ raiOpen();
+ const panel=document.querySelector('#rai-tutor-panel');
+ if(panel)panel.hidden=false;
+ setTimeout(()=>document.querySelector('#rai-global-input')?.focus(),60);
+});
+
 document.querySelector('[data-menu="rai"]')?.addEventListener('click',raiOpen);
 document.querySelector('#rai-tutor-close')?.addEventListener('click',raiClose);
 document.querySelector('#rai-tutor-panel')?.addEventListener('click',e=>{if(e.target.id==='rai-tutor-panel')raiClose()});
