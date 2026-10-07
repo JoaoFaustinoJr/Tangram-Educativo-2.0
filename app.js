@@ -327,6 +327,27 @@ function lessonRaiIntent(q){
 function lessonRaiConceptPair(q){
  const n=raiNorm(q),keys=Object.keys(raiConceptGraph).filter(k=>n.includes(k));return keys.slice(0,2)
 }
+function lessonRaiLearnerLevel(item,q){
+ const n=raiNorm(q),h=lessonRaiConversationContext(item),recent=h.slice(-3).map(x=>raiNorm((x.q||'')+' '+(x.answer||''))).join(' ');
+ if(/nao entendi|confuso|dificil|mais simples|nao sei|socorro/.test(n+' '+recent))return 'support';
+ if(/por que|relacao|diferenca|e se|entendi certo|minha ideia/.test(n))return 'developing';
+ if(/generaliz|recurs|algorit|abstr|complex|formula|padrao/.test(n))return 'advanced';
+ return 'standard';
+}
+function lessonRaiAdaptiveTail(item,q){
+ const level=lessonRaiLearnerLevel(item,q),y=Number(item?.year||lessonYear);
+ if(level==='support')return y<=6?' Vamos em uma parte por vez. Qual palavra ficou difícil?':' Vamos reduzir o problema a uma única etapa. Qual é a primeira informação que você reconhece?';
+ if(level==='developing')return ' Agora explique com suas palavras o que você acha que acontece.';
+ if(level==='advanced')return ' Tente generalizar: essa ideia continuaria válida em outro caso?';
+ return '';
+}
+function lessonRaiAdaptAnswer(item,q,answer){
+ const a=String(answer||'').trim();if(!a)return a;
+ const tail=lessonRaiAdaptiveTail(item,q);
+ const level=lessonRaiLearnerLevel(item,q);
+ if(level==='support'){const first=a.split(/(?<=[.!?])\s+/).slice(0,2).join(' ');return first+tail}
+ return (a+tail).slice(0,520);
+}
 function lessonRaiSmartConcept(item,q){
  const keys=lessonRaiConceptPair(q),intent=lessonRaiIntent(q),y=Number(item?.year||lessonYear);
  if(keys.length>1&&intent==='compare'){const a=keys[0],b=keys[1];return (raiMiniGlossary[a]||raiConceptGraph[a].prompt)+' Já '+b+': '+String(raiMiniGlossary[b]||raiConceptGraph[b].prompt).replace(/^./,c=>c.toLowerCase());}
@@ -361,7 +382,7 @@ async function lessonRaiGenerative(item,q){
  try{
   const refs=lessonRaiKnowledge(item,q).slice(0,3).map(r=>({title:r.title||r.topic,concept:r.concept||r.objective||r.example}));
   const history=lessonRaiConversationContext(item).map(x=>({q:x.q,answer:x.answer}));
-  const r=await fetch(RAI_AI_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,lesson:{year:item?.year||lessonYear,title:item?.title||item?.topic,objective:item?.objective,concept:item?.concept,example:item?.example,challenge:item?.challenge},references:refs,history})});
+  const r=await fetch(RAI_AI_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,lesson:{year:item?.year||lessonYear,title:item?.title||item?.topic,objective:item?.objective,concept:item?.concept,example:item?.example,challenge:item?.challenge,learnerLevel:lessonRaiLearnerLevel(item,q)},references:refs,history})});
   if(!r.ok)return null;const d=await r.json();return d?.mode==='generative'&&d?.answer?String(d.answer).trim():null;
  }catch(_){return null}
 }
@@ -399,7 +420,7 @@ function ensureLessonRaiDelegation(m,items){
   const b=e.target.closest('[data-lesson-rai-ask]');if(!b)return;
   const list=m._raiItems||[],i=Number(b.dataset.lessonRaiAsk),item=list[i],box=b.closest('[data-lesson-rai]'),inp=box?.querySelector('[data-lesson-rai-input]'),msg=box?.querySelector('[data-lesson-rai-msg]'),q=(inp?.value||'').trim();
   if(!msg)return;
-  let answer=lessonRaiDoubt(item,q);const thread=box.querySelector('[data-lesson-rai-thread]');
+  let answer=lessonRaiAdaptAnswer(item,q,lessonRaiDoubt(item,q));const thread=box.querySelector('[data-lesson-rai-thread]');
   if(thread&&q){const turn=document.createElement('div');turn.className='rai-turn';turn.innerHTML='<p class="rai-user-q"><b>Você:</b> '+lessonEsc(q)+'</p><p class="rai-bot-a"><b>R.A.I.:</b> '+lessonEsc(answer)+'</p>';thread.appendChild(turn);thread.hidden=false;thread.scrollTop=thread.scrollHeight;inp.value='';msg.textContent='Pode continuar perguntando. Vou considerar esta aula e ajudar passo a passo.'}else msg.textContent=answer;
   msg.classList.remove('rai-answer-pop');void msg.offsetWidth;msg.classList.add('rai-answer-pop');
   if(q){const x=learningLog();x.push({type:'rai_lesson_question',year:lessonYear,section:lessonSection,topic:item?.topic||item?.title||'Aula',question:q.slice(0,240),at:Date.now()});learningSave(x);b.textContent='✓ Respondido';setTimeout(()=>b.textContent='Perguntar',1200)}
