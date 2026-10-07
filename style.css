@@ -1330,3 +1330,19 @@ body.rai-engaged .rai-float-wrap{filter:drop-shadow(0 5px 12px #0005)}
 .app-intro-sequence>*:nth-child(3){animation-delay:.72s!important}
 .app-intro-classroom{animation:classroomIntroStrong 1.45s cubic-bezier(.18,.82,.2,1) 1.02s both!important}
 @media(prefers-reduced-motion:reduce){.app-intro-sequence>*,.app-intro-classroom{animation:none!important}}
+
+/* v2.0.110 — abertura simples: X1 → Hanói → Gamer → Aulas */
+@keyframes modeIntroSequence{
+ 0%,100%{transform:none;filter:none;box-shadow:inherit}
+ 35%,65%{transform:none;filter:brightness(1.14);box-shadow:0 0 0 2px #49e4f477,0 0 18px #21d8ff33}
+}
+@keyframes classroomIntroSequence{
+ 0%,100%{transform:none;filter:none;box-shadow:inherit}
+ 30%,70%{transform:none;filter:brightness(1.12);box-shadow:0 0 0 2px #2fffc488,0 0 20px #12f0b838}
+}
+.app-intro-sequence>*{animation:modeIntroSequence .65s ease-in-out both!important}
+.app-intro-sequence>*:nth-child(1){animation-delay:.12s!important}
+.app-intro-sequence>*:nth-child(2){animation-delay:.72s!important}
+.app-intro-sequence>*:nth-child(3){animation-delay:1.32s!important}
+.app-intro-classroom{animation:classroomIntroSequence .78s ease-in-out 1.92s both!important}
+@media(prefers-reduced-motion:reduce){.app-intro-sequence>*,.app-intro-classroom{animation:none!important}}
