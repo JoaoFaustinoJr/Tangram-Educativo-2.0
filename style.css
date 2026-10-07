@@ -1259,3 +1259,15 @@ linear-gradient(0deg,transparent 48%,#43c9e9 49% 51%,transparent 52%);clip-path:
 #lessons-panel.lesson-focus .lesson-content{padding-top:8px!important}
 #lessons-panel.lesson-focus .lessons-card{width:min(980px,100%)!important}
 @media(max-width:620px){#lessons-panel.lesson-focus .lessons-card{padding-left:10px!important;padding-right:10px!important}#lessons-panel.lesson-focus .lesson-content{padding:6px!important}}
+
+/* v2.0.105 — R.A.I. flutuante em zona segura, sem cobrir ferramentas */
+.rai-float-wrap{right:18px!important;bottom:104px!important;align-items:center!important}
+.rai-click-call{margin-bottom:0!important;order:0}
+.rai-float-wrap .rai-tutor-fab{order:1}
+body.rai-engaged .rai-click-call{opacity:0!important;pointer-events:none!important;transform:translateX(8px) scale(.92)!important}
+body.rai-engaged .rai-float-wrap{filter:drop-shadow(0 5px 12px #0005)}
+@media(max-width:520px){
+ .rai-float-wrap{right:12px!important;bottom:94px!important;gap:5px!important}
+ .rai-click-call{margin-bottom:0!important;font-size:10px!important}
+}
+@media(max-height:720px){.rai-float-wrap{bottom:82px!important}}
