@@ -1299,3 +1299,13 @@ body.rai-engaged .rai-float-wrap{filter:drop-shadow(0 5px 12px #0005)}
  #rai-float-wrap.rai-float-wrap{right:24px!important;bottom:28px!important;max-width:none!important}
  #rai-float-wrap .rai-tutor-fab span{display:inline!important}
 }
+
+/* v2.0.108 — sequência de entrada dos ambientes */
+@keyframes modeIntroPulse{0%{transform:translateY(8px) scale(.97);opacity:.68}45%{transform:translateY(-3px) scale(1.018);opacity:1;box-shadow:0 0 0 1px #49e4f466,0 0 24px #21d8ff26}100%{transform:none;opacity:1}}
+@keyframes classroomIntro{0%,18%{transform:translateY(8px) scale(.985);opacity:.72}48%{transform:translateY(-2px) scale(1.012);opacity:1;box-shadow:0 0 0 2px #23efb899,0 0 34px #16e5b14a}72%{box-shadow:0 0 0 1px #23efb866,0 0 18px #16e5b126}100%{transform:none;opacity:1;box-shadow:inherit}}
+.app-intro-sequence>*{animation:modeIntroPulse .7s cubic-bezier(.2,.8,.2,1) both}
+.app-intro-sequence>*:nth-child(1){animation-delay:.18s}
+.app-intro-sequence>*:nth-child(2){animation-delay:.38s}
+.app-intro-sequence>*:nth-child(3){animation-delay:.58s}
+.app-intro-classroom{animation:classroomIntro 1.25s cubic-bezier(.2,.8,.2,1) .88s both}
+@media(prefers-reduced-motion:reduce){.app-intro-sequence>*,.app-intro-classroom{animation:none!important}}
