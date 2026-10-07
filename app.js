@@ -313,6 +313,15 @@ function lessonRaiFollowup(item,q){
  if(/isso|esse|essa|ele|ela|entao/.test(t)&&last?.answer)return 'Você está continuando a ideia anterior. Em resumo: '+String(last.answer).slice(0,220)+' Agora aplique essa ideia à sua nova pergunta: “'+String(q).slice(0,100)+'”.';
  return '';
 }
+const RAI_AI_URL='https://hfryzntefzjlqitpxbxw.supabase.co/functions/v1/rai-tutor-ai';
+async function lessonRaiGenerative(item,q){
+ try{
+  const refs=lessonRaiKnowledge(item,q).slice(0,3).map(r=>({title:r.title||r.topic,concept:r.concept||r.objective||r.example}));
+  const history=lessonRaiConversationContext(item).map(x=>({q:x.q,answer:x.answer}));
+  const r=await fetch(RAI_AI_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,lesson:{year:item?.year||lessonYear,title:item?.title||item?.topic,objective:item?.objective,concept:item?.concept,example:item?.example,challenge:item?.challenge},references:refs,history})});
+  if(!r.ok)return null;const d=await r.json();return d?.mode==='generative'&&d?.answer?String(d.answer).trim():null;
+ }catch(_){return null}
+}
 function lessonRaiDoubt(item,q){
  const raw=String(q||'').trim(),t=raw.toLowerCase(),concept=item?.concept||item?.objective||'',example=item?.example||'',y=Number(item?.year||lessonYear);
  const follow=lessonRaiFollowup(item,raw),gloss=lessonRaiGlossary(raw);
@@ -343,7 +352,7 @@ function ensureLessonRaiDelegation(m,items){
   const b=e.target.closest('[data-lesson-rai-ask]');if(!b)return;
   const list=m._raiItems||[],i=Number(b.dataset.lessonRaiAsk),item=list[i],box=b.closest('[data-lesson-rai]'),inp=box?.querySelector('[data-lesson-rai-input]'),msg=box?.querySelector('[data-lesson-rai-msg]'),q=(inp?.value||'').trim();
   if(!msg)return;
-  const answer=lessonRaiDoubt(item,q),thread=box.querySelector('[data-lesson-rai-thread]');
+  let answer=lessonRaiDoubt(item,q);const thread=box.querySelector('[data-lesson-rai-thread]');
   if(thread&&q){const turn=document.createElement('div');turn.className='rai-turn';turn.innerHTML='<p class="rai-user-q"><b>Você:</b> '+lessonEsc(q)+'</p><p class="rai-bot-a"><b>R.A.I.:</b> '+lessonEsc(answer)+'</p>';thread.appendChild(turn);thread.hidden=false;thread.scrollTop=thread.scrollHeight;inp.value='';msg.textContent='Pode continuar perguntando. Vou considerar esta aula e ajudar passo a passo.'}else msg.textContent=answer;
   msg.classList.remove('rai-answer-pop');void msg.offsetWidth;msg.classList.add('rai-answer-pop');
   if(q){const x=learningLog();x.push({type:'rai_lesson_question',year:lessonYear,section:lessonSection,topic:item?.topic||item?.title||'Aula',question:q.slice(0,240),at:Date.now()});learningSave(x);b.textContent='✓ Respondido';setTimeout(()=>b.textContent='Perguntar',1200)}
