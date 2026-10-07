@@ -1375,3 +1375,6 @@ body.rai-engaged .rai-float-wrap{filter:drop-shadow(0 5px 12px #0005)}
 
 /* v2.0.179 — confirmação visual da resposta da R.A.I. */
 .rai-answer-pop{animation:raiAnswerPop .28s ease-out;background:#ffffff12;border-left:3px solid #65d7e7;padding:9px 11px;border-radius:9px}@keyframes raiAnswerPop{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* v2.0.180 — conversa contínua com a R.A.I. */
+.lesson-rai-thread{max-height:260px;overflow:auto;margin:10px 0;padding:8px;border-radius:14px;background:#071f36aa;border:1px solid #6bc7dc55}.rai-turn{padding:7px 5px;border-bottom:1px solid #ffffff18}.rai-turn:last-child{border-bottom:0}.rai-turn p{margin:4px 0;line-height:1.4}.rai-user-q{color:#f6e7b4}.rai-bot-a{color:#e7f8fb}.rai-user-q b{color:#f0cf79}.rai-bot-a b{color:#65d7e7}
