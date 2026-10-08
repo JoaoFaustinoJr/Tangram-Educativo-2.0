@@ -105,7 +105,33 @@ document.querySelector('.gamer')?.addEventListener('click',gamerEnter);gamerStop
 const lessonSources={fund:'rai-fundamentos-v17.json',pc:'rai-pensamento-v17.json',prog:'rai-programacao-v17.json',math:'rai-matematica-v17.json',digital:'rai-mundo-digital-v17.json',robotics:'rai-robotica-t3-v18.json',history:'rai-programacao-v17.json'};
 let lessonBanks=null,lessonYear=6,lessonSection='robotics',lessonAccess='standard',lessonAccessCollapsed=false,lessonMagnifier=null,lessonZoom=Number(localStorage.getItem('tangram2LessonZoom')||190);
 let lessonMission=null;
-async function ensureLessons(){if(lessonBanks)return lessonBanks;lessonBanks={};await Promise.all(Object.entries(lessonSources).map(async([k,u])=>{try{lessonBanks[k]=await fetch(u+'?v=389',{cache:'no-store'}).then(r=>r.json())}catch(_){lessonBanks[k]=[]}}));return lessonBanks}
+let lessonLoading=null,lessonLoadFailures=[];
+async function ensureLessons(){
+ if(lessonLoading)return lessonLoading;
+ lessonLoading=(async()=>{
+  const banks=lessonBanks||{},failures=[];
+  await Promise.all(Object.entries(lessonSources).map(async([k,u])=>{
+   if(Array.isArray(banks[k])&&banks[k].length)return;
+   let ok=false;
+   for(let attempt=0;attempt<3&&!ok;attempt++){
+    try{
+     const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),10000);
+     let response;
+     try{response=await fetch(u+'?v=389',{cache:'no-store',signal:controller.signal})}
+     finally{clearTimeout(timer)}
+     if(!response.ok)throw new Error('HTTP '+response.status);
+     const data=await response.json();
+     if(!Array.isArray(data)||!data.length)throw new Error('Conteúdo vazio');
+     banks[k]=data;ok=true;
+    }catch(e){if(attempt<2)await new Promise(resolve=>setTimeout(resolve,400*(attempt+1)))}
+   }
+   if(!ok){failures.push(k);banks[k]=Array.isArray(banks[k])?banks[k]:[]}
+  }));
+  lessonBanks=banks;lessonLoadFailures=failures;
+  return banks;
+ })();
+ try{return await lessonLoading}finally{lessonLoading=null}
+}
 function closeLessonsHome(modal=document.querySelector('#lessons-panel')){setLessonMenuVisibility(false);modal?.classList.remove('show','expanded');document.querySelector('#lesson-magnifier')?.remove();lessonMagnifier=null;window.speechSynthesis?.cancel();try{musicDuck(false)}catch(_){}document.querySelector('main')?.scrollIntoView({behavior:document.body.classList.contains('comfort-motion')?'auto':'smooth',block:'start'})}
 function goMain(){document.querySelectorAll('.lessons-panel.show,.teacher-panel.show,.student-panel.show,.about-panel.show,.comfort-panel.show,.audio-panel.show,.rai-tutor-panel.show').forEach(x=>x.classList.remove('show','expanded'));document.querySelector('#lesson-magnifier')?.remove();lessonMagnifier=null;window.speechSynthesis?.cancel();window.scrollTo({top:0,behavior:document.body.classList.contains('comfort-motion')?'auto':'smooth'})}
 function setLessonMenuVisibility(inLesson){
@@ -113,7 +139,14 @@ function setLessonMenuVisibility(inLesson){
  if(menu){menu.hidden=!!inLesson;menu.setAttribute('aria-hidden',String(!!inLesson));}
  if(appMenu){appMenu.classList.remove('open');appMenu.hidden=!!inLesson;}
 }
-async function showLessons(){setLessonMenuVisibility(true);await ensureLessons();let modal=document.querySelector('#lessons-panel');if(!modal){modal=document.createElement('div');modal.id='lessons-panel';modal.className='lessons-panel';modal.innerHTML='<div class="lessons-card"><div class="lessons-actions"><button class="lessons-home" type="button" aria-label="Voltar ao início" title="Início">⌂ Início</button><button class="lessons-expand" type="button" aria-label="Expandir aulas" title="Expandir">⛶</button><button class="lessons-x" type="button" aria-label="Fechar">×</button></div><h3>🎓 Sala de Aula</h3><p class="lessons-subtitle">Prof. João Faustino Júnior · Educação Digital, Programação e Robótica</p><div class="adapted-callout"><b>♿ Aulas com recursos de acessibilidade</b><span>Escolha como prefere acompanhar o conteúdo.</span><div class="lesson-access-modes"><button data-access="standard">📘 Padrão</button><button data-access="visual">🔊 Deficiência visual</button><button data-access="hearing">👂 Déficit auditivo</button><button data-access="tea">🧩 TEA</button></div><small class="access-note">A adaptação muda a apresentação da aula, sem reduzir o conteúdo.</small></div><div class="lesson-years"></div><div class="lesson-sections"></div><div class="lesson-library"></div></div>';document.body.appendChild(modal);modal.querySelector('.lessons-x').onclick=()=>closeLessonsHome(modal);modal.querySelector('.lessons-home').onclick=()=>closeLessonsHome(modal);modal.querySelector('.lessons-expand').onclick=()=>{const on=modal.classList.toggle('expanded'),b=modal.querySelector('.lessons-expand');b.textContent=on?'↙':'⛶';b.title=on?'Reduzir':'Expandir';b.setAttribute('aria-label',on?'Reduzir aulas':'Expandir aulas')};modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('show')})}renderLessons();modal.classList.add('show')}
+async function showLessons(){setLessonMenuVisibility(true);let modal=document.querySelector('#lessons-panel');if(!modal){modal=document.createElement('div');modal.id='lessons-panel';modal.className='lessons-panel';modal.innerHTML='<div class="lessons-card"><div class="lessons-actions"><button class="lessons-home" type="button" aria-label="Voltar ao início" title="Início">⌂ Início</button><button class="lessons-expand" type="button" aria-label="Expandir aulas" title="Expandir">⛶</button><button class="lessons-x" type="button" aria-label="Fechar">×</button></div><h3>🎓 Sala de Aula</h3><p class="lessons-subtitle">Prof. João Faustino Júnior · Educação Digital, Programação e Robótica</p><div class="adapted-callout"><b>♿ Aulas com recursos de acessibilidade</b><span>Escolha como prefere acompanhar o conteúdo.</span><div class="lesson-access-modes"><button data-access="standard">📘 Padrão</button><button data-access="visual">🔊 Deficiência visual</button><button data-access="hearing">👂 Déficit auditivo</button><button data-access="tea">🧩 TEA</button></div><small class="access-note">A adaptação muda a apresentação da aula, sem reduzir o conteúdo.</small></div><div class="lesson-years"></div><div class="lesson-sections"></div><div class="lesson-library"></div></div>';document.body.appendChild(modal);modal.querySelector('.lessons-x').onclick=()=>closeLessonsHome(modal);modal.querySelector('.lessons-home').onclick=()=>closeLessonsHome(modal);modal.querySelector('.lessons-expand').onclick=()=>{const on=modal.classList.toggle('expanded'),b=modal.querySelector('.lessons-expand');b.textContent=on?'↙':'⛶';b.title=on?'Reduzir':'Expandir';b.setAttribute('aria-label',on?'Reduzir aulas':'Expandir aulas')};modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('show')})}modal.classList.add('show');
+ const library=modal.querySelector('.lesson-library');
+ if(library)library.innerHTML='<p role="status" style="padding:16px;text-align:center">Carregando aulas…</p>';
+ try{await ensureLessons();if(!modal.classList.contains('show'))return;renderLessons();
+  if(lessonLoadFailures.length){const note=document.createElement('div');note.className='lesson-load-notice';note.setAttribute('role','status');note.style.cssText='margin:12px;padding:12px;border:1px solid #d6ad4d;border-radius:12px;background:#fff8e6;color:#18385e';note.innerHTML='<b>Alguns conteúdos não carregaram.</b> Verifique sua conexão e tente novamente. <button type="button" class="lesson-retry" style="margin-left:8px;padding:8px">Tentar novamente</button>';modal.querySelector('.lesson-load-notice')?.remove();modal.querySelector('.lessons-subtitle')?.after(note);note.querySelector('button').onclick=()=>showLessons();}
+  else modal.querySelector('.lesson-load-notice')?.remove();
+ }catch(e){if(library)library.textContent='Não foi possível carregar as aulas. Feche e abra novamente para tentar.'}
+}
 function lessonEsc(v){return String(v??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 function lessonVisualStrip(x){
  const items=Array.isArray(x?.visuals)?x.visuals:[];
