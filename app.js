@@ -801,6 +801,19 @@ function raiNavigationCommand(q){
  if(/^(voltar|volte)[.! ]*$/.test(n)){history.back();return '__nav__';}
  return '';
 }
+function raiLessonConversationAnswer(item,q){
+ const n=raiNorm(q),title=String(item?.title||item?.topic||'esta aula'),concept=String(item?.concept||item?.objective||''),example=String(item?.example||'');
+ const history=(()=>{try{return JSON.parse(sessionStorage.getItem('raiGlobalLessonThread')||'[]')}catch(_){return []}})();
+ const previous=history.at(-1);
+ if(/^(sim|quero|pode|claro|por favor|ok|isso|vamos|continue|continua)[.! ]*$/.test(n)){
+   if(previous?.answer?.includes('O que você já sabe'))return example?'Um exemplo desta aula: '+example.slice(0,330)+' Qual seria o primeiro passo?':'Vamos começar pelo essencial: '+concept.slice(0,280)+' Consegue explicar essa ideia com suas palavras?';
+   return example?'Vamos continuar com um exemplo: '+example.slice(0,330)+' Qual parte você reconhece?':'Vamos continuar. '+concept.slice(0,300)+' Qual etapa ficou menos clara?';
+ }
+ if(/^(nao|não|nao sei|sei nao|nenhum|nada)[.! ]*$/.test(n))return 'Tudo bem. Vamos começar pelo básico: '+(concept||title).slice(0,300)+' Pense em uma situação simples do cotidiano que use essa ideia.';
+ if(/^(por que|porque|como assim|explica melhor|mais simples|nao entendi|não entendi)[.!? ]*$/.test(n))return 'Vou explicar de outro jeito: '+(example||concept||title).slice(0,350)+' Qual parte parece mais difícil?';
+ if(/^(outro|outro exemplo|mais um|exemplo)[.!? ]*$/.test(n))return example?'Use este exemplo como ponto de partida: '+example.slice(0,340)+' Agora imagine uma situação semelhante.':'Imagine uma tarefa grande dividida em pequenas etapas. Qual seria a primeira?';
+ return '';
+}
 function raiGlobalAnswer(q){
  const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const nav=raiNavigationCommand(raw);if(nav)return nav;
  const social=lessonRaiSocialAnswer(raw),utility=lessonRaiUtilityAnswer(raw),every=lessonRaiEverydayAnswer(raw),loose=lessonRaiLooseMath(raw),emotion=lessonRaiEmotionAnswer(raw),inc=lessonRaiInclusionAnswer(raw),auth=lessonRaiAuthorshipAnswer(raw),proj=lessonRaiProjectAnswer(raw);
@@ -809,6 +822,7 @@ function raiGlobalAnswer(q){
  if(c.mode==='hanoi')return 'Na Torre de Hanói, posso ajudar com estratégia, recursão, decomposição e número mínimo de movimentos sem resolver o desafio por você.';
  if(c.mode==='aula'){
  const item=c.item||{};
+ const follow=raiLessonConversationAnswer(item,raw);if(follow)return follow;
  if(/explique esta aula|resuma esta aula|o que vou aprender|sobre o que e esta aula/.test(raiNorm(raw))){
  const title=String(item.title||item.topic||'o assunto desta aula');
  const concept=String(item.concept||item.objective||item.example||'Vamos descobrir a ideia principal observando o conteúdo.');
@@ -826,7 +840,7 @@ function raiGuide(kind){const arr=raiTips[kind]||raiTips.strategy;const msg=docu
 function raiWireGlobalChat(){
  const panel=document.querySelector('#rai-tutor-panel'),input=document.querySelector('#rai-global-input'),send=document.querySelector('#rai-global-send'),msg=document.querySelector('#rai-tutor-message');
  if(!panel||!input||!send)return;
- const ask=()=>{const q=input.value.trim();if(!q)return;let ans;try{ans=raiGlobalAnswer(q)}catch(err){console.error('RAI',err);ans='Não consegui interpretar esta pergunta. Pode tentar com outras palavras?'}if(ans==='__nav__'){input.value='';return;}if(msg)msg.textContent=String(ans||'Vamos tentar novamente.');input.value='';try{localStorage.setItem('tangram2RaiGlobal',JSON.stringify({q,answer:ans,at:Date.now()}))}catch(_){}};
+ const ask=()=>{const q=input.value.trim();if(!q)return;let ans;try{ans=raiGlobalAnswer(q)}catch(err){console.error('RAI',err);ans='Não consegui interpretar esta pergunta. Pode tentar com outras palavras?'}if(ans==='__nav__'){input.value='';return;}if(msg)msg.textContent=String(ans||'Vamos tentar novamente.');try{const ctx=raiGlobalContext(),key='raiGlobalLessonThread';if(ctx.mode==='aula'){const history=JSON.parse(sessionStorage.getItem(key)||'[]');history.push({q,answer:String(ans||''),lesson:ctx.item?.id||ctx.item?.title||'',at:Date.now()});sessionStorage.setItem(key,JSON.stringify(history.slice(-8)));}}catch(_){}input.value='';try{localStorage.setItem('tangram2RaiGlobal',JSON.stringify({q,answer:ans,at:Date.now()}))}catch(_){}};
  send.onclick=ask;input.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();ask()}};
  panel.querySelector('#rai-global-mic')?.addEventListener('click',e=>raiListen(input,e.currentTarget));
  panel.querySelector('#rai-global-speak')?.addEventListener('click',()=>{if(msg?.textContent)raiSpeak(msg.textContent)});
