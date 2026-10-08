@@ -882,6 +882,16 @@ function raiGlobalAnswer(q){
   const context=raiGlobalContext();
   return context.mode==='aula'?'Claro! 😊 Estou acompanhando esta aula. Você quer que eu explique o assunto, dê um exemplo ou ajude com uma etapa do desafio?':'Claro! 😊 Estou aqui para ajudar. Você quer abrir uma aula, escolher um desafio ou tirar uma dúvida? Diga o que precisa.';
  }
+ const normalized=raiNorm(raw).replace(/[!?.,;:]+/g,' ').replace(/\s+/g,' ').trim();
+ const recent=(()=>{try{const h=JSON.parse(sessionStorage.getItem('raiGlobalLessonThread')||'[]');const ctx=raiGlobalContext(),id=ctx.mode==='aula'?(ctx.item?.id||ctx.item?.title||''):'rai-home';return [...h].reverse().find(x=>x.lesson===id)||null}catch(_){return null}})();
+ if(/^(pode me ajudar|me ajuda|preciso de ajuda|quero ajuda|pode ajudar|ajuda ai|socorro)$/.test(normalized))return raiGlobalContext().mode==='aula'?'Claro! Posso explicar o conteúdo desta aula, mostrar um exemplo ou dar uma pista para o desafio. O que prefere?':'Claro! Posso ajudar você a encontrar uma aula, abrir um desafio ou entender algum assunto. O que gostaria de fazer?';
+ if(recent&&/^(e por que|por que isso|porque isso|e isso|como assim|me explica melhor|explique melhor|pode explicar melhor|e depois|continue|continua|mais um exemplo|outro exemplo)$/.test(normalized)){
+   const ctx=raiGlobalContext(),item=ctx.mode==='aula'?ctx.item:null;
+   if(ctx.mode==='aula'&&item)return raiLessonConversationAnswer(item,raw)||('Vamos continuar com '+String(item.title||item.topic||'o conteúdo da aula')+'. '+String(item.example||item.concept||item.objective||'').slice(0,260)+' Qual parte você quer aprofundar?');
+   if(/exemplo/.test(normalized))return 'Um exemplo: para montar uma figura, observe as peças, escolha uma posição e teste o encaixe. Qual peça você tentaria primeiro?';
+   if(/depois|continue|continua/.test(normalized))return 'Vamos continuar. '+String(recent.answer||'').slice(0,190)+' Qual parte você quer explorar agora: o conceito, um exemplo ou um desafio?';
+   return 'Sobre o que acabamos de conversar: '+String(recent.answer||'').slice(0,190)+' Posso explicar com um exemplo ou em etapas. O que prefere?';
+ }
  const social=lessonRaiSocialAnswer(raw),utility=lessonRaiUtilityAnswer(raw),every=lessonRaiEverydayAnswer(raw),loose=lessonRaiLooseMath(raw),emotion=lessonRaiEmotionAnswer(raw),inc=lessonRaiInclusionAnswer(raw),auth=lessonRaiAuthorshipAnswer(raw),proj=lessonRaiProjectAnswer(raw);
  if(inc)return inc;if(emotion)return emotion;if(utility)return utility;if(loose)return loose;if(every)return every;if(auth)return auth;if(proj)return proj;if(social)return social;
  const c=raiGlobalContext();
