@@ -817,7 +817,7 @@ function raiGlobalAnswer(q){
 }
  if(/de uma pista/.test(raiNorm(raw)))return lessonRaiPrompt(item,1);
  if(/de um exemplo|mostre um exemplo|exemplo desta aula/.test(raiNorm(raw))&&item.example)return 'Vamos usar o exemplo desta aula: '+String(item.example).slice(0,360)+' O que mudaria se alterássemos uma parte?';
- return lessonRaiAdaptAnswer(item,raw,lessonRaiDoubt(item,raw));
+ return lessonRaiAdaptAnswer(item,raw,lessonRaiDoubt(item,raw))||'Conte qual parte desta aula você quer compreender melhor.';
 }
  return lessonRaiDoubt({topic:'Tangram',concept:'geometria, lógica, composição e decomposição de figuras'},raw);
 }
@@ -827,7 +827,7 @@ function raiGuide(kind){const arr=raiTips[kind]||raiTips.strategy;const msg=docu
 function raiWireGlobalChat(){
  const panel=document.querySelector('#rai-tutor-panel'),input=document.querySelector('#rai-global-input'),send=document.querySelector('#rai-global-send'),msg=document.querySelector('#rai-tutor-message');
  if(!panel||!input||!send)return;
- const ask=()=>{const q=input.value.trim();if(!q)return;const ans=raiGlobalAnswer(q);if(ans==='__nav__'){input.value='';return;}if(msg)msg.textContent=ans;input.value='';try{localStorage.setItem('tangram2RaiGlobal',JSON.stringify({q,answer:ans,at:Date.now()}))}catch(_){}};
+ const ask=()=>{const q=input.value.trim();if(!q)return;let ans;try{ans=raiGlobalAnswer(q)}catch(err){console.error('RAI',err);ans='Não consegui interpretar esta pergunta. Pode tentar com outras palavras?'}if(ans==='__nav__'){input.value='';return;}if(msg)msg.textContent=String(ans||'Vamos tentar novamente.');input.value='';try{localStorage.setItem('tangram2RaiGlobal',JSON.stringify({q,answer:ans,at:Date.now()}))}catch(_){}};
  send.onclick=ask;input.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();ask()}};
  panel.querySelector('#rai-global-mic')?.addEventListener('click',e=>raiListen(input,e.currentTarget));
  panel.querySelector('#rai-global-speak')?.addEventListener('click',()=>{if(msg?.textContent)raiSpeak(msg.textContent)});
