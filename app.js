@@ -772,7 +772,12 @@ const raiTips={
 let raiTipStep=0;
 function raiGlobalContext(){
  const lesson=[...document.querySelectorAll('[data-lesson-rai-context]')].find(el=>el.getClientRects().length&&!!el.closest(':not([hidden])')) || null;
- if(lesson){const i=Number(lesson.dataset.lessonRaiContext),items=(lessonBanks?.[lessonSection]||[]).filter(x=>Number(x.year||lessonYear)===Number(lessonYear)||!x.year);return {mode:'aula',item:items[i]||null};}
+ if(lesson){
+ const i=Number(lesson.dataset.lessonRaiContext);
+ const candidates=(lessonBanks?.[lessonSection]||[]).filter(x=>Number(x.year||lessonYear)===Number(lessonYear)||!x.year);
+ const item=candidates[i]||null;
+ return {mode:'aula',item};
+}
  if(location.pathname.includes('/hanoi'))return {mode:'hanoi',item:null};
  return {mode:'tangram',item:null};
 }
@@ -805,9 +810,13 @@ function raiGlobalAnswer(q){
  if(c.mode==='hanoi')return 'Na Torre de Hanói, posso ajudar com estratégia, recursão, decomposição e número mínimo de movimentos sem resolver o desafio por você.';
  if(c.mode==='aula'){
  const item=c.item||{};
- if(/explique esta aula|resuma esta aula/.test(raiNorm(raw)))return lessonRaiAdaptAnswer(item,raw,String(item.concept||item.objective||item.example||'Vamos identificar juntos o conceito central desta aula.'));
+ if(/explique esta aula|resuma esta aula|o que vou aprender|sobre o que e esta aula/.test(raiNorm(raw))){
+ const title=String(item.title||item.topic||'o assunto desta aula');
+ const concept=String(item.concept||item.objective||item.example||'Vamos descobrir a ideia principal observando o conteúdo.');
+ return 'Nesta aula, estamos estudando '+title+'. '+concept.slice(0,360)+' O que você já sabe sobre isso?';
+}
  if(/de uma pista/.test(raiNorm(raw)))return lessonRaiPrompt(item,1);
- if(/de um exemplo/.test(raiNorm(raw))&&item.example)return lessonRaiAdaptAnswer(item,raw,String(item.example));
+ if(/de um exemplo|mostre um exemplo|exemplo desta aula/.test(raiNorm(raw))&&item.example)return 'Vamos usar o exemplo desta aula: '+String(item.example).slice(0,360)+' O que mudaria se alterássemos uma parte?';
  return lessonRaiAdaptAnswer(item,raw,lessonRaiDoubt(item,raw));
 }
  return lessonRaiDoubt({topic:'Tangram',concept:'geometria, lógica, composição e decomposição de figuras'},raw);
