@@ -913,6 +913,14 @@ function raiGlobalAnswer(q){
    if(/^(outro|outro exemplo|mais um)[.!? ]*$/.test(n))return 'Outro exemplo: programar um robô é dividir uma tarefa em comandos simples, como avançar, virar e parar. Qual comando você daria primeiro?';
    if(/^(pode repetir|repita)[.!? ]*$/.test(n))return String(previousHome.answer||'');
  }
+ const prior=previousHome?.answer||'';
+ if(/^(por que isso e importante|por que e importante|onde usamos isso|onde uso isso|como funciona isso|me de um exemplo|de um exemplo|pode explicar melhor|explique melhor)[?!. ]*$/.test(n)&&previousHome){
+   if(/por que/.test(n))return 'Isso importa porque ajuda a pensar antes de agir e a resolver problemas em etapas. Por exemplo, um robô precisa reconhecer o caminho antes de decidir para onde ir. Quer experimentar essa ideia em uma aula?';
+   if(/onde/.test(n))return 'Você usa isso ao seguir uma receita, organizar uma tarefa ou orientar um robô: observa o objetivo e divide o trabalho em passos. Qual desses exemplos você prefere explorar?';
+   if(/exemplo/.test(n))return 'Imagine um robô que precisa chegar à porta: levantar, avançar, observar obstáculos, virar e parar. Qual etapa depende de perceber o ambiente?';
+   return 'Vou explicar em partes: primeiro identificamos o objetivo; depois dividimos o problema; por fim testamos cada etapa. Qual delas você quer entender melhor?';
+ }
+ if(/^(pode me ajudar|me ajuda|preciso de ajuda|pode ajudar|me ajude)[?!. ]*$/.test(n))return 'Claro! Posso ajudar você a estudar, encontrar uma aula ou praticar um desafio. O que você quer fazer primeiro?';
  const follow=raiLessonConversationAnswer(home,raw);if(follow)return follow;
  if(/^(aulas|as aulas|quero aulas|estudar|aprender)[.!? ]*$/.test(n))return 'Ótimo! Abra Aulas no menu e escolha sua turma, do quinto ao nono ano. Posso ajudar a escolher um tema: lógica, programação, robótica ou geometria.';
  if(/^(desafios|os desafios|jogar|quero desafios)[.!? ]*$/.test(n))return 'Nos desafios você pratica observação, lógica e estratégia. Podemos começar pelo Tangram ou pela Torre de Hanói. Qual você prefere?';
@@ -923,7 +931,9 @@ function raiGlobalAnswer(q){
  if(/explique o conceito|me explica|explique isso/.test(n))return 'Uma ideia central do Tangram é decompor um problema: observar as partes, testar possibilidades e combinar soluções. Em qual desafio você quer aplicar essa ideia?';
  if(/como resolvo sem resposta|d[eê] uma pista|me ajude no desafio/.test(n))return 'Comece observando o objetivo e o que já está disponível. Qual é a primeira peça ou etapa que você consegue identificar? Posso orientar sem entregar a solução.';
  if(/abrir aulas|quero estudar|ver aulas/.test(n))return 'Posso ajudar você a encontrar as aulas. Use o menu Aulas e escolha o ano ou o conteúdo que deseja estudar.';
- return lessonRaiAdaptAnswer(home,raw,lessonRaiDoubt(home,raw))||'Posso ajudar com aulas, desafios, conceitos e navegação. O que você gostaria de fazer?';
+ const fallback=lessonRaiDoubt(home,raw);
+ if(fallback&&fallback!==home.concept&&!/grafos ajudam|listas lineares/.test(raiNorm(fallback)))return lessonRaiAdaptAnswer(home,raw,fallback);
+ return 'Quero entender sua dúvida. Você está tentando abrir uma atividade, compreender um conceito ou resolver um desafio?';
 }
 function raiOpen(){const p=document.querySelector('#rai-tutor-panel');if(p){p.hidden=false;raiRenderSuggestions();setTimeout(()=>document.querySelector('#rai-global-input')?.focus(),40)}document.querySelector('#app-menu')?.classList.remove('open');t2event('rai_tutor_open',{level:String((typeof levelIndex==='number'?levelIndex:0)+1)});}
 function raiClose(){const p=document.querySelector('#rai-tutor-panel');if(p)p.hidden=true;}
