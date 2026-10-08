@@ -784,21 +784,38 @@ function raiGlobalSuggestions(){
  const c=raiGlobalContext();
  if(c.mode==='hanoi')return ['Como começo?','Dê uma pista','Por que 2ⁿ − 1?','Voltar ao Tangram'];
  if(c.mode==='aula')return ['Explique esta aula','Dê um exemplo','Dê uma pista','Não entendi'];
- return ['O que posso fazer aqui?','Como resolvo sem resposta?','Explique o conceito','Abrir Torre de Hanói'];
+ return ['Abrir aulas','Escolher desafios','Meu progresso','Abrir Torre de Hanói'];
 }
 function raiRenderSuggestions(){
  const box=document.querySelector('#rai-global-suggestions');if(!box)return;
  box.innerHTML=raiGlobalSuggestions().map(x=>'<button type="button" data-rai-suggest="'+lessonEsc(x)+'">'+lessonEsc(x)+'</button>').join('');
 }
 function raiNavigationCommand(q){
- const n=raiNorm(q);
- if(/^(feche|fecha|fechar rai|pode fechar)( a rai| o painel)?[.! ]*$/.test(n)){raiClose();return '__nav__';}
- if(/^(va para |ir para |abra |abrir )?(o )?(inicio|pagina inicial|home)[.! ]*$/.test(n)){goMain();return '__nav__';}
- if(/^(abrir|abra|va para|ir para|mostre) (a )?(torre de )?hanoi[.! ]*$/.test(n)){openHanoi('rai');return '__nav__';}
- if(/abrir aulas|va para aulas|ir para aulas|mostre as aulas/.test(n)){
-   const b=document.querySelector('[data-menu="lessons"],[data-action="lessons"],#lessons-btn');if(b){b.click();return '__nav__';}
- }
- if(/^(voltar|volte)[.! ]*$/.test(n)){history.back();return '__nav__';}
+ const n=raiNorm(q).replace(/[!?.,]+$/,'').trim();
+ const go=(target)=>{
+   if(target==='home'){raiClose();goMain();return '__nav__';}
+   if(target==='hanoi'){raiClose();openHanoi('rai');return '__nav__';}
+   if(target==='aulas'){raiClose();showLessons();return '__nav__';}
+   const button=document.querySelector('[data-menu="'+target+'"]');
+   if(button){raiClose();button.click();return '__nav__';}
+   return '';
+ };
+ if(/^(feche|fecha|fechar rai|pode fechar)( a rai| o painel)?$/.test(n)){raiClose();return '__nav__';}
+ if(/^(voltar|volte)$/.test(n)){raiClose();goMain();return '__nav__';}
+ if(/^(inicio|pagina inicial|home|voltar ao inicio|ir para o inicio|abrir inicio|abrir pagina inicial|va para o inicio)$/.test(n))return go('home');
+ if(/^(aulas|as aulas|abrir aulas|abra as aulas|ir para aulas|ir para as aulas|va para aulas|mostre as aulas|quero estudar|ver aulas)$/.test(n))return go('aulas');
+ if(/^(hanoi|torre de hanoi|abrir hanoi|abra hanoi|abrir torre de hanoi|abra a torre de hanoi|ir para hanoi|va para hanoi|mostre hanoi)$/.test(n))return go('hanoi');
+ const routes=[
+  ['catalog',/^(desafios|escolher desafio|escolher desafios|abrir desafios|abrir catalogo|catalogo de desafios|mostre os desafios)$/],
+  ['game',/^(jogar tangram|continuar desafio|abrir tangram|voltar ao jogo|jogar)$/],
+  ['progress',/^(meu progresso|ver progresso|abrir progresso|meu desempenho)$/],
+  ['records',/^(recordes|recordes gamer|ver recordes)$/],
+  ['student',/^(perfil|meu perfil|perfil do aluno)$/],
+  ['teacher',/^(area do professor|painel do professor|abrir area do professor)$/],
+  ['comfort',/^(acessibilidade|conforto|ajustes de acessibilidade)$/],
+  ['about',/^(sobre|sobre o tangram|informacoes do tangram)$/]
+ ];
+ for(const [target,pattern] of routes)if(pattern.test(n))return go(target);
  return '';
 }
 function raiLessonConversationAnswer(item,q){
