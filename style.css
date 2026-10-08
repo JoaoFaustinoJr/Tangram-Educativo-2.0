@@ -1405,3 +1405,16 @@ body.rai-engaged .rai-float-wrap{filter:drop-shadow(0 5px 12px #0005)}
 .lesson-rai-context{display:flex;align-items:center;gap:10px;margin:12px 0;padding:10px 12px;border:1px solid rgba(212,175,55,.38);border-radius:14px;background:linear-gradient(135deg,rgba(8,27,51,.96),rgba(18,54,94,.94));color:#fff}
 .lesson-rai-context>span{font-size:1.5rem}.lesson-rai-context>div{min-width:0;flex:1}.lesson-rai-context b,.lesson-rai-context small{display:block}.lesson-rai-context small{opacity:.86;margin-top:2px}.lesson-rai-context button{border:1px solid rgba(212,175,55,.75);background:#fff8df;color:#102a49;border-radius:999px;padding:8px 11px;font-weight:850;cursor:pointer}
 @media(max-width:560px){.lesson-rai-context{align-items:flex-start;flex-wrap:wrap}.lesson-rai-context button{margin-left:34px}}
+
+/* v2.0.207 — comandos da R.A.I., identidade Tangram */
+#rai-tutor-panel .rai-tutor-card{border:1px solid #d6ad4d;border-radius:20px;background:linear-gradient(180deg,#fffdf8,#f5f0e5);box-shadow:0 18px 48px #061b36a8}
+#rai-tutor-panel .rai-tutor-head{background:linear-gradient(120deg,#092642,#17456e);color:#fff;border-radius:14px;padding:10px}
+#rai-tutor-panel .rai-global-chat{background:#fff;border:1px solid #d6ad4d66;border-radius:999px;padding:5px;align-items:center}
+#rai-tutor-panel #rai-global-input{border:0;background:transparent;outline-offset:2px}
+#rai-tutor-panel #rai-global-send{background:#113a61;color:#fff;border:1px solid #d6ad4d;cursor:pointer}
+#rai-tutor-panel .rai-chat-tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0}
+#rai-tutor-panel .rai-tool{display:flex;align-items:center;justify-content:center;gap:7px;min-height:46px;border-radius:13px;border:1px solid #b7c9d8;background:#f2f7fb;color:#12385a;font-weight:800;cursor:pointer;box-shadow:0 2px 6px #071d3215}
+#rai-tutor-panel .rai-tool-voice{background:#113a61;border-color:#d6ad4d;color:#fff}
+#rai-tutor-panel .rai-tool-clear{background:#fff9f0;color:#684e27;border-color:#dfcfa8}
+#rai-tutor-panel .rai-tool:focus-visible,#rai-tutor-panel .rai-tool:hover{outline:2px solid #d6ad4d;outline-offset:2px}
+@media(max-width:380px){#rai-tutor-panel .rai-tool{flex-direction:column;gap:1px;font-size:.79rem}}
