@@ -784,7 +784,7 @@ function raiGlobalSuggestions(){
  const c=raiGlobalContext();
  if(c.mode==='hanoi')return ['Como começo?','Dê uma pista','Por que 2ⁿ − 1?','Voltar ao Tangram'];
  if(c.mode==='aula')return ['Explique esta aula','Dê um exemplo','Dê uma pista','Não entendi'];
- return ['Como resolvo sem resposta?','Explique o conceito','Abrir aulas','Abrir Torre de Hanói'];
+ return ['O que posso fazer aqui?','Como resolvo sem resposta?','Explique o conceito','Abrir Torre de Hanói'];
 }
 function raiRenderSuggestions(){
  const box=document.querySelector('#rai-global-suggestions');if(!box)return;
@@ -842,7 +842,14 @@ function raiGlobalAnswer(q){
  if(/de um exemplo|mostre um exemplo|exemplo desta aula/.test(raiNorm(raw))&&item.example)return 'Vamos usar o exemplo desta aula: '+String(item.example).slice(0,360)+' O que mudaria se alterássemos uma parte?';
  return lessonRaiAdaptAnswer(item,raw,lessonRaiDoubt(item,raw))||'Conte qual parte desta aula você quer compreender melhor.';
 }
- return lessonRaiDoubt({topic:'Tangram',concept:'geometria, lógica, composição e decomposição de figuras'},raw);
+ const home={id:'rai-home',year:lessonYear||6,title:'Tangram Educativo',topic:'Aprendizagem com desafios',concept:'No Tangram Educativo, você aprende lógica, geometria, programação, robótica e educação digital resolvendo problemas por etapas.',example:'Para resolver um tangram, observe as peças, compare formas, teste rotações e reflita sobre a posição de cada figura.'};
+ const n=raiNorm(raw);
+ const follow=raiLessonConversationAnswer(home,raw);if(follow)return follow;
+ if(/o que (posso|pode) fazer|como funciona|por onde comeco|o que tem aqui|me apresente/.test(n))return 'Aqui você encontra aulas, desafios e atividades de lógica, geometria, programação e robótica. Posso explicar conceitos, dar pistas e ajudar a encontrar uma atividade. Quer começar por aulas ou desafios?';
+ if(/explique o conceito|me explica|explique isso/.test(n))return 'Uma ideia central do Tangram é decompor um problema: observar as partes, testar possibilidades e combinar soluções. Em qual desafio você quer aplicar essa ideia?';
+ if(/como resolvo sem resposta|d[eê] uma pista|me ajude no desafio/.test(n))return 'Comece observando o objetivo e o que já está disponível. Qual é a primeira peça ou etapa que você consegue identificar? Posso orientar sem entregar a solução.';
+ if(/abrir aulas|quero estudar|ver aulas/.test(n))return 'Posso ajudar você a encontrar as aulas. Use o menu Aulas e escolha o ano ou o conteúdo que deseja estudar.';
+ return lessonRaiAdaptAnswer(home,raw,lessonRaiDoubt(home,raw))||'Posso ajudar com aulas, desafios, conceitos e navegação. O que você gostaria de fazer?';
 }
 function raiOpen(){const p=document.querySelector('#rai-tutor-panel');if(p){p.hidden=false;raiRenderSuggestions();setTimeout(()=>document.querySelector('#rai-global-input')?.focus(),40)}document.querySelector('#app-menu')?.classList.remove('open');t2event('rai_tutor_open',{level:String((typeof levelIndex==='number'?levelIndex:0)+1)});}
 function raiClose(){const p=document.querySelector('#rai-tutor-panel');if(p)p.hidden=true;}
@@ -850,7 +857,7 @@ function raiGuide(kind){const arr=raiTips[kind]||raiTips.strategy;const msg=docu
 function raiWireGlobalChat(){
  const panel=document.querySelector('#rai-tutor-panel'),input=document.querySelector('#rai-global-input'),send=document.querySelector('#rai-global-send'),msg=document.querySelector('#rai-tutor-message');
  if(!panel||!input||!send)return;
- const ask=()=>{const q=input.value.trim();if(!q)return;let ans;try{ans=raiGlobalAnswer(q)}catch(err){console.error('RAI',err);ans='Não consegui interpretar esta pergunta. Pode tentar com outras palavras?'}if(ans==='__nav__'){input.value='';return;}if(msg)msg.textContent=String(ans||'Vamos tentar novamente.');try{const ctx=raiGlobalContext(),key='raiGlobalLessonThread';if(ctx.mode==='aula'){const history=JSON.parse(sessionStorage.getItem(key)||'[]');history.push({q,answer:String(ans||''),lesson:ctx.item?.id||ctx.item?.title||'',at:Date.now()});sessionStorage.setItem(key,JSON.stringify(history.slice(-8)));}}catch(_){}input.value='';try{localStorage.setItem('tangram2RaiGlobal',JSON.stringify({q,answer:ans,at:Date.now()}))}catch(_){}};
+ const ask=()=>{const q=input.value.trim();if(!q)return;let ans;try{ans=raiGlobalAnswer(q)}catch(err){console.error('RAI',err);ans='Não consegui interpretar esta pergunta. Pode tentar com outras palavras?'}if(ans==='__nav__'){input.value='';return;}if(msg)msg.textContent=String(ans||'Vamos tentar novamente.');try{const ctx=raiGlobalContext(),key='raiGlobalLessonThread';if(ctx.mode==='aula'||ctx.mode==='tangram'){const history=JSON.parse(sessionStorage.getItem(key)||'[]');history.push({q,answer:String(ans||''),lesson:ctx.mode==='aula'?(ctx.item?.id||ctx.item?.title||''):'rai-home',at:Date.now()});sessionStorage.setItem(key,JSON.stringify(history.slice(-8)));}}catch(_){}input.value='';try{localStorage.setItem('tangram2RaiGlobal',JSON.stringify({q,answer:ans,at:Date.now()}))}catch(_){}};
  send.onclick=ask;input.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();ask()}};
  panel.querySelector('#rai-global-mic')?.addEventListener('click',e=>raiListen(input,e.currentTarget));
  panel.querySelector('#rai-global-speak')?.addEventListener('click',()=>{if(msg?.textContent)raiSpeak(msg.textContent)});
