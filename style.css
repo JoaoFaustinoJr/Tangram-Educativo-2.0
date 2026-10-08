@@ -1418,3 +1418,13 @@ body.rai-engaged .rai-float-wrap{filter:drop-shadow(0 5px 12px #0005)}
 #rai-tutor-panel .rai-tool-clear{background:#fff9f0;color:#684e27;border-color:#dfcfa8}
 #rai-tutor-panel .rai-tool:focus-visible,#rai-tutor-panel .rai-tool:hover{outline:2px solid #d6ad4d;outline-offset:2px}
 @media(max-width:380px){#rai-tutor-panel .rai-tool{flex-direction:column;gap:1px;font-size:.79rem}}
+
+/* v2.0.208 — acesso unico a tutora nas aulas */
+.lesson-rai-launch{margin:12px 0}
+.lesson-rai-launch-button{display:flex;width:100%;min-height:74px;align-items:center;gap:12px;text-align:left;border:1px solid #d6ad4d;background:linear-gradient(110deg,#0b2b4b,#123f67);color:#fff;border-radius:17px;padding:12px 14px;box-shadow:0 5px 18px #00152d3d;cursor:pointer}
+.lesson-rai-launch-button img{width:48px;height:48px;flex:0 0 48px;object-fit:contain;border-radius:50%;background:#fff;border:2px solid #d6ad4d}
+.lesson-rai-launch-button span:nth-child(2){flex:1;min-width:0}
+.lesson-rai-launch-button b{display:block;color:#ffe6a0;font-size:1.05rem}
+.lesson-rai-launch-button small{display:block;color:#e0edf6;font-size:.82rem;line-height:1.4;margin-top:3px}
+.lesson-rai-launch-arrow{font-size:1.35rem;color:#ffe6a0}
+.lesson-rai-launch-button:hover,.lesson-rai-launch-button:focus-visible{outline:2px solid #eac66c;outline-offset:2px}
