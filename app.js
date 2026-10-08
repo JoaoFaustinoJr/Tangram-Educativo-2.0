@@ -831,6 +831,9 @@ function raiNavigationCommand(q){
    if(button){raiClose();button.click();return '__nav__';}
    return '';
  };
+ if(/^(?:(?:por favor )?(?:abra|abrir|abre|acessar|acesse|entrar no|ir para|va para|quero abrir|quero jogar|jogar|iniciar|mostre|me leve para|me leve ao)\\s+(?:(?:o|a|no|na)\\s+)?)?(?:x\\s*1|arena x\\s*1|x\\s*1 arena|pedagogico x\\s*1|x\\s*1 pedagogico)(?:\\s+(?:agora|por favor))?$/.test(n)){
+   raiClose();openX1Official();return '__nav__';
+ }
  if(/^(feche|fecha|fechar rai|pode fechar)( a rai| o painel)?$/.test(n)){raiClose();return '__nav__';}
  if(/^(voltar|volte)$/.test(n)){raiClose();goMain();return '__nav__';}
  if(/^(inicio|pagina inicial|home|voltar ao inicio|ir para o inicio|abrir inicio|abrir pagina inicial|va para o inicio)$/.test(n))return go('home');
