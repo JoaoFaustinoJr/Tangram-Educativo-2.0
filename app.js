@@ -790,6 +790,34 @@ function raiRenderSuggestions(){
  const box=document.querySelector('#rai-global-suggestions');if(!box)return;
  box.innerHTML=raiGlobalSuggestions().map(x=>'<button type="button" data-rai-suggest="'+lessonEsc(x)+'">'+lessonEsc(x)+'</button>').join('');
 }
+async function raiOpenLessonByRequest(raw){
+ const n=raiNorm(raw);
+ const yearMatch=n.match(/(?:^|\s)([5-9])\s*(?:o|ano|serie|º)(?:\s|$)/);
+ const wordYears={quinto:5,sexta:6,sexto:6,setimo:7,setima:7,oitavo:8,oitava:8,nono:9,nona:9};
+ let year=yearMatch?Number(yearMatch[1]):null;
+ if(!year)for(const [word,value] of Object.entries(wordYears))if(new RegExp('\\b'+word+'\\b').test(n)){year=value;break;}
+ const sections=[['prog',/programacao|programar|python|codigo|algoritmo|variaveis/],['robotics',/robotica|robos|robo|sensores|arduino|lego/],['digital',/educacao digital|internet|seguranca digital|tecnologia digital/],['pc',/pensamento computacional|decomposicao|abstracao/],['math',/matematica|geometria|formas geometricas/],['history',/historia da robotica|historia da computacao/],['fund',/fundamentos/]];
+ let section=sections.find(([key,re])=>re.test(n))?.[0]||null;
+ if(/historia da robotica/.test(n))section='history';
+ if(!year&&!section)return false;
+ raiClose();
+ try{
+   await showLessons();
+   if(year)lessonYear=year;
+   if(section)lessonSection=section;
+   renderLessons();
+   const m=document.querySelector('#lessons-panel');
+   const list=m?.querySelector('.lesson-library');
+   const items=[...(list?.querySelectorAll('details[data-lesson-id]')||[])];
+   const terms=raiWords(raw).filter(w=>!['quinto','sexto','setimo','oitavo','nono','ano','serie','quero','aprender','estudar','encontrar','abrir','programacao','robotica','educacao','digital'].includes(w));
+   if(terms.length){
+     const ranked=items.map(el=>({el,score:terms.reduce((v,w)=>v+(raiNorm(el.querySelector('summary')?.textContent||'').includes(w)?1:0),0)})).sort((a,b)=>b.score-a.score);
+     if(ranked[0]?.score>0){ranked[0].el.open=true;ranked[0].el.scrollIntoView({behavior:'smooth',block:'start'});}
+   }
+   if(!items.length&&list)list.setAttribute('aria-label','Nenhuma aula encontrada nesta combinação. Escolha outra turma ou assunto.');
+ }catch(err){console.error('RAI navegação de aulas',err);return false;}
+ return true;
+}
 function raiNavigationCommand(q){
  const n=raiNorm(q).replace(/[!?.,]+$/,'').trim();
  const go=(target)=>{
@@ -892,7 +920,7 @@ function raiGuide(kind){const arr=raiTips[kind]||raiTips.strategy;const msg=docu
 function raiWireGlobalChat(){
  const panel=document.querySelector('#rai-tutor-panel'),input=document.querySelector('#rai-global-input'),send=document.querySelector('#rai-global-send'),msg=document.querySelector('#rai-tutor-message');
  if(!panel||!input||!send)return;
- const ask=()=>{const q=input.value.trim();if(!q)return;let ans;try{ans=raiGlobalAnswer(q)}catch(err){console.error('RAI',err);ans='Não consegui interpretar esta pergunta. Pode tentar com outras palavras?'}if(ans==='__nav__'){input.value='';return;}if(msg)msg.textContent=String(ans||'Vamos tentar novamente.');try{const ctx=raiGlobalContext(),key='raiGlobalLessonThread';if(ctx.mode==='aula'||ctx.mode==='tangram'){const history=JSON.parse(sessionStorage.getItem(key)||'[]');history.push({q,answer:String(ans||''),lesson:ctx.mode==='aula'?(ctx.item?.id||ctx.item?.title||''):'rai-home',at:Date.now()});sessionStorage.setItem(key,JSON.stringify(history.slice(-8)));}}catch(_){}input.value='';try{localStorage.setItem('tangram2RaiGlobal',JSON.stringify({q,answer:ans,at:Date.now()}))}catch(_){}};
+ const ask=async()=>{const q=input.value.trim();if(!q)return;if(/(?:aula|aprender|estudar|ensine|conteudo|materia|encontrar|quero ver|me mostre)/.test(raiNorm(q))&&/(?:[5-9]\s*(?:o|ano|serie|º)|quinto|sexto|setimo|oitavo|nono|programacao|robotica|python|algoritmo|geometria|educacao digital|pensamento computacional)/.test(raiNorm(q))){if(await raiOpenLessonByRequest(q)){input.value='';return;}}let ans;try{ans=raiGlobalAnswer(q)}catch(err){console.error('RAI',err);ans='Não consegui interpretar esta pergunta. Pode tentar com outras palavras?'}if(ans==='__nav__'){input.value='';return;}if(msg)msg.textContent=String(ans||'Vamos tentar novamente.');try{const ctx=raiGlobalContext(),key='raiGlobalLessonThread';if(ctx.mode==='aula'||ctx.mode==='tangram'){const history=JSON.parse(sessionStorage.getItem(key)||'[]');history.push({q,answer:String(ans||''),lesson:ctx.mode==='aula'?(ctx.item?.id||ctx.item?.title||''):'rai-home',at:Date.now()});sessionStorage.setItem(key,JSON.stringify(history.slice(-8)));}}catch(_){}input.value='';try{localStorage.setItem('tangram2RaiGlobal',JSON.stringify({q,answer:ans,at:Date.now()}))}catch(_){}};
  send.onclick=ask;input.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();ask()}};
  panel.querySelector('#rai-global-mic')?.addEventListener('click',e=>raiListen(input,e.currentTarget));
  panel.querySelector('#rai-global-speak')?.addEventListener('click',()=>{if(msg?.textContent)raiSpeak(msg.textContent)});
