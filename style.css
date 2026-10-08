@@ -1428,3 +1428,9 @@ body.rai-engaged .rai-float-wrap{filter:drop-shadow(0 5px 12px #0005)}
 .lesson-rai-launch-button small{display:block;color:#e0edf6;font-size:.82rem;line-height:1.4;margin-top:3px}
 .lesson-rai-launch-arrow{font-size:1.35rem;color:#ffe6a0}
 .lesson-rai-launch-button:hover,.lesson-rai-launch-button:focus-visible{outline:2px solid #eac66c;outline-offset:2px}
+
+/* v2.0.209 — legibilidade e dialogo */
+#rai-tutor-panel .rai-tutor-message{background:#edf5ff!important;color:#102846!important;opacity:1!important;-webkit-text-fill-color:#102846!important;border:1px solid #a5c8e8!important;border-radius:15px;padding:16px;font-size:1rem;line-height:1.58;font-weight:600;text-shadow:none!important}
+#rai-tutor-panel .rai-tutor-note{display:block;color:#27445d!important;opacity:1!important;-webkit-text-fill-color:#27445d!important;font-weight:600}
+#rai-tutor-panel .rai-global-suggestions button{color:#112c48!important;-webkit-text-fill-color:#112c48!important;background:#fff!important;opacity:1!important}
+#rai-tutor-panel .rai-tutor-head b,#rai-tutor-panel .rai-tutor-head small,#rai-tutor-panel .rai-brand-chip{color:#fff!important;-webkit-text-fill-color:#fff!important;opacity:1!important}
