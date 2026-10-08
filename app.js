@@ -770,18 +770,21 @@ const raiTips={
 };
 let raiTipStep=0;
 function raiGlobalContext(){
- const lesson=[...document.querySelectorAll('[data-lesson-rai-context]')].find(el=>el.getClientRects().length&&!!el.closest(':not([hidden])')) || null;
- if(lesson){
- const i=Number(lesson.dataset.lessonRaiContext);
- const candidates=(lessonBanks?.[lessonSection]||[]).filter(x=>Number(x.year||lessonYear)===Number(lessonYear)||!x.year);
- const item=candidates[i]||null;
- return {mode:'aula',item};
-}
+ const modal=document.querySelector('#lessons-panel');
+ if(modal?.classList.contains('show')&&!modal.hidden){
+   const opened=[...modal.querySelectorAll('.lesson-library details[open][data-lesson-id]')];
+   const active=opened.find(el=>el.getClientRects().length)||null;
+   const itemId=active?.dataset.lessonId;
+   const candidates=(lessonBanks?.[lessonSection]||[]).filter(x=>!x.year||Number(x.year)===Number(lessonYear));
+   const item=itemId?candidates.find(x=>String(x.id||'')===String(itemId)):null;
+   return {mode:'aula',item:item||null};
+ }
  if(location.pathname.includes('/hanoi'))return {mode:'hanoi',item:null};
  return {mode:'tangram',item:null};
 }
 function raiGlobalSuggestions(){
  const c=raiGlobalContext();
+ if(c.mode==='aula'&&!c.item)return 'Estou na Sala de Aula. Abra uma aula para conversarmos sobre o conteúdo dela, ou diga qual assunto deseja estudar.';
  if(c.mode==='hanoi')return ['Como começo?','Dê uma pista','Por que 2ⁿ − 1?','Voltar ao Tangram'];
  if(c.mode==='aula')return ['Explique esta aula','Dê um exemplo','Dê uma pista','Não entendi'];
  return ['Abrir aulas','Escolher desafios','Meu progresso','Abrir Torre de Hanói'];
@@ -849,7 +852,7 @@ function raiNavigationCommand(q){
 function raiLessonConversationAnswer(item,q){
  const n=raiNorm(q),title=String(item?.title||item?.topic||'esta aula'),concept=String(item?.concept||item?.objective||''),example=String(item?.example||'');
  const history=(()=>{try{return JSON.parse(sessionStorage.getItem('raiGlobalLessonThread')||'[]')}catch(_){return []}})();
- const previous=history.at(-1);
+ const previous=[...history].reverse().find(x=>String(x.lesson||'')===String(item?.id||item?.title||item?.topic||''))||null;
  const lessonId=String(item?.id||item?.title||item?.topic||'');
  const sameLesson=previous&&String(previous.lesson||'')===lessonId;
  const base=(concept||example||title).slice(0,320);
@@ -920,11 +923,11 @@ function raiGuide(kind){const arr=raiTips[kind]||raiTips.strategy;const msg=docu
 function raiWireGlobalChat(){
  const panel=document.querySelector('#rai-tutor-panel'),input=document.querySelector('#rai-global-input'),send=document.querySelector('#rai-global-send'),msg=document.querySelector('#rai-tutor-message');
  if(!panel||!input||!send)return;
- const ask=async()=>{const q=input.value.trim();if(!q)return;if(/(?:aula|aprender|estudar|ensine|conteudo|materia|encontrar|quero ver|me mostre)/.test(raiNorm(q))&&/(?:[5-9]\s*(?:o|ano|serie|º)|quinto|sexto|setimo|oitavo|nono|programacao|robotica|python|algoritmo|geometria|educacao digital|pensamento computacional)/.test(raiNorm(q))){if(await raiOpenLessonByRequest(q)){input.value='';return;}}let ans;try{ans=raiGlobalAnswer(q)}catch(err){console.error('RAI',err);ans='Não consegui interpretar esta pergunta. Pode tentar com outras palavras?'}if(ans==='__nav__'){input.value='';return;}if(msg)msg.textContent=String(ans||'Vamos tentar novamente.');try{const ctx=raiGlobalContext(),key='raiGlobalLessonThread';if(ctx.mode==='aula'||ctx.mode==='tangram'){const history=JSON.parse(sessionStorage.getItem(key)||'[]');history.push({q,answer:String(ans||''),lesson:ctx.mode==='aula'?(ctx.item?.id||ctx.item?.title||''):'rai-home',at:Date.now()});sessionStorage.setItem(key,JSON.stringify(history.slice(-8)));}}catch(_){}input.value='';try{localStorage.setItem('tangram2RaiGlobal',JSON.stringify({q,answer:ans,at:Date.now()}))}catch(_){}};
+ const ask=async()=>{const q=input.value.trim();if(!q)return;send.disabled=true;try{if(/(?:aula|aprender|estudar|ensine|conteudo|materia|encontrar|quero ver|me mostre)/.test(raiNorm(q))&&/(?:[5-9]\s*(?:o|ano|serie|º)|quinto|sexto|setimo|oitavo|nono|programacao|robotica|python|algoritmo|geometria|educacao digital|pensamento computacional)/.test(raiNorm(q))){if(await raiOpenLessonByRequest(q)){input.value='';return;}}let ans;try{ans=raiGlobalAnswer(q)}catch(err){console.error('RAI',err);ans='Não consegui interpretar esta pergunta. Pode tentar com outras palavras?'}if(ans==='__nav__'){input.value='';return;}if(msg)msg.textContent=String(ans||'Vamos tentar novamente.');try{const ctx=raiGlobalContext(),key='raiGlobalLessonThread';if(ctx.mode==='aula'||ctx.mode==='tangram'){const history=JSON.parse(sessionStorage.getItem(key)||'[]');history.push({q,answer:String(ans||''),lesson:ctx.mode==='aula'?(ctx.item?.id||ctx.item?.title||''):'rai-home',at:Date.now()});sessionStorage.setItem(key,JSON.stringify(history.slice(-8)));}}catch(_){}input.value='';try{localStorage.setItem('tangram2RaiGlobal',JSON.stringify({q,answer:ans,at:Date.now()}))}catch(_){} }finally{send.disabled=false}};
  send.onclick=ask;input.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();ask()}};
  panel.querySelector('#rai-global-mic')?.addEventListener('click',e=>raiListen(input,e.currentTarget));
  panel.querySelector('#rai-global-speak')?.addEventListener('click',()=>{if(msg?.textContent)raiSpeak(msg.textContent)});
- panel.querySelector('#rai-global-clear')?.addEventListener('click',()=>{if(confirm('Apagar a conversa atual com a R.A.I.?')){localStorage.removeItem('tangram2RaiGlobal');if(msg)msg.textContent='Conversa apagada. Pode começar de novo quando quiser.'}});
+ panel.querySelector('#rai-global-clear')?.addEventListener('click',()=>{if(confirm('Apagar a conversa atual com a R.A.I.?')){sessionStorage.removeItem('raiGlobalLessonThread');localStorage.removeItem('tangram2RaiGlobal');if(msg)msg.textContent='Conversa apagada. Pode começar de novo quando quiser.'}});
  panel.querySelector('#rai-global-suggestions')?.addEventListener('click',e=>{const b=e.target.closest('[data-rai-suggest]');if(!b)return;input.value=b.dataset.raiSuggest||b.textContent;ask()});
  raiRenderSuggestions();
 }
