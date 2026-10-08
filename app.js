@@ -875,8 +875,22 @@ function raiLessonConversationAnswer(item,q){
  if(/^(outro|outro exemplo|mais um|exemplo)[.!? ]*$/.test(n))return example?'Use este exemplo como ponto de partida: '+example.slice(0,340)+' Agora imagine uma situação semelhante.':'Imagine uma tarefa grande dividida em pequenas etapas. Qual seria a primeira?';
  return '';
 }
+function raiGlobalFollowup(q){
+ const n=raiNorm(q).replace(/[!?.,;:]+/g,' ').replace(/\s+/g,' ').trim();
+ const ctx=raiGlobalContext(),id=ctx.mode==='aula'?String(ctx.item?.id||ctx.item?.title||ctx.item?.topic||''):'rai-home';
+ let history=[];try{history=JSON.parse(sessionStorage.getItem('raiGlobalLessonThread')||'[]')}catch(_){}
+ const prev=[...history].reverse().find(x=>x.lesson===id);if(!prev)return '';
+ const last=raiNorm(prev.answer||'');
+ if(/^(sim|quero|pode|claro|ok|isso|vamos|continue|continua)$/.test(n)){
+  if(/abrir uma aula|escolher um desafio|aula ou desafio|aulas ou desafios/.test(last))return 'Ótimo! Você prefere estudar em uma aula ou praticar em um desafio? Também pode pedir: “abra as aulas”.';
+  if(/explique|exemplo|etapa do desafio/.test(last))return ctx.mode==='aula'?'Vamos começar pelo assunto desta aula. Você prefere um exemplo ou uma explicação mais simples?':'Quer aprender um conceito ou começar um desafio?';
+ }
+ if(/^(me ajude|me ajuda|pode me ajudar|ajuda|socorro)$/.test(n))return ctx.mode==='aula'?'Claro. Qual parte da aula está difícil? Posso explicar, dar um exemplo ou oferecer uma pista.':'Claro. Posso ajudar a encontrar aulas, abrir desafios ou explicar conceitos. O que você gostaria de fazer?';
+ if(/^(e depois|qual o proximo passo|o que faco agora)$/.test(n))return ctx.mode==='aula'?'Vamos continuar na mesma aula. Qual foi a última etapa que você conseguiu realizar?':'Podemos escolher uma aula ou desafio. Diga qual assunto você quer estudar.';
+ return '';
+}
 function raiGlobalAnswer(q){
- const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const nav=raiNavigationCommand(raw);if(nav)return nav;
+ const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const nav=raiNavigationCommand(raw);if(nav)return nav; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
  const intent=raiNorm(raw).replace(/[!?.,;:]+/g,' ').replace(/\\s+/g,' ').trim();
  if(/^(oi |ola |ei )?(pode |consegue |voce pode |vc pode )?(me |nos )?(ajudar|ajuda|dar uma ajuda|dar uma mao)( por favor| pfv| aqui| ai)?$/.test(intent)||/^(preciso de ajuda|quero ajuda|me ajuda|socorro rai|preciso de uma orientacao)$/.test(intent)){
   const context=raiGlobalContext();
