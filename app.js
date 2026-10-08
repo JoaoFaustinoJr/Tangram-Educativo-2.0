@@ -844,7 +844,25 @@ function raiGlobalAnswer(q){
 }
  const home={id:'rai-home',year:lessonYear||6,title:'Tangram Educativo',topic:'Aprendizagem com desafios',concept:'No Tangram Educativo, você aprende lógica, geometria, programação, robótica e educação digital resolvendo problemas por etapas.',example:'Para resolver um tangram, observe as peças, compare formas, teste rotações e reflita sobre a posição de cada figura.'};
  const n=raiNorm(raw);
+ const previousHome=(()=>{try{const h=JSON.parse(sessionStorage.getItem('raiGlobalLessonThread')||'[]');return [...h].reverse().find(x=>x.lesson==='rai-home')||null}catch(_){return null}})();
+ const shortReply=/^(sim|quero|pode|claro|ok|isso|vamos|continue|continua|nao|não|nao sei|não sei|outro|outro exemplo|mais um|por que|porque|como assim|explica melhor|mais simples|nao entendi|não entendi|e depois|qual o proximo passo|próximo passo|pode repetir|repita)[.!? ]*$/.test(n);
+ if(shortReply&&previousHome){
+   const last=raiNorm(previousHome.answer||'');
+   if(/^(sim|quero|pode|claro|ok|isso|vamos|continue|continua)[.! ]*$/.test(n)){
+     if(/aulas ou desafios/.test(last))return 'Podemos começar pelas aulas para aprender os conceitos ou pelos desafios para praticar. Você prefere aulas ou desafios?';
+     if(/qual desafio|qual atividade/.test(last))return 'Podemos praticar Tangram, explorar a Torre de Hanói ou estudar programação. Qual você prefere?';
+     if(/qual parte|qual etapa|primeira peça/.test(last))return 'Vamos por partes: observe a figura ou o objetivo, identifique uma peça ou etapa e teste uma possibilidade. O que você percebeu?';
+   }
+   if(/^(nao|não|nao sei|não sei|nao entendi|não entendi|como assim|explica melhor|mais simples)[.!? ]*$/.test(n))return 'Vou simplificar: no Tangram você aprende experimentando. Primeiro observa, depois tenta uma solução e por fim verifica o resultado. Quer um exemplo com peças ou com programação?';
+   if(/^(outro|outro exemplo|mais um)[.!? ]*$/.test(n))return 'Outro exemplo: programar um robô é dividir uma tarefa em comandos simples, como avançar, virar e parar. Qual comando você daria primeiro?';
+   if(/^(pode repetir|repita)[.!? ]*$/.test(n))return String(previousHome.answer||'');
+ }
  const follow=raiLessonConversationAnswer(home,raw);if(follow)return follow;
+ if(/^(aulas|as aulas|quero aulas|estudar|aprender)[.!? ]*$/.test(n))return 'Ótimo! Abra Aulas no menu e escolha sua turma, do quinto ao nono ano. Posso ajudar a escolher um tema: lógica, programação, robótica ou geometria.';
+ if(/^(desafios|os desafios|jogar|quero desafios)[.!? ]*$/.test(n))return 'Nos desafios você pratica observação, lógica e estratégia. Podemos começar pelo Tangram ou pela Torre de Hanói. Qual você prefere?';
+ if(/programacao|programar|codigo|algoritmo/.test(n))return 'Programar é criar uma sequência de instruções para resolver um problema. Por exemplo: avançar, virar e parar um robô. Quer conhecer algoritmos ou começar com Python?';
+ if(/robotica|robo|robos/.test(n))return 'Robótica combina mecanismos, sensores e programação para construir sistemas que percebem e atuam no mundo. Quer um exemplo de robô ou uma aula introdutória?';
+ if(/geometria|triangulo|quadrado|formas/.test(n))return 'Geometria estuda formas, medidas e posições. No Tangram, podemos explorar triângulos, quadrado, paralelogramo, giros e reflexões. Quer experimentar uma figura?';
  if(/o que (posso|pode) fazer|como funciona|por onde comeco|o que tem aqui|me apresente/.test(n))return 'Aqui você encontra aulas, desafios e atividades de lógica, geometria, programação e robótica. Posso explicar conceitos, dar pistas e ajudar a encontrar uma atividade. Quer começar por aulas ou desafios?';
  if(/explique o conceito|me explica|explique isso/.test(n))return 'Uma ideia central do Tangram é decompor um problema: observar as partes, testar possibilidades e combinar soluções. Em qual desafio você quer aplicar essa ideia?';
  if(/como resolvo sem resposta|d[eê] uma pista|me ajude no desafio/.test(n))return 'Comece observando o objetivo e o que já está disponível. Qual é a primeira peça ou etapa que você consegue identificar? Posso orientar sem entregar a solução.';
