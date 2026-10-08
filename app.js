@@ -271,8 +271,7 @@ function lessonRaiPrompt(item,step=0){
  return stages[Math.min(step,stages.length-1)];
 }
 function lessonRaiHTML(item,i){
- const title=lessonEsc(item?.title||item?.topic||'esta aula');
- return '<aside class="lesson-rai-context" data-lesson-rai-context="'+i+'"><span>🤖</span><div><b>R.A.I. acompanha esta aula</b><small>Posso explicar '+title+', dar exemplos ou ajudar se algo ficou difícil.</small></div><button type="button" data-open-global-rai="'+i+'">Falar com a R.A.I.</button></aside>';
+ return '<div class="lesson-rai-launch" data-lesson-rai-context="'+i+'"><button class="lesson-rai-launch-button" type="button" data-open-global-rai="'+i+'" aria-label="Conversar com a R.A.I. sobre esta aula"><img src="https://joaofaustinojr.github.io/Html/tangram-prof-junior-v12/rai-icon.svg?v=rai3" alt=""><span><b>Pergunte à R.A.I.</b><small>Explicações, exemplos e pistas desta aula</small></span><span class="lesson-rai-launch-arrow" aria-hidden="true">↗</span></button></div>';
 }
 function raiNorm(v){return String(v||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
 function raiWords(v){return [...new Set(raiNorm(v).split(/[^a-z0-9]+/).filter(w=>w.length>3&&!['para','como','uma','isso','esta','este','aula','voce','qual','porque','sobre'].includes(w)))]}
