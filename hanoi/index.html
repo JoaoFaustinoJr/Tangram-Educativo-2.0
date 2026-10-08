@@ -230,7 +230,7 @@ body:has(#classPanel:target) #jogo{display:none!important}
  <button class="classAction" id="classPlay">Experimentar este conceito na Torre →</button>
 </section>
 <section class="game" id="jogo">
-<div class="setup"><label>Ano <select id="grade"><option>6</option><option>7</option><option>8</option><option>9</option></select>º</label><label>Nível <select id="n"><option value="2">2 discos</option><option value="3" selected>3 discos</option><option value="4">4 discos</option><option value="5">5 discos</option><option value="6">6 discos</option><option value="7">7 discos</option></select></label></div>
+<div class="setup"><label>Ano <select id="grade"><option>6</option><option>7</option><option>8</option><option>9</option></select>º</label><label>Nível <select id="n"><option value="2">2 discos</option><option value="3" selected>3 discos</option><option value="4">4 discos</option><option value="5">5 discos</option><option value="6">6 discos</option><option value="7">7 discos</option><option value="8">8 discos</option></select></label></div>
 <div class="stats"><div class="stat"><small>Movimentos</small><strong id="moves">0</strong></div><div class="stat"><small>Meta</small><strong id="minimum">7</strong></div><div class="stat"><small>Melhor movimento</small><strong id="eff">—</strong></div></div>
 <div class="boardShell"><div class="board"><div class="peg" tabindex="0" role="button" data-label="ORIGEM"></div><div class="peg" tabindex="0" role="button" data-label="APOIO"></div><div class="peg" tabindex="0" role="button" data-label="DESTINO"></div></div></div>
 <div class="msg" id="msg" aria-live="polite"></div>
@@ -407,7 +407,7 @@ function finish(){
  }else if(detourMoves){
   rai.textContent='Você concluiu e aprendeu com '+detourMoves+' desvio(s). Compare as decisões que aproximaram e afastaram a solução.';
  }else{
-  rai.textContent='Desafio concluído. Compare sua estratégia com a meta e procure o padrão.';
+  rai.textContent='Parabéns! Você concluiu com '+moves+' movimentos. A meta matemática para '+n+' discos é 2^'+n+' − 1 = '+minimum()+'. '+(moves>minimum()?'Você fez '+(moves-minimum())+' movimentos além do mínimo; eles também fazem parte da descoberta. ':'')+'Que padrão você observa ao acrescentar mais um disco?';
  }
  msg.textContent=ideal?'🏆 Solução ótima!':'Desafio concluído! Agora tente aproximar-se da meta.';
  document.querySelector('#fbMain').textContent=perfect?'Você encontrou a solução ótima, sem movimentos inválidos e sem desvios. Excelente controle da estratégia.':ideal?'Você chegou ao número mínimo de movimentos. Houve '+invalid+' movimento(s) inválido(s); tente eliminá-los na próxima tentativa.':'Você resolveu o problema. Compare seu caminho com a meta e procure onde pode economizar movimentos.';
