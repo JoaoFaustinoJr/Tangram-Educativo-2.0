@@ -877,6 +877,11 @@ function raiLessonConversationAnswer(item,q){
 }
 function raiGlobalAnswer(q){
  const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const nav=raiNavigationCommand(raw);if(nav)return nav;
+ const intent=raiNorm(raw).replace(/[!?.,;:]+/g,' ').replace(/\\s+/g,' ').trim();
+ if(/^(oi |ola |ei )?(pode |consegue |voce pode |vc pode )?(me |nos )?(ajudar|ajuda|dar uma ajuda|dar uma mao)( por favor| pfv| aqui| ai)?$/.test(intent)||/^(preciso de ajuda|quero ajuda|me ajuda|socorro rai|preciso de uma orientacao)$/.test(intent)){
+  const context=raiGlobalContext();
+  return context.mode==='aula'?'Claro! 😊 Estou acompanhando esta aula. Você quer que eu explique o assunto, dê um exemplo ou ajude com uma etapa do desafio?':'Claro! 😊 Estou aqui para ajudar. Você quer abrir uma aula, escolher um desafio ou tirar uma dúvida? Diga o que precisa.';
+ }
  const social=lessonRaiSocialAnswer(raw),utility=lessonRaiUtilityAnswer(raw),every=lessonRaiEverydayAnswer(raw),loose=lessonRaiLooseMath(raw),emotion=lessonRaiEmotionAnswer(raw),inc=lessonRaiInclusionAnswer(raw),auth=lessonRaiAuthorshipAnswer(raw),proj=lessonRaiProjectAnswer(raw);
  if(inc)return inc;if(emotion)return emotion;if(utility)return utility;if(loose)return loose;if(every)return every;if(auth)return auth;if(proj)return proj;if(social)return social;
  const c=raiGlobalContext();
