@@ -805,8 +805,18 @@ function raiLessonConversationAnswer(item,q){
  const n=raiNorm(q),title=String(item?.title||item?.topic||'esta aula'),concept=String(item?.concept||item?.objective||''),example=String(item?.example||'');
  const history=(()=>{try{return JSON.parse(sessionStorage.getItem('raiGlobalLessonThread')||'[]')}catch(_){return []}})();
  const previous=history.at(-1);
+ const lessonId=String(item?.id||item?.title||item?.topic||'');
+ const sameLesson=previous&&String(previous.lesson||'')===lessonId;
+ const base=(concept||example||title).slice(0,320);
+ if(/por que (isso|esse assunto|essa ideia|e importante|é importante)|qual (a )?importancia|pra que serve|para que serve/.test(n))
+   return 'Isso é importante porque ajuda a organizar o raciocínio e resolver problemas de maneira consciente. Nesta aula, '+base+' Onde você percebe essa ideia no exemplo apresentado?';
+ if(/onde (uso|usamos|aplico|aplicamos)|no dia a dia|vida real|na pratica|na prática/.test(n))
+   return example?'Veja uma aplicação nesta aula: '+example.slice(0,320)+' Que outra situação semelhante você conhece?':'Podemos procurar essa ideia em tarefas do cotidiano: '+base+' Você consegue imaginar um exemplo?';
+ if(/^(e depois|qual o proximo passo|próximo passo|o que vem depois)[?!. ]*$/.test(n))
+   return sameLesson?'Vamos continuar a partir da sua pergunta anterior. '+base+' Qual etapa você já conseguiu identificar?':'Primeiro observe o objetivo desta aula: '+base+' Qual seria a primeira etapa?';
+ if(/^(pode repetir|repita|nao ouvi|não ouvi)[?!. ]*$/.test(n)&&sameLesson)return String(previous.answer||base);
  if(/^(sim|quero|pode|claro|por favor|ok|isso|vamos|continue|continua)[.! ]*$/.test(n)){
-   if(previous?.answer?.includes('O que você já sabe'))return example?'Um exemplo desta aula: '+example.slice(0,330)+' Qual seria o primeiro passo?':'Vamos começar pelo essencial: '+concept.slice(0,280)+' Consegue explicar essa ideia com suas palavras?';
+   if(sameLesson&&previous?.answer?.includes('O que você já sabe'))return example?'Um exemplo desta aula: '+example.slice(0,330)+' Qual seria o primeiro passo?':'Vamos começar pelo essencial: '+concept.slice(0,280)+' Consegue explicar essa ideia com suas palavras?';
    return example?'Vamos continuar com um exemplo: '+example.slice(0,330)+' Qual parte você reconhece?':'Vamos continuar. '+concept.slice(0,300)+' Qual etapa ficou menos clara?';
  }
  if(/^(nao|não|nao sei|sei nao|nenhum|nada)[.! ]*$/.test(n))return 'Tudo bem. Vamos começar pelo básico: '+(concept||title).slice(0,300)+' Pense em uma situação simples do cotidiano que use essa ideia.';
