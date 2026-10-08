@@ -335,7 +335,7 @@ const pegs=[...document.querySelectorAll('.peg')],msg=document.querySelector('#m
 const gradeData={6:'Explique em palavras qual estratégia funcionou.',7:'Que padrão aparece em 1, 3, 7, 15…?',8:'Como você escreveria essa estratégia como algoritmo?',9:'Por que resolver n discos depende de resolver n−1?'};
 const minimum=()=>2**n-1;
 function code(){let pos={};towers.forEach((t,p)=>t.forEach(d=>pos[d]='ABC'[p]));return Array.from({length:n},(_,i)=>pos[i+1]).join('')}
-function reset(){if(start&&moves)restarts++;n=+document.querySelector('#n').value;towers=[[],[],[]];for(let i=n;i>=1;i--)towers[0].push(i);moves=0;selected=null;invalid=0;hints=0;bestMoves=0;detourMoves=0;path=[];start=Date.now();document.querySelector('#feedback').classList.remove('show');rai.textContent='Leve toda a torre até DESTINO. Mova um disco por vez e nunca coloque um maior sobre um menor.';msg.textContent=n===2?'Descubra a regra experimentando. Qual disco deve sair primeiro?':'Planeje a primeira jogada antes de tocar.';document.querySelector('#eff').textContent='—';document.querySelector('#eff').classList.remove('bestYes','bestNo');render();updateMap()}
+function reset(){if(start&&moves)restarts++;n=+document.querySelector('#n').value;towers=[[],[],[]];for(let i=n;i>=1;i--)towers[0].push(i);moves=0;selected=null;invalid=0;hints=0;bestMoves=0;detourMoves=0;path=[];start=Date.now();document.querySelector('#feedback').classList.remove('show');rai.textContent='Você escolheu '+n+' discos. '+(n<=3?'Observe as regras e comece pelo menor disco.':n<=5?'Divida o desafio em subtarefas antes de mover.':'Planeje subtorres menores: a estratégia se repete.')+' Use Dica da R.A.I. quando precisar.';msg.textContent=n===2?'Descubra a regra experimentando. Qual disco deve sair primeiro?':'Planeje a primeira jogada antes de tocar.';document.querySelector('#eff').textContent='—';document.querySelector('#eff').classList.remove('bestYes','bestNo');render();updateMap()}
 function stateKey(ts=towers){let pos=Array(n+1);ts.forEach((tower,p)=>tower.forEach(d=>pos[d]=p));return pos.slice(1).join('')}
 function neighbors(key){let pos=key.split('').map(Number),top=[null,null,null];for(let d=1;d<=n;d++){let p=pos[d-1];if(top[p]===null)top[p]=d}let out=[];for(let a=0;a<3;a++){let d=top[a];if(d===null)continue;for(let b=0;b<3;b++){if(a===b)continue;if(top[b]===null||top[b]>d){let q=pos.slice();q[d-1]=b;out.push(q.join(''))}}}return out}
 function distanceToGoal(key){let goal='2'.repeat(n);if(key===goal)return 0;let q=[[key,0]],seen=new Set([key]);for(let k=0;k<q.length;k++){let [s,d]=q[k];for(const nx of neighbors(s)){if(nx===goal)return d+1;if(!seen.has(nx)){seen.add(nx);q.push([nx,d+1])}}}return Infinity}
@@ -354,7 +354,44 @@ function raiCoach(best){
  return g>=9?'Movimento válido, mas a distância mínima ao estado final aumentou. Procure um estado sucessor que reduza essa distância.':'Movimento válido, mas existe um caminho mais curto. Pense no que esta jogada obrigará você a desfazer depois.';
 }
 function verify(){if(towers[2].length!==n){msg.textContent='Ainda não. Leve todos os discos ao DESTINO antes de verificar.';rai.textContent='Observe o destaque das hastes: ao selecionar um disco, os destinos possíveis ficam realçados.';return}finish()}
-function hint(){hints++;if(selected!==null){let d=towers[selected].at(-1);rai.textContent='Você selecionou o disco '+d+'. Compare-o com o topo das outras hastes antes de escolher o destino.';return}let s=stateKey(),d0=distanceToGoal(s),next=neighbors(s).find(k=>distanceToGoal(k)===d0-1);if(next){let a=s.split(''),b=next.split(''),idx=a.findIndex((v,i)=>v!==b[i]);rai.textContent='Dica estratégica: observe o disco '+(idx+1)+'. Ele participa de uma jogada que reduz a distância até a solução. Descubra para qual haste.'}else rai.textContent='Pare e descreva o estado atual antes da próxima jogada. Planejar também faz parte do algoritmo.'}
+function hint(){
+ hints++;
+ const grade=+document.querySelector('#grade').value;
+ const level=n<=3?'iniciante':n<=5?'intermediário':'avançado';
+ const selectedDisk=selected===null?null:towers[selected].at(-1);
+ const intro='Nível '+level+' com '+n+' discos. ';
+ if(selectedDisk!==null){
+  const valid=towers.map((t,i)=>i!==selected&&(!t.length||t.at(-1)>selectedDisk)?'ABC'[i]:null).filter(Boolean);
+  rai.textContent=intro+'Você escolheu o disco '+selectedDisk+'. Destinos permitidos: '+(valid.join(' ou ')||'nenhum')+'. Qual deles ajuda a liberar a próxima etapa?';
+  return;
+ }
+ const s=stateKey(),remaining=distanceToGoal(s),total=minimum();
+ if(remaining===0){rai.textContent='A torre está completa! Explique seu algoritmo e compare os movimentos com a meta de '+total+'.';return}
+ const phase=hints%3;
+ if(n<=3){
+  const tips=[
+   'Observe o menor disco. Que movimento é permitido agora?',
+   'Antes de mover o disco maior, onde os pequenos precisam estar?',
+   'Decomponha: libere o disco maior, mova-o e reorganize os menores.'
+  ];
+  rai.textContent=intro+tips[phase];return;
+ }
+ if(n<=5){
+  const tips=[
+   'Divida a torre: primeiro organize os '+(n-1)+' discos menores para liberar o maior.',
+   'Procure um padrão entre as soluções com '+(n-1)+' e '+n+' discos. O que se repete?',
+   'Pense no algoritmo: mover uma subtorre, mover o maior disco e reconstruir a subtorre.'
+  ];
+  rai.textContent=intro+tips[phase]+' Faltam pelo menos '+remaining+' movimentos a partir desta posição.';return;
+ }
+ const tips=[
+  'Não tente planejar '+total+' jogadas de uma vez. Qual subtorre precisa ser resolvida primeiro?',
+  'Use a decomposição: resolver '+n+' discos depende de resolver '+(n-1)+' discos duas vezes, com um movimento do maior entre elas.',
+  'Teste sua hipótese: cada jogada deveria aproximar o estado atual da meta. Se estiver repetindo estados, revise o algoritmo.'
+ ];
+ rai.textContent=intro+tips[phase]+' Distância mínima restante: '+remaining+' movimentos.';
+}
+
 function finish(){
  let g=+document.querySelector('#grade').value,ideal=moves===minimum(),eff=Math.round(minimum()/moves*100),perfect=ideal&&invalid===0&&detourMoves===0;
  if(perfect){
