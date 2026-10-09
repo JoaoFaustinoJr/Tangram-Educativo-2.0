@@ -950,8 +950,34 @@ function raiContextualIntent(raw){
  if(/^(?:o que voce faz|o que pode fazer|como pode me ajudar|quais sao as opcoes)$/.test(n))return 'Posso abrir o Tangram, a Arena X1, a Torre de Hanói e as Aulas. Também explico conceitos, dou pistas e ajudo você a pensar no próximo passo. Qual caminho escolhemos?';
  return '';
 }
+function raiPedagogicalDialogue(q){
+ const n=raiNorm(q).replace(/[!?.,;:]+/g,' ').replace(/\s+/g,' ').trim();
+ let h=[];try{h=JSON.parse(sessionStorage.getItem('raiGlobalLessonThread')||'[]')}catch(_){}
+ const prev=h[h.length-1],prevTopic=raiNorm(prev?.q||'');
+ const topic=/\b(?:hanoi|torre de hanoi)\b/.test(n)?'hanoi':/\b(?:algoritmo|programacao|codigo|python)\b/.test(n)?'algoritmo':/\b(?:robotica|robo|sensor)\b/.test(n)?'robotica':/\b(?:tangram|mosaico|geometria|triangulo|quadrado)\b/.test(n)?'geometria':/\b(?:x\s*1|arena)\b/.test(n)?'x1':(/^(?:e depois|continue|continua|outro exemplo|mais um exemplo|por que|porque|como assim|nao entendi|explica melhor|mais simples)$/.test(n)?(/hanoi/.test(prevTopic)?'hanoi':/algoritmo|programacao|codigo|python/.test(prevTopic)?'algoritmo':/robo|robotica|sensor/.test(prevTopic)?'robotica':/tangram|geometria|triangulo|quadrado/.test(prevTopic)?'geometria':''):'');
+ if(!topic)return '';
+ const more=/^(?:outro exemplo|mais um exemplo|exemplo|me de um exemplo)$/.test(n);
+ const why=/^(?:por que|porque|como assim|nao entendi|explica melhor|mais simples|explique melhor)$/.test(n);
+ const next=/^(?:e depois|continue|continua|qual o proximo passo)$/.test(n);
+ if(topic==='algoritmo'){
+  if(more)return 'Outro exemplo: organizar a mochila é um algoritmo. Primeiro confira o horário, depois separe os materiais e por último guarde tudo. Qual etapa depende da anterior?';
+  if(why)return 'Um algoritmo é como uma receita: tem instruções em ordem. Um robô não adivinha o próximo passo; precisamos dizer o que fazer e quando fazer. Quer experimentar com um obstáculo?';
+  if(next)return 'Agora acrescente uma decisão ao algoritmo: se houver obstáculo, desvie; caso contrário, avance. Como você escreveria essa regra com suas palavras?';
+  if(/^(?:o que e|explique|me explique|como funciona|para que serve|qual a importancia).*(?:algoritmo|programacao)/.test(n))return 'Algoritmo é uma sequência de passos para resolver um problema. Em programação, transformamos esses passos em instruções que o computador executa. Exemplo: observar um obstáculo, decidir se deve desviar e então avançar. Qual dessas etapas é uma decisão?';
+ }
+ if(topic==='hanoi'){
+  if(more)return 'Imagine três discos: antes de mover o maior, precisamos retirar os dois menores de cima dele. Essa pequena tarefa é uma versão reduzida do mesmo problema. Consegue perceber o padrão?';
+  if(why)return 'Na Torre de Hanói, o segredo é resolver primeiro uma parte menor do problema. Você transfere os discos menores, move o maior e depois reorganiza os menores. Isso é decomposição.';
+  if(next)return 'Observe qual disco impede o movimento do maior. Pense em como liberar esse disco sem colocar um maior sobre um menor. Qual haste está livre?';
+  if(/(?:como resolver|como jogar|regras|movimentos|estrategia|decomposicao|recursao)/.test(n))return 'Na Torre de Hanói, mova um disco por vez e nunca coloque um disco maior sobre um menor. Para planejar, pense primeiro em como liberar o disco maior. Quantos discos há no seu desafio?';
+ }
+ if(topic==='robotica'&&(/(?:o que e|como funciona|para que serve|explique|sensor)/.test(n)||why||more))return more?'Pense em uma ordenhadeira automatizada: sensores ajudam a acompanhar o processo e um controlador executa etapas programadas. Que informação seria importante medir?':'Robótica reúne mecanismos, sensores e programação. O sensor percebe algo, o programa decide e o atuador realiza uma ação. Imagine um robô que encontra um obstáculo: qual componente o detecta?';
+ if(topic==='geometria'&&(/(?:o que e|como funciona|explique|girar|rotacao|simetria)/.test(n)||why||more))return 'No Tangram, girar uma peça muda sua orientação, mas não seus lados nem seus ângulos. Um quadrado girado 45 graus continua sendo um quadrado. Que característica permanece igual?';
+ if(topic==='x1'&&/^(?:o que e|como funciona|quais as regras|explique).*(?:x\s*1|arena)/.test(n))return 'Na Arena X1, os jogadores recebem um desafio compartilhado. No modo pedagógico, também há atividades de aprendizagem. O importante é resolver com precisão, não apenas rapidez. Quer conhecer o modo pedagógico?';
+ return '';
+}
 function raiGlobalAnswer(q){
- const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
+ const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const pedagogical=raiPedagogicalDialogue(raw);if(pedagogical)return pedagogical; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
  const intent=raiNorm(raw).replace(/[!?.,;:]+/g,' ').replace(/\\s+/g,' ').trim();
  if(/^(oi |ola |ei )?(pode |consegue |voce pode |vc pode )?(me |nos )?(ajudar|ajuda|dar uma ajuda|dar uma mao)( por favor| pfv| aqui| ai)?$/.test(intent)||/^(preciso de ajuda|quero ajuda|me ajuda|socorro rai|preciso de uma orientacao)$/.test(intent)){
   const context=raiGlobalContext();
