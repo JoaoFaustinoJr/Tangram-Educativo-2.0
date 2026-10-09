@@ -1035,8 +1035,18 @@ function raiSocialCourtesy(q){
  if(/^(?:de nada|imagina|por nada)$/.test(n))return '😊 Seguimos juntos! O que você gostaria de explorar agora?';
  return '';
 }
+function raiIdentityAnswer(q){
+ const n=raiNorm(q).replace(/[!?.,;:]+/g,' ').replace(/\s+/g,' ').trim();
+ if(/^(?:quem|qual pessoa|qual professor)\s+(?:te|voce|vc|a rai)\s+(?:criou|inventou|desenvolveu|fez|programou|construiu)$/.test(n)||/^(?:quem e seu criador|quem e sua criadora|quem e seu programador|quem fez voce|quem criou a rai|quem programou a rai|quem desenvolveu a rai)$/.test(n)){
+  if(/program|desenvolv/.test(n))return 'Minha programação faz parte do Tangram Educativo, desenvolvido pelo professor João Faustino Júnior. Uso código e regras de interpretação para responder e orientar os estudantes. Quer saber como isso funciona?';
+  return 'Fui criada como parte do Tangram Educativo, um projeto desenvolvido pelo professor João Faustino Júnior. Minha missão é ajudar estudantes a aprender programação, robótica, lógica e geometria! 🤖✨';
+ }
+ if(/^(?:quem e voce|quem e a rai|o que e a rai|qual e seu nome|como voce se chama|se apresente|fale sobre voce)$/.test(n))return 'Sou a R.A.I., tutora pedagógica do Tangram Educativo! 🤖 Meu nome reúne Robótica, Aprendizagem e Inteligência. Posso explicar conceitos, dar pistas e ajudar você a explorar as atividades. O que gostaria de descobrir?';
+ if(/^(?:como voce funciona|como foi programada|voce e uma inteligencia artificial|voce e uma ia|voce pensa sozinha)$/.test(n))return 'Funciono por meio de código e regras que interpretam perguntas e consideram parte da conversa. Não penso como uma pessoa nem compreendo tudo, mas fui desenvolvida para apoiar sua aprendizagem. Quer ver um exemplo de como uma regra funciona?';
+ return '';
+}
 function raiGlobalAnswer(q){
- const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const courtesy=raiSocialCourtesy(raw);if(courtesy)return courtesy; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const shortConcept=raiShortConceptAnswer(raw);if(shortConcept)return shortConcept; const elliptical=raiEllipticalFollowup(raw);if(elliptical)return elliptical; const pedagogical=raiPedagogicalDialogue(raw);if(pedagogical)return pedagogical; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
+ const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const courtesy=raiSocialCourtesy(raw);if(courtesy)return courtesy; const identity=raiIdentityAnswer(raw);if(identity)return identity; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const shortConcept=raiShortConceptAnswer(raw);if(shortConcept)return shortConcept; const elliptical=raiEllipticalFollowup(raw);if(elliptical)return elliptical; const pedagogical=raiPedagogicalDialogue(raw);if(pedagogical)return pedagogical; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
  const intent=raiNorm(raw).replace(/[!?.,;:]+/g,' ').replace(/\\s+/g,' ').trim();
  if(/^(oi |ola |ei )?(pode |consegue |voce pode |vc pode )?(me |nos )?(ajudar|ajuda|dar uma ajuda|dar uma mao)( por favor| pfv| aqui| ai)?$/.test(intent)||/^(preciso de ajuda|quero ajuda|me ajuda|socorro rai|preciso de uma orientacao)$/.test(intent)){
   const context=raiGlobalContext();
