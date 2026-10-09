@@ -1057,6 +1057,20 @@ function raiPythonAnswer(q){
   return 'Vamos começar! Em Python, escreva print("Olá, mundo!") para mostrar uma mensagem. Depois, você pode trocar o texto entre aspas. Qual mensagem gostaria de exibir?';
  return '';
 }
+let raiSafetyConversation={stage:'',at:0};
+function raiSafetyFollowup(q){
+ const n=raiNorm(q).replace(/[!?.,;:]+/g,' ').replace(/\s+/g,' ').trim();
+ if(!raiSafetyConversation.stage||Date.now()-raiSafetyConversation.at>15*60*1000){raiSafetyConversation={stage:'',at:0};return '';}
+ const yes=/^(?:sim|sim estou|estou sim|estou seguro|estou segura|acho que sim|creio que sim|claro|estou em seguranca)$/.test(n);
+ const no=/^(?:nao|nao estou|acho que nao|nao sei|talvez nao|nao tenho certeza|estou em perigo|nao estou seguro|nao estou segura)$/.test(n);
+ if(!yes&&!no)return '';
+ const stage=raiSafetyConversation.stage;raiSafetyConversation={stage:'',at:0};
+ if(stage==='safety'){
+  if(yes)return 'Que bom saber que você está em um lugar seguro! 💛 Quer me contar o que está causando esse medo? Podemos conversar. Se precisar, procure também um adulto de confiança.';
+  return 'Sinto muito. Sua segurança é a prioridade. Se puder, afaste-se do perigo e procure agora um professor, familiar ou outro adulto de confiança. Se houver ameaça imediata, ligue 190; se precisar de socorro médico urgente, 192. Você consegue pedir ajuda a alguém perto de você?';
+ }
+ return '';
+}
 function raiWellbeingIntent(q){
  const n=raiNorm(q).replace(/[!?.,;:]+/g,' ').replace(/\s+/g,' ').trim();
  if(/(?:quero me matar|vou me matar|pensando em suicidio|quero morrer|vou tirar minha vida|me machucar|me ferir|automutilacao|nao quero mais viver|suicidio)/.test(n))return 'Sinto muito que você esteja passando por isso. Você merece ajuda e não precisa enfrentar isso sozinho(a). Procure agora um adulto de confiança e diga claramente o que está sentindo. Se houver perigo imediato, ligue 192 (SAMU) ou 190 (Polícia). Para conversar com alguém, ligue 188 (CVV), gratuito e 24 horas. Você está em segurança neste momento?';
@@ -1071,7 +1085,7 @@ function raiWellbeingIntent(q){
 }
 function raiWellbeingSensitive(q){const n=raiNorm(q);return /(?:medo|assustad|ameac|agred|violencia|abuso|suicid|matar|morrer|machucar|ferir|emergencia|socorro|desabafar|estou triste|estou sozinh|estou ansios|estou mal|quero conversar|preciso conversar|quem pode me ajudar|com quem.*falar|com quem.*conversar)/.test(n)}
 function raiGlobalAnswer(q){
- const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const wellbeing=raiWellbeingIntent(raw);if(wellbeing)return wellbeing; const courtesy=raiSocialCourtesy(raw);if(courtesy)return courtesy; const identity=raiIdentityAnswer(raw);if(identity)return identity; const pythonAnswer=raiPythonAnswer(raw);if(pythonAnswer)return pythonAnswer; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const shortConcept=raiShortConceptAnswer(raw);if(shortConcept)return shortConcept; const elliptical=raiEllipticalFollowup(raw);if(elliptical)return elliptical; const pedagogical=raiPedagogicalDialogue(raw);if(pedagogical)return pedagogical; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
+ const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const safetyFollowup=raiSafetyFollowup(raw);if(safetyFollowup)return safetyFollowup; const wellbeing=raiWellbeingIntent(raw);if(wellbeing){if(/voce esta (?:em um lugar seguro|em seguranca)/i.test(raiNorm(wellbeing)))raiSafetyConversation={stage:'safety',at:Date.now()};return wellbeing;} const courtesy=raiSocialCourtesy(raw);if(courtesy)return courtesy; const identity=raiIdentityAnswer(raw);if(identity)return identity; const pythonAnswer=raiPythonAnswer(raw);if(pythonAnswer)return pythonAnswer; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const shortConcept=raiShortConceptAnswer(raw);if(shortConcept)return shortConcept; const elliptical=raiEllipticalFollowup(raw);if(elliptical)return elliptical; const pedagogical=raiPedagogicalDialogue(raw);if(pedagogical)return pedagogical; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
  const intent=raiNorm(raw).replace(/[!?.,;:]+/g,' ').replace(/\\s+/g,' ').trim();
  if(/^(oi |ola |ei )?(pode |consegue |voce pode |vc pode )?(me |nos )?(ajudar|ajuda|dar uma ajuda|dar uma mao)( por favor| pfv| aqui| ai)?$/.test(intent)||/^(preciso de ajuda|quero ajuda|me ajuda|socorro rai|preciso de uma orientacao)$/.test(intent)){
   const context=raiGlobalContext();
