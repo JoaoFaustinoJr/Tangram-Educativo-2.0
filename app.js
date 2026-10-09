@@ -1009,8 +1009,22 @@ function raiEllipticalFollowup(q){
  }
  return '';
 }
+function raiShortConceptAnswer(q){
+ const n=raiNorm(q).replace(/[!?.,;:]+/g,' ').replace(/\s+/g,' ').trim();
+ const m=/^(?:(?:mas )?e\s+)?(?:(?:sobre|o|a|os|as)\s+)?(algoritmos?|programacao|variaveis?|sensores?|robotica|robos?|decomposicao|recursao)(?:\s+na\s+pratica)?$/.exec(n);
+ if(!m)return '';
+ const t=m[1];
+ if(/^algoritm/.test(t))return 'Um algoritmo é uma sequência organizada de passos para resolver um problema. Na programação, ele serve para planejar as instruções antes de escrever o código. Por exemplo: observar um obstáculo, decidir se deve desviar e executar o movimento. Quer comparar esses passos com um programa em Python?';
+ if(t==='programacao')return 'Programação é criar instruções para que computadores e robôs realizem tarefas. O algoritmo organiza o plano; o código transforma esse plano em comandos. Quer ver um exemplo simples?';
+ if(/^variav/.test(t))return 'Uma variável guarda um valor que pode mudar durante a execução de um programa. Por exemplo, distancia pode guardar a leitura de um sensor. Quer ver como escrever isso em Python?';
+ if(/^sensor/.test(t))return 'Sensores permitem que um robô perceba informações, como distância, luz ou temperatura. O programa interpreta essas leituras para decidir como agir.';
+ if(/^decomposicao/.test(t))return 'Decomposição é dividir um problema em partes menores. Na Torre de Hanói, podemos começar pensando em como liberar o maior disco.';
+ if(/^recursao/.test(t))return 'Recursão é resolver um problema repetindo a mesma estratégia em uma versão menor dele. A Torre de Hanói é um exemplo clássico.';
+ if(/^robo|robotica/.test(t))return 'Robótica combina mecanismos, sensores e programação para realizar tarefas. O sensor observa, o programa decide e o mecanismo age.';
+ return '';
+}
 function raiGlobalAnswer(q){
- const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const elliptical=raiEllipticalFollowup(raw);if(elliptical)return elliptical; const pedagogical=raiPedagogicalDialogue(raw);if(pedagogical)return pedagogical; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
+ const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const shortConcept=raiShortConceptAnswer(raw);if(shortConcept)return shortConcept; const elliptical=raiEllipticalFollowup(raw);if(elliptical)return elliptical; const pedagogical=raiPedagogicalDialogue(raw);if(pedagogical)return pedagogical; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
  const intent=raiNorm(raw).replace(/[!?.,;:]+/g,' ').replace(/\\s+/g,' ').trim();
  if(/^(oi |ola |ei )?(pode |consegue |voce pode |vc pode )?(me |nos )?(ajudar|ajuda|dar uma ajuda|dar uma mao)( por favor| pfv| aqui| ai)?$/.test(intent)||/^(preciso de ajuda|quero ajuda|me ajuda|socorro rai|preciso de uma orientacao)$/.test(intent)){
   const context=raiGlobalContext();
