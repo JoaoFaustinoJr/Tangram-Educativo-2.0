@@ -1023,8 +1023,19 @@ function raiShortConceptAnswer(q){
  if(/^robo|robotica/.test(t))return 'Robótica combina mecanismos, sensores e programação para realizar tarefas. O sensor observa, o programa decide e o mecanismo age.';
  return '';
 }
+function raiSocialCourtesy(q){
+ const n=raiNorm(q).replace(/[!?.,;:]+/g,' ').replace(/\s+/g,' ').trim();
+ if(/^(?:(?:muito|muitissimo|mt|mtto)\s+)?(?:obrigad[oa]|brigad[oa]|valeu|agradecid[oa])(?:\s+(?:mesmo|demais|rai|pela ajuda|por tudo|viu))?$/.test(n)||/^(?:agradeco|te agradeco|muito grato|muito grata|valeu mesmo|thanks)$/.test(n))
+  return 'Por nada! 😊 Gostei de conversar com você. Quando quiser aprender mais ou enfrentar um novo desafio, estarei por aqui!';
+ if(/^(?:tchau|ate logo|ate mais|ate a proxima|falou|fui|boa noite|bom descanso)(?: rai)?$/.test(n))
+  return 'Até a próxima! ✨ Continue curioso e conte comigo quando precisar.';
+ if(/^(?:parabens|muito bom|excelente|voce e demais|arrasou|mandou bem|que legal|gostei|adorei)(?: rai)?$/.test(n))
+  return 'Que bom saber disso! 🌟 Aprender fica ainda melhor quando trocamos ideias. Quer continuar explorando?';
+ if(/^(?:de nada|imagina|por nada)$/.test(n))return '😊 Seguimos juntos! O que você gostaria de explorar agora?';
+ return '';
+}
 function raiGlobalAnswer(q){
- const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const shortConcept=raiShortConceptAnswer(raw);if(shortConcept)return shortConcept; const elliptical=raiEllipticalFollowup(raw);if(elliptical)return elliptical; const pedagogical=raiPedagogicalDialogue(raw);if(pedagogical)return pedagogical; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
+ const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const courtesy=raiSocialCourtesy(raw);if(courtesy)return courtesy; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const shortConcept=raiShortConceptAnswer(raw);if(shortConcept)return shortConcept; const elliptical=raiEllipticalFollowup(raw);if(elliptical)return elliptical; const pedagogical=raiPedagogicalDialogue(raw);if(pedagogical)return pedagogical; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
  const intent=raiNorm(raw).replace(/[!?.,;:]+/g,' ').replace(/\\s+/g,' ').trim();
  if(/^(oi |ola |ei )?(pode |consegue |voce pode |vc pode )?(me |nos )?(ajudar|ajuda|dar uma ajuda|dar uma mao)( por favor| pfv| aqui| ai)?$/.test(intent)||/^(preciso de ajuda|quero ajuda|me ajuda|socorro rai|preciso de uma orientacao)$/.test(intent)){
   const context=raiGlobalContext();
