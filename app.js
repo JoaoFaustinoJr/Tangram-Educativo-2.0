@@ -1051,6 +1051,8 @@ function raiPythonAnswer(q){
  const n=raiNorm(q).replace(/[!?.,;:]+/g,' ').replace(/\s+/g,' ').trim();
  if(/^(?:(?:mas )?e\s+)?(?:(?:o|sobre|a linguagem)\s+)?python$/.test(n)||/^(?:o que e|que e|explique|me explique|o que significa|para que serve|como funciona|voce conhece|o que faz|fale sobre)\s+(?:o\s+)?python$/.test(n)||/^(?:python e o que|python e uma linguagem de programacao)$/.test(n))
   return 'Python é uma linguagem de programação. Com ela, podemos criar jogos, aplicativos, automatizar tarefas e programar alguns robôs. Por exemplo, o comando print("Olá!") faz o computador mostrar uma mensagem na tela. Quer experimentar seu primeiro comando em Python?';
+ if((/\bpython\b/.test(n)&&(/^(?:como|de que jeito|de que forma)\b/.test(n)&&/\b(?:programo|programar|programa|faco|fazer|escrevo|escrever|comeco|comecar|aprendo|aprender|crio|criar)\b/.test(n)||/\b(?:me ensina|me ensine|ensina|ensine|quero aprender|quero programar|gostaria de aprender|pode me ensinar)\b/.test(n)))||/^(?:quero aprender a programar|me ensina a programar|como eu programo)$/.test(n))
+  return 'Para programar em Python, você escreve instruções que o computador executa. Vamos começar com print("Olá, mundo!"). Esse comando mostra uma mensagem na tela. Experimente trocar o texto entre aspas pelo seu nome! Depois podemos aprender variáveis e decisões com if e else. Quer tentar?';
  if(/^(?:como programar em python|como comecar em python|como aprender python|primeiro comando em python|exemplo em python|me mostre python)$/.test(n))
   return 'Vamos começar! Em Python, escreva print("Olá, mundo!") para mostrar uma mensagem. Depois, você pode trocar o texto entre aspas. Qual mensagem gostaria de exibir?';
  return '';
