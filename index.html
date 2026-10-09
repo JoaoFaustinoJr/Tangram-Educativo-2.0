@@ -201,6 +201,15 @@ body:has(#rai-tutor-panel:not([hidden])) #rai-float-wrap .rai-persona-call{displ
  #rai-float-wrap .rai-persona-call span{font-size:.72rem}
 }
 @media(prefers-reduced-motion:reduce){#rai-float-wrap #rai-tutor-fab,#rai-float-wrap .rai-persona-call{animation:none!important}}
+</style><style id="rai-draggable-presence-v16">
+/* Uma unica fala, mascote arrastavel e posicao segura */
+html body #rai-float-wrap{position:fixed!important;left:auto!important;top:auto!important;right:18px!important;bottom:calc(104px + env(safe-area-inset-bottom))!important;max-width:none!important;width:78px!important;height:78px!important;display:block!important;z-index:995!important;touch-action:none!important;user-select:none!important}
+html body #rai-float-wrap .rai-click-call,html body #rai-float-wrap:before{display:none!important;content:none!important}
+html body #rai-float-wrap .rai-persona-call{position:absolute!important;right:calc(100% + 9px)!important;bottom:16px!important;width:176px!important;max-width:176px!important;pointer-events:none!important;padding:9px 12px!important;transition:opacity .25s ease,visibility .25s ease!important}
+html body #rai-float-wrap.rai-call-hidden .rai-persona-call,html body #rai-float-wrap.rai-moving .rai-persona-call{opacity:0!important;visibility:hidden!important}
+html body #rai-float-wrap #rai-tutor-fab{position:absolute!important;inset:0!important;width:78px!important;height:78px!important;min-width:78px!important;min-height:78px!important;touch-action:none!important;cursor:grab!important}
+html body #rai-float-wrap.rai-moving #rai-tutor-fab{cursor:grabbing!important;animation:none!important}
+@media(max-width:600px){html body #rai-float-wrap{width:70px!important;height:70px!important;right:14px!important;bottom:calc(100px + env(safe-area-inset-bottom))!important}html body #rai-float-wrap #rai-tutor-fab{width:70px!important;height:70px!important;min-width:70px!important;min-height:70px!important}html body #rai-float-wrap .rai-persona-call{width:148px!important;max-width:148px!important}}
 </style></head><body><div class="opening-promo" id="opening-promo" hidden>
 <button class="opening-promo-x" type="button" aria-label="Fechar chamada">×</button>
 <div class="opening-promo-card" data-promo="x1"><div class="promo-rai"><img src="app-icon.svg?v=310" alt="" aria-hidden="true"><span class="promo-symbol">×1</span></div><small>DESAFIOS EM DUPLA</small><strong>X1 Arena</strong><p>Estratégia, lógica e diversão em tempo real.</p><a href="../Html/tangram-x1/">JOGAR ›</a></div>
@@ -271,4 +280,21 @@ document.addEventListener('DOMContentLoaded',()=>{
  lessonBack.addEventListener('click',()=>{document.querySelectorAll('.lesson-modal [data-close],.classroom-modal [data-close],.lesson-overlay [data-close],.lesson-close,.classroom-close').forEach(x=>{if(x.offsetParent!==null)x.click()});setMode('home')});
  setMode('home');
 });
-</script><script id="platform-about-easter-egg-v12">(function(){const tag=document.querySelector('.platform-header-label'),about=document.getElementById('about-section'),back=document.getElementById('about-back');if(!tag||!about||!back)return;tag.setAttribute('role','button');tag.setAttribute('tabindex','0');tag.setAttribute('aria-label','Conhecer a plataforma Tangram Educativo');function openAbout(){about.hidden=false;document.body.classList.add('portal-home');document.getElementById('app-menu')?.classList.remove('open');about.scrollIntoView({block:'start',behavior:'smooth'});}function closeAbout(){about.hidden=true;document.getElementById('platform-portal')?.scrollIntoView({block:'start',behavior:'smooth'});}tag.addEventListener('click',openAbout);tag.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openAbout();}});back.addEventListener('click',closeAbout);})();</script></body></html>
+</script><script id="platform-about-easter-egg-v12">(function(){const tag=document.querySelector('.platform-header-label'),about=document.getElementById('about-section'),back=document.getElementById('about-back');if(!tag||!about||!back)return;tag.setAttribute('role','button');tag.setAttribute('tabindex','0');tag.setAttribute('aria-label','Conhecer a plataforma Tangram Educativo');function openAbout(){about.hidden=false;document.body.classList.add('portal-home');document.getElementById('app-menu')?.classList.remove('open');about.scrollIntoView({block:'start',behavior:'smooth'});}function closeAbout(){about.hidden=true;document.getElementById('platform-portal')?.scrollIntoView({block:'start',behavior:'smooth'});}tag.addEventListener('click',openAbout);tag.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openAbout();}});back.addEventListener('click',closeAbout);})();</script><script id="rai-drag-controller-v16">(function(){
+ const wrap=document.getElementById('rai-float-wrap'),button=document.getElementById('rai-tutor-fab');if(!wrap||!button)return;
+ const bubble=wrap.querySelector('.rai-persona-call');if(!bubble)return;
+ let drag=null,suppress=false;
+ const clamp=(n,a,b)=>Math.min(b,Math.max(a,n));
+ function place(x,y){const w=wrap.offsetWidth||78,h=wrap.offsetHeight||78;wrap.style.setProperty('left',clamp(x,8,Math.max(8,innerWidth-w-8))+'px','important');wrap.style.setProperty('top',clamp(y,8,Math.max(8,innerHeight-h-8))+'px','important');wrap.style.setProperty('right','auto','important');wrap.style.setProperty('bottom','auto','important');}
+ function restore(){try{const p=JSON.parse(localStorage.getItem('raiFloatPositionV1')||'null');if(p&&Number.isFinite(p.x)&&Number.isFinite(p.y))place(p.x,p.y)}catch(_){}}
+ function hideBubble(){wrap.classList.add('rai-call-hidden')}
+ const introTimer=setTimeout(hideBubble,6500);
+ button.addEventListener('pointerdown',e=>{if(e.button!==0)return;drag={id:e.pointerId,x:e.clientX,y:e.clientY,left:wrap.getBoundingClientRect().left,top:wrap.getBoundingClientRect().top,moved:false};try{button.setPointerCapture(e.pointerId)}catch(_){}},{capture:true});
+ button.addEventListener('pointermove',e=>{if(!drag||drag.id!==e.pointerId)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(!drag.moved&&Math.hypot(dx,dy)<9)return;drag.moved=true;wrap.classList.add('rai-moving');hideBubble();place(drag.left+dx,drag.top+dy);e.preventDefault()},{capture:true});
+ function end(e){if(!drag||drag.id!==e.pointerId)return;const moved=drag.moved;drag=null;wrap.classList.remove('rai-moving');if(moved){suppress=true;setTimeout(()=>{suppress=false},350);const r=wrap.getBoundingClientRect();try{localStorage.setItem('raiFloatPositionV1',JSON.stringify({x:r.left,y:r.top}))}catch(_){}}}
+ button.addEventListener('pointerup',end,{capture:true});button.addEventListener('pointercancel',end,{capture:true});
+ button.addEventListener('click',e=>{if(!suppress)return;e.preventDefault();e.stopImmediatePropagation();suppress=false},{capture:true});
+ window.addEventListener('resize',()=>{if(wrap.style.left){const r=wrap.getBoundingClientRect();place(r.left,r.top)}},{passive:true});
+ restore();
+ document.getElementById('rai-tutor-close')?.addEventListener('click',hideBubble);
+})();</script></body></html>
