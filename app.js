@@ -959,6 +959,12 @@ function raiPedagogicalDialogue(q){
  const more=/^(?:outro exemplo|mais um exemplo|exemplo|me de um exemplo)$/.test(n);
  const why=/^(?:por que|porque|como assim|nao entendi|explica melhor|mais simples|explique melhor)$/.test(n);
  const next=/^(?:e depois|continue|continua|qual o proximo passo)$/.test(n);
+ if(topic==='algoritmo'&&/\\bprogramacao\\b/.test(n)&&!/\\balgoritmo\\b/.test(n)){
+  if(more)return 'Por exemplo, em Python podemos escrever uma instrução para mostrar uma mensagem na tela: print("Olá!"). Programar é escrever e testar instruções como essa. Que mensagem você escolheria?';
+  if(why)return 'Programar é explicar a uma máquina o que ela deve fazer usando instruções claras. O algoritmo organiza a ideia; o código é a forma de escrevê-la em uma linguagem de programação.';
+  if(next)return 'Depois de pensar na tarefa, escrevemos o código, testamos o resultado e corrigimos os erros. Esse processo faz parte da programação. Quer começar com uma instrução simples?';
+  if(/(?:o que e|explique|me explique|como funciona|para que serve|qual a importancia|^programacao$)/.test(n))return 'Programação é criar instruções para que um computador ou robô realize tarefas. Usamos linguagens como Python e JavaScript para escrever essas instruções. Antes de programar, podemos organizar os passos em um algoritmo. Quer ver um exemplo?';
+ }
  if(topic==='algoritmo'){
   if(more)return 'Outro exemplo: organizar a mochila é um algoritmo. Primeiro confira o horário, depois separe os materiais e por último guarde tudo. Qual etapa depende da anterior?';
   if(why)return 'Um algoritmo é como uma receita: tem instruções em ordem. Um robô não adivinha o próximo passo; precisamos dizer o que fazer e quando fazer. Quer experimentar com um obstáculo?';
