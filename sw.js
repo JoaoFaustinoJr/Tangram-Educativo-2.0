@@ -1,10 +1,10 @@
-const CACHE='tangram2-offline-stable-20261009-rotate45';
+const CACHE='tangram2-offline-stable-20261009-rai-name228';
 const CORE=[
   './',
   './index.html',
   './rai-robotica-t3-v18.json',
   './style.css?v=2.0.209-rai-dialog',
-  './app.js?v=2.0.216-mosaic-rotate45',
+  './app.js?v=2.0.228-rai-name',
   './manifest.webmanifest?v=310',
   './app-icon.svg?v=310',
   './file_000000007ad0820ebb1af4cac165a68a.png?v=149',
