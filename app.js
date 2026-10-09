@@ -976,8 +976,35 @@ function raiPedagogicalDialogue(q){
  if(topic==='x1'&&/^(?:o que e|como funciona|quais as regras|explique).*(?:x\s*1|arena)/.test(n))return 'Na Arena X1, os jogadores recebem um desafio compartilhado. No modo pedagógico, também há atividades de aprendizagem. O importante é resolver com precisão, não apenas rapidez. Quer conhecer o modo pedagógico?';
  return '';
 }
+function raiEllipticalFollowup(q){
+ const n=raiNorm(q).replace(/[!?.,;:]+/g,' ').replace(/\s+/g,' ').trim();
+ if(n.split(' ').length>7)return '';
+ let history=[];try{history=JSON.parse(sessionStorage.getItem('raiGlobalLessonThread')||'[]')}catch(_){}
+ const ctx=raiGlobalContext(),id=ctx.mode==='aula'?String(ctx.item?.id||ctx.item?.title||''):'rai-home';
+ const prev=[...history].reverse().find(x=>x.lesson===id);if(!prev)return '';
+ const previous=raiNorm(prev.q+' '+prev.answer);
+ const topic=/^(?:e |mas e |sobre |o |a |os |as )?(?:algoritmos?|variaveis?|sensores?|robos?|robotica|programacao|python|codigo|loops?|repeticao|condicionais?|decomposicao|recursao)(?: na pratica| no dia a dia)?$/.exec(n);
+ if(topic){
+  const term=topic[1];
+  if(/^algoritm/.test(term))return /program|codigo|python/.test(previous)?'Na programação, o algoritmo é o plano de ação: uma sequência de passos que depois transformamos em código. Por exemplo, para um robô desviar, o algoritmo prevê observar, decidir e mover. Qual desses passos precisaria de uma condição?':'Algoritmo é uma sequência organizada de passos para resolver um problema. Você pode descrevê-lo com palavras antes de escrever o código. Quer ver um exemplo?';
+  if(/^variav/.test(term))return 'Uma variável guarda uma informação que pode mudar durante o programa. Em um robô, por exemplo, a variável distancia pode guardar a leitura de um sensor. Se a distância diminuir, o programa pode decidir parar. Quer ver isso em Python?';
+  if(/^sensor/.test(term))return 'O sensor permite que o robô perceba algo, como distância, luz ou temperatura. O programa usa essa informação para decidir o próximo passo. Que sensor seria útil para evitar obstáculos?';
+  if(/^rob|robotica/.test(term))return 'A robótica aplica programação a máquinas que interagem com o mundo. Um algoritmo define os passos, sensores fornecem informações e motores executam ações. Quer construir uma sequência simples?';
+  if(/^decomposicao/.test(term))return 'Decomposição é dividir um problema grande em tarefas menores. Na Torre de Hanói, primeiro liberamos o disco maior; na programação, dividimos o objetivo em comandos simples. Que parte resolveria primeiro?';
+  if(/^recursao/.test(term))return 'Recursão é resolver um problema usando uma versão menor dele mesmo. Na Torre de Hanói, mover vários discos exige antes mover um grupo menor. Você consegue identificar esse padrão?';
+  if(/^condicion/.test(term))return 'Uma condicional permite escolher entre ações: se houver obstáculo, desvie; senão, avance. É a ligação entre uma decisão do algoritmo e o código. Quer ver um exemplo?';
+  if(/^loop|repeticao/.test(term))return 'Repetição é executar uma instrução várias vezes. Por exemplo, um robô pode avançar enquanto o caminho estiver livre. O que faria essa repetição terminar?';
+  if(/^python|codigo|programacao/.test(term))return 'O algoritmo descreve o plano; a programação o transforma em comandos que o computador executa. Python é uma das linguagens usadas para escrever esses comandos. Quer comparar um algoritmo em palavras com seu código?';
+ }
+ if(/^(?:e no robo|e no tangram|e no hanoi|e na pratica|qual a diferenca|e a diferenca|como se relacionam)$/.test(n)){
+  if(/program|algoritm|codigo|python/.test(previous))return 'Na programação, o algoritmo organiza os passos e o código os executa. Em um robô, por exemplo, o sensor detecta um obstáculo, a condição decide e o motor desvia. Qual parte você quer aprofundar?';
+  if(/hanoi|decomposicao|recursao/.test(previous))return 'Na Torre de Hanói, decomposição significa separar o problema em movimentos menores; recursão é repetir essa estratégia em grupos cada vez menores. Quer tentar com três discos?';
+  return 'Podemos relacionar isso ao assunto anterior. Qual dos conceitos você gostaria de comparar?';
+ }
+ return '';
+}
 function raiGlobalAnswer(q){
- const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const pedagogical=raiPedagogicalDialogue(raw);if(pedagogical)return pedagogical; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
+ const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const elliptical=raiEllipticalFollowup(raw);if(elliptical)return elliptical; const pedagogical=raiPedagogicalDialogue(raw);if(pedagogical)return pedagogical; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
  const intent=raiNorm(raw).replace(/[!?.,;:]+/g,' ').replace(/\\s+/g,' ').trim();
  if(/^(oi |ola |ei )?(pode |consegue |voce pode |vc pode )?(me |nos )?(ajudar|ajuda|dar uma ajuda|dar uma mao)( por favor| pfv| aqui| ai)?$/.test(intent)||/^(preciso de ajuda|quero ajuda|me ajuda|socorro rai|preciso de uma orientacao)$/.test(intent)){
   const context=raiGlobalContext();
