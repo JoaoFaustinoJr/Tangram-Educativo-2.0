@@ -1025,6 +1025,7 @@ function raiShortConceptAnswer(q){
 }
 function raiSocialCourtesy(q){
  const n=raiNorm(q).replace(/[!?.,;:]+/g,' ').replace(/\s+/g,' ').trim();
+ if(/\b(?:obrigad[oa]|brigad[oa]|agradeco|agradecid[oa])\b/.test(n)&&n.split(' ').length<=7)return 'Por nada! 😊 Foi um prazer ajudar. Quando quiser continuar, estou por aqui!';
  if(/^(?:(?:muito|muitissimo|mt|mtto)\s+)?(?:obrigad[oa]|brigad[oa]|valeu|agradecid[oa])(?:\s+(?:mesmo|demais|rai|pela ajuda|por tudo|viu))?$/.test(n)||/^(?:agradeco|te agradeco|muito grato|muito grata|valeu mesmo|thanks)$/.test(n))
   return 'Por nada! 😊 Gostei de conversar com você. Quando quiser aprender mais ou enfrentar um novo desafio, estarei por aqui!';
  if(/^(?:tchau|ate logo|ate mais|ate a proxima|falou|fui|boa noite|bom descanso)(?: rai)?$/.test(n))
