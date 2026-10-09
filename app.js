@@ -1047,8 +1047,16 @@ function raiIdentityAnswer(q){
  if(/^(?:como voce funciona|como foi programada|voce e uma inteligencia artificial|voce e uma ia|voce pensa sozinha)$/.test(n))return 'Funciono por meio de código e regras que interpretam perguntas e consideram parte da conversa. Não penso como uma pessoa nem compreendo tudo, mas fui desenvolvida para apoiar sua aprendizagem. Quer ver um exemplo de como uma regra funciona?';
  return '';
 }
+function raiPythonAnswer(q){
+ const n=raiNorm(q).replace(/[!?.,;:]+/g,' ').replace(/\s+/g,' ').trim();
+ if(/^(?:(?:mas )?e\s+)?(?:(?:o|sobre|a linguagem)\s+)?python$/.test(n)||/^(?:o que e|que e|explique|me explique|o que significa|para que serve|como funciona|voce conhece|o que faz|fale sobre)\s+(?:o\s+)?python$/.test(n)||/^(?:python e o que|python e uma linguagem de programacao)$/.test(n))
+  return 'Python é uma linguagem de programação. Com ela, podemos criar jogos, aplicativos, automatizar tarefas e programar alguns robôs. Por exemplo, o comando print("Olá!") faz o computador mostrar uma mensagem na tela. Quer experimentar seu primeiro comando em Python?';
+ if(/^(?:como programar em python|como comecar em python|como aprender python|primeiro comando em python|exemplo em python|me mostre python)$/.test(n))
+  return 'Vamos começar! Em Python, escreva print("Olá, mundo!") para mostrar uma mensagem. Depois, você pode trocar o texto entre aspas. Qual mensagem gostaria de exibir?';
+ return '';
+}
 function raiGlobalAnswer(q){
- const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const courtesy=raiSocialCourtesy(raw);if(courtesy)return courtesy; const identity=raiIdentityAnswer(raw);if(identity)return identity; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const shortConcept=raiShortConceptAnswer(raw);if(shortConcept)return shortConcept; const elliptical=raiEllipticalFollowup(raw);if(elliptical)return elliptical; const pedagogical=raiPedagogicalDialogue(raw);if(pedagogical)return pedagogical; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
+ const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const courtesy=raiSocialCourtesy(raw);if(courtesy)return courtesy; const identity=raiIdentityAnswer(raw);if(identity)return identity; const pythonAnswer=raiPythonAnswer(raw);if(pythonAnswer)return pythonAnswer; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const shortConcept=raiShortConceptAnswer(raw);if(shortConcept)return shortConcept; const elliptical=raiEllipticalFollowup(raw);if(elliptical)return elliptical; const pedagogical=raiPedagogicalDialogue(raw);if(pedagogical)return pedagogical; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
  const intent=raiNorm(raw).replace(/[!?.,;:]+/g,' ').replace(/\\s+/g,' ').trim();
  if(/^(oi |ola |ei )?(pode |consegue |voce pode |vc pode )?(me |nos )?(ajudar|ajuda|dar uma ajuda|dar uma mao)( por favor| pfv| aqui| ai)?$/.test(intent)||/^(preciso de ajuda|quero ajuda|me ajuda|socorro rai|preciso de uma orientacao)$/.test(intent)){
   const context=raiGlobalContext();
