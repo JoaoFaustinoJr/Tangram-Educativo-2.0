@@ -922,8 +922,21 @@ function raiGlobalFollowup(q){
  if(/^(e depois|qual o proximo passo|o que faco agora)$/.test(n))return ctx.mode==='aula'?'Vamos continuar na mesma aula. Qual foi a última etapa que você conseguiu realizar?':'Podemos escolher uma aula ou desafio. Diga qual assunto você quer estudar.';
  return '';
 }
+function raiContextualIntent(raw){
+ const n=raiNorm(raw).replace(/[!?.,;:]+/g,' ').replace(/\s+/g,' ').trim();
+ const navVerb=/(?:abrir|abra|abre|acesse|acessar|entrar|entre|ir|vamos|quero|jogar|iniciar|começar|comecar|me leve|mostre|mostrar|navegar|voltar)/;
+ if(navVerb.test(n)&&/\b(?:x\s*1|arena x\s*1|pedagogico x\s*1)\b/.test(n)){raiClose();openX1Official();return '__nav__';}
+ if(navVerb.test(n)&&/\b(?:torre de hanoi|hanoi)\b/.test(n)){raiClose();openHanoi('rai');return '__nav__';}
+ if(navVerb.test(n)&&/\b(?:pagina inicial|portal|inicio|tela inicial)\b/.test(n)){raiClose();goMain();return '__nav__';}
+ if(navVerb.test(n)&&/\b(?:aulas|sala de aula)\b/.test(n)){raiClose();showLessons();return '__nav__';}
+ if(/(?:hanoi.*x\s*1|x\s*1.*hanoi)/.test(n))return 'A Torre de Hanói pode ser jogada separadamente. Sua integração competitiva com a Arena X1 ainda precisa de testes. Quer que eu abra o Hanói ou a Arena X1?';
+ if(/^(?:e o x\s*1|e a arena|quero o x\s*1|arena x\s*1|x\s*1)$/.test(n)){raiClose();openX1Official();return '__nav__';}
+ if(/^(?:e hanoi|e a torre de hanoi|quero hanoi)$/.test(n)){raiClose();openHanoi('rai');return '__nav__';}
+ if(/^(?:o que voce faz|o que pode fazer|como pode me ajudar|quais sao as opcoes)$/.test(n))return 'Posso abrir o Tangram, a Arena X1, a Torre de Hanói e as Aulas. Também explico conceitos, dou pistas e ajudo você a pensar no próximo passo. Qual caminho escolhemos?';
+ return '';
+}
 function raiGlobalAnswer(q){
- const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const nav=raiNavigationCommand(raw);if(nav)return nav; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
+ const raw=String(q||'').trim();if(!raw)return 'Pode perguntar. Estou acompanhando você nesta parte do Tangram.'; const direct=raiContextualIntent(raw);if(direct)return direct; const nav=raiNavigationCommand(raw);if(nav)return nav; const continuity=raiGlobalFollowup(raw);if(continuity)return continuity;
  const intent=raiNorm(raw).replace(/[!?.,;:]+/g,' ').replace(/\\s+/g,' ').trim();
  if(/^(oi |ola |ei )?(pode |consegue |voce pode |vc pode )?(me |nos )?(ajudar|ajuda|dar uma ajuda|dar uma mao)( por favor| pfv| aqui| ai)?$/.test(intent)||/^(preciso de ajuda|quero ajuda|me ajuda|socorro rai|preciso de uma orientacao)$/.test(intent)){
   const context=raiGlobalContext();
