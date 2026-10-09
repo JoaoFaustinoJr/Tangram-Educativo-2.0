@@ -914,6 +914,21 @@ function raiGlobalFollowup(q){
  let history=[];try{history=JSON.parse(sessionStorage.getItem('raiGlobalLessonThread')||'[]')}catch(_){}
  const prev=[...history].reverse().find(x=>x.lesson===id);if(!prev)return '';
  const last=raiNorm(prev.answer||'');
+ const topic=raiNorm(prev.q||'');
+ if(/^(?:por que|porque|por que isso|como assim|explique melhor|explica melhor|nao entendi|mais simples)$/.test(n)){
+  if(/hanoi|torre/.test(topic))return 'Na Torre de Hanói, só movemos um disco por vez e nunca colocamos um maior sobre um menor. Para resolver, divida a tarefa: libere o disco maior, mova-o e depois reorganize os menores. Qual dessas etapas você quer explorar?';
+  if(/x\\s*1|arena/.test(topic))return 'Na Arena X1, os participantes enfrentam o mesmo desafio. O objetivo é combinar raciocínio e precisão; no modo pedagógico, a aprendizagem também faz parte da disputa. Quer entender as regras ou abrir a Arena?';
+  if(/algoritmo|programacao|codigo|python/.test(topic))return 'Um algoritmo é uma sequência ordenada de passos. Pense em orientar um robô: primeiro ele observa, depois decide e por fim age. O que aconteceria se trocássemos a ordem?';
+  if(ctx.mode==='aula'&&ctx.item)return raiLessonConversationAnswer(ctx.item,'como assim')||'Vamos dividir o conteúdo em partes menores.';
+  return 'Vou explicar em etapas, usando nossa conversa anterior: '+String(prev.answer||'').slice(0,155)+' Qual parte ainda ficou confusa?';
+ }
+ if(/^(?:outro exemplo|mais um exemplo|me de um exemplo|exemplo)$/.test(n)){
+  if(/hanoi|torre/.test(topic))return 'Exemplo: com três discos, o menor precisa sair do caminho para que os maiores possam se mover. Experimente prever os dois primeiros movimentos antes de tocar nas peças.';
+  if(/algoritmo|programacao|codigo|python/.test(topic))return 'Exemplo: para atravessar um corredor, um robô pode repetir: verificar se há obstáculo; se houver, desviar; senão, avançar. Qual condição ele precisa testar?';
+  if(ctx.mode==='aula'&&ctx.item)return raiLessonConversationAnswer(ctx.item,'outro exemplo')||'Vamos construir um exemplo simples.';
+  return 'Exemplo: montar um mosaico exige escolher a peça, testar sua posição e verificar o encaixe. Que etapa você faria primeiro?';
+ }
+ if(/^(?:e depois|qual o proximo passo|o que faco agora|continue|continua)$/.test(n)&&/hanoi|torre/.test(topic))return 'Depois de liberar o disco maior, mova-o para a haste de destino e reorganize os menores sem quebrar as regras. Qual disco está bloqueando seu próximo movimento?';
  if(/^(sim|quero|pode|claro|ok|isso|vamos|continue|continua)$/.test(n)){
   if(/abrir uma aula|escolher um desafio|aula ou desafio|aulas ou desafios/.test(last))return 'Ótimo! Você prefere estudar em uma aula ou praticar em um desafio? Também pode pedir: “abra as aulas”.';
   if(/explique|exemplo|etapa do desafio/.test(last))return ctx.mode==='aula'?'Vamos começar pelo assunto desta aula. Você prefere um exemplo ou uma explicação mais simples?':'Quer aprender um conceito ou começar um desafio?';
@@ -925,7 +940,7 @@ function raiGlobalFollowup(q){
 function raiContextualIntent(raw){
  const n=raiNorm(raw).replace(/[!?.,;:]+/g,' ').replace(/\s+/g,' ').trim();
  const navVerb=/(?:abrir|abra|abre|acesse|acessar|entrar|entre|ir|vamos|quero|jogar|iniciar|começar|comecar|me leve|mostre|mostrar|navegar|voltar)/;
- if(navVerb.test(n)&&/\b(?:x\s*1|arena x\s*1|pedagogico x\s*1)\b/.test(n)){raiClose();openX1Official();return '__nav__';}
+ if(navVerb.test(n)&&/\b(?:x\s*1|arena x\s*1|pedagogico x\s*1)\b/.test(n)&&!/hanoi/.test(n)){raiClose();openX1Official();return '__nav__';}
  if(navVerb.test(n)&&/\b(?:torre de hanoi|hanoi)\b/.test(n)){raiClose();openHanoi('rai');return '__nav__';}
  if(navVerb.test(n)&&/\b(?:pagina inicial|portal|inicio|tela inicial)\b/.test(n)){raiClose();goMain();return '__nav__';}
  if(navVerb.test(n)&&/\b(?:aulas|sala de aula)\b/.test(n)){raiClose();showLessons();return '__nav__';}
