@@ -160,6 +160,16 @@ body.portal-tangram #portal-back:not([hidden]),body.portal-lessons #portal-lesso
 body.portal-tangram #portal-back:after{content:"Tangram · Geometria e desafios";font-size:.77rem;font-weight:650;color:#9ad6df;margin-left:auto}
 body.portal-lessons #portal-lesson-back:after{content:"Aulas · Programação e robótica";font-size:.77rem;font-weight:650;color:#c8b7ed;margin-left:auto}
 @media(max-width:450px){body.portal-tangram #portal-back:after,body.portal-lessons #portal-lesson-back:after{font-size:.68rem;max-width:45%;text-align:right}}
+</style><style id="portal-menu-layer-fix-v11">
+/* O menu do cabeçalho precisa estar acima de todos os cartões. */
+body.portal-home header{z-index:1000!important;isolation:auto!important}
+body.portal-home header .app-menu{z-index:10010!important}
+body.portal-home header .menu{z-index:10011!important}
+body.portal-home #platform-portal{z-index:1!important}
+body.portal-home .portal-tiles,body.portal-home .portal-tile{z-index:auto!important}
+body.portal-home header:before{z-index:0!important}
+body.portal-home header>div,body.portal-home header>.menu,body.portal-home header>.app-menu{position:relative;z-index:1}
+body.portal-home header>.app-menu{position:absolute!important;z-index:10010!important}
 </style></head><body><div class="opening-promo" id="opening-promo" hidden>
 <button class="opening-promo-x" type="button" aria-label="Fechar chamada">×</button>
 <div class="opening-promo-card" data-promo="x1"><div class="promo-rai"><img src="app-icon.svg?v=310" alt="" aria-hidden="true"><span class="promo-symbol">×1</span></div><small>DESAFIOS EM DUPLA</small><strong>X1 Arena</strong><p>Estratégia, lógica e diversão em tempo real.</p><a href="../Html/tangram-x1/">JOGAR ›</a></div>
