@@ -66,6 +66,26 @@ body.portal-home #rai-float-wrap{bottom:calc(26px + env(safe-area-inset-bottom))
 body.portal-home .editorial-footer{padding-bottom:92px!important}
 @media(max-width:450px){body.portal-home .portal-tile{min-height:156px!important}body.portal-home .portal-welcome{padding-bottom:12px!important}.platform-header-label{max-width:270px;line-height:1.35}}
 @media(prefers-reduced-motion:reduce){body.portal-home .portal-tile,body.portal-home .portal-tile:before{animation:none!important}.portal-tile,.portal-tile .portal-illustration{transition:none!important}}
+</style><style id="portal-depth-watermark-v5">
+/* Acabamento 3D discreto com iluminação por atividade */
+body.portal-home .portal-tile{--glow:#efc76c;--glow-rgb:239,199,108;position:relative;transform-style:preserve-3d;border:1px solid color-mix(in srgb,var(--glow),transparent 52%)!important;box-shadow:inset 0 2px 1px #ffffff35,inset 0 -6px 10px #0004,0 7px 0 #061c2c,0 14px 24px #0007,0 0 19px rgba(var(--glow-rgb),.15)!important;background-image:linear-gradient(165deg,#ffffff0d,transparent 37%,#0002 92%)!important}
+body.portal-home .portal-tile.tile-tangram{--glow:#f3c76d;--glow-rgb:243,199,109;background-color:#12394b!important}
+body.portal-home .portal-tile.tile-x1{--glow:#4fc8ff;--glow-rgb:79,200,255;background-color:#143a68!important}
+body.portal-home .portal-tile.tile-hanoi{--glow:#43d9aa;--glow-rgb:67,217,170;background-color:#10483f!important}
+body.portal-home .portal-tile.tile-lessons{--glow:#bd9bff;--glow-rgb:189,155,255;background-color:#30375b!important}
+body.portal-home .portal-tile:hover,body.portal-home .portal-tile:focus-visible{box-shadow:inset 0 2px 1px #ffffff55,inset 0 -5px 10px #0003,0 8px 0 #061c2c,0 19px 30px #0008,0 0 29px rgba(var(--glow-rgb),.37)!important;transform:translateY(-3px)}
+body.portal-home .portal-tile:active{transform:translateY(5px) scale(.985)!important;box-shadow:inset 0 3px 9px #0006,0 2px 0 #061c2c,0 0 19px rgba(var(--glow-rgb),.27)!important}
+body.portal-home .portal-tile .portal-illustration{filter:drop-shadow(0 6px 6px #0007)}
+/* Marcas-d'água visíveis, sem interferir com títulos e cliques */
+body.portal-home #platform-portal:before{content:"△    ∑    { }    π    ◇    01    ∠    ⬡"!important;top:4%!important;opacity:.19!important;color:#75d3e4!important;font-size:clamp(19px,4vw,29px)!important;letter-spacing:clamp(10px,3.7vw,24px)!important}
+body.portal-home #platform-portal:after{content:"0101    ⬡    ∞    </>    ◯    ∑    1010"!important;bottom:0!important;opacity:.17!important;color:#e8c676!important;font-size:clamp(17px,3.7vw,27px)!important;letter-spacing:clamp(8px,3vw,19px)!important}
+body.portal-home .portal-tiles:before{content:"∠ 45°    f(x)    0 1    </>    △";position:absolute;left:0;right:0;top:46%;text-align:center;z-index:-1;white-space:nowrap;overflow:hidden;pointer-events:none;font-size:22px;letter-spacing:15px;color:#a5e4f2;opacity:.23}
+body.portal-home .portal-tiles{isolation:isolate}
+body.portal-home .portal-welcome{position:relative;z-index:1;background:linear-gradient(90deg,transparent,#06283b7d 12%,#06283b7d 88%,transparent)}
+/* Cabeçalho: etiqueta em uma linha quando houver largura */
+.platform-header-label{width:max-content;max-width:100%;white-space:normal;font-size:clamp(.6rem,2vw,.76rem);letter-spacing:.075em}
+@media(min-width:400px){.platform-header-label{white-space:nowrap}}
+@media(prefers-reduced-motion:reduce){body.portal-home .portal-tile{animation:none!important;transition:none!important}body.portal-home .portal-tile:before{animation:none!important}}
 </style></head><body><div class="opening-promo" id="opening-promo" hidden>
 <button class="opening-promo-x" type="button" aria-label="Fechar chamada">×</button>
 <div class="opening-promo-card" data-promo="x1"><div class="promo-rai"><img src="app-icon.svg?v=310" alt="" aria-hidden="true"><span class="promo-symbol">×1</span></div><small>DESAFIOS EM DUPLA</small><strong>X1 Arena</strong><p>Estratégia, lógica e diversão em tempo real.</p><a href="../Html/tangram-x1/">JOGAR ›</a></div>
