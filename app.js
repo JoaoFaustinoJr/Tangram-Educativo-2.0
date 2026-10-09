@@ -989,7 +989,7 @@ function raiEllipticalFollowup(q){
  const ctx=raiGlobalContext(),id=ctx.mode==='aula'?String(ctx.item?.id||ctx.item?.title||''):'rai-home';
  const prev=[...history].reverse().find(x=>x.lesson===id);if(!prev)return '';
  const previous=raiNorm(prev.q+' '+prev.answer);
- const topic=/^(?:e |mas e |sobre |o |a |os |as )?(?:algoritmos?|variaveis?|sensores?|robos?|robotica|programacao|python|codigo|loops?|repeticao|condicionais?|decomposicao|recursao)(?: na pratica| no dia a dia)?$/.exec(n);
+ const topic=/^(?:e |mas e |sobre |o |a |os |as )?(algoritmos?|variaveis?|sensores?|robos?|robotica|programacao|python|codigo|loops?|repeticao|condicionais?|decomposicao|recursao)(?: na pratica| no dia a dia)?$/.exec(n);
  if(topic){
   const term=topic[1];
   if(/^algoritm/.test(term))return /program|codigo|python/.test(previous)?'Na programação, o algoritmo é o plano de ação: uma sequência de passos que depois transformamos em código. Por exemplo, para um robô desviar, o algoritmo prevê observar, decidir e mover. Qual desses passos precisaria de uma condição?':'Algoritmo é uma sequência organizada de passos para resolver um problema. Você pode descrevê-lo com palavras antes de escrever o código. Quer ver um exemplo?';
