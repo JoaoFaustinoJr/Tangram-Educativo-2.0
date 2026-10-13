@@ -169,7 +169,9 @@ body.portal-home #platform-portal{z-index:1!important}
 body.portal-home .portal-tiles,body.portal-home .portal-tile{z-index:auto!important}
 body.portal-home header:before{z-index:0!important}
 body.portal-home header>div,body.portal-home header>.menu,body.portal-home header>.app-menu{position:relative;z-index:1}
-body.portal-home header>.app-menu{position:absolute!important;z-index:10010!important}
+/* Menu ancorado à tela: não limitar sua altura ao cabeçalho do portal. */
+body.portal-home header>.app-menu{position:fixed!important;z-index:10060!important;top:calc(72px + env(safe-area-inset-top))!important;right:max(10px,env(safe-area-inset-right))!important;bottom:max(10px,env(safe-area-inset-bottom))!important;left:auto!important;width:min(360px,calc(100vw - 20px))!important;height:auto!important;max-height:calc(100dvh - 82px - env(safe-area-inset-top) - env(safe-area-inset-bottom))!important;overflow-y:auto!important;overscroll-behavior:contain;scrollbar-gutter:stable}
+@media(max-width:520px){body.portal-home header>.app-menu{left:max(10px,env(safe-area-inset-left))!important;right:max(10px,env(safe-area-inset-right))!important;width:auto!important}}
 </style><style id="about-platform-easter-egg-v12">
 body.portal-home .platform-header-label{cursor:pointer;transition:box-shadow .2s,transform .2s}
 body.portal-home .platform-header-label:hover,body.portal-home .platform-header-label:focus-visible{box-shadow:0 0 18px #e8c6768c!important;transform:translateY(-1px)}
