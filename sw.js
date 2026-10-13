@@ -1,4 +1,4 @@
-const CACHE='tangram2-offline-stable-20261009-rai-name228';
+const CACHE='tangram2-offline-stable-20261013-laboratorio';
 const CORE=[
   './',
   './index.html',
@@ -8,7 +8,12 @@ const CORE=[
   './manifest.webmanifest?v=310',
   './app-icon.svg?v=310',
   './file_000000007ad0820ebb1af4cac165a68a.png?v=149',
-  './hanoi/index.html'
+  './hanoi/index.html',
+ './circuitos/laboratorio.html',
+ './circuitos/index.html',
+ './circuitos/computador.html',
+ './circuitos/aulas.html',
+ './circuitos/glossario.html'
 ];
 
 self.addEventListener('install',event=>{
