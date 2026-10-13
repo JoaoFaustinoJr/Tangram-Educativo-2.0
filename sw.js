@@ -1,4 +1,4 @@
-const CACHE='tangram2-offline-stable-20261013-laboratorio-aulas';
+const CACHE='tangram2-offline-stable-20261013-rai-laboratorio';
 const CORE=[
   './',
   './index.html',
@@ -15,6 +15,7 @@ const CORE=[
  './circuitos/aulas.html',
  './circuitos/glossario.html',
  './circuitos/lab-program.js?v=1',
+ './circuitos/rai-lab.js?v=20261013-1',
  './rai-programacao-v17.json',
  './rai-mundo-digital-v17.json',
  './circuitos/laboratorio-icon.svg',
