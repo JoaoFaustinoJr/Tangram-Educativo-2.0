@@ -1,10 +1,10 @@
-const CACHE='tangram2-offline-stable-20261013-laboratorio';
+const CACHE='tangram2-offline-stable-20261013-laboratorio-aulas';
 const CORE=[
   './',
   './index.html',
   './rai-robotica-t3-v18.json',
   './style.css?v=2.0.209-rai-dialog',
-  './app.js?v=2.0.228-rai-name',
+  './app.js?v=2.0.233-laboratorio-aulas',
   './manifest.webmanifest?v=310',
   './app-icon.svg?v=310',
   './file_000000007ad0820ebb1af4cac165a68a.png?v=149',
@@ -13,7 +13,14 @@ const CORE=[
  './circuitos/index.html',
  './circuitos/computador.html',
  './circuitos/aulas.html',
- './circuitos/glossario.html'
+ './circuitos/glossario.html',
+ './circuitos/lab-program.js?v=1',
+ './rai-programacao-v17.json',
+ './rai-mundo-digital-v17.json',
+ './circuitos/laboratorio-icon.svg',
+ './circuitos/circuitos-icon.svg',
+ './circuitos/computador-icon.svg',
+ './circuitos/programacao-icon.svg'
 ];
 
 self.addEventListener('install',event=>{
