@@ -15,11 +15,13 @@ function run(source,context={}) {
  else{if(!allowed.includes(t))throw new Error('Linha '+x.line+': comando desconhecido: '+t);features.add(t);out.push({type:'command',text:t,line:x.line});}}
  return out;}
  const ast=block();if(pos<lines.length)throw new Error('Linha '+lines[pos].line+': '+lines[pos].text+' sem bloco correspondente.');
- const state={led:false,blinks:0,motor:true,shown:0,read:false,steps:0,trace:[],features};
+ const state={led:false,blinks:0,motor:false,shown:0,read:false,steps:0,trace:[],features};
  function execute(nodes,inLoop=false){for(const n of nodes){if(++state.steps>400)throw new Error('Programa muito longo: simplifique as repetições.');
  if(n.type==='loop'){for(let k=0;k<n.count;k++)execute(n.body,true);continue}
  if(n.type==='if'){if(!state.read)throw new Error('Linha '+n.line+': leia '+(mode==='computer'?'o botão':'o sensor')+' antes da condição.');execute((mode==='computer'?context.pressed:context.obstacle)?n.body:n.otherwise,inLoop);continue}
  const t=n.text;if(t.includes('LED')&&!context.hardware?.led)throw new Error('Linha '+n.line+': instale o LED.');
+ if(t.includes('LED')&&context.requireProtection&&!context.hardware?.resistor)throw new Error('Linha '+n.line+': instale o resistor de proteção do LED.');
+ if(t.includes('MOTOR')&&context.requireProtection&&(!context.hardware?.driver||!context.hardware?.diodo))throw new Error('Linha '+n.line+': instale o acionador e o diodo de proteção do motor.');
  if(t.includes('MOTOR')&&!context.hardware?.motor)throw new Error('Linha '+n.line+': instale o motor.');
  if(t==='LER SENSOR'&&!context.hardware?.sensor)throw new Error('Linha '+n.line+': instale o sensor.');
  if(t.startsWith('LER ')){state.read=true;state.trace.push(mode==='computer'?'BOTÃO: '+(context.pressed?'PRESSIONADO':'SOLTO'):'SENSOR: '+(context.obstacle?'OBSTÁCULO':'LIVRE'))}

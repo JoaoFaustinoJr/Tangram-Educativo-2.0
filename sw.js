@@ -1,4 +1,4 @@
-const CACHE='tangram2-offline-stable-20261013-rai-laboratorio';
+const CACHE='tangram2-offline-stable-20261013-componentes-ativos';
 const CORE=[
   './',
   './index.html',
@@ -14,8 +14,9 @@ const CORE=[
  './circuitos/computador.html',
  './circuitos/aulas.html',
  './circuitos/glossario.html',
- './circuitos/lab-program.js?v=1',
- './circuitos/rai-lab.js?v=20261013-1',
+ './circuitos/lab-program.js?v=2',
+ './circuitos/rai-lab.js?v=20261013-2',
+ './circuitos/lab-electronics.js?v=20261013-2',
  './rai-programacao-v17.json',
  './rai-mundo-digital-v17.json',
  './circuitos/laboratorio-icon.svg',
