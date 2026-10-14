@@ -1,4 +1,4 @@
-const CACHE='tangram2-offline-stable-20261013-componentes-ativos';
+const CACHE='tangram2-offline-stable-20261014-missoes-organizadas';
 const CORE=[
   './',
   './index.html',
@@ -15,8 +15,9 @@ const CORE=[
  './circuitos/aulas.html',
  './circuitos/glossario.html',
  './circuitos/lab-program.js?v=2',
- './circuitos/rai-lab.js?v=20261013-2',
- './circuitos/lab-electronics.js?v=20261013-2',
+ './circuitos/rai-lab.js?v=20261014-1',
+ './circuitos/lab-workspace.js?v=20261014-1',
+ './circuitos/lab-electronics.js?v=20261014-1',
  './rai-programacao-v17.json',
  './rai-mundo-digital-v17.json',
  './circuitos/laboratorio-icon.svg',
