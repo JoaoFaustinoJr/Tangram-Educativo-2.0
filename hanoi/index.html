@@ -497,4 +497,4 @@ document.querySelector('#raiGlobalSpeak').onclick=()=>{if(!('speechSynthesis'in 
 document.querySelector('#raiGlobalMic').onclick=e=>{const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){msg.textContent='O reconhecimento de voz não está disponível neste navegador. Você pode digitar sua pergunta.';return}const r=new SR();r.lang='pt-BR';const b=e.currentTarget,old=b.textContent;b.textContent='🎙️ Ouvindo…';b.disabled=true;r.onresult=x=>{input.value=x.results[0][0].transcript};r.onend=()=>{b.textContent=old;b.disabled=false};r.start()};
 document.querySelector('#raiGlobalClear').onclick=()=>{if(confirm('Apagar a conversa atual com a R.A.I.?')){msg.textContent='Conversa apagada. Pode começar de novo quando quiser.';input.value=''}};
 })();
-</script><script src="../tancoins.js?v=5"></script></body></html>
+</script><script src="../tancoins.js?v=6"></script></body></html>
