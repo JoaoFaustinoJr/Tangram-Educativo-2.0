@@ -366,7 +366,26 @@ body.portal-home .portal-tiles .tile-hanoi{--portal-gold-frame:url("data:image/s
 body.portal-home .portal-tiles .tile-laboratory{--portal-gold-frame:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22gold%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23fff3b7%22%2F%3E%3Cstop%20offset%3D%22.35%22%20stop-color%3D%22%23e7bc65%22%2F%3E%3Cstop%20offset%3D%22.64%22%20stop-color%3D%22%23b7812c%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ffe4a4%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpolygon%20points%3D%2247.8%2C1.4%2098.6%2C1.4%2098.6%2C98.6%201.4%2C98.6%201.4%2C43.3%2023.7%2C43.3%22%20fill%3D%22none%22%20stroke%3D%22url(%23gold)%22%20stroke-width%3D%221.15%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E")}
 body.portal-home .portal-tiles .tile-lessons{--portal-gold-frame:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22gold%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23fff3b7%22%2F%3E%3Cstop%20offset%3D%22.35%22%20stop-color%3D%22%23e7bc65%22%2F%3E%3Cstop%20offset%3D%22.64%22%20stop-color%3D%22%23b7812c%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ffe4a4%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpolygon%20points%3D%2225.8%2C1.4%2074.2%2C1.4%2098.4%2C50%2074.2%2C98.6%2025.8%2C98.6%201.6%2C50%22%20fill%3D%22none%22%20stroke%3D%22url(%23gold)%22%20stroke-width%3D%221.5%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E")}
 </style>
-</head><body><div class="opening-promo" id="opening-promo" hidden>
+<style id="portal-mobile-readability-v17">
+/* Mantém as prévias dos cartões superiores acima do hexágono central. */
+@media(max-width:650px){
+ body.portal-home .portal-tiles .tile-tangram,
+ body.portal-home .portal-tiles .tile-x1{justify-content:flex-start!important;padding-top:8%!important;padding-bottom:26%!important;gap:1px!important}
+ body.portal-home .portal-tiles .tile-tangram>.portal-illustration,
+ body.portal-home .portal-tiles .tile-x1>.portal-illustration{height:clamp(38px,12cqw,67px)!important;flex-shrink:0!important;margin-bottom:0!important}
+ body.portal-home .portal-tiles .tile-tangram>strong,
+ body.portal-home .portal-tiles .tile-x1>strong{margin-top:0!important;line-height:1.12!important}
+ body.portal-home .portal-tiles .tile-tangram>.portal-content-preview,
+ body.portal-home .portal-tiles .tile-x1>.portal-content-preview{position:relative!important;z-index:3!important;margin-top:3px!important;gap:2px!important;line-height:1.15!important;font-size:clamp(.55rem,2.15cqw,.72rem)!important}
+ body.portal-home .portal-tiles .tile-x1 .portal-feature-chip{padding:2px 4px!important}
+}
+/* Cabeçalho com acabamento de cartão premium, mantendo marca e legibilidade. */
+body.portal-home header{background:radial-gradient(ellipse at 18% 0%,#187d9970,transparent 55%),linear-gradient(145deg,#084b60 0%,#04344b 46%,#05253c 100%)!important;border:2px solid #eac678!important;border-radius:26px!important;box-shadow:inset 0 2px 2px #fff6,inset 0 0 0 5px #d4a95619,inset 0 -7px 13px #001a2c77,0 7px 0 #031827,0 15px 26px #0005!important}
+body.portal-home header:after{content:"";position:absolute;inset:5px;border:1px solid #ffe6a255;border-radius:21px;pointer-events:none;z-index:0}
+body.portal-home header h1{filter:drop-shadow(0 2px 2px #00162588)}
+body.portal-home header .menu{border:1.5px solid #e5bd72!important;box-shadow:inset 0 1px 1px #fff4,0 3px 8px #00152577!important;background:linear-gradient(155deg,#0b5d70,#062c43)!important}
+@media(max-width:620px){body.portal-home header{border-radius:22px!important}body.portal-home header:after{border-radius:17px}}
+</style></head><body><div class="opening-promo" id="opening-promo" hidden>
 <button class="opening-promo-x" type="button" aria-label="Fechar chamada">×</button>
 <div class="opening-promo-card" data-promo="x1"><div class="promo-rai"><img src="app-icon.svg?v=310" alt="" aria-hidden="true"><span class="promo-symbol">×1</span></div><small>DESAFIOS EM DUPLA</small><strong>X1 Arena</strong><p>Estratégia, lógica e diversão em tempo real.</p><a href="../Html/tangram-x1/">JOGAR ›</a></div>
 <div class="opening-promo-card" data-promo="hanoi"><div class="promo-rai"><img src="app-icon.svg?v=310" alt="" aria-hidden="true"><span class="promo-symbol">2ⁿ−1</span></div><small>PLANEJE • EXECUTE • APRENDA</small><strong>Torre de Hanói</strong><p>Um novo laboratório de lógica e algoritmos.</p><a href="./hanoi/">EXPERIMENTAR ›</a></div>
