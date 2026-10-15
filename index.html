@@ -452,6 +452,11 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(typeof showLessons==='function')showLessons();
   else document.querySelector('.aulas')?.click();
  });
+ document.addEventListener('click',e=>{
+  if(e.target.closest('#lessons-panel .lessons-x, #lessons-panel .lessons-home')||e.target.id==='lessons-panel'){
+   setTimeout(()=>{if(!document.querySelector('#lessons-panel.show'))setMode('tangram')},0);
+  }
+ });
  back.addEventListener('click',()=>setMode('home'));
  lessonBack.addEventListener('click',()=>{if(typeof closeLessonsHome==='function')closeLessonsHome();setMode('tangram')});
  setMode('home');
