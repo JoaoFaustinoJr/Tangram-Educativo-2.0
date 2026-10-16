@@ -1434,3 +1434,20 @@ body.rai-engaged .rai-float-wrap{filter:drop-shadow(0 5px 12px #0005)}
 #rai-tutor-panel .rai-tutor-note{display:block;color:#27445d!important;opacity:1!important;-webkit-text-fill-color:#27445d!important;font-weight:600}
 #rai-tutor-panel .rai-global-suggestions button{color:#112c48!important;-webkit-text-fill-color:#112c48!important;background:#fff!important;opacity:1!important}
 #rai-tutor-panel .rai-tutor-head b,#rai-tutor-panel .rai-tutor-head small,#rai-tutor-panel .rai-brand-chip{color:#fff!important;-webkit-text-fill-color:#fff!important;opacity:1!important}
+
+/* 2026-10-16: Sala de Aula realmente ampla e R.A.I. acima da aula */
+@media(min-width:900px){
+ #lessons-panel.show{padding:clamp(8px,1.5vw,22px)!important;align-items:center!important;justify-content:center!important}
+ #lessons-panel.show .lessons-card{width:min(96vw,1720px)!important;max-width:none!important;max-height:96dvh!important;min-height:min(80dvh,760px);margin:0 auto!important;padding:clamp(18px,2vw,34px)!important}
+ #lessons-panel.show.expanded{padding:0!important}
+ #lessons-panel.show.expanded .lessons-card{width:100vw!important;max-width:none!important;height:100dvh!important;max-height:100dvh!important;min-height:100dvh!important;border-radius:0!important}
+ #lessons-panel.show .lesson-library,#lessons-panel.show .lesson-years,#lessons-panel.show .lesson-sections{max-width:none!important;width:100%!important}
+ #lessons-panel.show .lesson-content{font-size:clamp(15px,1.05vw,18px)!important;line-height:1.65!important}
+ #lessons-panel.show .lesson-library details[open] .lesson-content{font-size:clamp(15px,1.05vw,18px)!important}
+ #lessons-panel.show.lesson-focus .lessons-card{width:min(96vw,1720px)!important}
+}
+#lessons-panel.show{z-index:2147483000!important}
+body:has(#lessons-panel.show) #rai-float-wrap{z-index:2147483003!important;pointer-events:none!important}
+body:has(#lessons-panel.show) #rai-float-wrap>*{pointer-events:auto!important}
+body:has(#lessons-panel.show) #rai-tutor-panel:not([hidden]){z-index:2147483004!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important}
+@media(min-width:900px){body:has(#lessons-panel.show) #rai-float-wrap{right:clamp(18px,2vw,35px)!important;bottom:clamp(18px,2vh,35px)!important}}
