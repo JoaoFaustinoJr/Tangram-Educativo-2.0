@@ -447,7 +447,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.body.classList.add('portal-'+mode);
   portal.hidden=mode!=='home';back.hidden=mode==='home';lessonBack.hidden=mode!=='lessons';
   original.forEach(el=>{if(el)el.style.display=mode==='home'?'none':''});
-  if(mode==='home')window.scrollTo({top:0,behavior:'instant'});
+  if(mode==='home'){document.getElementById('lessons-panel')?.classList.remove('show','expanded');document.getElementById('about-section')?.setAttribute('hidden','');window.scrollTo({top:0,behavior:'instant'});}
  };
  document.getElementById('portal-tangram')?.addEventListener('click',()=>{
   setMode('tangram');document.querySelector('.game')?.scrollIntoView({block:'start'});
@@ -473,11 +473,12 @@ document.addEventListener('DOMContentLoaded',()=>{
  });
  document.addEventListener('click',e=>{
   if(e.target.closest('#lessons-panel .lessons-x, #lessons-panel .lessons-home')||e.target.id==='lessons-panel'){
-   setTimeout(()=>{if(!document.querySelector('#lessons-panel.show'))setMode('tangram')},0);
+   setTimeout(()=>{if(!document.querySelector('#lessons-panel.show'))setMode('home')},0);
   }
  });
  back.addEventListener('click',()=>setMode('home'));
- lessonBack.addEventListener('click',()=>{if(typeof closeLessonsHome==='function')closeLessonsHome();setMode('tangram')});
+ lessonBack.addEventListener('click',()=>{if(typeof closeLessonsHome==='function')closeLessonsHome();setMode('home')});
+ window.tangramReturnHome=()=>{try{if(typeof closeLessonsHome==='function')closeLessonsHome()}catch(e){}setMode('home')};
  setMode('home');
 });
 </script><script id="platform-about-easter-egg-v12">(function(){const tag=document.querySelector('.platform-header-label'),about=document.getElementById('about-section'),back=document.getElementById('about-back');if(!tag||!about||!back)return;tag.setAttribute('role','button');tag.setAttribute('tabindex','0');tag.setAttribute('aria-label','Conhecer a plataforma Tangram Educativo');function openAbout(){about.hidden=false;document.body.classList.add('portal-home');document.getElementById('app-menu')?.classList.remove('open');about.scrollIntoView({block:'start',behavior:'smooth'});}function closeAbout(){about.hidden=true;document.getElementById('platform-portal')?.scrollIntoView({block:'start',behavior:'smooth'});}tag.addEventListener('click',openAbout);tag.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openAbout();}});back.addEventListener('click',closeAbout);})();</script><script id="rai-drag-controller-v16">(function(){
