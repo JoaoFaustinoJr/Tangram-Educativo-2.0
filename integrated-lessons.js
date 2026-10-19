@@ -21,13 +21,13 @@ function update(){
  const lib=panel.querySelector('.lesson-library');if(!lib)return;
  const subject=panel.querySelector('.lesson-sections button.on')?.dataset.s||'';const key=year+':'+subject;
  let section=panel.querySelector('#integrated-tracks');
- if(!section){section=document.createElement('section');section.id='integrated-tracks';section.className='integrated-tracks';lib.before(section)}
+ if(!['hanoi','tangram'].includes(subject)){section?.remove();last='';return}if(!section){section=document.createElement('section');section.id='integrated-tracks';section.className='integrated-tracks';lib.before(section)}
  if(last===key&&section.dataset.ready==='1'&&section.querySelector('.integrated-module-list'))return;last=key;section.dataset.ready='1';
- section.innerHTML='<h4>🧭 Trilhas integradas do '+year+'º ano</h4><p>Estude o conceito nas Aulas e depois experimente no aplicativo. O conteúdo original permanece disponível.</p><div class="integrated-track-grid">'+(tracks[year]||[]).map(([icon,title,desc,route])=>'<button type="button" class="integrated-track" data-track="'+route.slice(1)+'"><b>'+icon+' '+title+'</b><small>'+desc+'</small><span>Ver aulas relacionadas →</span></button>').join('')+'</div>';
+ section.innerHTML='<h4>'+(subject==='hanoi'?'🗼 Torre de Hanói':'🔷 Tangram')+' · '+year+'º ano</h4>';
  const list=(modules[year]||[]).filter(x=>subject==='hanoi'?/Hanói/i.test(x[0]):subject==='tangram'?/Tangram|Geometria|Área|Simetria|Justificativa/i.test(x[0]):true);
  const wrap=document.createElement('div');wrap.className='integrated-module-list';
- wrap.innerHTML='<h4>📚 Aulas explicadas e experiências</h4>'+list.map(([title,concept,challenge,link],i)=>'<details class="integrated-module"><summary>'+String(i+1)+'. '+title+'</summary><div class="integrated-module-body"><b>📘 Entenda</b><p>'+concept+'</p><b>🧠 Pense e responda</b><p>'+challenge+'</p><a href="'+link+'" class="integrated-practice">Experimentar no aplicativo ↗</a></div></details>').join('');
- section.appendChild(wrap);if(subject==='hanoi'||subject==='tangram'){section.querySelector('.integrated-track-grid')?.remove();section.querySelector('h4').textContent=(subject==='hanoi'?'🗼 Hanói':'🔷 Tangram')+' · '+year+'º ano';const empty=lib.querySelector('.lesson-empty');if(empty)empty.hidden=true;}
+ wrap.innerHTML=list.map(([title,concept,challenge,link],i)=>'<details class="integrated-module"><summary>'+String(i+1)+'. '+title+'</summary><div class="integrated-module-body"><b>📘 Entenda</b><p>'+concept+'</p><b>🧠 Pense e responda</b><p>'+challenge+'</p><a href="'+link+'" class="integrated-practice">Experimentar no aplicativo ↗</a></div></details>').join('');
+ section.appendChild(wrap);const empty=lib.querySelector('.lesson-empty');if(empty)empty.hidden=true;
  section.querySelectorAll('[data-track]').forEach(btn=>btn.addEventListener('click',()=>{const target=panel.querySelector('.lesson-sections button[data-s="'+btn.dataset.track+'"]');if(target){target.click();panel.querySelector('.lesson-library')?.scrollIntoView({block:'start',behavior:'smooth'})}}));
 }
 function boot(){const obs=new MutationObserver(()=>{if(document.getElementById('lessons-panel')?.classList.contains('show'))update()});obs.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});document.addEventListener('click',e=>{if(e.target.closest('#lessons-panel .lesson-years,#lessons-panel .lesson-sections'))queueMicrotask(update)});update()}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
