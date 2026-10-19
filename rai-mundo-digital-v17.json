@@ -629,8 +629,8 @@
     "use": "Convivência escolar, redes sociais, jogos on-line, grupos de mensagens e produção de conteúdos digitais.",
     "observe": "Não confundir brincadeira consentida com humilhação. 'Foi só uma piada' não apaga os danos. Evite expor vítimas ou exigir relatos pessoais na turma.",
     "guided": "Em grupos, compare dois casos fictícios: apelidos ofensivos repetidos no recreio e publicação de uma montagem humilhante em um grupo. Identifique meio, alcance, consequências e ações de proteção.",
-    "challenge": "Um colega teve sua foto usada para ridicularizá-lo em um grupo. Você recebeu a imagem. O que faz e por quê?",
-    "answer": "Não repassar nem reagir incentivando; acolher a pessoa; preservar evidências sem redistribuir; comunicar adulto de confiança e equipe escolar; utilizar denúncia e bloqueio quando cabível.",
+    "challenge": "No grupo da turma, colegas compartilham uma montagem que ridiculariza um estudante. Explique duas diferenças entre bullying presencial e cyberbullying e descreva três atitudes que ajudam a interromper a situação.",
+    "answer": "Diferenças: alcance ampliado, circulação fora da escola e permanência do conteúdo. Atitudes: não repassar, acolher a pessoa, preservar evidências com segurança e comunicar adulto de confiança ou equipe escolar.",
     "reference": "EF07CO08, EF07CO09 e EF07CO11; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
     "teacherTip": "Comece com exemplos fictícios, explique diferença entre bullying e cyberbullying, discuta papel de quem presencia, preserve privacidade e encaminhe relatos concretos à equipe de proteção da escola. Nunca obrigue estudantes a expor experiências pessoais.",
     "fixation": [
@@ -671,6 +671,32 @@
         "symbol": "🤝",
         "label": "Empatia",
         "description": "Respeitar diferenças e apoiar colegas"
+      }
+    ],
+    "contentBlocks": [
+      {
+        "title": "1. O que é bullying?",
+        "text": "Bullying é uma agressão intencional e repetida, geralmente marcada por desequilíbrio de poder. Pode envolver apelidos ofensivos, ameaças, isolamento ou agressões físicas. Exemplo: um grupo ridiculariza o mesmo colega repetidamente no recreio, e ele encontra dificuldade para se defender."
+      },
+      {
+        "title": "2. O que muda no cyberbullying?",
+        "text": "No cyberbullying, as agressões acontecem por meios digitais: mensagens, jogos, redes sociais, fotos ou montagens. Uma publicação pode ser vista por muitas pessoas, continuar circulando depois da aula e reaparecer dias mais tarde. Exemplo: alguém publica uma montagem humilhante e outras pessoas encaminham para novos grupos. Cada encaminhamento aumenta a exposição."
+      },
+      {
+        "title": "3. Brincadeira, conflito ou agressão?",
+        "text": "Uma brincadeira respeitosa é aceita por todos. Quando alguém pede para parar e os outros continuam humilhando, não é diversão compartilhada. Uma discussão isolada não é automaticamente bullying, mas ainda pode ser grave e exigir intervenção. Pergunte: houve intenção de ferir? repetição? desigualdade de poder? como a pessoa afetada se sentiu?"
+      },
+      {
+        "title": "4. Por que compartilhar também causa dano?",
+        "text": "Imagine que uma imagem ofensiva seja enviada a 5 pessoas. Se cada uma repassar para mais 5, ela pode alcançar rapidamente dezenas de pessoas. Mesmo quem não criou a imagem contribui para espalhá-la. Curtidas e risadas também podem incentivar quem agride. A atitude responsável é interromper a circulação, não ampliar o público."
+      },
+      {
+        "title": "5. Como agir com segurança?",
+        "text": "Se você for alvo: não revide, procure um adulto de confiança, registre evidências de modo seguro e utilize bloqueio ou denúncia quando apropriado. Se presenciar: não compartilhe, ofereça apoio em particular e avise a equipe escolar. Nunca publique prints com nomes em campanhas ou exponha a vítima diante da turma."
+      },
+      {
+        "title": "6. Vamos analisar juntos",
+        "text": "Situação: em um grupo da turma, uma foto alterada de um colega começa a circular. Pergunta A: por que não é apenas uma brincadeira? Porque a pessoa é exposta sem consentimento e pode sofrer humilhação. Pergunta B: o que fazer primeiro? Não encaminhar, apoiar o colega e buscar ajuda de um adulto. Pergunta C: o que a escola pode fazer? Acolher, apurar com privacidade e orientar a turma sobre convivência digital."
       }
     ]
   },
@@ -738,6 +764,32 @@
         "symbol": "🛡️",
         "label": "Proteger",
         "description": "Acolher e encaminhar sem expor"
+      }
+    ],
+    "contentBlocks": [
+      {
+        "title": "1. Por que conscientizar?",
+        "text": "Punir isoladamente não ensina toda a comunidade a reconhecer o problema. A conscientização explica como atitudes aparentemente pequenas — rir, curtir ou encaminhar uma humilhação — podem agravar o sofrimento. A prevenção exige participação de estudantes, famílias e escola."
+      },
+      {
+        "title": "2. Estratégias que funcionam na escola",
+        "text": "Rodas de conversa permitem ouvir e refletir; cartazes e vídeos tornam a mensagem visível; alunos multiplicadores ajudam a divulgar boas práticas; um canal seguro permite pedir ajuda sem exposição. Cada estratégia tem uma função diferente: informar, envolver, acolher ou proteger."
+      },
+      {
+        "title": "3. Exemplo de campanha explicada",
+        "text": "Lema: 'Respeito não tem modo offline!'. Cartaz: 'Antes de compartilhar, pense: isso pode humilhar alguém?'. Vídeo curto: mostre um caso fictício, a escolha de não repassar e o apoio de um colega. Nunca use nomes ou imagens reais de vítimas."
+      },
+      {
+        "title": "4. Missão em equipe: crie uma campanha",
+        "text": "Passo 1: escolha um público (6º ou 7º ano). Passo 2: selecione um problema (memes ofensivos, exclusão de grupos ou exposição de imagens). Passo 3: crie cartaz, HQ ou roteiro de vídeo. Passo 4: inclua três orientações práticas. Passo 5: apresente ao professor para revisão antes de divulgar."
+      },
+      {
+        "title": "5. Pacto de convivência digital",
+        "text": "A turma pode assumir cinco compromissos: respeitar diferenças; pedir autorização antes de publicar imagens; não compartilhar humilhações; apoiar colegas afetados; comunicar situações graves a adultos de confiança. O pacto deve ser lembrado e praticado, não apenas assinado."
+      },
+      {
+        "title": "6. Verifique o que aprendeu",
+        "text": "Se uma pessoa receber um meme ofensivo, a melhor atitude é não repassar e procurar ajuda. Se a escola produzir um cartaz, deve usar exemplos fictícios, sem expor vítimas. Se houver um relato real, a equipe responsável deve acolher e seguir os procedimentos de proteção."
       }
     ]
   },
