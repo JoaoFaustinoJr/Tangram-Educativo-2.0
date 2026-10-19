@@ -430,6 +430,18 @@ position:relative;z-index:1;
 .lesson-teaching-sequence .teaching-step{margin:10px 0;border-left:3px solid #d7b76d}
 .lesson-teaching-sequence .teaching-step p{line-height:1.7}
 @media(max-width:480px){.lesson-visual-item .lesson-visual-copy small{font-size:.69rem}.lesson-teaching-sequence{padding:12px}}
+</style><style id="lesson-focus-reading-v1">
+/* Leitura focal: amplia o bloco selecionado sem esconder conteúdo ou ampliar por transform */
+#lessons-panel .lesson-content .lesson-block{transition:font-size .2s ease,padding .2s ease,background-color .2s ease,border-color .2s ease,box-shadow .2s ease;min-width:0;overflow-wrap:anywhere}
+#lessons-panel .lesson-content .lesson-block.lesson-focus-eligible{cursor:zoom-in}
+#lessons-panel .lesson-content .lesson-block.lesson-focus-eligible:focus-visible{outline:3px solid #f4d486;outline-offset:3px}
+#lessons-panel .lesson-content .lesson-block.lesson-reading-active{position:relative;z-index:2;cursor:zoom-out;padding:clamp(20px,3vw,34px)!important;background:linear-gradient(145deg,#163b52,#0c2638)!important;border:2px solid #e3bf6b!important;box-shadow:0 14px 38px #0006,0 0 0 3px #e3bf6b18!important;font-size:clamp(1.08rem,1.65vw,1.28rem)!important;line-height:1.8!important}
+#lessons-panel .lesson-content .lesson-block.lesson-reading-active b{display:block;font-size:1.14em!important;color:#ffdf91!important;margin-bottom:12px!important;line-height:1.35!important}
+#lessons-panel .lesson-content .lesson-block.lesson-reading-active p{font-size:1em!important;line-height:1.8!important;max-width:78ch!important;white-space:normal}
+#lessons-panel .lesson-content .lesson-block.lesson-reading-active::after{content:"Toque novamente para reduzir";display:block;margin-top:16px;color:#e6cc8c;font-size:.68em;font-weight:600}
+#lessons-panel .lesson-content .lesson-block.lesson-reading-active~.lesson-block{opacity:.9}
+@media(max-width:600px){#lessons-panel .lesson-content .lesson-block.lesson-reading-active{padding:20px!important;font-size:1.1rem!important}#lessons-panel .lesson-content .lesson-block.lesson-reading-active p{line-height:1.7!important}}
+@media(prefers-reduced-motion:reduce){#lessons-panel .lesson-content .lesson-block{transition:none!important}}
 </style></head><body><div class="opening-promo" id="opening-promo" hidden>
 <button class="opening-promo-x" type="button" aria-label="Fechar chamada">×</button>
 <div class="opening-promo-card" data-promo="x1"><div class="promo-rai"><img src="app-icon.svg?v=310" alt="" aria-hidden="true"><span class="promo-symbol">×1</span></div><small>DESAFIOS EM DUPLA</small><strong>X1 Arena</strong><p>Estratégia, lógica e diversão em tempo real.</p><a href="../Html/tangram-x1/">JOGAR ›</a></div>
@@ -545,4 +557,13 @@ document.addEventListener('DOMContentLoaded',()=>{
  window.addEventListener('resize',()=>{if(wrap.style.left){const r=wrap.getBoundingClientRect();place(r.left,r.top)}},{passive:true});
  restore();
  document.getElementById('rai-tutor-close')?.addEventListener('click',hideBubble);
-})();</script><script src="tancoins.js?v=6"></script></body></html>
+})();</script><script src="tancoins.js?v=6"></script><script id="lesson-focus-reading-controller-v1">(function(){
+ const selector='#lessons-panel .lesson-content .lesson-block';
+ function eligible(el){return !!el&&!el.closest('.lesson-challenge')&&!el.querySelector('button,input,textarea,select,a')}
+ function setup(root){(root||document).querySelectorAll(selector).forEach(el=>{if(!eligible(el)||el.dataset.readingReady)return;el.dataset.readingReady='1';el.classList.add('lesson-focus-eligible');el.setAttribute('tabindex','0');el.setAttribute('role','button');el.setAttribute('aria-pressed','false');el.setAttribute('aria-label','Ampliar ou reduzir leitura: '+(el.querySelector('b')?.textContent||'conteúdo'));})}
+ function toggle(el){if(!eligible(el))return;const container=el.closest('.lesson-content');const on=!el.classList.contains('lesson-reading-active');container.querySelectorAll('.lesson-reading-active').forEach(other=>{other.classList.remove('lesson-reading-active');other.setAttribute('aria-pressed','false')});el.classList.toggle('lesson-reading-active',on);el.setAttribute('aria-pressed',String(on));if(on){el.scrollIntoView({block:'nearest',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}}
+ document.addEventListener('click',e=>{const el=e.target.closest(selector);if(el){setup(document);toggle(el)}});
+ document.addEventListener('keydown',e=>{if(e.key!=='Enter'&&e.key!==' ')return;const el=e.target.closest(selector);if(!el||e.target!==el)return;e.preventDefault();toggle(el)});
+ const observer=new MutationObserver(()=>{if(document.querySelector('#lessons-panel .lesson-content .lesson-block:not([data-reading-ready])'))setup(document)});
+ document.addEventListener('DOMContentLoaded',()=>{setup(document);observer.observe(document.body,{childList:true,subtree:true})});
+})();</script></body></html>
