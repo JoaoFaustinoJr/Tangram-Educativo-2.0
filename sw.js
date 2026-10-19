@@ -1,7 +1,8 @@
-const CACHE='tangram2-offline-stable-20261014-missoes-organizadas-v2';
+const CACHE='tangram2-offline-integrated-lessons-20261019-v3';
 const CORE=[
   './',
   './index.html',
+  './integrated-lessons.js?v=3',
   './rai-robotica-t3-v18.json',
   './style.css?v=2.0.209-rai-dialog',
   './app.js?v=2.0.233-laboratorio-aulas',
