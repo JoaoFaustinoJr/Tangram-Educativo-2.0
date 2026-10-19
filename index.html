@@ -646,4 +646,14 @@ strip.addEventListener('click',e=>{if(e.target.closest('button[data-s]')){clickS
 const obs=new MutationObserver(()=>{if(panel.classList.contains('show')){ignoreUntil=Date.now()+550;setTimeout(center,70)}});obs.observe(strip,{childList:true});setTimeout(center,100);
 }
 const observer=new MutationObserver(()=>{if(document.getElementById('lessons-panel')&&!document.getElementById('lessons-panel').dataset.wheelReady)init()});observer.observe(document.body,{childList:true,subtree:true});init();
-})();</script></body></html>
+})();</script><style id="classroom-mobile-layout-fix-v1">
+@media(max-width:700px){
+#lessons-panel .lessons-card{padding-top:12px!important}
+#lessons-panel .lessons-actions{position:relative!important;top:auto!important;right:auto!important;display:flex!important;justify-content:flex-end!important;gap:8px!important;margin:0 0 12px!important;z-index:3}
+#lessons-panel .lessons-card>h3{clear:both!important;margin-top:6px!important}
+#lessons-panel .lessons-subtitle{padding-right:0!important;line-height:1.5!important}
+#lessons-panel .lesson-years{display:flex!important;justify-content:flex-start!important;overflow-x:auto!important;gap:8px!important;padding:12px max(12px,calc((100% - 84px)/2)) 16px!important;scrollbar-width:none;scroll-snap-type:x proximity}
+#lessons-panel .lesson-years button{flex:0 0 74px!important;min-width:74px!important;scroll-snap-align:center}
+#lessons-panel .lesson-years::-webkit-scrollbar{display:none}
+}
+</style></body></html>
