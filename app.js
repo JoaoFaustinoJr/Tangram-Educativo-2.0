@@ -117,7 +117,7 @@ async function ensureLessons(){
     try{
      const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),10000);
      let response;
-     try{response=await fetch(u+'?v=20261019-teaching-all-v4',{cache:'no-store',signal:controller.signal})}
+     try{response=await fetch(u+'?v=20261019-teaching-all-v5',{cache:'no-store',signal:controller.signal})}
      finally{clearTimeout(timer)}
      if(!response.ok)throw new Error('HTTP '+response.status);
      const data=await response.json();
@@ -154,7 +154,7 @@ function lessonVisualStrip(x){
  if(!items.length)return '';
  return '<div class="lesson-visual-strip" role="list" aria-label="Apoios visuais da aula">'+items.map(v=>{
   const symbol=lessonEsc(v.symbol||'◈'),label=lessonEsc(v.label||''),desc=lessonEsc(v.description||v.label||'');
-  return '<div class="lesson-visual-item" role="listitem" aria-label="'+desc+'"><span class="lesson-visual-symbol" aria-hidden="true">'+symbol+'</span><span>'+label+'</span></div>'
+  return '<div class="lesson-visual-item" role="listitem" aria-label="'+desc+'"><span class="lesson-visual-symbol" aria-hidden="true">'+symbol+'</span><span class="lesson-visual-copy"><strong>'+label+'</strong><small>'+desc+'</small></span></div>'
  }).join('')+'</div>'
 }
 
@@ -225,12 +225,12 @@ function lessonUniversalPreview(x){
 function lessonBlock(label,value,cls=''){return value?'<div class="lesson-block '+cls+'"><b>'+label+'</b><p>'+lessonEsc(value)+'</p></div>':''}
 function lessonTeachingSequence(x){
  const parts=[];
- if(x.example)parts.push(['🔎 Entenda o exemplo','Leia a situação e identifique qual ideia da aula aparece nela. '+String(x.example)]);
- if(x.representation)parts.push(['🧩 Como funciona na prática',String(x.representation)]);
- if(x.use)parts.push(['🌍 Onde isso é usado',String(x.use)]);
- if(x.observe)parts.push(['⚠️ O que merece atenção',String(x.observe)]);
- if(x.guided)parts.push(['🪜 Vamos resolver juntos',String(x.guided)]);
- if(!parts.length&&x.concept)parts.push(['🪜 Pense passo a passo','Leia a ideia principal, escolha um exemplo do seu cotidiano e explique com suas palavras como ela funciona.']);
+ if(x.example&&!Array.isArray(x.contentBlocks))parts.push(['🔎 Entenda o exemplo','Leia a situação e identifique qual ideia da aula aparece nela. '+String(x.example)]);
+ if(x.representation&&!Array.isArray(x.contentBlocks))parts.push(['🧩 Como funciona na prática',String(x.representation)]);
+ if(x.use&&!Array.isArray(x.contentBlocks))parts.push(['🌍 Onde isso é usado',String(x.use)]);
+ if(x.observe&&!Array.isArray(x.contentBlocks))parts.push(['⚠️ O que merece atenção',String(x.observe)]);
+ if(x.guided&&!Array.isArray(x.contentBlocks))parts.push(['🪜 Vamos resolver juntos',String(x.guided)]);
+ if(!parts.length&&!Array.isArray(x.contentBlocks)&&x.concept)parts.push(['🪜 Pense passo a passo','Leia a ideia principal, escolha um exemplo do seu cotidiano e explique com suas palavras como ela funciona.']);
  if(!parts.length)return '';
  return '<section class="lesson-teaching-sequence" aria-label="Explicação passo a passo"><h4>📖 Aprenda passo a passo</h4><p class="lesson-teaching-intro">Antes do desafio, observe os exemplos, compreenda as relações e experimente explicar o que aprendeu.</p>'+parts.map(([title,body])=>lessonBlock(title,body,'teaching-step')).join('')+'</section>';
 }
