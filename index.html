@@ -420,7 +420,7 @@ position:relative;z-index:1;
 #lessons-panel .lesson-years::after,#lessons-panel .lesson-sections::after{content:"";flex:0 0 8px}
 #lessons-panel .lesson-years>button.on,#lessons-panel .lesson-sections>button.on{outline-offset:2px}
 @media(prefers-reduced-motion:reduce){#lessons-panel .lesson-years,#lessons-panel .lesson-sections{scroll-behavior:auto}}
-</style><style id="lesson-wheel-selection-lock">/* Mantém o item escolhido no centro da faixa, como roleta. */#lessons-panel .lesson-years,#lessons-panel .lesson-sections{scroll-snap-type:x mandatory!important;scroll-padding-inline:calc(50% - 46px);overscroll-behavior-x:contain!important}#lessons-panel .lesson-years::before,#lessons-panel .lesson-years::after,#lessons-panel .lesson-sections::before,#lessons-panel .lesson-sections::after{content:"";display:block;flex:0 0 calc(50% - 60px);pointer-events:none}#lessons-panel .lesson-years>button.on,#lessons-panel .lesson-sections>button.on{z-index:2!important;filter:brightness(1.08)!important;box-shadow:0 0 0 3px #fff3bc77,0 0 28px #f5d37baa,0 15px 28px #0008!important}#lessons-panel .lesson-years>button,#lessons-panel .lesson-sections>button{scroll-snap-stop:always}@media(prefers-reduced-motion:reduce){#lessons-panel .lesson-years,#lessons-panel .lesson-sections{scroll-behavior:auto!important}}</style><style id="lesson-pedagogy-v5">
+</style><style id="lesson-wheel-selection-lock">/* Mantém o item escolhido no centro da faixa, como roleta. */#lessons-panel .lesson-years,#lessons-panel .lesson-sections{scroll-snap-type:x proximity!important;scroll-padding-inline:calc(50% - 46px);overscroll-behavior-x:contain!important}#lessons-panel .lesson-years::before,#lessons-panel .lesson-years::after,#lessons-panel .lesson-sections::before,#lessons-panel .lesson-sections::after{content:"";display:block;flex:0 0 calc(50% - 60px);pointer-events:none}#lessons-panel .lesson-years>button.on,#lessons-panel .lesson-sections>button.on{z-index:2!important;filter:brightness(1.08)!important;box-shadow:0 0 0 3px #fff3bc77,0 0 28px #f5d37baa,0 15px 28px #0008!important}#lessons-panel .lesson-years>button,#lessons-panel .lesson-sections>button{scroll-snap-stop:always}@media(prefers-reduced-motion:reduce){#lessons-panel .lesson-years,#lessons-panel .lesson-sections{scroll-behavior:auto!important}}</style><style id="lesson-pedagogy-v5">
 .lesson-visual-item .lesson-visual-copy{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0;text-align:center;line-height:1.35}
 .lesson-visual-item .lesson-visual-copy strong{font-size:.86rem;color:#f7e2a5}
 .lesson-visual-item .lesson-visual-copy small{font-size:.73rem;color:#d5e4ec;overflow-wrap:anywhere}
@@ -632,23 +632,21 @@ document.addEventListener('DOMContentLoaded',()=>{
 #lessons-panel .lesson-sections button.on{transform:scale(1.1);box-shadow:0 0 0 2px #ffe5a0,0 0 22px #eab64a99!important;background:linear-gradient(150deg,#ffe6a3,#d9a93e)!important;color:#183249!important;font-weight:900}
 @media(max-width:600px){#lessons-panel .lesson-sections button{min-width:128px;min-height:58px}#lessons-panel .lesson-sections{padding-left:max(16px,calc((100% - 145px)/2))!important;padding-right:max(16px,calc((100% - 145px)/2))!important}}
 @media(prefers-reduced-motion:reduce){#lessons-panel .lesson-sections button{transition:none!important}}
-</style><script id="classroom-wheel-controller-v4">(function(){
-function init(){
-const panel=document.getElementById('lessons-panel');if(!panel||panel.dataset.wheelReady==='4')return;
-const strip=panel.querySelector('.lesson-sections');if(!strip)return;panel.dataset.wheelReady='4';
-let pointerStart=null,moved=false,scrollTimer=0,programUntil=0,audio=null;
-function sound(){if(panel.dataset.access==='hearing'||matchMedia('(prefers-reduced-motion: reduce)').matches)return;try{const A=window.AudioContext||window.webkitAudioContext;if(!A)return;audio=audio||new A();const o=audio.createOscillator(),g=audio.createGain(),t=audio.currentTime;o.frequency.value=700;g.gain.setValueAtTime(.015,t);g.gain.exponentialRampToValueAtTime(.0001,t+.035);o.connect(g);g.connect(audio.destination);o.start(t);o.stop(t+.04)}catch(_){}}
-function center(instant=false){const active=strip.querySelector('button.on');if(!active)return;programUntil=Date.now()+900;const x=active.offsetLeft-strip.offsetLeft-(strip.clientWidth-active.offsetWidth)/2;strip.scrollTo({left:Math.max(0,x),behavior:instant?'instant':'smooth'})}
-function closest(){const buttons=[...strip.querySelectorAll('button[data-s]')];if(!buttons.length)return null;const mid=strip.getBoundingClientRect().left+strip.clientWidth/2;return buttons.reduce((a,b)=>Math.abs(b.getBoundingClientRect().left+b.getBoundingClientRect().width/2-mid)<Math.abs(a.getBoundingClientRect().left+a.getBoundingClientRect().width/2-mid)?b:a)}
-strip.addEventListener('pointerdown',e=>{pointerStart=e.clientX;moved=false},{passive:true});
-strip.addEventListener('pointermove',e=>{if(pointerStart!==null&&Math.abs(e.clientX-pointerStart)>10)moved=true},{passive:true});
-strip.addEventListener('pointerup',()=>{pointerStart=null},{passive:true});
-strip.addEventListener('click',e=>{const button=e.target.closest('button[data-s]');if(!button)return;if(moved){e.preventDefault();e.stopImmediatePropagation();moved=false;return}sound();setTimeout(()=>center(),50)},true);
-strip.addEventListener('scroll',()=>{if(Date.now()<programUntil)return;clearTimeout(scrollTimer);scrollTimer=setTimeout(()=>{if(!panel.classList.contains('show'))return;const button=closest();if(button&&!button.classList.contains('on')){programUntil=Date.now()+900;sound();button.click()}else center()},400)},{passive:true});
-new MutationObserver(()=>{if(panel.classList.contains('show'))center(true)}).observe(strip,{childList:true});
-setTimeout(()=>center(true),100);
+</style><script id="classroom-wheel-controller-v5">(function(){
+function setup(){
+const panel=document.getElementById('lessons-panel');if(!panel||panel.dataset.wheelReady==='5')return;
+const strip=panel.querySelector('.lesson-sections');if(!strip)return;
+panel.dataset.wheelReady='5';let audio=null,scrolling=false,settle=0,dragStart=null;
+function clickSound(){if(panel.dataset.access==='hearing'||matchMedia('(prefers-reduced-motion: reduce)').matches)return;try{const A=window.AudioContext||window.webkitAudioContext;if(!A)return;audio=audio||new A();const o=audio.createOscillator(),g=audio.createGain(),t=audio.currentTime;o.frequency.value=700;g.gain.setValueAtTime(.012,t);g.gain.exponentialRampToValueAtTime(.0001,t+.04);o.connect(g);g.connect(audio.destination);o.start(t);o.stop(t+.045)}catch(_){}}
+function center(){const active=strip.querySelector('button.on');if(!active)return;const rect=strip.getBoundingClientRect(),r=active.getBoundingClientRect();const left=strip.scrollLeft+(r.left+r.width/2-rect.left-rect.width/2);strip.scrollTo({left:Math.max(0,left),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})}
+strip.addEventListener('pointerdown',e=>{dragStart=e.clientX;scrolling=false},{passive:true});
+strip.addEventListener('pointermove',e=>{if(dragStart!==null&&Math.abs(e.clientX-dragStart)>10)scrolling=true},{passive:true});
+strip.addEventListener('pointerup',()=>{dragStart=null;setTimeout(()=>scrolling=false,120)},{passive:true});
+strip.addEventListener('click',e=>{const button=e.target.closest('button[data-s]');if(!button)return;if(scrolling){e.preventDefault();e.stopImmediatePropagation();return}clickSound();setTimeout(center,80)},true);
+new MutationObserver(()=>{if(panel.classList.contains('show')){clearTimeout(settle);settle=setTimeout(center,80)}}).observe(strip,{childList:true});
+setTimeout(center,150);
 }
-new MutationObserver(()=>{if(document.getElementById('lessons-panel')?.dataset.wheelReady!=='4')init()}).observe(document.body,{childList:true,subtree:true});init();
+new MutationObserver(()=>{if(document.getElementById('lessons-panel')?.dataset.wheelReady!=='5')setup()}).observe(document.body,{childList:true,subtree:true});setup();
 })();</script><style id="classroom-mobile-layout-fix-v1">
 @media(max-width:700px){
 #lessons-panel .lessons-card{padding-top:12px!important}
