@@ -1,4 +1,4 @@
-const CACHE='tangram2-offline-integrated-lessons-20261019-v3';
+const CACHE='tangram2-offline-classroom-wheel-20261019-v4';
 const CORE=[
   './',
   './index.html',
