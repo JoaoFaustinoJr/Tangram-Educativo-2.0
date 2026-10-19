@@ -632,20 +632,22 @@ document.addEventListener('DOMContentLoaded',()=>{
 #lessons-panel .lesson-sections button.on{transform:scale(1.1);box-shadow:0 0 0 2px #ffe5a0,0 0 22px #eab64a99!important;background:linear-gradient(150deg,#ffe6a3,#d9a93e)!important;color:#183249!important;font-weight:900}
 @media(max-width:600px){#lessons-panel .lesson-sections button{min-width:128px;min-height:58px}#lessons-panel .lesson-sections{padding-left:max(16px,calc((100% - 145px)/2))!important;padding-right:max(16px,calc((100% - 145px)/2))!important}}
 @media(prefers-reduced-motion:reduce){#lessons-panel .lesson-sections button{transition:none!important}}
-</style><script id="classroom-wheel-controller-v2">(function(){
+</style><script id="classroom-wheel-controller-v3">(function(){
 function init(){
-const panel=document.getElementById('lessons-panel');if(!panel||panel.dataset.wheelReady)return;
-panel.dataset.wheelReady='1';
-const strip=panel.querySelector('.lesson-sections');if(!strip)return;
-let settle=0,ignoreUntil=0,audio=null;
-function clickSound(){if(matchMedia('(prefers-reduced-motion: reduce)').matches||panel.dataset.access==='hearing')return;try{const A=window.AudioContext||window.webkitAudioContext;if(!A)return;audio=audio||new A();if(audio.state==='suspended')audio.resume();const o=audio.createOscillator(),g=audio.createGain(),t=audio.currentTime;o.type='triangle';o.frequency.value=650;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.018,t+.005);g.gain.exponentialRampToValueAtTime(.0001,t+.045);o.connect(g);g.connect(audio.destination);o.start(t);o.stop(t+.05)}catch(e){}}
-function center(){const active=strip.querySelector('button.on');if(!active)return;const left=active.offsetLeft-strip.offsetLeft-(strip.clientWidth-active.offsetWidth)/2;strip.scrollTo({left:Math.max(0,left),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})}
-function nearest(){const rect=strip.getBoundingClientRect(),middle=rect.left+rect.width/2;return [...strip.querySelectorAll('button[data-s]')].reduce((best,b)=>Math.abs(b.getBoundingClientRect().left+b.offsetWidth/2-middle)<Math.abs(best.getBoundingClientRect().left+best.offsetWidth/2-middle)?b:best)}
-strip.addEventListener('scroll',()=>{clearTimeout(settle);if(Date.now()<ignoreUntil)return;settle=setTimeout(()=>{if(!panel.classList.contains('show'))return;const target=nearest();if(target&&!target.classList.contains('on')){clickSound();ignoreUntil=Date.now()+550;target.click()}},220)},{passive:true});
-strip.addEventListener('click',e=>{if(e.target.closest('button[data-s]')){clickSound();ignoreUntil=Date.now()+650;setTimeout(center,60)}});
-const obs=new MutationObserver(()=>{if(panel.classList.contains('show')){ignoreUntil=Date.now()+550;setTimeout(center,70)}});obs.observe(strip,{childList:true});setTimeout(center,100);
+const panel=document.getElementById('lessons-panel');if(!panel||panel.dataset.wheelReady==='3')return;
+const strip=panel.querySelector('.lesson-sections');if(!strip)return;panel.dataset.wheelReady='3';
+let settle=0,programmatic=false,dragged=false,pointerX=null,audio=null;
+function tick(){if(panel.dataset.access==='hearing'||matchMedia('(prefers-reduced-motion: reduce)').matches)return;try{const A=window.AudioContext||window.webkitAudioContext;if(!A)return;audio=audio||new A();const o=audio.createOscillator(),g=audio.createGain(),t=audio.currentTime;o.frequency.value=680;g.gain.setValueAtTime(.014,t);g.gain.exponentialRampToValueAtTime(.0001,t+.04);o.connect(g);g.connect(audio.destination);o.start(t);o.stop(t+.045)}catch(_){}}
+function center(behavior='smooth'){const b=strip.querySelector('button.on');if(!b)return;programmatic=true;const left=b.offsetLeft-strip.offsetLeft-(strip.clientWidth-b.offsetWidth)/2;strip.scrollTo({left:Math.max(0,left),behavior});clearTimeout(settle);setTimeout(()=>{programmatic=false},650)}
+function nearest(){const bs=[...strip.querySelectorAll('button[data-s]')];if(!bs.length)return null;const mid=strip.getBoundingClientRect().left+strip.clientWidth/2;return bs.reduce((a,b)=>Math.abs(b.getBoundingClientRect().left+b.offsetWidth/2-mid)<Math.abs(a.getBoundingClientRect().left+a.offsetWidth/2-mid)?b:a)}
+strip.addEventListener('pointerdown',e=>{pointerX=e.clientX;dragged=false},{passive:true});
+strip.addEventListener('pointermove',e=>{if(pointerX!==null&&Math.abs(e.clientX-pointerX)>12)dragged=true},{passive:true});
+strip.addEventListener('pointerup',()=>{pointerX=null},{passive:true});
+strip.addEventListener('click',e=>{const b=e.target.closest('button[data-s]');if(!b)return;if(dragged){e.preventDefault();e.stopImmediatePropagation();dragged=false;return}tick();setTimeout(()=>center(),40)},true);
+strip.addEventListener('scroll',()=>{if(programmatic)return;clearTimeout(settle);settle=setTimeout(()=>{if(!panel.classList.contains('show'))return;const b=nearest();if(b&&!b.classList.contains('on')){tick();b.click()}else center()},350)},{passive:true});
+const obs=new MutationObserver(()=>center('instant'));obs.observe(strip,{childList:true});setTimeout(()=>center('instant'),120);
 }
-const observer=new MutationObserver(()=>{if(document.getElementById('lessons-panel')&&!document.getElementById('lessons-panel').dataset.wheelReady)init()});observer.observe(document.body,{childList:true,subtree:true});init();
+const obs=new MutationObserver(()=>{if(document.getElementById('lessons-panel')?.dataset.wheelReady!=='3')init()});obs.observe(document.body,{childList:true,subtree:true});init();
 })();</script><style id="classroom-mobile-layout-fix-v1">
 @media(max-width:700px){
 #lessons-panel .lessons-card{padding-top:12px!important}
