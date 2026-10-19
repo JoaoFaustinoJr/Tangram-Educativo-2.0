@@ -616,52 +616,128 @@
     "year": 7,
     "section": "digital",
     "id": "cd7-convivencia-producao",
-    "topic": "Empatia, cyberbullying e produção digital",
+    "topic": "🤝 Bullying, cyberbullying e convivência digital",
     "icon": "🤝",
     "axis": "Cultura Digital",
-    "objective": "Reconhecer cyberbullying, demonstrar empatia e produzir conteúdos digitais com responsabilidade.",
+    "objective": "Diferenciar bullying presencial e cyberbullying, reconhecer riscos da exposição digital, desenvolver empatia e agir com segurança diante de agressões.",
     "keyTerm": "cyberbullying",
     "keyDefinition": "Prática de intimidação, humilhação, exposição ou agressão repetida por meios digitais.",
-    "concept": "Ambientes digitais ampliam o alcance das interações e também das consequências. É necessário respeitar opiniões, reconhecer situações de cyberbullying, buscar ajuda e produzir/publicar conteúdos com responsabilidade, autoria e cuidado.",
-    "example": "Compartilhar um meme humilhando um colega pode ampliar uma agressão mesmo que quem compartilha não tenha criado o conteúdo.",
-    "formula": "publicar/compartilhar → avaliar impacto, autoria e responsabilidade",
-    "representation": "antes de postar: é verdadeiro? necessário? respeitoso? autorizado?",
-    "use": "Redes sociais, grupos, vídeos, podcasts, sites e trabalhos colaborativos.",
-    "observe": "'Foi só brincadeira' não elimina impacto, exposição ou responsabilidade.",
-    "guided": "Analise um caso fictício de comentário ofensivo e proponha formas seguras de interromper a situação e buscar apoio.",
-    "challenge": "Que cuidados devem ser tomados ao publicar um vídeo de projeto escolar com outras pessoas aparecendo?",
-    "answer": "Consentimento/autorização adequada, respeito à imagem, contexto, autoria dos materiais usados e proteção de dados pessoais.",
+    "concept": "Bullying é intimidação ou agressão intencional e repetida, com desequilíbrio de poder, que pode ser física, verbal ou social. Cyberbullying é intimidação, humilhação, perseguição ou exposição por meios digitais, como redes sociais, grupos de mensagens e jogos. Na internet, a agressão pode alcançar muitas pessoas, circular fora do horário escolar e permanecer registrada. Uma agressão isolada também exige atenção, mesmo sem preencher todos os critérios de bullying.",
+    "example": "No recreio, um estudante é repetidamente humilhado por colegas: bullying presencial. Em um grupo de mensagens, circulam montagens ofensivas de um estudante: violência digital que pode configurar cyberbullying. Compartilhar a montagem amplia o dano.",
+    "formula": "identificar → não compartilhar → acolher → guardar evidências com segurança → pedir ajuda → denunciar",
+    "representation": "🏫 presencial: agressão no espaço físico | 📱 digital: circulação e alcance ampliados | 🤝 resposta: apoio e proteção",
+    "use": "Convivência escolar, redes sociais, jogos on-line, grupos de mensagens e produção de conteúdos digitais.",
+    "observe": "Não confundir brincadeira consentida com humilhação. 'Foi só uma piada' não apaga os danos. Evite expor vítimas ou exigir relatos pessoais na turma.",
+    "guided": "Em grupos, compare dois casos fictícios: apelidos ofensivos repetidos no recreio e publicação de uma montagem humilhante em um grupo. Identifique meio, alcance, consequências e ações de proteção.",
+    "challenge": "Um colega teve sua foto usada para ridicularizá-lo em um grupo. Você recebeu a imagem. O que faz e por quê?",
+    "answer": "Não repassar nem reagir incentivando; acolher a pessoa; preservar evidências sem redistribuir; comunicar adulto de confiança e equipe escolar; utilizar denúncia e bloqueio quando cabível.",
     "reference": "EF07CO08, EF07CO09 e EF07CO11; BNCC Computação; Referencial Curricular do Paraná, Volume 2.",
-    "teacherTip": "Use casos fictícios e protocolos de proteção da escola; não exponha situações pessoais em público.",
+    "teacherTip": "Comece com exemplos fictícios, explique diferença entre bullying e cyberbullying, discuta papel de quem presencia, preserve privacidade e encaminhe relatos concretos à equipe de proteção da escola. Nunca obrigue estudantes a expor experiências pessoais.",
     "fixation": [
       {
-        "q": "O que significa “cyberbullying” nesta aula?",
-        "a": "Prática de intimidação, humilhação, exposição ou agressão repetida por meios digitais."
+        "q": "Qual é uma diferença entre bullying tradicional e cyberbullying?",
+        "a": "O tradicional ocorre presencialmente; o digital pode ocorrer a qualquer hora, atingir grande público e permanecer circulando."
       },
       {
-        "q": "Onde esse conceito pode aparecer fora desta tela?",
-        "a": "Redes sociais, grupos, vídeos, podcasts, sites e trabalhos colaborativos."
+        "q": "Compartilhar uma montagem humilhante é uma atitude neutra?",
+        "a": "Não. Repassar conteúdo ofensivo pode ampliar a violência e o sofrimento."
       },
       {
-        "q": "Qual ponto merece atenção para não confundir o conceito?",
-        "a": "'Foi só brincadeira' não elimina impacto, exposição ou responsabilidade."
+        "q": "Como agir ao receber mensagens ofensivas repetidas?",
+        "a": "Não retaliar, guardar evidências com segurança, buscar adulto de confiança e usar canais de denúncia."
+      },
+      {
+        "q": "Toda brincadeira desagradável é bullying?",
+        "a": "Não necessariamente. Bullying envolve intencionalidade, repetição e desequilíbrio de poder; toda agressão merece atenção."
       }
     ],
     "visuals": [
       {
+        "symbol": "🏫",
+        "label": "Presencial",
+        "description": "Agressões físicas, verbais ou sociais no convívio"
+      },
+      {
+        "symbol": "📱",
+        "label": "Digital",
+        "description": "Mensagens, imagens, jogos e redes sociais"
+      },
+      {
+        "symbol": "🛡️",
+        "label": "Proteção",
+        "description": "Não compartilhar, acolher e buscar ajuda"
+      },
+      {
         "symbol": "🤝",
-        "label": "Equipe",
-        "description": "Equipe"
+        "label": "Empatia",
+        "description": "Respeitar diferenças e apoiar colegas"
+      }
+    ]
+  },
+  {
+    "id": "cd7-campanha-prevencao-cyberbullying",
+    "year": 7,
+    "grade": 7,
+    "section": "digital",
+    "icon": "🛡️",
+    "axis": "Cultura Digital • Cidadania e prevenção",
+    "topic": "🛡️ Missão: escola contra o cyberbullying",
+    "objective": "Planejar uma campanha escolar de conscientização com atitudes práticas de prevenção, acolhimento e cidadania digital.",
+    "keyTerm": "conscientização",
+    "keyDefinition": "Processo de reconhecer um problema, compreender seus efeitos e promover mudanças responsáveis de atitude.",
+    "concept": "A prevenção do cyberbullying envolve educação digital, rodas de conversa, campanhas, combinados de convivência, alunos multiplicadores e canais seguros de acolhimento. A responsabilidade é coletiva: estudantes não devem incentivar agressões; adultos e escola devem acolher, apurar e proteger.",
+    "example": "Uma turma cria cartazes e vídeos com o lema 'Respeito não tem modo offline!', define cinco compromissos de convivência digital e divulga como pedir ajuda sem expor ninguém.",
+    "formula": "escutar + informar + acolher + proteger + agir = convivência digital responsável",
+    "representation": "💬 diálogo → 🎨 campanha → 🤝 pacto de convivência → 🛡️ canal de apoio → 🔄 avaliação",
+    "use": "Campanhas escolares, murais, vídeos, histórias em quadrinhos, projetos interdisciplinares e grêmios estudantis.",
+    "observe": "Não divulgar nomes, fotos, prints ou histórias identificáveis de vítimas. Denúncias devem seguir o protocolo de proteção da escola; nunca substituir acolhimento por votação pública.",
+    "guided": "Missão em equipes: 1) analise caso fictício de meme ofensivo; 2) decida como interromper a circulação; 3) produza cartaz, HQ ou vídeo curto; 4) proponha cinco compromissos para o pacto digital da turma; 5) apresente à escola após revisão docente.",
+    "challenge": "Uma montagem ofensiva circula no grupo da turma. Que três ações imediatas e que duas estratégias coletivas podem reduzir o problema?",
+    "answer": "Ações: não repassar, apoiar o colega, comunicar adulto/equipe escolar e preservar evidências de forma segura. Estratégias: campanha de respeito, pacto de convivência, rodas de conversa e canal protegido de acolhimento.",
+    "reference": "BNCC Computação; Referencial Curricular do Paraná, Volume 2; educação digital, cidadania e proteção no ambiente escolar.",
+    "teacherTip": "Aula de 50 minutos: 10 min de conceitos, 15 min de caso fictício, 20 min de campanha em grupos e 5 min de pacto. Integrar Língua Portuguesa e Arte. Não coletar relatos identificáveis dos alunos em atividades públicas.",
+    "fixation": [
+      {
+        "q": "Qual estratégia ajuda a prevenir cyberbullying?",
+        "a": "Rodas de conversa, campanhas educativas, pacto de convivência e canais seguros de acolhimento."
       },
       {
-        "symbol": "📋",
-        "label": "Organização",
-        "description": "Organização"
+        "q": "Você recebe um meme humilhante de um colega. Qual atitude responsável?",
+        "a": "Não compartilhar; acolher o colega e procurar ajuda de adulto de confiança."
       },
       {
-        "symbol": "🎯",
-        "label": "Responsabilidade",
-        "description": "Responsabilidade"
+        "q": "Por que uma campanha não deve publicar prints com nomes?",
+        "a": "Porque pode revitimizar, expor dados pessoais e ampliar o dano."
+      },
+      {
+        "q": "Como os espectadores podem ajudar?",
+        "a": "Não incentivar agressões, oferecer apoio e comunicar situações com segurança."
+      },
+      {
+        "q": "O que incluir em um pacto de convivência digital?",
+        "a": "Respeito, consentimento para imagens, não divulgação de humilhações, apoio e denúncia responsável."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "💬",
+        "label": "Dialogar",
+        "description": "Ouvir e debater com respeito"
+      },
+      {
+        "symbol": "🎨",
+        "label": "Criar",
+        "description": "Cartazes, HQs e vídeos educativos"
+      },
+      {
+        "symbol": "🤝",
+        "label": "Comprometer",
+        "description": "Cinco acordos para a convivência digital"
+      },
+      {
+        "symbol": "🛡️",
+        "label": "Proteger",
+        "description": "Acolher e encaminhar sem expor"
       }
     ]
   },
