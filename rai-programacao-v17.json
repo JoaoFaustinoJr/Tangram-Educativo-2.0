@@ -1225,20 +1225,20 @@
     "topic": "Aula 49 · Listas, índices e slicing",
     "icon": "📚",
     "axis": "Programação",
-    "objective": "Criar listas e acessar elementos por índices e fatiamento.",
-    "keyTerm": "índice",
-    "keyDefinition": "Posição usada para acessar um elemento de uma sequência.",
-    "concept": "Listas organizam coleções; índices localizam itens e slicing seleciona intervalos.",
-    "example": "pecas=['triângulo','quadrado','paralelogramo']; pecas[0]",
-    "formula": "entender → prever → escrever → executar → explicar",
-    "representation": "lista[0] • lista[-1] • lista[início:fim:passo]",
-    "use": "Inventários, rankings e registros.",
-    "observe": "O primeiro índice de uma lista Python é 0.",
-    "guided": "Crie uma lista das peças e acesse primeira, última e um intervalo.",
-    "challenge": "Como obter os três primeiros itens de lista?",
-    "answer": "lista[:3]",
-    "reference": "RCO 8º ano · Aula 49 · EF08CO02.",
-    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
+    "objective": "Criar listas em Python, localizar itens com índices positivos e negativos e selecionar subconjuntos por fatiamento; aplicar essas operações em um cardápio.",
+    "keyTerm": "Lista e slicing",
+    "keyDefinition": "Lista é uma sequência ordenada e mutável de elementos. Slicing seleciona parte dessa sequência usando [início:fim:passo], sem incluir o índice fim.",
+    "concept": "Uma lista reúne vários valores em uma variável. Por exemplo, nomes = ['Marcelo', 'Jaspe', 'Sakura', 'Naruto', 'Itachi']. O primeiro elemento tem índice 0, o segundo índice 1 e assim por diante. nomes[0] devolve 'Marcelo'; nomes[-1] devolve 'Itachi'. Para obter vários elementos, usamos nomes[início:fim:passo]: início indica de onde partir, fim é o limite EXCLUSIVO e passo define de quantos em quantos itens avançar. Assim, nomes[1:4] retorna Jaspe, Sakura e Naruto; nomes[::2] retorna Marcelo, Sakura e Itachi. Índices de acesso isolado fora do intervalo geram IndexError, mas o fatiamento aceita limites além do tamanho e retorna apenas os elementos existentes.",
+    "example": "Execute mentalmente:\nnomes = ['Marcelo', 'Jaspe', 'Sakura', 'Naruto', 'Itachi']\nprint(nomes[0])  # Marcelo\nprint(nomes[-2]) # Naruto\nprint(nomes[1:4]) # ['Jaspe', 'Sakura', 'Naruto']\nprint(nomes[::2]) # ['Marcelo', 'Sakura', 'Itachi']",
+    "formula": "lista[início:fim:passo] · o índice fim não entra no resultado",
+    "representation": "Índices: 0 | 1 | 2 | 3 | 4\nItens: Marcelo | Jaspe | Sakura | Naruto | Itachi\nNegativos: -5 | -4 | -3 | -2 | -1",
+    "use": "Cardápios digitais, organização de dados de sensores, listas de materiais de robótica, presença e resultados de experimentos.",
+    "observe": "Os colchetes [ ] criam e acessam listas. A contagem começa em zero; a posição final do fatiamento é exclusiva. Uma lista pode misturar tipos, como [10, 'Marcelo', True], embora listas homogêneas sejam mais simples para começar.",
+    "guided": "ETAPA 1 — Crie uma lista com cinco componentes de robótica: ['LED', 'resistor', 'sensor', 'motor', 'Arduino']. Identifique os índices 0 a 4. ETAPA 2 — Preveja a saída de pecas[2], pecas[-1] e pecas[1:4]. ETAPA 3 — Execute ou confira cada previsão. ETAPA 4 — Explique por que pecas[1:4] não inclui o item de índice 4.",
+    "challenge": "MISSÃO CANTINA DIGITAL — Monte a lista itens = ['pizza', 'suco', 'bolo', 'refrigerante', 'salgado', 'água', 'hambúrguer', 'café']. Sem digitar os produtos novamente, crie as listas comidas e bebidas usando slicing e imprima as três listas. Desafio extra: o que mudaria se os produtos não estivessem alternados?",
+    "answer": "itens = ['pizza', 'suco', 'bolo', 'refrigerante', 'salgado', 'água', 'hambúrguer', 'café']\ncomidas = itens[::2]\nbebidas = itens[1::2]\nprint('Cardápio completo:', itens)\nprint('Comidas:', comidas)\nprint('Bebidas:', bebidas)\n# O fatiamento por passo 2 funciona porque as categorias alternam. Se a ordem mudar, é preciso outra estratégia, como filtrar por categoria.",
+    "reference": "SEED-PR / Plataforma Start, Aula 5 — Lógica de programação: fundamentos e desafios em Python — Navegando em listas. Material fornecido pelo professor via Google Drive.",
+    "teacherTip": "Antes de executar, solicite hipóteses sobre cada saída. Use cartões numerados para representar a lista; no modo TEA, apresente um índice por vez. No modo deficiência visual, verbalize posição e item. No modo déficit auditivo, mantenha o índice e o resultado escritos. Avalie explicação e correção da lógica, não velocidade.",
     "fixation": [
       {
         "q": "Qual é o conceito central?",
@@ -1268,6 +1268,32 @@
         "symbol": "🎯",
         "label": "Responsabilidade",
         "description": "Responsabilidade"
+      }
+    ],
+    "contentBlocks": [
+      {
+        "title": "1 · Organizar para programar",
+        "text": "Uma variável guarda um valor; uma lista organiza vários valores em sequência. Crie nomes = ['Marcelo', 'Jaspe', 'Sakura', 'Naruto', 'Itachi'] e use print(nomes) para visualizar todos. Sem print, criar a lista não exibe nada automaticamente em um script."
+      },
+      {
+        "title": "2 · Descobrir o índice",
+        "text": "Índice é a posição do elemento, começando em 0. nomes[0] é Marcelo, nomes[1] é Jaspe e nomes[4] é Itachi. Peça que o aluno aponte o item antes de executar."
+      },
+      {
+        "title": "3 · Contar de trás para frente",
+        "text": "Índices negativos partem do fim: nomes[-1] é Itachi; nomes[-2] é Naruto. Compare com o último e o penúltimo lugares de uma fila."
+      },
+      {
+        "title": "4 · Fatiar a sequência",
+        "text": "A sintaxe nomes[início:fim:passo] escolhe um intervalo. nomes[3:] traz Naruto e Itachi; nomes[3:5] também; nomes[1:5:2] traz Jaspe e Naruto. O fim não é incluído. nomes[:] cria uma cópia rasa da lista."
+      },
+      {
+        "title": "5 · Observar o passo",
+        "text": "nomes[::2] percorre a lista de dois em dois, começando no índice 0: Marcelo, Sakura e Itachi. nomes[1::2] começa no índice 1: Jaspe e Naruto. Alterar o passo altera o padrão selecionado."
+      },
+      {
+        "title": "6 · Missão com padrão e reflexão",
+        "text": "Na cantina, comidas e bebidas estão alternadas. Separe itens[::2] e itens[1::2]. Depois embaralhe dois itens: a técnica ainda funciona? Discuta a diferença entre selecionar por posição e classificar por significado."
       }
     ]
   },
@@ -3238,54 +3264,5 @@
       "grade": 9,
       "disks": 5
     }
-  },
-  {
-    "year": 8,
-    "section": "prog",
-    "id": "pr8-python-listas-indices-fatiamento",
-    "topic": "🐍 Python: listas, índices e fatiamento",
-    "title": "Aula 5 · Navegando em listas",
-    "icon": "🐍",
-    "axis": "Programação · Estruturas de dados · SEED/Start",
-    "objective": "Criar listas em Python, localizar itens com índices positivos e negativos e selecionar subconjuntos por fatiamento; aplicar essas operações em um cardápio.",
-    "keyTerm": "Lista e slicing",
-    "keyDefinition": "Lista é uma sequência ordenada e mutável de elementos. Slicing seleciona parte dessa sequência usando [início:fim:passo], sem incluir o índice fim.",
-    "concept": "Uma lista reúne vários valores em uma variável. Por exemplo, nomes = ['Marcelo', 'Jaspe', 'Sakura', 'Naruto', 'Itachi']. O primeiro elemento tem índice 0, o segundo índice 1 e assim por diante. nomes[0] devolve 'Marcelo'; nomes[-1] devolve 'Itachi'. Para obter vários elementos, usamos nomes[início:fim:passo]: início indica de onde partir, fim é o limite EXCLUSIVO e passo define de quantos em quantos itens avançar. Assim, nomes[1:4] retorna Jaspe, Sakura e Naruto; nomes[::2] retorna Marcelo, Sakura e Itachi. Índices de acesso isolado fora do intervalo geram IndexError, mas o fatiamento aceita limites além do tamanho e retorna apenas os elementos existentes.",
-    "example": "Execute mentalmente:\nnomes = ['Marcelo', 'Jaspe', 'Sakura', 'Naruto', 'Itachi']\nprint(nomes[0])  # Marcelo\nprint(nomes[-2]) # Naruto\nprint(nomes[1:4]) # ['Jaspe', 'Sakura', 'Naruto']\nprint(nomes[::2]) # ['Marcelo', 'Sakura', 'Itachi']",
-    "formula": "lista[início:fim:passo] · o índice fim não entra no resultado",
-    "representation": "Índices: 0 | 1 | 2 | 3 | 4\nItens: Marcelo | Jaspe | Sakura | Naruto | Itachi\nNegativos: -5 | -4 | -3 | -2 | -1",
-    "use": "Cardápios digitais, organização de dados de sensores, listas de materiais de robótica, presença e resultados de experimentos.",
-    "observe": "Os colchetes [ ] criam e acessam listas. A contagem começa em zero; a posição final do fatiamento é exclusiva. Uma lista pode misturar tipos, como [10, 'Marcelo', True], embora listas homogêneas sejam mais simples para começar.",
-    "guided": "ETAPA 1 — Crie uma lista com cinco componentes de robótica: ['LED', 'resistor', 'sensor', 'motor', 'Arduino']. Identifique os índices 0 a 4. ETAPA 2 — Preveja a saída de pecas[2], pecas[-1] e pecas[1:4]. ETAPA 3 — Execute ou confira cada previsão. ETAPA 4 — Explique por que pecas[1:4] não inclui o item de índice 4.",
-    "challenge": "MISSÃO CANTINA DIGITAL — Monte a lista itens = ['pizza', 'suco', 'bolo', 'refrigerante', 'salgado', 'água', 'hambúrguer', 'café']. Sem digitar os produtos novamente, crie as listas comidas e bebidas usando slicing e imprima as três listas. Desafio extra: o que mudaria se os produtos não estivessem alternados?",
-    "answer": "itens = ['pizza', 'suco', 'bolo', 'refrigerante', 'salgado', 'água', 'hambúrguer', 'café']\ncomidas = itens[::2]\nbebidas = itens[1::2]\nprint('Cardápio completo:', itens)\nprint('Comidas:', comidas)\nprint('Bebidas:', bebidas)\n# O fatiamento por passo 2 funciona porque as categorias alternam. Se a ordem mudar, é preciso outra estratégia, como filtrar por categoria.",
-    "reference": "SEED-PR / Plataforma Start, Aula 5 — Lógica de programação: fundamentos e desafios em Python — Navegando em listas. Material fornecido pelo professor via Google Drive.",
-    "teacherTip": "Antes de executar, solicite hipóteses sobre cada saída. Use cartões numerados para representar a lista; no modo TEA, apresente um índice por vez. No modo deficiência visual, verbalize posição e item. No modo déficit auditivo, mantenha o índice e o resultado escritos. Avalie explicação e correção da lógica, não velocidade.",
-    "contentBlocks": [
-      {
-        "title": "1 · Organizar para programar",
-        "text": "Uma variável guarda um valor; uma lista organiza vários valores em sequência. Crie nomes = ['Marcelo', 'Jaspe', 'Sakura', 'Naruto', 'Itachi'] e use print(nomes) para visualizar todos. Sem print, criar a lista não exibe nada automaticamente em um script."
-      },
-      {
-        "title": "2 · Descobrir o índice",
-        "text": "Índice é a posição do elemento, começando em 0. nomes[0] é Marcelo, nomes[1] é Jaspe e nomes[4] é Itachi. Peça que o aluno aponte o item antes de executar."
-      },
-      {
-        "title": "3 · Contar de trás para frente",
-        "text": "Índices negativos partem do fim: nomes[-1] é Itachi; nomes[-2] é Naruto. Compare com o último e o penúltimo lugares de uma fila."
-      },
-      {
-        "title": "4 · Fatiar a sequência",
-        "text": "A sintaxe nomes[início:fim:passo] escolhe um intervalo. nomes[3:] traz Naruto e Itachi; nomes[3:5] também; nomes[1:5:2] traz Jaspe e Naruto. O fim não é incluído. nomes[:] cria uma cópia rasa da lista."
-      },
-      {
-        "title": "5 · Observar o passo",
-        "text": "nomes[::2] percorre a lista de dois em dois, começando no índice 0: Marcelo, Sakura e Itachi. nomes[1::2] começa no índice 1: Jaspe e Naruto. Alterar o passo altera o padrão selecionado."
-      },
-      {
-        "title": "6 · Missão com padrão e reflexão",
-        "text": "Na cantina, comidas e bebidas estão alternadas. Separe itens[::2] e itens[1::2]. Depois embaralhe dois itens: a técnica ainda funciona? Discuta a diferença entre selecionar por posição e classificar por significado."
-      }
-    ]
   }
 ]
