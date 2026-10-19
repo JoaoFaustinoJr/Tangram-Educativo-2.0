@@ -1,11 +1,11 @@
 /* Biblioteca integrada: atalhos por série, sem duplicar bancos de aulas. */
 (()=>{'use strict';
 const tracks={
-5:[['🧩','Tangram e geometria','Formas, composição, simetria e figuras planas.','#math'],['🤖','Laboratório: primeiras máquinas','Componentes, LEDs e comandos simples.','#robotics']],
-6:[['🗼','Torre de Hanói','Sequências, decomposição e algoritmos.','#prog'],['🔷','Tangram matemático','Ângulos, figuras e raciocínio espacial.','#math'],['🔬','Laboratório de circuitos','LED, resistor, interruptor e circuitos simples.','#lab']],
-7:[['🗼','Hanói: estratégias','Padrões, movimentos mínimos e planejamento.','#pc'],['⚡','Circuitos em série e paralelo','Comparar trajetos da corrente e testar hipóteses.','#lab'],['🔷','Tangram e transformações','Rotação, reflexão e simetria.','#math']],
-8:[['🗼','Hanói e programação','Recursividade e construção de algoritmos.','#prog'],['💻','Laboratório: hardware e software','Sensores, controladores e lógica de programação.','#lab'],['📐','Tangram: áreas e proporções','Composição, frações e equivalências.','#math']],
-9:[['🗼','Hanói: complexidade','Generalização, recursão e eficiência.','#prog'],['🔌','Laboratório de automação','Sensores, atuadores e sistemas integrados.','#lab'],['📏','Tangram e demonstração','Geometria e argumentação matemática.','#math']]
+5:[['🧩','Tangram e geometria','Formas, composição, simetria e figuras planas.','#tangram'],['🤖','Laboratório: primeiras máquinas','Componentes, LEDs e comandos simples.','#robotics']],
+6:[['🗼','Torre de Hanói','Sequências, decomposição e algoritmos.','#hanoi'],['🔷','Tangram matemático','Ângulos, figuras e raciocínio espacial.','#tangram'],['🔬','Laboratório de circuitos','LED, resistor, interruptor e circuitos simples.','#lab']],
+7:[['🗼','Hanói: estratégias','Padrões, movimentos mínimos e planejamento.','#hanoi'],['⚡','Circuitos em série e paralelo','Comparar trajetos da corrente e testar hipóteses.','#lab'],['🔷','Tangram e transformações','Rotação, reflexão e simetria.','#tangram']],
+8:[['🗼','Hanói e programação','Recursividade e construção de algoritmos.','#hanoi'],['💻','Laboratório: hardware e software','Sensores, controladores e lógica de programação.','#lab'],['📐','Tangram: áreas e proporções','Composição, frações e equivalências.','#tangram']],
+9:[['🗼','Hanói: complexidade','Generalização, recursão e eficiência.','#hanoi'],['🔌','Laboratório de automação','Sensores, atuadores e sistemas integrados.','#lab'],['📏','Tangram e demonstração','Geometria e argumentação matemática.','#tangram']]
 };
 const modules={
 5:[['Observe as sete peças','Um tangram possui cinco triângulos, um quadrado e um paralelogramo. As peças podem ser giradas e combinadas sem sobreposição.','Monte um quadrado e explique quais peças formam a figura.','./'],['Comandos e máquinas','Hardware são as peças físicas de um dispositivo. Software são as instruções que controlam seu funcionamento.','Identifique um componente e descreva a função dele.','./circuitos/laboratorio.html']],
@@ -19,15 +19,15 @@ function update(){
  const panel=document.getElementById('lessons-panel');if(!panel||!panel.classList.contains('show'))return;
  const year=Number(panel.querySelector('.lesson-years button.on')?.dataset.y||6);
  const lib=panel.querySelector('.lesson-library');if(!lib)return;
- const key=year+':'+(panel.querySelector('.lesson-sections button.on')?.dataset.s||'');
+ const subject=panel.querySelector('.lesson-sections button.on')?.dataset.s||'';const key=year+':'+subject;
  let section=panel.querySelector('#integrated-tracks');
  if(!section){section=document.createElement('section');section.id='integrated-tracks';section.className='integrated-tracks';lib.before(section)}
  if(last===key&&section.dataset.ready==='1'&&section.querySelector('.integrated-module-list'))return;last=key;section.dataset.ready='1';
  section.innerHTML='<h4>🧭 Trilhas integradas do '+year+'º ano</h4><p>Estude o conceito nas Aulas e depois experimente no aplicativo. O conteúdo original permanece disponível.</p><div class="integrated-track-grid">'+(tracks[year]||[]).map(([icon,title,desc,route])=>'<button type="button" class="integrated-track" data-track="'+route.slice(1)+'"><b>'+icon+' '+title+'</b><small>'+desc+'</small><span>Ver aulas relacionadas →</span></button>').join('')+'</div>';
- const list=modules[year]||[];
+ const list=(modules[year]||[]).filter(x=>subject==='hanoi'?/Hanói/i.test(x[0]):subject==='tangram'?/Tangram|Geometria|Área|Simetria|Justificativa/i.test(x[0]):true);
  const wrap=document.createElement('div');wrap.className='integrated-module-list';
  wrap.innerHTML='<h4>📚 Aulas explicadas e experiências</h4>'+list.map(([title,concept,challenge,link],i)=>'<details class="integrated-module"><summary>'+String(i+1)+'. '+title+'</summary><div class="integrated-module-body"><b>📘 Entenda</b><p>'+concept+'</p><b>🧠 Pense e responda</b><p>'+challenge+'</p><a href="'+link+'" class="integrated-practice">Experimentar no aplicativo ↗</a></div></details>').join('');
- section.appendChild(wrap);
+ section.appendChild(wrap);if(subject==='hanoi'||subject==='tangram'){section.querySelector('.integrated-track-grid')?.remove();section.querySelector('h4').textContent=(subject==='hanoi'?'🗼 Hanói':'🔷 Tangram')+' · '+year+'º ano';const empty=lib.querySelector('.lesson-empty');if(empty)empty.hidden=true;}
  section.querySelectorAll('[data-track]').forEach(btn=>btn.addEventListener('click',()=>{const target=panel.querySelector('.lesson-sections button[data-s="'+btn.dataset.track+'"]');if(target){target.click();panel.querySelector('.lesson-library')?.scrollIntoView({block:'start',behavior:'smooth'})}}));
 }
 function boot(){const obs=new MutationObserver(()=>{if(document.getElementById('lessons-panel')?.classList.contains('show'))update()});obs.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});document.addEventListener('click',e=>{if(e.target.closest('#lessons-panel .lesson-years,#lessons-panel .lesson-sections'))queueMicrotask(update)});update()}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
