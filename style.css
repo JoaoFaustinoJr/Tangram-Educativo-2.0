@@ -1451,3 +1451,8 @@ body:has(#lessons-panel.show) #rai-float-wrap{z-index:2147483003!important;point
 body:has(#lessons-panel.show) #rai-float-wrap>*{pointer-events:auto!important}
 body:has(#lessons-panel.show) #rai-tutor-panel:not([hidden]){z-index:2147483004!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important}
 @media(min-width:900px){body:has(#lessons-panel.show) #rai-float-wrap{right:clamp(18px,2vw,35px)!important;bottom:clamp(18px,2vh,35px)!important}}
+
+/* 2026-10-19 — Correção de regressão: lupa deve ficar acima do painel de aulas em tela cheia. */
+#lesson-magnifier{z-index:2147483500!important;visibility:visible;isolation:isolate}
+#lesson-magnifier .mag-handle,#lesson-magnifier .mag-controls,#lesson-magnifier .mag-controls button{pointer-events:auto!important}
+@media(max-width:650px){#lesson-magnifier{max-width:calc(100vw - 20px)}}
