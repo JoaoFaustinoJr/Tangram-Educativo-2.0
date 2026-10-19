@@ -22,7 +22,7 @@ function update(){
  const key=year+':'+(panel.querySelector('.lesson-sections button.on')?.dataset.s||'');
  let section=panel.querySelector('#integrated-tracks');
  if(!section){section=document.createElement('section');section.id='integrated-tracks';section.className='integrated-tracks';lib.before(section)}
- if(last===key&&section.dataset.ready==='1')return;last=key;section.dataset.ready='1';
+ if(last===key&&section.dataset.ready==='1'&&section.querySelector('.integrated-module-list'))return;last=key;section.dataset.ready='1';
  section.innerHTML='<h4>🧭 Trilhas integradas do '+year+'º ano</h4><p>Estude o conceito nas Aulas e depois experimente no aplicativo. O conteúdo original permanece disponível.</p><div class="integrated-track-grid">'+(tracks[year]||[]).map(([icon,title,desc,route])=>'<button type="button" class="integrated-track" data-track="'+route.slice(1)+'"><b>'+icon+' '+title+'</b><small>'+desc+'</small><span>Ver aulas relacionadas →</span></button>').join('')+'</div>';
  const list=modules[year]||[];
  const wrap=document.createElement('div');wrap.className='integrated-module-list';
@@ -30,5 +30,5 @@ function update(){
  section.appendChild(wrap);
  section.querySelectorAll('[data-track]').forEach(btn=>btn.addEventListener('click',()=>{const target=panel.querySelector('.lesson-sections button[data-s="'+btn.dataset.track+'"]');if(target){target.click();panel.querySelector('.lesson-library')?.scrollIntoView({block:'start',behavior:'smooth'})}}));
 }
-document.addEventListener('DOMContentLoaded',()=>{const obs=new MutationObserver(()=>{if(document.getElementById('lessons-panel')?.classList.contains('show'))update()});obs.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});document.addEventListener('click',e=>{if(e.target.closest('#lessons-panel .lesson-years,#lessons-panel .lesson-sections'))queueMicrotask(update)});update()});
+function boot(){const obs=new MutationObserver(()=>{if(document.getElementById('lessons-panel')?.classList.contains('show'))update()});obs.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});document.addEventListener('click',e=>{if(e.target.closest('#lessons-panel .lesson-years,#lessons-panel .lesson-sections'))queueMicrotask(update)});update()}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
