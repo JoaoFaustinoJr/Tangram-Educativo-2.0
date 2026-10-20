@@ -117,7 +117,7 @@ async function ensureLessons(){
     try{
      const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),10000);
      let response;
-     try{response=await fetch(u+'?v=20261019-understanding-v6',{cache:'no-store',signal:controller.signal})}
+     try{response=await fetch(u+'?v=20261020-deep-lessons-v7',{cache:'no-store',signal:controller.signal})}
      finally{clearTimeout(timer)}
      if(!response.ok)throw new Error('HTTP '+response.status);
      const data=await response.json();
