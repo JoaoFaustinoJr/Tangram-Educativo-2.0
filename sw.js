@@ -1,11 +1,11 @@
-const CACHE='tangram2-offline-classroom-wheel-20261019-v4';
+const CACHE='tangram2-lessons-depth-20261020-v5';
 const CORE=[
   './',
   './index.html',
   './integrated-lessons.js?v=3',
   './rai-robotica-t3-v18.json',
   './style.css?v=2.0.209-rai-dialog',
-  './app.js?v=2.0.233-laboratorio-aulas',
+  './app.js?v=20261020-deep-lessons-v7',
   './manifest.webmanifest?v=310',
   './app-icon.svg?v=310',
   './file_000000007ad0820ebb1af4cac165a68a.png?v=149',
@@ -19,7 +19,7 @@ const CORE=[
  './circuitos/rai-lab.js?v=20261014-2',
  './circuitos/lab-workspace.js?v=20261014-2',
  './circuitos/lab-electronics.js?v=20261014-1',
- './rai-programacao-v17.json',
+ './rai-programacao-v17.json?v=20261020-deep-lessons-v7',
  './rai-mundo-digital-v17.json',
  './circuitos/laboratorio-icon.svg',
  './circuitos/circuitos-icon.svg',
@@ -63,7 +63,7 @@ self.addEventListener('fetch',event=>{
     return;
   }
 
-  const critical=/\.(?:css|js)$/.test(url.pathname)||url.pathname.endsWith('/hanoi/index.html');
+  const critical=/\.(?:css|js|json)$/.test(url.pathname)||url.pathname.endsWith('/hanoi/index.html');
   if(critical){
     event.respondWith(fetch(event.request).then(response=>{
       if(response&&response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy));}
