@@ -1016,31 +1016,18 @@
     "objective": "Reconhecer tipos básicos e usar operadores aritméticos no Colab.",
     "keyTerm": "tipo de dado",
     "keyDefinition": "Forma como o Python interpreta um valor, como int, float ou str.",
-    "concept": "Tipos e operadores permitem representar informações e resolver cálculos passo a passo.",
-    "example": "13 // 4 → 3; 13 % 4 → 1.",
+    "concept": "Os programas trabalham com dados de diferentes tipos. int representa inteiros, float representa decimais, str representa texto e bool representa valores True/False. Operadores como +, -, *, /, //, % e ** realizam cálculos. A ordem das operações e o uso de parênteses influenciam o resultado.",
+    "example": "vidas = 3\npontos = 12\nbonus = 5\nprint(pontos + bonus)  # 17\nprint(7 // 2)          # 3\nprint(7 % 2)           # 1\nprint(type(vidas))     # <class 'int'>",
     "formula": "entender → prever → escrever → executar → explicar",
     "representation": "int • float • str • + - * / // %",
-    "use": "Cálculos, jogos e problemas cotidianos.",
-    "observe": "// produz quociente inteiro e % produz resto.",
-    "guided": "No Colab, crie valores int, float e str; use type() e teste operações.",
-    "challenge": "Divida 13 peças igualmente entre 4 grupos e descubra a sobra.",
-    "answer": "13 // 4 resulta 3 por grupo e 13 % 4 resulta 1 de sobra.",
-    "reference": "RCO 8º ano · Aula 45 · EF08CO04/EF69CO01.",
-    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
-    "fixation": [
-      {
-        "q": "Qual é o conceito central?",
-        "a": "Forma como o Python interpreta um valor, como int, float ou str."
-      },
-      {
-        "q": "O que você deve fazer antes de executar?",
-        "a": "Prever o resultado e explicar o raciocínio."
-      },
-      {
-        "q": "Como verificar a solução?",
-        "a": "13 // 4 resulta 3 por grupo e 13 % 4 resulta 1 de sobra."
-      }
-    ],
+    "use": "Aplicações em jogos, organização de materiais, sensores simulados, missões da RAI e atividades de robótica educativa.",
+    "observe": "Antes de executar o programa, registre o que espera ver. Depois compare a saída com sua hipótese e explique qualquer diferença.",
+    "guided": "Preveja a saída de 8 + 2 * 3 e de (8 + 2) * 3. Execute ambos no editor. Explique por que são diferentes. Em seguida calcule o dobro da pontuação de um jogo.",
+    "challenge": "MISSÃO PLACAR DA RAI — Um robô coleta 4 estrelas de 15 pontos cada e perde 7 pontos por um obstáculo. Calcule a pontuação final e apresente uma mensagem. Desafio extra: divida 17 peças igualmente entre 4 equipes, mostrando quantidade por equipe e sobra.",
+    "answer": "estrelas = 4\npontos_por_estrela = 15\npenalidade = 7\nplacar = estrelas * pontos_por_estrela - penalidade\nprint('Pontuação:', placar)  # 53\nprint(17 // 4)  # 4\nprint(17 % 4)   # 1",
+    "reference": "RCO 8º ano · Aula 45 · EF08CO04/EF69CO01. · Ampliação pedagógica do Tangram: explicação, previsão, execução e missão.",
+    "teacherTip": "Comece com uma pergunta concreta e solicite uma previsão antes de executar. Explore o editor de código e peça que o estudante explique cada alteração. Para TEA, apresente uma etapa por vez; para baixa visão, descreva os valores e use a lupa; para déficit auditivo, mantenha instruções e resultados visíveis. Avalie raciocínio e justificativa, não rapidez.",
+    "fixation": "1. Identifique a entrada ou os valores iniciais. 2. Preveja a saída do exemplo. 3. Execute e compare. 4. Modifique um valor e justifique a mudança.",
     "visuals": [
       {
         "symbol": "💻",
@@ -1056,6 +1043,32 @@
         "symbol": "▶️",
         "label": "Executar e testar",
         "description": "Executar e testar"
+      }
+    ],
+    "contentBlocks": [
+      {
+        "title": "Por que um programa precisa calcular?",
+        "text": "Um placar, uma temperatura e uma contagem de peças são informações diferentes. O computador precisa saber como representar cada valor para operar corretamente."
+      },
+      {
+        "title": "Conheça os tipos",
+        "text": "Inteiros: 3 e -2 (int). Decimais: 23.5 (float). Textos: 'RAI' (str). Valores lógicos: True e False (bool). Em Python, texto entre aspas não é automaticamente um número."
+      },
+      {
+        "title": "Operações passo a passo",
+        "text": "2 + 3 soma; 7 - 2 subtrai; 4 * 3 multiplica; 7 / 2 produz 3.5; 7 // 2 produz 3; 7 % 2 produz 1; 2 ** 3 produz 8."
+      },
+      {
+        "title": "A ordem importa",
+        "text": "Compare 8 + 2 * 3 = 14 com (8 + 2) * 3 = 30. Parênteses mudam a prioridade. O operador + entre textos concatena: 'R' + 'AI' resulta 'RAI'."
+      },
+      {
+        "title": "Preveja antes de executar",
+        "text": "O que acontece em print('3' + '2')? O resultado é '32', não 5. Para somar números digitados como texto, use conversão adequada: int('3') + int('2') = 5."
+      },
+      {
+        "title": "Missão do placar",
+        "text": "Resolva o desafio das estrelas. Registre sua previsão, execute e explique os operadores escolhidos. Depois conecte a mesma lógica ao cálculo de pontos das missões do Tangram."
       }
     ]
   },
@@ -1069,31 +1082,18 @@
     "objective": "Usar variáveis e input() numa solução com entrada, processamento e saída.",
     "keyTerm": "variável",
     "keyDefinition": "Nome associado a um valor que pode ser reutilizado pelo programa.",
-    "concept": "Um programa pode receber dados, processá-los e produzir uma saída.",
-    "example": "nome=input('Nome: '); print(nome)",
+    "concept": "Uma variável é um nome que referencia um valor. input() lê a resposta do usuário como texto (str), mesmo quando são digitados números. Para fazer cálculos, converta com int() ou float() quando apropriado. A sequência entrada → processamento → saída organiza muitos programas.",
+    "example": "nome = input('Qual é seu nome? ')\nidade = int(input('Qual é sua idade? '))\nprint('Olá,', nome)\nprint('No próximo ano você terá', idade + 1, 'anos')",
     "formula": "entender → prever → escrever → executar → explicar",
     "representation": "input() → variável → processamento → print()",
-    "use": "Placares, cadastros e jogos.",
-    "observe": "input() retorna texto; cálculos podem exigir conversão.",
-    "guided": "Leia nome e pontuação e mostre uma mensagem final.",
-    "challenge": "Por que int(input()) pode ser necessário ao somar pontos?",
-    "answer": "Porque input() retorna texto e int() converte uma representação inteira válida em número.",
-    "reference": "RCO 8º ano · Aula 46 · EF08CO04/EF69CO02.",
-    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
-    "fixation": [
-      {
-        "q": "Qual é o conceito central?",
-        "a": "Nome associado a um valor que pode ser reutilizado pelo programa."
-      },
-      {
-        "q": "O que você deve fazer antes de executar?",
-        "a": "Prever o resultado e explicar o raciocínio."
-      },
-      {
-        "q": "Como verificar a solução?",
-        "a": "Porque input() retorna texto e int() converte uma representação inteira válida em número."
-      }
-    ],
+    "use": "Aplicações em jogos, organização de materiais, sensores simulados, missões da RAI e atividades de robótica educativa.",
+    "observe": "Antes de executar o programa, registre o que espera ver. Depois compare a saída com sua hipótese e explique qualquer diferença.",
+    "guided": "Antes de executar, preveja: se o usuário digitar 12, qual será o resultado de input() + '1'? E após converter com int()? Compare e explique. Use o editor do Tangram se ele oferecer entrada de dados; caso contrário, simule com valores atribuídos.",
+    "challenge": "MISSÃO INSCRIÇÃO — Crie variáveis nome, equipe e quantidade de componentes. Mostre uma ficha de inscrição e calcule quantos componentes serão necessários para 3 equipes iguais.",
+    "answer": "nome = 'Ana'\nequipe = 'RAI'\ncomponentes_por_equipe = 4\nprint('Aluno:', nome)\nprint('Equipe:', equipe)\nprint('Total:', componentes_por_equipe * 3)  # 12",
+    "reference": "RCO 8º ano · Aula 46 · EF08CO04/EF69CO02. · Ampliação pedagógica do Tangram: explicação, previsão, execução e missão.",
+    "teacherTip": "Comece com uma pergunta concreta e solicite uma previsão antes de executar. Explore o editor de código e peça que o estudante explique cada alteração. Para TEA, apresente uma etapa por vez; para baixa visão, descreva os valores e use a lupa; para déficit auditivo, mantenha instruções e resultados visíveis. Avalie raciocínio e justificativa, não rapidez.",
+    "fixation": "1. Identifique a entrada ou os valores iniciais. 2. Preveja a saída do exemplo. 3. Execute e compare. 4. Modifique um valor e justifique a mudança.",
     "visuals": [
       {
         "symbol": "💻",
@@ -1109,6 +1109,32 @@
         "symbol": "▶️",
         "label": "Executar e testar",
         "description": "Executar e testar"
+      }
+    ],
+    "contentBlocks": [
+      {
+        "title": "Um cadastro é um programa",
+        "text": "Uma inscrição em feira de robótica precisa receber nome, equipe e quantidade de peças. O computador não adivinha esses dados: eles são informados ou definidos."
+      },
+      {
+        "title": "O que é uma variável?",
+        "text": "Em nome = 'Ana', nome identifica o valor 'Ana'. Em idade = 12, idade identifica o número 12. O sinal = atribui um valor; não faz comparação."
+      },
+      {
+        "title": "Entrada e saída",
+        "text": "input('Pergunta: ') recebe texto digitado; print() apresenta resultados. Nem todos os editores didáticos aceitam entrada interativa: nesses casos, simule com variáveis."
+      },
+      {
+        "title": "Texto ou número?",
+        "text": "input() devolve str. Se digitamos '12', int('12') produz 12. Sem conversão, '12' + '1' produz '121'. Conversão de texto inválido, como int('abc'), gera ValueError."
+      },
+      {
+        "title": "Processar informações",
+        "text": "Entrada: componentes_por_equipe = 4. Processamento: total = 4 * 3. Saída: print(total), que mostra 12. Identifique cada etapa no próprio código."
+      },
+      {
+        "title": "Missão ficha da equipe",
+        "text": "Monte a ficha, altere os valores e confira o total. Explique o que precisa mudar para cadastrar equipes com quantidades diferentes."
       }
     ]
   },
@@ -1205,31 +1231,18 @@
     "objective": "Construir decisões com if/else e explicar os dois caminhos possíveis.",
     "keyTerm": "if/else",
     "keyDefinition": "Estrutura que escolhe entre caminhos conforme uma condição.",
-    "concept": "Decisões computacionais associam uma condição a ações diferentes.",
-    "example": "if caminho_livre: avance() else: vire()",
+    "concept": "A estrutura if/else escolhe entre dois caminhos a partir de uma condição booleana. A condição termina com dois-pontos e o bloco de instruções deve ser indentado. Se a condição for True, o bloco if executa; caso contrário, o bloco else executa. elif permite testar condições adicionais.",
+    "example": "distancia = 12\nif distancia < 15:\n    print('Parar o robô')\nelse:\n    print('Seguir em frente')\n# Saída: Parar o robô",
     "formula": "entender → prever → escrever → executar → explicar",
     "representation": "if condição: ação • else: alternativa",
-    "use": "Robótica, jogos e classificações.",
-    "observe": "A indentação define os blocos do Python.",
-    "guided": "Transforme uma decisão do robô Marquinhos em código Python.",
-    "challenge": "Se tentativas < 3, continuar; caso contrário, encerrar.",
-    "answer": "if tentativas < 3: continuar; else: encerrar.",
-    "reference": "RCO 8º ano · Aula 48 · EF08CO04/EF69CO02.",
-    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
-    "fixation": [
-      {
-        "q": "Qual é o conceito central?",
-        "a": "Estrutura que escolhe entre caminhos conforme uma condição."
-      },
-      {
-        "q": "O que você deve fazer antes de executar?",
-        "a": "Prever o resultado e explicar o raciocínio."
-      },
-      {
-        "q": "Como verificar a solução?",
-        "a": "if tentativas < 3: continuar; else: encerrar."
-      }
-    ],
+    "use": "Aplicações em jogos, organização de materiais, sensores simulados, missões da RAI e atividades de robótica educativa.",
+    "observe": "Antes de executar o programa, registre o que espera ver. Depois compare a saída com sua hipótese e explique qualquer diferença.",
+    "guided": "Preveja o resultado com distancia = 12, 15 e 20. Depois teste cada caso. Substitua < por <= e explique a diferença no valor de limite.",
+    "challenge": "MISSÃO PASSAGEM SEGURA — Faça o robô parar se a distância ao obstáculo for menor que 15 cm; caso contrário, avançar. Teste 10, 15 e 22 cm. Os valores são didáticos, não parâmetros de segurança reais.",
+    "answer": "distancia = 10\nif distancia < 15:\n    print('Parar o robô')\nelse:\n    print('Avançar')\n# 10: Parar; 15 e 22: Avançar",
+    "reference": "RCO 8º ano · Aula 48 · EF08CO04/EF69CO02. · Ampliação pedagógica do Tangram: explicação, previsão, execução e missão.",
+    "teacherTip": "Comece com uma pergunta concreta e solicite uma previsão antes de executar. Explore o editor de código e peça que o estudante explique cada alteração. Para TEA, apresente uma etapa por vez; para baixa visão, descreva os valores e use a lupa; para déficit auditivo, mantenha instruções e resultados visíveis. Avalie raciocínio e justificativa, não rapidez.",
+    "fixation": "1. Identifique a entrada ou os valores iniciais. 2. Preveja a saída do exemplo. 3. Execute e compare. 4. Modifique um valor e justifique a mudança.",
     "visuals": [
       {
         "symbol": "💻",
@@ -1245,6 +1258,32 @@
         "symbol": "▶️",
         "label": "Executar e testar",
         "description": "Executar e testar"
+      }
+    ],
+    "contentBlocks": [
+      {
+        "title": "Uma decisão muda o caminho",
+        "text": "Em um labirinto, a RAI precisa escolher avançar ou parar diante de um obstáculo. Essa escolha pode ser escrita como uma condição."
+      },
+      {
+        "title": "A comparação devolve True ou False",
+        "text": "distancia < 15 pergunta se o valor é menor que 15. Com 12, o resultado é True; com 15, é False. A igualdade do limite merece atenção."
+      },
+      {
+        "title": "Escrevendo if/else",
+        "text": "Use if condição: e abaixo um comando com quatro espaços. Escreva else: alinhado com if e outro comando indentado. Os dois-pontos e a indentação fazem parte da sintaxe."
+      },
+      {
+        "title": "Faça o teste de mesa",
+        "text": "Anote três distâncias (10, 15 e 22), avalie a condição e registre a saída antes de executar. Isso ajuda a identificar erros de lógica."
+      },
+      {
+        "title": "E quando existem mais possibilidades?",
+        "text": "elif permite testar outra condição. Exemplo: se bateria < 10, recarregar; elif bateria < 30, economizar energia; else, operar normalmente."
+      },
+      {
+        "title": "Missão passagem segura",
+        "text": "Escreva, execute e explique a decisão do robô. Compare o comportamento de < e <= e relacione o exercício às missões de sensores."
       }
     ]
   },
@@ -1337,31 +1376,18 @@
     "objective": "Usar append, insert, remove, pop e o operador in.",
     "keyTerm": "método de lista",
     "keyDefinition": "Operação associada a uma lista para alterar ou consultar sua coleção.",
-    "concept": "Listas podem crescer, mudar e ser consultadas durante a execução.",
-    "example": "pecas.append('quadrado'); 'quadrado' in pecas",
+    "concept": "Listas são sequências ordenadas e mutáveis. append adiciona ao fim; insert adiciona em uma posição; remove exclui a primeira ocorrência de um valor; pop retira e devolve um elemento por índice (ou o último, sem argumento). O operador in verifica a presença de um item.",
+    "example": "pecas = ['LED', 'resistor']\npecas.append('sensor')\npecas.insert(1, 'motor')\nprint(pecas)  # ['LED', 'motor', 'resistor', 'sensor']\nif 'motor' in pecas:\n    pecas.remove('motor')\nprint(pecas)",
     "formula": "entender → prever → escrever → executar → explicar",
     "representation": "append • insert • remove • pop • in",
-    "use": "Inventários, jogadores e tarefas.",
-    "observe": "remove procura valor; pop retira por índice ou, sem argumento, o último item.",
-    "guided": "Faça uma sequência de operações no inventário e preveja a lista após cada linha.",
-    "challenge": "Como remover quadrado somente se ele existir?",
-    "answer": "if 'quadrado' in pecas: pecas.remove('quadrado')",
-    "reference": "RCO 8º ano · Aula 50 · EF08CO02.",
-    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
-    "fixation": [
-      {
-        "q": "Qual é o conceito central?",
-        "a": "Operação associada a uma lista para alterar ou consultar sua coleção."
-      },
-      {
-        "q": "O que você deve fazer antes de executar?",
-        "a": "Prever o resultado e explicar o raciocínio."
-      },
-      {
-        "q": "Como verificar a solução?",
-        "a": "if 'quadrado' in pecas: pecas.remove('quadrado')"
-      }
-    ],
+    "use": "Aplicações em jogos, organização de materiais, sensores simulados, missões da RAI e atividades de robótica educativa.",
+    "observe": "Antes de executar o programa, registre o que espera ver. Depois compare a saída com sua hipótese e explique qualquer diferença.",
+    "guided": "Preveja a lista após cada operação: append('sensor'), insert(1, 'motor'), remove('motor'). Compare o valor de pecas.pop() com a lista resultante.",
+    "challenge": "MISSÃO ESTOQUE DE ROBÓTICA — Organize uma lista de componentes. Acrescente um LED, insira um motor na segunda posição e remova um sensor somente se ele existir. Explique o que aconteceria se remove fosse chamado para um item ausente.",
+    "answer": "pecas = ['resistor', 'sensor']\npecas.append('LED')\npecas.insert(1, 'motor')\nif 'sensor' in pecas:\n    pecas.remove('sensor')\nprint(pecas)  # ['resistor', 'motor', 'LED']",
+    "reference": "RCO 8º ano · Aula 50 · EF08CO02. · Ampliação pedagógica do Tangram: explicação, previsão, execução e missão.",
+    "teacherTip": "Comece com uma pergunta concreta e solicite uma previsão antes de executar. Explore o editor de código e peça que o estudante explique cada alteração. Para TEA, apresente uma etapa por vez; para baixa visão, descreva os valores e use a lupa; para déficit auditivo, mantenha instruções e resultados visíveis. Avalie raciocínio e justificativa, não rapidez.",
+    "fixation": "1. Identifique a entrada ou os valores iniciais. 2. Preveja a saída do exemplo. 3. Execute e compare. 4. Modifique um valor e justifique a mudança.",
     "visuals": [
       {
         "symbol": "💻",
@@ -1377,6 +1403,32 @@
         "symbol": "▶️",
         "label": "Executar e testar",
         "description": "Executar e testar"
+      }
+    ],
+    "contentBlocks": [
+      {
+        "title": "Uma lista pode mudar",
+        "text": "Na bancada de robótica, materiais chegam, são utilizados e precisam ser retirados do inventário. Uma lista permite acompanhar essas mudanças."
+      },
+      {
+        "title": "Adicionar ao final com append",
+        "text": "pecas = ['LED']; pecas.append('sensor') deixa ['LED', 'sensor']. O método altera a própria lista e não cria uma nova lista automaticamente."
+      },
+      {
+        "title": "Inserir em uma posição",
+        "text": "pecas.insert(0, 'resistor') coloca o resistor no começo. Os itens existentes deslocam-se para a direita."
+      },
+      {
+        "title": "Remover com cuidado",
+        "text": "remove('LED') exclui a primeira ocorrência do valor. Se ele não estiver na lista, ocorre ValueError. Teste primeiro: if 'LED' in pecas."
+      },
+      {
+        "title": "Retirar e consultar",
+        "text": "pop() remove e devolve o último elemento. pop(0) remove e devolve o primeiro; em lista vazia, pop() causa IndexError. O operador in responde True/False."
+      },
+      {
+        "title": "Missão inventário",
+        "text": "Registre o inventário inicial, preveja o estado após cada comando e execute. Explique por que conferir a presença do item evita erros."
       }
     ]
   },
@@ -1390,31 +1442,18 @@
     "objective": "Automatizar repetições com for/range e comunicar resultados com f-strings.",
     "keyTerm": "iteração",
     "keyDefinition": "Execução repetida de um bloco para elementos ou valores de uma sequência.",
-    "concept": "for percorre sequências e evita repetir manualmente o mesmo comando.",
-    "example": "for i in range(3): print(f'Rodada {i+1}')",
+    "concept": "O laço for percorre os elementos de uma sequência ou os números gerados por range(). range(fim) começa em 0 e para antes de fim; range(início,fim,passo) permite configurar o percurso. A indentação define quais instruções serão repetidas.",
+    "example": "for rodada in range(1, 4):\n    print('Rodada', rodada)\n# Rodada 1, Rodada 2, Rodada 3\nfor peca in ['LED', 'sensor']:\n    print('Verificar', peca)",
     "formula": "entender → prever → escrever → executar → explicar",
     "representation": "for item in sequência → ação",
-    "use": "Listas, relatórios, jogos e automação.",
-    "observe": "O limite final de range não é incluído.",
-    "guided": "Compare três prints manuais com a versão usando for.",
-    "challenge": "Como mostrar Rodada 1, 2 e 3?",
-    "answer": "for i in range(3): print(f'Rodada {i+1}')",
-    "reference": "RCO 8º ano · Aula 51 · EF08CO02/EF69CO02.",
-    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
-    "fixation": [
-      {
-        "q": "Qual é o conceito central?",
-        "a": "Execução repetida de um bloco para elementos ou valores de uma sequência."
-      },
-      {
-        "q": "O que você deve fazer antes de executar?",
-        "a": "Prever o resultado e explicar o raciocínio."
-      },
-      {
-        "q": "Como verificar a solução?",
-        "a": "for i in range(3): print(f'Rodada {i+1}')"
-      }
-    ],
+    "use": "Aplicações em jogos, organização de materiais, sensores simulados, missões da RAI e atividades de robótica educativa.",
+    "observe": "Antes de executar o programa, registre o que espera ver. Depois compare a saída com sua hipótese e explique qualquer diferença.",
+    "guided": "Preveja as saídas de range(4), range(1,4) e range(0,7,2). Depois execute. Explique por que 4 não aparece em range(1,4).",
+    "challenge": "MISSÃO TESTE DE LEDS — Simule o teste de cinco LEDs numerados de 1 a 5, imprimindo 'LED n: OK'. Desafio extra: teste apenas LEDs ímpares.",
+    "answer": "for numero in range(1, 6):\n    print('LED', numero, ': OK')\nfor numero in range(1, 6, 2):\n    print('LED ímpar', numero)",
+    "reference": "RCO 8º ano · Aula 51 · EF08CO02/EF69CO02. · Ampliação pedagógica do Tangram: explicação, previsão, execução e missão.",
+    "teacherTip": "Comece com uma pergunta concreta e solicite uma previsão antes de executar. Explore o editor de código e peça que o estudante explique cada alteração. Para TEA, apresente uma etapa por vez; para baixa visão, descreva os valores e use a lupa; para déficit auditivo, mantenha instruções e resultados visíveis. Avalie raciocínio e justificativa, não rapidez.",
+    "fixation": "1. Identifique a entrada ou os valores iniciais. 2. Preveja a saída do exemplo. 3. Execute e compare. 4. Modifique um valor e justifique a mudança.",
     "visuals": [
       {
         "symbol": "💻",
@@ -1430,6 +1469,32 @@
         "symbol": "▶️",
         "label": "Executar e testar",
         "description": "Executar e testar"
+      }
+    ],
+    "contentBlocks": [
+      {
+        "title": "Por que repetir comandos?",
+        "text": "Imagine testar cinco LEDs. Escrever cinco vezes a mesma instrução funciona, mas dá trabalho e aumenta o risco de erro."
+      },
+      {
+        "title": "O laço for",
+        "text": "for numero in range(1, 6): executa o bloco para 1, 2, 3, 4 e 5. O corpo do laço fica indentado."
+      },
+      {
+        "title": "Como funciona range",
+        "text": "range(4) produz 0,1,2,3; range(1,4) produz 1,2,3; range(0,7,2) produz 0,2,4,6. O limite final é exclusivo."
+      },
+      {
+        "title": "Percorrer listas",
+        "text": "for componente in ['LED', 'motor', 'sensor']: print(componente) visita os itens em ordem. O nome componente assume cada valor durante o percurso."
+      },
+      {
+        "title": "Previsão e depuração",
+        "text": "Faça uma tabela com o valor de numero em cada repetição. Confira se o intervalo e a indentação estão corretos."
+      },
+      {
+        "title": "Missão bancada de LEDs",
+        "text": "Produza o relatório de cinco LEDs. Depois altere o passo para 2 e compare a quantidade de linhas impressas."
       }
     ]
   },
@@ -1443,31 +1508,18 @@
     "objective": "Construir repetições condicionais com while e controlar sua interrupção.",
     "keyTerm": "while",
     "keyDefinition": "Laço que repete enquanto sua condição for verdadeira.",
-    "concept": "while é útil quando a quantidade de repetições depende de uma condição.",
-    "example": "while not concluido: tentar()",
+    "concept": "O laço while repete um bloco enquanto uma condição for True. É adequado quando não sabemos antecipadamente quantas tentativas serão necessárias. A variável usada na condição deve mudar quando queremos que o laço termine; caso contrário, pode ocorrer repetição infinita.",
+    "example": "energia = 3\nwhile energia > 0:\n    print('Energia restante:', energia)\n    energia -= 1\nprint('Missão encerrada')",
     "formula": "entender → prever → escrever → executar → explicar",
     "representation": "while condição → repetir • break → interromper",
-    "use": "Tentativas, sensores, menus e jogos.",
-    "observe": "A condição precisa poder mudar para que o laço possa terminar.",
-    "guided": "Simule tentativas até acertar e identifique a condição de parada.",
-    "challenge": "Quando while é mais adequado que for?",
-    "answer": "Quando a repetição depende de uma condição, e não de uma quantidade previamente definida.",
-    "reference": "RCO 8º ano · Aula 52 · EF08CO04/EF69CO02.",
-    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
-    "fixation": [
-      {
-        "q": "Qual é o conceito central?",
-        "a": "Laço que repete enquanto sua condição for verdadeira."
-      },
-      {
-        "q": "O que você deve fazer antes de executar?",
-        "a": "Prever o resultado e explicar o raciocínio."
-      },
-      {
-        "q": "Como verificar a solução?",
-        "a": "Quando a repetição depende de uma condição, e não de uma quantidade previamente definida."
-      }
-    ],
+    "use": "Aplicações em jogos, organização de materiais, sensores simulados, missões da RAI e atividades de robótica educativa.",
+    "observe": "Antes de executar o programa, registre o que espera ver. Depois compare a saída com sua hipótese e explique qualquer diferença.",
+    "guided": "Antes de executar, anote os valores exibidos para energia = 3. O que aconteceria se a linha energia -= 1 fosse removida? Discuta como interromper um laço infinito.",
+    "challenge": "MISSÃO BATERIA DA RAI — Simule uma bateria que começa em 5 unidades e perde 1 por rodada. Mostre o valor até chegar a zero e exiba 'Recarregar'.",
+    "answer": "bateria = 5\nwhile bateria > 0:\n    print('Bateria:', bateria)\n    bateria -= 1\nprint('Recarregar')",
+    "reference": "RCO 8º ano · Aula 52 · EF08CO04/EF69CO02. · Ampliação pedagógica do Tangram: explicação, previsão, execução e missão.",
+    "teacherTip": "Comece com uma pergunta concreta e solicite uma previsão antes de executar. Explore o editor de código e peça que o estudante explique cada alteração. Para TEA, apresente uma etapa por vez; para baixa visão, descreva os valores e use a lupa; para déficit auditivo, mantenha instruções e resultados visíveis. Avalie raciocínio e justificativa, não rapidez.",
+    "fixation": "1. Identifique a entrada ou os valores iniciais. 2. Preveja a saída do exemplo. 3. Execute e compare. 4. Modifique um valor e justifique a mudança.",
     "visuals": [
       {
         "symbol": "💻",
@@ -1483,6 +1535,32 @@
         "symbol": "▶️",
         "label": "Executar e testar",
         "description": "Executar e testar"
+      }
+    ],
+    "contentBlocks": [
+      {
+        "title": "Quando não sabemos quantas vezes?",
+        "text": "Em um jogo, a RAI continua tentando enquanto tiver energia. O número de tentativas depende do estado da variável."
+      },
+      {
+        "title": "Entenda a condição",
+        "text": "while energia > 0: testa a condição antes de cada repetição. Quando energia chegar a zero, o bloco deixa de executar."
+      },
+      {
+        "title": "Atualize a variável",
+        "text": "energia -= 1 equivale a energia = energia - 1. Sem atualização, a condição pode permanecer verdadeira indefinidamente."
+      },
+      {
+        "title": "Faça um teste de mesa",
+        "text": "Comece com energia = 3. Registre 3, 2, 1 e depois o teste com 0, que resulta False. Confira a mensagem final."
+      },
+      {
+        "title": "Compare for e while",
+        "text": "for costuma ser conveniente para percursos conhecidos; while é útil para repetir enquanto uma condição se mantiver. Ambos exigem atenção à indentação."
+      },
+      {
+        "title": "Missão bateria",
+        "text": "Implemente a contagem regressiva, altere a carga inicial e explique como garantir o encerramento."
       }
     ]
   },
@@ -1496,31 +1574,18 @@
     "objective": "Percorrer listas relacionando posição e valor com enumerate().",
     "keyTerm": "enumerate",
     "keyDefinition": "Função que permite percorrer uma sequência obtendo contador e valor.",
-    "concept": "Combinar listas e laços permite processar conjuntos de dados e construir rankings.",
-    "example": "for pos,tempo in enumerate(tempos,start=1): print(pos,tempo)",
+    "concept": "for percorre itens de uma lista; enumerate() permite obter simultaneamente o índice e o valor de cada item. É útil para criar relatórios e rankings. Por padrão, enumerate começa em zero, mas start=1 permite numerar posições para pessoas.",
+    "example": "equipes = ['RAI', 'Circuitos', 'Tangram']\nfor posicao, equipe in enumerate(equipes, start=1):\n    print(posicao, equipe)\n# 1 RAI; 2 Circuitos; 3 Tangram",
     "formula": "entender → prever → escrever → executar → explicar",
     "representation": "lista → enumerate → posição + valor",
-    "use": "Rankings, inventários e relatórios.",
-    "observe": "enumerate não ordena a lista.",
-    "guided": "Percorra tempos do Tangram e mostre posição e valor.",
-    "challenge": "Como iniciar a numeração em 1?",
-    "answer": "enumerate(lista, start=1)",
-    "reference": "RCO 8º ano · Aula 53 · EF08CO02/EF08CO04.",
-    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
-    "fixation": [
-      {
-        "q": "Qual é o conceito central?",
-        "a": "Função que permite percorrer uma sequência obtendo contador e valor."
-      },
-      {
-        "q": "O que você deve fazer antes de executar?",
-        "a": "Prever o resultado e explicar o raciocínio."
-      },
-      {
-        "q": "Como verificar a solução?",
-        "a": "enumerate(lista, start=1)"
-      }
-    ],
+    "use": "Aplicações em jogos, organização de materiais, sensores simulados, missões da RAI e atividades de robótica educativa.",
+    "observe": "Antes de executar o programa, registre o que espera ver. Depois compare a saída com sua hipótese e explique qualquer diferença.",
+    "guided": "Preveja os números gerados por enumerate(['LED','sensor']) e por enumerate(['LED','sensor'], start=1). Depois execute e compare.",
+    "challenge": "MISSÃO RANKING JUSTO — A partir de uma lista já ordenada de equipes, mostre as posições começando em 1. Explique por que enumerate não ordena automaticamente a lista.",
+    "answer": "equipes = ['Equipe A', 'Equipe B', 'Equipe C']\nfor posicao, nome in enumerate(equipes, start=1):\n    print(posicao, '-', nome)\n# enumerate numera a ordem atual; não calcula a pontuação.",
+    "reference": "RCO 8º ano · Aula 53 · EF08CO02/EF08CO04. · Ampliação pedagógica do Tangram: explicação, previsão, execução e missão.",
+    "teacherTip": "Comece com uma pergunta concreta e solicite uma previsão antes de executar. Explore o editor de código e peça que o estudante explique cada alteração. Para TEA, apresente uma etapa por vez; para baixa visão, descreva os valores e use a lupa; para déficit auditivo, mantenha instruções e resultados visíveis. Avalie raciocínio e justificativa, não rapidez.",
+    "fixation": "1. Identifique a entrada ou os valores iniciais. 2. Preveja a saída do exemplo. 3. Execute e compare. 4. Modifique um valor e justifique a mudança.",
     "visuals": [
       {
         "symbol": "💻",
@@ -1536,6 +1601,32 @@
         "symbol": "▶️",
         "label": "Executar e testar",
         "description": "Executar e testar"
+      }
+    ],
+    "contentBlocks": [
+      {
+        "title": "Como numerar um relatório?",
+        "text": "Uma lista contém nomes de equipes. Para exibir a posição de cada uma, precisamos associar cada nome a um número."
+      },
+      {
+        "title": "Percorrer com for",
+        "text": "for equipe in equipes: print(equipe) exibe os nomes, mas não apresenta automaticamente a posição."
+      },
+      {
+        "title": "Introdução a enumerate",
+        "text": "for indice, equipe in enumerate(equipes): fornece 0,1,2... junto com os nomes. Use start=1 para numerar de 1 em diante."
+      },
+      {
+        "title": "Índice não é classificação",
+        "text": "enumerate apenas numera a sequência existente. Para criar ranking por pontuação, é preciso ordenar os dados por critério definido antes."
+      },
+      {
+        "title": "Teste de mesa",
+        "text": "Escreva duas colunas: posição e equipe. Preveja o resultado de start=1 e compare com o padrão start=0."
+      },
+      {
+        "title": "Missão ranking",
+        "text": "Gere o relatório, altere a ordem dos nomes e observe o que muda. Discuta por que uma competição deve privilegiar critérios justos."
       }
     ]
   },
@@ -1549,31 +1640,18 @@
     "objective": "Usar random.randint, while e pertencimento para gerar valores sem repetição.",
     "keyTerm": "random.randint",
     "keyDefinition": "Função que gera um inteiro pseudoaleatório dentro de um intervalo informado.",
-    "concept": "Aleatoriedade cria desafios; in/not in ajuda a controlar duplicatas.",
-    "example": "n=random.randint(1,10); if n not in sorteados: sorteados.append(n)",
+    "concept": "O módulo random permite gerar escolhas pseudoaleatórias. random.randint(a,b) devolve um inteiro entre a e b, incluindo ambos. Para evitar valores repetidos, podemos verificar se o número já está em uma lista usando in/not in, ou usar random.sample() quando queremos uma amostra sem repetição.",
+    "example": "import random\nnumeros = []\nwhile len(numeros) < 3:\n    sorteado = random.randint(1, 6)\n    if sorteado not in numeros:\n        numeros.append(sorteado)\nprint(numeros)  # três valores distintos de 1 a 6",
     "formula": "entender → prever → escrever → executar → explicar",
     "representation": "sortear → verificar → aceitar ou repetir",
-    "use": "Jogos, sorteios e simulações.",
-    "observe": "Não peça mais valores únicos do que o conjunto possível oferece.",
-    "guided": "Gere cinco desafios numerados sem repetição.",
-    "challenge": "Por que 11 números únicos entre 1 e 10 não podem ser gerados?",
-    "answer": "Porque há apenas 10 valores possíveis; a condição jamais poderá ser satisfeita para o 11º.",
-    "reference": "RCO 8º ano · Aula 54 · EF08CO02/EF08CO04.",
-    "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
-    "fixation": [
-      {
-        "q": "Qual é o conceito central?",
-        "a": "Função que gera um inteiro pseudoaleatório dentro de um intervalo informado."
-      },
-      {
-        "q": "O que você deve fazer antes de executar?",
-        "a": "Prever o resultado e explicar o raciocínio."
-      },
-      {
-        "q": "Como verificar a solução?",
-        "a": "Porque há apenas 10 valores possíveis; a condição jamais poderá ser satisfeita para o 11º."
-      }
-    ],
+    "use": "Aplicações em jogos, organização de materiais, sensores simulados, missões da RAI e atividades de robótica educativa.",
+    "observe": "Antes de executar o programa, registre o que espera ver. Depois compare a saída com sua hipótese e explique qualquer diferença.",
+    "guided": "Explique por que o laço só termina quando a lista tem três números distintos. O que aconteceria se pedíssemos sete números distintos entre 1 e 6? Corrija o desafio antes de executar.",
+    "challenge": "MISSÃO CÓDIGO DE ACESSO — Gere quatro números diferentes de 1 a 9 para abrir uma porta fictícia da missão. Exiba a lista e explique como evitou duplicações. O exemplo é educativo e não serve para senhas reais.",
+    "answer": "import random\ncodigo = random.sample(range(1, 10), 4)\nprint(codigo)\n# random.sample escolhe quatro elementos distintos.\n# Para segurança real, use recursos criptográficos apropriados.",
+    "reference": "RCO 8º ano · Aula 54 · EF08CO02/EF08CO04. · Ampliação pedagógica do Tangram: explicação, previsão, execução e missão.",
+    "teacherTip": "Comece com uma pergunta concreta e solicite uma previsão antes de executar. Explore o editor de código e peça que o estudante explique cada alteração. Para TEA, apresente uma etapa por vez; para baixa visão, descreva os valores e use a lupa; para déficit auditivo, mantenha instruções e resultados visíveis. Avalie raciocínio e justificativa, não rapidez.",
+    "fixation": "1. Identifique a entrada ou os valores iniciais. 2. Preveja a saída do exemplo. 3. Execute e compare. 4. Modifique um valor e justifique a mudança.",
     "visuals": [
       {
         "symbol": "💻",
@@ -1589,6 +1667,32 @@
         "symbol": "▶️",
         "label": "Executar e testar",
         "description": "Executar e testar"
+      }
+    ],
+    "contentBlocks": [
+      {
+        "title": "Aleatoriedade nos jogos",
+        "text": "Missões podem variar quando sorteamos posições, perguntas ou números. Isso torna os desafios menos previsíveis."
+      },
+      {
+        "title": "O que faz randint?",
+        "text": "random.randint(1,6) sorteia um inteiro entre 1 e 6, inclusive. Dois sorteios independentes podem produzir o mesmo número."
+      },
+      {
+        "title": "Como identificar repetição",
+        "text": "O teste numero in lista responde se o valor já aparece. O teste numero not in lista permite adicionar apenas valores novos."
+      },
+      {
+        "title": "Construir uma lista sem duplicatas",
+        "text": "Repita sorteios enquanto len(lista) for menor que a quantidade desejada. Só adicione quando o valor ainda não estiver presente."
+      },
+      {
+        "title": "Atenção aos limites",
+        "text": "Não é possível selecionar sete números diferentes de um conjunto de apenas seis valores. Um laço ingênuo ficaria tentando indefinidamente. random.sample evita essa situação com erro explícito."
+      },
+      {
+        "title": "Missão código fictício",
+        "text": "Gere quatro valores únicos, teste repetidas vezes e explique a diferença entre sorteio didático e geração segura de credenciais."
       }
     ]
   },
