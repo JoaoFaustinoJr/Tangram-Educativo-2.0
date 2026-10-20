@@ -1119,18 +1119,18 @@
     "topic": "Aula 47 · Tipos, booleanos e condicionais",
     "icon": "◆",
     "axis": "Programação",
-    "objective": "Usar bool, type(), comparações e a estrutura básica de if.",
+    "objective": "Compreender como o computador representa informações e toma decisões. Identificar int, float, str e bool; distinguir atribuição de comparação; escrever e testar condicionais if/else em Python; aplicar essas decisões em jogos e sensores.",
     "keyTerm": "condição booleana",
     "keyDefinition": "Expressão avaliada como True ou False.",
-    "concept": "Comparações produzem valores lógicos que podem controlar decisões.",
-    "example": "if tempo < 60: print('Missão rápida')",
+    "concept": "Um programa guarda informações em variáveis. O valor 45 é um inteiro (int); 23.5 é decimal (float); 'Missão rápida' é texto (str). Uma comparação como tempo < 60 devolve True (verdadeiro) ou False (falso): esse resultado é do tipo bool. O comando if verifica essa condição e executa o bloco indentado quando ela é verdadeira; else define a alternativa quando é falsa. O sinal = atribui um valor, enquanto == compara igualdade. O limite importa: 60 < 60 é False, mas 60 <= 60 é True.",
+    "example": "tempo = 45\\nif tempo < 60:\\n    print('Missão rápida!')\\nelse:\\n    print('Continue a missão!')\\nResultado: Missão rápida!, pois 45 < 60 é True. Se tempo = 80, aparece Continue a missão!. Os dois-pontos iniciam o bloco e os quatro espaços antes de print são a indentação exigida pelo Python.",
     "formula": "entender → prever → escrever → executar → explicar",
     "representation": "> < >= <= == !=",
-    "use": "Validação, jogos, sensores e automação.",
-    "observe": "= atribui valor; == testa igualdade.",
-    "guided": "Teste comparações com tempos e pontuações antes de escrever um if.",
-    "challenge": "Como testar se pontuacao é exatamente 100?",
-    "answer": "pontuacao == 100",
+    "use": "Jogos usam condicionais para verificar tempo e pontuação; robôs verificam distância e bateria; sistemas agrícolas comparam leituras de sensores com limites de operação. O algoritmo segue entrada (sensor ou variável) → comparação → decisão → saída (mensagem ou ação).",
+    "observe": "Imagine um jogo em que a RAI precisa terminar uma entrega antes que o tempo acabe. Se restam menos de 60 segundos, o jogo mostra um alerta. No código, tempo = 45 guarda o número; tempo < 60 verifica a condição; print mostra a mensagem. Observe que 60 não é menor que 60. Em um robô, a mesma lógica permite avisar quando bateria < 20; em uma estufa, solicitar irrigação quando a umidade medida está abaixo de um limite definido para o exercício.",
+    "guided": "Primeiro leia o exemplo e explique o significado de cada linha. Antes de executar, preveja a saída com tempo = 45, tempo = 60 e tempo = 80. Depois digite o código no editor e execute. Altere apenas o número da variável e observe qual bloco é executado. Por fim, experimente trocar < por <= e explique o que muda quando o tempo vale exatamente 60.",
+    "challenge": "Missão de programação: um robô deve avisar 'Bateria fraca!' quando bateria < 20. Escreva uma variável bateria = 15 e uma condicional if/else com duas mensagens. Teste também bateria = 20 e bateria = 25. Explique por que a mensagem muda. Desafio extra: qual operador usaria para testar se pontuacao é exatamente 100?",
+    "answer": "Exemplo: bateria = 15; if bateria < 20: print('Bateria fraca!'); else: print('Bateria suficiente!'). Com 15, o alerta aparece; com 20 ou 25, não. Para igualdade, use pontuacao == 100. No editor, coloque cada comando em sua linha e indente os prints.",
     "reference": "RCO 8º ano · Aula 47 · EF08CO04/EF69CO02.",
     "teacherTip": "Faça o estudante prever o resultado antes de executar. O app apresenta o problema e o contexto; o código continua sendo escrito pelo aluno.",
     "fixation": [
@@ -1162,6 +1162,36 @@
         "symbol": "▶️",
         "label": "Executar e testar",
         "description": "Executar e testar"
+      }
+    ],
+    "contentBlocks": [
+      {
+        "title": "1. Situação-problema — por que precisamos de decisões?",
+        "text": "A RAI participa de uma missão de entrega. Quando o cronômetro marca menos de 60 segundos, deve surgir um aviso. Como o computador sabe quando mostrar a mensagem? Ele precisa receber um valor, comparar esse valor com uma regra e decidir qual ação executar. Essa sequência aparece em jogos, robôs, aplicativos e equipamentos automáticos."
+      },
+      {
+        "title": "2. Entenda os tipos de dados",
+        "text": "Variáveis guardam valores. Exemplos: vidas = 3 (int, número inteiro); temperatura = 23.5 (float, número decimal); aviso = 'Atenção' (str, texto); porta_aberta = False (bool, valor lógico). O comando type(vidas) informa o tipo. Atenção: '3' entre aspas é texto, diferente do número 3."
+      },
+      {
+        "title": "3. Comparações e booleanos",
+        "text": "Uma comparação produz True ou False. Operadores: < (menor), > (maior), <= (menor ou igual), >= (maior ou igual), == (igual) e != (diferente). O símbolo = atribui valor e == compara. Exemplo: com tempo = 60, tempo < 60 é False, mas tempo <= 60 é True. O valor exato do limite muda a decisão."
+      },
+      {
+        "title": "4. Como ler e escrever uma condicional",
+        "text": "Escreva tempo = 45. Na linha seguinte: if tempo < 60: . Na terceira linha, com quatro espaços antes: print('Missão rápida!'). Depois escreva else: e, abaixo com quatro espaços: print('Continue a missão!'). Os dois-pontos anunciam um bloco; a indentação mostra quais instruções pertencem a ele. Se a condição for verdadeira, executa o primeiro print; caso contrário, executa o segundo."
+      },
+      {
+        "title": "5. Exemplos resolvidos do cotidiano",
+        "text": "Bateria do robô: bateria = 15; como 15 < 20 é True, aparece 'Recarregar'. Sensor de distância: distancia = 12; como 12 < 15 é True, aparece 'Parar motor'. Irrigação didática: umidade = 25; como 25 < 30 é True, aparece 'Solicitar irrigação'. Os limites são ilustrativos; na prática dependem dos sensores e da aplicação. Nos três casos, mudam os valores e mensagens, mas a lógica é a mesma."
+      },
+      {
+        "title": "6. Preveja, execute e explique",
+        "text": "Antes de digitar, responda: o que aparece para tempo = 45, 60 e 80? Agora reproduza o exemplo no editor de código do Tangram, execute e compare com sua previsão. Mude < para <= e teste novamente com 60. Se aparecer erro, confira os dois-pontos e a indentação. Para avançar, adapte o código para bateria do robô e registre sua explicação."
+      },
+      {
+        "title": "7. Síntese e conexão com missões",
+        "text": "Uma variável armazena informações; a comparação gera um booleano; if/else escolhe a ação. A mesma estrutura permite criar decisões em jogos, sensores e automações. Nas missões do laboratório, procure identificar a entrada, a condição, a decisão e a saída. O objetivo não é apenas copiar código, mas justificar por que o resultado muda."
       }
     ]
   },
