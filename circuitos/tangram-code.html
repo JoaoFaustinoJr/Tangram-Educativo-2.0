@@ -243,7 +243,7 @@ const hubScroll=id=>document.getElementById(id)?.scrollIntoView({behavior:'smoot
 $('hub-arcade').onclick=()=>{ $('rai-hub-message').textContent='🎮 Escolha uma missão abaixo e inicie o jogo.';hubScroll('scenario')};
 $('hub-learn').onclick=()=>{$('rai-hub-message').textContent='🧩 Conheça o jogo, depois explore a jornada de programação.';hubScroll('journey-detail')};
 $('hub-studio').onclick=()=>{$('rai-studio').hidden=false;$('rai-agenda').hidden=true;hubScroll('rai-studio')};
-$('studio-to-code').onclick=()=>{playMode=false;updateMode();hubScroll('editor-layout')};
+/* O antigo botão studio-to-code foi substituído pelo Estúdio com modelos. */
 $('hub-projects').onclick=()=>{$('rai-agenda').hidden=false;$('rai-studio').hidden=true;renderAgenda();hubScroll('rai-agenda')};
 const agendaKey='raiCodeAgendaV1';
 const readAgenda=()=>{try{const a=JSON.parse(localStorage.getItem(agendaKey)||'[]');return Array.isArray(a)?a.filter(e=>e&&typeof e.title==='string').slice(0,150):[]}catch(_){return []}};
@@ -321,7 +321,7 @@ const previousArcadeView=raiSetView;
 raiSetView=function(area){previousArcadeView(area);if(area==='arcade'){arcadeShowWheel()}else{document.body.classList.remove('rai-arcade-playing')}};
 $('rai-wheel-return').onclick=arcadeShowWheel;
 $('rai-spin').onclick=()=>{if(rouletteTimer)return;const buttons=Array.from(document.querySelectorAll('[data-game]'));let count=0;const total=18+Math.floor(Math.random()*10);$('rai-spin').disabled=true;rouletteTimer=setInterval(()=>{rouletteIndex=(rouletteIndex+1)%buttons.length;buttons.forEach((b,i)=>b.setAttribute('aria-selected',String(i===rouletteIndex)));if(soundEnabled)tone(280+count*13,.04,'triangle');if(++count>=total){clearInterval(rouletteTimer);rouletteTimer=null;$('rai-spin').disabled=false;arcadeShowGame(buttons[rouletteIndex].dataset.game)}},95)};
-$('rai-current-area').textContent='🎮 Arcade';
+/* Área ativa é atualizada pela navegação. */
 
 })();
 </script></body></html>
