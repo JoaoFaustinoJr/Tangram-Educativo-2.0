@@ -327,33 +327,37 @@
     "objective": "Criar um protótipo de história interativa com cenário, dois botões, eventos de clique, condição SE / SENÃO e respostas distintas, testando os dois caminhos do algoritmo.",
     "keyTerm": "estrutura condicional",
     "keyDefinition": "Comando que escolhe qual ação executar de acordo com o resultado verdadeiro ou falso de uma condição.",
-    "concept": "Nesta aula, o tema cyberbullying é o contexto de uma tarefa de programação. O programa deve receber uma escolha do usuário, avaliar uma condição e mostrar uma consequência. Cenário é a tela onde a história aparece; ator é o botão ou personagem; evento é o clique que inicia uma ação; variável é um valor armazenado, como escolha; condicional SE / SENÃO decide qual caminho seguir. Não basta criar imagens: cada botão precisa acionar uma instrução e produzir uma resposta verificável. A depuração consiste em testar os dois caminhos, comparar resultado esperado e obtido e corrigir falhas.",
-    "example": "Uma personagem fictícia encontra uma mensagem ofensiva sobre um colega em um grupo. O aplicativo oferece dois botões: 'Apoiar' e 'Repassar'. Ao clicar em Apoiar, a tela mostra 'Ofereça apoio e procure um adulto de confiança'. Ao clicar em Repassar, a tela alerta 'Repassar amplia a exposição: interrompa a circulação'. As duas respostas demonstram como eventos e condições organizam uma narrativa interativa sem expor situações reais da turma.",
+    "concept": "Uma história interativa é um programa no qual o usuário modifica o percurso da narrativa por meio de escolhas. Para construí-la, usamos: (1) cenário, que é a tela de conversa; (2) atores, como personagens e botões; (3) eventos, como clicar ou tocar; (4) variável, que guarda uma informação; (5) condição SE / SENÃO, que seleciona um caminho; e (6) saída, que mostra uma mensagem. Quando o usuário clica em 'Ajudar', o evento atribui o texto 'Ajudar' à variável escolha. O programa compara esse valor com uma condição. Se a comparação for verdadeira, mostra uma mensagem de apoio; caso contrário, mostra uma orientação para interromper o compartilhamento ofensivo. O computador não decide sozinho o que é adequado: o programador escreve as regras e as consequências. Programar envolve planejar, representar essas regras, executar, observar e corrigir erros.",
+    "example": "História fictícia: uma mensagem humilhante circula em um grupo. A tela apresenta os botões 'Ajudar' e 'Repassar'. Ao clicar em 'Ajudar', aparece 'Converse com a pessoa e procure um adulto de confiança'. Ao clicar em 'Repassar', aparece 'Compartilhar amplia a exposição; não encaminhe'. O clique é um EVENTO; a palavra armazenada em escolha é o VALOR de uma VARIÁVEL; a comparação escolha === 'Ajudar' é uma CONDIÇÃO; e a mensagem mostrada é a SAÍDA. Teste as duas opções para comprovar que cada evento leva à consequência correta.",
     "formula": "🎬 cenário → 🖱️ clique (evento) → 🧠 SE / SENÃO → 💬 mensagem → 🧪 testar",
-    "representation": "INÍCIO → mostrar mensagem → aguardar clique → SE escolha = 'Apoiar' ENTÃO mostrar apoio; SENÃO mostrar alerta → FIM.",
+    "representation": "PSEUDOCÓDIGO:\nINÍCIO\n  mostrar cenário e botões\n  QUANDO clicar em um botão:\n    escolha ← nome do botão\n    SE escolha = 'Ajudar' ENTÃO\n      mostrar 'Ofereça apoio e procure ajuda'\n    SENÃO\n      mostrar 'Não repasse: interrompa a circulação'\n    FIM SE\nFIM\n\nJAVASCRIPT DIDÁTICO:\nlet escolha = 'Ajudar';\nif (escolha === 'Ajudar') {\n  console.log('Ofereça apoio e procure ajuda');\n} else {\n  console.log('Não repasse: interrompa a circulação');\n}\n\nA comparação === verifica igualdade de valor e tipo; console.log mostra o resultado no console. Em um aplicativo com interface, a mensagem pode ser exibida na própria tela.",
     "use": "Aplicativos educativos, jogos narrativos, menus, quizzes, simuladores de escolhas, formulários e interfaces de robótica.",
-    "observe": "Um botão visual não é, por si só, um programa. Ele se torna interativo quando um evento executa instruções. Teste sempre o caminho verdadeiro e o caminho falso. Use situações fictícias, sem nomes ou relatos reais dos estudantes.",
-    "guided": "1) Desenhe uma tela de conversa fictícia. 2) Identifique o cenário e os dois atores-botões. 3) Crie a variável 'escolha'. 4) Associe cada clique a um valor. 5) Escreva a condição SE escolha = 'Apoiar' / SENÃO. 6) Programe mensagens diferentes. 7) Execute ambos os botões, anote os resultados e corrija eventuais erros. Se houver acesso ao StartLab, represente a história com cenários, atores e fantasias; em outra plataforma, use botões e mensagens equivalentes.",
+    "observe": "Não confunda desenho com funcionamento: um botão desenhado só se torna interativo quando recebe um evento programado. Uma variável guarda um valor; a condição compara esse valor; SE e SENÃO escolhem caminhos; a saída apresenta o resultado. Testar somente o botão 'Ajudar' não prova que o outro caminho funciona. Use situações fictícias, sem nomes reais ou mensagens de colegas.",
+    "guided": "ETAPA 1 — PLANEJAR: desenhe a tela fictícia, os dois botões e as duas mensagens finais. ETAPA 2 — IDENTIFICAR: circule o cenário, sublinhe os atores e marque o clique como evento. ETAPA 3 — GUARDAR: crie a variável escolha, que recebe o texto do botão clicado. ETAPA 4 — DECIDIR: monte a estrutura SE escolha = 'Ajudar' / SENÃO e associe uma mensagem a cada ramo. ETAPA 5 — EXECUTAR: clique no primeiro botão e compare a mensagem exibida com a esperada. ETAPA 6 — DEPURAR: clique no segundo botão; se aparecer a mesma resposta, verifique o evento, o valor de escolha e a condição. ETAPA 7 — MELHORAR: altere uma mensagem ou acrescente outra decisão. A RAI pode perguntar: 'Qual evento iniciou o algoritmo? Qual condição foi verdadeira? O que mudou depois do seu teste?'",
     "challenge": "Missão: crie uma história com 1 cenário, 2 botões, 1 estrutura SE / SENÃO e 2 consequências diferentes. Desafio extra: acrescente uma terceira decisão sobre pedir ajuda. Explique qual evento inicia cada caminho e demonstre dois testes.",
     "answer": "O clique em um botão dispara um evento. A variável escolha registra a opção. A condição compara seu valor e executa o bloco SE quando verdadeira ou o SENÃO quando falsa. Cada caminho exibe uma consequência distinta. O projeto está correto quando os dois botões produzem os resultados planejados nos testes.",
     "reference": "Material enviado pelo professor: 'Cyberbullying: questionando comportamentos para promover empatia — Contando uma história', aula 52, StartLab/StartZap; BNCC Computação; Referencial Curricular do Paraná.",
-    "teacherTip": "Aula de 50 minutos: 5 min para identificar atores e cenário; 10 min para desenhar fluxograma; 20 min para programar; 10 min para testar ambos os caminhos; 5 min para explicar a lógica. Priorize programação sobre a discussão temática. Para TEA e estudantes com baixa visão, trabalhe um bloco por vez, amplie textos e ofereça cartões de fluxograma. Avalie eventos, condição, resultado e depuração.",
+    "teacherTip": "Duração sugerida: 50 minutos. 5 min: apresentar uma história com duas opções e identificar entrada/saída; 10 min: construir fluxograma; 20 min: programar evento, variável e SE / SENÃO; 10 min: testar ambos os ramos, registrar erro e correção; 5 min: explicar oralmente o algoritmo. Questões diagnósticas: 'O que faz o programa começar?', 'Qual valor fica na variável?', 'Quando o SENÃO é executado?', 'Como sabemos que os dois caminhos funcionam?'. Avaliação: o aluno identifica cenário e atores, programa dois eventos, usa uma condição e explica os testes. Inclusão: oferecer um bloco de cada vez, fonte ampliada, botões grandes, apoio visual e leitura orientada. Priorizar conceitos de programação, usando o cyberbullying apenas como contexto ético.",
     "fixation": [
       {
-        "q": "Qual comando é executado quando o usuário toca em um botão?",
-        "a": "Um evento de clique inicia a sequência de instruções associada ao botão."
+        "q": "Um botão foi desenhado na tela, mas nada acontece quando clicamos. O que falta?",
+        "a": "Associar ao botão um evento de clique e as instruções que devem ser executadas."
       },
       {
-        "q": "Qual é a diferença entre SE e SENÃO?",
-        "a": "SE executa um caminho quando a condição é verdadeira; SENÃO executa o outro quando é falsa."
+        "q": "Para que serve a variável escolha?",
+        "a": "Para guardar qual opção foi selecionada e permitir que o programa compare seu valor."
+      },
+      {
+        "q": "Quando o bloco SENÃO será executado?",
+        "a": "Quando a condição do SE for falsa, por exemplo, quando escolha não for 'Ajudar'."
+      },
+      {
+        "q": "Qual a diferença entre condição e resultado?",
+        "a": "Condição é o teste lógico que escolhe o caminho; resultado é a ação ou mensagem executada naquele caminho."
       },
       {
         "q": "Por que testar os dois botões?",
-        "a": "Porque cada opção representa um caminho do programa, e ambos precisam produzir as consequências previstas."
-      },
-      {
-        "q": "Como modificar o resultado de uma escolha?",
-        "a": "Alterando a instrução ou mensagem dentro do ramo correspondente da condição e testando novamente."
+        "a": "Porque cada botão aciona um caminho e ambos devem apresentar as respostas esperadas."
       }
     ],
     "visuals": [
