@@ -318,6 +318,68 @@
     ]
   },
   {
+    "year": 7,
+    "section": "prog",
+    "id": "pr7-historia-interativa-decisoes",
+    "topic": "🎭 Programando decisões: história interativa",
+    "icon": "🎭",
+    "axis": "Programação • Eventos • Condicionais • Cidadania digital",
+    "objective": "Criar um protótipo de história interativa com cenário, dois botões, eventos de clique, condição SE / SENÃO e respostas distintas, testando os dois caminhos do algoritmo.",
+    "keyTerm": "estrutura condicional",
+    "keyDefinition": "Comando que escolhe qual ação executar de acordo com o resultado verdadeiro ou falso de uma condição.",
+    "concept": "Nesta aula, o tema cyberbullying é o contexto de uma tarefa de programação. O programa deve receber uma escolha do usuário, avaliar uma condição e mostrar uma consequência. Cenário é a tela onde a história aparece; ator é o botão ou personagem; evento é o clique que inicia uma ação; variável é um valor armazenado, como escolha; condicional SE / SENÃO decide qual caminho seguir. Não basta criar imagens: cada botão precisa acionar uma instrução e produzir uma resposta verificável. A depuração consiste em testar os dois caminhos, comparar resultado esperado e obtido e corrigir falhas.",
+    "example": "Uma personagem fictícia encontra uma mensagem ofensiva sobre um colega em um grupo. O aplicativo oferece dois botões: 'Apoiar' e 'Repassar'. Ao clicar em Apoiar, a tela mostra 'Ofereça apoio e procure um adulto de confiança'. Ao clicar em Repassar, a tela alerta 'Repassar amplia a exposição: interrompa a circulação'. As duas respostas demonstram como eventos e condições organizam uma narrativa interativa sem expor situações reais da turma.",
+    "formula": "🎬 cenário → 🖱️ clique (evento) → 🧠 SE / SENÃO → 💬 mensagem → 🧪 testar",
+    "representation": "INÍCIO → mostrar mensagem → aguardar clique → SE escolha = 'Apoiar' ENTÃO mostrar apoio; SENÃO mostrar alerta → FIM.",
+    "use": "Aplicativos educativos, jogos narrativos, menus, quizzes, simuladores de escolhas, formulários e interfaces de robótica.",
+    "observe": "Um botão visual não é, por si só, um programa. Ele se torna interativo quando um evento executa instruções. Teste sempre o caminho verdadeiro e o caminho falso. Use situações fictícias, sem nomes ou relatos reais dos estudantes.",
+    "guided": "1) Desenhe uma tela de conversa fictícia. 2) Identifique o cenário e os dois atores-botões. 3) Crie a variável 'escolha'. 4) Associe cada clique a um valor. 5) Escreva a condição SE escolha = 'Apoiar' / SENÃO. 6) Programe mensagens diferentes. 7) Execute ambos os botões, anote os resultados e corrija eventuais erros. Se houver acesso ao StartLab, represente a história com cenários, atores e fantasias; em outra plataforma, use botões e mensagens equivalentes.",
+    "challenge": "Missão: crie uma história com 1 cenário, 2 botões, 1 estrutura SE / SENÃO e 2 consequências diferentes. Desafio extra: acrescente uma terceira decisão sobre pedir ajuda. Explique qual evento inicia cada caminho e demonstre dois testes.",
+    "answer": "O clique em um botão dispara um evento. A variável escolha registra a opção. A condição compara seu valor e executa o bloco SE quando verdadeira ou o SENÃO quando falsa. Cada caminho exibe uma consequência distinta. O projeto está correto quando os dois botões produzem os resultados planejados nos testes.",
+    "reference": "Material enviado pelo professor: 'Cyberbullying: questionando comportamentos para promover empatia — Contando uma história', aula 52, StartLab/StartZap; BNCC Computação; Referencial Curricular do Paraná.",
+    "teacherTip": "Aula de 50 minutos: 5 min para identificar atores e cenário; 10 min para desenhar fluxograma; 20 min para programar; 10 min para testar ambos os caminhos; 5 min para explicar a lógica. Priorize programação sobre a discussão temática. Para TEA e estudantes com baixa visão, trabalhe um bloco por vez, amplie textos e ofereça cartões de fluxograma. Avalie eventos, condição, resultado e depuração.",
+    "fixation": [
+      {
+        "q": "Qual comando é executado quando o usuário toca em um botão?",
+        "a": "Um evento de clique inicia a sequência de instruções associada ao botão."
+      },
+      {
+        "q": "Qual é a diferença entre SE e SENÃO?",
+        "a": "SE executa um caminho quando a condição é verdadeira; SENÃO executa o outro quando é falsa."
+      },
+      {
+        "q": "Por que testar os dois botões?",
+        "a": "Porque cada opção representa um caminho do programa, e ambos precisam produzir as consequências previstas."
+      },
+      {
+        "q": "Como modificar o resultado de uma escolha?",
+        "a": "Alterando a instrução ou mensagem dentro do ramo correspondente da condição e testando novamente."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "🎬",
+        "label": "Cenário",
+        "description": "Tela fictícia de mensagens onde a história aparece"
+      },
+      {
+        "symbol": "🖱️",
+        "label": "Evento",
+        "description": "Clique no botão inicia a ação"
+      },
+      {
+        "symbol": "🔀",
+        "label": "SE / SENÃO",
+        "description": "Condição seleciona um dos caminhos"
+      },
+      {
+        "symbol": "🧪",
+        "label": "Teste",
+        "description": "Verificar os dois resultados e corrigir falhas"
+      }
+    ]
+  },
+  {
     "year": 8,
     "section": "prog",
     "id": "pr8-intro-programacao",
