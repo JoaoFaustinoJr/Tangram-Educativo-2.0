@@ -1363,29 +1363,33 @@
     "objective": "Criar listas em Python, localizar itens com índices positivos e negativos e selecionar subconjuntos por fatiamento; aplicar essas operações em um cardápio.",
     "keyTerm": "Lista e slicing",
     "keyDefinition": "Lista é uma sequência ordenada e mutável de elementos. Slicing seleciona parte dessa sequência usando [início:fim:passo], sem incluir o índice fim.",
-    "concept": "Uma lista reúne vários valores em uma variável. Por exemplo, nomes = ['Marcelo', 'Jaspe', 'Sakura', 'Naruto', 'Itachi']. O primeiro elemento tem índice 0, o segundo índice 1 e assim por diante. nomes[0] devolve 'Marcelo'; nomes[-1] devolve 'Itachi'. Para obter vários elementos, usamos nomes[início:fim:passo]: início indica de onde partir, fim é o limite EXCLUSIVO e passo define de quantos em quantos itens avançar. Assim, nomes[1:4] retorna Jaspe, Sakura e Naruto; nomes[::2] retorna Marcelo, Sakura e Itachi. Índices de acesso isolado fora do intervalo geram IndexError, mas o fatiamento aceita limites além do tamanho e retorna apenas os elementos existentes.",
-    "example": "Execute mentalmente:\nnomes = ['Marcelo', 'Jaspe', 'Sakura', 'Naruto', 'Itachi']\nprint(nomes[0])  # Marcelo\nprint(nomes[-2]) # Naruto\nprint(nomes[1:4]) # ['Jaspe', 'Sakura', 'Naruto']\nprint(nomes[::2]) # ['Marcelo', 'Sakura', 'Itachi']",
+    "concept": "Uma lista reúne vários valores em uma variável. Por exemplo, nomes = ['Marcelo', 'Jaspe', 'Sakura', 'Naruto', 'Itachi']. O primeiro elemento tem índice 0, o segundo índice 1 e assim por diante. nomes[0] devolve 'Marcelo'; nomes[-1] devolve 'Itachi'. Para obter vários elementos, usamos nomes[início:fim:passo]: início indica de onde partir, fim é o limite EXCLUSIVO e passo define de quantos em quantos itens avançar. Assim, nomes[1:4] retorna Jaspe, Sakura e Naruto; nomes[::2] retorna Marcelo, Sakura e Itachi. Índices de acesso isolado fora do intervalo geram IndexError, mas o fatiamento aceita limites além do tamanho e retorna apenas os elementos existentes. IMPORTANTE: o número -1 não é o nome ou o valor do personagem; é uma maneira de indicar a posição do último elemento. O Python permite localizar itens de duas direções: índices não negativos começam em 0 na esquerda; índices negativos começam em -1 na direita. Em uma lista de cinco nomes, Itachi ocupa simultaneamente os índices 4 e -1, pois ambos apontam para o mesmo elemento. O índice negativo é especialmente útil quando não sabemos quantos itens há na lista. Uma lista vazia não tem último elemento, portanto nomes[-1] causaria IndexError se ela estivesse vazia.",
+    "example": "nomes = ['Marcelo', 'Jaspe', 'Sakura', 'Naruto', 'Itachi']\nprint(nomes[0])   # Marcelo: primeiro pela esquerda\nprint(nomes[4])   # Itachi: quinto pela esquerda\nprint(nomes[-1])  # Itachi: primeiro pela direita\nprint(nomes[-2])  # Naruto: segundo pela direita\nprint(nomes[1:4]) # ['Jaspe', 'Sakura', 'Naruto']\nprint(nomes[-2:]) # ['Naruto', 'Itachi']\nprint(nomes[::2]) # ['Marcelo', 'Sakura', 'Itachi']",
     "formula": "lista[início:fim:passo] · o índice fim não entra no resultado",
     "representation": "Índices: 0 | 1 | 2 | 3 | 4\nItens: Marcelo | Jaspe | Sakura | Naruto | Itachi\nNegativos: -5 | -4 | -3 | -2 | -1",
     "use": "Cardápios digitais, organização de dados de sensores, listas de materiais de robótica, presença e resultados de experimentos.",
-    "observe": "Os colchetes [ ] criam e acessam listas. A contagem começa em zero; a posição final do fatiamento é exclusiva. Uma lista pode misturar tipos, como [10, 'Marcelo', True], embora listas homogêneas sejam mais simples para começar.",
-    "guided": "ETAPA 1 — Crie uma lista com cinco componentes de robótica: ['LED', 'resistor', 'sensor', 'motor', 'Arduino']. Identifique os índices 0 a 4. ETAPA 2 — Preveja a saída de pecas[2], pecas[-1] e pecas[1:4]. ETAPA 3 — Execute ou confira cada previsão. ETAPA 4 — Explique por que pecas[1:4] não inclui o item de índice 4.",
+    "observe": "Os colchetes [ ] criam e acessam listas. A contagem começa em zero; a posição final do fatiamento é exclusiva. Uma lista pode misturar tipos, como [10, 'Marcelo', True], embora listas homogêneas sejam mais simples para começar. O índice -1 NÃO significa que Itachi tenha número negativo; significa 'primeiro a partir do fim'. Em uma lista com cinco elementos, os índices 4 e -1 apontam para o mesmo item. Se a lista estiver vazia, acessar [-1] gera IndexError.",
+    "guided": "ETAPA 1 — Escreva nomes = ['Marcelo', 'Jaspe', 'Sakura', 'Naruto', 'Itachi'] em cinco cartões. ETAPA 2 — Acima dos cartões escreva 0, 1, 2, 3, 4 da esquerda para a direita; abaixo escreva -5, -4, -3, -2, -1. ETAPA 3 — Peça que localizem Itachi pelos índices 4 e -1 e expliquem por que ambos funcionam. ETAPA 4 — Compare nomes[-2] com nomes[3]. ETAPA 5 — Explique a diferença entre acessar um elemento e fatiar uma lista: nomes[-2:] seleciona os dois últimos. ETAPA 6 — Aplique o mesmo raciocínio a pecas = ['LED', 'resistor', 'sensor', 'motor', 'Arduino'] e preveja pecas[2], pecas[-1], pecas[1:4]. ETAPA 7 — Execute, compare e corrija as previsões.",
     "challenge": "MISSÃO CANTINA DIGITAL — Monte a lista itens = ['pizza', 'suco', 'bolo', 'refrigerante', 'salgado', 'água', 'hambúrguer', 'café']. Sem digitar os produtos novamente, crie as listas comidas e bebidas usando slicing e imprima as três listas. Desafio extra: o que mudaria se os produtos não estivessem alternados?",
     "answer": "itens = ['pizza', 'suco', 'bolo', 'refrigerante', 'salgado', 'água', 'hambúrguer', 'café']\ncomidas = itens[::2]\nbebidas = itens[1::2]\nprint('Cardápio completo:', itens)\nprint('Comidas:', comidas)\nprint('Bebidas:', bebidas)\n# O fatiamento por passo 2 funciona porque as categorias alternam. Se a ordem mudar, é preciso outra estratégia, como filtrar por categoria.",
     "reference": "SEED-PR / Plataforma Start, Aula 5 — Lógica de programação: fundamentos e desafios em Python — Navegando em listas. Material fornecido pelo professor via Google Drive.",
-    "teacherTip": "Antes de executar, solicite hipóteses sobre cada saída. Use cartões numerados para representar a lista; no modo TEA, apresente um índice por vez. No modo deficiência visual, verbalize posição e item. No modo déficit auditivo, mantenha o índice e o resultado escritos. Avalie explicação e correção da lógica, não velocidade.",
+    "teacherTip": "Antes de executar, solicite hipóteses sobre cada saída. Use cartões numerados para representar a lista; no modo TEA, apresente um índice por vez. No modo deficiência visual, verbalize posição e item. No modo déficit auditivo, mantenha o índice e o resultado escritos. Avalie explicação e correção da lógica, não velocidade. Use a pergunta provocadora 'Itachi é menos um?' e responda 'Não: -1 é o endereço contado a partir do fim, não o valor da pessoa'. Desenhe duas linhas de índices sobre e sob os mesmos cartões; mostre que 4 e -1 apontam para o mesmo nome. Só depois apresente o fatiamento e a regra de fim exclusivo. Não confunda índice negativo com números negativos armazenados na lista.",
     "fixation": [
       {
-        "q": "Qual é o conceito central?",
-        "a": "Posição usada para acessar um elemento de uma sequência."
+        "q": "Itachi vale -1 em Python? Por quê?",
+        "a": "Não. -1 é o índice do último elemento contado a partir do fim; Itachi também pode ser acessado pelo índice 4 nessa lista de cinco itens."
       },
       {
-        "q": "O que você deve fazer antes de executar?",
-        "a": "Prever o resultado e explicar o raciocínio."
+        "q": "Qual é a diferença entre nomes[-1] e nomes[-2:]?",
+        "a": "nomes[-1] devolve somente o último elemento; nomes[-2:] devolve uma lista com os dois últimos elementos."
       },
       {
-        "q": "Como verificar a solução?",
-        "a": "lista[:3]"
+        "q": "Por que nomes[1:4] não inclui Itachi?",
+        "a": "Porque o limite final 4 é exclusivo: seleciona os índices 1, 2 e 3."
+      },
+      {
+        "q": "Qual o resultado de nomes[::2]?",
+        "a": "['Marcelo', 'Sakura', 'Itachi'], pois começa no índice 0 e avança de dois em dois."
       }
     ],
     "visuals": [
@@ -1417,6 +1421,14 @@
       {
         "title": "3 · Contar de trás para frente",
         "text": "Índices negativos partem do fim: nomes[-1] é Itachi; nomes[-2] é Naruto. Compare com o último e o penúltimo lugares de uma fila."
+      },
+      {
+        "title": "3A · Por que Itachi é -1? Duas direções, uma posição",
+        "text": "Observe cinco nomes: ['Marcelo', 'Jaspe', 'Sakura', 'Naruto', 'Itachi']. Contando do início, os índices são 0 | 1 | 2 | 3 | 4. Contando do fim, os índices são -5 | -4 | -3 | -2 | -1. Itachi é nomes[4] e também nomes[-1]. Ele NÃO 'vale -1': o número é apenas o endereço do último elemento quando contamos da direita para a esquerda. Naruto é nomes[3] ou nomes[-2]. Analogia: numa fila, alguém pode ser o quinto a partir da frente e o primeiro a partir de trás. Isso facilita acessar o último item sem saber o tamanho da lista."
+      },
+      {
+        "title": "3B · Compare acesso e fatiamento com índices negativos",
+        "text": "Acesso isolado: nomes[-1] devolve 'Itachi' (um elemento). Fatiamento: nomes[-2:] devolve ['Naruto', 'Itachi'] (uma nova lista com os dois últimos). Em nomes[1:4], o início 1 entra, mas o fim 4 não entra. Em nomes[::2], o passo 2 seleciona posições 0, 2 e 4. Exercício: antes de executar, preveja nomes[-3], nomes[-3:] e nomes[1:5:2]. Depois confira e explique a diferença."
       },
       {
         "title": "4 · Fatiar a sequência",
