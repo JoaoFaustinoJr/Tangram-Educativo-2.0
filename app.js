@@ -423,6 +423,7 @@ function lessonTrackSummary(items){
 function refreshLessonProgress(details){
  if(!details)return;const id=details.dataset.lessonId||'',old=details.querySelector('.lesson-progress');if(!old)return;old.outerHTML=lessonProgressHTML(id,!!details.querySelector('.lesson-practice,.code-lab'),!!details.querySelector('[data-maker-path]'));refreshLessonTrackSummary();
 }
+window.tangramRefreshLessonProgress=function(){document.querySelectorAll('#lessons-panel [data-lesson-id]').forEach(el=>refreshLessonProgress(el));};
 function refreshLessonTrackSummary(){const m=document.querySelector('#lessons-panel'),box=m?.querySelector('.lesson-track-summary');if(!m||!box)return;const items=(lessonSection==='lab'?labIntegratedLessons:(lessonSection==='hanoi'||lessonSection==='tangram')?[]:(lessonBanks?.[lessonSection]||[])).filter(x=>{const sourceSection=String(x.section||'').toLowerCase();const sectionOk=lessonSection==='lab'?true:lessonSection==='history'?sourceSection==='history':lessonSection==='prog'?sourceSection!=='history':true;return sectionOk&&(!x.year||Number(x.year)===lessonYear)});box.outerHTML=lessonTrackSummary(items)}
 
 function lessonPractice(item){
