@@ -19,6 +19,9 @@ function update(){
  const panel=document.getElementById('lessons-panel');if(!panel||!panel.classList.contains('show'))return;
  const year=Number(panel.querySelector('.lesson-years button.on')?.dataset.y||6);
  const lib=panel.querySelector('.lesson-library');if(!lib)return;
+ let agro=panel.querySelector('#lesson-agro-1a');
+ if(!agro){agro=document.createElement('section');agro.id='lesson-agro-1a';agro.setAttribute('aria-label','Aulas de Química do 1º A Agronegócio');agro.style.cssText='padding:17px;margin:14px 0;border:2px solid #4ec8dd;border-radius:17px;background:linear-gradient(120deg,#102c44,#174348);color:#f1fcff';agro.innerHTML='<strong style="color:#ffe1a0;font-size:1.1rem">🌾 Ensino Médio · Química · 1º A Agronegócio</strong><p style="margin:8px 0">Estequiometria: explicações passo a passo, calcário, amônia, fertilizantes e exercícios resolvidos.</p><a href="aulas/1ano/estequiometria-agronegocio.html" style="display:inline-block;padding:10px 16px;background:#2472b9;border-radius:11px;color:white;font-weight:800;text-decoration:none">Abrir aula de Estequiometria ↗</a>';lib.before(agro)}
+
  const subject=panel.querySelector('.lesson-sections button.on')?.dataset.s||'';const key=year+':'+subject;
  let section=panel.querySelector('#integrated-tracks');
  if(!['hanoi','tangram'].includes(subject)){section?.remove();last='';return}if(!section){section=document.createElement('section');section.id='integrated-tracks';section.className='integrated-tracks';lib.before(section)}
