@@ -1004,5 +1004,66 @@
         "description": "Executar e testar"
       }
     ]
+  },
+  {
+    "id": "md9-metadados-protocolos",
+    "year": 9,
+    "grade": 9,
+    "section": "digital",
+    "icon": "🔐",
+    "axis": "Educação Digital • Segurança, redes e protocolos",
+    "topic": "Metadados e transmissão de dados: a fotografia e os protocolos",
+    "objective": "Investigar metadados de arquivos, reconhecer riscos de exposição de localização e explicar a transmissão de pacotes e protocolos da Internet.",
+    "concept": "Metadados descrevem outros dados: fotografias podem registrar data, câmera e eventualmente coordenadas GPS no padrão EXIF. A Internet transmite dados por pacotes, usando protocolos complementares. Nem toda foto possui GPS, e aplicativos podem remover metadados.",
+    "example": "Em Makiivka, na virada de 2022 para 2023, forças ucranianas atingiram um alojamento russo. Autoridades russas apontaram o uso de celulares como fator de exposição, mas não há comprovação de que uma única fotografia com GPS tenha causado o ataque. O caso permite discutir segurança digital e checagem de fontes.",
+    "formula": "Arquivo + metadados → pacotes → rede → servidor → destinatário",
+    "representation": "📷 EXIF → 📱 celular → 📶 rede → 🌐 IP/roteadores → 🖥️ servidor → 📲 destino",
+    "use": "Segurança e privacidade ao compartilhar fotografias; compreensão de redes, DNS, TCP, UDP, HTTP e HTTPS.",
+    "observe": "IP endereça e encaminha pacotes; TCP oferece entrega confiável e ordenada; UDP não garante entrega; DNS resolve domínios; HTTP estrutura a Web; HTTPS protege a comunicação via TLS. HTTP/3 usa QUIC sobre UDP.",
+    "guided": "Abra os detalhes de uma fotografia própria de um objeto sem pessoas. Identifique data, resolução, modelo e possível localização. Não publique coordenadas pessoais ou da escola. Compare o arquivo original com uma cópia compartilhada e observe diferenças.",
+    "challenge": "Uma fotografia pode revelar a localização sem mostrar uma placa? Como os pacotes chegam ao destino e por que HTTPS é mais seguro que HTTP? Acesse a simulação interativa pelo link da aula.",
+    "answer": "Sim, quando há metadados GPS ou pistas visuais; nem sempre isso ocorre. Os roteadores encaminham pacotes por IP; TCP ou QUIC/UDP participam do transporte e HTTPS protege o conteúdo com TLS.",
+    "reference": "Conceitos de EXIF, IP, TCP, UDP, DNS, HTTP, HTTPS e TLS; análise crítica de relatos sobre o ataque a Makiivka (2023).",
+    "teacherTip": "Duas aulas de 50 minutos. Diferencie fatos comprovados de hipóteses sobre o episódio militar. Simulador e avaliação: aula-metadados-9ano.html (acesso também pela página inicial).",
+    "fixation": [
+      {
+        "q": "O que são metadados?",
+        "a": "Informações que descrevem outros dados, como data, formato e eventualmente GPS."
+      },
+      {
+        "q": "Uma fotografia sempre contém GPS?",
+        "a": "Não. Depende das configurações e do tratamento do arquivo."
+      },
+      {
+        "q": "O que o IP faz?",
+        "a": "Endereça e encaminha pacotes entre redes."
+      },
+      {
+        "q": "Qual é a diferença entre HTTP e HTTPS?",
+        "a": "HTTPS protege a comunicação HTTP com TLS."
+      }
+    ],
+    "visuals": [
+      {
+        "symbol": "📷",
+        "label": "Metadados",
+        "description": "EXIF: data, câmera, GPS opcional"
+      },
+      {
+        "symbol": "📦",
+        "label": "Pacotes",
+        "description": "Dados divididos e transmitidos pela rede"
+      },
+      {
+        "symbol": "🌐",
+        "label": "Protocolos",
+        "description": "IP, TCP, UDP, DNS, HTTP e HTTPS"
+      },
+      {
+        "symbol": "🛡️",
+        "label": "Privacidade",
+        "description": "Cuidado com informações e localização"
+      }
+    ]
   }
 ]
