@@ -29,6 +29,11 @@ function update(){
  if(year===9 && selectedSubject==='digital'){
   if(!seLiga){seLiga=document.createElement('section');seLiga.id='lesson-se-liga-9';seLiga.style.cssText='padding:20px;margin:14px 0;border:2px solid #e6bd64;border-radius:17px;background:#143348;color:#f1fcff';seLiga.innerHTML='<h3 style="color:#ffe1a0">Se Liga · Revisão do ano · 9º ano</h3><p>Educação Digital: 17 tópicos resumidos, Python, robótica, redes, metadados, segurança e planilhas. Pratique com 12 questões comentadas e 4 atividades abertas.</p><a href="aulas/9ano/se-liga-revisao.html" style="display:inline-block;padding:12px 18px;background:#e6bd64;color:#13253a;border-radius:10px;font-weight:800">Abrir revisão e exercícios</a>';lib.before(seLiga)}
  }else seLiga?.remove();
+ let seLiga6=panel.querySelector('#lesson-se-liga-6');
+ const selectedSubject6=panel.querySelector('.lesson-sections button.on')?.dataset.s;
+ if(year===6 && selectedSubject6==='digital'){
+  if(!seLiga6){seLiga6=document.createElement('section');seLiga6.id='lesson-se-liga-6';seLiga6.style.cssText='padding:20px;margin:14px 0;border:2px solid #e6bd64;border-radius:17px;background:#143348;color:#f1fcff';seLiga6.innerHTML='<h3 style="color:#ffe1a0">Se Liga · Revisão do ano · 6º ano</h3><p>Educação Digital: 17 tópicos resumidos, decomposição, algoritmos, blocos, internet, segurança e robótica. Pratique com 12 questões comentadas e 4 atividades abertas.</p><a href="aulas/6ano/se-liga-revisao.html" style="display:inline-block;padding:12px 18px;background:#e6bd64;color:#13253a;border-radius:10px;font-weight:800">Abrir revisão e exercícios</a>';lib.before(seLiga6)}
+ }else seLiga6?.remove();
  const subject=panel.querySelector('.lesson-sections button.on')?.dataset.s||'';const key=year+':'+subject;
  let section=panel.querySelector('#integrated-tracks');
  if(!['hanoi','tangram'].includes(subject)){section?.remove();last='';return}if(!section){section=document.createElement('section');section.id='integrated-tracks';section.className='integrated-tracks';lib.before(section)}
