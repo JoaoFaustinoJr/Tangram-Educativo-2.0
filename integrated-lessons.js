@@ -24,6 +24,11 @@ function update(){
 
  let dataLesson=panel.querySelector('#lesson-data-6');
  if(year===6){if(!dataLesson){dataLesson=document.createElement('section');dataLesson.id='lesson-data-6';dataLesson.style.cssText='padding:17px;margin:14px 0;border:2px solid #e6bd64;border-radius:17px;background:linear-gradient(120deg,#102c44,#24485d);color:#f1fcff';dataLesson.innerHTML='<strong style="color:#ffe1a0;font-size:1.1rem">🌐 Cultura Digital · 6º ano</strong><p style="margin:8px 0">Armazenamento e transmissão de dados: a viagem dos pacotes, HTTP, HTTPS, DNS, servidores e nuvem. Simulação interativa e avaliação.</p><a href="aulas/6ano/armazenamento-transmissao-dados.html" style="display:inline-block;padding:10px 16px;background:#e6bd64;border-radius:11px;color:#13253a;font-weight:800;text-decoration:none">Abrir aula interativa ↗</a>';lib.before(dataLesson)}}else dataLesson?.remove();
+ let seLiga=panel.querySelector('#lesson-se-liga-9');
+ const selectedSubject=panel.querySelector('.lesson-sections button.on')?.dataset.s;
+ if(year===9 && selectedSubject==='digital'){
+  if(!seLiga){seLiga=document.createElement('section');seLiga.id='lesson-se-liga-9';seLiga.style.cssText='padding:20px;margin:14px 0;border:2px solid #e6bd64;border-radius:17px;background:#143348;color:#f1fcff';seLiga.innerHTML='<h3 style="color:#ffe1a0">Se Liga · Revisão do ano · 9º ano</h3><p>Educação Digital: 17 tópicos resumidos, Python, robótica, redes, metadados, segurança e planilhas. Pratique com 12 questões comentadas e 4 atividades abertas.</p><a href="aulas/9ano/se-liga-revisao.html" style="display:inline-block;padding:12px 18px;background:#e6bd64;color:#13253a;border-radius:10px;font-weight:800">Abrir revisão e exercícios</a>';lib.before(seLiga)}
+ }else seLiga?.remove();
  const subject=panel.querySelector('.lesson-sections button.on')?.dataset.s||'';const key=year+':'+subject;
  let section=panel.querySelector('#integrated-tracks');
  if(!['hanoi','tangram'].includes(subject)){section?.remove();last='';return}if(!section){section=document.createElement('section');section.id='integrated-tracks';section.className='integrated-tracks';lib.before(section)}
