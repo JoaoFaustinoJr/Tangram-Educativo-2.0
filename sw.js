@@ -1,5 +1,7 @@
-const CACHE='tangram2-se-liga-20261123-v2';
+const CACHE='tangram2-se-liga-20261123-v3';
 const CORE=[
+ './aulas/7ano/se-liga-revisao.html',
+ './aulas/7ano/Se_Liga_7ano_Revisao_Exercicios.pdf',
  './aulas/6ano/se-liga-revisao.html',
  './aulas/6ano/Se_Liga_6ano_Revisao_Exercicios.pdf',
  './aulas/9ano/se-liga-revisao.html',
