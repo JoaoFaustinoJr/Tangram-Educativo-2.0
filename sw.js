@@ -1,4 +1,4 @@
-const CACHE='tangram2-se-liga-20261123-v4';
+const CACHE='tangram2-audio-20261125';
 const CORE=[
  './aulas/8ano/se-liga-revisao.html',
  './aulas/8ano/Se_Liga_8ano_Revisao_Exercicios.pdf',
@@ -50,7 +50,7 @@ self.addEventListener('activate',event=>{
   );
 });
 
-self.addEventListener('fetch',event=>{
+self.addEventListener('fetch',event=>{if(new URL(event.request.url).pathname.endsWith('.mp3'))return;
   if(event.request.method!=='GET') return;
   const url=new URL(event.request.url);
   if(url.origin!==self.location.origin) return;
