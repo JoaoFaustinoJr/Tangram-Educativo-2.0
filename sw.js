@@ -1,5 +1,7 @@
-const CACHE='tangram2-audio-20261125';
+const CACHE='tangram2-agro-se-liga-20261126';
 const CORE=[
+ './aulas/1ano/se-liga-quimica-agro.html',
+ './aulas/1ano/Se_Liga_1ano_Agro_Quimica.pdf',
  './aulas/8ano/se-liga-revisao.html',
  './aulas/8ano/Se_Liga_8ano_Revisao_Exercicios.pdf',
  './aulas/7ano/se-liga-revisao.html',
